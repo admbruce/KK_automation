@@ -1,0 +1,212 @@
+build $
+    obj/third_party/WebKit/Source/core/webcore_shared.actions_depends.stamp: $
+    stamp $
+    obj/third_party/WebKit/Source/core/webcore_prerequisites.actions_depends.stamp $
+    libblink_common.a libblink_platform.a $
+    obj/third_party/WebKit/Source/core/make_core_generated.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/core/inspector_protocol_sources.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/core/inspector_instrumentation_sources.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/core/v8/bindings_core_v8_generated.actions_depends.stamp $
+    obj/third_party/WebKit/Source/bindings/modules/modules_event_generated.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/modules/v8/bindings_modules_v8_generated.actions_depends.stamp $
+    obj/third_party/WebKit/Source/platform/make_platform_generated.actions_rules_copies.stamp $
+    libwtf.a libbase.a libgin.a obj/skia/skia.actions_depends.stamp $
+    libxml2.a libxslt.a libqcms.a libsnappy.a libchromium_sqlite3.a $
+    liburl_lib.a obj/v8/tools/gyp/v8_maybe_snapshot.actions_depends.stamp $
+    gen/blink/core/InspectorProtocolVersion.h $
+    obj/third_party/WebKit/Source/core/generated_testing_idls.actions_rules_copies.stamp $
+    gen/blink/core/EventInterfaces.in $
+    obj/third_party/WebKit/Source/bindings/core/v8/bindings_core_impl_generated.actions_rules_copies.stamp $
+    gen/blink/bindings/scripts/cached_jinja_templates.stamp $
+    obj/third_party/WebKit/Source/bindings/scripts/cached_lex_yacc_tables.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/core/interfaces_info_individual_core.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/core/core_global_constructors_idls.actions_rules_copies.stamp $
+    gen/blink/bindings/core/GlobalObjectsCore.pickle $
+    gen/blink/bindings/modules/InterfacesInfoOverall.pickle $
+    obj/third_party/WebKit/Source/bindings/modules/interfaces_info_individual_modules.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/modules/modules_core_global_constructors_idls.actions_rules_copies.stamp $
+    gen/blink/bindings/modules/GlobalObjectsModules.pickle $
+    obj/third_party/WebKit/Source/bindings/modules/modules_global_constructors_idls.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/core/v8/bindings_core_v8_generated_aggregate.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/core/v8/bindings_core_v8_generated_individual.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/modules/v8/bindings_modules_impl_generated.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/modules/v8/bindings_modules_v8_generated_aggregate.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/modules/v8/bindings_modules_v8_generated_individual.actions_rules_copies.stamp $
+    gen/blink/bindings/modules/v8/initPartialInterfacesInModules.cpp $
+    gen/blink/bindings/modules/v8/V8GeneratedModulesBindingsPartial.cpp $
+    obj/third_party/WebKit/Source/bindings/modules/v8/bindings_modules_v8_generated_partial_individual.actions_rules_copies.stamp $
+    libicui18n.a libicuuc.a icudtl.dat icudtl.dat libskia_library.a $
+    libskia_opts.a libskia_opts_ssse3.a libskia_opts_sse41.a $
+    libskia_opts_sse42.a libskia_opts_avx.a libskia_opts_avx2.a $
+    libchrome_zlib.a libzlib_x86_simd.a libsfntly.a libskia_chrome.a $
+    libbase_static.a liballocator_extension_thunks.a libmodp_b64.a $
+    libdynamic_annotations.a libevent.a libblink_heap_asm_stubs.a libcc.a $
+    libcc_proto.a libprotobuf_lite.a obj/gpu/gpu.actions_depends.stamp $
+    libcommand_buffer_client.a libcommand_buffer_common.a libgles2_utils.a $
+    libcommand_buffer_service.a libdisk_cache_proto.a libgpu_config.a $
+    libre2.a libgl_wrapper.a libgfx.a libbase_i18n.a libharfbuzz-ng.a $
+    libpng.a libgfx_geometry.a libjpeg_turbo.a libcrcrypto.a libboringssl.a $
+    libcityhash.a gen/angle/id/commit.h $
+    obj/third_party/angle/src/copy_scripts.actions_rules_copies.stamp $
+    libtranslator.a libtranslator_lib.a libpreprocessor.a libangle_common.a $
+    libgles2_cmd_helper.a libgpu_ipc.a libipc.a libmedia.a libyuv.a $
+    libopus.a libevents_base.a libdom_keycode_converter.a $
+    libshared_memory_support.a libffmpeg.a libffmpeg_yasm.a libvpx_new.a $
+    libvpx_intrinsics_mmx.a libvpx_intrinsics_sse2.a $
+    libvpx_intrinsics_ssse3.a libvpx_intrinsics_sse4_1.a $
+    libvpx_intrinsics_avx.a libvpx_intrinsics_avx2.a libwebm.a $
+    libdecklink.a libmedia_asm.a libgles2_c_lib.a libiccjpeg.a $
+    obj/third_party/libwebp/libwebp.actions_depends.stamp libwebp_dec.a $
+    libwebp_dsp.a libwebp_utils.a libwebp_demux.a libwebp_enc.a libots.a $
+    libbrotli.a obj/v8/tools/gyp/v8_maybe_snapshot.actions_depends.stamp $
+    libv8_base.a libv8_libbase.a libv8_external_snapshot.a $
+    obj/v8/tools/gyp/js2c.actions_rules_copies.stamp natives_blob.bin
+
+build $
+    obj/third_party/WebKit/Source/core/webcore_shared.compile_depends.stamp: $
+    stamp $
+    obj/third_party/WebKit/Source/core/webcore_prerequisites.compile_depends.stamp $
+    obj/third_party/WebKit/Source/platform/blink_platform.compile_depends.stamp $
+    obj/third_party/WebKit/Source/core/make_core_generated.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/core/inspector_protocol_sources.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/core/inspector_instrumentation_sources.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/core/v8/bindings_core_v8_generated.compile_depends.stamp $
+    obj/third_party/WebKit/Source/bindings/modules/modules_event_generated.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/modules/v8/bindings_modules_v8_generated.compile_depends.stamp $
+    obj/third_party/WebKit/Source/platform/make_platform_generated.actions_rules_copies.stamp $
+    snapshot_blob.bin snapshot_blob.bin $
+    gen/blink/core/InspectorProtocolVersion.h $
+    obj/third_party/WebKit/Source/core/generated_testing_idls.actions_rules_copies.stamp $
+    gen/blink/core/EventInterfaces.in $
+    obj/third_party/WebKit/Source/bindings/core/v8/bindings_core_impl_generated.actions_rules_copies.stamp $
+    gen/blink/bindings/scripts/cached_jinja_templates.stamp $
+    obj/third_party/WebKit/Source/bindings/scripts/cached_lex_yacc_tables.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/core/interfaces_info_individual_core.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/core/core_global_constructors_idls.actions_rules_copies.stamp $
+    gen/blink/bindings/core/GlobalObjectsCore.pickle $
+    gen/blink/bindings/modules/InterfacesInfoOverall.pickle $
+    obj/third_party/WebKit/Source/bindings/modules/interfaces_info_individual_modules.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/modules/modules_core_global_constructors_idls.actions_rules_copies.stamp $
+    gen/blink/bindings/modules/GlobalObjectsModules.pickle $
+    obj/third_party/WebKit/Source/bindings/modules/modules_global_constructors_idls.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/core/v8/bindings_core_v8_generated_aggregate.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/core/v8/bindings_core_v8_generated_individual.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/modules/v8/bindings_modules_impl_generated.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/modules/v8/bindings_modules_v8_generated_aggregate.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/modules/v8/bindings_modules_v8_generated_individual.actions_rules_copies.stamp $
+    gen/blink/bindings/modules/v8/initPartialInterfacesInModules.cpp $
+    gen/blink/bindings/modules/v8/V8GeneratedModulesBindingsPartial.cpp $
+    obj/third_party/WebKit/Source/bindings/modules/v8/bindings_modules_v8_generated_partial_individual.actions_rules_copies.stamp $
+    icudtl.dat icudtl.dat icudtl.dat gen/webcore/heap/SaveRegisters_x86.o $
+    obj/cc/cc.compile_depends.stamp $
+    obj/cc/cc_proto.actions_rules_copies.stamp $
+    obj/gpu/command_buffer_service.compile_depends.stamp $
+    obj/gpu/command_buffer_service.compile_depends.stamp $
+    obj/gpu/disk_cache_proto.actions_rules_copies.stamp $
+    obj/third_party/libjpeg_turbo/libjpeg.actions_rules_copies.stamp $
+    gen/angle/id/commit.h $
+    obj/third_party/angle/src/copy_scripts.actions_rules_copies.stamp $
+    obj/third_party/ffmpeg/ffmpeg_yasm.actions_rules_copies.stamp $
+    obj/third_party/libvpx_new/libvpx_new.actions_rules_copies.stamp $
+    obj/media/media_asm.actions_rules_copies.stamp snapshot_blob.bin $
+    snapshot_blob.bin obj/v8/tools/gyp/js2c.actions_rules_copies.stamp $
+    natives_blob.bin
+
+ldflags = -Wl,-search_paths_first -Wl,-dead_strip -mmacosx-version-min=10.6 $
+    -isysroot $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk $
+    -arch x86_64 -L. -install_name /usr/local/lib/libwebcore_shared.dylib $
+    -stdlib=libc++
+libs = '-L../../third_party/libc++-static' -framework CoreFoundation $
+    -framework Foundation -framework Accelerate -framework Carbon $
+    -framework AppKit -framework ApplicationServices -framework IOKit $
+    -framework Security -framework IOSurface -framework OpenGL -framework $
+    Quartz -framework AudioToolbox -framework AudioUnit -framework $
+    CoreAudio -framework CoreVideo -framework QTKit -lm -framework $
+    CoreServices
+build libwebcore_shared.dylib libwebcore_shared.dylib.TOC: solink $
+    libblink_common.a libblink_platform.a libwtf.a libbase.a libgin.a $
+    libxml2.a libxslt.a libqcms.a libsnappy.a libchromium_sqlite3.a $
+    liburl_lib.a libicui18n.a libicuuc.a libskia_library.a libskia_opts.a $
+    libskia_opts_ssse3.a libskia_opts_sse41.a libskia_opts_sse42.a $
+    libskia_opts_avx.a libskia_opts_avx2.a libchrome_zlib.a $
+    libzlib_x86_simd.a libsfntly.a libskia_chrome.a libbase_static.a $
+    liballocator_extension_thunks.a libmodp_b64.a libdynamic_annotations.a $
+    libevent.a libblink_heap_asm_stubs.a libcc.a libcc_proto.a $
+    libprotobuf_lite.a libcommand_buffer_client.a $
+    libcommand_buffer_common.a libgles2_utils.a libcommand_buffer_service.a $
+    libdisk_cache_proto.a libgpu_config.a libre2.a libgl_wrapper.a libgfx.a $
+    libbase_i18n.a libharfbuzz-ng.a libpng.a libgfx_geometry.a $
+    libjpeg_turbo.a libcrcrypto.a libboringssl.a libcityhash.a $
+    libtranslator.a libtranslator_lib.a libpreprocessor.a libangle_common.a $
+    libgles2_cmd_helper.a libgpu_ipc.a libipc.a libmedia.a libyuv.a $
+    libopus.a libevents_base.a libdom_keycode_converter.a $
+    libshared_memory_support.a libffmpeg.a libffmpeg_yasm.a libvpx_new.a $
+    libvpx_intrinsics_mmx.a libvpx_intrinsics_sse2.a $
+    libvpx_intrinsics_ssse3.a libvpx_intrinsics_sse4_1.a $
+    libvpx_intrinsics_avx.a libvpx_intrinsics_avx2.a libwebm.a $
+    libdecklink.a libmedia_asm.a libgles2_c_lib.a libiccjpeg.a $
+    libwebp_dec.a libwebp_dsp.a libwebp_utils.a libwebp_demux.a $
+    libwebp_enc.a libots.a libbrotli.a libv8_base.a libv8_libbase.a $
+    libv8_external_snapshot.a | $
+    gen/blink/bindings/scripts/cached_jinja_templates.stamp $
+    obj/third_party/WebKit/Source/bindings/core/interfaces_info_individual_core.actions_rules_copies.stamp $
+    gen/blink/bindings/core/GlobalObjectsCore.pickle $
+    obj/third_party/WebKit/Source/bindings/scripts/cached_lex_yacc_tables.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/core/webcore_prerequisites.actions_depends.stamp $
+    obj/gpu/gpu.actions_depends.stamp $
+    obj/third_party/WebKit/Source/bindings/core/v8/bindings_core_v8_generated_aggregate.actions_rules_copies.stamp $
+    icudtl.dat gen/blink/core/InspectorProtocolVersion.h $
+    obj/third_party/WebKit/Source/bindings/modules/v8/bindings_modules_impl_generated.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/core/inspector_instrumentation_sources.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/core/make_core_generated.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/modules/v8/bindings_modules_v8_generated_aggregate.actions_rules_copies.stamp $
+    gen/blink/bindings/modules/v8/V8GeneratedModulesBindingsPartial.cpp $
+    obj/third_party/WebKit/Source/bindings/core/v8/bindings_core_impl_generated.actions_rules_copies.stamp $
+    gen/blink/bindings/modules/GlobalObjectsModules.pickle $
+    obj/third_party/WebKit/Source/bindings/core/v8/bindings_core_v8_generated_individual.actions_rules_copies.stamp $
+    obj/third_party/angle/src/copy_scripts.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/core/core_global_constructors_idls.actions_rules_copies.stamp $
+    obj/skia/skia.actions_depends.stamp $
+    obj/third_party/WebKit/Source/core/generated_testing_idls.actions_rules_copies.stamp $
+    obj/v8/tools/gyp/js2c.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/modules/interfaces_info_individual_modules.actions_rules_copies.stamp $
+    natives_blob.bin $
+    obj/third_party/WebKit/Source/bindings/modules/v8/bindings_modules_v8_generated_partial_individual.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/core/inspector_protocol_sources.actions_rules_copies.stamp $
+    obj/third_party/libwebp/libwebp.actions_depends.stamp $
+    obj/v8/tools/gyp/v8_maybe_snapshot.actions_depends.stamp $
+    obj/third_party/WebKit/Source/bindings/modules/v8/bindings_modules_v8_generated_individual.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/platform/make_platform_generated.actions_rules_copies.stamp $
+    gen/blink/bindings/modules/InterfacesInfoOverall.pickle $
+    obj/third_party/WebKit/Source/bindings/modules/v8/bindings_modules_v8_generated.actions_depends.stamp $
+    obj/third_party/WebKit/Source/bindings/modules/modules_global_constructors_idls.actions_rules_copies.stamp $
+    gen/angle/id/commit.h $
+    obj/third_party/WebKit/Source/bindings/modules/modules_core_global_constructors_idls.actions_rules_copies.stamp $
+    gen/blink/core/EventInterfaces.in $
+    obj/third_party/WebKit/Source/bindings/core/v8/bindings_core_v8_generated.actions_depends.stamp $
+    gen/blink/bindings/modules/v8/initPartialInterfacesInModules.cpp $
+    obj/third_party/WebKit/Source/bindings/modules/modules_event_generated.actions_rules_copies.stamp
+  postbuilds = $ && (export $
+      BUILT_FRAMEWORKS_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      BUILT_PRODUCTS_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      CONFIGURATION=Release; export DYLIB_INSTALL_NAME_BASE=/usr/local/lib; $
+      export EXECUTABLE_NAME=libwebcore_shared.dylib; export $
+      EXECUTABLE_PATH=libwebcore_shared.dylib; export $
+      FULL_PRODUCT_NAME=libwebcore_shared.dylib; export $
+      LD_DYLIB_INSTALL_NAME=/usr/local/lib/libwebcore_shared.dylib; export $
+      MACH_O_TYPE=mh_dylib; export PRODUCT_NAME=webcore_shared; export $
+      PRODUCT_TYPE=com.apple.product-type.library.dynamic; export $
+      SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk; $
+      export $
+      SRCROOT=/Users/superadmin/tmp/src/out/Release/../../third_party/WebKit/Source/core; $
+      export SOURCE_ROOT="$${SRCROOT}"; export $
+      TARGET_BUILD_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      TEMP_DIR="$${TMPDIR}"; (cd ../../third_party/WebKit/Source/core && $
+      ../build/scripts/check_objc_rename.sh $
+      "ChromiumWebCoreObjC|TCMVisibleView|RTCMFlippedView|ScrollerStyleObserver|LayoutThemeNotificationObserver" $
+      "WebCoreFocusRingDrawing|WebCoreTheme"); G=$$?; ((exit $$G) || rm -rf $
+      libwebcore_shared.dylib) && exit $$G)
+  soname = libwebcore_shared.dylib
+  lib = libwebcore_shared.dylib
+  link_file_list = libwebcore_shared.dylib.rsp

@@ -1,0 +1,88 @@
+rule $
+    chrome_manifest_bundle_target_Copy_MCX_manifest_file_to_manifest_bundle_3c98a72c29729f6533a7381e9f9b46c7
+  command = cd ../../components; export $
+      BUILT_FRAMEWORKS_DIR=/Users/superadmin/tmp/src/out/Debug; export $
+      BUILT_PRODUCTS_DIR=/Users/superadmin/tmp/src/out/Debug; export $
+      CONFIGURATION=Debug; export $
+      CONTENTS_FOLDER_PATH=org.chromium.Chromium.manifest/Contents; export $
+      EXECUTABLE_NAME=org.chromium.Chromium; export $
+      EXECUTABLE_PATH=org.chromium.Chromium.manifest/Contents/MacOS/org.chromium.Chromium; $
+      export FULL_PRODUCT_NAME=org.chromium.Chromium.manifest; export $
+      INFOPLIST_PATH=org.chromium.Chromium.manifest/Contents/Info.plist; $
+      export MACH_O_TYPE=mh_bundle; export $
+      PRODUCT_NAME=org.chromium.Chromium; export $
+      PRODUCT_TYPE=com.apple.product-type.bundle; export $
+      SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk; $
+      export SRCROOT=/Users/superadmin/tmp/src/out/Debug/../../components; $
+      export SOURCE_ROOT="$${SRCROOT}"; export $
+      TARGET_BUILD_DIR=/Users/superadmin/tmp/src/out/Debug; export $
+      TEMP_DIR="$${TMPDIR}"; export $
+      UNLOCALIZED_RESOURCES_FOLDER_PATH=org.chromium.Chromium.manifest/Contents/Resources; $
+      export WRAPPER_NAME=org.chromium.Chromium.manifest;plutil -convert $
+      xml1 ../out/Debug/gen/chrome/app/policy/mac/app-Manifest.plist -o $
+      ../out/Debug/obj/components/chrome_manifest_bundle.gen/app_manifest/org.chromium.Chromium.manifest
+  description = ACTION Copying the MCX policy manifest file to the manifest $
+      bundle
+  restat = 1
+
+build $
+    obj/components/chrome_manifest_bundle.gen/app_manifest/org.chromium.Chromium.manifest: $
+    chrome_manifest_bundle_target_Copy_MCX_manifest_file_to_manifest_bundle_3c98a72c29729f6533a7381e9f9b46c7 $
+    gen/chrome/app/policy/mac/app-Manifest.plist || $
+    obj/components/policy_templates.actions_rules_copies.stamp
+
+rule $
+    chrome_manifest_bundle_target_Copy_Localizable_strings_files_to_manifest_bundle_3c98a72c29729f6533a7381e9f9b46c7
+  command = cd ../../components; export $
+      BUILT_FRAMEWORKS_DIR=/Users/superadmin/tmp/src/out/Debug; export $
+      BUILT_PRODUCTS_DIR=/Users/superadmin/tmp/src/out/Debug; export $
+      CONFIGURATION=Debug; export $
+      CONTENTS_FOLDER_PATH=org.chromium.Chromium.manifest/Contents; export $
+      EXECUTABLE_NAME=org.chromium.Chromium; export $
+      EXECUTABLE_PATH=org.chromium.Chromium.manifest/Contents/MacOS/org.chromium.Chromium; $
+      export FULL_PRODUCT_NAME=org.chromium.Chromium.manifest; export $
+      INFOPLIST_PATH=org.chromium.Chromium.manifest/Contents/Info.plist; $
+      export MACH_O_TYPE=mh_bundle; export $
+      PRODUCT_NAME=org.chromium.Chromium; export $
+      PRODUCT_TYPE=com.apple.product-type.bundle; export $
+      SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk; $
+      export SRCROOT=/Users/superadmin/tmp/src/out/Debug/../../components; $
+      export SOURCE_ROOT="$${SRCROOT}"; export $
+      TARGET_BUILD_DIR=/Users/superadmin/tmp/src/out/Debug; export $
+      TEMP_DIR="$${TMPDIR}"; export $
+      UNLOCALIZED_RESOURCES_FOLDER_PATH=org.chromium.Chromium.manifest/Contents/Resources; $
+      export WRAPPER_NAME=org.chromium.Chromium.manifest;cp -R $
+      ../out/Debug/gen/chrome/app/policy/mac/strings/ $
+      ../out/Debug/obj/components/chrome_manifest_bundle.gen/app_manifest
+  description = ACTION Copy the Localizable.strings files to the manifest $
+      bundle
+  restat = 1
+
+build $
+    obj/components/chrome_manifest_bundle.gen/app_manifest/en.lproj/Localizable.strings: $
+    chrome_manifest_bundle_target_Copy_Localizable_strings_files_to_manifest_bundle_3c98a72c29729f6533a7381e9f9b46c7 $
+    gen/chrome/app/policy/mac/strings/en.lproj/Localizable.strings || $
+    obj/components/policy_templates.actions_rules_copies.stamp
+
+build obj/components/chrome_manifest_bundle.actions_rules_copies.stamp: $
+    stamp $
+    obj/components/chrome_manifest_bundle.gen/app_manifest/org.chromium.Chromium.manifest $
+    obj/components/chrome_manifest_bundle.gen/app_manifest/en.lproj/Localizable.strings
+
+build $
+    org.chromium.Chromium.manifest/Contents/Resources/org.chromium.Chromium.manifest: $
+    mac_tool $
+    obj/components/chrome_manifest_bundle.gen/app_manifest/org.chromium.Chromium.manifest
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    org.chromium.Chromium.manifest/Contents/Resources/en.lproj/Localizable.strings: $
+    mac_tool $
+    obj/components/chrome_manifest_bundle.gen/app_manifest/en.lproj/Localizable.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build org.chromium.Chromium.manifest: package_framework $
+    org.chromium.Chromium.manifest/Contents/Resources/org.chromium.Chromium.manifest $
+    org.chromium.Chromium.manifest/Contents/Resources/en.lproj/Localizable.strings $
+    obj/components/chrome_manifest_bundle.actions_rules_copies.stamp
+  version = A

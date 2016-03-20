@@ -1,0 +1,24 @@
+rule $
+    remoting_client_credits_target_Build_remoting_client_credits_b85e4fcf48df8ed69d94643a4642904a
+  command = cd ../../remoting; export $
+      BUILT_FRAMEWORKS_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      BUILT_PRODUCTS_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      CONFIGURATION=Release; export PRODUCT_NAME=remoting_client_credits; $
+      export $
+      SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk; $
+      export SRCROOT=/Users/superadmin/tmp/src/out/Release/../../remoting; $
+      export SOURCE_ROOT="$${SRCROOT}"; export $
+      TARGET_BUILD_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      TEMP_DIR="$${TMPDIR}";python ../tools/licenses.py credits $
+      ../out/Release/gen/remoting/credits.html --file-template $
+      webapp/base/html/credits.tmpl --entry-template $
+      webapp/base/html/credits_entry.tmpl
+  description = ACTION remoting_client_credits: Build remoting client $
+      credits_b85e4fcf48df8ed69d94643a4642904a
+  restat = 1
+
+build gen/remoting/credits.html: $
+    remoting_client_credits_target_Build_remoting_client_credits_b85e4fcf48df8ed69d94643a4642904a $
+    ../../tools/licenses.py ../../remoting/webapp/base/html/credits.tmpl $
+    ../../remoting/webapp/base/html/credits_entry.tmpl
+

@@ -1,0 +1,588 @@
+build obj/chrome/common.actions_depends.stamp: stamp $
+    libsafe_browsing_proto.a gen/chrome/common/features.h $
+    obj/chrome/chrome_resources.actions_rules_copies.stamp $
+    obj/chrome/chrome_strings.actions_rules_copies.stamp $
+    obj/chrome/theme_resources.actions_rules_copies.stamp $
+    libcommon_constants.a libfieldtrial_testing_config.a $
+    libcomponent_metrics_proto.a libvariations.a $
+    obj/components/components_strings.actions_rules_copies.stamp $
+    libax_gen.a libmojo_application_bindings.a $
+    libnetwork_service_bindings_lib.a libcontent_common_mojo_bindings.a $
+    obj/skia/skia.actions_depends.stamp $
+    obj/ui/resources/ui_resources.actions_rules_copies.stamp $
+    libchrome_api.a libextensions_api.a $
+    obj/extensions/extensions_resources.actions_rules_copies.stamp $
+    obj/extensions/extensions_strings.actions_rules_copies.stamp $
+    libcommon_mojo_bindings.a gen/widevine_cdm_version.h $
+    gen/flapper_version.h libpolicy.a
+
+build obj/chrome/common.compile_depends.stamp: stamp $
+    obj/chrome/safe_browsing_proto.actions_rules_copies.stamp $
+    gen/chrome/common/features.h $
+    obj/chrome/chrome_resources.actions_rules_copies.stamp $
+    obj/chrome/chrome_strings.actions_rules_copies.stamp $
+    obj/chrome/theme_resources.actions_rules_copies.stamp $
+    obj/chrome/common_constants.compile_depends.stamp $
+    obj/chrome/common/variations/fieldtrial_testing_config.actions_rules_copies.stamp $
+    obj/components/component_metrics_proto.actions_rules_copies.stamp $
+    obj/components/variations.actions_rules_copies.stamp $
+    obj/components/components_strings.actions_rules_copies.stamp $
+    obj/ui/accessibility/ax_gen.actions_rules_copies.stamp $
+    obj/mojo/mojo_application_bindings.compile_depends.stamp $
+    obj/mojo/network_service_bindings_mojom.actions_rules_copies.stamp $
+    obj/content/content_common_mojo_bindings.compile_depends.stamp $
+    obj/ui/resources/ui_resources.actions_rules_copies.stamp $
+    obj/chrome/common/extensions/api/chrome_api.actions_rules_copies.stamp $
+    obj/extensions/common/api/extensions_api.actions_rules_copies.stamp $
+    obj/extensions/extensions_resources.actions_rules_copies.stamp $
+    obj/extensions/extensions_strings.actions_rules_copies.stamp $
+    obj/chrome/common_mojo_bindings.actions_rules_copies.stamp $
+    gen/widevine_cdm_version.h gen/flapper_version.h $
+    obj/components/policy.compile_depends.stamp
+
+defines = -DV8_DEPRECATION_WARNINGS -DCLD_VERSION=2 $
+    -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORE=0 -DCHROMIUM_BUILD $
+    -DCR_CLANG_REVISION=254049-1 -DUSE_LIBJPEG_TURBO=1 $
+    -DENABLE_ONE_CLICK_SIGNIN -DENABLE_PRE_SYNC_BACKUP -DENABLE_WEBRTC=1 $
+    -DENABLE_MEDIA_ROUTER=1 -DENABLE_PEPPER_CDMS $
+    -DENABLE_CONFIGURATION_POLICY -DENABLE_NOTIFICATIONS -DENABLE_HIDPI=1 $
+    -DDONT_EMBED_BUILD_METADATA -DFIELDTRIAL_TESTING_ENABLED $
+    -DENABLE_TASK_MANAGER=1 -DENABLE_EXTENSIONS=1 -DENABLE_PDF=1 $
+    -DENABLE_PLUGIN_INSTALLATION=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_THEMES=1 -DENABLE_AUTOFILL_DIALOG=1 $
+    -DENABLE_BACKGROUND=1 -DENABLE_PRINTING=1 -DENABLE_BASIC_PRINTING=1 $
+    -DENABLE_PRINT_PREVIEW=1 -DENABLE_SPELLCHECK=1 $
+    -DUSE_BROWSER_SPELLCHECKER=1 -DENABLE_CAPTIVE_PORTAL_DETECTION=1 $
+    -DENABLE_APP_LIST=1 -DENABLE_SETTINGS_APP=1 -DENABLE_SUPERVISED_USERS=1 $
+    -DENABLE_SERVICE_DISCOVERY=1 -DV8_USE_EXTERNAL_STARTUP_DATA $
+    -DFULL_SAFE_BROWSING -DSAFE_BROWSING_CSD -DSAFE_BROWSING_DB_LOCAL $
+    -DMOJO_USE_SYSTEM_IMPL -DPROTOBUF_USE_DLLS -DGOOGLE_PROTOBUF_NO_RTTI $
+    -DGOOGLE_PROTOBUF_NO_STATIC_INITIALIZER -DSK_SUPPORT_GPU=1 $
+    -DSK_IGNORE_LINEONLY_AA_CONVEX_PATH_OPTS -DSK_IGNORE_GL_TEXTURE_TARGET $
+    -DU_USING_ICU_NAMESPACE=0 -DU_ENABLE_DYLOAD=0 -DU_STATIC_IMPLEMENTATION $
+    -DOPENSSL_SMALL -DUSE_LIBPCI=1 -DUSE_OPENSSL=1 -D__STDC_CONSTANT_MACROS $
+    -D__STDC_FORMAT_MACROS -DDYNAMIC_ANNOTATIONS_ENABLED=1 $
+    -DWTF_USE_DYNAMIC_ANNOTATIONS=1
+includes = -Igen -I../.. -I../../skia/config -I../../third_party/khronos $
+    -I../../gpu -Igen/angle -I../../third_party/WebKit/Source $
+    -Igen/protoc_out -I../../third_party/protobuf $
+    -I../../third_party/protobuf/src -Igen/chrome -Igen/components/strings $
+    -I../../third_party/WebKit -I../../skia/ext $
+    -I../../third_party/skia/include/core $
+    -I../../third_party/skia/include/effects $
+    -I../../third_party/skia/include/pdf $
+    -I../../third_party/skia/include/gpu $
+    -I../../third_party/skia/include/lazy $
+    -I../../third_party/skia/include/pathops $
+    -I../../third_party/skia/include/pipe $
+    -I../../third_party/skia/include/ports $
+    -I../../third_party/skia/include/utils $
+    -I../../third_party/skia/include/utils/mac $
+    -I../../third_party/icu/source/i18n $
+    -I../../third_party/icu/source/common -Igen/ui/resources $
+    -Igen/extensions -Igen/extensions/strings $
+    -I../../third_party/boringssl/src/include $
+    -I../../third_party/opus/src/include -I../../third_party/re2 $
+    -I../../third_party/google_toolbox_for_mac $
+    -I../../third_party/google_toolbox_for_mac/src $
+    -I../../third_party/google_toolbox_for_mac/src/AppKit $
+    -I../../third_party/google_toolbox_for_mac/src/DebugUtils $
+    -I../../third_party/google_toolbox_for_mac/src/Foundation -Igen/policy
+cflags = -isysroot $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk $
+    -O0 -fvisibility=hidden -Werror -Wnewline-eof -mmacosx-version-min=10.6 $
+    -arch x86_64 -Wall -Wendif-labels -Wextra -Wno-unused-parameter $
+    -Wno-missing-field-initializers -Wno-selector-type-mismatch $
+    -Wpartial-availability -Wheader-hygiene -Wno-char-subscripts $
+    -Wno-unneeded-internal-declaration -Wno-covered-switch-default $
+    -Wstring-conversion -Wno-c++11-narrowing -Wno-deprecated-register $
+    -Wno-inconsistent-missing-override -Wno-shift-negative-value $
+    -Wno-bitfield-width -Wexit-time-destructors
+cflags_c = -std=c99 -Xclang -load -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing -fstack-protector-all $
+    -Wno-undefined-bool-conversion -Wno-tautological-undefined-compare
+cflags_cc = -std=c++11 -stdlib=libc++ -fno-rtti -fno-exceptions $
+    -fvisibility-inlines-hidden -fno-threadsafe-statics -Xclang -load $
+    -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing -fstack-protector-all $
+    -Wno-undefined-bool-conversion -Wno-tautological-undefined-compare
+cflags_objc = $cflags_c -Wobjc-missing-property-synthesis
+cflags_objcc = $cflags_cc -Wobjc-missing-property-synthesis $
+    -fobjc-call-cxx-cdtors
+arflags = 
+
+build obj/chrome/common/common.badge_util.o: cxx $
+    ../../chrome/common/badge_util.cc || $
+    obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/common.channel_info.o: cxx $
+    ../../chrome/common/channel_info.cc || $
+    obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/common.channel_info_mac.o: objcxx $
+    ../../chrome/common/channel_info_mac.mm || $
+    obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/common.chrome_content_client.o: cxx $
+    ../../chrome/common/chrome_content_client.cc || $
+    obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/common.chrome_content_client_constants.o: cxx $
+    ../../chrome/common/chrome_content_client_constants.cc || $
+    obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/common.common_message_generator.o: cxx $
+    ../../chrome/common/common_message_generator.cc || $
+    obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/common.common_param_traits.o: cxx $
+    ../../chrome/common/common_param_traits.cc || $
+    obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/common.content_settings_pattern_serializer.o: cxx $
+    ../../chrome/common/content_settings_pattern_serializer.cc || $
+    obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/common.crash_keys.o: cxx $
+    ../../chrome/common/crash_keys.cc || $
+    obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/custom_handlers/common.protocol_handler.o: cxx $
+    ../../chrome/common/custom_handlers/protocol_handler.cc || $
+    obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/common.icon_with_badge_image_source.o: cxx $
+    ../../chrome/common/icon_with_badge_image_source.cc || $
+    obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/common.ini_parser.o: cxx $
+    ../../chrome/common/ini_parser.cc || $
+    obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/common.instant_types.o: cxx $
+    ../../chrome/common/instant_types.cc || $
+    obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/common.localized_error.o: cxx $
+    ../../chrome/common/localized_error.cc || $
+    obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/common.logging_chrome.o: cxx $
+    ../../chrome/common/logging_chrome.cc || $
+    obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/mac/common.cfbundle_blocker.o: objcxx $
+    ../../chrome/common/mac/cfbundle_blocker.mm || $
+    obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/mac/common.launchd.o: objcxx $
+    ../../chrome/common/mac/launchd.mm || $
+    obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/media/common.media_resource_provider.o: cxx $
+    ../../chrome/common/media/media_resource_provider.cc || $
+    obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/media/common.webrtc_logging_message_data.o: cxx $
+    ../../chrome/common/media/webrtc_logging_message_data.cc || $
+    obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/common.multi_process_lock_mac.o: cxx $
+    ../../chrome/common/multi_process_lock_mac.cc || $
+    obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/common.partial_circular_buffer.o: cxx $
+    ../../chrome/common/partial_circular_buffer.cc || $
+    obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/common.pref_names_util.o: cxx $
+    ../../chrome/common/pref_names_util.cc || $
+    obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/common.profiling.o: cxx $
+    ../../chrome/common/profiling.cc || $
+    obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/common.render_messages.o: cxx $
+    ../../chrome/common/render_messages.cc || $
+    obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/common.resource_usage_reporter_type_converters.o: $
+    cxx ../../chrome/common/resource_usage_reporter_type_converters.cc || $
+    obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/common.search_urls.o: cxx $
+    ../../chrome/common/search_urls.cc || $
+    obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/common.secure_origin_whitelist.o: cxx $
+    ../../chrome/common/secure_origin_whitelist.cc || $
+    obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/common.spellcheck_common.o: cxx $
+    ../../chrome/common/spellcheck_common.cc || $
+    obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/common.switch_utils.o: cxx $
+    ../../chrome/common/switch_utils.cc || $
+    obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/common.trace_event_args_whitelist.o: cxx $
+    ../../chrome/common/trace_event_args_whitelist.cc || $
+    obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/common.tts_utterance_request.o: cxx $
+    ../../chrome/common/tts_utterance_request.cc || $
+    obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/common.url_constants.o: cxx $
+    ../../chrome/common/url_constants.cc || $
+    obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/variations/common.variations_util.o: cxx $
+    ../../chrome/common/variations/variations_util.cc || $
+    obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/common.web_application_info.o: cxx $
+    ../../chrome/common/web_application_info.cc || $
+    obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/common.widevine_cdm_constants.o: cxx $
+    ../../chrome/common/widevine_cdm_constants.cc || $
+    obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/common.worker_thread_ticker.o: cxx $
+    ../../chrome/common/worker_thread_ticker.cc || $
+    obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/extensions/api/commands/common.commands_handler.o: $
+    cxx ../../chrome/common/extensions/api/commands/commands_handler.cc || $
+    obj/chrome/common.compile_depends.stamp
+build $
+    obj/chrome/common/extensions/api/extension_action/common.action_info.o: $
+    cxx ../../chrome/common/extensions/api/extension_action/action_info.cc $
+    || obj/chrome/common.compile_depends.stamp
+build $
+    obj/chrome/common/extensions/api/notifications/common.notification_style.o: $
+    cxx $
+    ../../chrome/common/extensions/api/notifications/notification_style.cc $
+    || obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/extensions/api/omnibox/common.omnibox_handler.o: $
+    cxx ../../chrome/common/extensions/api/omnibox/omnibox_handler.cc || $
+    obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/extensions/api/plugins/common.plugins_handler.o: $
+    cxx ../../chrome/common/extensions/api/plugins/plugins_handler.cc || $
+    obj/chrome/common.compile_depends.stamp
+build $
+    obj/chrome/common/extensions/api/speech/common.tts_engine_manifest_handler.o: $
+    cxx $
+    ../../chrome/common/extensions/api/speech/tts_engine_manifest_handler.cc $
+    || obj/chrome/common.compile_depends.stamp
+build $
+    obj/chrome/common/extensions/api/spellcheck/common.spellcheck_handler.o: $
+    cxx ../../chrome/common/extensions/api/spellcheck/spellcheck_handler.cc $
+    || obj/chrome/common.compile_depends.stamp
+build $
+    obj/chrome/common/extensions/api/storage/common.storage_schema_manifest_handler.o: $
+    cxx $
+    ../../chrome/common/extensions/api/storage/storage_schema_manifest_handler.cc $
+    || obj/chrome/common.compile_depends.stamp
+build $
+    obj/chrome/common/extensions/api/system_indicator/common.system_indicator_handler.o: $
+    cxx $
+    ../../chrome/common/extensions/api/system_indicator/system_indicator_handler.cc $
+    || obj/chrome/common.compile_depends.stamp
+build $
+    obj/chrome/common/extensions/api/url_handlers/common.url_handlers_parser.o: $
+    cxx $
+    ../../chrome/common/extensions/api/url_handlers/url_handlers_parser.cc $
+    || obj/chrome/common.compile_depends.stamp
+build $
+    obj/chrome/common/extensions/api/webstore/common.webstore_api_constants.o: $
+    cxx $
+    ../../chrome/common/extensions/api/webstore/webstore_api_constants.cc $
+    || obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/extensions/common.chrome_extensions_client.o: cxx $
+    ../../chrome/common/extensions/chrome_extensions_client.cc || $
+    obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/extensions/common.chrome_manifest_handlers.o: cxx $
+    ../../chrome/common/extensions/chrome_manifest_handlers.cc || $
+    obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/extensions/common.chrome_manifest_url_handlers.o: $
+    cxx ../../chrome/common/extensions/chrome_manifest_url_handlers.cc || $
+    obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/extensions/common.command.o: cxx $
+    ../../chrome/common/extensions/command.cc || $
+    obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/extensions/common.extension_constants.o: cxx $
+    ../../chrome/common/extensions/extension_constants.cc || $
+    obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/extensions/common.extension_metrics.o: cxx $
+    ../../chrome/common/extensions/extension_metrics.cc || $
+    obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/extensions/common.extension_process_policy.o: cxx $
+    ../../chrome/common/extensions/extension_process_policy.cc || $
+    obj/chrome/common.compile_depends.stamp
+build $
+    obj/chrome/common/extensions/features/common.chrome_channel_feature_filter.o: $
+    cxx $
+    ../../chrome/common/extensions/features/chrome_channel_feature_filter.cc $
+    || obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/extensions/features/common.feature_channel.o: cxx $
+    ../../chrome/common/extensions/features/feature_channel.cc || $
+    obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/extensions/features/common.feature_util.o: cxx $
+    ../../chrome/common/extensions/features/feature_util.cc || $
+    obj/chrome/common.compile_depends.stamp
+build $
+    obj/chrome/common/extensions/image_writer/common.image_writer_util_mac.o: $
+    cxx $
+    ../../chrome/common/extensions/image_writer/image_writer_util_mac.cc || $
+    obj/chrome/common.compile_depends.stamp
+build $
+    obj/chrome/common/extensions/manifest_handlers/common.app_icon_color_info.o: $
+    cxx $
+    ../../chrome/common/extensions/manifest_handlers/app_icon_color_info.cc $
+    || obj/chrome/common.compile_depends.stamp
+build $
+    obj/chrome/common/extensions/manifest_handlers/common.app_launch_info.o: $
+    cxx ../../chrome/common/extensions/manifest_handlers/app_launch_info.cc $
+    || obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/extensions/manifest_handlers/common.automation.o: $
+    cxx ../../chrome/common/extensions/manifest_handlers/automation.cc || $
+    obj/chrome/common.compile_depends.stamp
+build $
+    obj/chrome/common/extensions/manifest_handlers/common.content_scripts_handler.o: $
+    cxx $
+    ../../chrome/common/extensions/manifest_handlers/content_scripts_handler.cc $
+    || obj/chrome/common.compile_depends.stamp
+build $
+    obj/chrome/common/extensions/manifest_handlers/common.copresence_manifest.o: $
+    cxx $
+    ../../chrome/common/extensions/manifest_handlers/copresence_manifest.cc $
+    || obj/chrome/common.compile_depends.stamp
+build $
+    obj/chrome/common/extensions/manifest_handlers/common.extension_action_handler.o: $
+    cxx $
+    ../../chrome/common/extensions/manifest_handlers/extension_action_handler.cc $
+    || obj/chrome/common.compile_depends.stamp
+build $
+    obj/chrome/common/extensions/manifest_handlers/common.linked_app_icons.o: $
+    cxx $
+    ../../chrome/common/extensions/manifest_handlers/linked_app_icons.cc || $
+    obj/chrome/common.compile_depends.stamp
+build $
+    obj/chrome/common/extensions/manifest_handlers/common.minimum_chrome_version_checker.o: $
+    cxx $
+    ../../chrome/common/extensions/manifest_handlers/minimum_chrome_version_checker.cc $
+    || obj/chrome/common.compile_depends.stamp
+build $
+    obj/chrome/common/extensions/manifest_handlers/common.settings_overrides_handler.o: $
+    cxx $
+    ../../chrome/common/extensions/manifest_handlers/settings_overrides_handler.cc $
+    || obj/chrome/common.compile_depends.stamp
+build $
+    obj/chrome/common/extensions/manifest_handlers/common.theme_handler.o: $
+    cxx ../../chrome/common/extensions/manifest_handlers/theme_handler.cc $
+    || obj/chrome/common.compile_depends.stamp
+build $
+    obj/chrome/common/extensions/manifest_handlers/common.ui_overrides_handler.o: $
+    cxx $
+    ../../chrome/common/extensions/manifest_handlers/ui_overrides_handler.cc $
+    || obj/chrome/common.compile_depends.stamp
+build $
+    obj/chrome/common/extensions/permissions/common.chrome_api_permissions.o: $
+    cxx $
+    ../../chrome/common/extensions/permissions/chrome_api_permissions.cc || $
+    obj/chrome/common.compile_depends.stamp
+build $
+    obj/chrome/common/extensions/permissions/common.chrome_permission_message_provider.o: $
+    cxx $
+    ../../chrome/common/extensions/permissions/chrome_permission_message_provider.cc $
+    || obj/chrome/common.compile_depends.stamp
+build $
+    obj/chrome/common/extensions/permissions/common.chrome_permission_message_rules.o: $
+    cxx $
+    ../../chrome/common/extensions/permissions/chrome_permission_message_rules.cc $
+    || obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/extensions/common.sync_helper.o: cxx $
+    ../../chrome/common/extensions/sync_helper.cc || $
+    obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/media_galleries/common.itunes_library.o: cxx $
+    ../../chrome/common/media_galleries/itunes_library.cc || $
+    obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/media_galleries/common.picasa_types.o: cxx $
+    ../../chrome/common/media_galleries/picasa_types.cc || $
+    obj/chrome/common.compile_depends.stamp
+build $
+    obj/chrome/common/extensions/api/networking_private/common.networking_private_crypto.o: $
+    cxx $
+    ../../chrome/common/extensions/api/networking_private/networking_private_crypto.cc $
+    || obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/media_galleries/common.iphoto_library.o: cxx $
+    ../../chrome/common/media_galleries/iphoto_library.cc || $
+    obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/common.pepper_flash.o: cxx $
+    ../../chrome/common/pepper_flash.cc || $
+    obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/common.ppapi_utils.o: cxx $
+    ../../chrome/common/ppapi_utils.cc || $
+    obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/common.pepper_permission_util.o: cxx $
+    ../../chrome/common/pepper_permission_util.cc || $
+    obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/cloud_print/common.cloud_print_cdd_conversion.o: $
+    cxx ../../chrome/common/cloud_print/cloud_print_cdd_conversion.cc || $
+    obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/cloud_print/common.cloud_print_class_mac.o: objcxx $
+    ../../chrome/common/cloud_print/cloud_print_class_mac.mm || $
+    obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/cloud_print/common.cloud_print_constants.o: cxx $
+    ../../chrome/common/cloud_print/cloud_print_constants.cc || $
+    obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/cloud_print/common.cloud_print_helpers.o: cxx $
+    ../../chrome/common/cloud_print/cloud_print_helpers.cc || $
+    obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/cloud_print/common.cloud_print_proxy_info.o: cxx $
+    ../../chrome/common/cloud_print/cloud_print_proxy_info.cc || $
+    obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/common.service_process_util.o: cxx $
+    ../../chrome/common/service_process_util.cc || $
+    obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/common.service_process_util_mac.o: objcxx $
+    ../../chrome/common/service_process_util_mac.mm || $
+    obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/common.service_process_util_posix.o: cxx $
+    ../../chrome/common/service_process_util_posix.cc || $
+    obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/local_discovery/common.service_discovery_client.o: $
+    cxx ../../chrome/common/local_discovery/service_discovery_client.cc || $
+    obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/importer/common.firefox_importer_utils.o: cxx $
+    ../../chrome/common/importer/firefox_importer_utils.cc || $
+    obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/importer/common.firefox_importer_utils_mac.o: $
+    objcxx ../../chrome/common/importer/firefox_importer_utils_mac.mm || $
+    obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/importer/common.imported_bookmark_entry.o: cxx $
+    ../../chrome/common/importer/imported_bookmark_entry.cc || $
+    obj/chrome/common.compile_depends.stamp
+build $
+    obj/chrome/common/importer/common.importer_autofill_form_data_entry.o: $
+    cxx ../../chrome/common/importer/importer_autofill_form_data_entry.cc $
+    || obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/importer/common.importer_bridge.o: cxx $
+    ../../chrome/common/importer/importer_bridge.cc || $
+    obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/importer/common.importer_data_types.o: cxx $
+    ../../chrome/common/importer/importer_data_types.cc || $
+    obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/importer/common.importer_url_row.o: cxx $
+    ../../chrome/common/importer/importer_url_row.cc || $
+    obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/importer/common.profile_import_process_messages.o: $
+    cxx ../../chrome/common/importer/profile_import_process_messages.cc || $
+    obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/importer/common.safari_importer_utils.o: objcxx $
+    ../../chrome/common/importer/safari_importer_utils.mm || $
+    obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/safe_browsing/common.binary_feature_extractor.o: $
+    cxx ../../chrome/common/safe_browsing/binary_feature_extractor.cc || $
+    obj/chrome/common.compile_depends.stamp
+build $
+    obj/chrome/common/safe_browsing/common.binary_feature_extractor_mac.o: $
+    cxx ../../chrome/common/safe_browsing/binary_feature_extractor_mac.cc $
+    || obj/chrome/common.compile_depends.stamp
+build $
+    obj/chrome/common/safe_browsing/common.binary_feature_extractor_posix.o: $
+    cxx ../../chrome/common/safe_browsing/binary_feature_extractor_posix.cc $
+    || obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/safe_browsing/common.download_protection_util.o: $
+    cxx ../../chrome/common/safe_browsing/download_protection_util.cc || $
+    obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/safe_browsing/common.mach_o_image_reader_mac.o: cxx $
+    ../../chrome/common/safe_browsing/mach_o_image_reader_mac.cc || $
+    obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/safe_browsing/common.zip_analyzer.o: cxx $
+    ../../chrome/common/safe_browsing/zip_analyzer.cc || $
+    obj/chrome/common.compile_depends.stamp
+build obj/chrome/common/safe_browsing/common.zip_analyzer_results.o: cxx $
+    ../../chrome/common/safe_browsing/zip_analyzer_results.cc || $
+    obj/chrome/common.compile_depends.stamp
+
+build libcommon.a: alink obj/chrome/common/common.badge_util.o $
+    obj/chrome/common/common.channel_info.o $
+    obj/chrome/common/common.channel_info_mac.o $
+    obj/chrome/common/common.chrome_content_client.o $
+    obj/chrome/common/common.chrome_content_client_constants.o $
+    obj/chrome/common/common.common_message_generator.o $
+    obj/chrome/common/common.common_param_traits.o $
+    obj/chrome/common/common.content_settings_pattern_serializer.o $
+    obj/chrome/common/common.crash_keys.o $
+    obj/chrome/common/custom_handlers/common.protocol_handler.o $
+    obj/chrome/common/common.icon_with_badge_image_source.o $
+    obj/chrome/common/common.ini_parser.o $
+    obj/chrome/common/common.instant_types.o $
+    obj/chrome/common/common.localized_error.o $
+    obj/chrome/common/common.logging_chrome.o $
+    obj/chrome/common/mac/common.cfbundle_blocker.o $
+    obj/chrome/common/mac/common.launchd.o $
+    obj/chrome/common/media/common.media_resource_provider.o $
+    obj/chrome/common/media/common.webrtc_logging_message_data.o $
+    obj/chrome/common/common.multi_process_lock_mac.o $
+    obj/chrome/common/common.partial_circular_buffer.o $
+    obj/chrome/common/common.pref_names_util.o $
+    obj/chrome/common/common.profiling.o $
+    obj/chrome/common/common.render_messages.o $
+    obj/chrome/common/common.resource_usage_reporter_type_converters.o $
+    obj/chrome/common/common.search_urls.o $
+    obj/chrome/common/common.secure_origin_whitelist.o $
+    obj/chrome/common/common.spellcheck_common.o $
+    obj/chrome/common/common.switch_utils.o $
+    obj/chrome/common/common.trace_event_args_whitelist.o $
+    obj/chrome/common/common.tts_utterance_request.o $
+    obj/chrome/common/common.url_constants.o $
+    obj/chrome/common/variations/common.variations_util.o $
+    obj/chrome/common/common.web_application_info.o $
+    obj/chrome/common/common.widevine_cdm_constants.o $
+    obj/chrome/common/common.worker_thread_ticker.o $
+    obj/chrome/common/extensions/api/commands/common.commands_handler.o $
+    obj/chrome/common/extensions/api/extension_action/common.action_info.o $
+    obj/chrome/common/extensions/api/notifications/common.notification_style.o $
+    obj/chrome/common/extensions/api/omnibox/common.omnibox_handler.o $
+    obj/chrome/common/extensions/api/plugins/common.plugins_handler.o $
+    obj/chrome/common/extensions/api/speech/common.tts_engine_manifest_handler.o $
+    obj/chrome/common/extensions/api/spellcheck/common.spellcheck_handler.o $
+    obj/chrome/common/extensions/api/storage/common.storage_schema_manifest_handler.o $
+    obj/chrome/common/extensions/api/system_indicator/common.system_indicator_handler.o $
+    obj/chrome/common/extensions/api/url_handlers/common.url_handlers_parser.o $
+    obj/chrome/common/extensions/api/webstore/common.webstore_api_constants.o $
+    obj/chrome/common/extensions/common.chrome_extensions_client.o $
+    obj/chrome/common/extensions/common.chrome_manifest_handlers.o $
+    obj/chrome/common/extensions/common.chrome_manifest_url_handlers.o $
+    obj/chrome/common/extensions/common.command.o $
+    obj/chrome/common/extensions/common.extension_constants.o $
+    obj/chrome/common/extensions/common.extension_metrics.o $
+    obj/chrome/common/extensions/common.extension_process_policy.o $
+    obj/chrome/common/extensions/features/common.chrome_channel_feature_filter.o $
+    obj/chrome/common/extensions/features/common.feature_channel.o $
+    obj/chrome/common/extensions/features/common.feature_util.o $
+    obj/chrome/common/extensions/image_writer/common.image_writer_util_mac.o $
+    obj/chrome/common/extensions/manifest_handlers/common.app_icon_color_info.o $
+    obj/chrome/common/extensions/manifest_handlers/common.app_launch_info.o $
+    obj/chrome/common/extensions/manifest_handlers/common.automation.o $
+    obj/chrome/common/extensions/manifest_handlers/common.content_scripts_handler.o $
+    obj/chrome/common/extensions/manifest_handlers/common.copresence_manifest.o $
+    obj/chrome/common/extensions/manifest_handlers/common.extension_action_handler.o $
+    obj/chrome/common/extensions/manifest_handlers/common.linked_app_icons.o $
+    obj/chrome/common/extensions/manifest_handlers/common.minimum_chrome_version_checker.o $
+    obj/chrome/common/extensions/manifest_handlers/common.settings_overrides_handler.o $
+    obj/chrome/common/extensions/manifest_handlers/common.theme_handler.o $
+    obj/chrome/common/extensions/manifest_handlers/common.ui_overrides_handler.o $
+    obj/chrome/common/extensions/permissions/common.chrome_api_permissions.o $
+    obj/chrome/common/extensions/permissions/common.chrome_permission_message_provider.o $
+    obj/chrome/common/extensions/permissions/common.chrome_permission_message_rules.o $
+    obj/chrome/common/extensions/common.sync_helper.o $
+    obj/chrome/common/media_galleries/common.itunes_library.o $
+    obj/chrome/common/media_galleries/common.picasa_types.o $
+    obj/chrome/common/extensions/api/networking_private/common.networking_private_crypto.o $
+    obj/chrome/common/media_galleries/common.iphoto_library.o $
+    obj/chrome/common/common.pepper_flash.o $
+    obj/chrome/common/common.ppapi_utils.o $
+    obj/chrome/common/common.pepper_permission_util.o $
+    obj/chrome/common/cloud_print/common.cloud_print_cdd_conversion.o $
+    obj/chrome/common/cloud_print/common.cloud_print_class_mac.o $
+    obj/chrome/common/cloud_print/common.cloud_print_constants.o $
+    obj/chrome/common/cloud_print/common.cloud_print_helpers.o $
+    obj/chrome/common/cloud_print/common.cloud_print_proxy_info.o $
+    obj/chrome/common/common.service_process_util.o $
+    obj/chrome/common/common.service_process_util_mac.o $
+    obj/chrome/common/common.service_process_util_posix.o $
+    obj/chrome/common/local_discovery/common.service_discovery_client.o $
+    obj/chrome/common/importer/common.firefox_importer_utils.o $
+    obj/chrome/common/importer/common.firefox_importer_utils_mac.o $
+    obj/chrome/common/importer/common.imported_bookmark_entry.o $
+    obj/chrome/common/importer/common.importer_autofill_form_data_entry.o $
+    obj/chrome/common/importer/common.importer_bridge.o $
+    obj/chrome/common/importer/common.importer_data_types.o $
+    obj/chrome/common/importer/common.importer_url_row.o $
+    obj/chrome/common/importer/common.profile_import_process_messages.o $
+    obj/chrome/common/importer/common.safari_importer_utils.o $
+    obj/chrome/common/safe_browsing/common.binary_feature_extractor.o $
+    obj/chrome/common/safe_browsing/common.binary_feature_extractor_mac.o $
+    obj/chrome/common/safe_browsing/common.binary_feature_extractor_posix.o $
+    obj/chrome/common/safe_browsing/common.download_protection_util.o $
+    obj/chrome/common/safe_browsing/common.mach_o_image_reader_mac.o $
+    obj/chrome/common/safe_browsing/common.zip_analyzer.o $
+    obj/chrome/common/safe_browsing/common.zip_analyzer_results.o || $
+    obj/chrome/common.actions_depends.stamp

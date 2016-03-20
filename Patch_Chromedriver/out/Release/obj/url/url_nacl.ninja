@@ -1,0 +1,234 @@
+build obj/url/url_nacl.actions_depends.stamp: stamp $
+    gen/tc_pnacl_newlib/lib/libicudata_nacl.a $
+    gen/tc_pnacl_newlib/lib/libicui18n_nacl.a $
+    gen/tc_pnacl_newlib/lib/libicuuc_nacl.a
+
+build obj/url/url_nacl.compile_depends.stamp: stamp $
+    gen/tc_pnacl_newlib/lib/libicudata_nacl.a $
+    gen/tc_pnacl_newlib/lib/libicui18n_nacl.a $
+    gen/tc_pnacl_newlib/lib/libicuuc_nacl.a
+
+rule url_nacl_target_build_newlib_plib_fe3914652b3228c62f6b569d6a819f31
+  command = cd ../../url; export $
+      BUILT_FRAMEWORKS_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      BUILT_PRODUCTS_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      CONFIGURATION=Release; export PRODUCT_NAME=url_nacl; export $
+      SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk; $
+      export SRCROOT=/Users/superadmin/tmp/src/out/Release/../../url; $
+      export SOURCE_ROOT="$${SRCROOT}"; export $
+      TARGET_BUILD_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      TEMP_DIR="$${TMPDIR}";python ../native_client/build/build_nexe.py $
+      --root .. --product-dir ../out/Release/xyz --config-name Release -t $
+      ../native_client/toolchain/ --arch pnacl --build newlib_plib --name $
+      ../out/Release/gen/tc_pnacl_newlib/lib/liburl_nacl.a --objdir $
+      ../out/Release/obj/url/url_nacl.gen/pnacl_newlib-pnacl/url_nacl $
+      "--include-dirs=../out/Release/gen/tc_pnacl_newlib/include .. $
+      \"../out/Release/gen\" ../third_party/icu/source/i18n $
+      ../third_party/icu/source/common" "--compile_flags=-O2 -g -Wall $
+      -fdiagnostics-show-option -Werror  -Wno-unused-function $
+      -Wno-char-subscripts -Wno-c++11-extensions $
+      -Wno-unnamed-type-template-args -Wno-extra-semi $
+      -Wno-unused-private-field -Wno-char-subscripts -Wno-unused-function $
+      \"-std=gnu++11\" " --gomadir "" "--defines=\"__STDC_LIMIT_MACROS=1\" $
+      \"__STDC_FORMAT_MACROS=1\" \"_GNU_SOURCE=1\" $
+      \"_POSIX_C_SOURCE=199506\" \"_XOPEN_SOURCE=600\" $
+      \"DYNAMIC_ANNOTATIONS_ENABLED=1\" $
+      \"DYNAMIC_ANNOTATIONS_PREFIX=NACL_\" \"NACL_BUILD_ARCH=x86\" $
+      V8_DEPRECATION_WARNINGS \"CLD_VERSION=2\" $
+      \"__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORE=0\" $
+      CHROMIUM_BUILD \"CR_CLANG_REVISION=254049-1\" \"USE_LIBJPEG_TURBO=1\" $
+      ENABLE_ONE_CLICK_SIGNIN ENABLE_PRE_SYNC_BACKUP \"ENABLE_WEBRTC=1\" $
+      \"ENABLE_MEDIA_ROUTER=1\" ENABLE_PEPPER_CDMS $
+      ENABLE_CONFIGURATION_POLICY ENABLE_NOTIFICATIONS \"ENABLE_HIDPI=1\" $
+      DONT_EMBED_BUILD_METADATA FIELDTRIAL_TESTING_ENABLED $
+      \"ENABLE_TASK_MANAGER=1\" \"ENABLE_EXTENSIONS=1\" \"ENABLE_PDF=1\" $
+      \"ENABLE_PLUGIN_INSTALLATION=1\" \"ENABLE_PLUGINS=1\" $
+      \"ENABLE_SESSION_SERVICE=1\" \"ENABLE_THEMES=1\" $
+      \"ENABLE_AUTOFILL_DIALOG=1\" \"ENABLE_BACKGROUND=1\" $
+      \"ENABLE_PRINTING=1\" \"ENABLE_BASIC_PRINTING=1\" $
+      \"ENABLE_PRINT_PREVIEW=1\" \"ENABLE_SPELLCHECK=1\" $
+      \"USE_BROWSER_SPELLCHECKER=1\" \"ENABLE_CAPTIVE_PORTAL_DETECTION=1\" $
+      \"ENABLE_APP_LIST=1\" \"ENABLE_SETTINGS_APP=1\" $
+      \"ENABLE_SUPERVISED_USERS=1\" \"ENABLE_SERVICE_DISCOVERY=1\" $
+      V8_USE_EXTERNAL_STARTUP_DATA FULL_SAFE_BROWSING SAFE_BROWSING_CSD $
+      SAFE_BROWSING_DB_LOCAL \"U_USING_ICU_NAMESPACE=0\" $
+      \"U_ENABLE_DYLOAD=0\" U_STATIC_IMPLEMENTATION \"USE_LIBPCI=1\" $
+      \"USE_OPENSSL=1\" __STDC_CONSTANT_MACROS __STDC_FORMAT_MACROS" $
+      "--link_flags=-B../out/Release/gen/tc_pnacl_newlib/lib  " $
+      "--source-list=../out/gypfiles/url/pnacl_newlib.url_nacl.source_list.gypcmd"
+  description = ACTION url_nacl: build newlib $
+      plib_fe3914652b3228c62f6b569d6a819f31
+  restat = 1
+
+build gen/tc_pnacl_newlib/lib/liburl_nacl.a: $
+    url_nacl_target_build_newlib_plib_fe3914652b3228c62f6b569d6a819f31 $
+    ../../native_client/build/build_nexe.py $
+    ../../native_client/build/build_nexe_tools.py ../../base/atomicops.h $
+    ../../base/atomicops_internals_atomicword_compat.h $
+    ../../base/atomicops_internals_mac.h $
+    ../../base/atomicops_internals_portable.h $
+    ../../base/atomicops_internals_x86_msvc.h ../../base/base_export.h $
+    ../../base/basictypes.h ../../base/compiler_specific.h $
+    ../../base/containers/hash_tables.h ../../base/debug/debugger.h $
+    ../../base/debug/leak_annotations.h ../../base/lazy_instance.h $
+    ../../base/logging.h ../../base/macros.h $
+    ../../base/memory/aligned_memory.h ../../base/memory/scoped_ptr.h $
+    ../../base/move.h ../../base/numerics/safe_conversions.h $
+    ../../base/numerics/safe_conversions_impl.h $
+    ../../base/strings/string16.h $
+    ../../base/strings/string_number_conversions.h $
+    ../../base/strings/string_piece.h ../../base/strings/string_util.h $
+    ../../base/strings/string_util_posix.h $
+    ../../base/strings/string_util_win.h $
+    ../../base/strings/utf_string_conversion_utils.h $
+    ../../base/template_util.h ../../base/threading/thread_restrictions.h $
+    ../../build/build_config.h $
+    ../../third_party/icu/source/common/unicode/bytestream.h $
+    ../../third_party/icu/source/common/unicode/localpointer.h $
+    ../../third_party/icu/source/common/unicode/parseerr.h $
+    ../../third_party/icu/source/common/unicode/platform.h $
+    ../../third_party/icu/source/common/unicode/ptypes.h $
+    ../../third_party/icu/source/common/unicode/putil.h $
+    ../../third_party/icu/source/common/unicode/rep.h $
+    ../../third_party/icu/source/common/unicode/std_string.h $
+    ../../third_party/icu/source/common/unicode/strenum.h $
+    ../../third_party/icu/source/common/unicode/stringpiece.h $
+    ../../third_party/icu/source/common/unicode/ucasemap.h $
+    ../../third_party/icu/source/common/unicode/ucnv.h $
+    ../../third_party/icu/source/common/unicode/ucnv_cb.h $
+    ../../third_party/icu/source/common/unicode/ucnv_err.h $
+    ../../third_party/icu/source/common/unicode/uconfig.h $
+    ../../third_party/icu/source/common/unicode/uenum.h $
+    ../../third_party/icu/source/common/unicode/uidna.h $
+    ../../third_party/icu/source/common/unicode/uiter.h $
+    ../../third_party/icu/source/common/unicode/umachine.h $
+    ../../third_party/icu/source/common/unicode/unistr.h $
+    ../../third_party/icu/source/common/unicode/uobject.h $
+    ../../third_party/icu/source/common/unicode/urename.h $
+    ../../third_party/icu/source/common/unicode/ustring.h $
+    ../../third_party/icu/source/common/unicode/utf.h $
+    ../../third_party/icu/source/common/unicode/utf16.h $
+    ../../third_party/icu/source/common/unicode/utf8.h $
+    ../../third_party/icu/source/common/unicode/utf_old.h $
+    ../../third_party/icu/source/common/unicode/utypes.h $
+    ../../third_party/icu/source/common/unicode/uvernum.h $
+    ../../third_party/icu/source/common/unicode/uversion.h $
+    ../../url/android/url_jni_registrar.cc $
+    ../../url/android/url_jni_registrar.h ../../url/gurl.cc $
+    ../../url/gurl.h ../../url/origin.cc ../../url/origin.h $
+    ../../url/scheme_host_port.cc ../../url/scheme_host_port.h $
+    ../../url/third_party/mozilla/url_parse.cc $
+    ../../url/third_party/mozilla/url_parse.h ../../url/url_canon.h $
+    ../../url/url_canon_etc.cc ../../url/url_canon_filesystemurl.cc $
+    ../../url/url_canon_fileurl.cc ../../url/url_canon_host.cc $
+    ../../url/url_canon_icu.cc ../../url/url_canon_icu.h $
+    ../../url/url_canon_icu_alternatives_android.h $
+    ../../url/url_canon_internal.cc ../../url/url_canon_internal.h $
+    ../../url/url_canon_internal_file.h ../../url/url_canon_ip.cc $
+    ../../url/url_canon_ip.h ../../url/url_canon_mailtourl.cc $
+    ../../url/url_canon_path.cc ../../url/url_canon_pathurl.cc $
+    ../../url/url_canon_query.cc ../../url/url_canon_relative.cc $
+    ../../url/url_canon_stdstring.cc ../../url/url_canon_stdstring.h $
+    ../../url/url_canon_stdurl.cc ../../url/url_constants.cc $
+    ../../url/url_constants.h ../../url/url_export.h ../../url/url_file.h $
+    ../../url/url_parse_file.cc ../../url/url_parse_internal.h $
+    ../../url/url_util.cc ../../url/url_util.h $
+    ../../url/url_util_internal.h $
+    ../../out/gypfiles/url/pnacl_newlib.url_nacl.source_list.gypcmd $
+    ../../native_client/toolchain/mac_x86/pnacl_newlib/pnacl_newlib.json || $
+    obj/url/url_nacl.actions_depends.stamp
+
+defines = -DV8_DEPRECATION_WARNINGS -DCLD_VERSION=2 $
+    -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORE=0 -DCHROMIUM_BUILD $
+    -DCR_CLANG_REVISION=254049-1 -DUSE_LIBJPEG_TURBO=1 $
+    -DENABLE_ONE_CLICK_SIGNIN -DENABLE_PRE_SYNC_BACKUP -DENABLE_WEBRTC=1 $
+    -DENABLE_MEDIA_ROUTER=1 -DENABLE_PEPPER_CDMS $
+    -DENABLE_CONFIGURATION_POLICY -DENABLE_NOTIFICATIONS -DENABLE_HIDPI=1 $
+    -DDONT_EMBED_BUILD_METADATA -DFIELDTRIAL_TESTING_ENABLED $
+    -DENABLE_TASK_MANAGER=1 -DENABLE_EXTENSIONS=1 -DENABLE_PDF=1 $
+    -DENABLE_PLUGIN_INSTALLATION=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_THEMES=1 -DENABLE_AUTOFILL_DIALOG=1 $
+    -DENABLE_BACKGROUND=1 -DENABLE_PRINTING=1 -DENABLE_BASIC_PRINTING=1 $
+    -DENABLE_PRINT_PREVIEW=1 -DENABLE_SPELLCHECK=1 $
+    -DUSE_BROWSER_SPELLCHECKER=1 -DENABLE_CAPTIVE_PORTAL_DETECTION=1 $
+    -DENABLE_APP_LIST=1 -DENABLE_SETTINGS_APP=1 -DENABLE_SUPERVISED_USERS=1 $
+    -DENABLE_SERVICE_DISCOVERY=1 -DV8_USE_EXTERNAL_STARTUP_DATA $
+    -DFULL_SAFE_BROWSING -DSAFE_BROWSING_CSD -DSAFE_BROWSING_DB_LOCAL $
+    -DU_USING_ICU_NAMESPACE=0 -DU_ENABLE_DYLOAD=0 -DU_STATIC_IMPLEMENTATION $
+    -DUSE_LIBPCI=1 -DUSE_OPENSSL=1 -D__STDC_CONSTANT_MACROS $
+    -D__STDC_FORMAT_MACROS -DNDEBUG -DNVALGRIND $
+    -DDYNAMIC_ANNOTATIONS_ENABLED=0 -D_FORTIFY_SOURCE=2
+includes = -Igen -I../../third_party/icu/source/i18n $
+    -I../../third_party/icu/source/common
+cflags = -isysroot $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk $
+    -O2 -fvisibility=hidden -Werror -Wnewline-eof -mmacosx-version-min=10.6 $
+    -arch x86_64 -Wall -Wendif-labels -Wextra -Wno-unused-parameter $
+    -Wno-missing-field-initializers -Wno-selector-type-mismatch $
+    -Wpartial-availability -Wheader-hygiene -Wno-char-subscripts $
+    -Wno-unneeded-internal-declaration -Wno-covered-switch-default $
+    -Wstring-conversion -Wno-c++11-narrowing -Wno-deprecated-register $
+    -Wno-inconsistent-missing-override -Wno-shift-negative-value $
+    -Wno-bitfield-width
+cflags_c = -std=c99 -Xclang -load -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing
+cflags_cc = -std=c++11 -stdlib=libc++ -fno-rtti -fno-exceptions $
+    -fvisibility-inlines-hidden -fno-threadsafe-statics -Xclang -load $
+    -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing
+cflags_objc = $cflags_c -Wobjc-missing-property-synthesis
+cflags_objcc = $cflags_cc -Wobjc-missing-property-synthesis $
+    -fobjc-call-cxx-cdtors
+arflags = 
+
+build obj/url/url_nacl.gurl.o: cxx ../../url/gurl.cc || $
+    gen/tc_pnacl_newlib/lib/liburl_nacl.a
+build obj/url/url_nacl.origin.o: cxx ../../url/origin.cc || $
+    gen/tc_pnacl_newlib/lib/liburl_nacl.a
+build obj/url/url_nacl.scheme_host_port.o: cxx $
+    ../../url/scheme_host_port.cc || gen/tc_pnacl_newlib/lib/liburl_nacl.a
+build obj/url/third_party/mozilla/url_nacl.url_parse.o: cxx $
+    ../../url/third_party/mozilla/url_parse.cc || $
+    gen/tc_pnacl_newlib/lib/liburl_nacl.a
+build obj/url/url_nacl.url_canon_etc.o: cxx ../../url/url_canon_etc.cc || $
+    gen/tc_pnacl_newlib/lib/liburl_nacl.a
+build obj/url/url_nacl.url_canon_filesystemurl.o: cxx $
+    ../../url/url_canon_filesystemurl.cc || $
+    gen/tc_pnacl_newlib/lib/liburl_nacl.a
+build obj/url/url_nacl.url_canon_fileurl.o: cxx $
+    ../../url/url_canon_fileurl.cc || gen/tc_pnacl_newlib/lib/liburl_nacl.a
+build obj/url/url_nacl.url_canon_host.o: cxx ../../url/url_canon_host.cc || $
+    gen/tc_pnacl_newlib/lib/liburl_nacl.a
+build obj/url/url_nacl.url_canon_icu.o: cxx ../../url/url_canon_icu.cc || $
+    gen/tc_pnacl_newlib/lib/liburl_nacl.a
+build obj/url/url_nacl.url_canon_internal.o: cxx $
+    ../../url/url_canon_internal.cc || gen/tc_pnacl_newlib/lib/liburl_nacl.a
+build obj/url/url_nacl.url_canon_ip.o: cxx ../../url/url_canon_ip.cc || $
+    gen/tc_pnacl_newlib/lib/liburl_nacl.a
+build obj/url/url_nacl.url_canon_mailtourl.o: cxx $
+    ../../url/url_canon_mailtourl.cc || gen/tc_pnacl_newlib/lib/liburl_nacl.a
+build obj/url/url_nacl.url_canon_path.o: cxx ../../url/url_canon_path.cc || $
+    gen/tc_pnacl_newlib/lib/liburl_nacl.a
+build obj/url/url_nacl.url_canon_pathurl.o: cxx $
+    ../../url/url_canon_pathurl.cc || gen/tc_pnacl_newlib/lib/liburl_nacl.a
+build obj/url/url_nacl.url_canon_query.o: cxx ../../url/url_canon_query.cc $
+    || gen/tc_pnacl_newlib/lib/liburl_nacl.a
+build obj/url/url_nacl.url_canon_relative.o: cxx $
+    ../../url/url_canon_relative.cc || gen/tc_pnacl_newlib/lib/liburl_nacl.a
+build obj/url/url_nacl.url_canon_stdstring.o: cxx $
+    ../../url/url_canon_stdstring.cc || gen/tc_pnacl_newlib/lib/liburl_nacl.a
+build obj/url/url_nacl.url_canon_stdurl.o: cxx $
+    ../../url/url_canon_stdurl.cc || gen/tc_pnacl_newlib/lib/liburl_nacl.a
+build obj/url/url_nacl.url_constants.o: cxx ../../url/url_constants.cc || $
+    gen/tc_pnacl_newlib/lib/liburl_nacl.a
+build obj/url/url_nacl.url_parse_file.o: cxx ../../url/url_parse_file.cc || $
+    gen/tc_pnacl_newlib/lib/liburl_nacl.a
+build obj/url/url_nacl.url_util.o: cxx ../../url/url_util.cc || $
+    gen/tc_pnacl_newlib/lib/liburl_nacl.a
+

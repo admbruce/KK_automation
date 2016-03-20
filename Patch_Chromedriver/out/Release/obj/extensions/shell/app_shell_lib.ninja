@@ -1,0 +1,308 @@
+build obj/extensions/shell/app_shell_lib.actions_depends.stamp: stamp $
+    gen/extensions/shell/common/version.h $
+    obj/content/content.actions_depends.stamp libax_gen.a $
+    libmojo_application_bindings.a libnetwork_service_bindings_lib.a $
+    libcontent_common_mojo_bindings.a libextensions_api_registration.a $
+    libextensions_api.a extensions_shell_and_test.pak $
+    obj/extensions/extensions_resources.actions_rules_copies.stamp $
+    libshell_api_registration.a libshell_api.a $
+    obj/skia/skia.actions_depends.stamp $
+    obj/third_party/WebKit/public/blink.actions_depends.stamp $
+    obj/v8/tools/gyp/v8_maybe_snapshot.actions_depends.stamp libcld2_static.a
+
+build obj/extensions/shell/app_shell_lib.compile_depends.stamp: stamp $
+    gen/extensions/shell/common/version.h $
+    obj/content/content.compile_depends.stamp $
+    obj/ui/accessibility/ax_gen.actions_rules_copies.stamp $
+    obj/mojo/mojo_application_bindings.compile_depends.stamp $
+    obj/mojo/network_service_bindings_mojom.actions_rules_copies.stamp $
+    obj/content/content_common_mojo_bindings.compile_depends.stamp $
+    obj/extensions/browser/api/extensions_api_registration.actions_rules_copies.stamp $
+    obj/extensions/common/api/extensions_api.actions_rules_copies.stamp $
+    extensions_shell_and_test.pak $
+    obj/extensions/extensions_resources.actions_rules_copies.stamp $
+    obj/extensions/shell/browser/api/shell_api_registration.actions_rules_copies.stamp $
+    obj/extensions/shell/common/api/shell_api.actions_rules_copies.stamp $
+    obj/third_party/WebKit/public/blink.compile_depends.stamp $
+    snapshot_blob.bin
+
+defines = -DV8_DEPRECATION_WARNINGS -DCLD_VERSION=2 $
+    -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORE=0 -DCHROMIUM_BUILD $
+    -DCR_CLANG_REVISION=254049-1 -DUSE_LIBJPEG_TURBO=1 $
+    -DENABLE_ONE_CLICK_SIGNIN -DENABLE_PRE_SYNC_BACKUP -DENABLE_WEBRTC=1 $
+    -DENABLE_MEDIA_ROUTER=1 -DENABLE_PEPPER_CDMS $
+    -DENABLE_CONFIGURATION_POLICY -DENABLE_NOTIFICATIONS -DENABLE_HIDPI=1 $
+    -DDONT_EMBED_BUILD_METADATA -DFIELDTRIAL_TESTING_ENABLED $
+    -DENABLE_TASK_MANAGER=1 -DENABLE_EXTENSIONS=1 -DENABLE_PDF=1 $
+    -DENABLE_PLUGIN_INSTALLATION=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_THEMES=1 -DENABLE_AUTOFILL_DIALOG=1 $
+    -DENABLE_BACKGROUND=1 -DENABLE_PRINTING=1 -DENABLE_BASIC_PRINTING=1 $
+    -DENABLE_PRINT_PREVIEW=1 -DENABLE_SPELLCHECK=1 $
+    -DUSE_BROWSER_SPELLCHECKER=1 -DENABLE_CAPTIVE_PORTAL_DETECTION=1 $
+    -DENABLE_APP_LIST=1 -DENABLE_SETTINGS_APP=1 -DENABLE_SUPERVISED_USERS=1 $
+    -DENABLE_SERVICE_DISCOVERY=1 -DV8_USE_EXTERNAL_STARTUP_DATA $
+    -DFULL_SAFE_BROWSING -DSAFE_BROWSING_CSD -DSAFE_BROWSING_DB_LOCAL $
+    -DMOJO_USE_SYSTEM_IMPL -DGTEST_HAS_POSIX_RE=0 -DGTEST_LANG_CXX11=0 $
+    -DSK_SUPPORT_GPU=1 -DSK_IGNORE_LINEONLY_AA_CONVEX_PATH_OPTS $
+    -DSK_IGNORE_GL_TEXTURE_TARGET -DU_USING_ICU_NAMESPACE=0 $
+    -DU_ENABLE_DYLOAD=0 -DU_STATIC_IMPLEMENTATION $
+    -DCHROME_PNG_WRITE_SUPPORT -DPNG_USER_CONFIG -DUSE_LIBPCI=1 $
+    -DUSE_OPENSSL=1 -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS $
+    -DNDEBUG -DNVALGRIND -DDYNAMIC_ANNOTATIONS_ENABLED=0 -D_FORTIFY_SOURCE=2
+includes = -Igen -I../.. -Igen/extensions/shell -I../../third_party/khronos $
+    -I../../gpu -I../../skia/config -Igen/angle $
+    -I../../third_party/WebKit/Source -I../../third_party/WebKit $
+    -Igen/extensions -I../../third_party/skia/include/core $
+    -I../../third_party/skia/include/effects $
+    -I../../third_party/skia/include/pdf $
+    -I../../third_party/skia/include/gpu $
+    -I../../third_party/skia/include/lazy $
+    -I../../third_party/skia/include/pathops $
+    -I../../third_party/skia/include/pipe $
+    -I../../third_party/skia/include/ports $
+    -I../../third_party/skia/include/utils $
+    -I../../third_party/skia/include/utils/mac -I../../skia/ext $
+    -I../../third_party/WebKit -I../../third_party/icu/source/common $
+    -I../../third_party/npapi -I../../third_party/npapi/bindings $
+    -I../../third_party/libpng -I../../third_party/zlib $
+    -I../../third_party/libwebp -I../../third_party/ots/include $
+    -I../../third_party/qcms/src -I../../third_party/iccjpeg $
+    -I../../third_party/libjpeg_turbo -I../../third_party/icu/source/i18n $
+    -I../../v8/include
+cflags = -isysroot $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk $
+    -O2 -fvisibility=hidden -Werror -Wnewline-eof -mmacosx-version-min=10.6 $
+    -arch x86_64 -Wall -Wendif-labels -Wextra -Wno-unused-parameter $
+    -Wno-missing-field-initializers -Wno-selector-type-mismatch $
+    -Wpartial-availability -Wheader-hygiene -Wno-char-subscripts $
+    -Wno-unneeded-internal-declaration -Wno-covered-switch-default $
+    -Wstring-conversion -Wno-c++11-narrowing -Wno-deprecated-register $
+    -Wno-inconsistent-missing-override -Wno-shift-negative-value $
+    -Wno-bitfield-width
+cflags_c = -std=c99 -Xclang -load -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing
+cflags_cc = -std=c++11 -stdlib=libc++ -fno-rtti -fno-exceptions $
+    -fvisibility-inlines-hidden -fno-threadsafe-statics -Xclang -load $
+    -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing
+cflags_objc = $cflags_c -Wobjc-missing-property-synthesis
+cflags_objcc = $cflags_cc -Wobjc-missing-property-synthesis $
+    -fobjc-call-cxx-cdtors
+arflags = 
+
+build obj/extensions/shell/app/app_shell_lib.paths_mac.o: objcxx $
+    ../../extensions/shell/app/paths_mac.mm || $
+    obj/extensions/shell/app_shell_lib.compile_depends.stamp
+build obj/extensions/shell/app/app_shell_lib.shell_main_delegate.o: cxx $
+    ../../extensions/shell/app/shell_main_delegate.cc || $
+    obj/extensions/shell/app_shell_lib.compile_depends.stamp
+build $
+    obj/extensions/shell/browser/api/identity/app_shell_lib.identity_api.o: $
+    cxx ../../extensions/shell/browser/api/identity/identity_api.cc || $
+    obj/extensions/shell/app_shell_lib.compile_depends.stamp
+build $
+    obj/extensions/shell/browser/app_shell_lib.default_shell_browser_main_delegate.o: $
+    cxx $
+    ../../extensions/shell/browser/default_shell_browser_main_delegate.cc $
+    || obj/extensions/shell/app_shell_lib.compile_depends.stamp
+build obj/extensions/shell/browser/app_shell_lib.desktop_controller.o: cxx $
+    ../../extensions/shell/browser/desktop_controller.cc || $
+    obj/extensions/shell/app_shell_lib.compile_depends.stamp
+build obj/extensions/shell/browser/app_shell_lib.media_capture_util.o: cxx $
+    ../../extensions/shell/browser/media_capture_util.cc || $
+    obj/extensions/shell/app_shell_lib.compile_depends.stamp
+build obj/extensions/shell/browser/app_shell_lib.shell_app_delegate.o: cxx $
+    ../../extensions/shell/browser/shell_app_delegate.cc || $
+    obj/extensions/shell/app_shell_lib.compile_depends.stamp
+build $
+    obj/extensions/shell/browser/app_shell_lib.shell_app_view_guest_delegate.o: $
+    cxx ../../extensions/shell/browser/shell_app_view_guest_delegate.cc || $
+    obj/extensions/shell/app_shell_lib.compile_depends.stamp
+build obj/extensions/shell/browser/app_shell_lib.shell_app_window_client.o: $
+    cxx ../../extensions/shell/browser/shell_app_window_client.cc || $
+    obj/extensions/shell/app_shell_lib.compile_depends.stamp
+build $
+    obj/extensions/shell/browser/app_shell_lib.shell_app_window_client_mac.o: $
+    objcxx ../../extensions/shell/browser/shell_app_window_client_mac.mm || $
+    obj/extensions/shell/app_shell_lib.compile_depends.stamp
+build obj/extensions/shell/browser/app_shell_lib.shell_browser_context.o: $
+    cxx ../../extensions/shell/browser/shell_browser_context.cc || $
+    obj/extensions/shell/app_shell_lib.compile_depends.stamp
+build $
+    obj/extensions/shell/browser/app_shell_lib.shell_browser_context_keyed_service_factories.o: $
+    cxx $
+    ../../extensions/shell/browser/shell_browser_context_keyed_service_factories.cc $
+    || obj/extensions/shell/app_shell_lib.compile_depends.stamp
+build $
+    obj/extensions/shell/browser/app_shell_lib.shell_browser_main_parts.o: $
+    cxx ../../extensions/shell/browser/shell_browser_main_parts.cc || $
+    obj/extensions/shell/app_shell_lib.compile_depends.stamp
+build $
+    obj/extensions/shell/browser/app_shell_lib.shell_browser_main_parts_mac.o: $
+    objcxx ../../extensions/shell/browser/shell_browser_main_parts_mac.mm $
+    || obj/extensions/shell/app_shell_lib.compile_depends.stamp
+build $
+    obj/extensions/shell/browser/app_shell_lib.shell_content_browser_client.o: $
+    cxx ../../extensions/shell/browser/shell_content_browser_client.cc || $
+    obj/extensions/shell/app_shell_lib.compile_depends.stamp
+build $
+    obj/extensions/shell/browser/app_shell_lib.shell_desktop_controller_mac.o: $
+    objcxx ../../extensions/shell/browser/shell_desktop_controller_mac.mm $
+    || obj/extensions/shell/app_shell_lib.compile_depends.stamp
+build obj/extensions/shell/browser/app_shell_lib.shell_device_client.o: cxx $
+    ../../extensions/shell/browser/shell_device_client.cc || $
+    obj/extensions/shell/app_shell_lib.compile_depends.stamp
+build $
+    obj/extensions/shell/browser/app_shell_lib.shell_display_info_provider.o: $
+    cxx ../../extensions/shell/browser/shell_display_info_provider.cc || $
+    obj/extensions/shell/app_shell_lib.compile_depends.stamp
+build $
+    obj/extensions/shell/browser/app_shell_lib.shell_extension_host_delegate.o: $
+    cxx ../../extensions/shell/browser/shell_extension_host_delegate.cc || $
+    obj/extensions/shell/app_shell_lib.compile_depends.stamp
+build obj/extensions/shell/browser/app_shell_lib.shell_extension_system.o: $
+    cxx ../../extensions/shell/browser/shell_extension_system.cc || $
+    obj/extensions/shell/app_shell_lib.compile_depends.stamp
+build $
+    obj/extensions/shell/browser/app_shell_lib.shell_extension_system_factory.o: $
+    cxx ../../extensions/shell/browser/shell_extension_system_factory.cc || $
+    obj/extensions/shell/app_shell_lib.compile_depends.stamp
+build $
+    obj/extensions/shell/browser/app_shell_lib.shell_extension_web_contents_observer.o: $
+    cxx $
+    ../../extensions/shell/browser/shell_extension_web_contents_observer.cc $
+    || obj/extensions/shell/app_shell_lib.compile_depends.stamp
+build $
+    obj/extensions/shell/browser/app_shell_lib.shell_extensions_api_client.o: $
+    cxx ../../extensions/shell/browser/shell_extensions_api_client.cc || $
+    obj/extensions/shell/app_shell_lib.compile_depends.stamp
+build $
+    obj/extensions/shell/browser/app_shell_lib.shell_extensions_browser_client.o: $
+    cxx ../../extensions/shell/browser/shell_extensions_browser_client.cc $
+    || obj/extensions/shell/app_shell_lib.compile_depends.stamp
+build obj/extensions/shell/browser/app_shell_lib.shell_native_app_window.o: $
+    cxx ../../extensions/shell/browser/shell_native_app_window.cc || $
+    obj/extensions/shell/app_shell_lib.compile_depends.stamp
+build $
+    obj/extensions/shell/browser/app_shell_lib.shell_native_app_window_mac.o: $
+    objcxx ../../extensions/shell/browser/shell_native_app_window_mac.mm || $
+    obj/extensions/shell/app_shell_lib.compile_depends.stamp
+build obj/extensions/shell/browser/app_shell_lib.shell_network_delegate.o: $
+    cxx ../../extensions/shell/browser/shell_network_delegate.cc || $
+    obj/extensions/shell/app_shell_lib.compile_depends.stamp
+build $
+    obj/extensions/shell/browser/app_shell_lib.shell_oauth2_token_service_delegate.o: $
+    cxx $
+    ../../extensions/shell/browser/shell_oauth2_token_service_delegate.cc $
+    || obj/extensions/shell/app_shell_lib.compile_depends.stamp
+build $
+    obj/extensions/shell/browser/app_shell_lib.shell_oauth2_token_service.o: $
+    cxx ../../extensions/shell/browser/shell_oauth2_token_service.cc || $
+    obj/extensions/shell/app_shell_lib.compile_depends.stamp
+build obj/extensions/shell/browser/app_shell_lib.shell_prefs.o: cxx $
+    ../../extensions/shell/browser/shell_prefs.cc || $
+    obj/extensions/shell/app_shell_lib.compile_depends.stamp
+build $
+    obj/extensions/shell/browser/app_shell_lib.shell_runtime_api_delegate.o: $
+    cxx ../../extensions/shell/browser/shell_runtime_api_delegate.cc || $
+    obj/extensions/shell/app_shell_lib.compile_depends.stamp
+build $
+    obj/extensions/shell/browser/app_shell_lib.shell_special_storage_policy.o: $
+    cxx ../../extensions/shell/browser/shell_special_storage_policy.cc || $
+    obj/extensions/shell/app_shell_lib.compile_depends.stamp
+build $
+    obj/extensions/shell/browser/app_shell_lib.shell_speech_recognition_manager_delegate.o: $
+    cxx $
+    ../../extensions/shell/browser/shell_speech_recognition_manager_delegate.cc $
+    || obj/extensions/shell/app_shell_lib.compile_depends.stamp
+build $
+    obj/extensions/shell/browser/app_shell_lib.shell_update_query_params_delegate.o: $
+    cxx $
+    ../../extensions/shell/browser/shell_update_query_params_delegate.cc || $
+    obj/extensions/shell/app_shell_lib.compile_depends.stamp
+build $
+    obj/extensions/shell/browser/app_shell_lib.shell_url_request_context_getter.o: $
+    cxx ../../extensions/shell/browser/shell_url_request_context_getter.cc $
+    || obj/extensions/shell/app_shell_lib.compile_depends.stamp
+build $
+    obj/extensions/shell/browser/app_shell_lib.shell_web_contents_modal_dialog_manager.o: $
+    cxx $
+    ../../extensions/shell/browser/shell_web_contents_modal_dialog_manager.cc $
+    || obj/extensions/shell/app_shell_lib.compile_depends.stamp
+build obj/extensions/shell/common/app_shell_lib.shell_content_client.o: cxx $
+    ../../extensions/shell/common/shell_content_client.cc || $
+    obj/extensions/shell/app_shell_lib.compile_depends.stamp
+build obj/extensions/shell/common/app_shell_lib.shell_extensions_client.o: $
+    cxx ../../extensions/shell/common/shell_extensions_client.cc || $
+    obj/extensions/shell/app_shell_lib.compile_depends.stamp
+build obj/extensions/shell/common/app_shell_lib.switches.o: cxx $
+    ../../extensions/shell/common/switches.cc || $
+    obj/extensions/shell/app_shell_lib.compile_depends.stamp
+build $
+    obj/extensions/shell/renderer/app_shell_lib.shell_content_renderer_client.o: $
+    cxx ../../extensions/shell/renderer/shell_content_renderer_client.cc || $
+    obj/extensions/shell/app_shell_lib.compile_depends.stamp
+build $
+    obj/extensions/shell/renderer/app_shell_lib.shell_extensions_renderer_client.o: $
+    cxx ../../extensions/shell/renderer/shell_extensions_renderer_client.cc $
+    || obj/extensions/shell/app_shell_lib.compile_depends.stamp
+build $
+    obj/extensions/shell/utility/app_shell_lib.shell_content_utility_client.o: $
+    cxx ../../extensions/shell/utility/shell_content_utility_client.cc || $
+    obj/extensions/shell/app_shell_lib.compile_depends.stamp
+build $
+    obj/extensions/shell/browser/app_shell_lib.shell_nacl_browser_delegate.o: $
+    cxx ../../extensions/shell/browser/shell_nacl_browser_delegate.cc || $
+    obj/extensions/shell/app_shell_lib.compile_depends.stamp
+
+build libapp_shell_lib.a: alink $
+    obj/extensions/shell/app/app_shell_lib.paths_mac.o $
+    obj/extensions/shell/app/app_shell_lib.shell_main_delegate.o $
+    obj/extensions/shell/browser/api/identity/app_shell_lib.identity_api.o $
+    obj/extensions/shell/browser/app_shell_lib.default_shell_browser_main_delegate.o $
+    obj/extensions/shell/browser/app_shell_lib.desktop_controller.o $
+    obj/extensions/shell/browser/app_shell_lib.media_capture_util.o $
+    obj/extensions/shell/browser/app_shell_lib.shell_app_delegate.o $
+    obj/extensions/shell/browser/app_shell_lib.shell_app_view_guest_delegate.o $
+    obj/extensions/shell/browser/app_shell_lib.shell_app_window_client.o $
+    obj/extensions/shell/browser/app_shell_lib.shell_app_window_client_mac.o $
+    obj/extensions/shell/browser/app_shell_lib.shell_browser_context.o $
+    obj/extensions/shell/browser/app_shell_lib.shell_browser_context_keyed_service_factories.o $
+    obj/extensions/shell/browser/app_shell_lib.shell_browser_main_parts.o $
+    obj/extensions/shell/browser/app_shell_lib.shell_browser_main_parts_mac.o $
+    obj/extensions/shell/browser/app_shell_lib.shell_content_browser_client.o $
+    obj/extensions/shell/browser/app_shell_lib.shell_desktop_controller_mac.o $
+    obj/extensions/shell/browser/app_shell_lib.shell_device_client.o $
+    obj/extensions/shell/browser/app_shell_lib.shell_display_info_provider.o $
+    obj/extensions/shell/browser/app_shell_lib.shell_extension_host_delegate.o $
+    obj/extensions/shell/browser/app_shell_lib.shell_extension_system.o $
+    obj/extensions/shell/browser/app_shell_lib.shell_extension_system_factory.o $
+    obj/extensions/shell/browser/app_shell_lib.shell_extension_web_contents_observer.o $
+    obj/extensions/shell/browser/app_shell_lib.shell_extensions_api_client.o $
+    obj/extensions/shell/browser/app_shell_lib.shell_extensions_browser_client.o $
+    obj/extensions/shell/browser/app_shell_lib.shell_native_app_window.o $
+    obj/extensions/shell/browser/app_shell_lib.shell_native_app_window_mac.o $
+    obj/extensions/shell/browser/app_shell_lib.shell_network_delegate.o $
+    obj/extensions/shell/browser/app_shell_lib.shell_oauth2_token_service_delegate.o $
+    obj/extensions/shell/browser/app_shell_lib.shell_oauth2_token_service.o $
+    obj/extensions/shell/browser/app_shell_lib.shell_prefs.o $
+    obj/extensions/shell/browser/app_shell_lib.shell_runtime_api_delegate.o $
+    obj/extensions/shell/browser/app_shell_lib.shell_special_storage_policy.o $
+    obj/extensions/shell/browser/app_shell_lib.shell_speech_recognition_manager_delegate.o $
+    obj/extensions/shell/browser/app_shell_lib.shell_update_query_params_delegate.o $
+    obj/extensions/shell/browser/app_shell_lib.shell_url_request_context_getter.o $
+    obj/extensions/shell/browser/app_shell_lib.shell_web_contents_modal_dialog_manager.o $
+    obj/extensions/shell/common/app_shell_lib.shell_content_client.o $
+    obj/extensions/shell/common/app_shell_lib.shell_extensions_client.o $
+    obj/extensions/shell/common/app_shell_lib.switches.o $
+    obj/extensions/shell/renderer/app_shell_lib.shell_content_renderer_client.o $
+    obj/extensions/shell/renderer/app_shell_lib.shell_extensions_renderer_client.o $
+    obj/extensions/shell/utility/app_shell_lib.shell_content_utility_client.o $
+    obj/extensions/shell/browser/app_shell_lib.shell_nacl_browser_delegate.o $
+    || obj/extensions/shell/app_shell_lib.actions_depends.stamp

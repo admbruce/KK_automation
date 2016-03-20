@@ -1,0 +1,2461 @@
+build obj/chrome/chrome_main_dll.actions_depends.stamp: stamp libcommon.a $
+    libbrowser.a obj/sync/sync.actions_depends.stamp libdebugger.a $
+    libppapi_host.a libprinting.a libservice.a libchild.a libplugin.a $
+    librenderer.a libutility.a libcontent_gpu.a libcontent_ppapi_plugin.a $
+    obj/third_party/WebKit/Source/devtools/devtools_frontend_resources.actions_rules_copies.stamp $
+    libcld2_static.a libnacl_trusted_plugin.a libcontent_app_both.a $
+    libpdf.a app_mode_loader.app pdfsqueeze libcrcrypto.a crashpad_handler $
+    gen/repack/resources.pak $
+    obj/chrome/packed_resources.actions_rules_copies.stamp $
+    libcrash_component.a libpolicy.a libinstaller_util.a libbase.a $
+    libbase_static.a liballocator_extension_thunks.a libmodp_b64.a $
+    libdynamic_annotations.a libevent.a $
+    obj/chrome/chrome_resources.actions_rules_copies.stamp $
+    obj/chrome/web_ui_mojo_bindings.actions_rules_copies.stamp $
+    obj/third_party/mojo/mojo_interface_bindings_mojom.actions_rules_copies.stamp $
+    obj/third_party/mojo/mojo_interface_bindings_mojom.actions_rules_copies.stamp $
+    obj/third_party/mojo/mojo_interface_bindings_mojom.actions_rules_copies.stamp $
+    obj/chrome/chrome_strings.actions_rules_copies.stamp libvariations.a $
+    libbase_prefs.a libboringssl.a libmt19937ar.a libprotobuf_lite.a $
+    libcompression.a libchrome_zlib.a libzlib_x86_simd.a $
+    libcrash_core_common.a libsafe_browsing_proto.a libbase_i18n.a $
+    libicui18n.a libicuuc.a icudtl.dat icudtl.dat $
+    gen/chrome/common/features.h $
+    obj/chrome/theme_resources.actions_rules_copies.stamp $
+    obj/ui/resources/ui_resources.actions_rules_copies.stamp $
+    obj/chrome/chrome_unscaled_resources.actions_rules_copies.stamp $
+    libcommon_constants.a gen/chrome/common/chrome_version.h $
+    libbookmarks_common.a gen/widevine_cdm_version.h libnacl_switches.a $
+    libfieldtrial_testing_config.a libcloud_devices_common.a $
+    libgoogle_apis.a libnet.a liburl_lib.a libnet_quic_proto.a libsdch.a $
+    obj/net/net_derived_sources.actions_rules_copies.stamp $
+    obj/net/net_resources.actions_rules_copies.stamp libxml2.a $
+    libcomponent_updater.a libui_base.a obj/skia/skia.actions_depends.stamp $
+    libskia_library.a libskia_opts.a libskia_opts_ssse3.a $
+    libskia_opts_sse41.a libskia_opts_sse42.a libskia_opts_avx.a $
+    libskia_opts_avx2.a libsfntly.a libskia_chrome.a libevents.a libgfx.a $
+    libharfbuzz-ng.a libpng.a libgfx_geometry.a libjpeg_turbo.a $
+    libdom_keycode_converter.a libevents_base.a libgesture_detection.a $
+    libevents_platform.a $
+    obj/ui/strings/ui_strings.actions_rules_copies.stamp libmozilla.a $
+    libupdate_client.a libcourgette_lib.a liblzma_sdk.a libzip.a $
+    libminizip.a libcrx_file.a libversion_info.a $
+    obj/components/components_strings.actions_rules_copies.stamp $
+    gen/components/version_info/version_info_values.h $
+    libcontent_settings_core_common.a liberror_page_common.a $
+    liburl_formatter.a libfavicon_base.a libflags_ui_switches.a $
+    libgcm_driver_common.a libjson_schema.a libre2.a libmetrics.a $
+    libcomponent_metrics_proto.a libmetrics_net.a $
+    libdata_use_measurement_core.a libpolicy_component_common.a $
+    libcloud_policy_proto.a $
+    obj/components/cloud_policy_code_generate.actions_rules_copies.stamp $
+    libcloud_policy_proto_generated_compile.a libtranslate_core_common.a $
+    libcontent_common.a libtracing.a libipc.a libgles2_utils.a $
+    libaccessibility.a libax_gen.a libapi_gen_util.a libui_base_ime.a $
+    libevents_ipc.a libgfx_ipc.a libshell_dialogs.a $
+    obj/content/content_resources.actions_rules_copies.stamp libcc.a $
+    libcc_proto.a obj/gpu/gpu.actions_depends.stamp $
+    libcommand_buffer_client.a libcommand_buffer_common.a $
+    libcommand_buffer_service.a libdisk_cache_proto.a libgpu_config.a $
+    libgl_wrapper.a libcityhash.a gen/angle/id/commit.h $
+    obj/third_party/angle/src/copy_scripts.actions_rules_copies.stamp $
+    libtranslator.a libtranslator_lib.a libpreprocessor.a libangle_common.a $
+    libgles2_cmd_helper.a libgpu_ipc.a libmedia.a libyuv.a libopus.a $
+    libshared_memory_support.a libffmpeg.a libffmpeg_yasm.a libvpx_new.a $
+    libvpx_intrinsics_mmx.a libvpx_intrinsics_sse2.a $
+    libvpx_intrinsics_ssse3.a libvpx_intrinsics_sse4_1.a $
+    libvpx_intrinsics_avx.a libvpx_intrinsics_avx2.a libwebm.a $
+    libdecklink.a libmedia_asm.a libdevice_bluetooth.a $
+    obj/device/bluetooth/bluetooth_strings.actions_rules_copies.stamp $
+    liburibeacon.a libgpu_blink.a libgles2_c_lib.a $
+    libgles2_implementation.a libgl_in_process_context.a $
+    libgpu_skia_bindings.a libblink_common.a libblink_common.a libwtf.a $
+    libipc_mojo.a libmojo_environment_chromium.a $
+    libmojo_environment_chromium_impl.a libmojo_message_pump_lib.a $
+    libmojo_cpp_bindings.a libmojo_system_impl.a libmojo_system_impl2.a $
+    libmidi.a libmojo_application_bindings.a $
+    obj/mojo/mojo_application_bindings_mojom.actions_rules_copies.stamp $
+    obj/mojo/network_service_bindings_mojom.actions_rules_copies.stamp $
+    obj/mojo/network_service_bindings_mojom.actions_rules_copies.stamp $
+    libnetwork_service_bindings_lib.a libstorage_common.a $
+    obj/third_party/WebKit/public/blink.actions_depends.stamp $
+    libblink_platform.a libblink_heap_asm_stubs.a $
+    obj/third_party/WebKit/Source/platform/make_platform_generated.actions_rules_copies.stamp $
+    libiccjpeg.a obj/third_party/libwebp/libwebp.actions_depends.stamp $
+    libwebp_dec.a libwebp_dsp.a libwebp_utils.a libwebp_demux.a $
+    libwebp_enc.a libots.a libbrotli.a libqcms.a $
+    obj/v8/tools/gyp/v8_maybe_snapshot.actions_depends.stamp $
+    obj/v8/tools/gyp/v8_maybe_snapshot.actions_depends.stamp libv8_base.a $
+    libv8_libbase.a libv8_external_snapshot.a $
+    obj/v8/tools/gyp/js2c.actions_rules_copies.stamp natives_blob.bin $
+    libblink_web.a libmodules.a libchromium_sqlite3.a $
+    obj/third_party/WebKit/Source/modules/make_modules_generated.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/modules/modules_event_generated.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/core/webcore.actions_depends.stamp $
+    libwebcore_dom.a $
+    obj/third_party/WebKit/Source/core/webcore_prerequisites.actions_depends.stamp $
+    obj/third_party/WebKit/Source/core/inspector_protocol_sources.actions_rules_copies.stamp $
+    gen/blink/core/InspectorProtocolVersion.h $
+    obj/third_party/WebKit/Source/core/inspector_instrumentation_sources.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/core/make_core_generated.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/core/generated_testing_idls.actions_rules_copies.stamp $
+    gen/blink/core/EventInterfaces.in $
+    obj/third_party/WebKit/Source/bindings/core/v8/bindings_core_v8_generated.actions_depends.stamp $
+    obj/third_party/WebKit/Source/bindings/core/v8/bindings_core_impl_generated.actions_rules_copies.stamp $
+    gen/blink/bindings/scripts/cached_jinja_templates.stamp $
+    obj/third_party/WebKit/Source/bindings/scripts/cached_lex_yacc_tables.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/core/interfaces_info_individual_core.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/core/core_global_constructors_idls.actions_rules_copies.stamp $
+    gen/blink/bindings/core/GlobalObjectsCore.pickle $
+    gen/blink/bindings/modules/InterfacesInfoOverall.pickle $
+    obj/third_party/WebKit/Source/bindings/modules/interfaces_info_individual_modules.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/modules/modules_core_global_constructors_idls.actions_rules_copies.stamp $
+    gen/blink/bindings/modules/GlobalObjectsModules.pickle $
+    obj/third_party/WebKit/Source/bindings/modules/modules_global_constructors_idls.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/core/v8/bindings_core_v8_generated_aggregate.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/core/v8/bindings_core_v8_generated_individual.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/modules/v8/bindings_modules_v8_generated.actions_depends.stamp $
+    obj/third_party/WebKit/Source/bindings/modules/v8/bindings_modules_impl_generated.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/modules/v8/bindings_modules_v8_generated_aggregate.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/modules/v8/bindings_modules_v8_generated_individual.actions_rules_copies.stamp $
+    gen/blink/bindings/modules/v8/initPartialInterfacesInModules.cpp $
+    gen/blink/bindings/modules/v8/V8GeneratedModulesBindingsPartial.cpp $
+    obj/third_party/WebKit/Source/bindings/modules/v8/bindings_modules_v8_generated_partial_individual.actions_rules_copies.stamp $
+    libxslt.a libwebcore_html.a libwebcore_remaining.a $
+    libwebcore_rendering.a libwebcore_svg.a libwebcore_generated.a libgin.a $
+    libsnappy.a libcontent_common_mojo_bindings.a $
+    obj/content/content_common_mojo_bindings_mojom.actions_rules_copies.stamp $
+    libskia_mojo.a libmojo_geometry_bindings.a $
+    obj/ui/mojo/geometry/mojo_geometry_bindings_mojom.actions_rules_copies.stamp $
+    obj/content/app/resources/content_resources.actions_rules_copies.stamp $
+    libaccelerated_widget_mac.a libppapi_shared.a libsurface.a libjingle.a $
+    libexpat.a librtc_base.a libwebrtc_common.a librtc_base_approved.a $
+    librtc_xmllite.a libjingle_p2p_constants.a libdevice_usb.a $
+    libdevice_event_log_component.a libusb.a libdevice_core.a $
+    libchrome_api.a libextensions_api.a $
+    obj/extensions/common/api/extensions_api_mojom.actions_rules_copies.stamp $
+    libextensions_common.a liburl_matcher.a $
+    obj/device/serial/device_serial_mojo.actions_rules_copies.stamp $
+    obj/extensions/extensions_resources.actions_rules_copies.stamp $
+    obj/extensions/extensions_strings.actions_rules_copies.stamp $
+    libextensions_common_constants.a $
+    obj/extensions/extensions_common_mojo.actions_rules_copies.stamp $
+    libcast_net.a libcast_common.a libcast_logging_proto.a $
+    libapp_mode_app_support.a libcommon_mojo_bindings.a $
+    libautofill_core_common.a libautofill_content_common.a $
+    libpassword_manager_core_common.a libpassword_manager_content_common.a $
+    libsignin_core_common.a libtranslate_content_common.a $
+    libtranslate_core_language_detection.a libvisitedlink_common.a $
+    libnacl_common.a gen/flapper_version.h libprinting_common.a $
+    libgoogle_toolbox_for_mac.a libmach_override.a libudis86.a $
+    libbrowser_ui.a libbrowser_ui_views.a $
+    obj/chrome/chrome_extra_resources.actions_rules_copies.stamp $
+    obj/components/components_resources.actions_rules_copies.stamp $
+    gen/about_credits.html $
+    obj/content/browser/devtools/devtools_resources.actions_rules_copies.stamp $
+    gen/devtools/devtools_resources.grd gen/devtools/devtools_resources.grd $
+    resources/inspector/devtools_extension_api.js $
+    obj/third_party/WebKit/Source/devtools/devtools_frontend_resources.actions_rules_copies.stamp $
+    resources/inspector/SupportedCSSProperties.js $
+    resources/inspector/InspectorBackendCommands.js $
+    obj/third_party/WebKit/Source/devtools/build_applications.actions_rules_copies.stamp $
+    resources/inspector/inspector.css resources/inspector/toolbox.css $
+    obj/content/browser/tracing/tracing_resources.actions_rules_copies.stamp $
+    obj/third_party/catapult/tracing/generate_about_tracing.actions_rules_copies.stamp $
+    gen/content/browser/tracing/tracing_resources.grd $
+    obj/chrome/browser/devtools/webrtc_device_provider_resources.actions_rules_copies.stamp $
+    obj/chrome/platform_locale_settings.actions_rules_copies.stamp $
+    libauto_login_parser.a libcertificate_reporting.a $
+    libcert_logger_proto.a libencrypted_cert_logger_proto.a $
+    libdom_distiller_core.a libsync_core.a libsql.a libleveldatabase.a $
+    libattachment_store_proto.a libsync_proto.a libdom_distiller_js_proto.a $
+    libleveldb_proto.a libdom_distiller_protos.a libpref_registry.a $
+    libdom_distiller_webui.a libcontent_browser.a libdevice_battery.a $
+    libdevice_battery_mojo_bindings.a libdevice_vibration.a $
+    libdevice_vibration_mojo_bindings.a libmojo_application_base.a $
+    libnetwork_type_converters.a libmojo_geometry_lib.a $
+    libmojo_url_type_converters.a libupdater_bindings_lib.a $
+    obj/mojo/updater_bindings_mojom.actions_rules_copies.stamp $
+    libmojo_shell_lib.a libmojo_common_lib.a libmojo_fetcher_lib.a $
+    libnet_extras.a libsnapshot.a libbackground_sync_proto.a $
+    libcache_storage_proto.a libnotification_proto.a $
+    libservice_worker_proto.a libspeech_proto.a $
+    obj/content/app/strings/content_strings.actions_rules_copies.stamp $
+    obj/content/browser/devtools/devtools_protocol_handler.actions_rules_copies.stamp $
+    libcc_surfaces.a libmime_util.a libscheduler_common.a libhttp_server.a $
+    libstorage.a libmojo_js_bindings.a libevents_blink.a $
+    libui_touch_selection.a libsandbox.a libcompositor.a libjingle_glue.a $
+    libdesktop_capture.a libsystem_wrappers.a $
+    libdesktop_capture_differ_sse2.a libsudden_motion_sensor.a $
+    libppapi_ipc.a libflac.a libinvalidation_impl.a $
+    libinvalidation_public.a libcacheinvalidation.a $
+    libcacheinvalidation_proto_cpp.a libnotifier.a libgcm_driver.a $
+    libgcm_driver_crypto.a libgcm_driver_crypto_proto.a libos_crypt.a $
+    libsync_driver.a libsignin_core_browser.a $
+    libcontent_settings_core_browser.a libgoogle_core_browser.a $
+    libkeyed_service_core.a libuser_prefs.a libsignin_core_account_id.a $
+    libwebdata_common.a $
+    obj/components/policy_component.actions_depends.stamp $
+    libpolicy_component_browser.a libbookmarks_browser.a libquery_parser.a $
+    libviews.a libgfx_vector_icons.a libnative_theme.a $
+    obj/ui/views/resources/views_resources.actions_rules_copies.stamp $
+    libbookmarks_managed.a libproxy_config.a libgcm.a libonc_component.a $
+    libpassword_manager_core_browser.a $
+    libpassword_manager_core_browser_proto.a libtoolbar.a libui_zoom.a $
+    libversion_ui.a libui_content_accelerators.a libmessage_center.a $
+    libcommon_net.a $
+    obj/chrome/browser/devtools/devtools_protocol_constants.actions_rules_copies.stamp $
+    libdevtools_http_handler.a libdevtools_discovery.a libapp_modal.a $
+    libautofill_content_risk_proto.a libcrash_core_browser.a $
+    libupload_list.a libflags_ui.a libnet_log.a $
+    libdata_reduction_proxy_core_common.a libdata_reduction_proxy_proto.a $
+    libpage_load_metrics_browser.a libpage_load_metrics_common.a $
+    libnet_with_v8.a libweb_dialogs.a libsel.a libenv_cleanser.a $
+    libnacl_error_code.a libgio.a libplatform.a libnonnacl_srpc.a $
+    libdebug_stub.a libnrd_xfer.a libdesc_wrapper.a libimc.a libnacl_base.a $
+    libnacl_fault_inject.a libnacl_interval.a libnacl_perf_counter.a $
+    libplatform_qual_lib.a libcpu_features.a libsimple_service.a $
+    libthread_interface.a libvalidation_cache.a libvalidators.a $
+    libservice_runtime_x86_common.a libdfa_validate_x86_64.a $
+    libservice_runtime_x86_64.a libnccopy_x86_64.a $
+    libsafe_browsing_chunk_proto.a libconstrained_window.a libweb_modal.a $
+    libnative_app_window.a libwebview.a libextensions_browser.a $
+    libbrowsing_data.a libguest_view_browser.a libguest_view_common.a $
+    libkeyed_service_content.a libsessions_content.a libstorage_monitor.a $
+    libweb_cache_browser.a libweb_cache_common.a libdevice_serial.a $
+    libextensions_api_registration.a libcast_channel_proto.a $
+    libwifi_component.a libapple_sample_code.a libmolokocacao.a $
+    libapp_list.a $
+    obj/ui/app_list/resources/app_list_resources.actions_rules_copies.stamp $
+    libaddressinput.a libaddressinput_util.a $
+    obj/third_party/libaddressinput/libaddressinput_strings.actions_rules_copies.stamp $
+    libbrowser_extensions.a libchrome_api_registration.a $
+    libcopresence_proto.a libcopresence.a libcommon_audio.a libopenmax_dl.a $
+    libcommon_audio_sse2.a libaudio_modem.a libproximity_auth.a $
+    libcryptauth.a libcryptauth_proto.a libproximity_auth_logging.a $
+    libdevice_hid.a libmedia_router.a $
+    obj/chrome/browser/media/router/media_router_mojo_gen.actions_rules_copies.stamp $
+    libmedia_router_mojo.a libjavascript_dialog_extensions_client.a $
+    libbubble.a libfeedback_proto.a libchrome_ui_string_overrider_factory.a $
+    libvariations_service.a libnetwork_time.a libweb_resource.a $
+    obj/chrome/make_chrome_ui_string_overrider_factory.actions_rules_copies.stamp $
+    libprobe_message_proto.a libautofill_core_browser.a libfips181.a $
+    libphonenumber.a libphonenumber_without_metadata.a libinfobars_core.a $
+    librappor.a libvariations_http_provider.a libbrowser_sync_browser.a $
+    libbrowser_sync_common.a libhistory_core_browser.a $
+    libhistory_core_common.a libpassword_manager_sync_browser.a $
+    libsyncable_prefs.a libsync_bookmarks.a libfavicon_core.a $
+    libundo_component.a libsync_sessions.a libcaptive_portal.a $
+    libcontent_settings_content_common.a $
+    libdata_reduction_proxy_core_browser.a $
+    gen/components/data_reduction_proxy/core/common/version.h $
+    libdata_usage_core.a libdomain_reliability.a libenhanced_bookmarks.a $
+    libenhanced_bookmarks_proto.a libhandoff.a libinstance_id.a $
+    libmetrics_services_manager.a libmetrics_ui.a libnavigation_metrics.a $
+    liboffline_pages.a liboffline_pages_proto.a libomnibox_browser.a $
+    libomnibox_in_memory_url_index_cache_proto.a libopen_from_clipboard.a $
+    libsearch.a libsearch_engines.a libprepopulated_engines.a $
+    librenderer_context_menu.a libsearch_provider_logos.a $
+    libsecurity_interstitials_core.a libssl_errors.a libsuggestions.a $
+    libstartup_metric_utils_browser.a $
+    libstartup_metric_utils_browser_message_filter.a $
+    libstartup_metric_utils_common.a libtranslate_core_browser.a $
+    liblanguage_usage_metrics.a libwebdata_services.a libapps.a $
+    libabout_handler.a libautofill_content_browser.a libcookie_config.a $
+    libdata_reduction_proxy_content_browser.a $
+    libdata_reduction_proxy_content_common.a $
+    libdata_use_measurement_content.a libdom_distiller_content_browser.a $
+    libdom_distiller_content_common.a libdom_distiller_mojo_bindings.a $
+    libfavicon_content.a libhistory_content_browser.a $
+    libvisitedlink_browser.a libnavigation_interception.a $
+    libnetwork_hints_common.a libmetrics_gpu.a libmetrics_profiler.a $
+    libmetrics_profiler_content.a libntp_snippets.a $
+    libpacked_ct_ev_whitelist.a libpassword_manager_content_browser.a $
+    libpower.a libprofile_metrics.a libsafe_browsing_db.a libsafe_json.a $
+    libsafe_json_parser_message_filter.a libcontent_utility.a $
+    libcontent_child.a libwebcrypto.a libgestures_blink.a libscheduler.a $
+    obj/third_party/WebKit/public/blink_image_resources.actions_rules_copies.stamp $
+    obj/third_party/WebKit/public/blink_resources.actions_rules_copies.stamp $
+    libssl_config.a libtranslate_content_browser.a libuser_prefs_tracked.a $
+    libwallpaper.a obj/content/content.actions_depends.stamp $
+    libcontent_plugin.a libcontent_renderer.a libcc_blink.a libwebusb.a $
+    libcomponents_webusb_mojo_bindings_lib.a $
+    obj/components/components_webusb_mojo_bindings.actions_rules_copies.stamp $
+    libdevice_usb_mojo_bindings_lib.a $
+    obj/device/devices_app/device_usb_mojo_bindings.actions_rules_copies.stamp $
+    libmedia_blink.a libmojo_js_lib.a libdevices_app_public_cpp.a $
+    libdevices_app_lib.a libcast_sender.a libjingle_webrtc.a $
+    libaudio_processing.a libisac.a libaudio_decoder_interface.a $
+    libaudio_encoder_interface.a libisac_common.a $
+    libaudioproc_debug_proto.a libaudio_processing_sse2.a $
+    libjingle_webrtc_common.a libsrtp.a libmedia_file.a libvideo_capture.a $
+    libvideo_capture_module.a libwebrtc_utility.a libaudio_coding_module.a $
+    libcng.a libg711.a libpcm16b.a libwebrtc_opus.a libg722.a $
+    librtc_event_log.a librtc_event_log_proto.a libneteq.a $
+    librent_a_codec.a libcommon_video.a libvideo_render.a $
+    libvideo_render_module.a libusrsctplib.a libpeerconnection.a $
+    libvoice_engine.a libaudio_conference_mixer.a libaudio_device.a $
+    libbitrate_controller.a librtp_rtcp.a libremote_bitrate_estimator.a $
+    libwebrtc.a libpaced_sender.a libvideo_processing.a $
+    libvideo_processing_sse2.a libwebrtc_video_coding.a libwebrtc_h264.a $
+    libwebrtc_i420.a libvideo_coding_utility.a libwebrtc_vp8.a $
+    libwebrtc_vp9.a libstunprober.a libppapi_proxy.a $
+    libdevices_app_public_cpp_factory.a libplatform_verification_api.a $
+    obj/media/mojo/interfaces/platform_verification_mojo_bindings.actions_rules_copies.stamp $
+    libapp_shim.a libbrowser_app_shim.a libsync_file_system_drive_proto.a $
+    libdrive.a libdrive_proto.a libhunspell.a libnacl_browser.a $
+    libpolicy_path_parser.a libpdf_browser.a libpdf_common.a $
+    libsafe_browsing_metadata_proto.a libfeedback_component.a $
+    libnet_browser_services.a libmojo_type_converters.a libnet_interfaces.a $
+    libnet_utility_services.a libprinting_browser.a $
+    libautofill_content_renderer.a libcdm_renderer.a libcdm_common.a $
+    libguest_view_renderer.a libnetwork_hints_renderer.a $
+    liberror_page_renderer.a libpage_load_metrics_renderer.a $
+    libpassword_manager_content_renderer.a libplugins_renderer.a $
+    libtranslate_content_renderer.a libvisitedlink_renderer.a $
+    libweb_cache_renderer.a libdom_distiller_content_renderer.a libnacl.a $
+    libsel.a nacl_irt_x86_64.nexe $
+    obj/ppapi/native_client/src/untrusted/pnacl_irt_shim/irt.actions_rules_copies.stamp $
+    gen/tc_irt/lib64/libppapi_proxy_nacl.a $
+    obj/base/base_nacl.actions_rules_copies.stamp $
+    gen/tc_irt/lib64/libtracing_nacl.a gen/tc_irt/lib64/libipc_nacl.a $
+    gen/tc_irt/lib64/libgles2_utils_nacl.a $
+    gen/tc_irt/lib64/libcommand_buffer_client_nacl.a $
+    gen/tc_irt/lib64/libcommand_buffer_common_nacl.a $
+    gen/tc_irt/lib64/libgles2_cmd_helper_nacl.a $
+    gen/tc_irt/lib64/libgles2_implementation_nacl.a $
+    gen/tc_irt/lib64/libgpu_ipc_nacl.a $
+    obj/ppapi/ppapi_ipc_nacl.actions_rules_copies.stamp $
+    gen/tc_irt/lib64/libppapi_shared_nacl.a $
+    obj/media/shared_memory_support_nacl.actions_rules_copies.stamp $
+    obj/native_client/src/untrusted/irt/irt_browser_lib.actions_rules_copies.stamp $
+    obj/native_client/src/untrusted/nacl/nacl_lib_newlib.actions_rules_copies.stamp $
+    obj/native_client/src/shared/srpc/srpc_lib.actions_rules_copies.stamp $
+    obj/native_client/src/shared/platform/platform_lib.actions_rules_copies.stamp $
+    obj/native_client/src/untrusted/nacl/imc_syscalls_lib.actions_rules_copies.stamp $
+    obj/native_client/src/shared/gio/gio_lib.actions_rules_copies.stamp $
+    obj/ppapi/native_client/src/untrusted/pnacl_support_extension/pnacl_support_extension.actions_rules_copies.stamp $
+    obj/ppapi/native_client/src/untrusted/pnacl_irt_shim/browser.actions_rules_copies.stamp $
+    libnacl_renderer.a libsel_ldr_launcher_base.a libserialization.a $
+    libppapi_cpp_objects.a libppapi_internal_module.a libpdf_renderer.a $
+    libmurmurhash3.a libextensions_renderer.a libcast_receiver.a $
+    libprinting_renderer.a libextensions_utility.a libcld2_static.a $
+    libpdfium.a libbigint.a libfdrm.a libfpdfdoc.a libfpdfapi.a $
+    libfpdftext.a libformfiller.a libfxcodec.a libfx_lcms2.a $
+    libfx_libopenjpeg.a libfx_zlib.a libfxcrt.a libfxedit.a libfxge.a $
+    libfx_agg.a libjavascript.a libpdfwindow.a libfx_freetype.a $
+    obj/components/crash_component_non_mac.actions_depends.stamp $
+    libcrash_component_lib.a libcrashpad_client.a libbase.a $
+    libcrashpad_util.a libcrashpad_compat.a libapple_cctools.a
+
+build obj/chrome/chrome_main_dll.compile_depends.stamp: stamp $
+    obj/chrome/common.compile_depends.stamp $
+    obj/chrome/browser.compile_depends.stamp $
+    obj/sync/sync.compile_depends.stamp $
+    obj/chrome/debugger.compile_depends.stamp $
+    obj/chrome/service.compile_depends.stamp gen/chrome/common/features.h $
+    obj/chrome/plugin.compile_depends.stamp $
+    obj/chrome/renderer.compile_depends.stamp $
+    obj/chrome/utility.compile_depends.stamp $
+    obj/content/content_gpu.compile_depends.stamp $
+    obj/content/content_ppapi_plugin.compile_depends.stamp $
+    obj/third_party/WebKit/Source/devtools/devtools_frontend_resources.actions_rules_copies.stamp $
+    obj/content/content_app_both.compile_depends.stamp $
+    obj/pdf/pdf.compile_depends.stamp $
+    obj/chrome/app_mode_app.compile_depends.stamp $
+    obj/build/temp_gyp/pdfsqueeze.gen/ApplyGenericRGB.h $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.actions_rules_copies.stamp $
+    gen/repack/resources.pak $
+    obj/chrome/packed_resources.actions_rules_copies.stamp $
+    obj/components/policy.compile_depends.stamp $
+    obj/chrome/installer_util.compile_depends.stamp $
+    obj/chrome/chrome_resources.actions_rules_copies.stamp $
+    obj/chrome/web_ui_mojo_bindings.actions_rules_copies.stamp $
+    obj/third_party/mojo/mojo_interface_bindings_mojom.actions_rules_copies.stamp $
+    obj/third_party/mojo/mojo_interface_bindings_mojom.actions_rules_copies.stamp $
+    obj/third_party/mojo/mojo_interface_bindings_mojom.actions_rules_copies.stamp $
+    obj/chrome/chrome_strings.actions_rules_copies.stamp $
+    obj/components/variations.actions_rules_copies.stamp $
+    obj/chrome/safe_browsing_proto.actions_rules_copies.stamp icudtl.dat $
+    icudtl.dat icudtl.dat gen/chrome/common/features.h $
+    obj/chrome/theme_resources.actions_rules_copies.stamp $
+    obj/ui/resources/ui_resources.actions_rules_copies.stamp $
+    obj/chrome/chrome_unscaled_resources.actions_rules_copies.stamp $
+    obj/chrome/common_constants.compile_depends.stamp $
+    gen/chrome/common/chrome_version.h gen/widevine_cdm_version.h $
+    obj/chrome/common/variations/fieldtrial_testing_config.actions_rules_copies.stamp $
+    obj/net/net.compile_depends.stamp $
+    obj/net/net_quic_proto.actions_rules_copies.stamp $
+    obj/net/net_derived_sources.actions_rules_copies.stamp $
+    obj/net/net_resources.actions_rules_copies.stamp $
+    obj/ui/base/ui_base.compile_depends.stamp $
+    obj/third_party/libjpeg_turbo/libjpeg.actions_rules_copies.stamp $
+    obj/ui/strings/ui_strings.actions_rules_copies.stamp $
+    obj/components/version_info.compile_depends.stamp $
+    obj/components/components_strings.actions_rules_copies.stamp $
+    gen/components/version_info/version_info_values.h $
+    obj/components/metrics.compile_depends.stamp $
+    obj/components/component_metrics_proto.actions_rules_copies.stamp $
+    obj/components/component_metrics_proto.actions_rules_copies.stamp $
+    obj/components/policy_component_common.compile_depends.stamp $
+    obj/components/cloud_policy_proto.actions_rules_copies.stamp $
+    obj/components/cloud_policy_code_generate.actions_rules_copies.stamp $
+    obj/components/cloud_policy_proto_generated_compile.actions_rules_copies.stamp $
+    obj/content/content_common.actions_rules_copies.stamp $
+    obj/ui/accessibility/ax_gen.actions_rules_copies.stamp $
+    obj/ui/accessibility/ax_gen.actions_rules_copies.stamp $
+    obj/ui/strings/ui_strings.actions_rules_copies.stamp $
+    obj/content/content_resources.actions_rules_copies.stamp $
+    obj/cc/cc.compile_depends.stamp $
+    obj/cc/cc_proto.actions_rules_copies.stamp $
+    obj/gpu/command_buffer_service.compile_depends.stamp $
+    obj/gpu/command_buffer_service.compile_depends.stamp $
+    obj/gpu/disk_cache_proto.actions_rules_copies.stamp $
+    gen/angle/id/commit.h $
+    obj/third_party/angle/src/copy_scripts.actions_rules_copies.stamp $
+    obj/third_party/ffmpeg/ffmpeg_yasm.actions_rules_copies.stamp $
+    obj/third_party/libvpx_new/libvpx_new.actions_rules_copies.stamp $
+    obj/media/media_asm.actions_rules_copies.stamp $
+    obj/device/bluetooth/bluetooth_strings.actions_rules_copies.stamp $
+    obj/device/bluetooth/bluetooth_strings.actions_rules_copies.stamp $
+    obj/gpu/command_buffer_service.compile_depends.stamp $
+    obj/ipc/mojo/ipc_mojo.actions_rules_copies.stamp $
+    obj/third_party/mojo/mojo_interface_bindings_mojom.actions_rules_copies.stamp $
+    obj/mojo/mojo_application_bindings.compile_depends.stamp $
+    obj/mojo/mojo_application_bindings_mojom.actions_rules_copies.stamp $
+    obj/mojo/network_service_bindings_mojom.actions_rules_copies.stamp $
+    obj/mojo/network_service_bindings_mojom.actions_rules_copies.stamp $
+    obj/mojo/network_service_bindings_mojom.actions_rules_copies.stamp $
+    obj/third_party/WebKit/public/blink.compile_depends.stamp $
+    obj/third_party/WebKit/Source/platform/blink_platform.compile_depends.stamp $
+    gen/webcore/heap/SaveRegisters_x86.o $
+    obj/third_party/WebKit/Source/platform/make_platform_generated.actions_rules_copies.stamp $
+    snapshot_blob.bin snapshot_blob.bin snapshot_blob.bin $
+    obj/v8/tools/gyp/js2c.actions_rules_copies.stamp natives_blob.bin $
+    obj/third_party/WebKit/Source/web/blink_web.compile_depends.stamp $
+    obj/third_party/WebKit/Source/modules/modules.compile_depends.stamp $
+    obj/third_party/WebKit/Source/modules/make_modules_generated.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/modules/modules_event_generated.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/core/webcore.compile_depends.stamp $
+    obj/third_party/WebKit/Source/core/webcore_prerequisites.compile_depends.stamp $
+    obj/third_party/WebKit/Source/core/webcore_prerequisites.compile_depends.stamp $
+    obj/third_party/WebKit/Source/core/inspector_protocol_sources.actions_rules_copies.stamp $
+    gen/blink/core/InspectorProtocolVersion.h $
+    obj/third_party/WebKit/Source/core/inspector_instrumentation_sources.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/core/make_core_generated.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/core/generated_testing_idls.actions_rules_copies.stamp $
+    gen/blink/core/EventInterfaces.in $
+    obj/third_party/WebKit/Source/bindings/core/v8/bindings_core_v8_generated.compile_depends.stamp $
+    obj/third_party/WebKit/Source/bindings/core/v8/bindings_core_impl_generated.actions_rules_copies.stamp $
+    gen/blink/bindings/scripts/cached_jinja_templates.stamp $
+    obj/third_party/WebKit/Source/bindings/scripts/cached_lex_yacc_tables.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/core/interfaces_info_individual_core.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/core/core_global_constructors_idls.actions_rules_copies.stamp $
+    gen/blink/bindings/core/GlobalObjectsCore.pickle $
+    gen/blink/bindings/modules/InterfacesInfoOverall.pickle $
+    obj/third_party/WebKit/Source/bindings/modules/interfaces_info_individual_modules.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/modules/modules_core_global_constructors_idls.actions_rules_copies.stamp $
+    gen/blink/bindings/modules/GlobalObjectsModules.pickle $
+    obj/third_party/WebKit/Source/bindings/modules/modules_global_constructors_idls.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/core/v8/bindings_core_v8_generated_aggregate.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/core/v8/bindings_core_v8_generated_individual.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/modules/v8/bindings_modules_v8_generated.compile_depends.stamp $
+    obj/third_party/WebKit/Source/bindings/modules/v8/bindings_modules_impl_generated.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/modules/v8/bindings_modules_v8_generated_aggregate.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/modules/v8/bindings_modules_v8_generated_individual.actions_rules_copies.stamp $
+    gen/blink/bindings/modules/v8/initPartialInterfacesInModules.cpp $
+    gen/blink/bindings/modules/v8/V8GeneratedModulesBindingsPartial.cpp $
+    obj/third_party/WebKit/Source/bindings/modules/v8/bindings_modules_v8_generated_partial_individual.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/core/webcore_prerequisites.compile_depends.stamp $
+    obj/third_party/WebKit/Source/core/webcore_prerequisites.compile_depends.stamp $
+    obj/third_party/WebKit/Source/core/webcore_prerequisites.compile_depends.stamp $
+    obj/third_party/WebKit/Source/core/webcore_prerequisites.compile_depends.stamp $
+    obj/third_party/WebKit/Source/core/webcore_generated.compile_depends.stamp $
+    snapshot_blob.bin $
+    obj/content/content_common_mojo_bindings.compile_depends.stamp $
+    obj/content/content_common_mojo_bindings_mojom.actions_rules_copies.stamp $
+    obj/skia/skia_mojo.actions_rules_copies.stamp $
+    obj/ui/mojo/geometry/mojo_geometry_bindings_mojom.actions_rules_copies.stamp $
+    obj/ui/mojo/geometry/mojo_geometry_bindings_mojom.actions_rules_copies.stamp $
+    obj/content/app/resources/content_resources.actions_rules_copies.stamp $
+    gen/device/usb/usb_ids_gen.cc $
+    obj/chrome/common/extensions/api/chrome_api.actions_rules_copies.stamp $
+    obj/extensions/common/api/extensions_api.actions_rules_copies.stamp $
+    obj/extensions/common/api/extensions_api_mojom.actions_rules_copies.stamp $
+    obj/extensions/extensions_common.compile_depends.stamp $
+    obj/device/serial/device_serial_mojo.actions_rules_copies.stamp $
+    obj/extensions/extensions_resources.actions_rules_copies.stamp $
+    obj/extensions/extensions_strings.actions_rules_copies.stamp $
+    obj/extensions/extensions_common_mojo.actions_rules_copies.stamp $
+    obj/media/cast/cast_logging_proto.actions_rules_copies.stamp $
+    obj/media/cast/cast_logging_proto.actions_rules_copies.stamp $
+    obj/media/cast/cast_logging_proto.actions_rules_copies.stamp $
+    obj/chrome/common_constants.compile_depends.stamp $
+    obj/chrome/common_mojo_bindings.actions_rules_copies.stamp $
+    obj/components/autofill_content_common.compile_depends.stamp $
+    obj/components/password_manager_content_common.compile_depends.stamp $
+    obj/components/translate_content_common.compile_depends.stamp $
+    obj/components/visitedlink_common.compile_depends.stamp $
+    obj/components/nacl_common.compile_depends.stamp gen/flapper_version.h $
+    obj/third_party/WebKit/public/blink.compile_depends.stamp $
+    obj/chrome/browser_ui.gen/ui_localizer_table.h $
+    obj/chrome/chrome_extra_resources.actions_rules_copies.stamp $
+    obj/components/components_resources.actions_rules_copies.stamp $
+    gen/about_credits.html $
+    obj/content/browser/devtools/devtools_resources.actions_rules_copies.stamp $
+    gen/devtools/devtools_resources.grd gen/devtools/devtools_resources.grd $
+    resources/inspector/devtools_extension_api.js $
+    obj/third_party/WebKit/Source/devtools/devtools_frontend_resources.actions_rules_copies.stamp $
+    resources/inspector/SupportedCSSProperties.js $
+    resources/inspector/InspectorBackendCommands.js $
+    obj/third_party/WebKit/Source/devtools/build_applications.actions_rules_copies.stamp $
+    resources/inspector/inspector.css resources/inspector/toolbox.css $
+    obj/content/browser/tracing/tracing_resources.actions_rules_copies.stamp $
+    obj/third_party/catapult/tracing/generate_about_tracing.actions_rules_copies.stamp $
+    gen/content/browser/tracing/tracing_resources.grd $
+    obj/chrome/browser/devtools/webrtc_device_provider_resources.actions_rules_copies.stamp $
+    obj/chrome/platform_locale_settings.actions_rules_copies.stamp $
+    obj/components/certificate_reporting.compile_depends.stamp $
+    obj/components/cert_logger_proto.actions_rules_copies.stamp $
+    obj/components/encrypted_cert_logger_proto.actions_rules_copies.stamp $
+    obj/components/dom_distiller_core.compile_depends.stamp $
+    obj/sync/sync_core.compile_depends.stamp $
+    obj/sync/attachment_store_proto.actions_rules_copies.stamp $
+    obj/sync/sync_proto.actions_rules_copies.stamp $
+    obj/third_party/dom_distiller_js/dom_distiller_js_proto.actions_rules_copies.stamp $
+    obj/components/dom_distiller_protos.actions_rules_copies.stamp $
+    obj/components/dom_distiller_webui.compile_depends.stamp $
+    obj/content/content_browser.compile_depends.stamp $
+    obj/device/battery/device_battery_mojo_bindings.actions_rules_copies.stamp $
+    obj/device/battery/device_battery_mojo_bindings.actions_rules_copies.stamp $
+    obj/device/vibration/device_vibration_mojo_bindings.actions_rules_copies.stamp $
+    obj/device/vibration/device_vibration_mojo_bindings.actions_rules_copies.stamp $
+    obj/mojo/mojo_application_base.compile_depends.stamp $
+    obj/mojo/network_service_bindings_mojom.actions_rules_copies.stamp $
+    obj/ui/mojo/geometry/mojo_geometry_bindings_mojom.actions_rules_copies.stamp $
+    obj/mojo/updater_bindings_mojom.actions_rules_copies.stamp $
+    obj/mojo/updater_bindings_mojom.actions_rules_copies.stamp $
+    obj/mojo/mojo_shell_lib.compile_depends.stamp $
+    obj/mojo/mojo_fetcher_lib.compile_depends.stamp $
+    obj/content/browser/background_sync/background_sync_proto.actions_rules_copies.stamp $
+    obj/content/browser/cache_storage/cache_storage_proto.actions_rules_copies.stamp $
+    obj/content/browser/notifications/notification_proto.actions_rules_copies.stamp $
+    obj/content/browser/service_worker/service_worker_proto.actions_rules_copies.stamp $
+    obj/content/browser/speech/proto/speech_proto.actions_rules_copies.stamp $
+    obj/content/app/strings/content_strings.actions_rules_copies.stamp $
+    obj/content/browser/devtools/devtools_protocol_handler.actions_rules_copies.stamp $
+    obj/gpu/command_buffer_service.compile_depends.stamp $
+    obj/third_party/WebKit/public/blink.compile_depends.stamp $
+    obj/third_party/cacheinvalidation/cacheinvalidation_proto_cpp.actions_rules_copies.stamp $
+    obj/third_party/cacheinvalidation/cacheinvalidation_proto_cpp.actions_rules_copies.stamp $
+    obj/third_party/cacheinvalidation/cacheinvalidation_proto_cpp.actions_rules_copies.stamp $
+    obj/third_party/cacheinvalidation/cacheinvalidation_proto_cpp.actions_rules_copies.stamp $
+    obj/components/gcm_driver.compile_depends.stamp $
+    obj/components/gcm_driver_crypto_proto.actions_rules_copies.stamp $
+    obj/components/gcm_driver_crypto_proto.actions_rules_copies.stamp $
+    obj/components/sync_driver.compile_depends.stamp $
+    obj/components/signin_core_browser.compile_depends.stamp $
+    obj/components/components_strings.actions_rules_copies.stamp $
+    obj/components/webdata_common.compile_depends.stamp $
+    obj/components/policy_component.compile_depends.stamp $
+    obj/components/policy_component_browser.compile_depends.stamp $
+    obj/components/bookmarks_browser.compile_depends.stamp $
+    obj/ui/views/views.compile_depends.stamp $
+    obj/ui/gfx/gfx_vector_icons.actions_rules_copies.stamp $
+    obj/ui/resources/ui_resources.actions_rules_copies.stamp $
+    obj/ui/views/resources/views_resources.actions_rules_copies.stamp $
+    obj/components/components_strings.actions_rules_copies.stamp $
+    obj/google_apis/gcm/gcm.actions_rules_copies.stamp $
+    obj/components/password_manager_core_browser.compile_depends.stamp $
+    obj/components/password_manager_core_browser_proto.actions_rules_copies.stamp $
+    obj/components/ui_zoom.compile_depends.stamp $
+    obj/components/variations.actions_rules_copies.stamp $
+    obj/ui/content_accelerators/ui_content_accelerators.compile_depends.stamp $
+    obj/ui/message_center/message_center.compile_depends.stamp $
+    obj/chrome/common_net.compile_depends.stamp $
+    obj/chrome/browser/devtools/devtools_protocol_constants.actions_rules_copies.stamp $
+    obj/components/devtools_http_handler.compile_depends.stamp $
+    obj/components/devtools_discovery.compile_depends.stamp $
+    obj/components/app_modal.compile_depends.stamp $
+    obj/components/autofill_content_risk_proto.actions_rules_copies.stamp $
+    obj/components/components_strings.actions_rules_copies.stamp $
+    obj/components/components_strings.actions_rules_copies.stamp $
+    obj/components/data_reduction_proxy_proto.actions_rules_copies.stamp $
+    obj/components/data_reduction_proxy_proto.actions_rules_copies.stamp $
+    obj/components/page_load_metrics_browser.compile_depends.stamp $
+    snapshot_blob.bin obj/ui/web_dialogs/web_dialogs.compile_depends.stamp $
+    obj/native_client/src/trusted/service_runtime/sel.actions_rules_copies.stamp $
+    obj/chrome/safe_browsing_chunk_proto.actions_rules_copies.stamp $
+    obj/ui/accessibility/ax_gen.actions_rules_copies.stamp $
+    obj/components/web_modal.compile_depends.stamp $
+    obj/extensions/components/native_app_window.compile_depends.stamp $
+    obj/ui/views/controls/webview/webview.compile_depends.stamp $
+    obj/extensions/extensions_browser.compile_depends.stamp $
+    obj/components/browsing_data.compile_depends.stamp $
+    obj/components/guest_view_browser.compile_depends.stamp $
+    obj/components/keyed_service_content.compile_depends.stamp $
+    obj/components/sessions_content.compile_depends.stamp $
+    obj/components/web_cache_browser.compile_depends.stamp $
+    obj/device/serial/device_serial_mojo.actions_rules_copies.stamp $
+    obj/extensions/browser/api/extensions_api_registration.actions_rules_copies.stamp $
+    obj/extensions/common/api/cast_channel_proto.actions_rules_copies.stamp $
+    obj/ui/app_list/app_list.compile_depends.stamp $
+    obj/ui/app_list/resources/app_list_resources.actions_rules_copies.stamp $
+    obj/third_party/libaddressinput/libaddressinput_strings.actions_rules_copies.stamp $
+    obj/third_party/libaddressinput/libaddressinput_strings.actions_rules_copies.stamp $
+    obj/chrome/browser_extensions.compile_depends.stamp $
+    obj/chrome/browser/extensions/api/chrome_api_registration.actions_rules_copies.stamp $
+    obj/components/copresence_proto.actions_rules_copies.stamp $
+    obj/components/copresence_proto.actions_rules_copies.stamp $
+    obj/components/audio_modem.compile_depends.stamp $
+    obj/components/cryptauth_proto.actions_rules_copies.stamp $
+    obj/components/cryptauth_proto.actions_rules_copies.stamp $
+    obj/components/cryptauth_proto.actions_rules_copies.stamp $
+    obj/chrome/browser/media/router/media_router.compile_depends.stamp $
+    obj/chrome/browser/media/router/media_router_mojo_gen.actions_rules_copies.stamp $
+    obj/chrome/browser/media/router/media_router_mojo_gen.actions_rules_copies.stamp $
+    obj/components/feedback_proto.actions_rules_copies.stamp $
+    obj/chrome/make_chrome_ui_string_overrider_factory.actions_rules_copies.stamp $
+    obj/components/variations_service.compile_depends.stamp $
+    obj/chrome/make_chrome_ui_string_overrider_factory.actions_rules_copies.stamp $
+    obj/chrome/probe_message_proto.actions_rules_copies.stamp $
+    obj/components/autofill_core_browser.compile_depends.stamp $
+    obj/third_party/libphonenumber/libphonenumber_without_metadata.actions_rules_copies.stamp $
+    obj/third_party/libphonenumber/libphonenumber_without_metadata.actions_rules_copies.stamp $
+    obj/components/infobars_core.compile_depends.stamp $
+    obj/components/rappor.actions_rules_copies.stamp $
+    obj/components/variations_http_provider.compile_depends.stamp $
+    obj/components/browser_sync_browser.compile_depends.stamp $
+    obj/components/history_core_browser.compile_depends.stamp $
+    obj/components/password_manager_sync_browser.compile_depends.stamp $
+    obj/components/syncable_prefs.compile_depends.stamp $
+    obj/components/sync_bookmarks.compile_depends.stamp $
+    obj/components/components_strings.actions_rules_copies.stamp $
+    obj/components/sync_sessions.compile_depends.stamp $
+    obj/components/content_settings_content_common.compile_depends.stamp $
+    obj/components/data_reduction_proxy_core_browser.compile_depends.stamp $
+    gen/components/data_reduction_proxy/core/common/version.h $
+    obj/components/domain_reliability.gen/domain_reliability/baked_in_configs.cc $
+    obj/components/enhanced_bookmarks.compile_depends.stamp $
+    obj/components/enhanced_bookmarks_proto.actions_rules_copies.stamp $
+    obj/components/metrics_services_manager.compile_depends.stamp $
+    obj/components/component_metrics_proto.actions_rules_copies.stamp $
+    obj/components/offline_pages_proto.actions_rules_copies.stamp $
+    obj/components/offline_pages_proto.actions_rules_copies.stamp $
+    obj/components/omnibox_browser.compile_depends.stamp $
+    obj/components/omnibox_in_memory_url_index_cache_proto.actions_rules_copies.stamp $
+    obj/components/component_metrics_proto.actions_rules_copies.stamp $
+    obj/components/search_engines.compile_depends.stamp $
+    obj/components/search_engines/prepopulated_engines.actions_rules_copies.stamp $
+    obj/components/renderer_context_menu.compile_depends.stamp $
+    obj/components/security_interstitials_core.compile_depends.stamp $
+    obj/components/components_strings.actions_rules_copies.stamp $
+    obj/components/suggestions.actions_rules_copies.stamp $
+    obj/components/startup_metric_utils_browser_message_filter.compile_depends.stamp $
+    obj/components/translate_core_browser.compile_depends.stamp $
+    obj/components/webdata_services.compile_depends.stamp $
+    obj/chrome/apps.compile_depends.stamp $
+    obj/components/autofill_content_browser.compile_depends.stamp $
+    obj/components/data_reduction_proxy_content_browser.compile_depends.stamp $
+    obj/components/data_reduction_proxy_content_common.compile_depends.stamp $
+    obj/components/data_use_measurement_content.compile_depends.stamp $
+    obj/components/dom_distiller_content_browser.compile_depends.stamp $
+    obj/components/dom_distiller_content_common.compile_depends.stamp $
+    obj/components/dom_distiller_mojo_bindings.actions_rules_copies.stamp $
+    obj/components/favicon_content.compile_depends.stamp $
+    obj/components/history_content_browser.compile_depends.stamp $
+    obj/components/visitedlink_browser.compile_depends.stamp $
+    obj/components/navigation_interception.compile_depends.stamp $
+    obj/components/network_hints_common.compile_depends.stamp $
+    obj/components/metrics_gpu.compile_depends.stamp $
+    obj/components/metrics_profiler.compile_depends.stamp $
+    obj/components/metrics_profiler_content.compile_depends.stamp $
+    obj/components/packed_ct_ev_whitelist.compile_depends.stamp $
+    obj/components/password_manager_content_browser.compile_depends.stamp $
+    obj/components/safe_json.compile_depends.stamp $
+    obj/components/safe_json_parser_message_filter.compile_depends.stamp $
+    obj/content/content_utility.compile_depends.stamp $
+    obj/content/content_child.compile_depends.stamp $
+    obj/third_party/WebKit/public/blink.compile_depends.stamp $
+    obj/third_party/WebKit/public/blink.compile_depends.stamp $
+    obj/third_party/WebKit/public/blink_image_resources.actions_rules_copies.stamp $
+    obj/third_party/WebKit/public/blink_resources.actions_rules_copies.stamp $
+    obj/components/translate_content_browser.compile_depends.stamp $
+    obj/components/wallpaper.compile_depends.stamp $
+    obj/content/content.compile_depends.stamp $
+    obj/content/content_plugin.compile_depends.stamp $
+    obj/content/content_renderer.compile_depends.stamp $
+    obj/third_party/WebKit/public/blink.compile_depends.stamp $
+    obj/components/components_webusb_mojo_bindings_lib.compile_depends.stamp $
+    obj/components/components_webusb_mojo_bindings_lib.compile_depends.stamp $
+    obj/components/components_webusb_mojo_bindings.actions_rules_copies.stamp $
+    obj/device/devices_app/device_usb_mojo_bindings.actions_rules_copies.stamp $
+    obj/device/devices_app/device_usb_mojo_bindings.actions_rules_copies.stamp $
+    obj/third_party/WebKit/public/blink.compile_depends.stamp $
+    snapshot_blob.bin $
+    obj/device/devices_app/devices_app_public_cpp.compile_depends.stamp $
+    obj/device/devices_app/devices_app_lib.compile_depends.stamp $
+    obj/media/cast/cast_logging_proto.actions_rules_copies.stamp $
+    obj/third_party/webrtc/modules/audioproc_debug_proto.actions_rules_copies.stamp $
+    obj/third_party/webrtc/modules/audioproc_debug_proto.actions_rules_copies.stamp $
+    obj/third_party/webrtc/rtc_event_log_proto.actions_rules_copies.stamp $
+    obj/third_party/webrtc/rtc_event_log_proto.actions_rules_copies.stamp $
+    obj/third_party/WebKit/public/blink.compile_depends.stamp $
+    obj/device/devices_app/devices_app_public_cpp_factory.compile_depends.stamp $
+    obj/media/mojo/interfaces/platform_verification_api.compile_depends.stamp $
+    obj/media/mojo/interfaces/platform_verification_mojo_bindings.actions_rules_copies.stamp $
+    obj/chrome/chrome_strings.actions_rules_copies.stamp $
+    obj/chrome/browser_app_shim.compile_depends.stamp $
+    obj/chrome/sync_file_system_drive_proto.actions_rules_copies.stamp $
+    obj/components/drive.compile_depends.stamp $
+    obj/components/drive_proto.actions_rules_copies.stamp $
+    obj/components/nacl_browser.compile_depends.stamp $
+    obj/chrome/policy_path_parser.compile_depends.stamp $
+    obj/components/pdf_browser.compile_depends.stamp $
+    obj/components/pdf_common.compile_depends.stamp $
+    obj/chrome/safe_browsing_metadata_proto.actions_rules_copies.stamp $
+    obj/components/feedback_component.compile_depends.stamp $
+    obj/net/net_interfaces.actions_rules_copies.stamp $
+    obj/net/net_interfaces.actions_rules_copies.stamp $
+    obj/net/net_interfaces.actions_rules_copies.stamp $
+    obj/net/net_interfaces.actions_rules_copies.stamp $
+    obj/components/autofill_content_renderer.compile_depends.stamp $
+    obj/components/cdm_renderer.compile_depends.stamp $
+    obj/components/cdm_common.compile_depends.stamp $
+    obj/components/guest_view_renderer.compile_depends.stamp $
+    obj/components/network_hints_renderer.compile_depends.stamp $
+    obj/components/error_page_renderer.compile_depends.stamp $
+    obj/components/page_load_metrics_renderer.compile_depends.stamp $
+    obj/components/password_manager_content_renderer.compile_depends.stamp $
+    obj/components/plugins_renderer.compile_depends.stamp $
+    obj/components/translate_content_renderer.compile_depends.stamp $
+    obj/components/visitedlink_renderer.compile_depends.stamp $
+    obj/components/web_cache_renderer.compile_depends.stamp $
+    obj/components/dom_distiller_content_renderer.compile_depends.stamp $
+    obj/components/nacl.compile_depends.stamp $
+    obj/native_client/src/trusted/service_runtime/sel.actions_rules_copies.stamp $
+    nacl_irt_x86_64.nexe $
+    obj/ppapi/native_client/src/untrusted/pnacl_irt_shim/irt.actions_rules_copies.stamp $
+    gen/tc_irt/lib64/libppapi_proxy_nacl.a $
+    obj/base/base_nacl.actions_rules_copies.stamp $
+    gen/tc_irt/lib64/libtracing_nacl.a gen/tc_irt/lib64/libipc_nacl.a $
+    gen/tc_irt/lib64/libgles2_utils_nacl.a $
+    gen/tc_irt/lib64/libcommand_buffer_client_nacl.a $
+    gen/tc_irt/lib64/libcommand_buffer_common_nacl.a $
+    gen/tc_irt/lib64/libgles2_cmd_helper_nacl.a $
+    gen/tc_irt/lib64/libgles2_implementation_nacl.a $
+    gen/tc_irt/lib64/libgpu_ipc_nacl.a $
+    obj/ppapi/ppapi_ipc_nacl.actions_rules_copies.stamp $
+    gen/tc_irt/lib64/libppapi_shared_nacl.a $
+    obj/media/shared_memory_support_nacl.actions_rules_copies.stamp $
+    obj/native_client/src/untrusted/irt/irt_browser_lib.actions_rules_copies.stamp $
+    obj/native_client/src/untrusted/nacl/nacl_lib_newlib.actions_rules_copies.stamp $
+    obj/native_client/src/shared/srpc/srpc_lib.actions_rules_copies.stamp $
+    obj/native_client/src/shared/platform/platform_lib.actions_rules_copies.stamp $
+    obj/native_client/src/untrusted/nacl/imc_syscalls_lib.actions_rules_copies.stamp $
+    obj/native_client/src/shared/gio/gio_lib.actions_rules_copies.stamp $
+    obj/ppapi/native_client/src/untrusted/pnacl_support_extension/pnacl_support_extension.actions_rules_copies.stamp $
+    obj/ppapi/native_client/src/untrusted/pnacl_irt_shim/browser.actions_rules_copies.stamp $
+    obj/components/nacl_renderer.compile_depends.stamp $
+    obj/components/pdf_renderer.compile_depends.stamp $
+    obj/extensions/extensions_renderer.compile_depends.stamp $
+    obj/media/cast/cast_logging_proto.actions_rules_copies.stamp $
+    obj/components/printing_renderer.compile_depends.stamp $
+    obj/extensions/extensions_utility.compile_depends.stamp $
+    snapshot_blob.bin $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.actions_rules_copies.stamp
+
+rule chrome_main_dll_target_pdfsqueeze_fc5e859491058a945e7bd3316cb02dfc
+  command = cd ../../chrome; export $
+      BUILT_FRAMEWORKS_DIR=/Users/superadmin/tmp/src/out/Debug; export $
+      BUILT_PRODUCTS_DIR=/Users/superadmin/tmp/src/out/Debug; export $
+      CONFIGURATION=Debug; export CONTENTS_FOLDER_PATH="Chromium $
+      Framework.framework/Versions/A"; export $
+      DYLIB_INSTALL_NAME_BASE=@executable_path/../Versions/49.0.2577.0; $
+      export EXECUTABLE_NAME="Chromium Framework"; export $
+      EXECUTABLE_PATH="Chromium Framework.framework/Versions/A/Chromium $
+      Framework"; export FULL_PRODUCT_NAME="Chromium Framework.framework"; $
+      export INFOPLIST_PATH="Chromium $
+      Framework.framework/Versions/A/Resources/Info.plist"; export $
+      LD_DYLIB_INSTALL_NAME="@executable_path/../Versions/49.0.2577.0/Chromium $
+      Framework.framework/Chromium Framework"; export MACH_O_TYPE=mh_dylib; $
+      export PRODUCT_NAME="Chromium Framework"; export $
+      PRODUCT_TYPE=com.apple.product-type.framework; export $
+      SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk; $
+      export SRCROOT=/Users/superadmin/tmp/src/out/Debug/../../chrome; $
+      export SOURCE_ROOT="$${SRCROOT}"; export $
+      TARGET_BUILD_DIR=/Users/superadmin/tmp/src/out/Debug; export $
+      TEMP_DIR="$${TMPDIR}"; export $
+      UNLOCALIZED_RESOURCES_FOLDER_PATH="Chromium $
+      Framework.framework/Versions/A/Resources"; export $
+      WRAPPER_NAME="Chromium Framework.framework";../out/Debug/pdfsqueeze $
+      "${source}" $
+      "../out/Debug/obj/chrome/chrome_main_dll.gen/pdfsqueeze/${root}.pdf"
+  description = RULE Running pdfsqueeze on ${source}
+  restat = 1
+
+build obj/chrome/chrome_main_dll.gen/pdfsqueeze/find_next_Template.pdf: $
+    chrome_main_dll_target_pdfsqueeze_fc5e859491058a945e7bd3316cb02dfc $
+    ../../chrome/app/theme/find_next_Template.pdf | pdfsqueeze || $
+    obj/chrome/chrome_main_dll.actions_depends.stamp
+  source = app/theme/find_next_Template.pdf
+  root = find_next_Template
+build obj/chrome/chrome_main_dll.gen/pdfsqueeze/find_prev_Template.pdf: $
+    chrome_main_dll_target_pdfsqueeze_fc5e859491058a945e7bd3316cb02dfc $
+    ../../chrome/app/theme/find_prev_Template.pdf | pdfsqueeze || $
+    obj/chrome/chrome_main_dll.actions_depends.stamp
+  source = app/theme/find_prev_Template.pdf
+  root = find_prev_Template
+build obj/chrome/chrome_main_dll.gen/pdfsqueeze/menu_overflow_down.pdf: $
+    chrome_main_dll_target_pdfsqueeze_fc5e859491058a945e7bd3316cb02dfc $
+    ../../chrome/app/theme/menu_overflow_down.pdf | pdfsqueeze || $
+    obj/chrome/chrome_main_dll.actions_depends.stamp
+  source = app/theme/menu_overflow_down.pdf
+  root = menu_overflow_down
+build obj/chrome/chrome_main_dll.gen/pdfsqueeze/menu_overflow_up.pdf: $
+    chrome_main_dll_target_pdfsqueeze_fc5e859491058a945e7bd3316cb02dfc $
+    ../../chrome/app/theme/menu_overflow_up.pdf | pdfsqueeze || $
+    obj/chrome/chrome_main_dll.actions_depends.stamp
+  source = app/theme/menu_overflow_up.pdf
+  root = menu_overflow_up
+build Chromium$ Framework.framework/Versions/A/Libraries/exif.so: copy $
+    exif.so || obj/chrome/chrome_main_dll.actions_depends.stamp
+build Chromium$ Framework.framework/Versions/A/Helpers/crashpad_handler: $
+    copy crashpad_handler || obj/chrome/chrome_main_dll.actions_depends.stamp
+build $
+    Chromium$ Framework.framework/Versions/A/Internet$ Plug-Ins/nacl_irt_x86_64.nexe: $
+    copy nacl_irt_x86_64.nexe || $
+    obj/chrome/chrome_main_dll.actions_depends.stamp
+build resources.pak: copy gen/repack/resources.pak || $
+    obj/chrome/chrome_main_dll.actions_depends.stamp
+build pseudo_locales/fake-bidi.pak: copy gen/fake-bidi.pak || $
+    obj/chrome/chrome_main_dll.actions_depends.stamp
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/app_mode_loader.app: $
+    copy app_mode_loader.app || $
+    obj/chrome/chrome_main_dll.actions_depends.stamp
+build obj/chrome/chrome_main_dll.actions_rules_copies.stamp: stamp $
+    obj/chrome/chrome_main_dll.gen/pdfsqueeze/find_next_Template.pdf $
+    obj/chrome/chrome_main_dll.gen/pdfsqueeze/find_prev_Template.pdf $
+    obj/chrome/chrome_main_dll.gen/pdfsqueeze/menu_overflow_down.pdf $
+    obj/chrome/chrome_main_dll.gen/pdfsqueeze/menu_overflow_up.pdf $
+    Chromium$ Framework.framework/Versions/A/Libraries/exif.so $
+    Chromium$ Framework.framework/Versions/A/Helpers/crashpad_handler $
+    Chromium$ Framework.framework/Versions/A/Internet$ Plug-Ins/nacl_irt_x86_64.nexe $
+    resources.pak pseudo_locales/fake-bidi.pak $
+    Chromium$ Framework.framework/Versions/A/Resources/app_mode_loader.app
+
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/find_next_Template.pdf: $
+    mac_tool obj/chrome/chrome_main_dll.gen/pdfsqueeze/find_next_Template.pdf
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/find_prev_Template.pdf: $
+    mac_tool obj/chrome/chrome_main_dll.gen/pdfsqueeze/find_prev_Template.pdf
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/menu_overflow_down.pdf: $
+    mac_tool obj/chrome/chrome_main_dll.gen/pdfsqueeze/menu_overflow_down.pdf
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/menu_overflow_up.pdf: $
+    mac_tool obj/chrome/chrome_main_dll.gen/pdfsqueeze/menu_overflow_up.pdf
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/product_logo_32.png: $
+    mac_tool $
+    ../../chrome/app/theme/default_100_percent/chromium/product_logo_32.png
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/AvatarMenuItem.nib: $
+    mac_tool ../../chrome/app/nibs/AvatarMenuItem.xib
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/BookmarkAllTabs.nib: $
+    mac_tool ../../chrome/app/nibs/BookmarkAllTabs.xib
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build Chromium$ Framework.framework/Versions/A/Resources/BookmarkBar.nib: $
+    mac_tool ../../chrome/app/nibs/BookmarkBar.xib
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/BookmarkBubble.nib: $
+    mac_tool ../../chrome/app/nibs/BookmarkBubble.xib
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/BookmarkEditor.nib: $
+    mac_tool ../../chrome/app/nibs/BookmarkEditor.xib
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/BookmarkNameFolder.nib: $
+    mac_tool ../../chrome/app/nibs/BookmarkNameFolder.xib
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/CollectedCookies.nib: $
+    mac_tool ../../chrome/app/nibs/CollectedCookies.xib
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/ContentBlockedCookies.nib: $
+    mac_tool ../../chrome/app/nibs/ContentBlockedCookies.xib
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/ContentBlockedDownloads.nib: $
+    mac_tool ../../chrome/app/nibs/ContentBlockedDownloads.xib
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/ContentBlockedMIDISysEx.nib: $
+    mac_tool ../../chrome/app/nibs/ContentBlockedMIDISysEx.xib
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/ContentBlockedMedia.nib: $
+    mac_tool ../../chrome/app/nibs/ContentBlockedMedia.xib
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/ContentBlockedMixedScript.nib: $
+    mac_tool ../../chrome/app/nibs/ContentBlockedMixedScript.xib
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/ContentBlockedPlugins.nib: $
+    mac_tool ../../chrome/app/nibs/ContentBlockedPlugins.xib
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/ContentBlockedPopups.nib: $
+    mac_tool ../../chrome/app/nibs/ContentBlockedPopups.xib
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/ContentBlockedGeolocation.nib: $
+    mac_tool ../../chrome/app/nibs/ContentBlockedGeolocation.xib
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/ContentBlockedSimple.nib: $
+    mac_tool ../../chrome/app/nibs/ContentBlockedSimple.xib
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/ContentProtocolHandlers.nib: $
+    mac_tool ../../chrome/app/nibs/ContentProtocolHandlers.xib
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/CookieDetailsView.nib: $
+    mac_tool ../../chrome/app/nibs/CookieDetailsView.xib
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build Chromium$ Framework.framework/Versions/A/Resources/DownloadItem.nib: $
+    mac_tool ../../chrome/app/nibs/DownloadItem.xib
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build Chromium$ Framework.framework/Versions/A/Resources/DownloadShelf.nib: $
+    mac_tool ../../chrome/app/nibs/DownloadShelf.xib
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/EditSearchEngine.nib: $
+    mac_tool ../../chrome/app/nibs/EditSearchEngine.xib
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/ExclusiveAccessBubble.nib: $
+    mac_tool ../../chrome/app/nibs/ExclusiveAccessBubble.xib
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/ExtensionInstallPrompt.nib: $
+    mac_tool ../../chrome/app/nibs/ExtensionInstallPrompt.xib
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/ExtensionInstallPromptBundle.nib: $
+    mac_tool ../../chrome/app/nibs/ExtensionInstallPromptBundle.xib
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/ExtensionInstallPromptNoWarnings.nib: $
+    mac_tool ../../chrome/app/nibs/ExtensionInstallPromptNoWarnings.xib
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/ExtensionInstallPromptWebstoreData.nib: $
+    mac_tool ../../chrome/app/nibs/ExtensionInstallPromptWebstoreData.xib
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/ExtensionInstalledBubble.nib: $
+    mac_tool ../../chrome/app/nibs/ExtensionInstalledBubble.xib
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/FirstRunBubble.nib: $
+    mac_tool ../../chrome/app/nibs/FirstRunBubble.xib
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/FirstRunDialog.nib: $
+    mac_tool ../../chrome/app/nibs/FirstRunDialog.xib
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/HttpAuthLoginSheet.nib: $
+    mac_tool ../../chrome/app/nibs/HttpAuthLoginSheet.xib
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/HungRendererDialog.nib: $
+    mac_tool ../../chrome/app/nibs/HungRendererDialog.xib
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/ImportProgressDialog.nib: $
+    mac_tool ../../chrome/app/nibs/ImportProgressDialog.xib
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build Chromium$ Framework.framework/Versions/A/Resources/MainMenu.nib: $
+    mac_tool ../../chrome/app/nibs/MainMenu.xib
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/OneClickSigninBubble.nib: $
+    mac_tool ../../chrome/app/nibs/OneClickSigninBubble.xib
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/OneClickSigninDialog.nib: $
+    mac_tool ../../chrome/app/nibs/OneClickSigninDialog.xib
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/SaveAccessoryView.nib: $
+    mac_tool ../../chrome/app/nibs/SaveAccessoryView.xib
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build Chromium$ Framework.framework/Versions/A/Resources/TaskManager.nib: $
+    mac_tool ../../chrome/app/nibs/TaskManager.xib
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build Chromium$ Framework.framework/Versions/A/Resources/Toolbar.nib: $
+    mac_tool ../../chrome/app/nibs/Toolbar.xib
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build Chromium$ Framework.framework/Versions/A/Resources/WrenchMenu.nib: $
+    mac_tool ../../chrome/app/nibs/WrenchMenu.xib
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/ActionBoxMenuItem.nib: $
+    mac_tool ../../chrome/app/nibs/ActionBoxMenuItem.xib
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/BookmarkBarFolderWindow.nib: $
+    mac_tool ../../chrome/app/nibs/BookmarkBarFolderWindow.xib
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/DevicePermissionsPrompt.nib: $
+    mac_tool ../../chrome/app/nibs/DevicePermissionsPrompt.xib
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/ExtensionInstalledBubbleBundle.nib: $
+    mac_tool ../../chrome/app/nibs/ExtensionInstalledBubbleBundle.xib
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build Chromium$ Framework.framework/Versions/A/Resources/FindBar.nib: $
+    mac_tool ../../chrome/app/nibs/FindBar.xib
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/GlobalErrorBubble.nib: $
+    mac_tool ../../chrome/app/nibs/GlobalErrorBubble.xib
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build Chromium$ Framework.framework/Versions/A/Resources/InfoBar.nib: $
+    mac_tool ../../chrome/app/nibs/InfoBar.xib
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build Chromium$ Framework.framework/Versions/A/Resources/Panel.nib: $
+    mac_tool ../../chrome/app/nibs/Panel.xib
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build Chromium$ Framework.framework/Versions/A/Resources/install.sh: $
+    mac_tool ../../chrome/browser/mac/install.sh
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/chrome_100_percent.pak: $
+    mac_tool gen/repack/chrome_100_percent.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build Chromium$ Framework.framework/Versions/A/Resources/resources.pak: $
+    mac_tool gen/repack/resources.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/am.lproj/locale.pak: $
+    mac_tool gen/repack/am.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/ar.lproj/locale.pak: $
+    mac_tool gen/repack/ar.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/bg.lproj/locale.pak: $
+    mac_tool gen/repack/bg.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/bn.lproj/locale.pak: $
+    mac_tool gen/repack/bn.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/ca.lproj/locale.pak: $
+    mac_tool gen/repack/ca.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/cs.lproj/locale.pak: $
+    mac_tool gen/repack/cs.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/da.lproj/locale.pak: $
+    mac_tool gen/repack/da.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/de.lproj/locale.pak: $
+    mac_tool gen/repack/de.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/el.lproj/locale.pak: $
+    mac_tool gen/repack/el.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/en_GB.lproj/locale.pak: $
+    mac_tool gen/repack/en_GB.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/en.lproj/locale.pak: $
+    mac_tool gen/repack/en.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/es_419.lproj/locale.pak: $
+    mac_tool gen/repack/es_419.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/es.lproj/locale.pak: $
+    mac_tool gen/repack/es.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/et.lproj/locale.pak: $
+    mac_tool gen/repack/et.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/fa.lproj/locale.pak: $
+    mac_tool gen/repack/fa.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/fi.lproj/locale.pak: $
+    mac_tool gen/repack/fi.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/fil.lproj/locale.pak: $
+    mac_tool gen/repack/fil.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/fr.lproj/locale.pak: $
+    mac_tool gen/repack/fr.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/gu.lproj/locale.pak: $
+    mac_tool gen/repack/gu.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/he.lproj/locale.pak: $
+    mac_tool gen/repack/he.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/hi.lproj/locale.pak: $
+    mac_tool gen/repack/hi.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/hr.lproj/locale.pak: $
+    mac_tool gen/repack/hr.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/hu.lproj/locale.pak: $
+    mac_tool gen/repack/hu.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/id.lproj/locale.pak: $
+    mac_tool gen/repack/id.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/it.lproj/locale.pak: $
+    mac_tool gen/repack/it.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/ja.lproj/locale.pak: $
+    mac_tool gen/repack/ja.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/kn.lproj/locale.pak: $
+    mac_tool gen/repack/kn.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/ko.lproj/locale.pak: $
+    mac_tool gen/repack/ko.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/lt.lproj/locale.pak: $
+    mac_tool gen/repack/lt.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/lv.lproj/locale.pak: $
+    mac_tool gen/repack/lv.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/ml.lproj/locale.pak: $
+    mac_tool gen/repack/ml.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/mr.lproj/locale.pak: $
+    mac_tool gen/repack/mr.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/ms.lproj/locale.pak: $
+    mac_tool gen/repack/ms.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/nb.lproj/locale.pak: $
+    mac_tool gen/repack/nb.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/nl.lproj/locale.pak: $
+    mac_tool gen/repack/nl.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/pl.lproj/locale.pak: $
+    mac_tool gen/repack/pl.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/pt_BR.lproj/locale.pak: $
+    mac_tool gen/repack/pt_BR.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/pt_PT.lproj/locale.pak: $
+    mac_tool gen/repack/pt_PT.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/ro.lproj/locale.pak: $
+    mac_tool gen/repack/ro.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/ru.lproj/locale.pak: $
+    mac_tool gen/repack/ru.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/sk.lproj/locale.pak: $
+    mac_tool gen/repack/sk.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/sl.lproj/locale.pak: $
+    mac_tool gen/repack/sl.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/sr.lproj/locale.pak: $
+    mac_tool gen/repack/sr.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/sv.lproj/locale.pak: $
+    mac_tool gen/repack/sv.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/sw.lproj/locale.pak: $
+    mac_tool gen/repack/sw.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/ta.lproj/locale.pak: $
+    mac_tool gen/repack/ta.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/te.lproj/locale.pak: $
+    mac_tool gen/repack/te.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/th.lproj/locale.pak: $
+    mac_tool gen/repack/th.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/tr.lproj/locale.pak: $
+    mac_tool gen/repack/tr.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/uk.lproj/locale.pak: $
+    mac_tool gen/repack/uk.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/vi.lproj/locale.pak: $
+    mac_tool gen/repack/vi.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/zh_CN.lproj/locale.pak: $
+    mac_tool gen/repack/zh_CN.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/zh_TW.lproj/locale.pak: $
+    mac_tool gen/repack/zh_TW.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    Chromium$ Framework.framework/Versions/A/Resources/chrome_200_percent.pak: $
+    mac_tool gen/repack/chrome_200_percent.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build Chromium$ Framework.framework/Versions/A/Resources/icudtl.dat: $
+    mac_tool icudtl.dat
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build Chromium$ Framework.framework/Versions/A/Resources/natives_blob.bin: $
+    mac_tool natives_blob.bin
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build Chromium$ Framework.framework/Versions/A/Resources/snapshot_blob.bin: $
+    mac_tool snapshot_blob.bin
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build Chromium$ Framework.framework/Versions/A/Resources/Info.plist: $
+    copy_infoplist ../../chrome/app/framework-Info.plist
+  env = export ALWAYS_SEARCH_USER_PATHS=NO; export ARCHS=x86_64; export $
+      BUILT_FRAMEWORKS_DIR=/Users/superadmin/tmp/src/out/Debug; export $
+      BUILT_PRODUCTS_DIR=/Users/superadmin/tmp/src/out/Debug; export $
+      SRCROOT=/Users/superadmin/tmp/src/out/Debug/../../chrome; export $
+      SOURCE_ROOT="$${SRCROOT}"; export $
+      CC="$${SOURCE_ROOT}/../third_party/llvm-build/Release+Asserts/bin/clang"; $
+      export CHROMIUM_BUNDLE_ID=org.chromium.Chromium; export $
+      CLANG_CXX_LANGUAGE_STANDARD=c++11; export CLANG_CXX_LIBRARY=libc++; $
+      export CLANG_LINK_OBJC_RUNTIME=NO; export $
+      CLANG_WARN_OBJC_MISSING_PROPERTY_SYNTHESIS=YES; export $
+      CONFIGURATION=Debug; export CONTENTS_FOLDER_PATH="Chromium $
+      Framework.framework/Versions/A"; export COPY_PHASE_STRIP=NO; export $
+      DYLIB_COMPATIBILITY_VERSION=2577.0.0; export $
+      DYLIB_CURRENT_VERSION=2577.0.0; export $
+      DYLIB_INSTALL_NAME_BASE=@executable_path/../Versions/49.0.2577.0; $
+      export EXECUTABLE_NAME="Chromium Framework"; export $
+      EXECUTABLE_PATH="Chromium Framework.framework/Versions/A/Chromium $
+      Framework"; export FULL_PRODUCT_NAME="Chromium Framework.framework"; $
+      export GCC_CW_ASM_SYNTAX=NO; export GCC_C_LANGUAGE_STANDARD=c99; $
+      export GCC_DYNAMIC_NO_PIC=NO; export GCC_ENABLE_CPP_EXCEPTIONS=NO; $
+      export GCC_ENABLE_CPP_RTTI=NO; export GCC_ENABLE_PASCAL_STRINGS=NO; $
+      export GCC_GENERATE_DEBUGGING_SYMBOLS=NO; export $
+      GCC_INLINES_ARE_PRIVATE_EXTERN=YES; export $
+      GCC_OBJC_CALL_CXX_CDTORS=YES; export $
+      GCC_PRECOMPILE_PREFIX_HEADER=YES; export $
+      GCC_SYMBOLS_PRIVATE_EXTERN=YES; export GCC_THREADSAFE_STATICS=NO; $
+      export GCC_TREAT_WARNINGS_AS_ERRORS=YES; export $
+      GCC_VERSION=com.apple.compilers.llvm.clang.1_0; export $
+      GCC_WARN_ABOUT_MISSING_NEWLINE=YES; export $
+      INFOPLIST_FILE=app/framework-Info.plist; export $
+      INFOPLIST_PATH="Chromium $
+      Framework.framework/Versions/A/Resources/Info.plist"; export $
+      LDPLUSPLUS="$${SOURCE_ROOT}/../third_party/llvm-build/Release+Asserts/bin/clang++"; $
+      export $
+      LD_DYLIB_INSTALL_NAME="@executable_path/../Versions/49.0.2577.0/Chromium $
+      Framework.framework/Chromium Framework"; export MACH_O_TYPE=mh_dylib; $
+      export MACOSX_DEPLOYMENT_TARGET=10.6; export $
+      ORDER_FILE=app/framework.order; export OTHER_LDFLAGS="-framework $
+      Cocoa -framework Foundation -framework IOKit -framework Security $
+      -framework SystemConfiguration -framework Cocoa -framework Foundation $
+      -framework IOKit -framework Security -framework SystemConfiguration $
+      -framework Cocoa -framework Foundation -framework IOKit -framework $
+      Security -framework SystemConfiguration -weak_framework CoreBluetooth $
+      -framework Cocoa -framework Foundation -framework IOKit -framework $
+      Security -framework SystemConfiguration -framework Cocoa -framework $
+      Foundation -framework IOKit -framework Security -framework $
+      SystemConfiguration -framework Cocoa -framework Foundation -framework $
+      IOKit -framework Security -framework SystemConfiguration -framework $
+      Cocoa -framework Foundation -framework IOKit -framework Security $
+      -framework SystemConfiguration -framework Cocoa -framework Foundation $
+      -framework IOKit -framework Security -framework SystemConfiguration $
+      -framework Cocoa -framework Foundation -framework IOKit -framework $
+      Security -framework SystemConfiguration -framework Cocoa -framework $
+      Foundation -framework IOKit -framework Security -framework $
+      SystemConfiguration -framework Cocoa -framework Foundation -framework $
+      IOKit -framework Security -framework SystemConfiguration -framework $
+      Cocoa -framework Foundation -framework IOKit -framework Security $
+      -framework SystemConfiguration -framework Cocoa -framework Foundation $
+      -framework IOKit -framework Security -framework SystemConfiguration $
+      -framework Cocoa -framework Foundation -framework IOKit -framework $
+      Security -framework SystemConfiguration -framework Cocoa -framework $
+      Foundation -framework IOKit -framework Security -framework $
+      SystemConfiguration -framework Cocoa -framework Foundation -framework $
+      IOKit -framework Security -framework SystemConfiguration -framework $
+      Cocoa -framework Foundation -framework IOKit -framework Security $
+      -framework SystemConfiguration -framework Cocoa -framework Foundation $
+      -framework IOKit -framework Security -framework SystemConfiguration $
+      -framework Cocoa -framework Foundation -framework IOKit -framework $
+      Security -framework SystemConfiguration -framework Cocoa -framework $
+      Foundation -framework IOKit -framework Security -framework $
+      SystemConfiguration -framework Cocoa -framework Foundation -framework $
+      IOKit -framework Security -framework SystemConfiguration -framework $
+      Cocoa -framework Foundation -framework IOKit -framework Security $
+      -framework SystemConfiguration -framework Cocoa -framework Foundation $
+      -framework IOKit -framework Security -framework SystemConfiguration $
+      -framework Cocoa -framework Foundation -framework IOKit -framework $
+      Security -framework SystemConfiguration -framework Cocoa -framework $
+      Foundation -framework IOKit -framework Security -framework $
+      SystemConfiguration -framework Cocoa -framework Foundation -framework $
+      IOKit -framework Security -framework SystemConfiguration -framework $
+      Cocoa -framework Foundation -framework IOKit -framework Security $
+      -framework SystemConfiguration -framework Cocoa -framework Foundation $
+      -framework IOKit -framework Security -framework SystemConfiguration $
+      -framework Cocoa -framework Foundation -framework IOKit -framework $
+      Security -framework SystemConfiguration -framework Cocoa -framework $
+      Foundation -framework IOKit -framework Security -framework $
+      SystemConfiguration -framework Cocoa -framework Foundation -framework $
+      IOKit -framework Security -framework SystemConfiguration -framework $
+      Cocoa -framework Foundation -framework IOKit -framework Security $
+      -framework SystemConfiguration -framework Cocoa -framework Foundation $
+      -framework IOKit -framework Security -framework SystemConfiguration $
+      -framework Cocoa -framework Foundation -framework IOKit -framework $
+      Security -framework SystemConfiguration -framework Cocoa -framework $
+      Foundation -framework IOKit -framework Security -framework $
+      SystemConfiguration -framework Cocoa -framework Foundation -framework $
+      IOKit -framework Security -framework SystemConfiguration -framework $
+      Cocoa -framework Foundation -framework IOKit -framework Security $
+      -framework SystemConfiguration -framework Cocoa -framework Foundation $
+      -framework IOKit -framework Security -framework SystemConfiguration $
+      -framework Cocoa -framework Foundation -framework IOKit -framework $
+      Security -framework SystemConfiguration -framework Cocoa -framework $
+      Foundation -framework IOKit -framework Security -framework $
+      SystemConfiguration -framework Cocoa -framework Foundation -framework $
+      IOKit -framework Security -framework SystemConfiguration -framework $
+      Cocoa -framework Foundation -framework IOKit -framework Security $
+      -framework SystemConfiguration -framework Cocoa -framework Foundation $
+      -framework IOKit -framework Security -framework SystemConfiguration $
+      -framework Cocoa -framework Foundation -framework IOKit -framework $
+      Security -framework SystemConfiguration -framework Cocoa -framework $
+      Foundation -framework IOKit -framework Security -framework $
+      SystemConfiguration -framework Cocoa -framework Foundation -framework $
+      IOKit -framework Security -framework SystemConfiguration -framework $
+      Cocoa -framework Foundation -framework IOKit -framework Security $
+      -framework SystemConfiguration -framework Cocoa -framework Foundation $
+      -framework IOKit -framework Security -framework SystemConfiguration $
+      -framework Cocoa -framework Foundation -framework IOKit -framework $
+      Security -framework SystemConfiguration -framework Cocoa -framework $
+      Foundation -framework IOKit -framework Security -framework $
+      SystemConfiguration -framework Cocoa -framework Foundation -framework $
+      IOKit -framework Security -framework SystemConfiguration -framework $
+      Cocoa -framework Foundation -framework IOKit -framework Security $
+      -framework SystemConfiguration -framework Cocoa -framework Foundation $
+      -framework IOKit -framework Security -framework SystemConfiguration $
+      -framework Cocoa -framework Foundation -framework IOKit -framework $
+      Security -framework SystemConfiguration -framework Cocoa -framework $
+      Foundation -framework IOKit -framework Security -framework $
+      SystemConfiguration -framework Cocoa -framework Foundation -framework $
+      IOKit -framework Security -framework SystemConfiguration -framework $
+      Cocoa -framework Foundation -framework IOKit -framework Security $
+      -framework SystemConfiguration -framework Cocoa -framework Foundation $
+      -framework IOKit -framework Security -framework SystemConfiguration $
+      -framework Cocoa -framework Foundation -framework IOKit -framework $
+      Security -framework SystemConfiguration -framework Cocoa -framework $
+      Foundation -framework IOKit -framework Security -framework $
+      SystemConfiguration -framework Cocoa -framework Foundation -framework $
+      IOKit -framework Security -framework SystemConfiguration -framework $
+      Cocoa -framework Foundation -framework IOKit -framework Security $
+      -framework SystemConfiguration -framework Cocoa -framework Foundation $
+      -framework IOKit -framework Security -framework SystemConfiguration $
+      -framework Cocoa -framework Foundation -framework IOKit -framework $
+      Security -framework SystemConfiguration -framework Cocoa -framework $
+      Foundation -framework IOKit -framework Security -framework $
+      SystemConfiguration -framework Cocoa -framework Foundation -framework $
+      IOKit -framework Security -framework SystemConfiguration -framework $
+      Cocoa -framework Foundation -framework IOKit -framework Security $
+      -framework SystemConfiguration -framework Cocoa -framework Foundation $
+      -framework IOKit -framework Security -framework SystemConfiguration $
+      -framework Cocoa -framework Foundation -framework IOKit -framework $
+      Security -framework SystemConfiguration -framework Cocoa -framework $
+      Foundation -framework IOKit -framework Security -framework $
+      SystemConfiguration -framework Cocoa -framework Foundation -framework $
+      IOKit -framework Security -framework SystemConfiguration -framework $
+      Cocoa -framework Foundation -framework IOKit -framework Security $
+      -framework SystemConfiguration -framework Cocoa -framework Foundation $
+      -framework IOKit -framework Security -framework SystemConfiguration $
+      -framework Cocoa -framework Foundation -framework IOKit -framework $
+      Security -framework SystemConfiguration -framework Cocoa -framework $
+      Foundation -framework IOKit -framework Security -framework $
+      SystemConfiguration -framework Cocoa -framework Foundation -framework $
+      IOKit -framework Security -framework SystemConfiguration -framework $
+      Cocoa -framework Foundation -framework IOKit -framework Security $
+      -framework SystemConfiguration -framework Cocoa -framework Foundation $
+      -framework IOKit -framework Security -framework SystemConfiguration $
+      -framework Cocoa -framework Foundation -framework IOKit -framework $
+      Security -framework SystemConfiguration -framework Cocoa -framework $
+      Foundation -framework IOKit -framework Security -framework $
+      SystemConfiguration -framework Cocoa -framework Foundation -framework $
+      IOKit -framework Security -framework SystemConfiguration -framework $
+      Cocoa -framework Foundation -framework IOKit -framework Security $
+      -framework SystemConfiguration -framework Cocoa -framework Foundation $
+      -framework IOKit -framework Security -framework SystemConfiguration $
+      -framework Cocoa -framework Foundation -framework IOKit -framework $
+      Security -framework SystemConfiguration -framework Cocoa -framework $
+      Foundation -framework IOKit -framework Security -framework $
+      SystemConfiguration -framework Cocoa -framework Foundation -framework $
+      IOKit -framework Security -framework SystemConfiguration -framework $
+      Cocoa -framework Foundation -framework IOKit -framework Security $
+      -framework SystemConfiguration -framework Cocoa -framework Foundation $
+      -framework IOKit -framework Security -framework SystemConfiguration $
+      -framework Cocoa -framework Foundation -framework IOKit -framework $
+      Security -framework SystemConfiguration -framework Cocoa -framework $
+      Foundation -framework IOKit -framework Security -framework $
+      SystemConfiguration -framework Cocoa -framework Foundation -framework $
+      IOKit -framework Security -framework SystemConfiguration -framework $
+      Cocoa -framework Foundation -framework IOKit -framework Security $
+      -framework SystemConfiguration -framework Cocoa -framework Foundation $
+      -framework IOKit -framework Security -framework SystemConfiguration $
+      -framework Cocoa -framework Foundation -framework IOKit -framework $
+      Security -framework SystemConfiguration -framework Cocoa -framework $
+      Foundation -framework IOKit -framework Security -framework $
+      SystemConfiguration -framework Cocoa -framework Foundation -framework $
+      IOKit -framework Security -framework SystemConfiguration -framework $
+      Cocoa -framework Foundation -framework IOKit -framework Security $
+      -framework SystemConfiguration -framework Cocoa -framework Foundation $
+      -framework IOKit -framework Security -framework SystemConfiguration $
+      -framework Cocoa -framework Foundation -framework IOKit -framework $
+      Security -framework SystemConfiguration -framework Cocoa -framework $
+      Foundation -framework IOKit -framework Security -framework $
+      SystemConfiguration -framework Cocoa -framework Foundation -framework $
+      IOKit -framework Security -framework SystemConfiguration -framework $
+      Cocoa -framework Foundation -framework IOKit -framework Security $
+      -framework SystemConfiguration -framework Cocoa -framework Foundation $
+      -framework IOKit -framework Security -framework SystemConfiguration $
+      -framework Cocoa -framework Foundation -framework IOKit -framework $
+      Security -framework SystemConfiguration -framework Cocoa -framework $
+      Foundation -framework IOKit -framework Security -framework $
+      SystemConfiguration -framework Cocoa -framework Foundation -framework $
+      IOKit -framework Security -framework SystemConfiguration -framework $
+      Cocoa -framework Foundation -framework IOKit -framework Security $
+      -framework SystemConfiguration -framework Cocoa -framework Foundation $
+      -framework IOKit -framework Security -framework SystemConfiguration $
+      -framework Cocoa -framework Foundation -framework IOKit -framework $
+      Security -framework SystemConfiguration -framework Cocoa -framework $
+      Foundation -framework IOKit -framework Security -framework $
+      SystemConfiguration -framework Cocoa -framework Foundation -framework $
+      IOKit -framework Security -framework SystemConfiguration -framework $
+      Cocoa -framework Foundation -framework IOKit -framework Security $
+      -framework SystemConfiguration -framework Cocoa -framework Foundation $
+      -framework IOKit -framework Security -framework SystemConfiguration $
+      -framework Cocoa -framework Foundation -framework IOKit -framework $
+      Security -framework SystemConfiguration -framework Cocoa -framework $
+      Foundation -framework IOKit -framework Security -framework $
+      SystemConfiguration -framework Cocoa -framework Foundation -framework $
+      IOKit -framework Security -framework SystemConfiguration -framework $
+      Cocoa -framework Foundation -framework IOKit -framework Security $
+      -framework SystemConfiguration -framework Cocoa -framework Foundation $
+      -framework IOKit -framework Security -framework SystemConfiguration $
+      -framework Cocoa -framework Foundation -framework IOKit -framework $
+      Security -framework SystemConfiguration -framework Cocoa -framework $
+      Foundation -framework IOKit -framework Security -framework $
+      SystemConfiguration -framework Cocoa -framework Foundation -framework $
+      IOKit -framework Security -framework SystemConfiguration -framework $
+      Cocoa -framework Foundation -framework IOKit -framework Security $
+      -framework SystemConfiguration -framework Cocoa -framework Foundation $
+      -framework IOKit -framework Security -framework SystemConfiguration $
+      -framework Cocoa -framework Foundation -framework IOKit -framework $
+      Security -framework SystemConfiguration -framework Cocoa -framework $
+      Foundation -framework IOKit -framework Security -framework $
+      SystemConfiguration -Wl,-search_paths_first -Wl,-ObjC"; export $
+      PRODUCT_NAME="Chromium Framework"; export $
+      PRODUCT_TYPE=com.apple.product-type.framework; export $
+      SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk; $
+      export $
+      SHARED_PRECOMPS_DIR="$${CONFIGURATION_BUILD_DIR}/SharedPrecompiledHeaders"; $
+      export SYMROOT=../xcodebuild; export $
+      TARGET_BUILD_DIR=/Users/superadmin/tmp/src/out/Debug; export $
+      TEMP_DIR="$${TMPDIR}"; export $
+      UNLOCALIZED_RESOURCES_FOLDER_PATH="Chromium $
+      Framework.framework/Versions/A/Resources"; export USE_HEADERMAP=NO; $
+      export WARNING_CFLAGS="-Wall -Wendif-labels -Wextra $
+      -Wno-unused-parameter -Wno-missing-field-initializers $
+      -Wno-selector-type-mismatch -Wpartial-availability -Wheader-hygiene $
+      -Wno-char-subscripts -Wno-unneeded-internal-declaration $
+      -Wno-covered-switch-default -Wstring-conversion -Wno-c++11-narrowing $
+      -Wno-deprecated-register -Wno-inconsistent-missing-override $
+      -Wno-shift-negative-value -Wno-bitfield-width $
+      -Wexit-time-destructors"; export WRAPPER_NAME="Chromium $
+      Framework.framework";
+  keys = '{"DTXcode": "0701", "BuildMachineOSBuild": "14F27", "DTSDKName": $
+      "macosx10.10", "DTXcodeBuild": "7A1001", "DTSDKBuild": "14D125"}'
+  binary = False
+defines = -DV8_DEPRECATION_WARNINGS -DCLD_VERSION=2 $
+    -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORE=0 -DCHROMIUM_BUILD $
+    -DCR_CLANG_REVISION=254049-1 -DUSE_LIBJPEG_TURBO=1 $
+    -DENABLE_ONE_CLICK_SIGNIN -DENABLE_PRE_SYNC_BACKUP -DENABLE_WEBRTC=1 $
+    -DENABLE_MEDIA_ROUTER=1 -DENABLE_PEPPER_CDMS $
+    -DENABLE_CONFIGURATION_POLICY -DENABLE_NOTIFICATIONS -DENABLE_HIDPI=1 $
+    -DDONT_EMBED_BUILD_METADATA -DFIELDTRIAL_TESTING_ENABLED $
+    -DENABLE_TASK_MANAGER=1 -DENABLE_EXTENSIONS=1 -DENABLE_PDF=1 $
+    -DENABLE_PLUGIN_INSTALLATION=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_THEMES=1 -DENABLE_AUTOFILL_DIALOG=1 $
+    -DENABLE_BACKGROUND=1 -DENABLE_PRINTING=1 -DENABLE_BASIC_PRINTING=1 $
+    -DENABLE_PRINT_PREVIEW=1 -DENABLE_SPELLCHECK=1 $
+    -DUSE_BROWSER_SPELLCHECKER=1 -DENABLE_CAPTIVE_PORTAL_DETECTION=1 $
+    -DENABLE_APP_LIST=1 -DENABLE_SETTINGS_APP=1 -DENABLE_SUPERVISED_USERS=1 $
+    -DENABLE_SERVICE_DISCOVERY=1 -DV8_USE_EXTERNAL_STARTUP_DATA $
+    -DFULL_SAFE_BROWSING -DSAFE_BROWSING_CSD -DSAFE_BROWSING_DB_LOCAL $
+    -DMOJO_USE_SYSTEM_IMPL -DTOOLKIT_VIEWS=1 -DSK_SUPPORT_GPU=1 $
+    -DSK_IGNORE_LINEONLY_AA_CONVEX_PATH_OPTS -DSK_IGNORE_GL_TEXTURE_TARGET $
+    -DPROTOBUF_USE_DLLS -DGOOGLE_PROTOBUF_NO_RTTI $
+    -DGOOGLE_PROTOBUF_NO_STATIC_INITIALIZER -DUSE_LIBPCI=1 -DUSE_OPENSSL=1 $
+    -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS $
+    -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DWTF_USE_DYNAMIC_ANNOTATIONS=1
+includes = -Igen -Igen/chrome -I../.. -I../../skia/config $
+    -I../../third_party/khronos -I../../gpu -Igen/angle $
+    -I../../third_party/WebKit/Source -I../../third_party/WebKit $
+    -I../../third_party/skia/include/core $
+    -I../../third_party/skia/include/effects $
+    -I../../third_party/skia/include/pdf $
+    -I../../third_party/skia/include/gpu $
+    -I../../third_party/skia/include/lazy $
+    -I../../third_party/skia/include/pathops $
+    -I../../third_party/skia/include/pipe $
+    -I../../third_party/skia/include/ports $
+    -I../../third_party/skia/include/utils $
+    -I../../third_party/skia/include/utils/mac -I../../skia/ext $
+    -Igen/protoc_out -I../../third_party/protobuf $
+    -I../../third_party/protobuf/src -Igen/policy
+cflags = -isysroot $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk $
+    -O0 -fvisibility=hidden -Werror -Wnewline-eof -mmacosx-version-min=10.6 $
+    -arch x86_64 -Wall -Wendif-labels -Wextra -Wno-unused-parameter $
+    -Wno-missing-field-initializers -Wno-selector-type-mismatch $
+    -Wpartial-availability -Wheader-hygiene -Wno-char-subscripts $
+    -Wno-unneeded-internal-declaration -Wno-covered-switch-default $
+    -Wstring-conversion -Wno-c++11-narrowing -Wno-deprecated-register $
+    -Wno-inconsistent-missing-override -Wno-shift-negative-value $
+    -Wno-bitfield-width -Wexit-time-destructors
+cflags_c = -std=c99 -Xclang -load -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing -fstack-protector-all $
+    -Wno-undefined-bool-conversion -Wno-tautological-undefined-compare
+cflags_cc = -std=c++11 -stdlib=libc++ -fno-rtti -fno-exceptions $
+    -fvisibility-inlines-hidden -fno-threadsafe-statics -Xclang -load $
+    -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing -fstack-protector-all $
+    -Wno-undefined-bool-conversion -Wno-tautological-undefined-compare
+cflags_objc = $cflags_c -Wobjc-missing-property-synthesis
+cflags_objcc = $cflags_cc -Wobjc-missing-property-synthesis $
+    -fobjc-call-cxx-cdtors
+arflags = 
+
+build obj/chrome/app/chrome_main_dll.chrome_main.o: cxx $
+    ../../chrome/app/chrome_main.cc || $
+    obj/chrome/chrome_main_dll.actions_rules_copies.stamp
+build obj/chrome/app/chrome_main_dll.chrome_main_delegate.o: cxx $
+    ../../chrome/app/chrome_main_delegate.cc || $
+    obj/chrome/chrome_main_dll.actions_rules_copies.stamp
+build obj/chrome/app/chrome_main_dll.chrome_main_mac.o: objcxx $
+    ../../chrome/app/chrome_main_mac.mm || $
+    obj/chrome/chrome_main_dll.actions_rules_copies.stamp
+build obj/chrome/app/chrome_main_dll.chrome_crash_reporter_client.o: cxx $
+    ../../chrome/app/chrome_crash_reporter_client.cc || $
+    obj/chrome/chrome_main_dll.actions_rules_copies.stamp
+build obj/chrome/app/chrome_main_dll.chrome_crash_reporter_client_mac.o: $
+    objcxx ../../chrome/app/chrome_crash_reporter_client_mac.mm || $
+    obj/chrome/chrome_main_dll.actions_rules_copies.stamp
+
+ldflags = -framework Cocoa -framework Foundation -framework IOKit $
+    -framework Security -framework SystemConfiguration -framework Cocoa $
+    -framework Foundation -framework IOKit -framework Security -framework $
+    SystemConfiguration -framework Cocoa -framework Foundation -framework $
+    IOKit -framework Security -framework SystemConfiguration $
+    -weak_framework CoreBluetooth -framework Cocoa -framework Foundation $
+    -framework IOKit -framework Security -framework SystemConfiguration $
+    -framework Cocoa -framework Foundation -framework IOKit -framework $
+    Security -framework SystemConfiguration -framework Cocoa -framework $
+    Foundation -framework IOKit -framework Security -framework $
+    SystemConfiguration -framework Cocoa -framework Foundation -framework $
+    IOKit -framework Security -framework SystemConfiguration -framework $
+    Cocoa -framework Foundation -framework IOKit -framework Security $
+    -framework SystemConfiguration -framework Cocoa -framework Foundation $
+    -framework IOKit -framework Security -framework SystemConfiguration $
+    -framework Cocoa -framework Foundation -framework IOKit -framework $
+    Security -framework SystemConfiguration -framework Cocoa -framework $
+    Foundation -framework IOKit -framework Security -framework $
+    SystemConfiguration -framework Cocoa -framework Foundation -framework $
+    IOKit -framework Security -framework SystemConfiguration -framework $
+    Cocoa -framework Foundation -framework IOKit -framework Security $
+    -framework SystemConfiguration -framework Cocoa -framework Foundation $
+    -framework IOKit -framework Security -framework SystemConfiguration $
+    -framework Cocoa -framework Foundation -framework IOKit -framework $
+    Security -framework SystemConfiguration -framework Cocoa -framework $
+    Foundation -framework IOKit -framework Security -framework $
+    SystemConfiguration -framework Cocoa -framework Foundation -framework $
+    IOKit -framework Security -framework SystemConfiguration -framework $
+    Cocoa -framework Foundation -framework IOKit -framework Security $
+    -framework SystemConfiguration -framework Cocoa -framework Foundation $
+    -framework IOKit -framework Security -framework SystemConfiguration $
+    -framework Cocoa -framework Foundation -framework IOKit -framework $
+    Security -framework SystemConfiguration -framework Cocoa -framework $
+    Foundation -framework IOKit -framework Security -framework $
+    SystemConfiguration -framework Cocoa -framework Foundation -framework $
+    IOKit -framework Security -framework SystemConfiguration -framework $
+    Cocoa -framework Foundation -framework IOKit -framework Security $
+    -framework SystemConfiguration -framework Cocoa -framework Foundation $
+    -framework IOKit -framework Security -framework SystemConfiguration $
+    -framework Cocoa -framework Foundation -framework IOKit -framework $
+    Security -framework SystemConfiguration -framework Cocoa -framework $
+    Foundation -framework IOKit -framework Security -framework $
+    SystemConfiguration -framework Cocoa -framework Foundation -framework $
+    IOKit -framework Security -framework SystemConfiguration -framework $
+    Cocoa -framework Foundation -framework IOKit -framework Security $
+    -framework SystemConfiguration -framework Cocoa -framework Foundation $
+    -framework IOKit -framework Security -framework SystemConfiguration $
+    -framework Cocoa -framework Foundation -framework IOKit -framework $
+    Security -framework SystemConfiguration -framework Cocoa -framework $
+    Foundation -framework IOKit -framework Security -framework $
+    SystemConfiguration -framework Cocoa -framework Foundation -framework $
+    IOKit -framework Security -framework SystemConfiguration -framework $
+    Cocoa -framework Foundation -framework IOKit -framework Security $
+    -framework SystemConfiguration -framework Cocoa -framework Foundation $
+    -framework IOKit -framework Security -framework SystemConfiguration $
+    -framework Cocoa -framework Foundation -framework IOKit -framework $
+    Security -framework SystemConfiguration -framework Cocoa -framework $
+    Foundation -framework IOKit -framework Security -framework $
+    SystemConfiguration -framework Cocoa -framework Foundation -framework $
+    IOKit -framework Security -framework SystemConfiguration -framework $
+    Cocoa -framework Foundation -framework IOKit -framework Security $
+    -framework SystemConfiguration -framework Cocoa -framework Foundation $
+    -framework IOKit -framework Security -framework SystemConfiguration $
+    -framework Cocoa -framework Foundation -framework IOKit -framework $
+    Security -framework SystemConfiguration -framework Cocoa -framework $
+    Foundation -framework IOKit -framework Security -framework $
+    SystemConfiguration -framework Cocoa -framework Foundation -framework $
+    IOKit -framework Security -framework SystemConfiguration -framework $
+    Cocoa -framework Foundation -framework IOKit -framework Security $
+    -framework SystemConfiguration -framework Cocoa -framework Foundation $
+    -framework IOKit -framework Security -framework SystemConfiguration $
+    -framework Cocoa -framework Foundation -framework IOKit -framework $
+    Security -framework SystemConfiguration -framework Cocoa -framework $
+    Foundation -framework IOKit -framework Security -framework $
+    SystemConfiguration -framework Cocoa -framework Foundation -framework $
+    IOKit -framework Security -framework SystemConfiguration -framework $
+    Cocoa -framework Foundation -framework IOKit -framework Security $
+    -framework SystemConfiguration -framework Cocoa -framework Foundation $
+    -framework IOKit -framework Security -framework SystemConfiguration $
+    -framework Cocoa -framework Foundation -framework IOKit -framework $
+    Security -framework SystemConfiguration -framework Cocoa -framework $
+    Foundation -framework IOKit -framework Security -framework $
+    SystemConfiguration -framework Cocoa -framework Foundation -framework $
+    IOKit -framework Security -framework SystemConfiguration -framework $
+    Cocoa -framework Foundation -framework IOKit -framework Security $
+    -framework SystemConfiguration -framework Cocoa -framework Foundation $
+    -framework IOKit -framework Security -framework SystemConfiguration $
+    -framework Cocoa -framework Foundation -framework IOKit -framework $
+    Security -framework SystemConfiguration -framework Cocoa -framework $
+    Foundation -framework IOKit -framework Security -framework $
+    SystemConfiguration -framework Cocoa -framework Foundation -framework $
+    IOKit -framework Security -framework SystemConfiguration -framework $
+    Cocoa -framework Foundation -framework IOKit -framework Security $
+    -framework SystemConfiguration -framework Cocoa -framework Foundation $
+    -framework IOKit -framework Security -framework SystemConfiguration $
+    -framework Cocoa -framework Foundation -framework IOKit -framework $
+    Security -framework SystemConfiguration -framework Cocoa -framework $
+    Foundation -framework IOKit -framework Security -framework $
+    SystemConfiguration -framework Cocoa -framework Foundation -framework $
+    IOKit -framework Security -framework SystemConfiguration -framework $
+    Cocoa -framework Foundation -framework IOKit -framework Security $
+    -framework SystemConfiguration -framework Cocoa -framework Foundation $
+    -framework IOKit -framework Security -framework SystemConfiguration $
+    -framework Cocoa -framework Foundation -framework IOKit -framework $
+    Security -framework SystemConfiguration -framework Cocoa -framework $
+    Foundation -framework IOKit -framework Security -framework $
+    SystemConfiguration -framework Cocoa -framework Foundation -framework $
+    IOKit -framework Security -framework SystemConfiguration -framework $
+    Cocoa -framework Foundation -framework IOKit -framework Security $
+    -framework SystemConfiguration -framework Cocoa -framework Foundation $
+    -framework IOKit -framework Security -framework SystemConfiguration $
+    -framework Cocoa -framework Foundation -framework IOKit -framework $
+    Security -framework SystemConfiguration -framework Cocoa -framework $
+    Foundation -framework IOKit -framework Security -framework $
+    SystemConfiguration -framework Cocoa -framework Foundation -framework $
+    IOKit -framework Security -framework SystemConfiguration -framework $
+    Cocoa -framework Foundation -framework IOKit -framework Security $
+    -framework SystemConfiguration -framework Cocoa -framework Foundation $
+    -framework IOKit -framework Security -framework SystemConfiguration $
+    -framework Cocoa -framework Foundation -framework IOKit -framework $
+    Security -framework SystemConfiguration -framework Cocoa -framework $
+    Foundation -framework IOKit -framework Security -framework $
+    SystemConfiguration -framework Cocoa -framework Foundation -framework $
+    IOKit -framework Security -framework SystemConfiguration -framework $
+    Cocoa -framework Foundation -framework IOKit -framework Security $
+    -framework SystemConfiguration -framework Cocoa -framework Foundation $
+    -framework IOKit -framework Security -framework SystemConfiguration $
+    -framework Cocoa -framework Foundation -framework IOKit -framework $
+    Security -framework SystemConfiguration -framework Cocoa -framework $
+    Foundation -framework IOKit -framework Security -framework $
+    SystemConfiguration -framework Cocoa -framework Foundation -framework $
+    IOKit -framework Security -framework SystemConfiguration -framework $
+    Cocoa -framework Foundation -framework IOKit -framework Security $
+    -framework SystemConfiguration -framework Cocoa -framework Foundation $
+    -framework IOKit -framework Security -framework SystemConfiguration $
+    -framework Cocoa -framework Foundation -framework IOKit -framework $
+    Security -framework SystemConfiguration -framework Cocoa -framework $
+    Foundation -framework IOKit -framework Security -framework $
+    SystemConfiguration -framework Cocoa -framework Foundation -framework $
+    IOKit -framework Security -framework SystemConfiguration -framework $
+    Cocoa -framework Foundation -framework IOKit -framework Security $
+    -framework SystemConfiguration -framework Cocoa -framework Foundation $
+    -framework IOKit -framework Security -framework SystemConfiguration $
+    -framework Cocoa -framework Foundation -framework IOKit -framework $
+    Security -framework SystemConfiguration -framework Cocoa -framework $
+    Foundation -framework IOKit -framework Security -framework $
+    SystemConfiguration -framework Cocoa -framework Foundation -framework $
+    IOKit -framework Security -framework SystemConfiguration -framework $
+    Cocoa -framework Foundation -framework IOKit -framework Security $
+    -framework SystemConfiguration -framework Cocoa -framework Foundation $
+    -framework IOKit -framework Security -framework SystemConfiguration $
+    -framework Cocoa -framework Foundation -framework IOKit -framework $
+    Security -framework SystemConfiguration -framework Cocoa -framework $
+    Foundation -framework IOKit -framework Security -framework $
+    SystemConfiguration -framework Cocoa -framework Foundation -framework $
+    IOKit -framework Security -framework SystemConfiguration -framework $
+    Cocoa -framework Foundation -framework IOKit -framework Security $
+    -framework SystemConfiguration -framework Cocoa -framework Foundation $
+    -framework IOKit -framework Security -framework SystemConfiguration $
+    -framework Cocoa -framework Foundation -framework IOKit -framework $
+    Security -framework SystemConfiguration -framework Cocoa -framework $
+    Foundation -framework IOKit -framework Security -framework $
+    SystemConfiguration -framework Cocoa -framework Foundation -framework $
+    IOKit -framework Security -framework SystemConfiguration -framework $
+    Cocoa -framework Foundation -framework IOKit -framework Security $
+    -framework SystemConfiguration -framework Cocoa -framework Foundation $
+    -framework IOKit -framework Security -framework SystemConfiguration $
+    -framework Cocoa -framework Foundation -framework IOKit -framework $
+    Security -framework SystemConfiguration -framework Cocoa -framework $
+    Foundation -framework IOKit -framework Security -framework $
+    SystemConfiguration -framework Cocoa -framework Foundation -framework $
+    IOKit -framework Security -framework SystemConfiguration -framework $
+    Cocoa -framework Foundation -framework IOKit -framework Security $
+    -framework SystemConfiguration -framework Cocoa -framework Foundation $
+    -framework IOKit -framework Security -framework SystemConfiguration $
+    -framework Cocoa -framework Foundation -framework IOKit -framework $
+    Security -framework SystemConfiguration -framework Cocoa -framework $
+    Foundation -framework IOKit -framework Security -framework $
+    SystemConfiguration -framework Cocoa -framework Foundation -framework $
+    IOKit -framework Security -framework SystemConfiguration -framework $
+    Cocoa -framework Foundation -framework IOKit -framework Security $
+    -framework SystemConfiguration -framework Cocoa -framework Foundation $
+    -framework IOKit -framework Security -framework SystemConfiguration $
+    -framework Cocoa -framework Foundation -framework IOKit -framework $
+    Security -framework SystemConfiguration -framework Cocoa -framework $
+    Foundation -framework IOKit -framework Security -framework $
+    SystemConfiguration -framework Cocoa -framework Foundation -framework $
+    IOKit -framework Security -framework SystemConfiguration -framework $
+    Cocoa -framework Foundation -framework IOKit -framework Security $
+    -framework SystemConfiguration -framework Cocoa -framework Foundation $
+    -framework IOKit -framework Security -framework SystemConfiguration $
+    -framework Cocoa -framework Foundation -framework IOKit -framework $
+    Security -framework SystemConfiguration -framework Cocoa -framework $
+    Foundation -framework IOKit -framework Security -framework $
+    SystemConfiguration -framework Cocoa -framework Foundation -framework $
+    IOKit -framework Security -framework SystemConfiguration -framework $
+    Cocoa -framework Foundation -framework IOKit -framework Security $
+    -framework SystemConfiguration -framework Cocoa -framework Foundation $
+    -framework IOKit -framework Security -framework SystemConfiguration $
+    -framework Cocoa -framework Foundation -framework IOKit -framework $
+    Security -framework SystemConfiguration -Wl,-search_paths_first $
+    -Wl,-ObjC -compatibility_version 2577.0.0 -current_version 2577.0.0 $
+    -mmacosx-version-min=10.6 -isysroot $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk $
+    -Wl,-order_file -Wl,../../chrome/app/framework.order -arch x86_64 -L. $
+    -install_name @executable_path/../Versions/49.0.2577.0/Chromium\ $
+    Framework.framework/Chromium\ Framework -stdlib=libc++
+libs = '-L../../third_party/libc++-static' -framework AppKit -framework $
+    CoreFoundation -framework ApplicationServices -framework Carbon $
+    -framework Foundation -framework IOKit -framework Security -framework $
+    SystemConfiguration $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/lib/libresolv.tbd $
+    -framework Accelerate -framework AudioUnit -framework CoreVideo $
+    -framework IOSurface -framework DiskArbitration -framework QuartzCore $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/lib/libsandbox.tbd $
+    -framework OpenGL -framework Quartz -framework AudioToolbox -framework $
+    CoreAudio -framework QTKit -lm -framework IOBluetooth -framework $
+    CoreMIDI -framework CoreServices $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/lib/libcups.tbd $
+    -framework AddressBook -framework Cocoa -framework ImageCaptureCore $
+    -framework SecurityInterface $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/lib/libbsm.tbd $
+    -framework CoreWLAN $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/lib/libbz2.tbd
+build Chromium$ Framework.framework/Versions/A/Chromium$ Framework: $
+    solink_notoc obj/chrome/app/chrome_main_dll.chrome_main.o $
+    obj/chrome/app/chrome_main_dll.chrome_main_delegate.o $
+    obj/chrome/app/chrome_main_dll.chrome_main_mac.o $
+    obj/chrome/app/chrome_main_dll.chrome_crash_reporter_client.o $
+    obj/chrome/app/chrome_main_dll.chrome_crash_reporter_client_mac.o $
+    libcommon.a libbrowser.a libdebugger.a libppapi_host.a libprinting.a $
+    libservice.a libchild.a libplugin.a librenderer.a libutility.a $
+    libcontent_gpu.a libcontent_ppapi_plugin.a libnacl_trusted_plugin.a $
+    libcontent_app_both.a libpdf.a libcrcrypto.a libcrash_component.a $
+    libpolicy.a libinstaller_util.a libbase.a libbase_static.a $
+    liballocator_extension_thunks.a libmodp_b64.a libdynamic_annotations.a $
+    libevent.a libvariations.a libbase_prefs.a libboringssl.a $
+    libmt19937ar.a libprotobuf_lite.a libcompression.a libchrome_zlib.a $
+    libzlib_x86_simd.a libcrash_core_common.a libsafe_browsing_proto.a $
+    libbase_i18n.a libicui18n.a libicuuc.a libcommon_constants.a $
+    libbookmarks_common.a libnacl_switches.a libfieldtrial_testing_config.a $
+    libcloud_devices_common.a libgoogle_apis.a libnet.a liburl_lib.a $
+    libnet_quic_proto.a libsdch.a libxml2.a libcomponent_updater.a $
+    libui_base.a libskia_library.a libskia_opts.a libskia_opts_ssse3.a $
+    libskia_opts_sse41.a libskia_opts_sse42.a libskia_opts_avx.a $
+    libskia_opts_avx2.a libsfntly.a libskia_chrome.a libevents.a libgfx.a $
+    libharfbuzz-ng.a libpng.a libgfx_geometry.a libjpeg_turbo.a $
+    libdom_keycode_converter.a libevents_base.a libgesture_detection.a $
+    libevents_platform.a libmozilla.a libupdate_client.a libcourgette_lib.a $
+    liblzma_sdk.a libzip.a libminizip.a libcrx_file.a libversion_info.a $
+    libcontent_settings_core_common.a liberror_page_common.a $
+    liburl_formatter.a libfavicon_base.a libflags_ui_switches.a $
+    libgcm_driver_common.a libjson_schema.a libre2.a libmetrics.a $
+    libcomponent_metrics_proto.a libmetrics_net.a $
+    libdata_use_measurement_core.a libpolicy_component_common.a $
+    libcloud_policy_proto.a libcloud_policy_proto_generated_compile.a $
+    libtranslate_core_common.a libcontent_common.a libtracing.a libipc.a $
+    libgles2_utils.a libaccessibility.a libax_gen.a libapi_gen_util.a $
+    libui_base_ime.a libevents_ipc.a libgfx_ipc.a libshell_dialogs.a $
+    libcc.a libcc_proto.a libcommand_buffer_client.a $
+    libcommand_buffer_common.a libcommand_buffer_service.a $
+    libdisk_cache_proto.a libgpu_config.a libgl_wrapper.a libcityhash.a $
+    libtranslator.a libtranslator_lib.a libpreprocessor.a libangle_common.a $
+    libgles2_cmd_helper.a libgpu_ipc.a libmedia.a libyuv.a libopus.a $
+    libshared_memory_support.a libffmpeg.a libffmpeg_yasm.a libvpx_new.a $
+    libvpx_intrinsics_mmx.a libvpx_intrinsics_sse2.a $
+    libvpx_intrinsics_ssse3.a libvpx_intrinsics_sse4_1.a $
+    libvpx_intrinsics_avx.a libvpx_intrinsics_avx2.a libwebm.a $
+    libdecklink.a libmedia_asm.a libdevice_bluetooth.a liburibeacon.a $
+    libgpu_blink.a libgles2_c_lib.a libgles2_implementation.a $
+    libgl_in_process_context.a libgpu_skia_bindings.a libblink_common.a $
+    libwtf.a libipc_mojo.a libmojo_environment_chromium.a $
+    libmojo_environment_chromium_impl.a libmojo_message_pump_lib.a $
+    libmojo_cpp_bindings.a libmojo_system_impl.a libmojo_system_impl2.a $
+    libmidi.a libmojo_application_bindings.a $
+    libnetwork_service_bindings_lib.a libstorage_common.a $
+    libblink_platform.a libblink_heap_asm_stubs.a libiccjpeg.a $
+    libwebp_dec.a libwebp_dsp.a libwebp_utils.a libwebp_demux.a $
+    libwebp_enc.a libots.a libbrotli.a libqcms.a libv8_base.a $
+    libv8_libbase.a libv8_external_snapshot.a libblink_web.a libmodules.a $
+    libchromium_sqlite3.a libwebcore_dom.a libxslt.a libwebcore_html.a $
+    libwebcore_remaining.a libwebcore_rendering.a libwebcore_svg.a $
+    libwebcore_generated.a libgin.a libsnappy.a $
+    libcontent_common_mojo_bindings.a libskia_mojo.a $
+    libmojo_geometry_bindings.a libaccelerated_widget_mac.a $
+    libppapi_shared.a libsurface.a libjingle.a libexpat.a librtc_base.a $
+    libwebrtc_common.a librtc_base_approved.a librtc_xmllite.a $
+    libjingle_p2p_constants.a libdevice_usb.a $
+    libdevice_event_log_component.a libusb.a libdevice_core.a $
+    libchrome_api.a libextensions_api.a libextensions_common.a $
+    liburl_matcher.a libextensions_common_constants.a libcast_net.a $
+    libcast_common.a libcast_logging_proto.a libapp_mode_app_support.a $
+    libcommon_mojo_bindings.a libautofill_core_common.a $
+    libautofill_content_common.a libpassword_manager_core_common.a $
+    libpassword_manager_content_common.a libsignin_core_common.a $
+    libtranslate_content_common.a libtranslate_core_language_detection.a $
+    libvisitedlink_common.a libnacl_common.a libprinting_common.a $
+    libgoogle_toolbox_for_mac.a libmach_override.a libudis86.a $
+    libbrowser_ui.a libbrowser_ui_views.a libauto_login_parser.a $
+    libcertificate_reporting.a libcert_logger_proto.a $
+    libencrypted_cert_logger_proto.a libdom_distiller_core.a libsync_core.a $
+    libsql.a libleveldatabase.a libattachment_store_proto.a libsync_proto.a $
+    libdom_distiller_js_proto.a libleveldb_proto.a $
+    libdom_distiller_protos.a libpref_registry.a libdom_distiller_webui.a $
+    libcontent_browser.a libdevice_battery.a $
+    libdevice_battery_mojo_bindings.a libdevice_vibration.a $
+    libdevice_vibration_mojo_bindings.a libmojo_application_base.a $
+    libnetwork_type_converters.a libmojo_geometry_lib.a $
+    libmojo_url_type_converters.a libupdater_bindings_lib.a $
+    libmojo_shell_lib.a libmojo_common_lib.a libmojo_fetcher_lib.a $
+    libnet_extras.a libsnapshot.a libbackground_sync_proto.a $
+    libcache_storage_proto.a libnotification_proto.a $
+    libservice_worker_proto.a libspeech_proto.a libcc_surfaces.a $
+    libmime_util.a libscheduler_common.a libhttp_server.a libstorage.a $
+    libmojo_js_bindings.a libevents_blink.a libui_touch_selection.a $
+    libsandbox.a libcompositor.a libjingle_glue.a libdesktop_capture.a $
+    libsystem_wrappers.a libdesktop_capture_differ_sse2.a $
+    libsudden_motion_sensor.a libppapi_ipc.a libflac.a $
+    libinvalidation_impl.a libinvalidation_public.a libcacheinvalidation.a $
+    libcacheinvalidation_proto_cpp.a libnotifier.a libgcm_driver.a $
+    libgcm_driver_crypto.a libgcm_driver_crypto_proto.a libos_crypt.a $
+    libsync_driver.a libsignin_core_browser.a $
+    libcontent_settings_core_browser.a libgoogle_core_browser.a $
+    libkeyed_service_core.a libuser_prefs.a libsignin_core_account_id.a $
+    libwebdata_common.a libpolicy_component_browser.a $
+    libbookmarks_browser.a libquery_parser.a libviews.a $
+    libgfx_vector_icons.a libnative_theme.a libbookmarks_managed.a $
+    libproxy_config.a libgcm.a libonc_component.a $
+    libpassword_manager_core_browser.a $
+    libpassword_manager_core_browser_proto.a libtoolbar.a libui_zoom.a $
+    libversion_ui.a libui_content_accelerators.a libmessage_center.a $
+    libcommon_net.a libdevtools_http_handler.a libdevtools_discovery.a $
+    libapp_modal.a libautofill_content_risk_proto.a libcrash_core_browser.a $
+    libupload_list.a libflags_ui.a libnet_log.a $
+    libdata_reduction_proxy_core_common.a libdata_reduction_proxy_proto.a $
+    libpage_load_metrics_browser.a libpage_load_metrics_common.a $
+    libnet_with_v8.a libweb_dialogs.a libsel.a libenv_cleanser.a $
+    libnacl_error_code.a libgio.a libplatform.a libnonnacl_srpc.a $
+    libdebug_stub.a libnrd_xfer.a libdesc_wrapper.a libimc.a libnacl_base.a $
+    libnacl_fault_inject.a libnacl_interval.a libnacl_perf_counter.a $
+    libplatform_qual_lib.a libcpu_features.a libsimple_service.a $
+    libthread_interface.a libvalidation_cache.a libvalidators.a $
+    libservice_runtime_x86_common.a libdfa_validate_x86_64.a $
+    libservice_runtime_x86_64.a libnccopy_x86_64.a $
+    libsafe_browsing_chunk_proto.a libconstrained_window.a libweb_modal.a $
+    libnative_app_window.a libwebview.a libextensions_browser.a $
+    libbrowsing_data.a libguest_view_browser.a libguest_view_common.a $
+    libkeyed_service_content.a libsessions_content.a libstorage_monitor.a $
+    libweb_cache_browser.a libweb_cache_common.a libdevice_serial.a $
+    libextensions_api_registration.a libcast_channel_proto.a $
+    libwifi_component.a libapple_sample_code.a libmolokocacao.a $
+    libapp_list.a libaddressinput.a libaddressinput_util.a $
+    libbrowser_extensions.a libchrome_api_registration.a $
+    libcopresence_proto.a libcopresence.a libcommon_audio.a libopenmax_dl.a $
+    libcommon_audio_sse2.a libaudio_modem.a libproximity_auth.a $
+    libcryptauth.a libcryptauth_proto.a libproximity_auth_logging.a $
+    libdevice_hid.a libmedia_router.a libmedia_router_mojo.a $
+    libjavascript_dialog_extensions_client.a libbubble.a $
+    libfeedback_proto.a libchrome_ui_string_overrider_factory.a $
+    libvariations_service.a libnetwork_time.a libweb_resource.a $
+    libprobe_message_proto.a libautofill_core_browser.a libfips181.a $
+    libphonenumber.a libphonenumber_without_metadata.a libinfobars_core.a $
+    librappor.a libvariations_http_provider.a libbrowser_sync_browser.a $
+    libbrowser_sync_common.a libhistory_core_browser.a $
+    libhistory_core_common.a libpassword_manager_sync_browser.a $
+    libsyncable_prefs.a libsync_bookmarks.a libfavicon_core.a $
+    libundo_component.a libsync_sessions.a libcaptive_portal.a $
+    libcontent_settings_content_common.a $
+    libdata_reduction_proxy_core_browser.a libdata_usage_core.a $
+    libdomain_reliability.a libenhanced_bookmarks.a $
+    libenhanced_bookmarks_proto.a libhandoff.a libinstance_id.a $
+    libmetrics_services_manager.a libmetrics_ui.a libnavigation_metrics.a $
+    liboffline_pages.a liboffline_pages_proto.a libomnibox_browser.a $
+    libomnibox_in_memory_url_index_cache_proto.a libopen_from_clipboard.a $
+    libsearch.a libsearch_engines.a libprepopulated_engines.a $
+    librenderer_context_menu.a libsearch_provider_logos.a $
+    libsecurity_interstitials_core.a libssl_errors.a libsuggestions.a $
+    libstartup_metric_utils_browser.a $
+    libstartup_metric_utils_browser_message_filter.a $
+    libstartup_metric_utils_common.a libtranslate_core_browser.a $
+    liblanguage_usage_metrics.a libwebdata_services.a libapps.a $
+    libabout_handler.a libautofill_content_browser.a libcookie_config.a $
+    libdata_reduction_proxy_content_browser.a $
+    libdata_reduction_proxy_content_common.a $
+    libdata_use_measurement_content.a libdom_distiller_content_browser.a $
+    libdom_distiller_content_common.a libdom_distiller_mojo_bindings.a $
+    libfavicon_content.a libhistory_content_browser.a $
+    libvisitedlink_browser.a libnavigation_interception.a $
+    libnetwork_hints_common.a libmetrics_gpu.a libmetrics_profiler.a $
+    libmetrics_profiler_content.a libntp_snippets.a $
+    libpacked_ct_ev_whitelist.a libpassword_manager_content_browser.a $
+    libpower.a libprofile_metrics.a libsafe_browsing_db.a libsafe_json.a $
+    libsafe_json_parser_message_filter.a libcontent_utility.a $
+    libcontent_child.a libwebcrypto.a libgestures_blink.a libscheduler.a $
+    libssl_config.a libtranslate_content_browser.a libuser_prefs_tracked.a $
+    libwallpaper.a libcontent_plugin.a libcontent_renderer.a libcc_blink.a $
+    libwebusb.a libcomponents_webusb_mojo_bindings_lib.a $
+    libdevice_usb_mojo_bindings_lib.a libmedia_blink.a libmojo_js_lib.a $
+    libdevices_app_public_cpp.a libdevices_app_lib.a libcast_sender.a $
+    libjingle_webrtc.a libaudio_processing.a libisac.a $
+    libaudio_decoder_interface.a libaudio_encoder_interface.a $
+    libisac_common.a libaudioproc_debug_proto.a libaudio_processing_sse2.a $
+    libjingle_webrtc_common.a libsrtp.a libmedia_file.a libvideo_capture.a $
+    libvideo_capture_module.a libwebrtc_utility.a libaudio_coding_module.a $
+    libcng.a libg711.a libpcm16b.a libwebrtc_opus.a libg722.a $
+    librtc_event_log.a librtc_event_log_proto.a libneteq.a $
+    librent_a_codec.a libcommon_video.a libvideo_render.a $
+    libvideo_render_module.a libusrsctplib.a libpeerconnection.a $
+    libvoice_engine.a libaudio_conference_mixer.a libaudio_device.a $
+    libbitrate_controller.a librtp_rtcp.a libremote_bitrate_estimator.a $
+    libwebrtc.a libpaced_sender.a libvideo_processing.a $
+    libvideo_processing_sse2.a libwebrtc_video_coding.a libwebrtc_h264.a $
+    libwebrtc_i420.a libvideo_coding_utility.a libwebrtc_vp8.a $
+    libwebrtc_vp9.a libstunprober.a libppapi_proxy.a $
+    libdevices_app_public_cpp_factory.a libplatform_verification_api.a $
+    libapp_shim.a libbrowser_app_shim.a libsync_file_system_drive_proto.a $
+    libdrive.a libdrive_proto.a libhunspell.a libnacl_browser.a $
+    libpolicy_path_parser.a libpdf_browser.a libpdf_common.a $
+    libsafe_browsing_metadata_proto.a libfeedback_component.a $
+    libnet_browser_services.a libmojo_type_converters.a libnet_interfaces.a $
+    libnet_utility_services.a libprinting_browser.a $
+    libautofill_content_renderer.a libcdm_renderer.a libcdm_common.a $
+    libguest_view_renderer.a libnetwork_hints_renderer.a $
+    liberror_page_renderer.a libpage_load_metrics_renderer.a $
+    libpassword_manager_content_renderer.a libplugins_renderer.a $
+    libtranslate_content_renderer.a libvisitedlink_renderer.a $
+    libweb_cache_renderer.a libdom_distiller_content_renderer.a libnacl.a $
+    libnacl_renderer.a libsel_ldr_launcher_base.a libserialization.a $
+    libppapi_cpp_objects.a libppapi_internal_module.a libpdf_renderer.a $
+    libmurmurhash3.a libextensions_renderer.a libcast_receiver.a $
+    libprinting_renderer.a libextensions_utility.a libcld2_static.a $
+    libpdfium.a libbigint.a libfdrm.a libfpdfdoc.a libfpdfapi.a $
+    libfpdftext.a libformfiller.a libfxcodec.a libfx_lcms2.a $
+    libfx_libopenjpeg.a libfx_zlib.a libfxcrt.a libfxedit.a libfxge.a $
+    libfx_agg.a libjavascript.a libpdfwindow.a libfx_freetype.a $
+    libcrash_component_lib.a libcrashpad_client.a libcrashpad_util.a $
+    libcrashpad_compat.a libapple_cctools.a | $
+    obj/gpu/gpu.actions_depends.stamp $
+    obj/third_party/WebKit/Source/bindings/core/v8/bindings_core_v8_generated_aggregate.actions_rules_copies.stamp $
+    icudtl.dat $
+    obj/chrome/browser/devtools/webrtc_device_provider_resources.actions_rules_copies.stamp $
+    obj/native_client/src/shared/srpc/srpc_lib.actions_rules_copies.stamp $
+    gen/tc_irt/lib64/libcommand_buffer_client_nacl.a $
+    resources/inspector/devtools_extension_api.js $
+    obj/third_party/WebKit/Source/core/inspector_instrumentation_sources.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/modules/v8/bindings_modules_v8_generated_aggregate.actions_rules_copies.stamp $
+    gen/blink/bindings/modules/v8/V8GeneratedModulesBindingsPartial.cpp $
+    obj/sync/sync.actions_depends.stamp $
+    gen/blink/bindings/modules/GlobalObjectsModules.pickle $
+    obj/third_party/WebKit/Source/bindings/core/v8/bindings_core_v8_generated_individual.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/devtools/build_applications.actions_rules_copies.stamp $
+    obj/skia/skia.actions_depends.stamp $
+    obj/ppapi/ppapi_ipc_nacl.actions_rules_copies.stamp $
+    obj/device/bluetooth/bluetooth_strings.actions_rules_copies.stamp $
+    gen/components/version_info/version_info_values.h $
+    obj/ui/views/resources/views_resources.actions_rules_copies.stamp $
+    obj/third_party/catapult/tracing/generate_about_tracing.actions_rules_copies.stamp $
+    natives_blob.bin $
+    obj/chrome/web_ui_mojo_bindings.actions_rules_copies.stamp $
+    obj/third_party/mojo/mojo_interface_bindings_mojom.actions_rules_copies.stamp $
+    libcld2_static.a $
+    obj/ui/resources/ui_resources.actions_rules_copies.stamp $
+    obj/net/net_derived_sources.actions_rules_copies.stamp $
+    obj/ui/mojo/geometry/mojo_geometry_bindings_mojom.actions_rules_copies.stamp $
+    obj/third_party/libwebp/libwebp.actions_depends.stamp $
+    obj/third_party/WebKit/Source/modules/make_modules_generated.actions_rules_copies.stamp $
+    obj/third_party/WebKit/public/blink.actions_depends.stamp $
+    obj/chrome/chrome_unscaled_resources.actions_rules_copies.stamp $
+    obj/native_client/src/shared/platform/platform_lib.actions_rules_copies.stamp $
+    obj/chrome/make_chrome_ui_string_overrider_factory.actions_rules_copies.stamp $
+    gen/blink/bindings/modules/InterfacesInfoOverall.pickle $
+    nacl_irt_x86_64.nexe $
+    obj/third_party/WebKit/Source/devtools/devtools_frontend_resources.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/modules/v8/bindings_modules_v8_generated.actions_depends.stamp $
+    obj/native_client/src/untrusted/irt/irt_browser_lib.actions_rules_copies.stamp $
+    obj/chrome/browser/devtools/devtools_protocol_constants.actions_rules_copies.stamp $
+    obj/device/serial/device_serial_mojo.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/modules/modules_core_global_constructors_idls.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/core/v8/bindings_core_v8_generated.actions_depends.stamp $
+    gen/flapper_version.h $
+    obj/chrome/theme_resources.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/modules/modules_event_generated.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/core/interfaces_info_individual_core.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/core/generated_testing_idls.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/scripts/cached_lex_yacc_tables.actions_rules_copies.stamp $
+    obj/ppapi/native_client/src/untrusted/pnacl_irt_shim/irt.actions_rules_copies.stamp $
+    gen/tc_irt/lib64/libppapi_proxy_nacl.a $
+    obj/third_party/WebKit/public/blink_resources.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/modules/v8/bindings_modules_impl_generated.actions_rules_copies.stamp $
+    libbase.a $
+    obj/native_client/src/shared/gio/gio_lib.actions_rules_copies.stamp $
+    obj/extensions/common/api/extensions_api_mojom.actions_rules_copies.stamp $
+    obj/components/crash_component_non_mac.actions_depends.stamp $
+    obj/content/content.actions_depends.stamp app_mode_loader.app $
+    obj/third_party/WebKit/Source/bindings/modules/interfaces_info_individual_modules.actions_rules_copies.stamp $
+    gen/repack/resources.pak $
+    obj/third_party/WebKit/Source/bindings/modules/v8/bindings_modules_v8_generated_partial_individual.actions_rules_copies.stamp $
+    pdfsqueeze resources/inspector/InspectorBackendCommands.js $
+    obj/third_party/WebKit/Source/core/inspector_protocol_sources.actions_rules_copies.stamp $
+    obj/chrome/browser/media/router/media_router_mojo_gen.actions_rules_copies.stamp $
+    obj/net/net_resources.actions_rules_copies.stamp $
+    obj/v8/tools/gyp/v8_maybe_snapshot.actions_depends.stamp $
+    obj/mojo/network_service_bindings_mojom.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/platform/make_platform_generated.actions_rules_copies.stamp $
+    obj/ppapi/native_client/src/untrusted/pnacl_support_extension/pnacl_support_extension.actions_rules_copies.stamp $
+    obj/extensions/extensions_strings.actions_rules_copies.stamp $
+    gen/content/browser/tracing/tracing_resources.grd $
+    obj/v8/tools/gyp/js2c.actions_rules_copies.stamp $
+    obj/components/components_resources.actions_rules_copies.stamp $
+    gen/tc_irt/lib64/libgles2_utils_nacl.a resources/inspector/toolbox.css $
+    obj/ui/app_list/resources/app_list_resources.actions_rules_copies.stamp $
+    gen/chrome/common/chrome_version.h $
+    obj/chrome/chrome_strings.actions_rules_copies.stamp $
+    gen/tc_irt/lib64/libgles2_cmd_helper_nacl.a $
+    gen/tc_irt/lib64/libppapi_shared_nacl.a $
+    gen/blink/bindings/core/GlobalObjectsCore.pickle $
+    obj/third_party/WebKit/Source/core/webcore_prerequisites.actions_depends.stamp $
+    obj/chrome/chrome_resources.actions_rules_copies.stamp libsel.a $
+    resources/inspector/inspector.css $
+    obj/components/policy_component.actions_depends.stamp $
+    obj/native_client/src/untrusted/nacl/nacl_lib_newlib.actions_rules_copies.stamp $
+    obj/content/app/resources/content_resources.actions_rules_copies.stamp $
+    obj/chrome/chrome_extra_resources.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/core/make_core_generated.actions_rules_copies.stamp $
+    obj/media/mojo/interfaces/platform_verification_mojo_bindings.actions_rules_copies.stamp $
+    crashpad_handler $
+    obj/third_party/WebKit/Source/bindings/core/core_global_constructors_idls.actions_rules_copies.stamp $
+    gen/blink/bindings/modules/v8/initPartialInterfacesInModules.cpp $
+    obj/base/base_nacl.actions_rules_copies.stamp libblink_common.a $
+    obj/content/app/strings/content_strings.actions_rules_copies.stamp $
+    gen/devtools/devtools_resources.grd $
+    obj/ui/strings/ui_strings.actions_rules_copies.stamp $
+    gen/tc_irt/lib64/libgles2_implementation_nacl.a $
+    gen/tc_irt/lib64/libtracing_nacl.a $
+    obj/content/browser/tracing/tracing_resources.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/core/v8/bindings_core_impl_generated.actions_rules_copies.stamp $
+    gen/about_credits.html $
+    obj/third_party/WebKit/Source/bindings/modules/modules_global_constructors_idls.actions_rules_copies.stamp $
+    gen/angle/id/commit.h gen/tc_irt/lib64/libgpu_ipc_nacl.a $
+    gen/blink/core/EventInterfaces.in $
+    obj/native_client/src/untrusted/nacl/imc_syscalls_lib.actions_rules_copies.stamp $
+    gen/blink/bindings/scripts/cached_jinja_templates.stamp $
+    gen/chrome/common/features.h $
+    obj/content/content_resources.actions_rules_copies.stamp $
+    obj/chrome/platform_locale_settings.actions_rules_copies.stamp $
+    obj/third_party/WebKit/public/blink_image_resources.actions_rules_copies.stamp $
+    obj/device/devices_app/device_usb_mojo_bindings.actions_rules_copies.stamp $
+    gen/widevine_cdm_version.h gen/blink/core/InspectorProtocolVersion.h $
+    obj/ppapi/native_client/src/untrusted/pnacl_irt_shim/browser.actions_rules_copies.stamp $
+    obj/components/cloud_policy_code_generate.actions_rules_copies.stamp $
+    obj/third_party/libaddressinput/libaddressinput_strings.actions_rules_copies.stamp $
+    obj/third_party/angle/src/copy_scripts.actions_rules_copies.stamp $
+    obj/content/content_common_mojo_bindings_mojom.actions_rules_copies.stamp $
+    obj/components/components_webusb_mojo_bindings.actions_rules_copies.stamp $
+    obj/chrome/packed_resources.actions_rules_copies.stamp $
+    obj/media/shared_memory_support_nacl.actions_rules_copies.stamp $
+    obj/components/components_strings.actions_rules_copies.stamp $
+    gen/components/data_reduction_proxy/core/common/version.h $
+    obj/extensions/extensions_resources.actions_rules_copies.stamp $
+    obj/extensions/extensions_common_mojo.actions_rules_copies.stamp $
+    resources/inspector/SupportedCSSProperties.js $
+    obj/mojo/mojo_application_bindings_mojom.actions_rules_copies.stamp $
+    gen/tc_irt/lib64/libipc_nacl.a $
+    obj/content/browser/devtools/devtools_protocol_handler.actions_rules_copies.stamp $
+    obj/content/browser/devtools/devtools_resources.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/modules/v8/bindings_modules_v8_generated_individual.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/core/webcore.actions_depends.stamp $
+    obj/mojo/updater_bindings_mojom.actions_rules_copies.stamp $
+    gen/tc_irt/lib64/libcommand_buffer_common_nacl.a
+  ld = $ldxx
+  soname = Chromium Framework
+  lib = "Chromium Framework.framework/Versions/A/Chromium Framework"
+  link_file_list = Chromium_Framework.framework.rsp
+build Chromium$ Framework.framework: package_framework $
+    Chromium$ Framework.framework/Versions/A/Libraries/exif.so $
+    Chromium$ Framework.framework/Versions/A/Helpers/crashpad_handler $
+    Chromium$ Framework.framework/Versions/A/Internet$ Plug-Ins/nacl_irt_x86_64.nexe $
+    Chromium$ Framework.framework/Versions/A/Resources/app_mode_loader.app $
+    Chromium$ Framework.framework/Versions/A/Resources/find_next_Template.pdf $
+    Chromium$ Framework.framework/Versions/A/Resources/find_prev_Template.pdf $
+    Chromium$ Framework.framework/Versions/A/Resources/menu_overflow_down.pdf $
+    Chromium$ Framework.framework/Versions/A/Resources/menu_overflow_up.pdf $
+    Chromium$ Framework.framework/Versions/A/Resources/product_logo_32.png $
+    Chromium$ Framework.framework/Versions/A/Resources/AvatarMenuItem.nib $
+    Chromium$ Framework.framework/Versions/A/Resources/BookmarkAllTabs.nib $
+    Chromium$ Framework.framework/Versions/A/Resources/BookmarkBar.nib $
+    Chromium$ Framework.framework/Versions/A/Resources/BookmarkBubble.nib $
+    Chromium$ Framework.framework/Versions/A/Resources/BookmarkEditor.nib $
+    Chromium$ Framework.framework/Versions/A/Resources/BookmarkNameFolder.nib $
+    Chromium$ Framework.framework/Versions/A/Resources/CollectedCookies.nib $
+    Chromium$ Framework.framework/Versions/A/Resources/ContentBlockedCookies.nib $
+    Chromium$ Framework.framework/Versions/A/Resources/ContentBlockedDownloads.nib $
+    Chromium$ Framework.framework/Versions/A/Resources/ContentBlockedMIDISysEx.nib $
+    Chromium$ Framework.framework/Versions/A/Resources/ContentBlockedMedia.nib $
+    Chromium$ Framework.framework/Versions/A/Resources/ContentBlockedMixedScript.nib $
+    Chromium$ Framework.framework/Versions/A/Resources/ContentBlockedPlugins.nib $
+    Chromium$ Framework.framework/Versions/A/Resources/ContentBlockedPopups.nib $
+    Chromium$ Framework.framework/Versions/A/Resources/ContentBlockedGeolocation.nib $
+    Chromium$ Framework.framework/Versions/A/Resources/ContentBlockedSimple.nib $
+    Chromium$ Framework.framework/Versions/A/Resources/ContentProtocolHandlers.nib $
+    Chromium$ Framework.framework/Versions/A/Resources/CookieDetailsView.nib $
+    Chromium$ Framework.framework/Versions/A/Resources/DownloadItem.nib $
+    Chromium$ Framework.framework/Versions/A/Resources/DownloadShelf.nib $
+    Chromium$ Framework.framework/Versions/A/Resources/EditSearchEngine.nib $
+    Chromium$ Framework.framework/Versions/A/Resources/ExclusiveAccessBubble.nib $
+    Chromium$ Framework.framework/Versions/A/Resources/ExtensionInstallPrompt.nib $
+    Chromium$ Framework.framework/Versions/A/Resources/ExtensionInstallPromptBundle.nib $
+    Chromium$ Framework.framework/Versions/A/Resources/ExtensionInstallPromptNoWarnings.nib $
+    Chromium$ Framework.framework/Versions/A/Resources/ExtensionInstallPromptWebstoreData.nib $
+    Chromium$ Framework.framework/Versions/A/Resources/ExtensionInstalledBubble.nib $
+    Chromium$ Framework.framework/Versions/A/Resources/FirstRunBubble.nib $
+    Chromium$ Framework.framework/Versions/A/Resources/FirstRunDialog.nib $
+    Chromium$ Framework.framework/Versions/A/Resources/HttpAuthLoginSheet.nib $
+    Chromium$ Framework.framework/Versions/A/Resources/HungRendererDialog.nib $
+    Chromium$ Framework.framework/Versions/A/Resources/ImportProgressDialog.nib $
+    Chromium$ Framework.framework/Versions/A/Resources/MainMenu.nib $
+    Chromium$ Framework.framework/Versions/A/Resources/OneClickSigninBubble.nib $
+    Chromium$ Framework.framework/Versions/A/Resources/OneClickSigninDialog.nib $
+    Chromium$ Framework.framework/Versions/A/Resources/SaveAccessoryView.nib $
+    Chromium$ Framework.framework/Versions/A/Resources/TaskManager.nib $
+    Chromium$ Framework.framework/Versions/A/Resources/Toolbar.nib $
+    Chromium$ Framework.framework/Versions/A/Resources/WrenchMenu.nib $
+    Chromium$ Framework.framework/Versions/A/Resources/ActionBoxMenuItem.nib $
+    Chromium$ Framework.framework/Versions/A/Resources/BookmarkBarFolderWindow.nib $
+    Chromium$ Framework.framework/Versions/A/Resources/DevicePermissionsPrompt.nib $
+    Chromium$ Framework.framework/Versions/A/Resources/ExtensionInstalledBubbleBundle.nib $
+    Chromium$ Framework.framework/Versions/A/Resources/FindBar.nib $
+    Chromium$ Framework.framework/Versions/A/Resources/GlobalErrorBubble.nib $
+    Chromium$ Framework.framework/Versions/A/Resources/InfoBar.nib $
+    Chromium$ Framework.framework/Versions/A/Resources/Panel.nib $
+    Chromium$ Framework.framework/Versions/A/Resources/install.sh $
+    Chromium$ Framework.framework/Versions/A/Resources/chrome_100_percent.pak $
+    Chromium$ Framework.framework/Versions/A/Resources/resources.pak $
+    Chromium$ Framework.framework/Versions/A/Resources/am.lproj/locale.pak $
+    Chromium$ Framework.framework/Versions/A/Resources/ar.lproj/locale.pak $
+    Chromium$ Framework.framework/Versions/A/Resources/bg.lproj/locale.pak $
+    Chromium$ Framework.framework/Versions/A/Resources/bn.lproj/locale.pak $
+    Chromium$ Framework.framework/Versions/A/Resources/ca.lproj/locale.pak $
+    Chromium$ Framework.framework/Versions/A/Resources/cs.lproj/locale.pak $
+    Chromium$ Framework.framework/Versions/A/Resources/da.lproj/locale.pak $
+    Chromium$ Framework.framework/Versions/A/Resources/de.lproj/locale.pak $
+    Chromium$ Framework.framework/Versions/A/Resources/el.lproj/locale.pak $
+    Chromium$ Framework.framework/Versions/A/Resources/en_GB.lproj/locale.pak $
+    Chromium$ Framework.framework/Versions/A/Resources/en.lproj/locale.pak $
+    Chromium$ Framework.framework/Versions/A/Resources/es_419.lproj/locale.pak $
+    Chromium$ Framework.framework/Versions/A/Resources/es.lproj/locale.pak $
+    Chromium$ Framework.framework/Versions/A/Resources/et.lproj/locale.pak $
+    Chromium$ Framework.framework/Versions/A/Resources/fa.lproj/locale.pak $
+    Chromium$ Framework.framework/Versions/A/Resources/fi.lproj/locale.pak $
+    Chromium$ Framework.framework/Versions/A/Resources/fil.lproj/locale.pak $
+    Chromium$ Framework.framework/Versions/A/Resources/fr.lproj/locale.pak $
+    Chromium$ Framework.framework/Versions/A/Resources/gu.lproj/locale.pak $
+    Chromium$ Framework.framework/Versions/A/Resources/he.lproj/locale.pak $
+    Chromium$ Framework.framework/Versions/A/Resources/hi.lproj/locale.pak $
+    Chromium$ Framework.framework/Versions/A/Resources/hr.lproj/locale.pak $
+    Chromium$ Framework.framework/Versions/A/Resources/hu.lproj/locale.pak $
+    Chromium$ Framework.framework/Versions/A/Resources/id.lproj/locale.pak $
+    Chromium$ Framework.framework/Versions/A/Resources/it.lproj/locale.pak $
+    Chromium$ Framework.framework/Versions/A/Resources/ja.lproj/locale.pak $
+    Chromium$ Framework.framework/Versions/A/Resources/kn.lproj/locale.pak $
+    Chromium$ Framework.framework/Versions/A/Resources/ko.lproj/locale.pak $
+    Chromium$ Framework.framework/Versions/A/Resources/lt.lproj/locale.pak $
+    Chromium$ Framework.framework/Versions/A/Resources/lv.lproj/locale.pak $
+    Chromium$ Framework.framework/Versions/A/Resources/ml.lproj/locale.pak $
+    Chromium$ Framework.framework/Versions/A/Resources/mr.lproj/locale.pak $
+    Chromium$ Framework.framework/Versions/A/Resources/ms.lproj/locale.pak $
+    Chromium$ Framework.framework/Versions/A/Resources/nb.lproj/locale.pak $
+    Chromium$ Framework.framework/Versions/A/Resources/nl.lproj/locale.pak $
+    Chromium$ Framework.framework/Versions/A/Resources/pl.lproj/locale.pak $
+    Chromium$ Framework.framework/Versions/A/Resources/pt_BR.lproj/locale.pak $
+    Chromium$ Framework.framework/Versions/A/Resources/pt_PT.lproj/locale.pak $
+    Chromium$ Framework.framework/Versions/A/Resources/ro.lproj/locale.pak $
+    Chromium$ Framework.framework/Versions/A/Resources/ru.lproj/locale.pak $
+    Chromium$ Framework.framework/Versions/A/Resources/sk.lproj/locale.pak $
+    Chromium$ Framework.framework/Versions/A/Resources/sl.lproj/locale.pak $
+    Chromium$ Framework.framework/Versions/A/Resources/sr.lproj/locale.pak $
+    Chromium$ Framework.framework/Versions/A/Resources/sv.lproj/locale.pak $
+    Chromium$ Framework.framework/Versions/A/Resources/sw.lproj/locale.pak $
+    Chromium$ Framework.framework/Versions/A/Resources/ta.lproj/locale.pak $
+    Chromium$ Framework.framework/Versions/A/Resources/te.lproj/locale.pak $
+    Chromium$ Framework.framework/Versions/A/Resources/th.lproj/locale.pak $
+    Chromium$ Framework.framework/Versions/A/Resources/tr.lproj/locale.pak $
+    Chromium$ Framework.framework/Versions/A/Resources/uk.lproj/locale.pak $
+    Chromium$ Framework.framework/Versions/A/Resources/vi.lproj/locale.pak $
+    Chromium$ Framework.framework/Versions/A/Resources/zh_CN.lproj/locale.pak $
+    Chromium$ Framework.framework/Versions/A/Resources/zh_TW.lproj/locale.pak $
+    Chromium$ Framework.framework/Versions/A/Resources/chrome_200_percent.pak $
+    Chromium$ Framework.framework/Versions/A/Resources/icudtl.dat $
+    Chromium$ Framework.framework/Versions/A/Resources/natives_blob.bin $
+    Chromium$ Framework.framework/Versions/A/Resources/snapshot_blob.bin $
+    Chromium$ Framework.framework/Versions/A/Resources/Info.plist $
+    Chromium$ Framework.framework/Versions/A/Chromium$ Framework
+  postbuilds = $ && (export $
+      BUILT_FRAMEWORKS_DIR=/Users/superadmin/tmp/src/out/Debug; export $
+      BUILT_PRODUCTS_DIR=/Users/superadmin/tmp/src/out/Debug; export $
+      CONFIGURATION=Debug; export CONTENTS_FOLDER_PATH="Chromium $
+      Framework.framework/Versions/A"; export $
+      DYLIB_INSTALL_NAME_BASE=@executable_path/../Versions/49.0.2577.0; $
+      export EXECUTABLE_NAME="Chromium Framework"; export $
+      EXECUTABLE_PATH="Chromium Framework.framework/Versions/A/Chromium $
+      Framework"; export FULL_PRODUCT_NAME="Chromium Framework.framework"; $
+      export INFOPLIST_PATH="Chromium $
+      Framework.framework/Versions/A/Resources/Info.plist"; export $
+      LD_DYLIB_INSTALL_NAME="@executable_path/../Versions/49.0.2577.0/Chromium $
+      Framework.framework/Chromium Framework"; export MACH_O_TYPE=mh_dylib; $
+      export PRODUCT_NAME="Chromium Framework"; export $
+      PRODUCT_TYPE=com.apple.product-type.framework; export $
+      SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk; $
+      export SRCROOT=/Users/superadmin/tmp/src/out/Debug/../../chrome; $
+      export SOURCE_ROOT="$${SRCROOT}"; export $
+      TARGET_BUILD_DIR=/Users/superadmin/tmp/src/out/Debug; export $
+      TEMP_DIR="$${TMPDIR}"; export $
+      UNLOCALIZED_RESOURCES_FOLDER_PATH="Chromium $
+      Framework.framework/Versions/A/Resources"; export $
+      WRAPPER_NAME="Chromium Framework.framework"; (cd ../../chrome && $
+      ../build/mac/tweak_info_plist.py "--breakpad=1" $
+      "--breakpad_uploads=0" "--keystone=0" "--scm=1" "--branding=Chromium" $
+      && ln -fns Versions/Current/Libraries $
+      "$${BUILT_PRODUCTS_DIR}/$${WRAPPER_NAME}/Libraries" && $
+      tools/build/mac/verify_order _ChromeMain $
+      "$${BUILT_PRODUCTS_DIR}/$${EXECUTABLE_PATH}"); G=$$?; ((exit $$G) || $
+      rm -rf 'Chromium Framework.framework') && exit $$G)
+  version = A

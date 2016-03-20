@@ -1,0 +1,29 @@
+rule $
+    natives_blob_target_concatenate_natives_blob_74c5fdb3318cb64eebe6daf0e75ed722
+  command = cd ../../v8/tools/gyp; export $
+      BUILT_FRAMEWORKS_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      BUILT_PRODUCTS_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      CONFIGURATION=Release; export PRODUCT_NAME=natives_blob; export $
+      SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk; $
+      export $
+      SRCROOT=/Users/superadmin/tmp/src/out/Release/../../v8/tools/gyp; $
+      export SOURCE_ROOT="$${SRCROOT}"; export $
+      TARGET_BUILD_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      TEMP_DIR="$${TMPDIR}";python ../../tools/concatenate-files.py $
+      ../../../out/Release/gen/libraries.bin $
+      ../../../out/Release/gen/libraries-code-stub.bin $
+      ../../../out/Release/gen/libraries-experimental.bin $
+      ../../../out/Release/gen/libraries-extras.bin $
+      ../../../out/Release/gen/libraries-experimental-extras.bin $
+      ../../../out/Release/natives_blob.bin
+  description = ACTION natives_blob: $
+      concatenate_natives_blob_74c5fdb3318cb64eebe6daf0e75ed722
+  restat = 1
+
+build natives_blob.bin: $
+    natives_blob_target_concatenate_natives_blob_74c5fdb3318cb64eebe6daf0e75ed722 $
+    ../../v8/tools/concatenate-files.py gen/libraries.bin $
+    gen/libraries-code-stub.bin gen/libraries-experimental.bin $
+    gen/libraries-extras.bin gen/libraries-experimental-extras.bin || $
+    obj/v8/tools/gyp/js2c.actions_rules_copies.stamp
+

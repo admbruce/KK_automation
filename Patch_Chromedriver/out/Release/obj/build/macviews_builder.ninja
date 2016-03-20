@@ -1,0 +1,8 @@
+build obj/build/macviews_builder.actions_depends.stamp: stamp $
+    views_examples_with_content_exe libviews.a views_unittests
+
+build obj/build/macviews_builder.compile_depends.stamp: stamp $
+    obj/ui/views/examples/views_examples_with_content_exe.compile_depends.stamp $
+    obj/ui/views/views.compile_depends.stamp $
+    obj/ui/views/views_unittests.compile_depends.stamp
+

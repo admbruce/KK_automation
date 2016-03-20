@@ -1,0 +1,15 @@
+build obj/content/content.actions_depends.stamp: stamp libcontent_browser.a $
+    libcontent_common.a libcontent_child.a libcontent_gpu.a $
+    libcontent_plugin.a libcontent_ppapi_plugin.a libcontent_renderer.a $
+    libcontent_utility.a
+
+build obj/content/content.compile_depends.stamp: stamp $
+    obj/content/content_browser.compile_depends.stamp $
+    obj/content/content_common.actions_rules_copies.stamp $
+    obj/content/content_child.compile_depends.stamp $
+    obj/content/content_gpu.compile_depends.stamp $
+    obj/content/content_plugin.compile_depends.stamp $
+    obj/content/content_ppapi_plugin.compile_depends.stamp $
+    obj/content/content_renderer.compile_depends.stamp $
+    obj/content/content_utility.compile_depends.stamp
+

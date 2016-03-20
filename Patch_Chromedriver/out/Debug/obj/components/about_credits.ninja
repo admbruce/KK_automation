@@ -1,0 +1,21 @@
+rule $
+    about_credits_target_generate_about_credits_30ed6d7b3b28fb70438500558aec2898
+  command = cd ../../components; export $
+      BUILT_FRAMEWORKS_DIR=/Users/superadmin/tmp/src/out/Debug; export $
+      BUILT_PRODUCTS_DIR=/Users/superadmin/tmp/src/out/Debug; export $
+      CONFIGURATION=Debug; export PRODUCT_NAME=about_credits; export $
+      SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk; $
+      export SRCROOT=/Users/superadmin/tmp/src/out/Debug/../../components; $
+      export SOURCE_ROOT="$${SRCROOT}"; export $
+      TARGET_BUILD_DIR=/Users/superadmin/tmp/src/out/Debug; export $
+      TEMP_DIR="$${TMPDIR}";python ../tools/licenses.py credits $
+      ../out/Debug/gen/about_credits.html
+  description = ACTION Generating about:credits
+  restat = 1
+
+build gen/about_credits.html: $
+    about_credits_target_generate_about_credits_30ed6d7b3b28fb70438500558aec2898 $
+    ../../tools/licenses.py $
+    ../../components/about_ui/resources/about_credits.tmpl $
+    ../../components/about_ui/resources/about_credits_entry.tmpl
+

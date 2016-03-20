@@ -1,0 +1,262 @@
+rule $
+    dom_distiller_mojo_bindings_target_dom_distiller_mojo_bindings_mojom_bindings_stamp_bd4eedfc57ccf7cc8165d94153ea471c
+  command = cd ../../components; export $
+      BUILT_FRAMEWORKS_DIR=/Users/superadmin/tmp/src/out/Debug; export $
+      BUILT_PRODUCTS_DIR=/Users/superadmin/tmp/src/out/Debug; export $
+      CONFIGURATION=Debug; export $
+      EXECUTABLE_NAME=libdom_distiller_mojo_bindings.a; export $
+      EXECUTABLE_PATH=libdom_distiller_mojo_bindings.a; export $
+      FULL_PRODUCT_NAME=libdom_distiller_mojo_bindings.a; export $
+      MACH_O_TYPE=staticlib; export $
+      PRODUCT_NAME=dom_distiller_mojo_bindings; export $
+      PRODUCT_TYPE=com.apple.product-type.library.static; export $
+      SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk; $
+      export SRCROOT=/Users/superadmin/tmp/src/out/Debug/../../components; $
+      export SOURCE_ROOT="$${SRCROOT}"; export $
+      TARGET_BUILD_DIR=/Users/superadmin/tmp/src/out/Debug; export $
+      TEMP_DIR="$${TMPDIR}";python ../build/rmdir_and_stamp.py $
+      ../out/Debug/java_mojo/dom_distiller_mojo_bindings/src $
+      ../out/Debug/java_mojo/dom_distiller_mojo_bindings/dom_distiller_mojo_bindings.stamp
+  description = ACTION dom_distiller_mojo_bindings: $
+      dom_distiller_mojo_bindings_mojom_bindings_stamp_bd4eedfc57ccf7cc8165d94153ea471c
+  restat = 1
+
+build $
+    java_mojo/dom_distiller_mojo_bindings/dom_distiller_mojo_bindings.stamp: $
+    dom_distiller_mojo_bindings_target_dom_distiller_mojo_bindings_mojom_bindings_stamp_bd4eedfc57ccf7cc8165d94153ea471c $
+    ../../components/dom_distiller/content/common/distiller_javascript_service.mojom $
+    ../../components/dom_distiller/content/common/distiller_page_notifier_service.mojom $
+    || $
+    obj/third_party/mojo/mojo_interface_bindings_mojom.actions_rules_copies.stamp
+
+rule $
+    dom_distiller_mojo_bindings_target_dom_distiller_mojo_bindings_mojom_bindings_generator_bd4eedfc57ccf7cc8165d94153ea471c
+  command = cd ../../components; export $
+      BUILT_FRAMEWORKS_DIR=/Users/superadmin/tmp/src/out/Debug; export $
+      BUILT_PRODUCTS_DIR=/Users/superadmin/tmp/src/out/Debug; export $
+      CONFIGURATION=Debug; export $
+      EXECUTABLE_NAME=libdom_distiller_mojo_bindings.a; export $
+      EXECUTABLE_PATH=libdom_distiller_mojo_bindings.a; export $
+      FULL_PRODUCT_NAME=libdom_distiller_mojo_bindings.a; export $
+      MACH_O_TYPE=staticlib; export $
+      PRODUCT_NAME=dom_distiller_mojo_bindings; export $
+      PRODUCT_TYPE=com.apple.product-type.library.static; export $
+      SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk; $
+      export SRCROOT=/Users/superadmin/tmp/src/out/Debug/../../components; $
+      export SOURCE_ROOT="$${SRCROOT}"; export $
+      TARGET_BUILD_DIR=/Users/superadmin/tmp/src/out/Debug; export $
+      TEMP_DIR="$${TMPDIR}";python $
+      ../mojo/public/tools/bindings/mojom_bindings_generator.py $
+      "./${dirname}/${root}.mojom" --use_bundled_pylibs -d .. -I.. -o $
+      ../out/Debug/gen $
+      "--java_output_directory=../out/Debug/java_mojo/dom_distiller_mojo_bindings/src"
+  description = RULE Generating Mojo bindings from ${dirname}/${root}.mojom
+  restat = 1
+
+build $
+    gen/components/dom_distiller/content/common/distiller_javascript_service.mojom.cc $
+    gen/components/dom_distiller/content/common/distiller_javascript_service.mojom.h $
+    gen/components/dom_distiller/content/common/distiller_javascript_service.mojom.js $
+    gen/components/dom_distiller/content/common/distiller_javascript_service.mojom-internal.h: $
+    dom_distiller_mojo_bindings_target_dom_distiller_mojo_bindings_mojom_bindings_generator_bd4eedfc57ccf7cc8165d94153ea471c $
+    ../../components/dom_distiller/content/common/distiller_javascript_service.mojom $
+    | ../../mojo/public/tools/bindings/mojom_bindings_generator.py $
+    ../../mojo/public/tools/bindings/generators/cpp_templates/enum_macros.tmpl $
+    ../../mojo/public/tools/bindings/generators/cpp_templates/interface_declaration.tmpl $
+    ../../mojo/public/tools/bindings/generators/cpp_templates/interface_definition.tmpl $
+    ../../mojo/public/tools/bindings/generators/cpp_templates/interface_macros.tmpl $
+    ../../mojo/public/tools/bindings/generators/cpp_templates/interface_proxy_declaration.tmpl $
+    ../../mojo/public/tools/bindings/generators/cpp_templates/interface_request_validator_declaration.tmpl $
+    ../../mojo/public/tools/bindings/generators/cpp_templates/interface_response_validator_declaration.tmpl $
+    ../../mojo/public/tools/bindings/generators/cpp_templates/interface_stub_declaration.tmpl $
+    ../../mojo/public/tools/bindings/generators/cpp_templates/module.cc.tmpl $
+    ../../mojo/public/tools/bindings/generators/cpp_templates/module.h.tmpl $
+    ../../mojo/public/tools/bindings/generators/cpp_templates/module-internal.h.tmpl $
+    ../../mojo/public/tools/bindings/generators/cpp_templates/struct_declaration.tmpl $
+    ../../mojo/public/tools/bindings/generators/cpp_templates/struct_definition.tmpl $
+    ../../mojo/public/tools/bindings/generators/cpp_templates/struct_macros.tmpl $
+    ../../mojo/public/tools/bindings/generators/cpp_templates/struct_serialization_definition.tmpl $
+    ../../mojo/public/tools/bindings/generators/cpp_templates/wrapper_class_declaration.tmpl $
+    ../../mojo/public/tools/bindings/generators/cpp_templates/wrapper_class_definition.tmpl $
+    ../../mojo/public/tools/bindings/generators/java_templates/constant_definition.tmpl $
+    ../../mojo/public/tools/bindings/generators/java_templates/constants.java.tmpl $
+    ../../mojo/public/tools/bindings/generators/java_templates/data_types_definition.tmpl $
+    ../../mojo/public/tools/bindings/generators/java_templates/enum_definition.tmpl $
+    ../../mojo/public/tools/bindings/generators/java_templates/enum.java.tmpl $
+    ../../mojo/public/tools/bindings/generators/java_templates/header.java.tmpl $
+    ../../mojo/public/tools/bindings/generators/java_templates/interface_definition.tmpl $
+    ../../mojo/public/tools/bindings/generators/java_templates/interface_internal.java.tmpl $
+    ../../mojo/public/tools/bindings/generators/java_templates/interface.java.tmpl $
+    ../../mojo/public/tools/bindings/generators/java_templates/struct.java.tmpl $
+    ../../mojo/public/tools/bindings/generators/java_templates/union.java.tmpl $
+    ../../mojo/public/tools/bindings/generators/js_templates/enum_definition.tmpl $
+    ../../mojo/public/tools/bindings/generators/js_templates/interface_definition.tmpl $
+    ../../mojo/public/tools/bindings/generators/js_templates/module_definition.tmpl $
+    ../../mojo/public/tools/bindings/generators/js_templates/module.amd.tmpl $
+    ../../mojo/public/tools/bindings/generators/js_templates/struct_definition.tmpl $
+    ../../mojo/public/tools/bindings/generators/js_templates/union_definition.tmpl $
+    ../../mojo/public/tools/bindings/generators/js_templates/validation_macros.tmpl $
+    ../../mojo/public/tools/bindings/generators/mojom_cpp_generator.py $
+    ../../mojo/public/tools/bindings/generators/mojom_java_generator.py $
+    ../../mojo/public/tools/bindings/generators/mojom_js_generator.py $
+    ../../mojo/public/tools/bindings/pylib/mojom/__init__.py $
+    ../../mojo/public/tools/bindings/pylib/mojom/error.py $
+    ../../mojo/public/tools/bindings/pylib/mojom/generate/__init__.py $
+    ../../mojo/public/tools/bindings/pylib/mojom/generate/data.py $
+    ../../mojo/public/tools/bindings/pylib/mojom/generate/generator.py $
+    ../../mojo/public/tools/bindings/pylib/mojom/generate/module.py $
+    ../../mojo/public/tools/bindings/pylib/mojom/generate/pack.py $
+    ../../mojo/public/tools/bindings/pylib/mojom/generate/template_expander.py $
+    ../../mojo/public/tools/bindings/pylib/mojom/parse/__init__.py $
+    ../../mojo/public/tools/bindings/pylib/mojom/parse/ast.py $
+    ../../mojo/public/tools/bindings/pylib/mojom/parse/lexer.py $
+    ../../mojo/public/tools/bindings/pylib/mojom/parse/parser.py $
+    ../../mojo/public/tools/bindings/pylib/mojom/parse/translate.py $
+    java_mojo/dom_distiller_mojo_bindings/dom_distiller_mojo_bindings.stamp $
+    || $
+    obj/third_party/mojo/mojo_interface_bindings_mojom.actions_rules_copies.stamp
+  source = dom_distiller/content/common/distiller_javascript_service.mojom
+  dirname = dom_distiller/content/common
+  root = distiller_javascript_service
+build $
+    gen/components/dom_distiller/content/common/distiller_page_notifier_service.mojom.cc $
+    gen/components/dom_distiller/content/common/distiller_page_notifier_service.mojom.h $
+    gen/components/dom_distiller/content/common/distiller_page_notifier_service.mojom.js $
+    gen/components/dom_distiller/content/common/distiller_page_notifier_service.mojom-internal.h: $
+    dom_distiller_mojo_bindings_target_dom_distiller_mojo_bindings_mojom_bindings_generator_bd4eedfc57ccf7cc8165d94153ea471c $
+    ../../components/dom_distiller/content/common/distiller_page_notifier_service.mojom $
+    | ../../mojo/public/tools/bindings/mojom_bindings_generator.py $
+    ../../mojo/public/tools/bindings/generators/cpp_templates/enum_macros.tmpl $
+    ../../mojo/public/tools/bindings/generators/cpp_templates/interface_declaration.tmpl $
+    ../../mojo/public/tools/bindings/generators/cpp_templates/interface_definition.tmpl $
+    ../../mojo/public/tools/bindings/generators/cpp_templates/interface_macros.tmpl $
+    ../../mojo/public/tools/bindings/generators/cpp_templates/interface_proxy_declaration.tmpl $
+    ../../mojo/public/tools/bindings/generators/cpp_templates/interface_request_validator_declaration.tmpl $
+    ../../mojo/public/tools/bindings/generators/cpp_templates/interface_response_validator_declaration.tmpl $
+    ../../mojo/public/tools/bindings/generators/cpp_templates/interface_stub_declaration.tmpl $
+    ../../mojo/public/tools/bindings/generators/cpp_templates/module.cc.tmpl $
+    ../../mojo/public/tools/bindings/generators/cpp_templates/module.h.tmpl $
+    ../../mojo/public/tools/bindings/generators/cpp_templates/module-internal.h.tmpl $
+    ../../mojo/public/tools/bindings/generators/cpp_templates/struct_declaration.tmpl $
+    ../../mojo/public/tools/bindings/generators/cpp_templates/struct_definition.tmpl $
+    ../../mojo/public/tools/bindings/generators/cpp_templates/struct_macros.tmpl $
+    ../../mojo/public/tools/bindings/generators/cpp_templates/struct_serialization_definition.tmpl $
+    ../../mojo/public/tools/bindings/generators/cpp_templates/wrapper_class_declaration.tmpl $
+    ../../mojo/public/tools/bindings/generators/cpp_templates/wrapper_class_definition.tmpl $
+    ../../mojo/public/tools/bindings/generators/java_templates/constant_definition.tmpl $
+    ../../mojo/public/tools/bindings/generators/java_templates/constants.java.tmpl $
+    ../../mojo/public/tools/bindings/generators/java_templates/data_types_definition.tmpl $
+    ../../mojo/public/tools/bindings/generators/java_templates/enum_definition.tmpl $
+    ../../mojo/public/tools/bindings/generators/java_templates/enum.java.tmpl $
+    ../../mojo/public/tools/bindings/generators/java_templates/header.java.tmpl $
+    ../../mojo/public/tools/bindings/generators/java_templates/interface_definition.tmpl $
+    ../../mojo/public/tools/bindings/generators/java_templates/interface_internal.java.tmpl $
+    ../../mojo/public/tools/bindings/generators/java_templates/interface.java.tmpl $
+    ../../mojo/public/tools/bindings/generators/java_templates/struct.java.tmpl $
+    ../../mojo/public/tools/bindings/generators/java_templates/union.java.tmpl $
+    ../../mojo/public/tools/bindings/generators/js_templates/enum_definition.tmpl $
+    ../../mojo/public/tools/bindings/generators/js_templates/interface_definition.tmpl $
+    ../../mojo/public/tools/bindings/generators/js_templates/module_definition.tmpl $
+    ../../mojo/public/tools/bindings/generators/js_templates/module.amd.tmpl $
+    ../../mojo/public/tools/bindings/generators/js_templates/struct_definition.tmpl $
+    ../../mojo/public/tools/bindings/generators/js_templates/union_definition.tmpl $
+    ../../mojo/public/tools/bindings/generators/js_templates/validation_macros.tmpl $
+    ../../mojo/public/tools/bindings/generators/mojom_cpp_generator.py $
+    ../../mojo/public/tools/bindings/generators/mojom_java_generator.py $
+    ../../mojo/public/tools/bindings/generators/mojom_js_generator.py $
+    ../../mojo/public/tools/bindings/pylib/mojom/__init__.py $
+    ../../mojo/public/tools/bindings/pylib/mojom/error.py $
+    ../../mojo/public/tools/bindings/pylib/mojom/generate/__init__.py $
+    ../../mojo/public/tools/bindings/pylib/mojom/generate/data.py $
+    ../../mojo/public/tools/bindings/pylib/mojom/generate/generator.py $
+    ../../mojo/public/tools/bindings/pylib/mojom/generate/module.py $
+    ../../mojo/public/tools/bindings/pylib/mojom/generate/pack.py $
+    ../../mojo/public/tools/bindings/pylib/mojom/generate/template_expander.py $
+    ../../mojo/public/tools/bindings/pylib/mojom/parse/__init__.py $
+    ../../mojo/public/tools/bindings/pylib/mojom/parse/ast.py $
+    ../../mojo/public/tools/bindings/pylib/mojom/parse/lexer.py $
+    ../../mojo/public/tools/bindings/pylib/mojom/parse/parser.py $
+    ../../mojo/public/tools/bindings/pylib/mojom/parse/translate.py $
+    java_mojo/dom_distiller_mojo_bindings/dom_distiller_mojo_bindings.stamp $
+    || $
+    obj/third_party/mojo/mojo_interface_bindings_mojom.actions_rules_copies.stamp
+  source = dom_distiller/content/common/distiller_page_notifier_service.mojom
+  dirname = dom_distiller/content/common
+  root = distiller_page_notifier_service
+build $
+    obj/components/dom_distiller_mojo_bindings.actions_rules_copies.stamp: $
+    stamp $
+    java_mojo/dom_distiller_mojo_bindings/dom_distiller_mojo_bindings.stamp $
+    gen/components/dom_distiller/content/common/distiller_javascript_service.mojom.cc $
+    gen/components/dom_distiller/content/common/distiller_javascript_service.mojom.h $
+    gen/components/dom_distiller/content/common/distiller_javascript_service.mojom.js $
+    gen/components/dom_distiller/content/common/distiller_javascript_service.mojom-internal.h $
+    gen/components/dom_distiller/content/common/distiller_page_notifier_service.mojom.cc $
+    gen/components/dom_distiller/content/common/distiller_page_notifier_service.mojom.h $
+    gen/components/dom_distiller/content/common/distiller_page_notifier_service.mojom.js $
+    gen/components/dom_distiller/content/common/distiller_page_notifier_service.mojom-internal.h
+
+defines = -DV8_DEPRECATION_WARNINGS -DCLD_VERSION=2 $
+    -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORE=0 -DCHROMIUM_BUILD $
+    -DCR_CLANG_REVISION=254049-1 -DUSE_LIBJPEG_TURBO=1 $
+    -DENABLE_ONE_CLICK_SIGNIN -DENABLE_PRE_SYNC_BACKUP -DENABLE_WEBRTC=1 $
+    -DENABLE_MEDIA_ROUTER=1 -DENABLE_PEPPER_CDMS $
+    -DENABLE_CONFIGURATION_POLICY -DENABLE_NOTIFICATIONS -DENABLE_HIDPI=1 $
+    -DDONT_EMBED_BUILD_METADATA -DFIELDTRIAL_TESTING_ENABLED $
+    -DENABLE_TASK_MANAGER=1 -DENABLE_EXTENSIONS=1 -DENABLE_PDF=1 $
+    -DENABLE_PLUGIN_INSTALLATION=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_THEMES=1 -DENABLE_AUTOFILL_DIALOG=1 $
+    -DENABLE_BACKGROUND=1 -DENABLE_PRINTING=1 -DENABLE_BASIC_PRINTING=1 $
+    -DENABLE_PRINT_PREVIEW=1 -DENABLE_SPELLCHECK=1 $
+    -DUSE_BROWSER_SPELLCHECKER=1 -DENABLE_CAPTIVE_PORTAL_DETECTION=1 $
+    -DENABLE_APP_LIST=1 -DENABLE_SETTINGS_APP=1 -DENABLE_SUPERVISED_USERS=1 $
+    -DENABLE_SERVICE_DISCOVERY=1 -DV8_USE_EXTERNAL_STARTUP_DATA $
+    -DFULL_SAFE_BROWSING -DSAFE_BROWSING_CSD -DSAFE_BROWSING_DB_LOCAL $
+    -DUSE_LIBPCI=1 -DUSE_OPENSSL=1 -D__STDC_CONSTANT_MACROS $
+    -D__STDC_FORMAT_MACROS -DDYNAMIC_ANNOTATIONS_ENABLED=1 $
+    -DWTF_USE_DYNAMIC_ANNOTATIONS=1
+includes = -Igen -I../..
+cflags = -isysroot $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk $
+    -O0 -fvisibility=hidden -Werror -Wnewline-eof -mmacosx-version-min=10.6 $
+    -arch x86_64 -Wall -Wendif-labels -Wextra -Wno-unused-parameter $
+    -Wno-missing-field-initializers -Wno-selector-type-mismatch $
+    -Wpartial-availability -Wheader-hygiene -Wno-char-subscripts $
+    -Wno-unneeded-internal-declaration -Wno-covered-switch-default $
+    -Wstring-conversion -Wno-c++11-narrowing -Wno-deprecated-register $
+    -Wno-inconsistent-missing-override -Wno-shift-negative-value $
+    -Wno-bitfield-width
+cflags_c = -std=c99 -Xclang -load -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing -fstack-protector-all $
+    -Wno-undefined-bool-conversion -Wno-tautological-undefined-compare
+cflags_cc = -std=c++11 -stdlib=libc++ -fno-rtti -fno-exceptions $
+    -fvisibility-inlines-hidden -fno-threadsafe-statics -Xclang -load $
+    -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing -fstack-protector-all $
+    -Wno-undefined-bool-conversion -Wno-tautological-undefined-compare
+cflags_objc = $cflags_c -Wobjc-missing-property-synthesis
+cflags_objcc = $cflags_cc -Wobjc-missing-property-synthesis $
+    -fobjc-call-cxx-cdtors
+arflags = 
+
+build $
+    obj/components/gen/components/dom_distiller/content/common/dom_distiller_mojo_bindings.distiller_javascript_service.mojom.o: $
+    cxx $
+    gen/components/dom_distiller/content/common/distiller_javascript_service.mojom.cc $
+    || obj/components/dom_distiller_mojo_bindings.actions_rules_copies.stamp
+build $
+    obj/components/gen/components/dom_distiller/content/common/dom_distiller_mojo_bindings.distiller_page_notifier_service.mojom.o: $
+    cxx $
+    gen/components/dom_distiller/content/common/distiller_page_notifier_service.mojom.cc $
+    || obj/components/dom_distiller_mojo_bindings.actions_rules_copies.stamp
+
+build libdom_distiller_mojo_bindings.a: alink $
+    obj/components/gen/components/dom_distiller/content/common/dom_distiller_mojo_bindings.distiller_javascript_service.mojom.o $
+    obj/components/gen/components/dom_distiller/content/common/dom_distiller_mojo_bindings.distiller_page_notifier_service.mojom.o $
+    || obj/components/dom_distiller_mojo_bindings.actions_rules_copies.stamp

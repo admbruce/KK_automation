@@ -1,0 +1,161 @@
+build obj/crypto/crypto_unittests.actions_depends.stamp: stamp $
+    libcrcrypto.a libbase.a librun_all_unittests.a libtest_support_base.a $
+    libgmock.a libgtest.a libboringssl.a libbase_static.a $
+    liballocator_extension_thunks.a libmodp_b64.a libdynamic_annotations.a $
+    libevent.a libbase_i18n.a libicui18n.a libicuuc.a icudtl.dat icudtl.dat $
+    libxml2.a libchrome_zlib.a libzlib_x86_simd.a
+
+build obj/crypto/crypto_unittests.compile_depends.stamp: stamp icudtl.dat $
+    icudtl.dat icudtl.dat
+
+defines = -DV8_DEPRECATION_WARNINGS -DCLD_VERSION=2 $
+    -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORE=0 -DCHROMIUM_BUILD $
+    -DCR_CLANG_REVISION=254049-1 -DUSE_LIBJPEG_TURBO=1 $
+    -DENABLE_ONE_CLICK_SIGNIN -DENABLE_PRE_SYNC_BACKUP -DENABLE_WEBRTC=1 $
+    -DENABLE_MEDIA_ROUTER=1 -DENABLE_PEPPER_CDMS $
+    -DENABLE_CONFIGURATION_POLICY -DENABLE_NOTIFICATIONS -DENABLE_HIDPI=1 $
+    -DDONT_EMBED_BUILD_METADATA -DFIELDTRIAL_TESTING_ENABLED $
+    -DENABLE_TASK_MANAGER=1 -DENABLE_EXTENSIONS=1 -DENABLE_PDF=1 $
+    -DENABLE_PLUGIN_INSTALLATION=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_THEMES=1 -DENABLE_AUTOFILL_DIALOG=1 $
+    -DENABLE_BACKGROUND=1 -DENABLE_PRINTING=1 -DENABLE_BASIC_PRINTING=1 $
+    -DENABLE_PRINT_PREVIEW=1 -DENABLE_SPELLCHECK=1 $
+    -DUSE_BROWSER_SPELLCHECKER=1 -DENABLE_CAPTIVE_PORTAL_DETECTION=1 $
+    -DENABLE_APP_LIST=1 -DENABLE_SETTINGS_APP=1 -DENABLE_SUPERVISED_USERS=1 $
+    -DENABLE_SERVICE_DISCOVERY=1 -DV8_USE_EXTERNAL_STARTUP_DATA $
+    -DFULL_SAFE_BROWSING -DSAFE_BROWSING_CSD -DSAFE_BROWSING_DB_LOCAL $
+    -DGTEST_HAS_POSIX_RE=0 -DGTEST_LANG_CXX11=0 -DUNIT_TEST $
+    -DGTEST_HAS_RTTI=0 -DOPENSSL_SMALL -DUSE_LIBPCI=1 -DUSE_OPENSSL=1 $
+    -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -DNDEBUG -DNVALGRIND $
+    -DDYNAMIC_ANNOTATIONS_ENABLED=0 -D_FORTIFY_SOURCE=2
+includes = -Igen -I../.. -I../../testing/gmock/include $
+    -I../../testing/gtest/include -I../../third_party/boringssl/src/include
+cflags = -isysroot $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk $
+    -O2 -fvisibility=hidden -Werror -Wnewline-eof -mmacosx-version-min=10.6 $
+    -arch x86_64 -Wall -Wendif-labels -Wextra -Wno-unused-parameter $
+    -Wno-missing-field-initializers -Wno-selector-type-mismatch $
+    -Wpartial-availability -Wheader-hygiene -Wno-char-subscripts $
+    -Wno-unneeded-internal-declaration -Wno-covered-switch-default $
+    -Wstring-conversion -Wno-c++11-narrowing -Wno-deprecated-register $
+    -Wno-inconsistent-missing-override -Wno-shift-negative-value $
+    -Wno-bitfield-width
+cflags_c = -std=c99 -Xclang -load -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing
+cflags_cc = -std=c++11 -stdlib=libc++ -fno-rtti -fno-exceptions $
+    -fvisibility-inlines-hidden -fno-threadsafe-statics -Xclang -load $
+    -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing
+cflags_objc = $cflags_c -Wobjc-missing-property-synthesis
+cflags_objcc = $cflags_cc -Wobjc-missing-property-synthesis $
+    -fobjc-call-cxx-cdtors
+arflags = 
+
+build obj/crypto/crypto_unittests.aead_openssl_unittest.o: cxx $
+    ../../crypto/aead_openssl_unittest.cc || $
+    obj/crypto/crypto_unittests.compile_depends.stamp
+build obj/crypto/crypto_unittests.curve25519_unittest.o: cxx $
+    ../../crypto/curve25519_unittest.cc || $
+    obj/crypto/crypto_unittests.compile_depends.stamp
+build obj/crypto/crypto_unittests.ec_private_key_unittest.o: cxx $
+    ../../crypto/ec_private_key_unittest.cc || $
+    obj/crypto/crypto_unittests.compile_depends.stamp
+build obj/crypto/crypto_unittests.ec_signature_creator_unittest.o: cxx $
+    ../../crypto/ec_signature_creator_unittest.cc || $
+    obj/crypto/crypto_unittests.compile_depends.stamp
+build obj/crypto/crypto_unittests.encryptor_unittest.o: cxx $
+    ../../crypto/encryptor_unittest.cc || $
+    obj/crypto/crypto_unittests.compile_depends.stamp
+build obj/crypto/crypto_unittests.ghash_unittest.o: cxx $
+    ../../crypto/ghash_unittest.cc || $
+    obj/crypto/crypto_unittests.compile_depends.stamp
+build obj/crypto/crypto_unittests.hkdf_unittest.o: cxx $
+    ../../crypto/hkdf_unittest.cc || $
+    obj/crypto/crypto_unittests.compile_depends.stamp
+build obj/crypto/crypto_unittests.hmac_unittest.o: cxx $
+    ../../crypto/hmac_unittest.cc || $
+    obj/crypto/crypto_unittests.compile_depends.stamp
+build obj/crypto/crypto_unittests.openssl_bio_string_unittest.o: cxx $
+    ../../crypto/openssl_bio_string_unittest.cc || $
+    obj/crypto/crypto_unittests.compile_depends.stamp
+build obj/crypto/crypto_unittests.p224_unittest.o: cxx $
+    ../../crypto/p224_unittest.cc || $
+    obj/crypto/crypto_unittests.compile_depends.stamp
+build obj/crypto/crypto_unittests.p224_spake_unittest.o: cxx $
+    ../../crypto/p224_spake_unittest.cc || $
+    obj/crypto/crypto_unittests.compile_depends.stamp
+build obj/crypto/crypto_unittests.random_unittest.o: cxx $
+    ../../crypto/random_unittest.cc || $
+    obj/crypto/crypto_unittests.compile_depends.stamp
+build obj/crypto/crypto_unittests.rsa_private_key_unittest.o: cxx $
+    ../../crypto/rsa_private_key_unittest.cc || $
+    obj/crypto/crypto_unittests.compile_depends.stamp
+build obj/crypto/crypto_unittests.secure_hash_unittest.o: cxx $
+    ../../crypto/secure_hash_unittest.cc || $
+    obj/crypto/crypto_unittests.compile_depends.stamp
+build obj/crypto/crypto_unittests.sha2_unittest.o: cxx $
+    ../../crypto/sha2_unittest.cc || $
+    obj/crypto/crypto_unittests.compile_depends.stamp
+build obj/crypto/crypto_unittests.signature_creator_unittest.o: cxx $
+    ../../crypto/signature_creator_unittest.cc || $
+    obj/crypto/crypto_unittests.compile_depends.stamp
+build obj/crypto/crypto_unittests.signature_verifier_unittest.o: cxx $
+    ../../crypto/signature_verifier_unittest.cc || $
+    obj/crypto/crypto_unittests.compile_depends.stamp
+build obj/crypto/crypto_unittests.symmetric_key_unittest.o: cxx $
+    ../../crypto/symmetric_key_unittest.cc || $
+    obj/crypto/crypto_unittests.compile_depends.stamp
+
+ldflags = -Wl,-search_paths_first -Wl,-pie -Wl,-dead_strip $
+    -mmacosx-version-min=10.6 -isysroot $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk $
+    -arch x86_64 -L. -stdlib=libc++
+libs = '-L../../third_party/libc++-static' -framework Security -framework $
+    AppKit -framework ApplicationServices -framework Carbon -framework $
+    CoreFoundation -framework Foundation -framework IOKit
+build crypto_unittests: link $
+    obj/crypto/crypto_unittests.aead_openssl_unittest.o $
+    obj/crypto/crypto_unittests.curve25519_unittest.o $
+    obj/crypto/crypto_unittests.ec_private_key_unittest.o $
+    obj/crypto/crypto_unittests.ec_signature_creator_unittest.o $
+    obj/crypto/crypto_unittests.encryptor_unittest.o $
+    obj/crypto/crypto_unittests.ghash_unittest.o $
+    obj/crypto/crypto_unittests.hkdf_unittest.o $
+    obj/crypto/crypto_unittests.hmac_unittest.o $
+    obj/crypto/crypto_unittests.openssl_bio_string_unittest.o $
+    obj/crypto/crypto_unittests.p224_unittest.o $
+    obj/crypto/crypto_unittests.p224_spake_unittest.o $
+    obj/crypto/crypto_unittests.random_unittest.o $
+    obj/crypto/crypto_unittests.rsa_private_key_unittest.o $
+    obj/crypto/crypto_unittests.secure_hash_unittest.o $
+    obj/crypto/crypto_unittests.sha2_unittest.o $
+    obj/crypto/crypto_unittests.signature_creator_unittest.o $
+    obj/crypto/crypto_unittests.signature_verifier_unittest.o $
+    obj/crypto/crypto_unittests.symmetric_key_unittest.o libcrcrypto.a $
+    libbase.a librun_all_unittests.a libtest_support_base.a libgmock.a $
+    libgtest.a libboringssl.a libbase_static.a $
+    liballocator_extension_thunks.a libmodp_b64.a libdynamic_annotations.a $
+    libevent.a libbase_i18n.a libicui18n.a libicuuc.a libxml2.a $
+    libchrome_zlib.a libzlib_x86_simd.a | icudtl.dat
+  ld = $ldxx
+  postbuilds = $ && (export $
+      BUILT_FRAMEWORKS_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      BUILT_PRODUCTS_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      CONFIGURATION=Release; export EXECUTABLE_NAME=crypto_unittests; $
+      export EXECUTABLE_PATH=crypto_unittests; export $
+      FULL_PRODUCT_NAME=crypto_unittests; export $
+      PRODUCT_NAME=crypto_unittests; export $
+      PRODUCT_TYPE=com.apple.product-type.tool; export $
+      SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk; $
+      export SRCROOT=/Users/superadmin/tmp/src/out/Release/../../crypto; $
+      export SOURCE_ROOT="$${SRCROOT}"; export $
+      TARGET_BUILD_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      TEMP_DIR="$${TMPDIR}"; (cd ../../crypto && $
+      ../build/mac/change_mach_o_flags_from_xcode.sh); G=$$?; ((exit $$G) $
+      || rm -rf crypto_unittests) && exit $$G)

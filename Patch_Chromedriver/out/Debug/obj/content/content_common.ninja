@@ -1,0 +1,894 @@
+build obj/content/content_common.actions_depends.stamp: stamp $
+    obj/skia/skia.actions_depends.stamp libaccessibility.a libax_gen.a $
+    obj/content/content_resources.actions_rules_copies.stamp libipc_mojo.a $
+    libmojo_application_bindings.a libnetwork_service_bindings_lib.a $
+    obj/third_party/WebKit/public/blink.actions_depends.stamp $
+    libcontent_common_mojo_bindings.a $
+    obj/content/app/resources/content_resources.actions_rules_copies.stamp
+
+build obj/content/content_common.compile_depends.stamp: stamp $
+    obj/ui/accessibility/ax_gen.actions_rules_copies.stamp $
+    obj/ui/accessibility/ax_gen.actions_rules_copies.stamp $
+    obj/content/content_resources.actions_rules_copies.stamp $
+    obj/ipc/mojo/ipc_mojo.actions_rules_copies.stamp $
+    obj/mojo/mojo_application_bindings.compile_depends.stamp $
+    obj/mojo/network_service_bindings_mojom.actions_rules_copies.stamp $
+    obj/third_party/WebKit/public/blink.compile_depends.stamp $
+    obj/content/content_common_mojo_bindings.compile_depends.stamp $
+    obj/content/app/resources/content_resources.actions_rules_copies.stamp
+
+rule $
+    content_common_target_generate_webkit_version_c20a0de8b6d0417ab345b5595f86dd02
+  command = cd ../../content; export $
+      BUILT_FRAMEWORKS_DIR=/Users/superadmin/tmp/src/out/Debug; export $
+      BUILT_PRODUCTS_DIR=/Users/superadmin/tmp/src/out/Debug; export $
+      CONFIGURATION=Debug; export EXECUTABLE_NAME=libcontent_common.a; $
+      export EXECUTABLE_PATH=libcontent_common.a; export $
+      FULL_PRODUCT_NAME=libcontent_common.a; export MACH_O_TYPE=staticlib; $
+      export PRODUCT_NAME=content_common; export $
+      PRODUCT_TYPE=com.apple.product-type.library.static; export $
+      SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk; $
+      export SRCROOT=/Users/superadmin/tmp/src/out/Debug/../../content; $
+      export SOURCE_ROOT="$${SRCROOT}"; export $
+      TARGET_BUILD_DIR=/Users/superadmin/tmp/src/out/Debug; export $
+      TEMP_DIR="$${TMPDIR}";python ../build/util/version.py -f $
+      ../build/util/LASTCHANGE.blink ../build/util/webkit_version.h.in $
+      ../out/Debug/gen/build/util/webkit_version.h
+  description = ACTION content_common: $
+      generate_webkit_version_c20a0de8b6d0417ab345b5595f86dd02
+  restat = 1
+
+build gen/build/util/webkit_version.h: $
+    content_common_target_generate_webkit_version_c20a0de8b6d0417ab345b5595f86dd02 $
+    ../../build/util/version.py ../../build/util/LASTCHANGE.blink $
+    ../../build/util/webkit_version.h.in || $
+    obj/content/content_common.actions_depends.stamp
+
+rule content_common_target_generate_stubs_c20a0de8b6d0417ab345b5595f86dd02
+  command = cd ../../content; export $
+      BUILT_FRAMEWORKS_DIR=/Users/superadmin/tmp/src/out/Debug; export $
+      BUILT_PRODUCTS_DIR=/Users/superadmin/tmp/src/out/Debug; export $
+      CONFIGURATION=Debug; export EXECUTABLE_NAME=libcontent_common.a; $
+      export EXECUTABLE_PATH=libcontent_common.a; export $
+      FULL_PRODUCT_NAME=libcontent_common.a; export MACH_O_TYPE=staticlib; $
+      export PRODUCT_NAME=content_common; export $
+      PRODUCT_TYPE=com.apple.product-type.library.static; export $
+      SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk; $
+      export SRCROOT=/Users/superadmin/tmp/src/out/Debug/../../content; $
+      export SOURCE_ROOT="$${SRCROOT}"; export $
+      TARGET_BUILD_DIR=/Users/superadmin/tmp/src/out/Debug; export $
+      TEMP_DIR="$${TMPDIR}";python $
+      ../tools/generate_stubs/generate_stubs.py -i $
+      ../out/Debug/obj/content/content_common.gen -o $
+      ../out/Debug/gen/vt_stubs/content/common/gpu/media -t posix_stubs -e $
+      common/gpu/media/vt_stubs_header.fragment -s vt_stubs -p $
+      content/common/gpu/media common/gpu/media/vt.sig
+  description = ACTION Generating VideoToolbox stubs for dynamic loading
+  restat = 1
+
+build obj/content/content_common.gen/vt_stubs.cc $
+    gen/vt_stubs/content/common/gpu/media/vt_stubs.h: $
+    content_common_target_generate_stubs_c20a0de8b6d0417ab345b5595f86dd02 $
+    ../../tools/generate_stubs/generate_stubs.py $
+    ../../content/common/gpu/media/vt_stubs_header.fragment $
+    ../../content/common/gpu/media/vt.sig || $
+    obj/content/content_common.actions_depends.stamp
+
+build obj/content/content_common.actions_rules_copies.stamp: stamp $
+    gen/build/util/webkit_version.h $
+    obj/content/content_common.gen/vt_stubs.cc $
+    gen/vt_stubs/content/common/gpu/media/vt_stubs.h
+
+defines = -DCONTENT_IMPLEMENTATION -DV8_DEPRECATION_WARNINGS $
+    -DCLD_VERSION=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORE=0 $
+    -DCHROMIUM_BUILD -DCR_CLANG_REVISION=254049-1 -DUSE_LIBJPEG_TURBO=1 $
+    -DENABLE_ONE_CLICK_SIGNIN -DENABLE_PRE_SYNC_BACKUP -DENABLE_WEBRTC=1 $
+    -DENABLE_MEDIA_ROUTER=1 -DENABLE_PEPPER_CDMS $
+    -DENABLE_CONFIGURATION_POLICY -DENABLE_NOTIFICATIONS -DENABLE_HIDPI=1 $
+    -DDONT_EMBED_BUILD_METADATA -DFIELDTRIAL_TESTING_ENABLED $
+    -DENABLE_TASK_MANAGER=1 -DENABLE_EXTENSIONS=1 -DENABLE_PDF=1 $
+    -DENABLE_PLUGIN_INSTALLATION=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_THEMES=1 -DENABLE_AUTOFILL_DIALOG=1 $
+    -DENABLE_BACKGROUND=1 -DENABLE_PRINTING=1 -DENABLE_BASIC_PRINTING=1 $
+    -DENABLE_PRINT_PREVIEW=1 -DENABLE_SPELLCHECK=1 $
+    -DUSE_BROWSER_SPELLCHECKER=1 -DENABLE_CAPTIVE_PORTAL_DETECTION=1 $
+    -DENABLE_APP_LIST=1 -DENABLE_SETTINGS_APP=1 -DENABLE_SUPERVISED_USERS=1 $
+    -DENABLE_SERVICE_DISCOVERY=1 -DV8_USE_EXTERNAL_STARTUP_DATA $
+    -DFULL_SAFE_BROWSING -DSAFE_BROWSING_CSD -DSAFE_BROWSING_DB_LOCAL $
+    -DMOJO_USE_SYSTEM_IMPL -DSK_SUPPORT_GPU=1 $
+    -DSK_IGNORE_LINEONLY_AA_CONVEX_PATH_OPTS -DSK_IGNORE_GL_TEXTURE_TARGET $
+    -DU_USING_ICU_NAMESPACE=0 -DU_ENABLE_DYLOAD=0 -DU_STATIC_IMPLEMENTATION $
+    -DCHROME_PNG_WRITE_SUPPORT -DPNG_USER_CONFIG -DMESA_EGL_NO_X11_HEADERS $
+    -DFEATURE_ENABLE_SSL -DFEATURE_ENABLE_VOICEMAIL -DEXPAT_RELATIVE_PATH $
+    -DGTEST_RELATIVE_PATH -DNO_MAIN_THREAD_WRAPPING -DNO_SOUND_SYSTEM -DOSX $
+    -DWEBRTC_MAC -DWEBRTC_POSIX -DXML_STATIC -DUSE_LIBPCI=1 -DUSE_OPENSSL=1 $
+    -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS $
+    -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DWTF_USE_DYNAMIC_ANNOTATIONS=1
+includes = -Igen -I../.. -Igen/vt_stubs -I../../third_party/khronos $
+    -I../../gpu -I../../skia/config -Igen/angle $
+    -I../../third_party/WebKit/Source -I../../third_party/skia/include/core $
+    -I../../third_party/skia/include/effects $
+    -I../../third_party/skia/include/pdf $
+    -I../../third_party/skia/include/gpu $
+    -I../../third_party/skia/include/lazy $
+    -I../../third_party/skia/include/pathops $
+    -I../../third_party/skia/include/pipe $
+    -I../../third_party/skia/include/ports $
+    -I../../third_party/skia/include/utils $
+    -I../../third_party/skia/include/utils/mac -I../../skia/ext $
+    -I../../third_party/WebKit -I../../third_party/icu/source/common $
+    -I../../third_party/icu/source/i18n -I../../ipc $
+    -I../../third_party/opus/src/include -I../../third_party/WebKit $
+    -I../../third_party/npapi -I../../third_party/npapi/bindings $
+    -I../../v8/include -I../../third_party/libpng -I../../third_party/zlib $
+    -I../../third_party/libwebp -I../../third_party/ots/include $
+    -I../../third_party/qcms/src -I../../third_party/iccjpeg $
+    -I../../third_party/libjpeg_turbo -I../../third_party/mesa/src/include $
+    -Igen/content/app/resources/ -I../../third_party/webrtc_overrides $
+    -I../../third_party/libjingle/overrides $
+    -I../../third_party/libjingle/source -I../../testing/gtest/include $
+    -I../../third_party -I../../third_party/expat/files/lib
+cflags = -isysroot $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk $
+    -O0 -fvisibility=hidden -Werror -Wnewline-eof -mmacosx-version-min=10.6 $
+    -arch x86_64 -Wall -Wendif-labels -Wextra -Wno-unused-parameter $
+    -Wno-missing-field-initializers -Wno-selector-type-mismatch $
+    -Wpartial-availability -Wheader-hygiene -Wno-char-subscripts $
+    -Wno-unneeded-internal-declaration -Wno-covered-switch-default $
+    -Wstring-conversion -Wno-c++11-narrowing -Wno-deprecated-register $
+    -Wno-inconsistent-missing-override -Wno-shift-negative-value $
+    -Wno-bitfield-width -Wexit-time-destructors
+cflags_c = -std=c99 -Xclang -load -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing -fstack-protector-all $
+    -Wno-undefined-bool-conversion -Wno-tautological-undefined-compare
+cflags_cc = -std=c++11 -stdlib=libc++ -fno-rtti -fno-exceptions $
+    -fvisibility-inlines-hidden -fno-threadsafe-statics -Xclang -load $
+    -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing -fstack-protector-all $
+    -Wno-undefined-bool-conversion -Wno-tautological-undefined-compare
+cflags_objc = $cflags_c -Wobjc-missing-property-synthesis
+cflags_objcc = $cflags_cc -Wobjc-missing-property-synthesis $
+    -fobjc-call-cxx-cdtors
+arflags = 
+
+build obj/content/obj/content/content_common.gen/content_common.vt_stubs.o: $
+    cxx obj/content/content_common.gen/vt_stubs.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/public/common/content_common.browser_plugin_guest_mode.o: $
+    cxx ../../content/public/common/browser_plugin_guest_mode.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build $
+    obj/content/public/common/content_common.child_process_host_delegate.o: $
+    cxx ../../content/public/common/child_process_host_delegate.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/public/common/content_common.color_suggestion.o: cxx $
+    ../../content/public/common/color_suggestion.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/public/common/content_common.common_param_traits.o: cxx $
+    ../../content/public/common/common_param_traits.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/public/common/content_common.content_client.o: cxx $
+    ../../content/public/common/content_client.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/public/common/content_common.content_constants.o: cxx $
+    ../../content/public/common/content_constants.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/public/common/content_common.content_features.o: cxx $
+    ../../content/public/common/content_features.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/public/common/content_common.content_switches.o: cxx $
+    ../../content/public/common/content_switches.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/public/common/content_common.context_menu_params.o: cxx $
+    ../../content/public/common/context_menu_params.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/public/common/content_common.drop_data.o: cxx $
+    ../../content/public/common/drop_data.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/public/common/content_common.favicon_url.o: cxx $
+    ../../content/public/common/favicon_url.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/public/common/content_common.file_chooser_file_info.o: $
+    cxx ../../content/public/common/file_chooser_file_info.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/public/common/content_common.file_chooser_params.o: cxx $
+    ../../content/public/common/file_chooser_params.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/public/common/content_common.frame_navigate_params.o: cxx $
+    ../../content/public/common/frame_navigate_params.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/public/common/content_common.geoposition.o: cxx $
+    ../../content/public/common/geoposition.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/public/common/content_common.gpu_memory_stats.o: cxx $
+    ../../content/public/common/gpu_memory_stats.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/public/common/content_common.manifest.o: cxx $
+    ../../content/public/common/manifest.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/public/common/content_common.media_stream_request.o: cxx $
+    ../../content/public/common/media_stream_request.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/public/common/content_common.menu_item.o: cxx $
+    ../../content/public/common/menu_item.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/public/common/content_common.message_port_types.o: cxx $
+    ../../content/public/common/message_port_types.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/public/common/content_common.mojo_channel_switches.o: cxx $
+    ../../content/public/common/mojo_channel_switches.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/public/common/content_common.navigator_connect_client.o: $
+    cxx ../../content/public/common/navigator_connect_client.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/public/common/content_common.page_state.o: cxx $
+    ../../content/public/common/page_state.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/public/common/content_common.pepper_plugin_info.o: cxx $
+    ../../content/public/common/pepper_plugin_info.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build $
+    obj/content/public/common/content_common.platform_notification_data.o: $
+    cxx ../../content/public/common/platform_notification_data.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/public/common/content_common.presentation_constants.o: $
+    cxx ../../content/public/common/presentation_constants.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/public/common/content_common.push_messaging_status.o: cxx $
+    ../../content/public/common/push_messaging_status.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/public/common/content_common.referrer.o: cxx $
+    ../../content/public/common/referrer.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/public/common/content_common.renderer_preferences.o: cxx $
+    ../../content/public/common/renderer_preferences.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/public/common/content_common.resource_devtools_info.o: $
+    cxx ../../content/public/common/resource_devtools_info.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/public/common/content_common.resource_response.o: cxx $
+    ../../content/public/common/resource_response.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/public/common/content_common.resource_response_info.o: $
+    cxx ../../content/public/common/resource_response_info.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/public/common/content_common.resource_type.o: cxx $
+    ../../content/public/common/resource_type.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build $
+    obj/content/public/common/content_common.sandboxed_process_launcher_delegate.o: $
+    cxx ../../content/public/common/sandboxed_process_launcher_delegate.cc $
+    || obj/content/content_common.actions_rules_copies.stamp
+build $
+    obj/content/public/common/content_common.signed_certificate_timestamp_id_and_status.o: $
+    cxx $
+    ../../content/public/common/signed_certificate_timestamp_id_and_status.cc $
+    || obj/content/content_common.actions_rules_copies.stamp
+build obj/content/public/common/content_common.speech_recognition_result.o: $
+    cxx ../../content/public/common/speech_recognition_result.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/public/common/content_common.ssl_status.o: cxx $
+    ../../content/public/common/ssl_status.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/public/common/content_common.url_constants.o: cxx $
+    ../../content/public/common/url_constants.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/public/common/content_common.url_utils.o: cxx $
+    ../../content/public/common/url_utils.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/public/common/content_common.web_preferences.o: cxx $
+    ../../content/public/common/web_preferences.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/public/common/content_common.webplugininfo.o: cxx $
+    ../../content/public/common/webplugininfo.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/public/common/content_common.window_container_type.o: cxx $
+    ../../content/public/common/window_container_type.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/content_common.appcache_interfaces.o: cxx $
+    ../../content/common/appcache_interfaces.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/content_common.ax_content_node_data.o: cxx $
+    ../../content/common/ax_content_node_data.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/bluetooth/content_common.bluetooth_device.o: cxx $
+    ../../content/common/bluetooth/bluetooth_device.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/bluetooth/content_common.bluetooth_scan_filter.o: $
+    cxx ../../content/common/bluetooth/bluetooth_scan_filter.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build $
+    obj/content/common/browser_plugin/content_common.browser_plugin_constants.o: $
+    cxx ../../content/common/browser_plugin/browser_plugin_constants.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build $
+    obj/content/common/cache_storage/content_common.cache_storage_types.o: $
+    cxx ../../content/common/cache_storage/cache_storage_types.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/content_common.cc_messages.o: cxx $
+    ../../content/common/cc_messages.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/content_common.child_process_host_impl.o: cxx $
+    ../../content/common/child_process_host_impl.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/content_common.content_constants_internal.o: cxx $
+    ../../content/common/content_constants_internal.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/content_common.content_ipc_logging.o: cxx $
+    ../../content/common/content_ipc_logging.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/content_common.content_message_generator.o: cxx $
+    ../../content/common/content_message_generator.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/content_common.content_param_traits.o: cxx $
+    ../../content/common/content_param_traits.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/content_common.content_paths.o: cxx $
+    ../../content/common/content_paths.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/content_common.content_switches_internal.o: cxx $
+    ../../content/common/content_switches_internal.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/content_common.cross_site_document_classifier.o: $
+    cxx ../../content/common/cross_site_document_classifier.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/cursors/content_common.webcursor.o: cxx $
+    ../../content/common/cursors/webcursor.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/cursors/content_common.webcursor_mac.o: objcxx $
+    ../../content/common/cursors/webcursor_mac.mm || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/content_common.discardable_shared_memory_heap.o: $
+    cxx ../../content/common/discardable_shared_memory_heap.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/dom_storage/content_common.dom_storage_map.o: cxx $
+    ../../content/common/dom_storage/dom_storage_map.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/content_common.font_list.o: cxx $
+    ../../content/common/font_list.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/content_common.font_list_mac.o: objcxx $
+    ../../content/common/font_list_mac.mm || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/content_common.frame_param.o: cxx $
+    ../../content/common/frame_param.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/content_common.frame_replication_state.o: cxx $
+    ../../content/common/frame_replication_state.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/content_common.gamepad_param_traits.o: cxx $
+    ../../content/common/gamepad_param_traits.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/content_common.gamepad_user_gesture.o: cxx $
+    ../../content/common/gamepad_user_gesture.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build $
+    obj/content/common/content_common.generic_shared_memory_id_generator.o: $
+    cxx ../../content/common/generic_shared_memory_id_generator.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/content_common.geofencing_types.o: cxx $
+    ../../content/common/geofencing_types.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build $
+    obj/content/common/gpu/client/content_common.command_buffer_metrics.o: $
+    cxx ../../content/common/gpu/client/command_buffer_metrics.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build $
+    obj/content/common/gpu/client/content_common.command_buffer_proxy_impl.o: $
+    cxx ../../content/common/gpu/client/command_buffer_proxy_impl.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build $
+    obj/content/common/gpu/client/content_common.context_provider_command_buffer.o: $
+    cxx ../../content/common/gpu/client/context_provider_command_buffer.cc $
+    || obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/gpu/client/content_common.gl_helper.o: cxx $
+    ../../content/common/gpu/client/gl_helper.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build $
+    obj/content/common/gpu/client/content_common.gl_helper_readback_support.o: $
+    cxx ../../content/common/gpu/client/gl_helper_readback_support.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/gpu/client/content_common.gl_helper_scaling.o: cxx $
+    ../../content/common/gpu/client/gl_helper_scaling.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/gpu/client/content_common.gpu_channel_host.o: cxx $
+    ../../content/common/gpu/client/gpu_channel_host.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build $
+    obj/content/common/gpu/client/content_common.gpu_jpeg_decode_accelerator_host.o: $
+    cxx ../../content/common/gpu/client/gpu_jpeg_decode_accelerator_host.cc $
+    || obj/content/content_common.actions_rules_copies.stamp
+build $
+    obj/content/common/gpu/client/content_common.gpu_memory_buffer_impl.o: $
+    cxx ../../content/common/gpu/client/gpu_memory_buffer_impl.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build $
+    obj/content/common/gpu/client/content_common.gpu_memory_buffer_impl_shared_memory.o: $
+    cxx $
+    ../../content/common/gpu/client/gpu_memory_buffer_impl_shared_memory.cc $
+    || obj/content/content_common.actions_rules_copies.stamp
+build $
+    obj/content/common/gpu/client/content_common.gpu_video_decode_accelerator_host.o: $
+    cxx $
+    ../../content/common/gpu/client/gpu_video_decode_accelerator_host.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build $
+    obj/content/common/gpu/client/content_common.gpu_video_encode_accelerator_host.o: $
+    cxx $
+    ../../content/common/gpu/client/gpu_video_encode_accelerator_host.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build $
+    obj/content/common/gpu/client/content_common.grcontext_for_webgraphicscontext3d.o: $
+    cxx $
+    ../../content/common/gpu/client/grcontext_for_webgraphicscontext3d.cc $
+    || obj/content/content_common.actions_rules_copies.stamp
+build $
+    obj/content/common/gpu/client/content_common.webgraphicscontext3d_command_buffer_impl.o: $
+    cxx $
+    ../../content/common/gpu/client/webgraphicscontext3d_command_buffer_impl.cc $
+    || obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/gpu/content_common.gpu_channel.o: cxx $
+    ../../content/common/gpu/gpu_channel.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/gpu/content_common.gpu_channel_manager.o: cxx $
+    ../../content/common/gpu/gpu_channel_manager.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/gpu/content_common.gpu_command_buffer_stub.o: cxx $
+    ../../content/common/gpu/gpu_command_buffer_stub.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/gpu/content_common.gpu_memory_buffer_factory.o: $
+    cxx ../../content/common/gpu/gpu_memory_buffer_factory.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/gpu/content_common.gpu_memory_manager.o: cxx $
+    ../../content/common/gpu/gpu_memory_manager.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/gpu/content_common.gpu_memory_tracking.o: cxx $
+    ../../content/common/gpu/gpu_memory_tracking.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/gpu/content_common.gpu_surface_lookup.o: cxx $
+    ../../content/common/gpu/gpu_surface_lookup.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/gpu/content_common.image_transport_surface.o: cxx $
+    ../../content/common/gpu/image_transport_surface.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build $
+    obj/content/common/gpu/content_common.image_transport_surface_overlay_mac.o: $
+    objcxx ../../content/common/gpu/image_transport_surface_overlay_mac.mm $
+    || obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/gpu/content_common.image_transport_surface_mac.o: $
+    objcxx ../../content/common/gpu/image_transport_surface_mac.mm || $
+    obj/content/content_common.actions_rules_copies.stamp
+build $
+    obj/content/common/gpu/media/content_common.fake_video_decode_accelerator.o: $
+    cxx ../../content/common/gpu/media/fake_video_decode_accelerator.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build $
+    obj/content/common/gpu/media/content_common.gpu_jpeg_decode_accelerator.o: $
+    cxx ../../content/common/gpu/media/gpu_jpeg_decode_accelerator.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build $
+    obj/content/common/gpu/media/content_common.gpu_video_accelerator_util.o: $
+    cxx ../../content/common/gpu/media/gpu_video_accelerator_util.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build $
+    obj/content/common/gpu/media/content_common.gpu_video_decode_accelerator.o: $
+    cxx ../../content/common/gpu/media/gpu_video_decode_accelerator.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build $
+    obj/content/common/gpu/media/content_common.gpu_video_encode_accelerator.o: $
+    cxx ../../content/common/gpu/media/gpu_video_encode_accelerator.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build $
+    obj/content/common/content_common.host_discardable_shared_memory_manager.o: $
+    cxx ../../content/common/host_discardable_shared_memory_manager.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/content_common.host_shared_bitmap_manager.o: cxx $
+    ../../content/common/host_shared_bitmap_manager.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/content_common.in_process_child_thread_params.o: $
+    cxx ../../content/common/in_process_child_thread_params.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/indexed_db/content_common.indexed_db_key.o: cxx $
+    ../../content/common/indexed_db/indexed_db_key.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/indexed_db/content_common.indexed_db_key_path.o: $
+    cxx ../../content/common/indexed_db/indexed_db_key_path.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/indexed_db/content_common.indexed_db_key_range.o: $
+    cxx ../../content/common/indexed_db/indexed_db_key_range.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build $
+    obj/content/common/indexed_db/content_common.indexed_db_param_traits.o: $
+    cxx ../../content/common/indexed_db/indexed_db_param_traits.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/input/content_common.did_overscroll_params.o: cxx $
+    ../../content/common/input/did_overscroll_params.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build $
+    obj/content/common/input/content_common.gesture_event_stream_validator.o: $
+    cxx ../../content/common/input/gesture_event_stream_validator.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/input/content_common.input_event.o: cxx $
+    ../../content/common/input/input_event.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/input/content_common.input_event_ack.o: cxx $
+    ../../content/common/input/input_event_ack.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build $
+    obj/content/common/input/content_common.input_event_stream_validator.o: $
+    cxx ../../content/common/input/input_event_stream_validator.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/input/content_common.input_param_traits.o: cxx $
+    ../../content/common/input/input_param_traits.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/input/content_common.scoped_web_input_event.o: cxx $
+    ../../content/common/input/scoped_web_input_event.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/input/content_common.synthetic_gesture_packet.o: $
+    cxx ../../content/common/input/synthetic_gesture_packet.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/input/content_common.synthetic_gesture_params.o: $
+    cxx ../../content/common/input/synthetic_gesture_params.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build $
+    obj/content/common/input/content_common.synthetic_pinch_gesture_params.o: $
+    cxx ../../content/common/input/synthetic_pinch_gesture_params.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build $
+    obj/content/common/input/content_common.synthetic_smooth_drag_gesture_params.o: $
+    cxx ../../content/common/input/synthetic_smooth_drag_gesture_params.cc $
+    || obj/content/content_common.actions_rules_copies.stamp
+build $
+    obj/content/common/input/content_common.synthetic_smooth_scroll_gesture_params.o: $
+    cxx $
+    ../../content/common/input/synthetic_smooth_scroll_gesture_params.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build $
+    obj/content/common/input/content_common.synthetic_tap_gesture_params.o: $
+    cxx ../../content/common/input/synthetic_tap_gesture_params.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build $
+    obj/content/common/input/content_common.synthetic_web_input_event_builders.o: $
+    cxx ../../content/common/input/synthetic_web_input_event_builders.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build $
+    obj/content/common/input/content_common.touch_event_stream_validator.o: $
+    cxx ../../content/common/input/touch_event_stream_validator.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/input/content_common.web_input_event_traits.o: cxx $
+    ../../content/common/input/web_input_event_traits.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/input/content_common.web_touch_event_traits.o: cxx $
+    ../../content/common/input/web_touch_event_traits.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build $
+    obj/content/common/content_common.inter_process_time_ticks_converter.o: $
+    cxx ../../content/common/inter_process_time_ticks_converter.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/mac/content_common.attributed_string_coder.o: $
+    objcxx ../../content/common/mac/attributed_string_coder.mm || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/mac/content_common.font_descriptor.o: objcxx $
+    ../../content/common/mac/font_descriptor.mm || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/mac/content_common.font_loader.o: objcxx $
+    ../../content/common/mac/font_loader.mm || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/media/content_common.media_param_traits.o: cxx $
+    ../../content/common/media/media_param_traits.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/media/content_common.media_stream_options.o: cxx $
+    ../../content/common/media/media_stream_options.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/content_common.message_router.o: cxx $
+    ../../content/common/message_router.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/mojo/content_common.channel_init.o: cxx $
+    ../../content/common/mojo/channel_init.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/mojo/content_common.service_registry_for_route.o: $
+    cxx ../../content/common/mojo/service_registry_for_route.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/mojo/content_common.service_registry_impl.o: cxx $
+    ../../content/common/mojo/service_registry_impl.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/content_common.navigation_params.o: cxx $
+    ../../content/common/navigation_params.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/net/content_common.url_fetcher.o: cxx $
+    ../../content/common/net/url_fetcher.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/net/content_common.url_request_user_data.o: cxx $
+    ../../content/common/net/url_request_user_data.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/content_common.one_writer_seqlock.o: cxx $
+    ../../content/common/one_writer_seqlock.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/content_common.origin_util.o: cxx $
+    ../../content/common/origin_util.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/content_common.page_state_serialization.o: cxx $
+    ../../content/common/page_state_serialization.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/content_common.page_zoom.o: cxx $
+    ../../content/common/page_zoom.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/content_common.pepper_file_util.o: cxx $
+    ../../content/common/pepper_file_util.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/content_common.pepper_plugin_list.o: cxx $
+    ../../content/common/pepper_plugin_list.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/content_common.pepper_renderer_instance_data.o: $
+    cxx ../../content/common/pepper_renderer_instance_data.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/content_common.plugin_list.o: cxx $
+    ../../content/common/plugin_list.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/content_common.plugin_list_mac.o: objcxx $
+    ../../content/common/plugin_list_mac.mm || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/content_common.process_type.o: cxx $
+    ../../content/common/process_type.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/content_common.resource_messages.o: cxx $
+    ../../content/common/resource_messages.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/content_common.resource_request_body.o: cxx $
+    ../../content/common/resource_request_body.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/content_common.sandbox_init_mac.o: cxx $
+    ../../content/common/sandbox_init_mac.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/content_common.sandbox_mac.o: objcxx $
+    ../../content/common/sandbox_mac.mm || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/content_common.sandbox_util.o: cxx $
+    ../../content/common/sandbox_util.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/content_common.savable_url_schemes.o: cxx $
+    ../../content/common/savable_url_schemes.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/content_common.service_port_type_converters.o: cxx $
+    ../../content/common/service_port_type_converters.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build $
+    obj/content/common/service_worker/content_common.service_worker_client_info.o: $
+    cxx ../../content/common/service_worker/service_worker_client_info.cc $
+    || obj/content/content_common.actions_rules_copies.stamp
+build $
+    obj/content/common/service_worker/content_common.service_worker_status_code.o: $
+    cxx ../../content/common/service_worker/service_worker_status_code.cc $
+    || obj/content/content_common.actions_rules_copies.stamp
+build $
+    obj/content/common/service_worker/content_common.service_worker_types.o: $
+    cxx ../../content/common/service_worker/service_worker_types.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build $
+    obj/content/common/service_worker/content_common.service_worker_type_converters.o: $
+    cxx $
+    ../../content/common/service_worker/service_worker_type_converters.cc $
+    || obj/content/content_common.actions_rules_copies.stamp
+build $
+    obj/content/common/service_worker/content_common.service_worker_utils.o: $
+    cxx ../../content/common/service_worker/service_worker_utils.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/content_common.set_process_title.o: cxx $
+    ../../content/common/set_process_title.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/content_common.site_isolation_policy.o: cxx $
+    ../../content/common/site_isolation_policy.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/content_common.ssl_status_serialization.o: cxx $
+    ../../content/common/ssl_status_serialization.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/content_common.swapped_out_messages.o: cxx $
+    ../../content/common/swapped_out_messages.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/content_common.url_schemes.o: cxx $
+    ../../content/common/url_schemes.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/content_common.user_agent.o: cxx $
+    ../../content/common/user_agent.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/content_common.webplugin_geometry.o: cxx $
+    ../../content/common/webplugin_geometry.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/common/content_common.websocket.o: cxx $
+    ../../content/common/websocket.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build $
+    obj/content/common/gpu/client/content_common.gpu_memory_buffer_impl_io_surface.o: $
+    cxx $
+    ../../content/common/gpu/client/gpu_memory_buffer_impl_io_surface.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build $
+    obj/content/common/gpu/content_common.gpu_memory_buffer_factory_io_surface.o: $
+    cxx ../../content/common/gpu/gpu_memory_buffer_factory_io_surface.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build $
+    obj/content/common/gpu/media/content_common.vt_video_decode_accelerator.o: $
+    cxx ../../content/common/gpu/media/vt_video_decode_accelerator.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+build obj/content/public/common/content_common.webrtc_ip_handling_policy.o: $
+    cxx ../../content/public/common/webrtc_ip_handling_policy.cc || $
+    obj/content/content_common.actions_rules_copies.stamp
+
+build libcontent_common.a: alink $
+    obj/content/obj/content/content_common.gen/content_common.vt_stubs.o $
+    obj/content/public/common/content_common.browser_plugin_guest_mode.o $
+    obj/content/public/common/content_common.child_process_host_delegate.o $
+    obj/content/public/common/content_common.color_suggestion.o $
+    obj/content/public/common/content_common.common_param_traits.o $
+    obj/content/public/common/content_common.content_client.o $
+    obj/content/public/common/content_common.content_constants.o $
+    obj/content/public/common/content_common.content_features.o $
+    obj/content/public/common/content_common.content_switches.o $
+    obj/content/public/common/content_common.context_menu_params.o $
+    obj/content/public/common/content_common.drop_data.o $
+    obj/content/public/common/content_common.favicon_url.o $
+    obj/content/public/common/content_common.file_chooser_file_info.o $
+    obj/content/public/common/content_common.file_chooser_params.o $
+    obj/content/public/common/content_common.frame_navigate_params.o $
+    obj/content/public/common/content_common.geoposition.o $
+    obj/content/public/common/content_common.gpu_memory_stats.o $
+    obj/content/public/common/content_common.manifest.o $
+    obj/content/public/common/content_common.media_stream_request.o $
+    obj/content/public/common/content_common.menu_item.o $
+    obj/content/public/common/content_common.message_port_types.o $
+    obj/content/public/common/content_common.mojo_channel_switches.o $
+    obj/content/public/common/content_common.navigator_connect_client.o $
+    obj/content/public/common/content_common.page_state.o $
+    obj/content/public/common/content_common.pepper_plugin_info.o $
+    obj/content/public/common/content_common.platform_notification_data.o $
+    obj/content/public/common/content_common.presentation_constants.o $
+    obj/content/public/common/content_common.push_messaging_status.o $
+    obj/content/public/common/content_common.referrer.o $
+    obj/content/public/common/content_common.renderer_preferences.o $
+    obj/content/public/common/content_common.resource_devtools_info.o $
+    obj/content/public/common/content_common.resource_response.o $
+    obj/content/public/common/content_common.resource_response_info.o $
+    obj/content/public/common/content_common.resource_type.o $
+    obj/content/public/common/content_common.sandboxed_process_launcher_delegate.o $
+    obj/content/public/common/content_common.signed_certificate_timestamp_id_and_status.o $
+    obj/content/public/common/content_common.speech_recognition_result.o $
+    obj/content/public/common/content_common.ssl_status.o $
+    obj/content/public/common/content_common.url_constants.o $
+    obj/content/public/common/content_common.url_utils.o $
+    obj/content/public/common/content_common.web_preferences.o $
+    obj/content/public/common/content_common.webplugininfo.o $
+    obj/content/public/common/content_common.window_container_type.o $
+    obj/content/common/content_common.appcache_interfaces.o $
+    obj/content/common/content_common.ax_content_node_data.o $
+    obj/content/common/bluetooth/content_common.bluetooth_device.o $
+    obj/content/common/bluetooth/content_common.bluetooth_scan_filter.o $
+    obj/content/common/browser_plugin/content_common.browser_plugin_constants.o $
+    obj/content/common/cache_storage/content_common.cache_storage_types.o $
+    obj/content/common/content_common.cc_messages.o $
+    obj/content/common/content_common.child_process_host_impl.o $
+    obj/content/common/content_common.content_constants_internal.o $
+    obj/content/common/content_common.content_ipc_logging.o $
+    obj/content/common/content_common.content_message_generator.o $
+    obj/content/common/content_common.content_param_traits.o $
+    obj/content/common/content_common.content_paths.o $
+    obj/content/common/content_common.content_switches_internal.o $
+    obj/content/common/content_common.cross_site_document_classifier.o $
+    obj/content/common/cursors/content_common.webcursor.o $
+    obj/content/common/cursors/content_common.webcursor_mac.o $
+    obj/content/common/content_common.discardable_shared_memory_heap.o $
+    obj/content/common/dom_storage/content_common.dom_storage_map.o $
+    obj/content/common/content_common.font_list.o $
+    obj/content/common/content_common.font_list_mac.o $
+    obj/content/common/content_common.frame_param.o $
+    obj/content/common/content_common.frame_replication_state.o $
+    obj/content/common/content_common.gamepad_param_traits.o $
+    obj/content/common/content_common.gamepad_user_gesture.o $
+    obj/content/common/content_common.generic_shared_memory_id_generator.o $
+    obj/content/common/content_common.geofencing_types.o $
+    obj/content/common/gpu/client/content_common.command_buffer_metrics.o $
+    obj/content/common/gpu/client/content_common.command_buffer_proxy_impl.o $
+    obj/content/common/gpu/client/content_common.context_provider_command_buffer.o $
+    obj/content/common/gpu/client/content_common.gl_helper.o $
+    obj/content/common/gpu/client/content_common.gl_helper_readback_support.o $
+    obj/content/common/gpu/client/content_common.gl_helper_scaling.o $
+    obj/content/common/gpu/client/content_common.gpu_channel_host.o $
+    obj/content/common/gpu/client/content_common.gpu_jpeg_decode_accelerator_host.o $
+    obj/content/common/gpu/client/content_common.gpu_memory_buffer_impl.o $
+    obj/content/common/gpu/client/content_common.gpu_memory_buffer_impl_shared_memory.o $
+    obj/content/common/gpu/client/content_common.gpu_video_decode_accelerator_host.o $
+    obj/content/common/gpu/client/content_common.gpu_video_encode_accelerator_host.o $
+    obj/content/common/gpu/client/content_common.grcontext_for_webgraphicscontext3d.o $
+    obj/content/common/gpu/client/content_common.webgraphicscontext3d_command_buffer_impl.o $
+    obj/content/common/gpu/content_common.gpu_channel.o $
+    obj/content/common/gpu/content_common.gpu_channel_manager.o $
+    obj/content/common/gpu/content_common.gpu_command_buffer_stub.o $
+    obj/content/common/gpu/content_common.gpu_memory_buffer_factory.o $
+    obj/content/common/gpu/content_common.gpu_memory_manager.o $
+    obj/content/common/gpu/content_common.gpu_memory_tracking.o $
+    obj/content/common/gpu/content_common.gpu_surface_lookup.o $
+    obj/content/common/gpu/content_common.image_transport_surface.o $
+    obj/content/common/gpu/content_common.image_transport_surface_overlay_mac.o $
+    obj/content/common/gpu/content_common.image_transport_surface_mac.o $
+    obj/content/common/gpu/media/content_common.fake_video_decode_accelerator.o $
+    obj/content/common/gpu/media/content_common.gpu_jpeg_decode_accelerator.o $
+    obj/content/common/gpu/media/content_common.gpu_video_accelerator_util.o $
+    obj/content/common/gpu/media/content_common.gpu_video_decode_accelerator.o $
+    obj/content/common/gpu/media/content_common.gpu_video_encode_accelerator.o $
+    obj/content/common/content_common.host_discardable_shared_memory_manager.o $
+    obj/content/common/content_common.host_shared_bitmap_manager.o $
+    obj/content/common/content_common.in_process_child_thread_params.o $
+    obj/content/common/indexed_db/content_common.indexed_db_key.o $
+    obj/content/common/indexed_db/content_common.indexed_db_key_path.o $
+    obj/content/common/indexed_db/content_common.indexed_db_key_range.o $
+    obj/content/common/indexed_db/content_common.indexed_db_param_traits.o $
+    obj/content/common/input/content_common.did_overscroll_params.o $
+    obj/content/common/input/content_common.gesture_event_stream_validator.o $
+    obj/content/common/input/content_common.input_event.o $
+    obj/content/common/input/content_common.input_event_ack.o $
+    obj/content/common/input/content_common.input_event_stream_validator.o $
+    obj/content/common/input/content_common.input_param_traits.o $
+    obj/content/common/input/content_common.scoped_web_input_event.o $
+    obj/content/common/input/content_common.synthetic_gesture_packet.o $
+    obj/content/common/input/content_common.synthetic_gesture_params.o $
+    obj/content/common/input/content_common.synthetic_pinch_gesture_params.o $
+    obj/content/common/input/content_common.synthetic_smooth_drag_gesture_params.o $
+    obj/content/common/input/content_common.synthetic_smooth_scroll_gesture_params.o $
+    obj/content/common/input/content_common.synthetic_tap_gesture_params.o $
+    obj/content/common/input/content_common.synthetic_web_input_event_builders.o $
+    obj/content/common/input/content_common.touch_event_stream_validator.o $
+    obj/content/common/input/content_common.web_input_event_traits.o $
+    obj/content/common/input/content_common.web_touch_event_traits.o $
+    obj/content/common/content_common.inter_process_time_ticks_converter.o $
+    obj/content/common/mac/content_common.attributed_string_coder.o $
+    obj/content/common/mac/content_common.font_descriptor.o $
+    obj/content/common/mac/content_common.font_loader.o $
+    obj/content/common/media/content_common.media_param_traits.o $
+    obj/content/common/media/content_common.media_stream_options.o $
+    obj/content/common/content_common.message_router.o $
+    obj/content/common/mojo/content_common.channel_init.o $
+    obj/content/common/mojo/content_common.service_registry_for_route.o $
+    obj/content/common/mojo/content_common.service_registry_impl.o $
+    obj/content/common/content_common.navigation_params.o $
+    obj/content/common/net/content_common.url_fetcher.o $
+    obj/content/common/net/content_common.url_request_user_data.o $
+    obj/content/common/content_common.one_writer_seqlock.o $
+    obj/content/common/content_common.origin_util.o $
+    obj/content/common/content_common.page_state_serialization.o $
+    obj/content/common/content_common.page_zoom.o $
+    obj/content/common/content_common.pepper_file_util.o $
+    obj/content/common/content_common.pepper_plugin_list.o $
+    obj/content/common/content_common.pepper_renderer_instance_data.o $
+    obj/content/common/content_common.plugin_list.o $
+    obj/content/common/content_common.plugin_list_mac.o $
+    obj/content/common/content_common.process_type.o $
+    obj/content/common/content_common.resource_messages.o $
+    obj/content/common/content_common.resource_request_body.o $
+    obj/content/common/content_common.sandbox_init_mac.o $
+    obj/content/common/content_common.sandbox_mac.o $
+    obj/content/common/content_common.sandbox_util.o $
+    obj/content/common/content_common.savable_url_schemes.o $
+    obj/content/common/content_common.service_port_type_converters.o $
+    obj/content/common/service_worker/content_common.service_worker_client_info.o $
+    obj/content/common/service_worker/content_common.service_worker_status_code.o $
+    obj/content/common/service_worker/content_common.service_worker_types.o $
+    obj/content/common/service_worker/content_common.service_worker_type_converters.o $
+    obj/content/common/service_worker/content_common.service_worker_utils.o $
+    obj/content/common/content_common.set_process_title.o $
+    obj/content/common/content_common.site_isolation_policy.o $
+    obj/content/common/content_common.ssl_status_serialization.o $
+    obj/content/common/content_common.swapped_out_messages.o $
+    obj/content/common/content_common.url_schemes.o $
+    obj/content/common/content_common.user_agent.o $
+    obj/content/common/content_common.webplugin_geometry.o $
+    obj/content/common/content_common.websocket.o $
+    obj/content/common/gpu/client/content_common.gpu_memory_buffer_impl_io_surface.o $
+    obj/content/common/gpu/content_common.gpu_memory_buffer_factory_io_surface.o $
+    obj/content/common/gpu/media/content_common.vt_video_decode_accelerator.o $
+    obj/content/public/common/content_common.webrtc_ip_handling_policy.o || $
+    obj/content/content_common.actions_rules_copies.stamp

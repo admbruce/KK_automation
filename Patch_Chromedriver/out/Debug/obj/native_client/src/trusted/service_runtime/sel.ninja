@@ -1,0 +1,371 @@
+rule sel_target_mig_exc_generation_91547c1868c0f87a5f8669a75314e477
+  command = cd ../../native_client/src/trusted/service_runtime; export $
+      BUILT_FRAMEWORKS_DIR=/Users/superadmin/tmp/src/out/Debug; export $
+      BUILT_PRODUCTS_DIR=/Users/superadmin/tmp/src/out/Debug; export $
+      CONFIGURATION=Debug; export EXECUTABLE_NAME=libsel.a; export $
+      EXECUTABLE_PATH=libsel.a; export FULL_PRODUCT_NAME=libsel.a; export $
+      MACH_O_TYPE=staticlib; export PRODUCT_NAME=sel; export $
+      PRODUCT_TYPE=com.apple.product-type.library.static; export $
+      SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk; $
+      export $
+      SRCROOT=/Users/superadmin/tmp/src/out/Debug/../../native_client/src/trusted/service_runtime; $
+      export SOURCE_ROOT="$${SRCROOT}"; export $
+      TARGET_BUILD_DIR=/Users/superadmin/tmp/src/out/Debug; export $
+      TEMP_DIR="$${TMPDIR}";python osx/run_mig.py $
+      /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/mach/exc.defs $
+      ../../../../out/Debug/obj/native_client/src/trusted/service_runtime/sel.gen/native_client/src/trusted/service_runtime/nacl_exc.h $
+      ../../../../out/Debug/obj/native_client/src/trusted/service_runtime/sel.gen/native_client/src/trusted/service_runtime/nacl_exc_server.c
+  description = ACTION Generating mig plumbing for exc.defs
+  restat = 1
+
+build $
+    obj/native_client/src/trusted/service_runtime/sel.gen/native_client/src/trusted/service_runtime/nacl_exc.h $
+    obj/native_client/src/trusted/service_runtime/sel.gen/native_client/src/trusted/service_runtime/nacl_exc_server.c: $
+    sel_target_mig_exc_generation_91547c1868c0f87a5f8669a75314e477 $
+    ../../native_client/src/trusted/service_runtime/osx/run_mig.py $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/mach/exc.defs $
+    || libnccopy_x86_64.a
+
+build $
+    obj/native_client/src/trusted/service_runtime/sel.actions_rules_copies.stamp: $
+    stamp $
+    obj/native_client/src/trusted/service_runtime/sel.gen/native_client/src/trusted/service_runtime/nacl_exc.h $
+    obj/native_client/src/trusted/service_runtime/sel.gen/native_client/src/trusted/service_runtime/nacl_exc_server.c
+
+defines = -DV8_DEPRECATION_WARNINGS -DCLD_VERSION=2 $
+    -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORE=0 -DCHROMIUM_BUILD $
+    -DCR_CLANG_REVISION=254049-1 -DUSE_LIBJPEG_TURBO=1 $
+    -DENABLE_ONE_CLICK_SIGNIN -DENABLE_PRE_SYNC_BACKUP -DENABLE_WEBRTC=1 $
+    -DENABLE_MEDIA_ROUTER=1 -DENABLE_PEPPER_CDMS $
+    -DENABLE_CONFIGURATION_POLICY -DENABLE_NOTIFICATIONS -DENABLE_HIDPI=1 $
+    -DDONT_EMBED_BUILD_METADATA -DFIELDTRIAL_TESTING_ENABLED $
+    -DENABLE_TASK_MANAGER=1 -DENABLE_EXTENSIONS=1 -DENABLE_PDF=1 $
+    -DENABLE_PLUGIN_INSTALLATION=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_THEMES=1 -DENABLE_AUTOFILL_DIALOG=1 $
+    -DENABLE_BACKGROUND=1 -DENABLE_PRINTING=1 -DENABLE_BASIC_PRINTING=1 $
+    -DENABLE_PRINT_PREVIEW=1 -DENABLE_SPELLCHECK=1 $
+    -DUSE_BROWSER_SPELLCHECKER=1 -DENABLE_CAPTIVE_PORTAL_DETECTION=1 $
+    -DENABLE_APP_LIST=1 -DENABLE_SETTINGS_APP=1 -DENABLE_SUPERVISED_USERS=1 $
+    -DENABLE_SERVICE_DISCOVERY=1 -DV8_USE_EXTERNAL_STARTUP_DATA $
+    -DFULL_SAFE_BROWSING -DSAFE_BROWSING_CSD -DSAFE_BROWSING_DB_LOCAL $
+    -DUSE_LIBPCI=1 -DUSE_OPENSSL=1 -DDYNAMIC_ANNOTATIONS_ENABLED=1 $
+    -DWTF_USE_DYNAMIC_ANNOTATIONS=1
+includes = -Igen -I../../native_client/src/third_party -I../.. $
+    -Iobj/native_client/src/trusted/service_runtime/sel.gen
+cflags = -isysroot $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk $
+    -O0 -fvisibility=hidden -Wnewline-eof -mmacosx-version-min=10.6 -arch $
+    x86_64 -Wendif-labels -Wno-unused-parameter $
+    -Wno-missing-field-initializers -Wno-selector-type-mismatch $
+    -Wpartial-availability -Wheader-hygiene -Wno-char-subscripts $
+    -Wno-unneeded-internal-declaration -Wno-covered-switch-default $
+    -Wstring-conversion -Wno-c++11-narrowing -Wno-deprecated-register $
+    -Wno-inconsistent-missing-override -Wno-shift-negative-value $
+    -Wno-bitfield-width -Wno-unused-variable
+cflags_c = -std=c99 -Xclang -load -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing -fstack-protector-all $
+    -Wno-undefined-bool-conversion -Wno-tautological-undefined-compare
+cflags_cc = -std=c++11 -stdlib=libc++ -fno-rtti -fno-exceptions $
+    -fvisibility-inlines-hidden -fno-threadsafe-statics -Xclang -load $
+    -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing -fstack-protector-all $
+    -Wno-undefined-bool-conversion -Wno-tautological-undefined-compare
+cflags_objc = $cflags_c -Wobjc-missing-property-synthesis
+cflags_objcc = $cflags_cc -Wobjc-missing-property-synthesis $
+    -fobjc-call-cxx-cdtors
+arflags = 
+
+build $
+    obj/native_client/src/trusted/service_runtime/obj/native_client/src/trusted/service_runtime/sel.gen/native_client/src/trusted/service_runtime/sel.nacl_exc_server.o: $
+    cc $
+    obj/native_client/src/trusted/service_runtime/sel.gen/native_client/src/trusted/service_runtime/nacl_exc_server.c $
+    || $
+    obj/native_client/src/trusted/service_runtime/sel.actions_rules_copies.stamp
+build obj/native_client/src/trusted/service_runtime/sel.dyn_array.o: cc $
+    ../../native_client/src/trusted/service_runtime/dyn_array.c || $
+    obj/native_client/src/trusted/service_runtime/sel.actions_rules_copies.stamp
+build obj/native_client/src/trusted/service_runtime/sel.elf_util.o: cc $
+    ../../native_client/src/trusted/service_runtime/elf_util.c || $
+    obj/native_client/src/trusted/service_runtime/sel.actions_rules_copies.stamp
+build obj/native_client/src/trusted/service_runtime/sel.load_file.o: cc $
+    ../../native_client/src/trusted/service_runtime/load_file.c || $
+    obj/native_client/src/trusted/service_runtime/sel.actions_rules_copies.stamp
+build obj/native_client/src/trusted/service_runtime/sel.nacl_all_modules.o: $
+    cc ../../native_client/src/trusted/service_runtime/nacl_all_modules.c $
+    || $
+    obj/native_client/src/trusted/service_runtime/sel.actions_rules_copies.stamp
+build obj/native_client/src/trusted/service_runtime/sel.nacl_app_thread.o: $
+    cc ../../native_client/src/trusted/service_runtime/nacl_app_thread.c || $
+    obj/native_client/src/trusted/service_runtime/sel.actions_rules_copies.stamp
+build obj/native_client/src/trusted/service_runtime/sel.nacl_copy.o: cc $
+    ../../native_client/src/trusted/service_runtime/nacl_copy.c || $
+    obj/native_client/src/trusted/service_runtime/sel.actions_rules_copies.stamp
+build $
+    obj/native_client/src/trusted/service_runtime/sel.nacl_desc_effector_ldr.o: $
+    cc $
+    ../../native_client/src/trusted/service_runtime/nacl_desc_effector_ldr.c $
+    || $
+    obj/native_client/src/trusted/service_runtime/sel.actions_rules_copies.stamp
+build obj/native_client/src/trusted/service_runtime/sel.nacl_error_gio.o: $
+    cc ../../native_client/src/trusted/service_runtime/nacl_error_gio.c || $
+    obj/native_client/src/trusted/service_runtime/sel.actions_rules_copies.stamp
+build $
+    obj/native_client/src/trusted/service_runtime/sel.nacl_error_log_hook.o: $
+    cc $
+    ../../native_client/src/trusted/service_runtime/nacl_error_log_hook.c $
+    || $
+    obj/native_client/src/trusted/service_runtime/sel.actions_rules_copies.stamp
+build obj/native_client/src/trusted/service_runtime/sel.nacl_globals.o: cc $
+    ../../native_client/src/trusted/service_runtime/nacl_globals.c || $
+    obj/native_client/src/trusted/service_runtime/sel.actions_rules_copies.stamp
+build obj/native_client/src/trusted/service_runtime/sel.nacl_resource.o: cc $
+    ../../native_client/src/trusted/service_runtime/nacl_resource.c || $
+    obj/native_client/src/trusted/service_runtime/sel.actions_rules_copies.stamp
+build $
+    obj/native_client/src/trusted/service_runtime/sel.nacl_secure_service.o: $
+    cc $
+    ../../native_client/src/trusted/service_runtime/nacl_secure_service.c $
+    || $
+    obj/native_client/src/trusted/service_runtime/sel.actions_rules_copies.stamp
+build $
+    obj/native_client/src/trusted/service_runtime/sel.nacl_signal_common.o: $
+    cc ../../native_client/src/trusted/service_runtime/nacl_signal_common.c $
+    || $
+    obj/native_client/src/trusted/service_runtime/sel.actions_rules_copies.stamp
+build $
+    obj/native_client/src/trusted/service_runtime/sel.nacl_stack_safety.o: $
+    cc ../../native_client/src/trusted/service_runtime/nacl_stack_safety.c $
+    || $
+    obj/native_client/src/trusted/service_runtime/sel.actions_rules_copies.stamp
+build $
+    obj/native_client/src/trusted/service_runtime/sel.nacl_syscall_common.o: $
+    cc $
+    ../../native_client/src/trusted/service_runtime/nacl_syscall_common.c $
+    || $
+    obj/native_client/src/trusted/service_runtime/sel.actions_rules_copies.stamp
+build $
+    obj/native_client/src/trusted/service_runtime/sel.nacl_syscall_hook.o: $
+    cc ../../native_client/src/trusted/service_runtime/nacl_syscall_hook.c $
+    || $
+    obj/native_client/src/trusted/service_runtime/sel.actions_rules_copies.stamp
+build $
+    obj/native_client/src/trusted/service_runtime/sel.nacl_syscall_list.o: $
+    cc ../../native_client/src/trusted/service_runtime/nacl_syscall_list.c $
+    || $
+    obj/native_client/src/trusted/service_runtime/sel.actions_rules_copies.stamp
+build obj/native_client/src/trusted/service_runtime/sel.nacl_text.o: cc $
+    ../../native_client/src/trusted/service_runtime/nacl_text.c || $
+    obj/native_client/src/trusted/service_runtime/sel.actions_rules_copies.stamp
+build $
+    obj/native_client/src/trusted/service_runtime/sel.nacl_valgrind_hooks.o: $
+    cc $
+    ../../native_client/src/trusted/service_runtime/nacl_valgrind_hooks.c $
+    || $
+    obj/native_client/src/trusted/service_runtime/sel.actions_rules_copies.stamp
+build obj/native_client/src/trusted/service_runtime/sel.sel_addrspace.o: cc $
+    ../../native_client/src/trusted/service_runtime/sel_addrspace.c || $
+    obj/native_client/src/trusted/service_runtime/sel.actions_rules_copies.stamp
+build obj/native_client/src/trusted/service_runtime/sel.sel_ldr.o: cc $
+    ../../native_client/src/trusted/service_runtime/sel_ldr.c || $
+    obj/native_client/src/trusted/service_runtime/sel.actions_rules_copies.stamp
+build obj/native_client/src/trusted/service_runtime/sel.sel_ldr_standard.o: $
+    cc ../../native_client/src/trusted/service_runtime/sel_ldr_standard.c $
+    || $
+    obj/native_client/src/trusted/service_runtime/sel.actions_rules_copies.stamp
+build $
+    obj/native_client/src/trusted/service_runtime/sel.sel_ldr_thread_interface.o: $
+    cc $
+    ../../native_client/src/trusted/service_runtime/sel_ldr_thread_interface.c $
+    || $
+    obj/native_client/src/trusted/service_runtime/sel.actions_rules_copies.stamp
+build obj/native_client/src/trusted/service_runtime/sel.sel_main_chrome.o: $
+    cc ../../native_client/src/trusted/service_runtime/sel_main_chrome.c || $
+    obj/native_client/src/trusted/service_runtime/sel.actions_rules_copies.stamp
+build obj/native_client/src/trusted/service_runtime/sel.sel_main_common.o: $
+    cc ../../native_client/src/trusted/service_runtime/sel_main_common.c || $
+    obj/native_client/src/trusted/service_runtime/sel.actions_rules_copies.stamp
+build obj/native_client/src/trusted/service_runtime/sel.sel_mem.o: cc $
+    ../../native_client/src/trusted/service_runtime/sel_mem.c || $
+    obj/native_client/src/trusted/service_runtime/sel.actions_rules_copies.stamp
+build obj/native_client/src/trusted/service_runtime/sel.sel_qualify.o: cc $
+    ../../native_client/src/trusted/service_runtime/sel_qualify.c || $
+    obj/native_client/src/trusted/service_runtime/sel.actions_rules_copies.stamp
+build $
+    obj/native_client/src/trusted/service_runtime/sel.sel_validate_image.o: $
+    cc ../../native_client/src/trusted/service_runtime/sel_validate_image.c $
+    || $
+    obj/native_client/src/trusted/service_runtime/sel.actions_rules_copies.stamp
+build obj/native_client/src/trusted/service_runtime/sel.sys_clock.o: cc $
+    ../../native_client/src/trusted/service_runtime/sys_clock.c || $
+    obj/native_client/src/trusted/service_runtime/sel.actions_rules_copies.stamp
+build obj/native_client/src/trusted/service_runtime/sel.sys_exception.o: cc $
+    ../../native_client/src/trusted/service_runtime/sys_exception.c || $
+    obj/native_client/src/trusted/service_runtime/sel.actions_rules_copies.stamp
+build obj/native_client/src/trusted/service_runtime/sel.sys_fdio.o: cc $
+    ../../native_client/src/trusted/service_runtime/sys_fdio.c || $
+    obj/native_client/src/trusted/service_runtime/sel.actions_rules_copies.stamp
+build obj/native_client/src/trusted/service_runtime/sel.sys_filename.o: cc $
+    ../../native_client/src/trusted/service_runtime/sys_filename.c || $
+    obj/native_client/src/trusted/service_runtime/sel.actions_rules_copies.stamp
+build obj/native_client/src/trusted/service_runtime/sel.sys_futex.o: cc $
+    ../../native_client/src/trusted/service_runtime/sys_futex.c || $
+    obj/native_client/src/trusted/service_runtime/sel.actions_rules_copies.stamp
+build obj/native_client/src/trusted/service_runtime/sel.sys_imc.o: cc $
+    ../../native_client/src/trusted/service_runtime/sys_imc.c || $
+    obj/native_client/src/trusted/service_runtime/sel.actions_rules_copies.stamp
+build $
+    obj/native_client/src/trusted/service_runtime/sel.sys_list_mappings.o: $
+    cc ../../native_client/src/trusted/service_runtime/sys_list_mappings.c $
+    || $
+    obj/native_client/src/trusted/service_runtime/sel.actions_rules_copies.stamp
+build obj/native_client/src/trusted/service_runtime/sel.sys_memory.o: cc $
+    ../../native_client/src/trusted/service_runtime/sys_memory.c || $
+    obj/native_client/src/trusted/service_runtime/sel.actions_rules_copies.stamp
+build obj/native_client/src/trusted/service_runtime/sel.sys_parallel_io.o: $
+    cc ../../native_client/src/trusted/service_runtime/sys_parallel_io.c || $
+    obj/native_client/src/trusted/service_runtime/sel.actions_rules_copies.stamp
+build obj/native_client/src/trusted/service_runtime/sel.sys_random.o: cc $
+    ../../native_client/src/trusted/service_runtime/sys_random.c || $
+    obj/native_client/src/trusted/service_runtime/sel.actions_rules_copies.stamp
+build $
+    obj/native_client/src/trusted/service_runtime/sel.thread_suspension_common.o: $
+    cc $
+    ../../native_client/src/trusted/service_runtime/thread_suspension_common.c $
+    || $
+    obj/native_client/src/trusted/service_runtime/sel.actions_rules_copies.stamp
+build $
+    obj/native_client/src/trusted/service_runtime/sel.thread_suspension_unwind.o: $
+    cc $
+    ../../native_client/src/trusted/service_runtime/thread_suspension_unwind.c $
+    || $
+    obj/native_client/src/trusted/service_runtime/sel.actions_rules_copies.stamp
+build obj/native_client/src/trusted/service_runtime/osx/sel.crash_filter.o: $
+    cc ../../native_client/src/trusted/service_runtime/osx/crash_filter.c $
+    || $
+    obj/native_client/src/trusted/service_runtime/sel.actions_rules_copies.stamp
+build $
+    obj/native_client/src/trusted/service_runtime/osx/sel.mach_exception_handler.o: $
+    cc $
+    ../../native_client/src/trusted/service_runtime/osx/mach_exception_handler.c $
+    || $
+    obj/native_client/src/trusted/service_runtime/sel.actions_rules_copies.stamp
+build $
+    obj/native_client/src/trusted/service_runtime/osx/sel.mach_thread_map.o: $
+    cc $
+    ../../native_client/src/trusted/service_runtime/osx/mach_thread_map.c $
+    || $
+    obj/native_client/src/trusted/service_runtime/sel.actions_rules_copies.stamp
+build obj/native_client/src/trusted/service_runtime/osx/sel.nacl_ldt.o: cc $
+    ../../native_client/src/trusted/service_runtime/osx/nacl_ldt.c || $
+    obj/native_client/src/trusted/service_runtime/sel.actions_rules_copies.stamp
+build $
+    obj/native_client/src/trusted/service_runtime/osx/sel.nacl_thread_nice.o: $
+    cc $
+    ../../native_client/src/trusted/service_runtime/osx/nacl_thread_nice.c $
+    || $
+    obj/native_client/src/trusted/service_runtime/sel.actions_rules_copies.stamp
+build $
+    obj/native_client/src/trusted/service_runtime/osx/sel.outer_sandbox.o: $
+    cc ../../native_client/src/trusted/service_runtime/osx/outer_sandbox.c $
+    || $
+    obj/native_client/src/trusted/service_runtime/sel.actions_rules_copies.stamp
+build $
+    obj/native_client/src/trusted/service_runtime/osx/sel.thread_suspension.o: $
+    cc $
+    ../../native_client/src/trusted/service_runtime/osx/thread_suspension.c $
+    || $
+    obj/native_client/src/trusted/service_runtime/sel.actions_rules_copies.stamp
+build $
+    obj/native_client/src/trusted/service_runtime/posix/sel.addrspace_teardown.o: $
+    cc $
+    ../../native_client/src/trusted/service_runtime/posix/addrspace_teardown.c $
+    || $
+    obj/native_client/src/trusted/service_runtime/sel.actions_rules_copies.stamp
+build obj/native_client/src/trusted/service_runtime/posix/sel.sel_memory.o: $
+    cc ../../native_client/src/trusted/service_runtime/posix/sel_memory.c $
+    || $
+    obj/native_client/src/trusted/service_runtime/sel.actions_rules_copies.stamp
+build $
+    obj/native_client/src/trusted/service_runtime/posix/x86/sel.sel_segments.o: $
+    cc $
+    ../../native_client/src/trusted/service_runtime/posix/x86/sel_segments.c $
+    || $
+    obj/native_client/src/trusted/service_runtime/sel.actions_rules_copies.stamp
+build $
+    obj/native_client/src/trusted/service_runtime/posix/sel.nacl_signal_stack.o: $
+    cc $
+    ../../native_client/src/trusted/service_runtime/posix/nacl_signal_stack.c $
+    || $
+    obj/native_client/src/trusted/service_runtime/sel.actions_rules_copies.stamp
+build $
+    obj/native_client/src/trusted/service_runtime/posix/sel.sel_addrspace_posix.o: $
+    cc $
+    ../../native_client/src/trusted/service_runtime/posix/sel_addrspace_posix.c $
+    || $
+    obj/native_client/src/trusted/service_runtime/sel.actions_rules_copies.stamp
+build obj/native_client/src/trusted/service_runtime/generic/sel.vm_hole.o: $
+    cc ../../native_client/src/trusted/service_runtime/generic/vm_hole.c || $
+    obj/native_client/src/trusted/service_runtime/sel.actions_rules_copies.stamp
+
+build libsel.a: alink $
+    obj/native_client/src/trusted/service_runtime/obj/native_client/src/trusted/service_runtime/sel.gen/native_client/src/trusted/service_runtime/sel.nacl_exc_server.o $
+    obj/native_client/src/trusted/service_runtime/sel.dyn_array.o $
+    obj/native_client/src/trusted/service_runtime/sel.elf_util.o $
+    obj/native_client/src/trusted/service_runtime/sel.load_file.o $
+    obj/native_client/src/trusted/service_runtime/sel.nacl_all_modules.o $
+    obj/native_client/src/trusted/service_runtime/sel.nacl_app_thread.o $
+    obj/native_client/src/trusted/service_runtime/sel.nacl_copy.o $
+    obj/native_client/src/trusted/service_runtime/sel.nacl_desc_effector_ldr.o $
+    obj/native_client/src/trusted/service_runtime/sel.nacl_error_gio.o $
+    obj/native_client/src/trusted/service_runtime/sel.nacl_error_log_hook.o $
+    obj/native_client/src/trusted/service_runtime/sel.nacl_globals.o $
+    obj/native_client/src/trusted/service_runtime/sel.nacl_resource.o $
+    obj/native_client/src/trusted/service_runtime/sel.nacl_secure_service.o $
+    obj/native_client/src/trusted/service_runtime/sel.nacl_signal_common.o $
+    obj/native_client/src/trusted/service_runtime/sel.nacl_stack_safety.o $
+    obj/native_client/src/trusted/service_runtime/sel.nacl_syscall_common.o $
+    obj/native_client/src/trusted/service_runtime/sel.nacl_syscall_hook.o $
+    obj/native_client/src/trusted/service_runtime/sel.nacl_syscall_list.o $
+    obj/native_client/src/trusted/service_runtime/sel.nacl_text.o $
+    obj/native_client/src/trusted/service_runtime/sel.nacl_valgrind_hooks.o $
+    obj/native_client/src/trusted/service_runtime/sel.sel_addrspace.o $
+    obj/native_client/src/trusted/service_runtime/sel.sel_ldr.o $
+    obj/native_client/src/trusted/service_runtime/sel.sel_ldr_standard.o $
+    obj/native_client/src/trusted/service_runtime/sel.sel_ldr_thread_interface.o $
+    obj/native_client/src/trusted/service_runtime/sel.sel_main_chrome.o $
+    obj/native_client/src/trusted/service_runtime/sel.sel_main_common.o $
+    obj/native_client/src/trusted/service_runtime/sel.sel_mem.o $
+    obj/native_client/src/trusted/service_runtime/sel.sel_qualify.o $
+    obj/native_client/src/trusted/service_runtime/sel.sel_validate_image.o $
+    obj/native_client/src/trusted/service_runtime/sel.sys_clock.o $
+    obj/native_client/src/trusted/service_runtime/sel.sys_exception.o $
+    obj/native_client/src/trusted/service_runtime/sel.sys_fdio.o $
+    obj/native_client/src/trusted/service_runtime/sel.sys_filename.o $
+    obj/native_client/src/trusted/service_runtime/sel.sys_futex.o $
+    obj/native_client/src/trusted/service_runtime/sel.sys_imc.o $
+    obj/native_client/src/trusted/service_runtime/sel.sys_list_mappings.o $
+    obj/native_client/src/trusted/service_runtime/sel.sys_memory.o $
+    obj/native_client/src/trusted/service_runtime/sel.sys_parallel_io.o $
+    obj/native_client/src/trusted/service_runtime/sel.sys_random.o $
+    obj/native_client/src/trusted/service_runtime/sel.thread_suspension_common.o $
+    obj/native_client/src/trusted/service_runtime/sel.thread_suspension_unwind.o $
+    obj/native_client/src/trusted/service_runtime/osx/sel.crash_filter.o $
+    obj/native_client/src/trusted/service_runtime/osx/sel.mach_exception_handler.o $
+    obj/native_client/src/trusted/service_runtime/osx/sel.mach_thread_map.o $
+    obj/native_client/src/trusted/service_runtime/osx/sel.nacl_ldt.o $
+    obj/native_client/src/trusted/service_runtime/osx/sel.nacl_thread_nice.o $
+    obj/native_client/src/trusted/service_runtime/osx/sel.outer_sandbox.o $
+    obj/native_client/src/trusted/service_runtime/osx/sel.thread_suspension.o $
+    obj/native_client/src/trusted/service_runtime/posix/sel.addrspace_teardown.o $
+    obj/native_client/src/trusted/service_runtime/posix/sel.sel_memory.o $
+    obj/native_client/src/trusted/service_runtime/posix/x86/sel.sel_segments.o $
+    obj/native_client/src/trusted/service_runtime/posix/sel.nacl_signal_stack.o $
+    obj/native_client/src/trusted/service_runtime/posix/sel.sel_addrspace_posix.o $
+    obj/native_client/src/trusted/service_runtime/generic/sel.vm_hole.o || $
+    obj/native_client/src/trusted/service_runtime/sel.actions_rules_copies.stamp

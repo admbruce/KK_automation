@@ -1,0 +1,123 @@
+build $
+    obj/third_party/crashpad/crashpad/test/crashpad_test_test.actions_depends.stamp: $
+    stamp crashpad_test_test_multiprocess_exec_test_child $
+    libcrashpad_test.a libcrashpad_compat.a libgmock.a libgmock_main.a $
+    libgtest.a libbase.a libcrashpad_util.a libapple_cctools.a libgtest.a $
+    libbase.a libbase_static.a liballocator_extension_thunks.a $
+    libmodp_b64.a libdynamic_annotations.a libevent.a libgmock.a $
+    libgmock_main.a
+
+defines = -DV8_DEPRECATION_WARNINGS -DCLD_VERSION=2 $
+    -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORE=0 -DCHROMIUM_BUILD $
+    -DCR_CLANG_REVISION=254049-1 -DUSE_LIBJPEG_TURBO=1 $
+    -DENABLE_ONE_CLICK_SIGNIN -DENABLE_PRE_SYNC_BACKUP -DENABLE_WEBRTC=1 $
+    -DENABLE_MEDIA_ROUTER=1 -DENABLE_PEPPER_CDMS $
+    -DENABLE_CONFIGURATION_POLICY -DENABLE_NOTIFICATIONS -DENABLE_HIDPI=1 $
+    -DDONT_EMBED_BUILD_METADATA -DFIELDTRIAL_TESTING_ENABLED $
+    -DENABLE_TASK_MANAGER=1 -DENABLE_EXTENSIONS=1 -DENABLE_PDF=1 $
+    -DENABLE_PLUGIN_INSTALLATION=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_THEMES=1 -DENABLE_AUTOFILL_DIALOG=1 $
+    -DENABLE_BACKGROUND=1 -DENABLE_PRINTING=1 -DENABLE_BASIC_PRINTING=1 $
+    -DENABLE_PRINT_PREVIEW=1 -DENABLE_SPELLCHECK=1 $
+    -DUSE_BROWSER_SPELLCHECKER=1 -DENABLE_CAPTIVE_PORTAL_DETECTION=1 $
+    -DENABLE_APP_LIST=1 -DENABLE_SETTINGS_APP=1 -DENABLE_SUPERVISED_USERS=1 $
+    -DENABLE_SERVICE_DISCOVERY=1 -DV8_USE_EXTERNAL_STARTUP_DATA $
+    -DFULL_SAFE_BROWSING -DSAFE_BROWSING_CSD -DSAFE_BROWSING_DB_LOCAL $
+    -DGTEST_HAS_POSIX_RE=0 -DGTEST_LANG_CXX11=0 -DUNIT_TEST $
+    -DGTEST_HAS_RTTI=0 -DUSE_LIBPCI=1 -DUSE_OPENSSL=1 $
+    -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -DNDEBUG -DNVALGRIND $
+    -DDYNAMIC_ANNOTATIONS_ENABLED=0 -D_FORTIFY_SOURCE=2
+includes = -Igen -I../../third_party/crashpad/crashpad $
+    -I../../third_party/crashpad/crashpad/compat/mac $
+    -I../../third_party/crashpad/crashpad/compat/non_win $
+    -I../../testing/gmock/include -I../../testing/gtest/include -I../..
+cflags = -isysroot $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk $
+    -O2 -fvisibility=hidden -Werror -Wnewline-eof -mmacosx-version-min=10.6 $
+    -arch x86_64 -Wall -Wendif-labels -Wextra -Wno-unused-parameter $
+    -Wno-missing-field-initializers -Wno-selector-type-mismatch $
+    -Wpartial-availability -Wheader-hygiene -Wno-char-subscripts $
+    -Wno-unneeded-internal-declaration -Wno-covered-switch-default $
+    -Wstring-conversion -Wno-c++11-narrowing -Wno-deprecated-register $
+    -Wno-inconsistent-missing-override -Wno-shift-negative-value $
+    -Wno-bitfield-width
+cflags_c = -std=c99 -Xclang -load -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing
+cflags_cc = -std=c++11 -stdlib=libc++ -fno-rtti -fno-exceptions $
+    -fvisibility-inlines-hidden -fno-threadsafe-statics -Xclang -load $
+    -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing
+cflags_objc = $cflags_c -Wobjc-missing-property-synthesis
+cflags_objcc = $cflags_cc -Wobjc-missing-property-synthesis $
+    -fobjc-call-cxx-cdtors
+arflags = 
+
+build $
+    obj/third_party/crashpad/crashpad/test/mac/crashpad_test_test.mach_multiprocess_test.o: $
+    cxx $
+    ../../third_party/crashpad/crashpad/test/mac/mach_multiprocess_test.cc $
+    || $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.actions_rules_copies.stamp
+build $
+    obj/third_party/crashpad/crashpad/test/crashpad_test_test.multiprocess_exec_test.o: $
+    cxx ../../third_party/crashpad/crashpad/test/multiprocess_exec_test.cc $
+    || $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.actions_rules_copies.stamp
+build $
+    obj/third_party/crashpad/crashpad/test/crashpad_test_test.multiprocess_posix_test.o: $
+    cxx ../../third_party/crashpad/crashpad/test/multiprocess_posix_test.cc $
+    || $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.actions_rules_copies.stamp
+build $
+    obj/third_party/crashpad/crashpad/test/crashpad_test_test.paths_test.o: $
+    cxx ../../third_party/crashpad/crashpad/test/paths_test.cc || $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.actions_rules_copies.stamp
+build $
+    obj/third_party/crashpad/crashpad/test/crashpad_test_test.scoped_temp_dir_test.o: $
+    cxx ../../third_party/crashpad/crashpad/test/scoped_temp_dir_test.cc || $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.actions_rules_copies.stamp
+
+ldflags = -Wl,-search_paths_first -Wl,-pie -Wl,-dead_strip $
+    -mmacosx-version-min=10.6 -isysroot $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk $
+    -arch x86_64 -L. -stdlib=libc++
+libs = '-L../../third_party/libc++-static' $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/lib/libbsm.tbd $
+    -framework Foundation -framework AppKit -framework ApplicationServices $
+    -framework Carbon -framework CoreFoundation -framework IOKit -framework $
+    Security
+build crashpad_test_test: link $
+    obj/third_party/crashpad/crashpad/test/mac/crashpad_test_test.mach_multiprocess_test.o $
+    obj/third_party/crashpad/crashpad/test/crashpad_test_test.multiprocess_exec_test.o $
+    obj/third_party/crashpad/crashpad/test/crashpad_test_test.multiprocess_posix_test.o $
+    obj/third_party/crashpad/crashpad/test/crashpad_test_test.paths_test.o $
+    obj/third_party/crashpad/crashpad/test/crashpad_test_test.scoped_temp_dir_test.o $
+    libcrashpad_test.a libcrashpad_compat.a libcrashpad_util.a $
+    libapple_cctools.a libgtest.a libbase.a libbase_static.a $
+    liballocator_extension_thunks.a libmodp_b64.a libdynamic_annotations.a $
+    libevent.a libgmock.a libgmock_main.a | $
+    crashpad_test_test_multiprocess_exec_test_child libgmock_main.a $
+    libgmock.a libbase.a libgtest.a
+  ld = $ldxx
+  postbuilds = $ && (export $
+      BUILT_FRAMEWORKS_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      BUILT_PRODUCTS_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      CONFIGURATION=Release; export EXECUTABLE_NAME=crashpad_test_test; $
+      export EXECUTABLE_PATH=crashpad_test_test; export $
+      FULL_PRODUCT_NAME=crashpad_test_test; export $
+      PRODUCT_NAME=crashpad_test_test; export $
+      PRODUCT_TYPE=com.apple.product-type.tool; export $
+      SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk; $
+      export $
+      SRCROOT=/Users/superadmin/tmp/src/out/Release/../../third_party/crashpad/crashpad/test; $
+      export SOURCE_ROOT="$${SRCROOT}"; export $
+      TARGET_BUILD_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      TEMP_DIR="$${TMPDIR}"; (cd ../../third_party/crashpad/crashpad/test $
+      && ../../../../build/mac/change_mach_o_flags_from_xcode.sh); G=$$?; $
+      ((exit $$G) || rm -rf crashpad_test_test) && exit $$G)

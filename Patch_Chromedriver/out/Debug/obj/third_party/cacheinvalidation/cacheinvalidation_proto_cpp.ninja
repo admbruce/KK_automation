@@ -1,0 +1,216 @@
+rule $
+    cacheinvalidation_proto_cpp_target_genproto_e6801438cfc1103155eddba4e7f399bb
+  command = cd ../../third_party/cacheinvalidation; export $
+      BUILT_FRAMEWORKS_DIR=/Users/superadmin/tmp/src/out/Debug; export $
+      BUILT_PRODUCTS_DIR=/Users/superadmin/tmp/src/out/Debug; export $
+      CONFIGURATION=Debug; export $
+      EXECUTABLE_NAME=libcacheinvalidation_proto_cpp.a; export $
+      EXECUTABLE_PATH=libcacheinvalidation_proto_cpp.a; export $
+      FULL_PRODUCT_NAME=libcacheinvalidation_proto_cpp.a; export $
+      MACH_O_TYPE=staticlib; export $
+      PRODUCT_NAME=cacheinvalidation_proto_cpp; export $
+      PRODUCT_TYPE=com.apple.product-type.library.static; export $
+      SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk; $
+      export $
+      SRCROOT=/Users/superadmin/tmp/src/out/Debug/../../third_party/cacheinvalidation; $
+      export SOURCE_ROOT="$${SRCROOT}"; export $
+      TARGET_BUILD_DIR=/Users/superadmin/tmp/src/out/Debug; export $
+      TEMP_DIR="$${TMPDIR}";python $
+      ../../tools/protoc_wrapper/protoc_wrapper.py --include "" --protobuf $
+      "../../out/Debug/gen/protoc_out/google/cacheinvalidation/${root}.pb.h" $
+      --proto-in-dir src/google/cacheinvalidation --proto-in-file $
+      "${root}${ext}" "--use-system-protobuf=0" -- ../../out/Debug/protoc $
+      --cpp_out ../../out/Debug/gen/protoc_out/google/cacheinvalidation $
+      --python_out ../../out/Debug/pyproto/google/cacheinvalidation
+  description = RULE Generating C++ and Python code from ${source}
+  restat = 1
+
+build $
+    obj/third_party/cacheinvalidation/cacheinvalidation_proto_cpp.genproto.stamp: $
+    stamp ../../tools/protoc_wrapper/protoc_wrapper.py protoc || protoc
+
+build pyproto/google/cacheinvalidation/android_channel_pb2.py $
+    gen/protoc_out/google/cacheinvalidation/android_channel.pb.cc $
+    gen/protoc_out/google/cacheinvalidation/android_channel.pb.h: $
+    cacheinvalidation_proto_cpp_target_genproto_e6801438cfc1103155eddba4e7f399bb $
+    ../../third_party/cacheinvalidation/src/google/cacheinvalidation/android_channel.proto $
+    | $
+    obj/third_party/cacheinvalidation/cacheinvalidation_proto_cpp.genproto.stamp
+  source = src/google/cacheinvalidation/android_channel.proto
+  ext = .proto
+  root = android_channel
+build pyproto/google/cacheinvalidation/channel_common_pb2.py $
+    gen/protoc_out/google/cacheinvalidation/channel_common.pb.cc $
+    gen/protoc_out/google/cacheinvalidation/channel_common.pb.h: $
+    cacheinvalidation_proto_cpp_target_genproto_e6801438cfc1103155eddba4e7f399bb $
+    ../../third_party/cacheinvalidation/src/google/cacheinvalidation/channel_common.proto $
+    | $
+    obj/third_party/cacheinvalidation/cacheinvalidation_proto_cpp.genproto.stamp
+  source = src/google/cacheinvalidation/channel_common.proto
+  ext = .proto
+  root = channel_common
+build pyproto/google/cacheinvalidation/client_pb2.py $
+    gen/protoc_out/google/cacheinvalidation/client.pb.cc $
+    gen/protoc_out/google/cacheinvalidation/client.pb.h: $
+    cacheinvalidation_proto_cpp_target_genproto_e6801438cfc1103155eddba4e7f399bb $
+    ../../third_party/cacheinvalidation/src/google/cacheinvalidation/client.proto $
+    | $
+    obj/third_party/cacheinvalidation/cacheinvalidation_proto_cpp.genproto.stamp
+  source = src/google/cacheinvalidation/client.proto
+  ext = .proto
+  root = client
+build pyproto/google/cacheinvalidation/client_gateway_pb2.py $
+    gen/protoc_out/google/cacheinvalidation/client_gateway.pb.cc $
+    gen/protoc_out/google/cacheinvalidation/client_gateway.pb.h: $
+    cacheinvalidation_proto_cpp_target_genproto_e6801438cfc1103155eddba4e7f399bb $
+    ../../third_party/cacheinvalidation/src/google/cacheinvalidation/client_gateway.proto $
+    | $
+    obj/third_party/cacheinvalidation/cacheinvalidation_proto_cpp.genproto.stamp
+  source = src/google/cacheinvalidation/client_gateway.proto
+  ext = .proto
+  root = client_gateway
+build pyproto/google/cacheinvalidation/client_protocol_pb2.py $
+    gen/protoc_out/google/cacheinvalidation/client_protocol.pb.cc $
+    gen/protoc_out/google/cacheinvalidation/client_protocol.pb.h: $
+    cacheinvalidation_proto_cpp_target_genproto_e6801438cfc1103155eddba4e7f399bb $
+    ../../third_party/cacheinvalidation/src/google/cacheinvalidation/client_protocol.proto $
+    | $
+    obj/third_party/cacheinvalidation/cacheinvalidation_proto_cpp.genproto.stamp
+  source = src/google/cacheinvalidation/client_protocol.proto
+  ext = .proto
+  root = client_protocol
+build pyproto/google/cacheinvalidation/client_test_internal_pb2.py $
+    gen/protoc_out/google/cacheinvalidation/client_test_internal.pb.cc $
+    gen/protoc_out/google/cacheinvalidation/client_test_internal.pb.h: $
+    cacheinvalidation_proto_cpp_target_genproto_e6801438cfc1103155eddba4e7f399bb $
+    ../../third_party/cacheinvalidation/src/google/cacheinvalidation/client_test_internal.proto $
+    | $
+    obj/third_party/cacheinvalidation/cacheinvalidation_proto_cpp.genproto.stamp
+  source = src/google/cacheinvalidation/client_test_internal.proto
+  ext = .proto
+  root = client_test_internal
+build pyproto/google/cacheinvalidation/types_pb2.py $
+    gen/protoc_out/google/cacheinvalidation/types.pb.cc $
+    gen/protoc_out/google/cacheinvalidation/types.pb.h: $
+    cacheinvalidation_proto_cpp_target_genproto_e6801438cfc1103155eddba4e7f399bb $
+    ../../third_party/cacheinvalidation/src/google/cacheinvalidation/types.proto $
+    | $
+    obj/third_party/cacheinvalidation/cacheinvalidation_proto_cpp.genproto.stamp
+  source = src/google/cacheinvalidation/types.proto
+  ext = .proto
+  root = types
+build $
+    obj/third_party/cacheinvalidation/cacheinvalidation_proto_cpp.actions_rules_copies.stamp: $
+    stamp pyproto/google/cacheinvalidation/android_channel_pb2.py $
+    gen/protoc_out/google/cacheinvalidation/android_channel.pb.cc $
+    gen/protoc_out/google/cacheinvalidation/android_channel.pb.h $
+    pyproto/google/cacheinvalidation/channel_common_pb2.py $
+    gen/protoc_out/google/cacheinvalidation/channel_common.pb.cc $
+    gen/protoc_out/google/cacheinvalidation/channel_common.pb.h $
+    pyproto/google/cacheinvalidation/client_pb2.py $
+    gen/protoc_out/google/cacheinvalidation/client.pb.cc $
+    gen/protoc_out/google/cacheinvalidation/client.pb.h $
+    pyproto/google/cacheinvalidation/client_gateway_pb2.py $
+    gen/protoc_out/google/cacheinvalidation/client_gateway.pb.cc $
+    gen/protoc_out/google/cacheinvalidation/client_gateway.pb.h $
+    pyproto/google/cacheinvalidation/client_protocol_pb2.py $
+    gen/protoc_out/google/cacheinvalidation/client_protocol.pb.cc $
+    gen/protoc_out/google/cacheinvalidation/client_protocol.pb.h $
+    pyproto/google/cacheinvalidation/client_test_internal_pb2.py $
+    gen/protoc_out/google/cacheinvalidation/client_test_internal.pb.cc $
+    gen/protoc_out/google/cacheinvalidation/client_test_internal.pb.h $
+    pyproto/google/cacheinvalidation/types_pb2.py $
+    gen/protoc_out/google/cacheinvalidation/types.pb.cc $
+    gen/protoc_out/google/cacheinvalidation/types.pb.h
+
+defines = -DV8_DEPRECATION_WARNINGS -DCLD_VERSION=2 $
+    -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORE=0 -DCHROMIUM_BUILD $
+    -DCR_CLANG_REVISION=254049-1 -DUSE_LIBJPEG_TURBO=1 $
+    -DENABLE_ONE_CLICK_SIGNIN -DENABLE_PRE_SYNC_BACKUP -DENABLE_WEBRTC=1 $
+    -DENABLE_MEDIA_ROUTER=1 -DENABLE_PEPPER_CDMS $
+    -DENABLE_CONFIGURATION_POLICY -DENABLE_NOTIFICATIONS -DENABLE_HIDPI=1 $
+    -DDONT_EMBED_BUILD_METADATA -DFIELDTRIAL_TESTING_ENABLED $
+    -DENABLE_TASK_MANAGER=1 -DENABLE_EXTENSIONS=1 -DENABLE_PDF=1 $
+    -DENABLE_PLUGIN_INSTALLATION=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_THEMES=1 -DENABLE_AUTOFILL_DIALOG=1 $
+    -DENABLE_BACKGROUND=1 -DENABLE_PRINTING=1 -DENABLE_BASIC_PRINTING=1 $
+    -DENABLE_PRINT_PREVIEW=1 -DENABLE_SPELLCHECK=1 $
+    -DUSE_BROWSER_SPELLCHECKER=1 -DENABLE_CAPTIVE_PORTAL_DETECTION=1 $
+    -DENABLE_APP_LIST=1 -DENABLE_SETTINGS_APP=1 -DENABLE_SUPERVISED_USERS=1 $
+    -DENABLE_SERVICE_DISCOVERY=1 -DV8_USE_EXTERNAL_STARTUP_DATA $
+    -DFULL_SAFE_BROWSING -DSAFE_BROWSING_CSD -DSAFE_BROWSING_DB_LOCAL $
+    -DPROTOBUF_USE_DLLS -DGOOGLE_PROTOBUF_NO_RTTI $
+    -DGOOGLE_PROTOBUF_NO_STATIC_INITIALIZER -DUSE_LIBPCI=1 -DUSE_OPENSSL=1 $
+    -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS $
+    -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DWTF_USE_DYNAMIC_ANNOTATIONS=1
+includes = -Igen -Igen/protoc_out -I../.. -I../../third_party/protobuf $
+    -I../../third_party/protobuf/src
+cflags = -isysroot $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk $
+    -O0 -fvisibility=hidden -Werror -Wnewline-eof -mmacosx-version-min=10.6 $
+    -arch x86_64 -Wall -Wendif-labels -Wextra -Wno-unused-parameter $
+    -Wno-missing-field-initializers -Wno-selector-type-mismatch $
+    -Wpartial-availability -Wheader-hygiene -Wno-char-subscripts $
+    -Wno-unneeded-internal-declaration -Wno-covered-switch-default $
+    -Wstring-conversion -Wno-c++11-narrowing -Wno-deprecated-register $
+    -Wno-inconsistent-missing-override -Wno-shift-negative-value $
+    -Wno-bitfield-width
+cflags_c = -std=c99 -Xclang -load -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing -fstack-protector-all $
+    -Wno-undefined-bool-conversion -Wno-tautological-undefined-compare
+cflags_cc = -std=c++11 -stdlib=libc++ -fno-rtti -fno-exceptions $
+    -fvisibility-inlines-hidden -fno-threadsafe-statics -Xclang -load $
+    -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing -fstack-protector-all $
+    -Wno-undefined-bool-conversion -Wno-tautological-undefined-compare
+cflags_objc = $cflags_c -Wobjc-missing-property-synthesis
+cflags_objcc = $cflags_cc -Wobjc-missing-property-synthesis $
+    -fobjc-call-cxx-cdtors
+arflags = 
+
+build $
+    obj/third_party/cacheinvalidation/gen/protoc_out/google/cacheinvalidation/cacheinvalidation_proto_cpp.android_channel.pb.o: $
+    cxx gen/protoc_out/google/cacheinvalidation/android_channel.pb.cc || $
+    obj/third_party/cacheinvalidation/cacheinvalidation_proto_cpp.actions_rules_copies.stamp
+build $
+    obj/third_party/cacheinvalidation/gen/protoc_out/google/cacheinvalidation/cacheinvalidation_proto_cpp.channel_common.pb.o: $
+    cxx gen/protoc_out/google/cacheinvalidation/channel_common.pb.cc || $
+    obj/third_party/cacheinvalidation/cacheinvalidation_proto_cpp.actions_rules_copies.stamp
+build $
+    obj/third_party/cacheinvalidation/gen/protoc_out/google/cacheinvalidation/cacheinvalidation_proto_cpp.client.pb.o: $
+    cxx gen/protoc_out/google/cacheinvalidation/client.pb.cc || $
+    obj/third_party/cacheinvalidation/cacheinvalidation_proto_cpp.actions_rules_copies.stamp
+build $
+    obj/third_party/cacheinvalidation/gen/protoc_out/google/cacheinvalidation/cacheinvalidation_proto_cpp.client_gateway.pb.o: $
+    cxx gen/protoc_out/google/cacheinvalidation/client_gateway.pb.cc || $
+    obj/third_party/cacheinvalidation/cacheinvalidation_proto_cpp.actions_rules_copies.stamp
+build $
+    obj/third_party/cacheinvalidation/gen/protoc_out/google/cacheinvalidation/cacheinvalidation_proto_cpp.client_protocol.pb.o: $
+    cxx gen/protoc_out/google/cacheinvalidation/client_protocol.pb.cc || $
+    obj/third_party/cacheinvalidation/cacheinvalidation_proto_cpp.actions_rules_copies.stamp
+build $
+    obj/third_party/cacheinvalidation/gen/protoc_out/google/cacheinvalidation/cacheinvalidation_proto_cpp.client_test_internal.pb.o: $
+    cxx gen/protoc_out/google/cacheinvalidation/client_test_internal.pb.cc $
+    || $
+    obj/third_party/cacheinvalidation/cacheinvalidation_proto_cpp.actions_rules_copies.stamp
+build $
+    obj/third_party/cacheinvalidation/gen/protoc_out/google/cacheinvalidation/cacheinvalidation_proto_cpp.types.pb.o: $
+    cxx gen/protoc_out/google/cacheinvalidation/types.pb.cc || $
+    obj/third_party/cacheinvalidation/cacheinvalidation_proto_cpp.actions_rules_copies.stamp
+
+build libcacheinvalidation_proto_cpp.a: alink $
+    obj/third_party/cacheinvalidation/gen/protoc_out/google/cacheinvalidation/cacheinvalidation_proto_cpp.android_channel.pb.o $
+    obj/third_party/cacheinvalidation/gen/protoc_out/google/cacheinvalidation/cacheinvalidation_proto_cpp.channel_common.pb.o $
+    obj/third_party/cacheinvalidation/gen/protoc_out/google/cacheinvalidation/cacheinvalidation_proto_cpp.client.pb.o $
+    obj/third_party/cacheinvalidation/gen/protoc_out/google/cacheinvalidation/cacheinvalidation_proto_cpp.client_gateway.pb.o $
+    obj/third_party/cacheinvalidation/gen/protoc_out/google/cacheinvalidation/cacheinvalidation_proto_cpp.client_protocol.pb.o $
+    obj/third_party/cacheinvalidation/gen/protoc_out/google/cacheinvalidation/cacheinvalidation_proto_cpp.client_test_internal.pb.o $
+    obj/third_party/cacheinvalidation/gen/protoc_out/google/cacheinvalidation/cacheinvalidation_proto_cpp.types.pb.o $
+    || $
+    obj/third_party/cacheinvalidation/cacheinvalidation_proto_cpp.actions_rules_copies.stamp

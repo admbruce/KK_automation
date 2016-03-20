@@ -1,0 +1,98 @@
+defines = -DV8_DEPRECATION_WARNINGS -DCLD_VERSION=2 $
+    -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORE=0 -DCHROMIUM_BUILD $
+    -DCR_CLANG_REVISION=254049-1 -DUSE_LIBJPEG_TURBO=1 $
+    -DENABLE_ONE_CLICK_SIGNIN -DENABLE_PRE_SYNC_BACKUP -DENABLE_WEBRTC=1 $
+    -DENABLE_MEDIA_ROUTER=1 -DENABLE_PEPPER_CDMS $
+    -DENABLE_CONFIGURATION_POLICY -DENABLE_NOTIFICATIONS -DENABLE_HIDPI=1 $
+    -DDONT_EMBED_BUILD_METADATA -DFIELDTRIAL_TESTING_ENABLED $
+    -DENABLE_TASK_MANAGER=1 -DENABLE_EXTENSIONS=1 -DENABLE_PDF=1 $
+    -DENABLE_PLUGIN_INSTALLATION=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_THEMES=1 -DENABLE_AUTOFILL_DIALOG=1 $
+    -DENABLE_BACKGROUND=1 -DENABLE_PRINTING=1 -DENABLE_BASIC_PRINTING=1 $
+    -DENABLE_PRINT_PREVIEW=1 -DENABLE_SPELLCHECK=1 $
+    -DUSE_BROWSER_SPELLCHECKER=1 -DENABLE_CAPTIVE_PORTAL_DETECTION=1 $
+    -DENABLE_APP_LIST=1 -DENABLE_SETTINGS_APP=1 -DENABLE_SUPERVISED_USERS=1 $
+    -DENABLE_SERVICE_DISCOVERY=1 -DV8_USE_EXTERNAL_STARTUP_DATA $
+    -DFULL_SAFE_BROWSING -DSAFE_BROWSING_CSD -DSAFE_BROWSING_DB_LOCAL $
+    -DFLAC__NO_DLL -DFLAC__OVERFLOW_DETECT '-DVERSION="1.2.1"' $
+    -DUSE_LIBPCI=1 -DUSE_OPENSSL=1 -DNDEBUG -DNVALGRIND $
+    -DDYNAMIC_ANNOTATIONS_ENABLED=0
+includes = -Igen -I../../third_party/flac/include $
+    -I../../third_party/flac/src/libFLAC/include
+cflags = -isysroot $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk $
+    -O2 -fvisibility=hidden -Werror -Wnewline-eof -mmacosx-version-min=10.6 $
+    -arch x86_64 -Wendif-labels -Wno-unused-parameter $
+    -Wno-missing-field-initializers -Wno-selector-type-mismatch $
+    -Wpartial-availability -Wheader-hygiene -Wno-char-subscripts $
+    -Wno-unneeded-internal-declaration -Wno-covered-switch-default $
+    -Wstring-conversion -Wno-c++11-narrowing -Wno-deprecated-register $
+    -Wno-inconsistent-missing-override -Wno-shift-negative-value $
+    -Wno-bitfield-width -Wno-conversion -Wno-unused-const-variable $
+    -Wno-unused-variable
+cflags_c = -std=c99 -Xclang -load -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing
+cflags_cc = -std=c++11 -stdlib=libc++ -fno-rtti -fno-exceptions $
+    -fvisibility-inlines-hidden -fno-threadsafe-statics -Xclang -load $
+    -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing
+cflags_objc = $cflags_c -Wobjc-missing-property-synthesis
+cflags_objcc = $cflags_cc -Wobjc-missing-property-synthesis $
+    -fobjc-call-cxx-cdtors
+arflags = 
+
+build obj/third_party/flac/src/libFLAC/libflac.alloc.o: cc $
+    ../../third_party/flac/src/libFLAC/alloc.c
+build obj/third_party/flac/src/libFLAC/libflac.bitmath.o: cc $
+    ../../third_party/flac/src/libFLAC/bitmath.c
+build obj/third_party/flac/src/libFLAC/libflac.bitreader.o: cc $
+    ../../third_party/flac/src/libFLAC/bitreader.c
+build obj/third_party/flac/src/libFLAC/libflac.bitwriter.o: cc $
+    ../../third_party/flac/src/libFLAC/bitwriter.c
+build obj/third_party/flac/src/libFLAC/libflac.cpu.o: cc $
+    ../../third_party/flac/src/libFLAC/cpu.c
+build obj/third_party/flac/src/libFLAC/libflac.crc.o: cc $
+    ../../third_party/flac/src/libFLAC/crc.c
+build obj/third_party/flac/src/libFLAC/libflac.fixed.o: cc $
+    ../../third_party/flac/src/libFLAC/fixed.c
+build obj/third_party/flac/src/libFLAC/libflac.float.o: cc $
+    ../../third_party/flac/src/libFLAC/float.c
+build obj/third_party/flac/src/libFLAC/libflac.format.o: cc $
+    ../../third_party/flac/src/libFLAC/format.c
+build obj/third_party/flac/src/libFLAC/libflac.lpc.o: cc $
+    ../../third_party/flac/src/libFLAC/lpc.c
+build obj/third_party/flac/src/libFLAC/libflac.md5.o: cc $
+    ../../third_party/flac/src/libFLAC/md5.c
+build obj/third_party/flac/src/libFLAC/libflac.memory.o: cc $
+    ../../third_party/flac/src/libFLAC/memory.c
+build obj/third_party/flac/src/libFLAC/libflac.stream_decoder.o: cc $
+    ../../third_party/flac/src/libFLAC/stream_decoder.c
+build obj/third_party/flac/src/libFLAC/libflac.stream_encoder.o: cc $
+    ../../third_party/flac/src/libFLAC/stream_encoder.c
+build obj/third_party/flac/src/libFLAC/libflac.stream_encoder_framing.o: cc $
+    ../../third_party/flac/src/libFLAC/stream_encoder_framing.c
+build obj/third_party/flac/src/libFLAC/libflac.window.o: cc $
+    ../../third_party/flac/src/libFLAC/window.c
+
+build libflac.a: alink obj/third_party/flac/src/libFLAC/libflac.alloc.o $
+    obj/third_party/flac/src/libFLAC/libflac.bitmath.o $
+    obj/third_party/flac/src/libFLAC/libflac.bitreader.o $
+    obj/third_party/flac/src/libFLAC/libflac.bitwriter.o $
+    obj/third_party/flac/src/libFLAC/libflac.cpu.o $
+    obj/third_party/flac/src/libFLAC/libflac.crc.o $
+    obj/third_party/flac/src/libFLAC/libflac.fixed.o $
+    obj/third_party/flac/src/libFLAC/libflac.float.o $
+    obj/third_party/flac/src/libFLAC/libflac.format.o $
+    obj/third_party/flac/src/libFLAC/libflac.lpc.o $
+    obj/third_party/flac/src/libFLAC/libflac.md5.o $
+    obj/third_party/flac/src/libFLAC/libflac.memory.o $
+    obj/third_party/flac/src/libFLAC/libflac.stream_decoder.o $
+    obj/third_party/flac/src/libFLAC/libflac.stream_encoder.o $
+    obj/third_party/flac/src/libFLAC/libflac.stream_encoder_framing.o $
+    obj/third_party/flac/src/libFLAC/libflac.window.o

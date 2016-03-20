@@ -1,0 +1,6 @@
+build obj/build/all_and_dmg.actions_depends.stamp: stamp $
+    obj/build/All.actions_depends.stamp Chromium.dmg
+
+build obj/build/all_and_dmg.compile_depends.stamp: stamp $
+    obj/build/All.compile_depends.stamp Chromium.dmg
+

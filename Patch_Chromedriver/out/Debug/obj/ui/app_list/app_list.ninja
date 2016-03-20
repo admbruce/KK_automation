@@ -1,0 +1,353 @@
+build obj/ui/app_list/app_list.actions_depends.stamp: stamp $
+    obj/skia/skia.actions_depends.stamp $
+    obj/ui/resources/ui_resources.actions_rules_copies.stamp $
+    obj/ui/strings/ui_strings.actions_rules_copies.stamp $
+    obj/ui/app_list/resources/app_list_resources.actions_rules_copies.stamp $
+    libax_gen.a
+
+build obj/ui/app_list/app_list.compile_depends.stamp: stamp $
+    obj/ui/resources/ui_resources.actions_rules_copies.stamp $
+    obj/ui/strings/ui_strings.actions_rules_copies.stamp $
+    obj/ui/app_list/resources/app_list_resources.actions_rules_copies.stamp $
+    obj/ui/accessibility/ax_gen.actions_rules_copies.stamp
+
+defines = -DV8_DEPRECATION_WARNINGS -DCLD_VERSION=2 $
+    -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORE=0 -DCHROMIUM_BUILD $
+    -DCR_CLANG_REVISION=254049-1 -DUSE_LIBJPEG_TURBO=1 $
+    -DENABLE_ONE_CLICK_SIGNIN -DENABLE_PRE_SYNC_BACKUP -DENABLE_WEBRTC=1 $
+    -DENABLE_MEDIA_ROUTER=1 -DENABLE_PEPPER_CDMS $
+    -DENABLE_CONFIGURATION_POLICY -DENABLE_NOTIFICATIONS -DENABLE_HIDPI=1 $
+    -DDONT_EMBED_BUILD_METADATA -DFIELDTRIAL_TESTING_ENABLED $
+    -DENABLE_TASK_MANAGER=1 -DENABLE_EXTENSIONS=1 -DENABLE_PDF=1 $
+    -DENABLE_PLUGIN_INSTALLATION=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_THEMES=1 -DENABLE_AUTOFILL_DIALOG=1 $
+    -DENABLE_BACKGROUND=1 -DENABLE_PRINTING=1 -DENABLE_BASIC_PRINTING=1 $
+    -DENABLE_PRINT_PREVIEW=1 -DENABLE_SPELLCHECK=1 $
+    -DUSE_BROWSER_SPELLCHECKER=1 -DENABLE_CAPTIVE_PORTAL_DETECTION=1 $
+    -DENABLE_APP_LIST=1 -DENABLE_SETTINGS_APP=1 -DENABLE_SUPERVISED_USERS=1 $
+    -DENABLE_SERVICE_DISCOVERY=1 -DV8_USE_EXTERNAL_STARTUP_DATA $
+    -DFULL_SAFE_BROWSING -DSAFE_BROWSING_CSD -DSAFE_BROWSING_DB_LOCAL $
+    -DAPP_LIST_IMPLEMENTATION -DTOOLKIT_VIEWS=1 -DU_USING_ICU_NAMESPACE=0 $
+    -DU_ENABLE_DYLOAD=0 -DSK_SUPPORT_GPU=1 $
+    -DSK_IGNORE_LINEONLY_AA_CONVEX_PATH_OPTS -DSK_IGNORE_GL_TEXTURE_TARGET $
+    -DU_STATIC_IMPLEMENTATION -DUSE_LIBPCI=1 -DUSE_OPENSSL=1 $
+    -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS $
+    -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DWTF_USE_DYNAMIC_ANNOTATIONS=1
+includes = -Igen -I../.. -I../../skia/config -I../../third_party/khronos $
+    -I../../gpu -Igen/angle -I../../third_party/icu/source/i18n $
+    -I../../third_party/skia/include/core $
+    -I../../third_party/skia/include/effects $
+    -I../../third_party/skia/include/pdf $
+    -I../../third_party/skia/include/gpu $
+    -I../../third_party/skia/include/lazy $
+    -I../../third_party/skia/include/pathops $
+    -I../../third_party/skia/include/pipe $
+    -I../../third_party/skia/include/ports $
+    -I../../third_party/skia/include/utils $
+    -I../../third_party/skia/include/utils/mac -I../../skia/ext $
+    -Igen/ui/resources -I../../third_party/icu/source/common $
+    -Igen/ui/app_list/resources -Igen/ui/views/resources $
+    -I../../third_party/google_toolbox_for_mac $
+    -I../../third_party/google_toolbox_for_mac/src $
+    -I../../third_party/google_toolbox_for_mac/src/AppKit $
+    -I../../third_party/google_toolbox_for_mac/src/DebugUtils $
+    -I../../third_party/google_toolbox_for_mac/src/Foundation
+cflags = -isysroot $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk $
+    -O0 -fvisibility=hidden -Werror -Wnewline-eof -mmacosx-version-min=10.6 $
+    -arch x86_64 -Wall -Wendif-labels -Wextra -Wno-unused-parameter $
+    -Wno-missing-field-initializers -Wno-selector-type-mismatch $
+    -Wpartial-availability -Wheader-hygiene -Wno-char-subscripts $
+    -Wno-unneeded-internal-declaration -Wno-covered-switch-default $
+    -Wstring-conversion -Wno-c++11-narrowing -Wno-deprecated-register $
+    -Wno-inconsistent-missing-override -Wno-shift-negative-value $
+    -Wno-bitfield-width
+cflags_c = -std=c99 -Xclang -load -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing -fstack-protector-all $
+    -Wno-undefined-bool-conversion -Wno-tautological-undefined-compare
+cflags_cc = -std=c++11 -stdlib=libc++ -fno-rtti -fno-exceptions $
+    -fvisibility-inlines-hidden -fno-threadsafe-statics -Xclang -load $
+    -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing -fstack-protector-all $
+    -Wno-undefined-bool-conversion -Wno-tautological-undefined-compare
+cflags_objc = $cflags_c -Wobjc-missing-property-synthesis
+cflags_objcc = $cflags_cc -Wobjc-missing-property-synthesis $
+    -fobjc-call-cxx-cdtors
+arflags = 
+
+build obj/ui/app_list/app_list.app_list_constants.o: cxx $
+    ../../ui/app_list/app_list_constants.cc || $
+    obj/ui/app_list/app_list.compile_depends.stamp
+build obj/ui/app_list/app_list.app_list_folder_item.o: cxx $
+    ../../ui/app_list/app_list_folder_item.cc || $
+    obj/ui/app_list/app_list.compile_depends.stamp
+build obj/ui/app_list/app_list.app_list_item.o: cxx $
+    ../../ui/app_list/app_list_item.cc || $
+    obj/ui/app_list/app_list.compile_depends.stamp
+build obj/ui/app_list/app_list.app_list_item_list.o: cxx $
+    ../../ui/app_list/app_list_item_list.cc || $
+    obj/ui/app_list/app_list.compile_depends.stamp
+build obj/ui/app_list/app_list.app_list_menu.o: cxx $
+    ../../ui/app_list/app_list_menu.cc || $
+    obj/ui/app_list/app_list.compile_depends.stamp
+build obj/ui/app_list/app_list.app_list_model.o: cxx $
+    ../../ui/app_list/app_list_model.cc || $
+    obj/ui/app_list/app_list.compile_depends.stamp
+build obj/ui/app_list/app_list.app_list_switches.o: cxx $
+    ../../ui/app_list/app_list_switches.cc || $
+    obj/ui/app_list/app_list.compile_depends.stamp
+build obj/ui/app_list/app_list.app_list_view_delegate.o: cxx $
+    ../../ui/app_list/app_list_view_delegate.cc || $
+    obj/ui/app_list/app_list.compile_depends.stamp
+build obj/ui/app_list/cocoa/app_list.app_list_pager_view.o: objcxx $
+    ../../ui/app_list/cocoa/app_list_pager_view.mm || $
+    obj/ui/app_list/app_list.compile_depends.stamp
+build obj/ui/app_list/cocoa/app_list.app_list_view_controller.o: objcxx $
+    ../../ui/app_list/cocoa/app_list_view_controller.mm || $
+    obj/ui/app_list/app_list.compile_depends.stamp
+build obj/ui/app_list/cocoa/app_list.app_list_window_controller.o: objcxx $
+    ../../ui/app_list/cocoa/app_list_window_controller.mm || $
+    obj/ui/app_list/app_list.compile_depends.stamp
+build obj/ui/app_list/cocoa/app_list.apps_collection_view_drag_manager.o: $
+    objcxx ../../ui/app_list/cocoa/apps_collection_view_drag_manager.mm || $
+    obj/ui/app_list/app_list.compile_depends.stamp
+build obj/ui/app_list/cocoa/app_list.apps_grid_controller.o: objcxx $
+    ../../ui/app_list/cocoa/apps_grid_controller.mm || $
+    obj/ui/app_list/app_list.compile_depends.stamp
+build obj/ui/app_list/cocoa/app_list.apps_grid_view_item.o: objcxx $
+    ../../ui/app_list/cocoa/apps_grid_view_item.mm || $
+    obj/ui/app_list/app_list.compile_depends.stamp
+build obj/ui/app_list/cocoa/app_list.apps_search_box_controller.o: objcxx $
+    ../../ui/app_list/cocoa/apps_search_box_controller.mm || $
+    obj/ui/app_list/app_list.compile_depends.stamp
+build obj/ui/app_list/cocoa/app_list.apps_search_results_controller.o: $
+    objcxx ../../ui/app_list/cocoa/apps_search_results_controller.mm || $
+    obj/ui/app_list/app_list.compile_depends.stamp
+build obj/ui/app_list/cocoa/app_list.apps_search_results_model_bridge.o: $
+    objcxx ../../ui/app_list/cocoa/apps_search_results_model_bridge.mm || $
+    obj/ui/app_list/app_list.compile_depends.stamp
+build obj/ui/app_list/cocoa/app_list.item_drag_controller.o: objcxx $
+    ../../ui/app_list/cocoa/item_drag_controller.mm || $
+    obj/ui/app_list/app_list.compile_depends.stamp
+build obj/ui/app_list/cocoa/app_list.scroll_view_with_no_scrollbars.o: $
+    objcxx ../../ui/app_list/cocoa/scroll_view_with_no_scrollbars.mm || $
+    obj/ui/app_list/app_list.compile_depends.stamp
+build obj/ui/app_list/app_list.folder_image.o: cxx $
+    ../../ui/app_list/folder_image.cc || $
+    obj/ui/app_list/app_list.compile_depends.stamp
+build obj/ui/app_list/app_list.pagination_controller.o: cxx $
+    ../../ui/app_list/pagination_controller.cc || $
+    obj/ui/app_list/app_list.compile_depends.stamp
+build obj/ui/app_list/app_list.pagination_model.o: cxx $
+    ../../ui/app_list/pagination_model.cc || $
+    obj/ui/app_list/app_list.compile_depends.stamp
+build obj/ui/app_list/search/app_list.dictionary_data_store.o: cxx $
+    ../../ui/app_list/search/dictionary_data_store.cc || $
+    obj/ui/app_list/app_list.compile_depends.stamp
+build obj/ui/app_list/search/app_list.history.o: cxx $
+    ../../ui/app_list/search/history.cc || $
+    obj/ui/app_list/app_list.compile_depends.stamp
+build obj/ui/app_list/search/app_list.history_data.o: cxx $
+    ../../ui/app_list/search/history_data.cc || $
+    obj/ui/app_list/app_list.compile_depends.stamp
+build obj/ui/app_list/search/app_list.history_data_store.o: cxx $
+    ../../ui/app_list/search/history_data_store.cc || $
+    obj/ui/app_list/app_list.compile_depends.stamp
+build obj/ui/app_list/search/app_list.mixer.o: cxx $
+    ../../ui/app_list/search/mixer.cc || $
+    obj/ui/app_list/app_list.compile_depends.stamp
+build obj/ui/app_list/search/app_list.term_break_iterator.o: cxx $
+    ../../ui/app_list/search/term_break_iterator.cc || $
+    obj/ui/app_list/app_list.compile_depends.stamp
+build obj/ui/app_list/search/app_list.tokenized_string.o: cxx $
+    ../../ui/app_list/search/tokenized_string.cc || $
+    obj/ui/app_list/app_list.compile_depends.stamp
+build obj/ui/app_list/search/app_list.tokenized_string_char_iterator.o: cxx $
+    ../../ui/app_list/search/tokenized_string_char_iterator.cc || $
+    obj/ui/app_list/app_list.compile_depends.stamp
+build obj/ui/app_list/search/app_list.tokenized_string_match.o: cxx $
+    ../../ui/app_list/search/tokenized_string_match.cc || $
+    obj/ui/app_list/app_list.compile_depends.stamp
+build obj/ui/app_list/app_list.search_box_model.o: cxx $
+    ../../ui/app_list/search_box_model.cc || $
+    obj/ui/app_list/app_list.compile_depends.stamp
+build obj/ui/app_list/app_list.search_controller.o: cxx $
+    ../../ui/app_list/search_controller.cc || $
+    obj/ui/app_list/app_list.compile_depends.stamp
+build obj/ui/app_list/app_list.search_provider.o: cxx $
+    ../../ui/app_list/search_provider.cc || $
+    obj/ui/app_list/app_list.compile_depends.stamp
+build obj/ui/app_list/app_list.search_result.o: cxx $
+    ../../ui/app_list/search_result.cc || $
+    obj/ui/app_list/app_list.compile_depends.stamp
+build obj/ui/app_list/app_list.speech_ui_model.o: cxx $
+    ../../ui/app_list/speech_ui_model.cc || $
+    obj/ui/app_list/app_list.compile_depends.stamp
+build obj/ui/app_list/views/app_list.all_apps_tile_item_view.o: cxx $
+    ../../ui/app_list/views/all_apps_tile_item_view.cc || $
+    obj/ui/app_list/app_list.compile_depends.stamp
+build obj/ui/app_list/views/app_list.app_list_background.o: cxx $
+    ../../ui/app_list/views/app_list_background.cc || $
+    obj/ui/app_list/app_list.compile_depends.stamp
+build obj/ui/app_list/views/app_list.app_list_folder_view.o: cxx $
+    ../../ui/app_list/views/app_list_folder_view.cc || $
+    obj/ui/app_list/app_list.compile_depends.stamp
+build obj/ui/app_list/views/app_list.app_list_item_view.o: cxx $
+    ../../ui/app_list/views/app_list_item_view.cc || $
+    obj/ui/app_list/app_list.compile_depends.stamp
+build obj/ui/app_list/views/app_list.app_list_main_view.o: cxx $
+    ../../ui/app_list/views/app_list_main_view.cc || $
+    obj/ui/app_list/app_list.compile_depends.stamp
+build obj/ui/app_list/views/app_list.app_list_menu_views.o: cxx $
+    ../../ui/app_list/views/app_list_menu_views.cc || $
+    obj/ui/app_list/app_list.compile_depends.stamp
+build obj/ui/app_list/views/app_list.app_list_page.o: cxx $
+    ../../ui/app_list/views/app_list_page.cc || $
+    obj/ui/app_list/app_list.compile_depends.stamp
+build obj/ui/app_list/views/app_list.app_list_view.o: cxx $
+    ../../ui/app_list/views/app_list_view.cc || $
+    obj/ui/app_list/app_list.compile_depends.stamp
+build obj/ui/app_list/views/app_list.apps_container_view.o: cxx $
+    ../../ui/app_list/views/apps_container_view.cc || $
+    obj/ui/app_list/app_list.compile_depends.stamp
+build obj/ui/app_list/views/app_list.apps_grid_view.o: cxx $
+    ../../ui/app_list/views/apps_grid_view.cc || $
+    obj/ui/app_list/app_list.compile_depends.stamp
+build obj/ui/app_list/views/app_list.cached_label.o: cxx $
+    ../../ui/app_list/views/cached_label.cc || $
+    obj/ui/app_list/app_list.compile_depends.stamp
+build obj/ui/app_list/views/app_list.contents_view.o: cxx $
+    ../../ui/app_list/views/contents_view.cc || $
+    obj/ui/app_list/app_list.compile_depends.stamp
+build obj/ui/app_list/views/app_list.custom_launcher_page_view.o: cxx $
+    ../../ui/app_list/views/custom_launcher_page_view.cc || $
+    obj/ui/app_list/app_list.compile_depends.stamp
+build obj/ui/app_list/views/app_list.folder_background_view.o: cxx $
+    ../../ui/app_list/views/folder_background_view.cc || $
+    obj/ui/app_list/app_list.compile_depends.stamp
+build obj/ui/app_list/views/app_list.folder_header_view.o: cxx $
+    ../../ui/app_list/views/folder_header_view.cc || $
+    obj/ui/app_list/app_list.compile_depends.stamp
+build obj/ui/app_list/views/app_list.image_shadow_animator.o: cxx $
+    ../../ui/app_list/views/image_shadow_animator.cc || $
+    obj/ui/app_list/app_list.compile_depends.stamp
+build obj/ui/app_list/views/app_list.page_switcher.o: cxx $
+    ../../ui/app_list/views/page_switcher.cc || $
+    obj/ui/app_list/app_list.compile_depends.stamp
+build obj/ui/app_list/views/app_list.progress_bar_view.o: cxx $
+    ../../ui/app_list/views/progress_bar_view.cc || $
+    obj/ui/app_list/app_list.compile_depends.stamp
+build obj/ui/app_list/views/app_list.pulsing_block_view.o: cxx $
+    ../../ui/app_list/views/pulsing_block_view.cc || $
+    obj/ui/app_list/app_list.compile_depends.stamp
+build obj/ui/app_list/views/app_list.search_box_view.o: cxx $
+    ../../ui/app_list/views/search_box_view.cc || $
+    obj/ui/app_list/app_list.compile_depends.stamp
+build obj/ui/app_list/views/app_list.search_result_actions_view.o: cxx $
+    ../../ui/app_list/views/search_result_actions_view.cc || $
+    obj/ui/app_list/app_list.compile_depends.stamp
+build obj/ui/app_list/views/app_list.search_result_container_view.o: cxx $
+    ../../ui/app_list/views/search_result_container_view.cc || $
+    obj/ui/app_list/app_list.compile_depends.stamp
+build obj/ui/app_list/views/app_list.search_result_list_view.o: cxx $
+    ../../ui/app_list/views/search_result_list_view.cc || $
+    obj/ui/app_list/app_list.compile_depends.stamp
+build obj/ui/app_list/views/app_list.search_result_page_view.o: cxx $
+    ../../ui/app_list/views/search_result_page_view.cc || $
+    obj/ui/app_list/app_list.compile_depends.stamp
+build obj/ui/app_list/views/app_list.search_result_tile_item_list_view.o: $
+    cxx ../../ui/app_list/views/search_result_tile_item_list_view.cc || $
+    obj/ui/app_list/app_list.compile_depends.stamp
+build obj/ui/app_list/views/app_list.search_result_tile_item_view.o: cxx $
+    ../../ui/app_list/views/search_result_tile_item_view.cc || $
+    obj/ui/app_list/app_list.compile_depends.stamp
+build obj/ui/app_list/views/app_list.search_result_view.o: cxx $
+    ../../ui/app_list/views/search_result_view.cc || $
+    obj/ui/app_list/app_list.compile_depends.stamp
+build obj/ui/app_list/views/app_list.speech_view.o: cxx $
+    ../../ui/app_list/views/speech_view.cc || $
+    obj/ui/app_list/app_list.compile_depends.stamp
+build obj/ui/app_list/views/app_list.start_page_view.o: cxx $
+    ../../ui/app_list/views/start_page_view.cc || $
+    obj/ui/app_list/app_list.compile_depends.stamp
+build obj/ui/app_list/views/app_list.tile_item_view.o: cxx $
+    ../../ui/app_list/views/tile_item_view.cc || $
+    obj/ui/app_list/app_list.compile_depends.stamp
+build obj/ui/app_list/views/app_list.top_icon_animation_view.o: cxx $
+    ../../ui/app_list/views/top_icon_animation_view.cc || $
+    obj/ui/app_list/app_list.compile_depends.stamp
+
+build libapp_list.a: alink obj/ui/app_list/app_list.app_list_constants.o $
+    obj/ui/app_list/app_list.app_list_folder_item.o $
+    obj/ui/app_list/app_list.app_list_item.o $
+    obj/ui/app_list/app_list.app_list_item_list.o $
+    obj/ui/app_list/app_list.app_list_menu.o $
+    obj/ui/app_list/app_list.app_list_model.o $
+    obj/ui/app_list/app_list.app_list_switches.o $
+    obj/ui/app_list/app_list.app_list_view_delegate.o $
+    obj/ui/app_list/cocoa/app_list.app_list_pager_view.o $
+    obj/ui/app_list/cocoa/app_list.app_list_view_controller.o $
+    obj/ui/app_list/cocoa/app_list.app_list_window_controller.o $
+    obj/ui/app_list/cocoa/app_list.apps_collection_view_drag_manager.o $
+    obj/ui/app_list/cocoa/app_list.apps_grid_controller.o $
+    obj/ui/app_list/cocoa/app_list.apps_grid_view_item.o $
+    obj/ui/app_list/cocoa/app_list.apps_search_box_controller.o $
+    obj/ui/app_list/cocoa/app_list.apps_search_results_controller.o $
+    obj/ui/app_list/cocoa/app_list.apps_search_results_model_bridge.o $
+    obj/ui/app_list/cocoa/app_list.item_drag_controller.o $
+    obj/ui/app_list/cocoa/app_list.scroll_view_with_no_scrollbars.o $
+    obj/ui/app_list/app_list.folder_image.o $
+    obj/ui/app_list/app_list.pagination_controller.o $
+    obj/ui/app_list/app_list.pagination_model.o $
+    obj/ui/app_list/search/app_list.dictionary_data_store.o $
+    obj/ui/app_list/search/app_list.history.o $
+    obj/ui/app_list/search/app_list.history_data.o $
+    obj/ui/app_list/search/app_list.history_data_store.o $
+    obj/ui/app_list/search/app_list.mixer.o $
+    obj/ui/app_list/search/app_list.term_break_iterator.o $
+    obj/ui/app_list/search/app_list.tokenized_string.o $
+    obj/ui/app_list/search/app_list.tokenized_string_char_iterator.o $
+    obj/ui/app_list/search/app_list.tokenized_string_match.o $
+    obj/ui/app_list/app_list.search_box_model.o $
+    obj/ui/app_list/app_list.search_controller.o $
+    obj/ui/app_list/app_list.search_provider.o $
+    obj/ui/app_list/app_list.search_result.o $
+    obj/ui/app_list/app_list.speech_ui_model.o $
+    obj/ui/app_list/views/app_list.all_apps_tile_item_view.o $
+    obj/ui/app_list/views/app_list.app_list_background.o $
+    obj/ui/app_list/views/app_list.app_list_folder_view.o $
+    obj/ui/app_list/views/app_list.app_list_item_view.o $
+    obj/ui/app_list/views/app_list.app_list_main_view.o $
+    obj/ui/app_list/views/app_list.app_list_menu_views.o $
+    obj/ui/app_list/views/app_list.app_list_page.o $
+    obj/ui/app_list/views/app_list.app_list_view.o $
+    obj/ui/app_list/views/app_list.apps_container_view.o $
+    obj/ui/app_list/views/app_list.apps_grid_view.o $
+    obj/ui/app_list/views/app_list.cached_label.o $
+    obj/ui/app_list/views/app_list.contents_view.o $
+    obj/ui/app_list/views/app_list.custom_launcher_page_view.o $
+    obj/ui/app_list/views/app_list.folder_background_view.o $
+    obj/ui/app_list/views/app_list.folder_header_view.o $
+    obj/ui/app_list/views/app_list.image_shadow_animator.o $
+    obj/ui/app_list/views/app_list.page_switcher.o $
+    obj/ui/app_list/views/app_list.progress_bar_view.o $
+    obj/ui/app_list/views/app_list.pulsing_block_view.o $
+    obj/ui/app_list/views/app_list.search_box_view.o $
+    obj/ui/app_list/views/app_list.search_result_actions_view.o $
+    obj/ui/app_list/views/app_list.search_result_container_view.o $
+    obj/ui/app_list/views/app_list.search_result_list_view.o $
+    obj/ui/app_list/views/app_list.search_result_page_view.o $
+    obj/ui/app_list/views/app_list.search_result_tile_item_list_view.o $
+    obj/ui/app_list/views/app_list.search_result_tile_item_view.o $
+    obj/ui/app_list/views/app_list.search_result_view.o $
+    obj/ui/app_list/views/app_list.speech_view.o $
+    obj/ui/app_list/views/app_list.start_page_view.o $
+    obj/ui/app_list/views/app_list.tile_item_view.o $
+    obj/ui/app_list/views/app_list.top_icon_animation_view.o || $
+    obj/ui/app_list/app_list.actions_depends.stamp

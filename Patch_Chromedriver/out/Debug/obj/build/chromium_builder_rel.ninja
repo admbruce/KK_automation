@@ -1,0 +1,47 @@
+build obj/build/chromium_builder_rel.actions_depends.stamp: stamp $
+    cc_blink_unittests cc_unittests browser_tests performance_browser_tests $
+    sync_integration_tests unit_tests cloud_print_unittests $
+    components_unittests content_browsertests content_unittests $
+    device_unittests gcm_unit_tests gpu_unittests ipc_tests $
+    ipc_mojo_unittests jingle_unittests media_unittests midi_unittests $
+    ppapi_unittests printing_unittests remoting_unittests skia_unittests $
+    sql_unittests sync_unit_tests cacheinvalidation_unittests $
+    env_chromium_unittests libaddressinput_unittests $
+    libphonenumber_unittests clear_system_cache bitmaptools $
+    ui_base_unittests gfx_unittests gl_unittests url_unittests
+
+build obj/build/chromium_builder_rel.compile_depends.stamp: stamp $
+    obj/cc/blink/cc_blink_unittests.compile_depends.stamp $
+    obj/cc/cc_unittests.compile_depends.stamp $
+    obj/chrome/browser_tests.actions_rules_copies.stamp $
+    obj/chrome/performance_browser_tests.compile_depends.stamp $
+    obj/chrome/sync_integration_tests.compile_depends.stamp $
+    obj/chrome/unit_tests.actions_rules_copies.stamp $
+    obj/cloud_print/cloud_print_unittests.compile_depends.stamp $
+    obj/components/components_unittests.compile_depends.stamp $
+    obj/content/content_browsertests.compile_depends.stamp $
+    obj/content/content_unittests.compile_depends.stamp $
+    obj/device/device_unittests.compile_depends.stamp $
+    obj/google_apis/gcm/gcm_unit_tests.compile_depends.stamp $
+    obj/gpu/gpu_unittests.compile_depends.stamp $
+    obj/ipc/ipc_tests.compile_depends.stamp $
+    obj/ipc/mojo/ipc_mojo_unittests.compile_depends.stamp $
+    obj/jingle/jingle_unittests.compile_depends.stamp $
+    obj/media/media_unittests.compile_depends.stamp $
+    obj/media/midi/midi_unittests.compile_depends.stamp $
+    obj/ppapi/ppapi_unittests.compile_depends.stamp $
+    obj/printing/printing_unittests.compile_depends.stamp $
+    obj/remoting/remoting_unittests.compile_depends.stamp $
+    obj/skia/skia_unittests.compile_depends.stamp $
+    obj/sql/sql_unittests.compile_depends.stamp $
+    obj/sync/sync_unit_tests.compile_depends.stamp $
+    obj/third_party/cacheinvalidation/cacheinvalidation_unittests.compile_depends.stamp $
+    obj/third_party/leveldatabase/env_chromium_unittests.compile_depends.stamp $
+    obj/third_party/libaddressinput/libaddressinput_unittests.compile_depends.stamp $
+    obj/third_party/libphonenumber/libphonenumber_unittests.compile_depends.stamp $
+    obj/tools/perf/clear_system_cache/clear_system_cache.compile_depends.stamp $
+    obj/ui/base/ui_base_unittests.compile_depends.stamp $
+    obj/ui/gfx/gfx_unittests.compile_depends.stamp $
+    obj/ui/gl/gl_unittests.compile_depends.stamp $
+    obj/url/url_unittests.compile_depends.stamp
+

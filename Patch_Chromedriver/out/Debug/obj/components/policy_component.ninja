@@ -1,0 +1,7 @@
+build obj/components/policy_component.actions_depends.stamp: stamp $
+    libpolicy_component_common.a libpolicy_component_browser.a
+
+build obj/components/policy_component.compile_depends.stamp: stamp $
+    obj/components/policy_component_common.compile_depends.stamp $
+    obj/components/policy_component_browser.compile_depends.stamp
+

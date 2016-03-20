@@ -1,0 +1,708 @@
+build obj/ui/app_list/app_list_demo.actions_depends.stamp: stamp libbase.a $
+    obj/content/content.actions_depends.stamp libcontent_browser.a $
+    obj/skia/skia.actions_depends.stamp liburl_lib.a libui_base.a $
+    libevents.a obj/ui/resources/ui_resources.actions_rules_copies.stamp $
+    obj/ui/resources/ui_test_pak.actions_rules_copies.stamp libwebview.a $
+    libviews.a libviews_content_client.a libapp_list.a $
+    libapp_list_test_support.a libbase_static.a $
+    liballocator_extension_thunks.a libmodp_b64.a libdynamic_annotations.a $
+    libevent.a libcontent_common.a libtracing.a libipc.a libcrcrypto.a $
+    libboringssl.a libgles2_utils.a libnet.a libbase_i18n.a libicui18n.a $
+    libicuuc.a icudtl.dat icudtl.dat libprotobuf_lite.a libnet_quic_proto.a $
+    libbase_prefs.a libsdch.a libchrome_zlib.a libzlib_x86_simd.a $
+    obj/net/net_derived_sources.actions_rules_copies.stamp $
+    obj/net/net_resources.actions_rules_copies.stamp libskia_library.a $
+    libskia_opts.a libskia_opts_ssse3.a libskia_opts_sse41.a $
+    libskia_opts_sse42.a libskia_opts_avx.a libskia_opts_avx2.a libsfntly.a $
+    libskia_chrome.a libaccessibility.a libgfx.a libharfbuzz-ng.a libpng.a $
+    libgfx_geometry.a libjpeg_turbo.a libax_gen.a libapi_gen_util.a $
+    libui_base_ime.a libdom_keycode_converter.a libevents_base.a $
+    libgesture_detection.a libevents_platform.a $
+    obj/ui/strings/ui_strings.actions_rules_copies.stamp libmozilla.a $
+    libevents_ipc.a libgfx_ipc.a libshell_dialogs.a $
+    obj/content/content_resources.actions_rules_copies.stamp libcc.a $
+    libcc_proto.a obj/gpu/gpu.actions_depends.stamp $
+    libcommand_buffer_client.a libcommand_buffer_common.a $
+    libcommand_buffer_service.a libdisk_cache_proto.a libgpu_config.a $
+    libre2.a libgl_wrapper.a libcityhash.a gen/angle/id/commit.h $
+    obj/third_party/angle/src/copy_scripts.actions_rules_copies.stamp $
+    libtranslator.a libtranslator_lib.a libpreprocessor.a libangle_common.a $
+    libgles2_cmd_helper.a libgpu_ipc.a libmedia.a libyuv.a libopus.a $
+    libshared_memory_support.a libffmpeg.a libffmpeg_yasm.a libvpx_new.a $
+    libvpx_intrinsics_mmx.a libvpx_intrinsics_sse2.a $
+    libvpx_intrinsics_ssse3.a libvpx_intrinsics_sse4_1.a $
+    libvpx_intrinsics_avx.a libvpx_intrinsics_avx2.a libwebm.a $
+    libdecklink.a libmedia_asm.a libdevice_bluetooth.a $
+    obj/device/bluetooth/bluetooth_strings.actions_rules_copies.stamp $
+    liburibeacon.a libgpu_blink.a libgles2_c_lib.a $
+    libgles2_implementation.a libgl_in_process_context.a $
+    libgpu_skia_bindings.a libblink_common.a libblink_common.a libwtf.a $
+    libipc_mojo.a libmojo_environment_chromium.a $
+    libmojo_environment_chromium_impl.a libmojo_message_pump_lib.a $
+    libmojo_cpp_bindings.a $
+    obj/third_party/mojo/mojo_interface_bindings_mojom.actions_rules_copies.stamp $
+    obj/third_party/mojo/mojo_interface_bindings_mojom.actions_rules_copies.stamp $
+    libmojo_system_impl.a libmojo_system_impl2.a $
+    obj/third_party/mojo/mojo_interface_bindings_mojom.actions_rules_copies.stamp $
+    libmidi.a libmojo_application_bindings.a $
+    obj/mojo/mojo_application_bindings_mojom.actions_rules_copies.stamp $
+    obj/mojo/network_service_bindings_mojom.actions_rules_copies.stamp $
+    obj/mojo/network_service_bindings_mojom.actions_rules_copies.stamp $
+    libnetwork_service_bindings_lib.a libstorage_common.a $
+    obj/third_party/WebKit/public/blink.actions_depends.stamp $
+    libblink_platform.a libblink_heap_asm_stubs.a $
+    obj/third_party/WebKit/Source/platform/make_platform_generated.actions_rules_copies.stamp $
+    libiccjpeg.a obj/third_party/libwebp/libwebp.actions_depends.stamp $
+    libwebp_dec.a libwebp_dsp.a libwebp_utils.a libwebp_demux.a $
+    libwebp_enc.a libots.a libbrotli.a libqcms.a $
+    obj/v8/tools/gyp/v8_maybe_snapshot.actions_depends.stamp $
+    obj/v8/tools/gyp/v8_maybe_snapshot.actions_depends.stamp libv8_base.a $
+    libv8_libbase.a libv8_external_snapshot.a $
+    obj/v8/tools/gyp/js2c.actions_rules_copies.stamp natives_blob.bin $
+    libblink_web.a libmodules.a libchromium_sqlite3.a $
+    obj/third_party/WebKit/Source/modules/make_modules_generated.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/modules/modules_event_generated.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/core/webcore.actions_depends.stamp $
+    libwebcore_dom.a $
+    obj/third_party/WebKit/Source/core/webcore_prerequisites.actions_depends.stamp $
+    obj/third_party/WebKit/Source/core/inspector_protocol_sources.actions_rules_copies.stamp $
+    gen/blink/core/InspectorProtocolVersion.h $
+    obj/third_party/WebKit/Source/core/inspector_instrumentation_sources.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/core/make_core_generated.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/core/generated_testing_idls.actions_rules_copies.stamp $
+    gen/blink/core/EventInterfaces.in $
+    obj/third_party/WebKit/Source/bindings/core/v8/bindings_core_v8_generated.actions_depends.stamp $
+    obj/third_party/WebKit/Source/bindings/core/v8/bindings_core_impl_generated.actions_rules_copies.stamp $
+    gen/blink/bindings/scripts/cached_jinja_templates.stamp $
+    obj/third_party/WebKit/Source/bindings/scripts/cached_lex_yacc_tables.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/core/interfaces_info_individual_core.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/core/core_global_constructors_idls.actions_rules_copies.stamp $
+    gen/blink/bindings/core/GlobalObjectsCore.pickle $
+    gen/blink/bindings/modules/InterfacesInfoOverall.pickle $
+    obj/third_party/WebKit/Source/bindings/modules/interfaces_info_individual_modules.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/modules/modules_core_global_constructors_idls.actions_rules_copies.stamp $
+    gen/blink/bindings/modules/GlobalObjectsModules.pickle $
+    obj/third_party/WebKit/Source/bindings/modules/modules_global_constructors_idls.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/core/v8/bindings_core_v8_generated_aggregate.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/core/v8/bindings_core_v8_generated_individual.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/modules/v8/bindings_modules_v8_generated.actions_depends.stamp $
+    obj/third_party/WebKit/Source/bindings/modules/v8/bindings_modules_impl_generated.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/modules/v8/bindings_modules_v8_generated_aggregate.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/modules/v8/bindings_modules_v8_generated_individual.actions_rules_copies.stamp $
+    gen/blink/bindings/modules/v8/initPartialInterfacesInModules.cpp $
+    gen/blink/bindings/modules/v8/V8GeneratedModulesBindingsPartial.cpp $
+    obj/third_party/WebKit/Source/bindings/modules/v8/bindings_modules_v8_generated_partial_individual.actions_rules_copies.stamp $
+    libxml2.a libxslt.a libwebcore_html.a libwebcore_remaining.a $
+    libwebcore_rendering.a libwebcore_svg.a libwebcore_generated.a libgin.a $
+    libsnappy.a libcontent_common_mojo_bindings.a $
+    obj/content/content_common_mojo_bindings_mojom.actions_rules_copies.stamp $
+    libskia_mojo.a libmojo_geometry_bindings.a $
+    obj/ui/mojo/geometry/mojo_geometry_bindings_mojom.actions_rules_copies.stamp $
+    obj/content/app/resources/content_resources.actions_rules_copies.stamp $
+    libaccelerated_widget_mac.a libppapi_shared.a libsurface.a libjingle.a $
+    libexpat.a librtc_base.a libwebrtc_common.a librtc_base_approved.a $
+    librtc_xmllite.a libjingle_p2p_constants.a liburl_formatter.a $
+    libdevice_battery.a libdevice_battery_mojo_bindings.a $
+    libdevice_vibration.a libdevice_vibration_mojo_bindings.a $
+    libgoogle_apis.a libmojo_application_base.a $
+    libnetwork_type_converters.a libmojo_geometry_lib.a $
+    libmojo_url_type_converters.a libupdater_bindings_lib.a $
+    obj/mojo/updater_bindings_mojom.actions_rules_copies.stamp $
+    libmojo_shell_lib.a libmojo_common_lib.a libmojo_fetcher_lib.a $
+    libnet_extras.a libsql.a libzip.a libminizip.a libsnapshot.a $
+    libbackground_sync_proto.a libcache_storage_proto.a $
+    libnotification_proto.a libservice_worker_proto.a libspeech_proto.a $
+    obj/content/app/strings/content_strings.actions_rules_copies.stamp $
+    obj/content/browser/devtools/devtools_resources.actions_rules_copies.stamp $
+    gen/devtools/devtools_resources.grd gen/devtools/devtools_resources.grd $
+    resources/inspector/devtools_extension_api.js $
+    obj/third_party/WebKit/Source/devtools/devtools_frontend_resources.actions_rules_copies.stamp $
+    resources/inspector/SupportedCSSProperties.js $
+    resources/inspector/InspectorBackendCommands.js $
+    obj/third_party/WebKit/Source/devtools/build_applications.actions_rules_copies.stamp $
+    resources/inspector/inspector.css resources/inspector/toolbox.css $
+    obj/content/browser/devtools/devtools_protocol_handler.actions_rules_copies.stamp $
+    libcc_surfaces.a libmime_util.a libscheduler_common.a libhttp_server.a $
+    libstorage.a libleveldatabase.a libmojo_js_bindings.a libevents_blink.a $
+    libui_touch_selection.a libprinting.a libsandbox.a $
+    obj/content/browser/tracing/tracing_resources.actions_rules_copies.stamp $
+    obj/third_party/catapult/tracing/generate_about_tracing.actions_rules_copies.stamp $
+    gen/content/browser/tracing/tracing_resources.grd libcompositor.a $
+    libjingle_glue.a libdesktop_capture.a libsystem_wrappers.a $
+    libdesktop_capture_differ_sse2.a libsudden_motion_sensor.a $
+    libppapi_ipc.a libflac.a libcontent_child.a libwebcrypto.a $
+    libgestures_blink.a libscheduler.a $
+    obj/third_party/WebKit/public/blink_image_resources.actions_rules_copies.stamp $
+    obj/third_party/WebKit/public/blink_resources.actions_rules_copies.stamp $
+    libcontent_gpu.a libcontent_plugin.a libcontent_ppapi_plugin.a $
+    libcontent_renderer.a libcc_blink.a libstartup_metric_utils_common.a $
+    libwebusb.a libdevice_core.a libdevice_usb.a $
+    libdevice_event_log_component.a libusb.a $
+    libcomponents_webusb_mojo_bindings_lib.a $
+    obj/components/components_webusb_mojo_bindings.actions_rules_copies.stamp $
+    libdevice_usb_mojo_bindings_lib.a $
+    obj/device/devices_app/device_usb_mojo_bindings.actions_rules_copies.stamp $
+    libmedia_blink.a libmojo_js_lib.a gen/widevine_cdm_version.h $
+    libnative_theme.a libdevices_app_public_cpp.a libdevices_app_lib.a $
+    libcast_sender.a libcast_common.a libcast_logging_proto.a libcast_net.a $
+    libjingle_webrtc.a libaudio_processing.a libcommon_audio.a $
+    libopenmax_dl.a libcommon_audio_sse2.a libisac.a $
+    libaudio_decoder_interface.a libaudio_encoder_interface.a $
+    libisac_common.a libaudioproc_debug_proto.a libaudio_processing_sse2.a $
+    libjingle_webrtc_common.a libsrtp.a libmedia_file.a libvideo_capture.a $
+    libvideo_capture_module.a libwebrtc_utility.a libaudio_coding_module.a $
+    libcng.a libg711.a libpcm16b.a libwebrtc_opus.a libg722.a $
+    librtc_event_log.a librtc_event_log_proto.a libneteq.a $
+    librent_a_codec.a libcommon_video.a libvideo_render.a $
+    libvideo_render_module.a libusrsctplib.a libpeerconnection.a $
+    libvoice_engine.a libaudio_conference_mixer.a libaudio_device.a $
+    libbitrate_controller.a librtp_rtcp.a libremote_bitrate_estimator.a $
+    libwebrtc.a libpaced_sender.a libvideo_processing.a $
+    libvideo_processing_sse2.a libwebrtc_video_coding.a libwebrtc_h264.a $
+    libwebrtc_i420.a libvideo_coding_utility.a libwebrtc_vp8.a $
+    libwebrtc_vp9.a libstunprober.a libppapi_host.a libppapi_proxy.a $
+    libcontent_utility.a libcourgette_lib.a liblzma_sdk.a $
+    obj/ui/views/resources/views_resources.actions_rules_copies.stamp $
+    libui_content_accelerators.a libweb_dialogs.a libgfx_vector_icons.a $
+    libcontent_shell_lib.a libcontent_app_both.a $
+    obj/content/content_shell_resources.actions_rules_copies.stamp $
+    libcontent_test_mojo_bindings.a plugins/test_netscape_plugin.plugin $
+    liblayouttest_support_content.a libtest_support_content.a $
+    libnet_test_support.a libtest_support_base.a libgmock.a libgtest.a $
+    libtld_cleanup_util.a $
+    obj/third_party/protobuf/py_proto.actions_rules_copies.stamp $
+    libnet_with_v8.a libui_base_test_support.a libevents_test_support.a $
+    libgfx_test_support.a content_shell.pak libcc_test_support.a $
+    libgpu_unittest_utils.a libgl_unittest_utils.a libgl_test_support.a $
+    libscheduler_test_support.a libppapi_unittest_shared.a $
+    libtest_support_ipc.a libcompositor_test_support.a libtest_runner.a $
+    libcrash_component_breakpad_mac_to_be_deleted.a $
+    obj/components/crash_component_non_mac.actions_depends.stamp $
+    libcrash_component_lib.a libbreakpad.a libbreakpad_utilities.a $
+    libdevtools_discovery.a libdevtools_http_handler.a $
+    libweb_cache_renderer.a libweb_cache_common.a libplugins_renderer.a $
+    libdevice_bluetooth_mocks.a libblink_web_test_support.a $
+    libblink_web_test_support.a libwebcore_testing.a $
+    libwtf_unittest_helpers.a libmodules_testing.a libviews_test_support.a $
+    libkeyed_service_core.a libuser_prefs.a $
+    obj/ui/app_list/resources/app_list_resources.actions_rules_copies.stamp $
+    libgoogle_toolbox_for_mac.a
+
+build obj/ui/app_list/app_list_demo.compile_depends.stamp: stamp $
+    obj/content/content.compile_depends.stamp $
+    obj/content/content_browser.compile_depends.stamp $
+    obj/ui/base/ui_base.compile_depends.stamp $
+    obj/ui/resources/ui_resources.actions_rules_copies.stamp $
+    obj/ui/resources/ui_test_pak.actions_rules_copies.stamp $
+    obj/ui/views/controls/webview/webview.compile_depends.stamp $
+    obj/ui/views/views.compile_depends.stamp $
+    obj/ui/views_content_client/views_content_client.compile_depends.stamp $
+    obj/ui/app_list/app_list.compile_depends.stamp $
+    obj/ui/accessibility/ax_gen.actions_rules_copies.stamp $
+    obj/content/content_common.actions_rules_copies.stamp $
+    obj/net/net.compile_depends.stamp icudtl.dat icudtl.dat icudtl.dat $
+    obj/net/net_quic_proto.actions_rules_copies.stamp $
+    obj/net/net_derived_sources.actions_rules_copies.stamp $
+    obj/net/net_resources.actions_rules_copies.stamp $
+    obj/ui/accessibility/ax_gen.actions_rules_copies.stamp $
+    obj/third_party/libjpeg_turbo/libjpeg.actions_rules_copies.stamp $
+    obj/ui/accessibility/ax_gen.actions_rules_copies.stamp $
+    obj/ui/strings/ui_strings.actions_rules_copies.stamp $
+    obj/ui/strings/ui_strings.actions_rules_copies.stamp $
+    obj/content/content_resources.actions_rules_copies.stamp $
+    obj/cc/cc.compile_depends.stamp $
+    obj/cc/cc_proto.actions_rules_copies.stamp $
+    obj/gpu/command_buffer_service.compile_depends.stamp $
+    obj/gpu/command_buffer_service.compile_depends.stamp $
+    obj/gpu/disk_cache_proto.actions_rules_copies.stamp $
+    gen/angle/id/commit.h $
+    obj/third_party/angle/src/copy_scripts.actions_rules_copies.stamp $
+    obj/third_party/ffmpeg/ffmpeg_yasm.actions_rules_copies.stamp $
+    obj/third_party/libvpx_new/libvpx_new.actions_rules_copies.stamp $
+    obj/media/media_asm.actions_rules_copies.stamp $
+    obj/device/bluetooth/bluetooth_strings.actions_rules_copies.stamp $
+    obj/device/bluetooth/bluetooth_strings.actions_rules_copies.stamp $
+    obj/gpu/command_buffer_service.compile_depends.stamp $
+    obj/ipc/mojo/ipc_mojo.actions_rules_copies.stamp $
+    obj/third_party/mojo/mojo_interface_bindings_mojom.actions_rules_copies.stamp $
+    obj/third_party/mojo/mojo_interface_bindings_mojom.actions_rules_copies.stamp $
+    obj/third_party/mojo/mojo_interface_bindings_mojom.actions_rules_copies.stamp $
+    obj/third_party/mojo/mojo_interface_bindings_mojom.actions_rules_copies.stamp $
+    obj/mojo/mojo_application_bindings.compile_depends.stamp $
+    obj/mojo/mojo_application_bindings_mojom.actions_rules_copies.stamp $
+    obj/mojo/network_service_bindings_mojom.actions_rules_copies.stamp $
+    obj/mojo/network_service_bindings_mojom.actions_rules_copies.stamp $
+    obj/mojo/network_service_bindings_mojom.actions_rules_copies.stamp $
+    obj/third_party/WebKit/public/blink.compile_depends.stamp $
+    obj/third_party/WebKit/Source/platform/blink_platform.compile_depends.stamp $
+    gen/webcore/heap/SaveRegisters_x86.o $
+    obj/third_party/WebKit/Source/platform/make_platform_generated.actions_rules_copies.stamp $
+    snapshot_blob.bin snapshot_blob.bin snapshot_blob.bin $
+    obj/v8/tools/gyp/js2c.actions_rules_copies.stamp natives_blob.bin $
+    obj/third_party/WebKit/Source/web/blink_web.compile_depends.stamp $
+    obj/third_party/WebKit/Source/modules/modules.compile_depends.stamp $
+    obj/third_party/WebKit/Source/modules/make_modules_generated.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/modules/modules_event_generated.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/core/webcore.compile_depends.stamp $
+    obj/third_party/WebKit/Source/core/webcore_prerequisites.compile_depends.stamp $
+    obj/third_party/WebKit/Source/core/webcore_prerequisites.compile_depends.stamp $
+    obj/third_party/WebKit/Source/core/inspector_protocol_sources.actions_rules_copies.stamp $
+    gen/blink/core/InspectorProtocolVersion.h $
+    obj/third_party/WebKit/Source/core/inspector_instrumentation_sources.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/core/make_core_generated.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/core/generated_testing_idls.actions_rules_copies.stamp $
+    gen/blink/core/EventInterfaces.in $
+    obj/third_party/WebKit/Source/bindings/core/v8/bindings_core_v8_generated.compile_depends.stamp $
+    obj/third_party/WebKit/Source/bindings/core/v8/bindings_core_impl_generated.actions_rules_copies.stamp $
+    gen/blink/bindings/scripts/cached_jinja_templates.stamp $
+    obj/third_party/WebKit/Source/bindings/scripts/cached_lex_yacc_tables.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/core/interfaces_info_individual_core.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/core/core_global_constructors_idls.actions_rules_copies.stamp $
+    gen/blink/bindings/core/GlobalObjectsCore.pickle $
+    gen/blink/bindings/modules/InterfacesInfoOverall.pickle $
+    obj/third_party/WebKit/Source/bindings/modules/interfaces_info_individual_modules.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/modules/modules_core_global_constructors_idls.actions_rules_copies.stamp $
+    gen/blink/bindings/modules/GlobalObjectsModules.pickle $
+    obj/third_party/WebKit/Source/bindings/modules/modules_global_constructors_idls.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/core/v8/bindings_core_v8_generated_aggregate.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/core/v8/bindings_core_v8_generated_individual.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/modules/v8/bindings_modules_v8_generated.compile_depends.stamp $
+    obj/third_party/WebKit/Source/bindings/modules/v8/bindings_modules_impl_generated.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/modules/v8/bindings_modules_v8_generated_aggregate.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/modules/v8/bindings_modules_v8_generated_individual.actions_rules_copies.stamp $
+    gen/blink/bindings/modules/v8/initPartialInterfacesInModules.cpp $
+    gen/blink/bindings/modules/v8/V8GeneratedModulesBindingsPartial.cpp $
+    obj/third_party/WebKit/Source/bindings/modules/v8/bindings_modules_v8_generated_partial_individual.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/core/webcore_prerequisites.compile_depends.stamp $
+    obj/third_party/WebKit/Source/core/webcore_prerequisites.compile_depends.stamp $
+    obj/third_party/WebKit/Source/core/webcore_prerequisites.compile_depends.stamp $
+    obj/third_party/WebKit/Source/core/webcore_prerequisites.compile_depends.stamp $
+    obj/third_party/WebKit/Source/core/webcore_generated.compile_depends.stamp $
+    snapshot_blob.bin $
+    obj/content/content_common_mojo_bindings.compile_depends.stamp $
+    obj/content/content_common_mojo_bindings_mojom.actions_rules_copies.stamp $
+    obj/skia/skia_mojo.actions_rules_copies.stamp $
+    obj/ui/mojo/geometry/mojo_geometry_bindings_mojom.actions_rules_copies.stamp $
+    obj/ui/mojo/geometry/mojo_geometry_bindings_mojom.actions_rules_copies.stamp $
+    obj/content/app/resources/content_resources.actions_rules_copies.stamp $
+    obj/device/battery/device_battery_mojo_bindings.actions_rules_copies.stamp $
+    obj/device/battery/device_battery_mojo_bindings.actions_rules_copies.stamp $
+    obj/device/vibration/device_vibration_mojo_bindings.actions_rules_copies.stamp $
+    obj/device/vibration/device_vibration_mojo_bindings.actions_rules_copies.stamp $
+    obj/mojo/mojo_application_base.compile_depends.stamp $
+    obj/mojo/network_service_bindings_mojom.actions_rules_copies.stamp $
+    obj/ui/mojo/geometry/mojo_geometry_bindings_mojom.actions_rules_copies.stamp $
+    obj/mojo/updater_bindings_mojom.actions_rules_copies.stamp $
+    obj/mojo/updater_bindings_mojom.actions_rules_copies.stamp $
+    obj/mojo/mojo_shell_lib.compile_depends.stamp $
+    obj/mojo/mojo_fetcher_lib.compile_depends.stamp $
+    obj/content/browser/background_sync/background_sync_proto.actions_rules_copies.stamp $
+    obj/content/browser/cache_storage/cache_storage_proto.actions_rules_copies.stamp $
+    obj/content/browser/notifications/notification_proto.actions_rules_copies.stamp $
+    obj/content/browser/service_worker/service_worker_proto.actions_rules_copies.stamp $
+    obj/content/browser/speech/proto/speech_proto.actions_rules_copies.stamp $
+    obj/content/app/strings/content_strings.actions_rules_copies.stamp $
+    obj/content/browser/devtools/devtools_resources.actions_rules_copies.stamp $
+    gen/devtools/devtools_resources.grd gen/devtools/devtools_resources.grd $
+    resources/inspector/devtools_extension_api.js $
+    obj/third_party/WebKit/Source/devtools/devtools_frontend_resources.actions_rules_copies.stamp $
+    resources/inspector/SupportedCSSProperties.js $
+    resources/inspector/InspectorBackendCommands.js $
+    obj/third_party/WebKit/Source/devtools/build_applications.actions_rules_copies.stamp $
+    resources/inspector/inspector.css resources/inspector/toolbox.css $
+    obj/content/browser/devtools/devtools_protocol_handler.actions_rules_copies.stamp $
+    obj/gpu/command_buffer_service.compile_depends.stamp $
+    obj/third_party/WebKit/public/blink.compile_depends.stamp $
+    obj/content/browser/tracing/tracing_resources.actions_rules_copies.stamp $
+    obj/third_party/catapult/tracing/generate_about_tracing.actions_rules_copies.stamp $
+    gen/content/browser/tracing/tracing_resources.grd $
+    obj/content/content_child.compile_depends.stamp $
+    obj/third_party/WebKit/public/blink.compile_depends.stamp $
+    obj/third_party/WebKit/public/blink.compile_depends.stamp $
+    obj/third_party/WebKit/public/blink_image_resources.actions_rules_copies.stamp $
+    obj/third_party/WebKit/public/blink_resources.actions_rules_copies.stamp $
+    obj/content/content_gpu.compile_depends.stamp $
+    obj/content/content_plugin.compile_depends.stamp $
+    obj/content/content_ppapi_plugin.compile_depends.stamp $
+    obj/content/content_renderer.compile_depends.stamp $
+    obj/third_party/WebKit/public/blink.compile_depends.stamp $
+    obj/components/components_webusb_mojo_bindings_lib.compile_depends.stamp $
+    gen/device/usb/usb_ids_gen.cc $
+    obj/components/components_webusb_mojo_bindings_lib.compile_depends.stamp $
+    obj/components/components_webusb_mojo_bindings.actions_rules_copies.stamp $
+    obj/device/devices_app/device_usb_mojo_bindings.actions_rules_copies.stamp $
+    obj/device/devices_app/device_usb_mojo_bindings.actions_rules_copies.stamp $
+    obj/third_party/WebKit/public/blink.compile_depends.stamp $
+    snapshot_blob.bin gen/widevine_cdm_version.h $
+    obj/ui/resources/ui_resources.actions_rules_copies.stamp $
+    obj/device/devices_app/devices_app_public_cpp.compile_depends.stamp $
+    obj/device/devices_app/devices_app_lib.compile_depends.stamp $
+    obj/media/cast/cast_logging_proto.actions_rules_copies.stamp $
+    obj/media/cast/cast_logging_proto.actions_rules_copies.stamp $
+    obj/media/cast/cast_logging_proto.actions_rules_copies.stamp $
+    obj/media/cast/cast_logging_proto.actions_rules_copies.stamp $
+    obj/third_party/webrtc/modules/audioproc_debug_proto.actions_rules_copies.stamp $
+    obj/third_party/webrtc/modules/audioproc_debug_proto.actions_rules_copies.stamp $
+    obj/third_party/webrtc/rtc_event_log_proto.actions_rules_copies.stamp $
+    obj/third_party/webrtc/rtc_event_log_proto.actions_rules_copies.stamp $
+    obj/third_party/WebKit/public/blink.compile_depends.stamp $
+    obj/content/content_utility.compile_depends.stamp $
+    obj/ui/views/resources/views_resources.actions_rules_copies.stamp $
+    obj/ui/content_accelerators/ui_content_accelerators.compile_depends.stamp $
+    obj/ui/web_dialogs/web_dialogs.compile_depends.stamp $
+    obj/ui/gfx/gfx_vector_icons.actions_rules_copies.stamp $
+    obj/content/content_shell_lib.compile_depends.stamp $
+    obj/content/content_app_both.compile_depends.stamp $
+    obj/content/content_shell_resources.actions_rules_copies.stamp $
+    obj/content/content_test_mojo_bindings.actions_rules_copies.stamp $
+    plugins/test_netscape_plugin.plugin $
+    obj/content/layouttest_support_content.compile_depends.stamp $
+    obj/content/test_support_content.actions_rules_copies.stamp $
+    obj/third_party/protobuf/py_proto.actions_rules_copies.stamp $
+    obj/third_party/protobuf/py_proto.actions_rules_copies.stamp $
+    snapshot_blob.bin content_shell.pak $
+    obj/gpu/command_buffer_service.compile_depends.stamp $
+    obj/gpu/command_buffer_service.compile_depends.stamp $
+    obj/components/test_runner/test_runner.compile_depends.stamp $
+    obj/components/devtools_discovery.compile_depends.stamp $
+    obj/components/devtools_http_handler.compile_depends.stamp $
+    obj/components/web_cache_renderer.compile_depends.stamp $
+    obj/components/plugins_renderer.compile_depends.stamp $
+    obj/third_party/WebKit/Source/web/blink_web_test_support.compile_depends.stamp $
+    obj/third_party/WebKit/Source/web/blink_web_test_support.compile_depends.stamp $
+    obj/third_party/WebKit/Source/core/webcore_testing.compile_depends.stamp $
+    obj/third_party/WebKit/Source/modules/modules_testing.compile_depends.stamp $
+    obj/ui/views/views_test_support.compile_depends.stamp $
+    obj/ui/app_list/resources/app_list_resources.actions_rules_copies.stamp
+
+defines = -DV8_DEPRECATION_WARNINGS -DCLD_VERSION=2 $
+    -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORE=0 -DCHROMIUM_BUILD $
+    -DCR_CLANG_REVISION=254049-1 -DUSE_LIBJPEG_TURBO=1 $
+    -DENABLE_ONE_CLICK_SIGNIN -DENABLE_PRE_SYNC_BACKUP -DENABLE_WEBRTC=1 $
+    -DENABLE_MEDIA_ROUTER=1 -DENABLE_PEPPER_CDMS $
+    -DENABLE_CONFIGURATION_POLICY -DENABLE_NOTIFICATIONS -DENABLE_HIDPI=1 $
+    -DDONT_EMBED_BUILD_METADATA -DFIELDTRIAL_TESTING_ENABLED $
+    -DENABLE_TASK_MANAGER=1 -DENABLE_EXTENSIONS=1 -DENABLE_PDF=1 $
+    -DENABLE_PLUGIN_INSTALLATION=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_THEMES=1 -DENABLE_AUTOFILL_DIALOG=1 $
+    -DENABLE_BACKGROUND=1 -DENABLE_PRINTING=1 -DENABLE_BASIC_PRINTING=1 $
+    -DENABLE_PRINT_PREVIEW=1 -DENABLE_SPELLCHECK=1 $
+    -DUSE_BROWSER_SPELLCHECKER=1 -DENABLE_CAPTIVE_PORTAL_DETECTION=1 $
+    -DENABLE_APP_LIST=1 -DENABLE_SETTINGS_APP=1 -DENABLE_SUPERVISED_USERS=1 $
+    -DENABLE_SERVICE_DISCOVERY=1 -DV8_USE_EXTERNAL_STARTUP_DATA $
+    -DFULL_SAFE_BROWSING -DSAFE_BROWSING_CSD -DSAFE_BROWSING_DB_LOCAL $
+    -DMOJO_USE_SYSTEM_IMPL -DTOOLKIT_VIEWS=1 -DGTEST_HAS_POSIX_RE=0 $
+    -DGTEST_LANG_CXX11=0 -DSK_SUPPORT_GPU=1 $
+    -DSK_IGNORE_LINEONLY_AA_CONVEX_PATH_OPTS -DSK_IGNORE_GL_TEXTURE_TARGET $
+    -DU_USING_ICU_NAMESPACE=0 -DU_ENABLE_DYLOAD=0 -DU_STATIC_IMPLEMENTATION $
+    -DUSE_LIBPCI=1 -DUSE_OPENSSL=1 -D__STDC_CONSTANT_MACROS $
+    -D__STDC_FORMAT_MACROS -DNDEBUG -DNVALGRIND $
+    -DDYNAMIC_ANNOTATIONS_ENABLED=0 -D_FORTIFY_SOURCE=2
+includes = -Igen -I../../third_party/khronos -I../../gpu -I../.. $
+    -I../../skia/config -Igen/angle -I../../third_party/WebKit/Source $
+    -I../../third_party/WebKit -I../../third_party/skia/include/core $
+    -I../../third_party/skia/include/effects $
+    -I../../third_party/skia/include/pdf $
+    -I../../third_party/skia/include/gpu $
+    -I../../third_party/skia/include/lazy $
+    -I../../third_party/skia/include/pathops $
+    -I../../third_party/skia/include/pipe $
+    -I../../third_party/skia/include/ports $
+    -I../../third_party/skia/include/utils $
+    -I../../third_party/skia/include/utils/mac -I../../skia/ext $
+    -I../../third_party/icu/source/i18n $
+    -I../../third_party/icu/source/common -Igen/ui/resources $
+    -Igen/ui/views/resources
+cflags = -isysroot $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk $
+    -O2 -fvisibility=hidden -Werror -Wnewline-eof -mmacosx-version-min=10.6 $
+    -arch x86_64 -Wall -Wendif-labels -Wextra -Wno-unused-parameter $
+    -Wno-missing-field-initializers -Wno-selector-type-mismatch $
+    -Wpartial-availability -Wheader-hygiene -Wno-char-subscripts $
+    -Wno-unneeded-internal-declaration -Wno-covered-switch-default $
+    -Wstring-conversion -Wno-c++11-narrowing -Wno-deprecated-register $
+    -Wno-inconsistent-missing-override -Wno-shift-negative-value $
+    -Wno-bitfield-width
+cflags_c = -std=c99 -Xclang -load -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing
+cflags_cc = -std=c++11 -stdlib=libc++ -fno-rtti -fno-exceptions $
+    -fvisibility-inlines-hidden -fno-threadsafe-statics -Xclang -load $
+    -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing
+cflags_objc = $cflags_c -Wobjc-missing-property-synthesis
+cflags_objcc = $cflags_cc -Wobjc-missing-property-synthesis $
+    -fobjc-call-cxx-cdtors
+arflags = 
+
+build obj/ui/app_list/demo/app_list_demo.app_list_demo_views.o: cxx $
+    ../../ui/app_list/demo/app_list_demo_views.cc || $
+    obj/ui/app_list/app_list_demo.compile_depends.stamp
+
+ldflags = -framework Cocoa -framework Foundation -framework IOKit $
+    -framework Security -framework SystemConfiguration -framework Cocoa $
+    -framework Foundation -framework IOKit -framework Security -framework $
+    SystemConfiguration -framework Cocoa -framework Foundation -framework $
+    IOKit -framework Security -framework SystemConfiguration -framework $
+    Cocoa -framework Foundation -framework IOKit -framework Security $
+    -framework SystemConfiguration -weak_framework CoreBluetooth -framework $
+    Cocoa -framework Foundation -framework IOKit -framework Security $
+    -framework SystemConfiguration -framework Cocoa -framework Foundation $
+    -framework IOKit -framework Security -framework SystemConfiguration $
+    -framework Cocoa -framework Foundation -framework IOKit -framework $
+    Security -framework SystemConfiguration -framework Cocoa -framework $
+    Foundation -framework IOKit -framework Security -framework $
+    SystemConfiguration -framework Cocoa -framework Foundation -framework $
+    IOKit -framework Security -framework SystemConfiguration -framework $
+    Cocoa -framework Foundation -framework IOKit -framework Security $
+    -framework SystemConfiguration -framework Cocoa -framework Foundation $
+    -framework IOKit -framework Security -framework SystemConfiguration $
+    -framework Cocoa -framework Foundation -framework IOKit -framework $
+    Security -framework SystemConfiguration -framework Cocoa -framework $
+    Foundation -framework IOKit -framework Security -framework $
+    SystemConfiguration -framework Cocoa -framework Foundation -framework $
+    IOKit -framework Security -framework SystemConfiguration -framework $
+    Cocoa -framework Foundation -framework IOKit -framework Security $
+    -framework SystemConfiguration -framework Cocoa -framework Foundation $
+    -framework IOKit -framework Security -framework SystemConfiguration $
+    -framework Cocoa -framework Foundation -framework IOKit -framework $
+    Security -framework SystemConfiguration -framework Cocoa -framework $
+    Foundation -framework IOKit -framework Security -framework $
+    SystemConfiguration -framework Cocoa -framework Foundation -framework $
+    IOKit -framework Security -framework SystemConfiguration -framework $
+    Cocoa -framework Foundation -framework IOKit -framework Security $
+    -framework SystemConfiguration -framework Cocoa -framework Foundation $
+    -framework IOKit -framework Security -framework SystemConfiguration $
+    -framework Cocoa -framework Foundation -framework IOKit -framework $
+    Security -framework SystemConfiguration -framework Cocoa -framework $
+    Foundation -framework IOKit -framework Security -framework $
+    SystemConfiguration -framework Cocoa -framework Foundation -framework $
+    IOKit -framework Security -framework SystemConfiguration -framework $
+    Cocoa -framework Foundation -framework IOKit -framework Security $
+    -framework SystemConfiguration -framework Cocoa -framework Foundation $
+    -framework IOKit -framework Security -framework SystemConfiguration $
+    -framework Cocoa -framework Foundation -framework IOKit -framework $
+    Security -framework SystemConfiguration -Wl,-search_paths_first $
+    -Wl,-pie -Wl,-dead_strip -mmacosx-version-min=10.6 -isysroot $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk $
+    -arch x86_64 -L. -stdlib=libc++
+libs = '-L../../third_party/libc++-static' -framework AppKit -framework $
+    ApplicationServices -framework Carbon -framework CoreFoundation $
+    -framework Foundation -framework IOKit -framework Security $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/lib/libbsm.tbd $
+    -framework IOSurface -framework QuartzCore $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/lib/libsandbox.tbd $
+    -framework SystemConfiguration $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/lib/libresolv.tbd $
+    -framework Accelerate -framework AudioUnit -framework CoreVideo $
+    -framework OpenGL -framework Quartz -framework AudioToolbox -framework $
+    CoreAudio -framework QTKit -lm -framework IOBluetooth -framework $
+    CoreMIDI -framework CoreServices $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/lib/libcups.tbd $
+    -framework AddressBook -framework Cocoa
+build app_list_demo: link $
+    obj/ui/app_list/demo/app_list_demo.app_list_demo_views.o libbase.a $
+    libcontent_browser.a liburl_lib.a libui_base.a libevents.a libwebview.a $
+    libviews.a libviews_content_client.a libapp_list.a $
+    libapp_list_test_support.a libbase_static.a $
+    liballocator_extension_thunks.a libmodp_b64.a libdynamic_annotations.a $
+    libevent.a libcontent_common.a libtracing.a libipc.a libcrcrypto.a $
+    libboringssl.a libgles2_utils.a libnet.a libbase_i18n.a libicui18n.a $
+    libicuuc.a libprotobuf_lite.a libnet_quic_proto.a libbase_prefs.a $
+    libsdch.a libchrome_zlib.a libzlib_x86_simd.a libskia_library.a $
+    libskia_opts.a libskia_opts_ssse3.a libskia_opts_sse41.a $
+    libskia_opts_sse42.a libskia_opts_avx.a libskia_opts_avx2.a libsfntly.a $
+    libskia_chrome.a libaccessibility.a libgfx.a libharfbuzz-ng.a libpng.a $
+    libgfx_geometry.a libjpeg_turbo.a libax_gen.a libapi_gen_util.a $
+    libui_base_ime.a libdom_keycode_converter.a libevents_base.a $
+    libgesture_detection.a libevents_platform.a libmozilla.a $
+    libevents_ipc.a libgfx_ipc.a libshell_dialogs.a libcc.a libcc_proto.a $
+    libcommand_buffer_client.a libcommand_buffer_common.a $
+    libcommand_buffer_service.a libdisk_cache_proto.a libgpu_config.a $
+    libre2.a libgl_wrapper.a libcityhash.a libtranslator.a $
+    libtranslator_lib.a libpreprocessor.a libangle_common.a $
+    libgles2_cmd_helper.a libgpu_ipc.a libmedia.a libyuv.a libopus.a $
+    libshared_memory_support.a libffmpeg.a libffmpeg_yasm.a libvpx_new.a $
+    libvpx_intrinsics_mmx.a libvpx_intrinsics_sse2.a $
+    libvpx_intrinsics_ssse3.a libvpx_intrinsics_sse4_1.a $
+    libvpx_intrinsics_avx.a libvpx_intrinsics_avx2.a libwebm.a $
+    libdecklink.a libmedia_asm.a libdevice_bluetooth.a liburibeacon.a $
+    libgpu_blink.a libgles2_c_lib.a libgles2_implementation.a $
+    libgl_in_process_context.a libgpu_skia_bindings.a libblink_common.a $
+    libwtf.a libipc_mojo.a libmojo_environment_chromium.a $
+    libmojo_environment_chromium_impl.a libmojo_message_pump_lib.a $
+    libmojo_cpp_bindings.a libmojo_system_impl.a libmojo_system_impl2.a $
+    libmidi.a libmojo_application_bindings.a $
+    libnetwork_service_bindings_lib.a libstorage_common.a $
+    libblink_platform.a libblink_heap_asm_stubs.a libiccjpeg.a $
+    libwebp_dec.a libwebp_dsp.a libwebp_utils.a libwebp_demux.a $
+    libwebp_enc.a libots.a libbrotli.a libqcms.a libv8_base.a $
+    libv8_libbase.a libv8_external_snapshot.a libblink_web.a libmodules.a $
+    libchromium_sqlite3.a libwebcore_dom.a libxml2.a libxslt.a $
+    libwebcore_html.a libwebcore_remaining.a libwebcore_rendering.a $
+    libwebcore_svg.a libwebcore_generated.a libgin.a libsnappy.a $
+    libcontent_common_mojo_bindings.a libskia_mojo.a $
+    libmojo_geometry_bindings.a libaccelerated_widget_mac.a $
+    libppapi_shared.a libsurface.a libjingle.a libexpat.a librtc_base.a $
+    libwebrtc_common.a librtc_base_approved.a librtc_xmllite.a $
+    libjingle_p2p_constants.a liburl_formatter.a libdevice_battery.a $
+    libdevice_battery_mojo_bindings.a libdevice_vibration.a $
+    libdevice_vibration_mojo_bindings.a libgoogle_apis.a $
+    libmojo_application_base.a libnetwork_type_converters.a $
+    libmojo_geometry_lib.a libmojo_url_type_converters.a $
+    libupdater_bindings_lib.a libmojo_shell_lib.a libmojo_common_lib.a $
+    libmojo_fetcher_lib.a libnet_extras.a libsql.a libzip.a libminizip.a $
+    libsnapshot.a libbackground_sync_proto.a libcache_storage_proto.a $
+    libnotification_proto.a libservice_worker_proto.a libspeech_proto.a $
+    libcc_surfaces.a libmime_util.a libscheduler_common.a libhttp_server.a $
+    libstorage.a libleveldatabase.a libmojo_js_bindings.a libevents_blink.a $
+    libui_touch_selection.a libprinting.a libsandbox.a libcompositor.a $
+    libjingle_glue.a libdesktop_capture.a libsystem_wrappers.a $
+    libdesktop_capture_differ_sse2.a libsudden_motion_sensor.a $
+    libppapi_ipc.a libflac.a libcontent_child.a libwebcrypto.a $
+    libgestures_blink.a libscheduler.a libcontent_gpu.a libcontent_plugin.a $
+    libcontent_ppapi_plugin.a libcontent_renderer.a libcc_blink.a $
+    libstartup_metric_utils_common.a libwebusb.a libdevice_core.a $
+    libdevice_usb.a libdevice_event_log_component.a libusb.a $
+    libcomponents_webusb_mojo_bindings_lib.a $
+    libdevice_usb_mojo_bindings_lib.a libmedia_blink.a libmojo_js_lib.a $
+    libnative_theme.a libdevices_app_public_cpp.a libdevices_app_lib.a $
+    libcast_sender.a libcast_common.a libcast_logging_proto.a libcast_net.a $
+    libjingle_webrtc.a libaudio_processing.a libcommon_audio.a $
+    libopenmax_dl.a libcommon_audio_sse2.a libisac.a $
+    libaudio_decoder_interface.a libaudio_encoder_interface.a $
+    libisac_common.a libaudioproc_debug_proto.a libaudio_processing_sse2.a $
+    libjingle_webrtc_common.a libsrtp.a libmedia_file.a libvideo_capture.a $
+    libvideo_capture_module.a libwebrtc_utility.a libaudio_coding_module.a $
+    libcng.a libg711.a libpcm16b.a libwebrtc_opus.a libg722.a $
+    librtc_event_log.a librtc_event_log_proto.a libneteq.a $
+    librent_a_codec.a libcommon_video.a libvideo_render.a $
+    libvideo_render_module.a libusrsctplib.a libpeerconnection.a $
+    libvoice_engine.a libaudio_conference_mixer.a libaudio_device.a $
+    libbitrate_controller.a librtp_rtcp.a libremote_bitrate_estimator.a $
+    libwebrtc.a libpaced_sender.a libvideo_processing.a $
+    libvideo_processing_sse2.a libwebrtc_video_coding.a libwebrtc_h264.a $
+    libwebrtc_i420.a libvideo_coding_utility.a libwebrtc_vp8.a $
+    libwebrtc_vp9.a libstunprober.a libppapi_host.a libppapi_proxy.a $
+    libcontent_utility.a libcourgette_lib.a liblzma_sdk.a $
+    libui_content_accelerators.a libweb_dialogs.a libgfx_vector_icons.a $
+    libcontent_shell_lib.a libcontent_app_both.a $
+    libcontent_test_mojo_bindings.a liblayouttest_support_content.a $
+    libtest_support_content.a libnet_test_support.a libtest_support_base.a $
+    libgmock.a libgtest.a libtld_cleanup_util.a libnet_with_v8.a $
+    libui_base_test_support.a libevents_test_support.a $
+    libgfx_test_support.a libcc_test_support.a libgpu_unittest_utils.a $
+    libgl_unittest_utils.a libgl_test_support.a libscheduler_test_support.a $
+    libppapi_unittest_shared.a libtest_support_ipc.a $
+    libcompositor_test_support.a libtest_runner.a $
+    libcrash_component_breakpad_mac_to_be_deleted.a $
+    libcrash_component_lib.a libbreakpad.a libbreakpad_utilities.a $
+    libdevtools_discovery.a libdevtools_http_handler.a $
+    libweb_cache_renderer.a libweb_cache_common.a libplugins_renderer.a $
+    libdevice_bluetooth_mocks.a libblink_web_test_support.a $
+    libwebcore_testing.a libwtf_unittest_helpers.a libmodules_testing.a $
+    libviews_test_support.a libkeyed_service_core.a libuser_prefs.a $
+    libgoogle_toolbox_for_mac.a | $
+    resources/inspector/InspectorBackendCommands.js $
+    gen/blink/bindings/scripts/cached_jinja_templates.stamp $
+    obj/third_party/WebKit/Source/bindings/core/interfaces_info_individual_core.actions_rules_copies.stamp $
+    obj/content/content_resources.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/core/generated_testing_idls.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/scripts/cached_lex_yacc_tables.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/core/webcore_prerequisites.actions_depends.stamp $
+    obj/gpu/gpu.actions_depends.stamp $
+    obj/third_party/WebKit/Source/bindings/core/v8/bindings_core_v8_generated_aggregate.actions_rules_copies.stamp $
+    icudtl.dat resources/inspector/inspector.css $
+    gen/blink/core/InspectorProtocolVersion.h $
+    gen/devtools/devtools_resources.grd $
+    obj/third_party/WebKit/Source/bindings/modules/interfaces_info_individual_modules.actions_rules_copies.stamp $
+    obj/content/app/resources/content_resources.actions_rules_copies.stamp $
+    obj/ui/resources/ui_test_pak.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/modules/v8/bindings_modules_impl_generated.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/core/inspector_instrumentation_sources.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/core/make_core_generated.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/modules/v8/bindings_modules_v8_generated_aggregate.actions_rules_copies.stamp $
+    gen/blink/bindings/modules/v8/V8GeneratedModulesBindingsPartial.cpp $
+    obj/third_party/WebKit/Source/devtools/build_applications.actions_rules_copies.stamp $
+    obj/mojo/mojo_application_bindings_mojom.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/core/v8/bindings_core_impl_generated.actions_rules_copies.stamp $
+    gen/blink/bindings/modules/GlobalObjectsModules.pickle $
+    obj/third_party/WebKit/Source/bindings/core/v8/bindings_core_v8_generated_individual.actions_rules_copies.stamp $
+    obj/third_party/angle/src/copy_scripts.actions_rules_copies.stamp $
+    obj/content/content_common_mojo_bindings_mojom.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/core/core_global_constructors_idls.actions_rules_copies.stamp $
+    obj/content/content.actions_depends.stamp $
+    gen/blink/bindings/modules/v8/initPartialInterfacesInModules.cpp $
+    gen/blink/core/EventInterfaces.in $
+    obj/device/bluetooth/bluetooth_strings.actions_rules_copies.stamp $
+    libblink_web_test_support.a $
+    gen/blink/bindings/core/GlobalObjectsCore.pickle $
+    obj/components/components_webusb_mojo_bindings.actions_rules_copies.stamp $
+    obj/third_party/WebKit/public/blink_image_resources.actions_rules_copies.stamp $
+    obj/components/crash_component_non_mac.actions_depends.stamp $
+    obj/third_party/catapult/tracing/generate_about_tracing.actions_rules_copies.stamp $
+    natives_blob.bin libblink_common.a $
+    obj/device/devices_app/device_usb_mojo_bindings.actions_rules_copies.stamp $
+    resources/inspector/toolbox.css $
+    obj/third_party/WebKit/Source/bindings/modules/v8/bindings_modules_v8_generated_partial_individual.actions_rules_copies.stamp $
+    plugins/test_netscape_plugin.plugin $
+    obj/third_party/mojo/mojo_interface_bindings_mojom.actions_rules_copies.stamp $
+    obj/content/browser/tracing/tracing_resources.actions_rules_copies.stamp $
+    obj/content/app/strings/content_strings.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/core/inspector_protocol_sources.actions_rules_copies.stamp $
+    gen/widevine_cdm_version.h $
+    obj/content/content_shell_resources.actions_rules_copies.stamp $
+    obj/ui/app_list/resources/app_list_resources.actions_rules_copies.stamp $
+    obj/ui/resources/ui_resources.actions_rules_copies.stamp $
+    obj/net/net_derived_sources.actions_rules_copies.stamp $
+    obj/ui/strings/ui_strings.actions_rules_copies.stamp $
+    obj/ui/views/resources/views_resources.actions_rules_copies.stamp $
+    obj/ui/mojo/geometry/mojo_geometry_bindings_mojom.actions_rules_copies.stamp $
+    obj/net/net_resources.actions_rules_copies.stamp $
+    obj/v8/tools/gyp/v8_maybe_snapshot.actions_depends.stamp $
+    obj/third_party/WebKit/Source/modules/make_modules_generated.actions_rules_copies.stamp $
+    obj/third_party/WebKit/public/blink.actions_depends.stamp $
+    obj/mojo/network_service_bindings_mojom.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/platform/make_platform_generated.actions_rules_copies.stamp $
+    gen/blink/bindings/modules/InterfacesInfoOverall.pickle $
+    obj/third_party/protobuf/py_proto.actions_rules_copies.stamp $
+    resources/inspector/SupportedCSSProperties.js $
+    obj/third_party/WebKit/Source/devtools/devtools_frontend_resources.actions_rules_copies.stamp $
+    resources/inspector/devtools_extension_api.js $
+    obj/third_party/WebKit/Source/bindings/modules/v8/bindings_modules_v8_generated.actions_depends.stamp $
+    gen/content/browser/tracing/tracing_resources.grd $
+    obj/third_party/WebKit/Source/bindings/modules/modules_global_constructors_idls.actions_rules_copies.stamp $
+    gen/angle/id/commit.h $
+    obj/content/browser/devtools/devtools_protocol_handler.actions_rules_copies.stamp $
+    obj/content/browser/devtools/devtools_resources.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/modules/modules_core_global_constructors_idls.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/bindings/modules/v8/bindings_modules_v8_generated_individual.actions_rules_copies.stamp $
+    obj/v8/tools/gyp/js2c.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/core/webcore.actions_depends.stamp $
+    obj/third_party/WebKit/Source/bindings/core/v8/bindings_core_v8_generated.actions_depends.stamp $
+    obj/mojo/updater_bindings_mojom.actions_rules_copies.stamp $
+    obj/third_party/WebKit/public/blink_resources.actions_rules_copies.stamp $
+    content_shell.pak obj/skia/skia.actions_depends.stamp $
+    obj/third_party/WebKit/Source/bindings/modules/modules_event_generated.actions_rules_copies.stamp $
+    obj/third_party/libwebp/libwebp.actions_depends.stamp
+  ld = $ldxx
+  postbuilds = $ && (export $
+      BUILT_FRAMEWORKS_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      BUILT_PRODUCTS_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      CONFIGURATION=Release; export EXECUTABLE_NAME=app_list_demo; export $
+      EXECUTABLE_PATH=app_list_demo; export $
+      FULL_PRODUCT_NAME=app_list_demo; export PRODUCT_NAME=app_list_demo; $
+      export PRODUCT_TYPE=com.apple.product-type.tool; export $
+      SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk; $
+      export $
+      SRCROOT=/Users/superadmin/tmp/src/out/Release/../../ui/app_list; $
+      export SOURCE_ROOT="$${SRCROOT}"; export $
+      TARGET_BUILD_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      TEMP_DIR="$${TMPDIR}"; (cd ../../ui/app_list && $
+      ../../build/mac/change_mach_o_flags_from_xcode.sh); G=$$?; ((exit $
+      $$G) || rm -rf app_list_demo) && exit $$G)

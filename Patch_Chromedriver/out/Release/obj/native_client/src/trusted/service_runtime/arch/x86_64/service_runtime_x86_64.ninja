@@ -1,0 +1,117 @@
+rule service_runtime_x86_64_target_Assemble_b36422803cf7e0c5f1a0f88aef8a2a0b
+  command = cd ../../native_client/src/trusted/service_runtime/arch/x86_64; $
+      export BUILT_FRAMEWORKS_DIR=/Users/superadmin/tmp/src/out/Release; $
+      export BUILT_PRODUCTS_DIR=/Users/superadmin/tmp/src/out/Release; $
+      export CONFIGURATION=Release; export $
+      EXECUTABLE_NAME=libservice_runtime_x86_64.a; export $
+      EXECUTABLE_PATH=libservice_runtime_x86_64.a; export $
+      FULL_PRODUCT_NAME=libservice_runtime_x86_64.a; export $
+      MACH_O_TYPE=staticlib; export PRODUCT_NAME=service_runtime_x86_64; $
+      export PRODUCT_TYPE=com.apple.product-type.library.static; export $
+      SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk; $
+      export $
+      SRCROOT=/Users/superadmin/tmp/src/out/Release/../../native_client/src/trusted/service_runtime/arch/x86_64; $
+      export SOURCE_ROOT="$${SRCROOT}"; export $
+      TARGET_BUILD_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      TEMP_DIR="$${TMPDIR}";ml64 /nologo /Fo $
+      "../../../../../../out/Release/obj/native_client/src/trusted/service_runtime/arch/x86_64/service_runtime_x86_64.gen\\${root}.obj" $
+      /c "${source}"
+  description = RULE Assembling ${source} to $
+      obj/native_client/src/trusted/service_runtime/arch/x86_64/service_runtime_x86_64.gen\${root}.obj.
+  restat = 1
+
+defines = -DV8_DEPRECATION_WARNINGS -DCLD_VERSION=2 $
+    -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORE=0 -DCHROMIUM_BUILD $
+    -DCR_CLANG_REVISION=254049-1 -DUSE_LIBJPEG_TURBO=1 $
+    -DENABLE_ONE_CLICK_SIGNIN -DENABLE_PRE_SYNC_BACKUP -DENABLE_WEBRTC=1 $
+    -DENABLE_MEDIA_ROUTER=1 -DENABLE_PEPPER_CDMS $
+    -DENABLE_CONFIGURATION_POLICY -DENABLE_NOTIFICATIONS -DENABLE_HIDPI=1 $
+    -DDONT_EMBED_BUILD_METADATA -DFIELDTRIAL_TESTING_ENABLED $
+    -DENABLE_TASK_MANAGER=1 -DENABLE_EXTENSIONS=1 -DENABLE_PDF=1 $
+    -DENABLE_PLUGIN_INSTALLATION=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_THEMES=1 -DENABLE_AUTOFILL_DIALOG=1 $
+    -DENABLE_BACKGROUND=1 -DENABLE_PRINTING=1 -DENABLE_BASIC_PRINTING=1 $
+    -DENABLE_PRINT_PREVIEW=1 -DENABLE_SPELLCHECK=1 $
+    -DUSE_BROWSER_SPELLCHECKER=1 -DENABLE_CAPTIVE_PORTAL_DETECTION=1 $
+    -DENABLE_APP_LIST=1 -DENABLE_SETTINGS_APP=1 -DENABLE_SUPERVISED_USERS=1 $
+    -DENABLE_SERVICE_DISCOVERY=1 -DV8_USE_EXTERNAL_STARTUP_DATA $
+    -DFULL_SAFE_BROWSING -DSAFE_BROWSING_CSD -DSAFE_BROWSING_DB_LOCAL $
+    -DNACL_X86_64_ZERO_BASED_SANDBOX=0 -DUSE_LIBPCI=1 -DUSE_OPENSSL=1 $
+    -DNDEBUG -DNVALGRIND -DDYNAMIC_ANNOTATIONS_ENABLED=0
+includes = -Igen -I../../native_client/src/third_party -I../..
+cflags = -isysroot $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk $
+    -O2 -fvisibility=hidden -Wnewline-eof -mmacosx-version-min=10.6 -arch $
+    x86_64 -Wendif-labels -Wno-unused-parameter $
+    -Wno-missing-field-initializers -Wno-selector-type-mismatch $
+    -Wpartial-availability -Wheader-hygiene -Wno-char-subscripts $
+    -Wno-unneeded-internal-declaration -Wno-covered-switch-default $
+    -Wstring-conversion -Wno-c++11-narrowing -Wno-deprecated-register $
+    -Wno-inconsistent-missing-override -Wno-shift-negative-value $
+    -Wno-bitfield-width -Wno-unused-variable
+cflags_c = -std=c99 -Xclang -load -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing
+cflags_cc = -std=c++11 -stdlib=libc++ -fno-rtti -fno-exceptions $
+    -fvisibility-inlines-hidden -fno-threadsafe-statics -Xclang -load $
+    -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing
+cflags_objc = $cflags_c -Wobjc-missing-property-synthesis
+cflags_objcc = $cflags_cc -Wobjc-missing-property-synthesis $
+    -fobjc-call-cxx-cdtors
+arflags = 
+
+build $
+    obj/native_client/src/trusted/service_runtime/arch/x86_64/service_runtime_x86_64.nacl_app_64.o: $
+    cc $
+    ../../native_client/src/trusted/service_runtime/arch/x86_64/nacl_app_64.c
+build $
+    obj/native_client/src/trusted/service_runtime/arch/x86_64/service_runtime_x86_64.nacl_switch_64.o: $
+    cc $
+    ../../native_client/src/trusted/service_runtime/arch/x86_64/nacl_switch_64.S
+build $
+    obj/native_client/src/trusted/service_runtime/arch/x86_64/service_runtime_x86_64.nacl_switch_to_app_64.o: $
+    cc $
+    ../../native_client/src/trusted/service_runtime/arch/x86_64/nacl_switch_to_app_64.c
+build $
+    obj/native_client/src/trusted/service_runtime/arch/x86_64/service_runtime_x86_64.nacl_syscall_64.o: $
+    cc $
+    ../../native_client/src/trusted/service_runtime/arch/x86_64/nacl_syscall_64.S
+build $
+    obj/native_client/src/trusted/service_runtime/arch/x86_64/service_runtime_x86_64.nacl_tls_64.o: $
+    cc $
+    ../../native_client/src/trusted/service_runtime/arch/x86_64/nacl_tls_64.c
+build $
+    obj/native_client/src/trusted/service_runtime/arch/x86_64/service_runtime_x86_64.sel_ldr_x86_64.o: $
+    cc $
+    ../../native_client/src/trusted/service_runtime/arch/x86_64/sel_ldr_x86_64.c
+build $
+    obj/native_client/src/trusted/service_runtime/arch/x86_64/service_runtime_x86_64.sel_rt_64.o: $
+    cc ../../native_client/src/trusted/service_runtime/arch/x86_64/sel_rt_64.c
+build $
+    obj/native_client/src/trusted/service_runtime/arch/x86_64/service_runtime_x86_64.tramp_64.o: $
+    cc ../../native_client/src/trusted/service_runtime/arch/x86_64/tramp_64.S
+build $
+    obj/native_client/src/trusted/service_runtime/osx/service_runtime_x86_64.nacl_signal_64.o: $
+    cc ../../native_client/src/trusted/service_runtime/osx/nacl_signal_64.c
+build $
+    obj/native_client/src/trusted/service_runtime/arch/x86_64/service_runtime_x86_64.sel_addrspace_posix_x86_64.o: $
+    cc $
+    ../../native_client/src/trusted/service_runtime/arch/x86_64/sel_addrspace_posix_x86_64.c
+
+build libservice_runtime_x86_64.a: alink $
+    obj/native_client/src/trusted/service_runtime/arch/x86_64/service_runtime_x86_64.nacl_app_64.o $
+    obj/native_client/src/trusted/service_runtime/arch/x86_64/service_runtime_x86_64.nacl_switch_64.o $
+    obj/native_client/src/trusted/service_runtime/arch/x86_64/service_runtime_x86_64.nacl_switch_to_app_64.o $
+    obj/native_client/src/trusted/service_runtime/arch/x86_64/service_runtime_x86_64.nacl_syscall_64.o $
+    obj/native_client/src/trusted/service_runtime/arch/x86_64/service_runtime_x86_64.nacl_tls_64.o $
+    obj/native_client/src/trusted/service_runtime/arch/x86_64/service_runtime_x86_64.sel_ldr_x86_64.o $
+    obj/native_client/src/trusted/service_runtime/arch/x86_64/service_runtime_x86_64.sel_rt_64.o $
+    obj/native_client/src/trusted/service_runtime/arch/x86_64/service_runtime_x86_64.tramp_64.o $
+    obj/native_client/src/trusted/service_runtime/osx/service_runtime_x86_64.nacl_signal_64.o $
+    obj/native_client/src/trusted/service_runtime/arch/x86_64/service_runtime_x86_64.sel_addrspace_posix_x86_64.o

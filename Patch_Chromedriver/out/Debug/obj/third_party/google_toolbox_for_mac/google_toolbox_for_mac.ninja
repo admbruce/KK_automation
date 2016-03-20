@@ -1,0 +1,391 @@
+defines = -DV8_DEPRECATION_WARNINGS -DCLD_VERSION=2 $
+    -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORE=0 -DCHROMIUM_BUILD $
+    -DCR_CLANG_REVISION=254049-1 -DUSE_LIBJPEG_TURBO=1 $
+    -DENABLE_ONE_CLICK_SIGNIN -DENABLE_PRE_SYNC_BACKUP -DENABLE_WEBRTC=1 $
+    -DENABLE_MEDIA_ROUTER=1 -DENABLE_PEPPER_CDMS $
+    -DENABLE_CONFIGURATION_POLICY -DENABLE_NOTIFICATIONS -DENABLE_HIDPI=1 $
+    -DDONT_EMBED_BUILD_METADATA -DFIELDTRIAL_TESTING_ENABLED $
+    -DENABLE_TASK_MANAGER=1 -DENABLE_EXTENSIONS=1 -DENABLE_PDF=1 $
+    -DENABLE_PLUGIN_INSTALLATION=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_THEMES=1 -DENABLE_AUTOFILL_DIALOG=1 $
+    -DENABLE_BACKGROUND=1 -DENABLE_PRINTING=1 -DENABLE_BASIC_PRINTING=1 $
+    -DENABLE_PRINT_PREVIEW=1 -DENABLE_SPELLCHECK=1 $
+    -DUSE_BROWSER_SPELLCHECKER=1 -DENABLE_CAPTIVE_PORTAL_DETECTION=1 $
+    -DENABLE_APP_LIST=1 -DENABLE_SETTINGS_APP=1 -DENABLE_SUPERVISED_USERS=1 $
+    -DENABLE_SERVICE_DISCOVERY=1 -DV8_USE_EXTERNAL_STARTUP_DATA $
+    -DFULL_SAFE_BROWSING -DSAFE_BROWSING_CSD -DSAFE_BROWSING_DB_LOCAL $
+    -DUSE_LIBPCI=1 -DUSE_OPENSSL=1 -DDYNAMIC_ANNOTATIONS_ENABLED=1 $
+    -DWTF_USE_DYNAMIC_ANNOTATIONS=1
+includes = -Igen -I../../third_party/google_toolbox_for_mac $
+    -I../../third_party/google_toolbox_for_mac/src $
+    -I../../third_party/google_toolbox_for_mac/src/AppKit $
+    -I../../third_party/google_toolbox_for_mac/src/DebugUtils $
+    -I../../third_party/google_toolbox_for_mac/src/Foundation
+cflags = -isysroot $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk $
+    -O0 -fvisibility=hidden -Werror -Wnewline-eof -mmacosx-version-min=10.6 $
+    -arch x86_64 -Wendif-labels -Wno-unused-parameter $
+    -Wno-missing-field-initializers -Wno-selector-type-mismatch $
+    -Wpartial-availability -Wheader-hygiene -Wno-char-subscripts $
+    -Wno-unneeded-internal-declaration -Wno-covered-switch-default $
+    -Wstring-conversion -Wno-c++11-narrowing -Wno-deprecated-register $
+    -Wno-inconsistent-missing-override -Wno-shift-negative-value $
+    -Wno-bitfield-width -Wno-unused-variable
+cflags_c = -std=c99 -Xclang -load -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing -fstack-protector-all $
+    -Wno-undefined-bool-conversion -Wno-tautological-undefined-compare
+cflags_cc = -std=c++11 -stdlib=libc++ -fno-rtti -fno-exceptions $
+    -fvisibility-inlines-hidden -fno-threadsafe-statics -Xclang -load $
+    -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing -fstack-protector-all $
+    -Wno-undefined-bool-conversion -Wno-tautological-undefined-compare
+cflags_objc = $cflags_c -Wobjc-missing-property-synthesis
+cflags_objcc = $cflags_cc -Wobjc-missing-property-synthesis $
+    -fobjc-call-cxx-cdtors
+arflags = 
+
+build $
+    obj/third_party/google_toolbox_for_mac/src/AddressBook/google_toolbox_for_mac.GTMABAddressBook.o: $
+    objc $
+    ../../third_party/google_toolbox_for_mac/src/AddressBook/GTMABAddressBook.m
+build $
+    obj/third_party/google_toolbox_for_mac/src/AppKit/google_toolbox_for_mac.GTMCarbonEvent.o: $
+    objc ../../third_party/google_toolbox_for_mac/src/AppKit/GTMCarbonEvent.m
+build $
+    obj/third_party/google_toolbox_for_mac/src/AppKit/google_toolbox_for_mac.GTMDelegatingTableColumn.o: $
+    objc $
+    ../../third_party/google_toolbox_for_mac/src/AppKit/GTMDelegatingTableColumn.m
+build $
+    obj/third_party/google_toolbox_for_mac/src/AppKit/google_toolbox_for_mac.GTMFadeTruncatingTextFieldCell.o: $
+    objc $
+    ../../third_party/google_toolbox_for_mac/src/AppKit/GTMFadeTruncatingTextFieldCell.m
+build $
+    obj/third_party/google_toolbox_for_mac/src/AppKit/google_toolbox_for_mac.GTMGetURLHandler.o: $
+    objc $
+    ../../third_party/google_toolbox_for_mac/src/AppKit/GTMGetURLHandler.m
+build $
+    obj/third_party/google_toolbox_for_mac/src/AppKit/google_toolbox_for_mac.GTMGoogleSearch.o: $
+    objc ../../third_party/google_toolbox_for_mac/src/AppKit/GTMGoogleSearch.m
+build $
+    obj/third_party/google_toolbox_for_mac/src/AppKit/google_toolbox_for_mac.GTMHotKeyTextField.o: $
+    objc $
+    ../../third_party/google_toolbox_for_mac/src/AppKit/GTMHotKeyTextField.m
+build $
+    obj/third_party/google_toolbox_for_mac/src/AppKit/google_toolbox_for_mac.GTMIBArray.o: $
+    objc ../../third_party/google_toolbox_for_mac/src/AppKit/GTMIBArray.m
+build $
+    obj/third_party/google_toolbox_for_mac/src/AppKit/google_toolbox_for_mac.GTMKeyValueAnimation.o: $
+    objc $
+    ../../third_party/google_toolbox_for_mac/src/AppKit/GTMKeyValueAnimation.m
+build $
+    obj/third_party/google_toolbox_for_mac/src/AppKit/google_toolbox_for_mac.GTMLargeTypeWindow.o: $
+    objc $
+    ../../third_party/google_toolbox_for_mac/src/AppKit/GTMLargeTypeWindow.m
+build $
+    obj/third_party/google_toolbox_for_mac/src/AppKit/google_toolbox_for_mac.GTMLinearRGBShading.o: $
+    objc $
+    ../../third_party/google_toolbox_for_mac/src/AppKit/GTMLinearRGBShading.m
+build $
+    obj/third_party/google_toolbox_for_mac/src/AppKit/google_toolbox_for_mac.GTMLoginItems.o: $
+    objc ../../third_party/google_toolbox_for_mac/src/AppKit/GTMLoginItems.m
+build $
+    obj/third_party/google_toolbox_for_mac/src/AppKit/google_toolbox_for_mac.GTMNSAnimatablePropertyContainer.o: $
+    objc $
+    ../../third_party/google_toolbox_for_mac/src/AppKit/GTMNSAnimatablePropertyContainer.m
+build $
+    obj/third_party/google_toolbox_for_mac/src/AppKit/google_toolbox_for_mac.GTMNSAnimation+Duration.o: $
+    objc $
+    ../../third_party/google_toolbox_for_mac/src/AppKit/GTMNSAnimation+Duration.m
+build $
+    obj/third_party/google_toolbox_for_mac/src/AppKit/google_toolbox_for_mac.GTMNSBezierPath+CGPath.o: $
+    objc $
+    ../../third_party/google_toolbox_for_mac/src/AppKit/GTMNSBezierPath+CGPath.m
+build $
+    obj/third_party/google_toolbox_for_mac/src/AppKit/google_toolbox_for_mac.GTMNSBezierPath+RoundRect.o: $
+    objc $
+    ../../third_party/google_toolbox_for_mac/src/AppKit/GTMNSBezierPath+RoundRect.m
+build $
+    obj/third_party/google_toolbox_for_mac/src/AppKit/google_toolbox_for_mac.GTMNSBezierPath+Shading.o: $
+    objc $
+    ../../third_party/google_toolbox_for_mac/src/AppKit/GTMNSBezierPath+Shading.m
+build $
+    obj/third_party/google_toolbox_for_mac/src/AppKit/google_toolbox_for_mac.GTMNSColor+Luminance.o: $
+    objc $
+    ../../third_party/google_toolbox_for_mac/src/AppKit/GTMNSColor+Luminance.m
+build $
+    obj/third_party/google_toolbox_for_mac/src/AppKit/google_toolbox_for_mac.GTMNSImage+Scaling.o: $
+    objc $
+    ../../third_party/google_toolbox_for_mac/src/AppKit/GTMNSImage+Scaling.m
+build $
+    obj/third_party/google_toolbox_for_mac/src/AppKit/google_toolbox_for_mac.GTMNSImage+SearchCache.o: $
+    objc $
+    ../../third_party/google_toolbox_for_mac/src/AppKit/GTMNSImage+SearchCache.m
+build $
+    obj/third_party/google_toolbox_for_mac/src/AppKit/google_toolbox_for_mac.GTMNSWorkspace+Running.o: $
+    objc $
+    ../../third_party/google_toolbox_for_mac/src/AppKit/GTMNSWorkspace+Running.m
+build $
+    obj/third_party/google_toolbox_for_mac/src/AppKit/google_toolbox_for_mac.GTMUILocalizer.o: $
+    objc ../../third_party/google_toolbox_for_mac/src/AppKit/GTMUILocalizer.m
+build $
+    obj/third_party/google_toolbox_for_mac/src/AppKit/google_toolbox_for_mac.GTMUILocalizerAndLayoutTweaker.o: $
+    objc $
+    ../../third_party/google_toolbox_for_mac/src/AppKit/GTMUILocalizerAndLayoutTweaker.m
+build $
+    obj/third_party/google_toolbox_for_mac/src/AppKit/google_toolbox_for_mac.GTMWindowSheetController.o: $
+    objc $
+    ../../third_party/google_toolbox_for_mac/src/AppKit/GTMWindowSheetController.m
+build $
+    obj/third_party/google_toolbox_for_mac/src/DebugUtils/google_toolbox_for_mac.GTMDebugThreadValidation.o: $
+    objc $
+    ../../third_party/google_toolbox_for_mac/src/DebugUtils/GTMDebugThreadValidation.m
+build $
+    obj/third_party/google_toolbox_for_mac/src/DebugUtils/google_toolbox_for_mac.GTMMethodCheck.o: $
+    objc $
+    ../../third_party/google_toolbox_for_mac/src/DebugUtils/GTMMethodCheck.m
+build $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMAbstractDOListener.o: $
+    objc $
+    ../../third_party/google_toolbox_for_mac/src/Foundation/GTMAbstractDOListener.m
+build $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMCalculatedRange.o: $
+    objc $
+    ../../third_party/google_toolbox_for_mac/src/Foundation/GTMCalculatedRange.m
+build $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMExceptionalInlines.o: $
+    objc $
+    ../../third_party/google_toolbox_for_mac/src/Foundation/GTMExceptionalInlines.m
+build $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMFileSystemKQueue.o: $
+    objc $
+    ../../third_party/google_toolbox_for_mac/src/Foundation/GTMFileSystemKQueue.m
+build $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMFourCharCode.o: $
+    objc $
+    ../../third_party/google_toolbox_for_mac/src/Foundation/GTMFourCharCode.m
+build $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMGeometryUtils.o: $
+    objc $
+    ../../third_party/google_toolbox_for_mac/src/Foundation/GTMGeometryUtils.m
+build $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMLightweightProxy.o: $
+    objc $
+    ../../third_party/google_toolbox_for_mac/src/Foundation/GTMLightweightProxy.m
+build $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMLogger+ASL.o: $
+    objc $
+    ../../third_party/google_toolbox_for_mac/src/Foundation/GTMLogger+ASL.m
+build $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMLogger.o: $
+    objc ../../third_party/google_toolbox_for_mac/src/Foundation/GTMLogger.m
+build $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMLoggerRingBufferWriter.o: $
+    objc $
+    ../../third_party/google_toolbox_for_mac/src/Foundation/GTMLoggerRingBufferWriter.m
+build $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMNSAppleEventDescriptor+Foundation.o: $
+    objc $
+    ../../third_party/google_toolbox_for_mac/src/Foundation/GTMNSAppleEventDescriptor+Foundation.m
+build $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMNSAppleEventDescriptor+Handler.o: $
+    objc $
+    ../../third_party/google_toolbox_for_mac/src/Foundation/GTMNSAppleEventDescriptor+Handler.m
+build $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMNSAppleScript+Handler.o: $
+    objc $
+    ../../third_party/google_toolbox_for_mac/src/Foundation/GTMNSAppleScript+Handler.m
+build $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMNSArray+Merge.o: $
+    objc $
+    ../../third_party/google_toolbox_for_mac/src/Foundation/GTMNSArray+Merge.m
+build $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMNSDictionary+CaseInsensitive.o: $
+    objc $
+    ../../third_party/google_toolbox_for_mac/src/Foundation/GTMNSDictionary+CaseInsensitive.m
+build $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMNSDictionary+URLArguments.o: $
+    objc $
+    ../../third_party/google_toolbox_for_mac/src/Foundation/GTMNSDictionary+URLArguments.m
+build $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMNSEnumerator+Filter.o: $
+    objc $
+    ../../third_party/google_toolbox_for_mac/src/Foundation/GTMNSEnumerator+Filter.m
+build $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMNSFileHandle+UniqueName.o: $
+    objc $
+    ../../third_party/google_toolbox_for_mac/src/Foundation/GTMNSFileHandle+UniqueName.m
+build $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMNSFileManager+Carbon.o: $
+    objc $
+    ../../third_party/google_toolbox_for_mac/src/Foundation/GTMNSFileManager+Carbon.m
+build $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMNSFileManager+Path.o: $
+    objc $
+    ../../third_party/google_toolbox_for_mac/src/Foundation/GTMNSFileManager+Path.m
+build $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMNSNumber+64Bit.o: $
+    objc $
+    ../../third_party/google_toolbox_for_mac/src/Foundation/GTMNSNumber+64Bit.m
+build $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMNSObject+KeyValueObserving.o: $
+    objc $
+    ../../third_party/google_toolbox_for_mac/src/Foundation/GTMNSObject+KeyValueObserving.m
+build $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMNSScanner+JSON.o: $
+    objc $
+    ../../third_party/google_toolbox_for_mac/src/Foundation/GTMNSScanner+JSON.m
+build $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMNSScanner+Unsigned.o: $
+    objc $
+    ../../third_party/google_toolbox_for_mac/src/Foundation/GTMNSScanner+Unsigned.m
+build $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMNSString+FindFolder.o: $
+    objc $
+    ../../third_party/google_toolbox_for_mac/src/Foundation/GTMNSString+FindFolder.m
+build $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMNSString+HTML.o: $
+    objc $
+    ../../third_party/google_toolbox_for_mac/src/Foundation/GTMNSString+HTML.m
+build $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMNSString+Replace.o: $
+    objc $
+    ../../third_party/google_toolbox_for_mac/src/Foundation/GTMNSString+Replace.m
+build $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMNSString+URLArguments.o: $
+    objc $
+    ../../third_party/google_toolbox_for_mac/src/Foundation/GTMNSString+URLArguments.m
+build $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMNSString+XML.o: $
+    objc $
+    ../../third_party/google_toolbox_for_mac/src/Foundation/GTMNSString+XML.m
+build $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMNSThread+Blocks.o: $
+    objc $
+    ../../third_party/google_toolbox_for_mac/src/Foundation/GTMNSThread+Blocks.m
+build $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMObjC2Runtime.o: $
+    objc $
+    ../../third_party/google_toolbox_for_mac/src/Foundation/GTMObjC2Runtime.m
+build $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMPath.o: $
+    objc ../../third_party/google_toolbox_for_mac/src/Foundation/GTMPath.m
+build $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMRegex.o: $
+    objc ../../third_party/google_toolbox_for_mac/src/Foundation/GTMRegex.m
+build $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMScriptRunner.o: $
+    objc $
+    ../../third_party/google_toolbox_for_mac/src/Foundation/GTMScriptRunner.m
+build $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMServiceManagement.o: $
+    cc $
+    ../../third_party/google_toolbox_for_mac/src/Foundation/GTMServiceManagement.c
+build $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMSignalHandler.o: $
+    objc $
+    ../../third_party/google_toolbox_for_mac/src/Foundation/GTMSignalHandler.m
+build $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMStackTrace.o: $
+    objc $
+    ../../third_party/google_toolbox_for_mac/src/Foundation/GTMStackTrace.m
+build $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMStringEncoding.o: $
+    objc $
+    ../../third_party/google_toolbox_for_mac/src/Foundation/GTMStringEncoding.m
+build $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMSystemVersion.o: $
+    objc $
+    ../../third_party/google_toolbox_for_mac/src/Foundation/GTMSystemVersion.m
+build $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMTransientRootPortProxy.o: $
+    objc $
+    ../../third_party/google_toolbox_for_mac/src/Foundation/GTMTransientRootPortProxy.m
+build $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMTransientRootProxy.o: $
+    objc $
+    ../../third_party/google_toolbox_for_mac/src/Foundation/GTMTransientRootProxy.m
+build $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMURITemplate.o: $
+    objc $
+    ../../third_party/google_toolbox_for_mac/src/Foundation/GTMURITemplate.m
+build $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMValidatingContainers.o: $
+    objc $
+    ../../third_party/google_toolbox_for_mac/src/Foundation/GTMValidatingContainers.m
+
+build libgoogle_toolbox_for_mac.a: alink $
+    obj/third_party/google_toolbox_for_mac/src/AddressBook/google_toolbox_for_mac.GTMABAddressBook.o $
+    obj/third_party/google_toolbox_for_mac/src/AppKit/google_toolbox_for_mac.GTMCarbonEvent.o $
+    obj/third_party/google_toolbox_for_mac/src/AppKit/google_toolbox_for_mac.GTMDelegatingTableColumn.o $
+    obj/third_party/google_toolbox_for_mac/src/AppKit/google_toolbox_for_mac.GTMFadeTruncatingTextFieldCell.o $
+    obj/third_party/google_toolbox_for_mac/src/AppKit/google_toolbox_for_mac.GTMGetURLHandler.o $
+    obj/third_party/google_toolbox_for_mac/src/AppKit/google_toolbox_for_mac.GTMGoogleSearch.o $
+    obj/third_party/google_toolbox_for_mac/src/AppKit/google_toolbox_for_mac.GTMHotKeyTextField.o $
+    obj/third_party/google_toolbox_for_mac/src/AppKit/google_toolbox_for_mac.GTMIBArray.o $
+    obj/third_party/google_toolbox_for_mac/src/AppKit/google_toolbox_for_mac.GTMKeyValueAnimation.o $
+    obj/third_party/google_toolbox_for_mac/src/AppKit/google_toolbox_for_mac.GTMLargeTypeWindow.o $
+    obj/third_party/google_toolbox_for_mac/src/AppKit/google_toolbox_for_mac.GTMLinearRGBShading.o $
+    obj/third_party/google_toolbox_for_mac/src/AppKit/google_toolbox_for_mac.GTMLoginItems.o $
+    obj/third_party/google_toolbox_for_mac/src/AppKit/google_toolbox_for_mac.GTMNSAnimatablePropertyContainer.o $
+    obj/third_party/google_toolbox_for_mac/src/AppKit/google_toolbox_for_mac.GTMNSAnimation+Duration.o $
+    obj/third_party/google_toolbox_for_mac/src/AppKit/google_toolbox_for_mac.GTMNSBezierPath+CGPath.o $
+    obj/third_party/google_toolbox_for_mac/src/AppKit/google_toolbox_for_mac.GTMNSBezierPath+RoundRect.o $
+    obj/third_party/google_toolbox_for_mac/src/AppKit/google_toolbox_for_mac.GTMNSBezierPath+Shading.o $
+    obj/third_party/google_toolbox_for_mac/src/AppKit/google_toolbox_for_mac.GTMNSColor+Luminance.o $
+    obj/third_party/google_toolbox_for_mac/src/AppKit/google_toolbox_for_mac.GTMNSImage+Scaling.o $
+    obj/third_party/google_toolbox_for_mac/src/AppKit/google_toolbox_for_mac.GTMNSImage+SearchCache.o $
+    obj/third_party/google_toolbox_for_mac/src/AppKit/google_toolbox_for_mac.GTMNSWorkspace+Running.o $
+    obj/third_party/google_toolbox_for_mac/src/AppKit/google_toolbox_for_mac.GTMUILocalizer.o $
+    obj/third_party/google_toolbox_for_mac/src/AppKit/google_toolbox_for_mac.GTMUILocalizerAndLayoutTweaker.o $
+    obj/third_party/google_toolbox_for_mac/src/AppKit/google_toolbox_for_mac.GTMWindowSheetController.o $
+    obj/third_party/google_toolbox_for_mac/src/DebugUtils/google_toolbox_for_mac.GTMDebugThreadValidation.o $
+    obj/third_party/google_toolbox_for_mac/src/DebugUtils/google_toolbox_for_mac.GTMMethodCheck.o $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMAbstractDOListener.o $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMCalculatedRange.o $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMExceptionalInlines.o $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMFileSystemKQueue.o $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMFourCharCode.o $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMGeometryUtils.o $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMLightweightProxy.o $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMLogger+ASL.o $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMLogger.o $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMLoggerRingBufferWriter.o $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMNSAppleEventDescriptor+Foundation.o $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMNSAppleEventDescriptor+Handler.o $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMNSAppleScript+Handler.o $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMNSArray+Merge.o $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMNSDictionary+CaseInsensitive.o $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMNSDictionary+URLArguments.o $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMNSEnumerator+Filter.o $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMNSFileHandle+UniqueName.o $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMNSFileManager+Carbon.o $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMNSFileManager+Path.o $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMNSNumber+64Bit.o $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMNSObject+KeyValueObserving.o $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMNSScanner+JSON.o $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMNSScanner+Unsigned.o $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMNSString+FindFolder.o $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMNSString+HTML.o $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMNSString+Replace.o $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMNSString+URLArguments.o $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMNSString+XML.o $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMNSThread+Blocks.o $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMObjC2Runtime.o $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMPath.o $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMRegex.o $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMScriptRunner.o $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMServiceManagement.o $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMSignalHandler.o $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMStackTrace.o $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMStringEncoding.o $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMSystemVersion.o $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMTransientRootPortProxy.o $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMTransientRootProxy.o $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMURITemplate.o $
+    obj/third_party/google_toolbox_for_mac/src/Foundation/google_toolbox_for_mac.GTMValidatingContainers.o

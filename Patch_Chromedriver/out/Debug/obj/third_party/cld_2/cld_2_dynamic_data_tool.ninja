@@ -1,0 +1,185 @@
+defines = -DV8_DEPRECATION_WARNINGS -DCLD_VERSION=2 $
+    -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORE=0 -DCHROMIUM_BUILD $
+    -DCR_CLANG_REVISION=254049-1 -DUSE_LIBJPEG_TURBO=1 $
+    -DENABLE_ONE_CLICK_SIGNIN -DENABLE_PRE_SYNC_BACKUP -DENABLE_WEBRTC=1 $
+    -DENABLE_MEDIA_ROUTER=1 -DENABLE_PEPPER_CDMS $
+    -DENABLE_CONFIGURATION_POLICY -DENABLE_NOTIFICATIONS -DENABLE_HIDPI=1 $
+    -DDONT_EMBED_BUILD_METADATA -DFIELDTRIAL_TESTING_ENABLED $
+    -DENABLE_TASK_MANAGER=1 -DENABLE_EXTENSIONS=1 -DENABLE_PDF=1 $
+    -DENABLE_PLUGIN_INSTALLATION=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_THEMES=1 -DENABLE_AUTOFILL_DIALOG=1 $
+    -DENABLE_BACKGROUND=1 -DENABLE_PRINTING=1 -DENABLE_BASIC_PRINTING=1 $
+    -DENABLE_PRINT_PREVIEW=1 -DENABLE_SPELLCHECK=1 $
+    -DUSE_BROWSER_SPELLCHECKER=1 -DENABLE_CAPTIVE_PORTAL_DETECTION=1 $
+    -DENABLE_APP_LIST=1 -DENABLE_SETTINGS_APP=1 -DENABLE_SUPERVISED_USERS=1 $
+    -DENABLE_SERVICE_DISCOVERY=1 -DV8_USE_EXTERNAL_STARTUP_DATA $
+    -DFULL_SAFE_BROWSING -DSAFE_BROWSING_CSD -DSAFE_BROWSING_DB_LOCAL $
+    -DCLD2_DYNAMIC_MODE -DUSE_LIBPCI=1 -DUSE_OPENSSL=1 $
+    -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DWTF_USE_DYNAMIC_ANNOTATIONS=1
+includes = -Igen -I../../third_party/cld_2/src/internal $
+    -I../../third_party/cld_2/src/public
+cflags = -isysroot $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk $
+    -O0 -fvisibility=hidden -Werror -Wnewline-eof -mmacosx-version-min=10.6 $
+    -arch x86_64 -Wendif-labels -Wno-unused-parameter $
+    -Wno-missing-field-initializers -Wno-selector-type-mismatch $
+    -Wpartial-availability -Wheader-hygiene -Wno-char-subscripts $
+    -Wno-unneeded-internal-declaration -Wno-covered-switch-default $
+    -Wstring-conversion -Wno-c++11-narrowing -Wno-deprecated-register $
+    -Wno-inconsistent-missing-override -Wno-shift-negative-value $
+    -Wno-bitfield-width -Wno-missing-braces -Wno-unused-variable
+cflags_c = -std=c99 -Xclang -load -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing -fstack-protector-all $
+    -Wno-undefined-bool-conversion -Wno-tautological-undefined-compare
+cflags_cc = -std=c++11 -stdlib=libc++ -fno-rtti -fno-exceptions $
+    -fvisibility-inlines-hidden -fno-threadsafe-statics -Xclang -load $
+    -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing -fstack-protector-all $
+    -Wno-undefined-bool-conversion -Wno-tautological-undefined-compare
+cflags_objc = $cflags_c -Wobjc-missing-property-synthesis
+cflags_objcc = $cflags_cc -Wobjc-missing-property-synthesis $
+    -fobjc-call-cxx-cdtors
+arflags = 
+
+build $
+    obj/third_party/cld_2/src/internal/cld_2_dynamic_data_tool.cld2_generated_quadchrome_2.o: $
+    cxx ../../third_party/cld_2/src/internal/cld2_generated_quadchrome_2.cc
+build obj/third_party/cld_2/src/internal/cld_2_dynamic_data_tool.cldutil.o: $
+    cxx ../../third_party/cld_2/src/internal/cldutil.cc
+build $
+    obj/third_party/cld_2/src/internal/cld_2_dynamic_data_tool.cldutil_shared.o: $
+    cxx ../../third_party/cld_2/src/internal/cldutil_shared.cc
+build $
+    obj/third_party/cld_2/src/internal/cld_2_dynamic_data_tool.compact_lang_det.o: $
+    cxx ../../third_party/cld_2/src/internal/compact_lang_det.cc
+build $
+    obj/third_party/cld_2/src/internal/cld_2_dynamic_data_tool.compact_lang_det_hint_code.o: $
+    cxx ../../third_party/cld_2/src/internal/compact_lang_det_hint_code.cc
+build $
+    obj/third_party/cld_2/src/internal/cld_2_dynamic_data_tool.compact_lang_det_impl.o: $
+    cxx ../../third_party/cld_2/src/internal/compact_lang_det_impl.cc
+build $
+    obj/third_party/cld_2/src/internal/cld_2_dynamic_data_tool.debug_empty.o: $
+    cxx ../../third_party/cld_2/src/internal/debug_empty.cc
+build $
+    obj/third_party/cld_2/src/internal/cld_2_dynamic_data_tool.fixunicodevalue.o: $
+    cxx ../../third_party/cld_2/src/internal/fixunicodevalue.cc
+build $
+    obj/third_party/cld_2/src/internal/cld_2_dynamic_data_tool.generated_entities.o: $
+    cxx ../../third_party/cld_2/src/internal/generated_entities.cc
+build $
+    obj/third_party/cld_2/src/internal/cld_2_dynamic_data_tool.generated_language.o: $
+    cxx ../../third_party/cld_2/src/internal/generated_language.cc
+build $
+    obj/third_party/cld_2/src/internal/cld_2_dynamic_data_tool.generated_ulscript.o: $
+    cxx ../../third_party/cld_2/src/internal/generated_ulscript.cc
+build $
+    obj/third_party/cld_2/src/internal/cld_2_dynamic_data_tool.getonescriptspan.o: $
+    cxx ../../third_party/cld_2/src/internal/getonescriptspan.cc
+build $
+    obj/third_party/cld_2/src/internal/cld_2_dynamic_data_tool.lang_script.o: $
+    cxx ../../third_party/cld_2/src/internal/lang_script.cc
+build $
+    obj/third_party/cld_2/src/internal/cld_2_dynamic_data_tool.offsetmap.o: $
+    cxx ../../third_party/cld_2/src/internal/offsetmap.cc
+build $
+    obj/third_party/cld_2/src/internal/cld_2_dynamic_data_tool.scoreonescriptspan.o: $
+    cxx ../../third_party/cld_2/src/internal/scoreonescriptspan.cc
+build obj/third_party/cld_2/src/internal/cld_2_dynamic_data_tool.tote.o: $
+    cxx ../../third_party/cld_2/src/internal/tote.cc
+build $
+    obj/third_party/cld_2/src/internal/cld_2_dynamic_data_tool.utf8statetable.o: $
+    cxx ../../third_party/cld_2/src/internal/utf8statetable.cc
+build $
+    obj/third_party/cld_2/src/internal/cld_2_dynamic_data_tool.cld2_generated_cjk_compatible.o: $
+    cxx ../../third_party/cld_2/src/internal/cld2_generated_cjk_compatible.cc
+build $
+    obj/third_party/cld_2/src/internal/cld_2_dynamic_data_tool.cld2_generated_deltaoctachrome.o: $
+    cxx ../../third_party/cld_2/src/internal/cld2_generated_deltaoctachrome.cc
+build $
+    obj/third_party/cld_2/src/internal/cld_2_dynamic_data_tool.cld2_generated_distinctoctachrome.o: $
+    cxx $
+    ../../third_party/cld_2/src/internal/cld2_generated_distinctoctachrome.cc
+build $
+    obj/third_party/cld_2/src/internal/cld_2_dynamic_data_tool.cld_generated_cjk_delta_bi_4.o: $
+    cxx ../../third_party/cld_2/src/internal/cld_generated_cjk_delta_bi_4.cc
+build $
+    obj/third_party/cld_2/src/internal/cld_2_dynamic_data_tool.cld_generated_cjk_uni_prop_80.o: $
+    cxx ../../third_party/cld_2/src/internal/cld_generated_cjk_uni_prop_80.cc
+build $
+    obj/third_party/cld_2/src/internal/cld_2_dynamic_data_tool.cld_generated_score_quad_octa_2.o: $
+    cxx $
+    ../../third_party/cld_2/src/internal/cld_generated_score_quad_octa_2.cc
+build $
+    obj/third_party/cld_2/src/internal/cld_2_dynamic_data_tool.generated_distinct_bi_0.o: $
+    cxx ../../third_party/cld_2/src/internal/generated_distinct_bi_0.cc
+build $
+    obj/third_party/cld_2/src/internal/cld_2_dynamic_data_tool.cld2_dynamic_data.o: $
+    cxx ../../third_party/cld_2/src/internal/cld2_dynamic_data.cc
+build $
+    obj/third_party/cld_2/src/internal/cld_2_dynamic_data_tool.cld2_dynamic_data_loader.o: $
+    cxx ../../third_party/cld_2/src/internal/cld2_dynamic_data_loader.cc
+build $
+    obj/third_party/cld_2/src/internal/cld_2_dynamic_data_tool.cld2_dynamic_data_extractor.o: $
+    cxx ../../third_party/cld_2/src/internal/cld2_dynamic_data_extractor.cc
+build $
+    obj/third_party/cld_2/src/internal/cld_2_dynamic_data_tool.cld2_dynamic_data_tool.o: $
+    cxx ../../third_party/cld_2/src/internal/cld2_dynamic_data_tool.cc
+
+ldflags = -Wl,-search_paths_first -Wl,-pie -mmacosx-version-min=10.6 $
+    -isysroot $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk $
+    -arch x86_64 -L. -stdlib=libc++
+libs = '-L../../third_party/libc++-static'
+build cld_2_dynamic_data_tool: link $
+    obj/third_party/cld_2/src/internal/cld_2_dynamic_data_tool.cld2_generated_quadchrome_2.o $
+    obj/third_party/cld_2/src/internal/cld_2_dynamic_data_tool.cldutil.o $
+    obj/third_party/cld_2/src/internal/cld_2_dynamic_data_tool.cldutil_shared.o $
+    obj/third_party/cld_2/src/internal/cld_2_dynamic_data_tool.compact_lang_det.o $
+    obj/third_party/cld_2/src/internal/cld_2_dynamic_data_tool.compact_lang_det_hint_code.o $
+    obj/third_party/cld_2/src/internal/cld_2_dynamic_data_tool.compact_lang_det_impl.o $
+    obj/third_party/cld_2/src/internal/cld_2_dynamic_data_tool.debug_empty.o $
+    obj/third_party/cld_2/src/internal/cld_2_dynamic_data_tool.fixunicodevalue.o $
+    obj/third_party/cld_2/src/internal/cld_2_dynamic_data_tool.generated_entities.o $
+    obj/third_party/cld_2/src/internal/cld_2_dynamic_data_tool.generated_language.o $
+    obj/third_party/cld_2/src/internal/cld_2_dynamic_data_tool.generated_ulscript.o $
+    obj/third_party/cld_2/src/internal/cld_2_dynamic_data_tool.getonescriptspan.o $
+    obj/third_party/cld_2/src/internal/cld_2_dynamic_data_tool.lang_script.o $
+    obj/third_party/cld_2/src/internal/cld_2_dynamic_data_tool.offsetmap.o $
+    obj/third_party/cld_2/src/internal/cld_2_dynamic_data_tool.scoreonescriptspan.o $
+    obj/third_party/cld_2/src/internal/cld_2_dynamic_data_tool.tote.o $
+    obj/third_party/cld_2/src/internal/cld_2_dynamic_data_tool.utf8statetable.o $
+    obj/third_party/cld_2/src/internal/cld_2_dynamic_data_tool.cld2_generated_cjk_compatible.o $
+    obj/third_party/cld_2/src/internal/cld_2_dynamic_data_tool.cld2_generated_deltaoctachrome.o $
+    obj/third_party/cld_2/src/internal/cld_2_dynamic_data_tool.cld2_generated_distinctoctachrome.o $
+    obj/third_party/cld_2/src/internal/cld_2_dynamic_data_tool.cld_generated_cjk_delta_bi_4.o $
+    obj/third_party/cld_2/src/internal/cld_2_dynamic_data_tool.cld_generated_cjk_uni_prop_80.o $
+    obj/third_party/cld_2/src/internal/cld_2_dynamic_data_tool.cld_generated_score_quad_octa_2.o $
+    obj/third_party/cld_2/src/internal/cld_2_dynamic_data_tool.generated_distinct_bi_0.o $
+    obj/third_party/cld_2/src/internal/cld_2_dynamic_data_tool.cld2_dynamic_data.o $
+    obj/third_party/cld_2/src/internal/cld_2_dynamic_data_tool.cld2_dynamic_data_loader.o $
+    obj/third_party/cld_2/src/internal/cld_2_dynamic_data_tool.cld2_dynamic_data_extractor.o $
+    obj/third_party/cld_2/src/internal/cld_2_dynamic_data_tool.cld2_dynamic_data_tool.o
+  ld = $ldxx
+  postbuilds = $ && (export $
+      BUILT_FRAMEWORKS_DIR=/Users/superadmin/tmp/src/out/Debug; export $
+      BUILT_PRODUCTS_DIR=/Users/superadmin/tmp/src/out/Debug; export $
+      CONFIGURATION=Debug; export EXECUTABLE_NAME=cld_2_dynamic_data_tool; $
+      export EXECUTABLE_PATH=cld_2_dynamic_data_tool; export $
+      FULL_PRODUCT_NAME=cld_2_dynamic_data_tool; export $
+      PRODUCT_NAME=cld_2_dynamic_data_tool; export $
+      PRODUCT_TYPE=com.apple.product-type.tool; export $
+      SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk; $
+      export $
+      SRCROOT=/Users/superadmin/tmp/src/out/Debug/../../third_party/cld_2; $
+      export SOURCE_ROOT="$${SRCROOT}"; export $
+      TARGET_BUILD_DIR=/Users/superadmin/tmp/src/out/Debug; export $
+      TEMP_DIR="$${TMPDIR}"; (cd ../../third_party/cld_2 && $
+      ../../build/mac/change_mach_o_flags_from_xcode.sh); G=$$?; ((exit $
+      $$G) || rm -rf cld_2_dynamic_data_tool) && exit $$G)

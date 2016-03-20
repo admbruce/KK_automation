@@ -1,0 +1,90 @@
+defines = -DV8_DEPRECATION_WARNINGS -DCLD_VERSION=2 $
+    -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORE=0 -DCHROMIUM_BUILD $
+    -DCR_CLANG_REVISION=254049-1 -DUSE_LIBJPEG_TURBO=1 $
+    -DENABLE_ONE_CLICK_SIGNIN -DENABLE_PRE_SYNC_BACKUP -DENABLE_WEBRTC=1 $
+    -DENABLE_MEDIA_ROUTER=1 -DENABLE_PEPPER_CDMS $
+    -DENABLE_CONFIGURATION_POLICY -DENABLE_NOTIFICATIONS -DENABLE_HIDPI=1 $
+    -DDONT_EMBED_BUILD_METADATA -DFIELDTRIAL_TESTING_ENABLED $
+    -DENABLE_TASK_MANAGER=1 -DENABLE_EXTENSIONS=1 -DENABLE_PDF=1 $
+    -DENABLE_PLUGIN_INSTALLATION=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_THEMES=1 -DENABLE_AUTOFILL_DIALOG=1 $
+    -DENABLE_BACKGROUND=1 -DENABLE_PRINTING=1 -DENABLE_BASIC_PRINTING=1 $
+    -DENABLE_PRINT_PREVIEW=1 -DENABLE_SPELLCHECK=1 $
+    -DUSE_BROWSER_SPELLCHECKER=1 -DENABLE_CAPTIVE_PORTAL_DETECTION=1 $
+    -DENABLE_APP_LIST=1 -DENABLE_SETTINGS_APP=1 -DENABLE_SUPERVISED_USERS=1 $
+    -DENABLE_SERVICE_DISCOVERY=1 -DV8_USE_EXTERNAL_STARTUP_DATA $
+    -DFULL_SAFE_BROWSING -DSAFE_BROWSING_CSD -DSAFE_BROWSING_DB_LOCAL $
+    -DV8_TARGET_ARCH_X64 -DV8_I18N_SUPPORT -DUSE_LIBPCI=1 -DUSE_OPENSSL=1 $
+    -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DWTF_USE_DYNAMIC_ANNOTATIONS=1 $
+    -DENABLE_DISASSEMBLER -DV8_ENABLE_CHECKS -DOBJECT_PRINT -DVERIFY_HEAP $
+    -DDEBUG -DTRACE_MAPS -DENABLE_HANDLE_ZAPPING
+includes = -I../../v8 -Igen
+cflags = -isysroot $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk $
+    -O3 -fstrict-aliasing -fvisibility=hidden -Werror -Wnewline-eof $
+    -mmacosx-version-min=10.6 -arch x86_64 -Wendif-labels $
+    -Wno-unused-parameter -Wno-missing-field-initializers $
+    -Wno-selector-type-mismatch -Wpartial-availability -Wheader-hygiene $
+    -Wno-char-subscripts -Wno-unneeded-internal-declaration $
+    -Wno-covered-switch-default -Wstring-conversion -Wno-c++11-narrowing $
+    -Wno-deprecated-register -Wno-inconsistent-missing-override $
+    -Wno-shift-negative-value -Wno-bitfield-width -Wno-unused-variable
+cflags_c = -std=c99 -Xclang -load -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing -fstack-protector-all $
+    -Wno-undefined-bool-conversion -Wno-tautological-undefined-compare
+cflags_cc = -std=c++11 -stdlib=libc++ -fno-rtti -fno-exceptions $
+    -fvisibility-inlines-hidden -fno-threadsafe-statics -Xclang -load $
+    -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing -fstack-protector-all $
+    -Wno-undefined-bool-conversion -Wno-tautological-undefined-compare
+cflags_objc = $cflags_c -Wobjc-missing-property-synthesis
+cflags_objcc = $cflags_cc -Wobjc-missing-property-synthesis $
+    -fobjc-call-cxx-cdtors
+arflags = 
+
+build obj/v8/src/base/v8_libbase.atomicops_internals_x86_gcc.o: cxx $
+    ../../v8/src/base/atomicops_internals_x86_gcc.cc
+build obj/v8/src/base/v8_libbase.bits.o: cxx ../../v8/src/base/bits.cc
+build obj/v8/src/base/v8_libbase.cpu.o: cxx ../../v8/src/base/cpu.cc
+build obj/v8/src/base/v8_libbase.division-by-constant.o: cxx $
+    ../../v8/src/base/division-by-constant.cc
+build obj/v8/src/base/v8_libbase.functional.o: cxx $
+    ../../v8/src/base/functional.cc
+build obj/v8/src/base/v8_libbase.logging.o: cxx ../../v8/src/base/logging.cc
+build obj/v8/src/base/v8_libbase.once.o: cxx ../../v8/src/base/once.cc
+build obj/v8/src/base/platform/v8_libbase.time.o: cxx $
+    ../../v8/src/base/platform/time.cc
+build obj/v8/src/base/platform/v8_libbase.condition-variable.o: cxx $
+    ../../v8/src/base/platform/condition-variable.cc
+build obj/v8/src/base/platform/v8_libbase.mutex.o: cxx $
+    ../../v8/src/base/platform/mutex.cc
+build obj/v8/src/base/platform/v8_libbase.semaphore.o: cxx $
+    ../../v8/src/base/platform/semaphore.cc
+build obj/v8/src/base/v8_libbase.sys-info.o: cxx ../../v8/src/base/sys-info.cc
+build obj/v8/src/base/utils/v8_libbase.random-number-generator.o: cxx $
+    ../../v8/src/base/utils/random-number-generator.cc
+build obj/v8/src/base/platform/v8_libbase.platform-macos.o: cxx $
+    ../../v8/src/base/platform/platform-macos.cc
+build obj/v8/src/base/platform/v8_libbase.platform-posix.o: cxx $
+    ../../v8/src/base/platform/platform-posix.cc
+
+build libv8_libbase.a: alink $
+    obj/v8/src/base/v8_libbase.atomicops_internals_x86_gcc.o $
+    obj/v8/src/base/v8_libbase.bits.o obj/v8/src/base/v8_libbase.cpu.o $
+    obj/v8/src/base/v8_libbase.division-by-constant.o $
+    obj/v8/src/base/v8_libbase.functional.o $
+    obj/v8/src/base/v8_libbase.logging.o obj/v8/src/base/v8_libbase.once.o $
+    obj/v8/src/base/platform/v8_libbase.time.o $
+    obj/v8/src/base/platform/v8_libbase.condition-variable.o $
+    obj/v8/src/base/platform/v8_libbase.mutex.o $
+    obj/v8/src/base/platform/v8_libbase.semaphore.o $
+    obj/v8/src/base/v8_libbase.sys-info.o $
+    obj/v8/src/base/utils/v8_libbase.random-number-generator.o $
+    obj/v8/src/base/platform/v8_libbase.platform-macos.o $
+    obj/v8/src/base/platform/v8_libbase.platform-posix.o

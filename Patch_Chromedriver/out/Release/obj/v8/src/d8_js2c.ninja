@@ -1,0 +1,17 @@
+rule d8_js2c_target_d8_js2c_fe82982bf027ad23e5f916c9c5f1d0a7
+  command = cd ../../v8/src; export $
+      BUILT_FRAMEWORKS_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      BUILT_PRODUCTS_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      CONFIGURATION=Release; export PRODUCT_NAME=d8_js2c; export $
+      SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk; $
+      export SRCROOT=/Users/superadmin/tmp/src/out/Release/../../v8/src; $
+      export SOURCE_ROOT="$${SRCROOT}"; export $
+      TARGET_BUILD_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      TEMP_DIR="$${TMPDIR}";python ../tools/js2c.py $
+      ../../out/Release/gen/d8-js.cc D8 d8.js js/macros.py
+  description = ACTION d8_js2c: d8_js2c_fe82982bf027ad23e5f916c9c5f1d0a7
+  restat = 1
+
+build gen/d8-js.cc: d8_js2c_target_d8_js2c_fe82982bf027ad23e5f916c9c5f1d0a7 $
+    ../../v8/tools/js2c.py ../../v8/src/d8.js ../../v8/src/js/macros.py
+

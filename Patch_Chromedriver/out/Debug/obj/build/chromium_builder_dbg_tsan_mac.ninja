@@ -1,0 +1,22 @@
+build obj/build/chromium_builder_dbg_tsan_mac.actions_depends.stamp: stamp $
+    base_unittests cloud_print_unittests crypto_unittests ipc_tests $
+    jingle_unittests media_unittests midi_unittests net_unittests $
+    printing_unittests remoting_unittests cacheinvalidation_unittests $
+    libaddressinput_unittests libphonenumber_unittests url_unittests
+
+build obj/build/chromium_builder_dbg_tsan_mac.compile_depends.stamp: stamp $
+    obj/base/base_unittests.compile_depends.stamp $
+    obj/cloud_print/cloud_print_unittests.compile_depends.stamp $
+    obj/crypto/crypto_unittests.compile_depends.stamp $
+    obj/ipc/ipc_tests.compile_depends.stamp $
+    obj/jingle/jingle_unittests.compile_depends.stamp $
+    obj/media/media_unittests.compile_depends.stamp $
+    obj/media/midi/midi_unittests.compile_depends.stamp $
+    obj/net/net_unittests.compile_depends.stamp $
+    obj/printing/printing_unittests.compile_depends.stamp $
+    obj/remoting/remoting_unittests.compile_depends.stamp $
+    obj/third_party/cacheinvalidation/cacheinvalidation_unittests.compile_depends.stamp $
+    obj/third_party/libaddressinput/libaddressinput_unittests.compile_depends.stamp $
+    obj/third_party/libphonenumber/libphonenumber_unittests.compile_depends.stamp $
+    obj/url/url_unittests.compile_depends.stamp
+

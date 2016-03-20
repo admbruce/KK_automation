@@ -1,0 +1,381 @@
+build obj/gpu/angle_end2end_tests.actions_depends.stamp: stamp libbase.a $
+    libtest_support_base.a libANGLE.a libEGL.dylib.TOC libGLESv2.dylib.TOC $
+    obj/third_party/angle/src/tests/angle_test_support.actions_depends.stamp $
+    libangle_util.a libbase_static.a liballocator_extension_thunks.a $
+    libmodp_b64.a libdynamic_annotations.a libevent.a libbase_i18n.a $
+    libicui18n.a libicuuc.a icudtl.dat icudtl.dat libgmock.a libgtest.a $
+    libxml2.a libchrome_zlib.a libzlib_x86_simd.a libtranslator_static.a $
+    libtranslator_lib.a libpreprocessor.a libangle_common.a $
+    gen/angle/id/commit.h $
+    obj/third_party/angle/src/copy_scripts.actions_rules_copies.stamp
+
+build obj/gpu/angle_end2end_tests.compile_depends.stamp: stamp $
+    gen/angle/id/commit.h $
+    obj/third_party/angle/src/libEGL.compile_depends.stamp $
+    obj/third_party/angle/src/libGLESv2.compile_depends.stamp $
+    obj/third_party/angle/util/angle_util.compile_depends.stamp icudtl.dat $
+    icudtl.dat icudtl.dat gen/angle/id/commit.h $
+    obj/third_party/angle/src/copy_scripts.actions_rules_copies.stamp
+
+defines = -DV8_DEPRECATION_WARNINGS -DCLD_VERSION=2 $
+    -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORE=0 -DCHROMIUM_BUILD $
+    -DCR_CLANG_REVISION=254049-1 -DUSE_LIBJPEG_TURBO=1 $
+    -DENABLE_ONE_CLICK_SIGNIN -DENABLE_PRE_SYNC_BACKUP -DENABLE_WEBRTC=1 $
+    -DENABLE_MEDIA_ROUTER=1 -DENABLE_PEPPER_CDMS $
+    -DENABLE_CONFIGURATION_POLICY -DENABLE_NOTIFICATIONS -DENABLE_HIDPI=1 $
+    -DDONT_EMBED_BUILD_METADATA -DFIELDTRIAL_TESTING_ENABLED $
+    -DENABLE_TASK_MANAGER=1 -DENABLE_EXTENSIONS=1 -DENABLE_PDF=1 $
+    -DENABLE_PLUGIN_INSTALLATION=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_THEMES=1 -DENABLE_AUTOFILL_DIALOG=1 $
+    -DENABLE_BACKGROUND=1 -DENABLE_PRINTING=1 -DENABLE_BASIC_PRINTING=1 $
+    -DENABLE_PRINT_PREVIEW=1 -DENABLE_SPELLCHECK=1 $
+    -DUSE_BROWSER_SPELLCHECKER=1 -DENABLE_CAPTIVE_PORTAL_DETECTION=1 $
+    -DENABLE_APP_LIST=1 -DENABLE_SETTINGS_APP=1 -DENABLE_SUPERVISED_USERS=1 $
+    -DENABLE_SERVICE_DISCOVERY=1 -DV8_USE_EXTERNAL_STARTUP_DATA $
+    -DFULL_SAFE_BROWSING -DSAFE_BROWSING_CSD -DSAFE_BROWSING_DB_LOCAL $
+    -DGTEST_HAS_POSIX_RE=0 -DGTEST_LANG_CXX11=0 -DGL_GLEXT_PROTOTYPES $
+    '-DANGLE_PRELOADED_D3DCOMPILER_MODULE_NAMES={ "d3dcompiler_47.dll", $
+    "d3dcompiler_46.dll", "d3dcompiler_43.dll" }' $
+    '-DGL_APICALL=__attribute__((visibility("default")))' $
+    '-DEGLAPI=__attribute__((visibility("default")))' -DANGLE_ENABLE_OPENGL $
+    -DEGL_EGLEXT_PROTOTYPES -DUSE_LIBPCI=1 -DUSE_OPENSSL=1 $
+    -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -DNDEBUG -DNVALGRIND $
+    -DDYNAMIC_ANNOTATIONS_ENABLED=0 -D_FORTIFY_SOURCE=2
+includes = -Igen -I../../third_party/angle/include $
+    -I../../third_party/angle/src/tests -Igen/angle $
+    -I../../testing/gmock/include -I../../testing/gtest/include -I../.. $
+    -I../../third_party/angle/src -I../../third_party/angle/util
+cflags = -isysroot $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk $
+    -O2 -fvisibility=hidden -Werror -Wnewline-eof -mmacosx-version-min=10.6 $
+    -arch x86_64 -Wall -Wendif-labels -Wextra -Wno-unused-parameter $
+    -Wno-missing-field-initializers -Wno-selector-type-mismatch $
+    -Wpartial-availability -Wheader-hygiene -Wno-char-subscripts $
+    -Wno-unneeded-internal-declaration -Wno-covered-switch-default $
+    -Wstring-conversion -Wno-c++11-narrowing -Wno-deprecated-register $
+    -Wno-inconsistent-missing-override -Wno-shift-negative-value $
+    -Wno-bitfield-width
+cflags_c = -std=c99 -Xclang -load -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing
+cflags_cc = -std=c++11 -stdlib=libc++ -fno-rtti -fno-exceptions $
+    -fvisibility-inlines-hidden -fno-threadsafe-statics -Xclang -load $
+    -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing
+cflags_objc = $cflags_c -Wobjc-missing-property-synthesis
+cflags_objcc = $cflags_cc -Wobjc-missing-property-synthesis $
+    -fobjc-call-cxx-cdtors
+arflags = 
+
+build obj/gpu/angle_end2end_tests.angle_end2end_tests_main.o: cxx $
+    ../../gpu/angle_end2end_tests_main.cc || $
+    obj/gpu/angle_end2end_tests.compile_depends.stamp
+build $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.BlendMinMaxTest.o: $
+    cxx ../../third_party/angle/src/tests/gl_tests/BlendMinMaxTest.cpp || $
+    obj/gpu/angle_end2end_tests.compile_depends.stamp
+build $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.BlitFramebufferANGLETest.o: $
+    cxx $
+    ../../third_party/angle/src/tests/gl_tests/BlitFramebufferANGLETest.cpp $
+    || obj/gpu/angle_end2end_tests.compile_depends.stamp
+build $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.BufferDataTest.o: $
+    cxx ../../third_party/angle/src/tests/gl_tests/BufferDataTest.cpp || $
+    obj/gpu/angle_end2end_tests.compile_depends.stamp
+build $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.ClearTest.o: $
+    cxx ../../third_party/angle/src/tests/gl_tests/ClearTest.cpp || $
+    obj/gpu/angle_end2end_tests.compile_depends.stamp
+build $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.CompressedTextureTest.o: $
+    cxx $
+    ../../third_party/angle/src/tests/gl_tests/CompressedTextureTest.cpp || $
+    obj/gpu/angle_end2end_tests.compile_depends.stamp
+build $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.CopyTexImageTest.o: $
+    cxx ../../third_party/angle/src/tests/gl_tests/CopyTexImageTest.cpp || $
+    obj/gpu/angle_end2end_tests.compile_depends.stamp
+build $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.CubeMapTextureTest.o: $
+    cxx ../../third_party/angle/src/tests/gl_tests/CubeMapTextureTest.cpp $
+    || obj/gpu/angle_end2end_tests.compile_depends.stamp
+build $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.DebugMarkerTest.o: $
+    cxx ../../third_party/angle/src/tests/gl_tests/DebugMarkerTest.cpp || $
+    obj/gpu/angle_end2end_tests.compile_depends.stamp
+build $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.DepthStencilFormatsTest.o: $
+    cxx $
+    ../../third_party/angle/src/tests/gl_tests/DepthStencilFormatsTest.cpp $
+    || obj/gpu/angle_end2end_tests.compile_depends.stamp
+build $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.DiscardFramebufferEXTTest.o: $
+    cxx $
+    ../../third_party/angle/src/tests/gl_tests/DiscardFramebufferEXTTest.cpp $
+    || obj/gpu/angle_end2end_tests.compile_depends.stamp
+build $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.DrawBuffersTest.o: $
+    cxx ../../third_party/angle/src/tests/gl_tests/DrawBuffersTest.cpp || $
+    obj/gpu/angle_end2end_tests.compile_depends.stamp
+build $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.DrawElementsTest.o: $
+    cxx ../../third_party/angle/src/tests/gl_tests/DrawElementsTest.cpp || $
+    obj/gpu/angle_end2end_tests.compile_depends.stamp
+build $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.FenceSyncTests.o: $
+    cxx ../../third_party/angle/src/tests/gl_tests/FenceSyncTests.cpp || $
+    obj/gpu/angle_end2end_tests.compile_depends.stamp
+build $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.FramebufferFormatsTest.o: $
+    cxx $
+    ../../third_party/angle/src/tests/gl_tests/FramebufferFormatsTest.cpp $
+    || obj/gpu/angle_end2end_tests.compile_depends.stamp
+build $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.FramebufferRenderMipmapTest.o: $
+    cxx $
+    ../../third_party/angle/src/tests/gl_tests/FramebufferRenderMipmapTest.cpp $
+    || obj/gpu/angle_end2end_tests.compile_depends.stamp
+build $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.GLSLTest.o: $
+    cxx ../../third_party/angle/src/tests/gl_tests/GLSLTest.cpp || $
+    obj/gpu/angle_end2end_tests.compile_depends.stamp
+build $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.ImageTest.o: $
+    cxx ../../third_party/angle/src/tests/gl_tests/ImageTest.cpp || $
+    obj/gpu/angle_end2end_tests.compile_depends.stamp
+build $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.IncompleteTextureTest.o: $
+    cxx $
+    ../../third_party/angle/src/tests/gl_tests/IncompleteTextureTest.cpp || $
+    obj/gpu/angle_end2end_tests.compile_depends.stamp
+build $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.IndexBufferOffsetTest.o: $
+    cxx $
+    ../../third_party/angle/src/tests/gl_tests/IndexBufferOffsetTest.cpp || $
+    obj/gpu/angle_end2end_tests.compile_depends.stamp
+build $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.IndexedPointsTest.o: $
+    cxx ../../third_party/angle/src/tests/gl_tests/IndexedPointsTest.cpp || $
+    obj/gpu/angle_end2end_tests.compile_depends.stamp
+build $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.InstancingTest.o: $
+    cxx ../../third_party/angle/src/tests/gl_tests/InstancingTest.cpp || $
+    obj/gpu/angle_end2end_tests.compile_depends.stamp
+build $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.LineLoopTest.o: $
+    cxx ../../third_party/angle/src/tests/gl_tests/LineLoopTest.cpp || $
+    obj/gpu/angle_end2end_tests.compile_depends.stamp
+build $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.MaxTextureSizeTest.o: $
+    cxx ../../third_party/angle/src/tests/gl_tests/MaxTextureSizeTest.cpp $
+    || obj/gpu/angle_end2end_tests.compile_depends.stamp
+build $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.MipmapTest.o: $
+    cxx ../../third_party/angle/src/tests/gl_tests/MipmapTest.cpp || $
+    obj/gpu/angle_end2end_tests.compile_depends.stamp
+build $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.PackUnpackTest.o: $
+    cxx ../../third_party/angle/src/tests/gl_tests/PackUnpackTest.cpp || $
+    obj/gpu/angle_end2end_tests.compile_depends.stamp
+build $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.PbufferTest.o: $
+    cxx ../../third_party/angle/src/tests/gl_tests/PbufferTest.cpp || $
+    obj/gpu/angle_end2end_tests.compile_depends.stamp
+build $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.PBOExtensionTest.o: $
+    cxx ../../third_party/angle/src/tests/gl_tests/PBOExtensionTest.cpp || $
+    obj/gpu/angle_end2end_tests.compile_depends.stamp
+build $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.PointSpritesTest.o: $
+    cxx ../../third_party/angle/src/tests/gl_tests/PointSpritesTest.cpp || $
+    obj/gpu/angle_end2end_tests.compile_depends.stamp
+build $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.ProvokingVertexTest.o: $
+    cxx ../../third_party/angle/src/tests/gl_tests/ProvokingVertexTest.cpp $
+    || obj/gpu/angle_end2end_tests.compile_depends.stamp
+build $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.OcclusionQueriesTest.o: $
+    cxx ../../third_party/angle/src/tests/gl_tests/OcclusionQueriesTest.cpp $
+    || obj/gpu/angle_end2end_tests.compile_depends.stamp
+build $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.ProgramBinaryTest.o: $
+    cxx ../../third_party/angle/src/tests/gl_tests/ProgramBinaryTest.cpp || $
+    obj/gpu/angle_end2end_tests.compile_depends.stamp
+build $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.ReadPixelsTest.o: $
+    cxx ../../third_party/angle/src/tests/gl_tests/ReadPixelsTest.cpp || $
+    obj/gpu/angle_end2end_tests.compile_depends.stamp
+build $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.RendererTest.o: $
+    cxx ../../third_party/angle/src/tests/gl_tests/RendererTest.cpp || $
+    obj/gpu/angle_end2end_tests.compile_depends.stamp
+build $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.SimpleOperationTest.o: $
+    cxx ../../third_party/angle/src/tests/gl_tests/SimpleOperationTest.cpp $
+    || obj/gpu/angle_end2end_tests.compile_depends.stamp
+build $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.SixteenBppTextureTest.o: $
+    cxx $
+    ../../third_party/angle/src/tests/gl_tests/SixteenBppTextureTest.cpp || $
+    obj/gpu/angle_end2end_tests.compile_depends.stamp
+build $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.SRGBTextureTest.o: $
+    cxx ../../third_party/angle/src/tests/gl_tests/SRGBTextureTest.cpp || $
+    obj/gpu/angle_end2end_tests.compile_depends.stamp
+build $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.SwizzleTest.o: $
+    cxx ../../third_party/angle/src/tests/gl_tests/SwizzleTest.cpp || $
+    obj/gpu/angle_end2end_tests.compile_depends.stamp
+build $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.TextureTest.o: $
+    cxx ../../third_party/angle/src/tests/gl_tests/TextureTest.cpp || $
+    obj/gpu/angle_end2end_tests.compile_depends.stamp
+build $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.TransformFeedbackTest.o: $
+    cxx $
+    ../../third_party/angle/src/tests/gl_tests/TransformFeedbackTest.cpp || $
+    obj/gpu/angle_end2end_tests.compile_depends.stamp
+build $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.UniformBufferTest.o: $
+    cxx ../../third_party/angle/src/tests/gl_tests/UniformBufferTest.cpp || $
+    obj/gpu/angle_end2end_tests.compile_depends.stamp
+build $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.UniformTest.o: $
+    cxx ../../third_party/angle/src/tests/gl_tests/UniformTest.cpp || $
+    obj/gpu/angle_end2end_tests.compile_depends.stamp
+build $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.UnpackAlignmentTest.o: $
+    cxx ../../third_party/angle/src/tests/gl_tests/UnpackAlignmentTest.cpp $
+    || obj/gpu/angle_end2end_tests.compile_depends.stamp
+build $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.UnpackRowLength.o: $
+    cxx ../../third_party/angle/src/tests/gl_tests/UnpackRowLength.cpp || $
+    obj/gpu/angle_end2end_tests.compile_depends.stamp
+build $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.VertexAttributeTest.o: $
+    cxx ../../third_party/angle/src/tests/gl_tests/VertexAttributeTest.cpp $
+    || obj/gpu/angle_end2end_tests.compile_depends.stamp
+build $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.ViewportTest.o: $
+    cxx ../../third_party/angle/src/tests/gl_tests/ViewportTest.cpp || $
+    obj/gpu/angle_end2end_tests.compile_depends.stamp
+build $
+    obj/third_party/angle/src/tests/egl_tests/angle_end2end_tests.EGLContextCompatibilityTest.o: $
+    cxx $
+    ../../third_party/angle/src/tests/egl_tests/EGLContextCompatibilityTest.cpp $
+    || obj/gpu/angle_end2end_tests.compile_depends.stamp
+build $
+    obj/third_party/angle/src/tests/egl_tests/angle_end2end_tests.EGLQueryContextTest.o: $
+    cxx ../../third_party/angle/src/tests/egl_tests/EGLQueryContextTest.cpp $
+    || obj/gpu/angle_end2end_tests.compile_depends.stamp
+build $
+    obj/third_party/angle/src/tests/egl_tests/angle_end2end_tests.EGLSurfaceTest.o: $
+    cxx ../../third_party/angle/src/tests/egl_tests/EGLSurfaceTest.cpp || $
+    obj/gpu/angle_end2end_tests.compile_depends.stamp
+build $
+    obj/third_party/angle/src/tests/test_utils/angle_end2end_tests.ANGLETest.o: $
+    cxx ../../third_party/angle/src/tests/test_utils/ANGLETest.cpp || $
+    obj/gpu/angle_end2end_tests.compile_depends.stamp
+build $
+    obj/third_party/angle/src/tests/test_utils/angle_end2end_tests.angle_test_configs.o: $
+    cxx ../../third_party/angle/src/tests/test_utils/angle_test_configs.cpp $
+    || obj/gpu/angle_end2end_tests.compile_depends.stamp
+build $
+    obj/third_party/angle/src/tests/test_utils/angle_end2end_tests.angle_test_instantiate.o: $
+    cxx $
+    ../../third_party/angle/src/tests/test_utils/angle_test_instantiate.cpp $
+    || obj/gpu/angle_end2end_tests.compile_depends.stamp
+
+ldflags = -Wl,-search_paths_first -Wl,-pie -Wl,-dead_strip $
+    -mmacosx-version-min=10.6 -isysroot $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk $
+    -arch x86_64 -L. -Wl,-rpath,@executable_path/. -stdlib=libc++
+libs = '-L../../third_party/libc++-static' -framework AppKit -framework $
+    ApplicationServices -framework Carbon -framework CoreFoundation $
+    -framework Foundation -framework IOKit -framework Security -framework $
+    OpenGL -framework IOSurface -framework Cocoa -framework QuartzCore
+build angle_end2end_tests: link $
+    obj/gpu/angle_end2end_tests.angle_end2end_tests_main.o $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.BlendMinMaxTest.o $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.BlitFramebufferANGLETest.o $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.BufferDataTest.o $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.ClearTest.o $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.CompressedTextureTest.o $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.CopyTexImageTest.o $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.CubeMapTextureTest.o $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.DebugMarkerTest.o $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.DepthStencilFormatsTest.o $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.DiscardFramebufferEXTTest.o $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.DrawBuffersTest.o $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.DrawElementsTest.o $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.FenceSyncTests.o $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.FramebufferFormatsTest.o $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.FramebufferRenderMipmapTest.o $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.GLSLTest.o $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.ImageTest.o $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.IncompleteTextureTest.o $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.IndexBufferOffsetTest.o $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.IndexedPointsTest.o $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.InstancingTest.o $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.LineLoopTest.o $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.MaxTextureSizeTest.o $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.MipmapTest.o $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.PackUnpackTest.o $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.PbufferTest.o $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.PBOExtensionTest.o $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.PointSpritesTest.o $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.ProvokingVertexTest.o $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.OcclusionQueriesTest.o $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.ProgramBinaryTest.o $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.ReadPixelsTest.o $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.RendererTest.o $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.SimpleOperationTest.o $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.SixteenBppTextureTest.o $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.SRGBTextureTest.o $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.SwizzleTest.o $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.TextureTest.o $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.TransformFeedbackTest.o $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.UniformBufferTest.o $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.UniformTest.o $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.UnpackAlignmentTest.o $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.UnpackRowLength.o $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.VertexAttributeTest.o $
+    obj/third_party/angle/src/tests/gl_tests/angle_end2end_tests.ViewportTest.o $
+    obj/third_party/angle/src/tests/egl_tests/angle_end2end_tests.EGLContextCompatibilityTest.o $
+    obj/third_party/angle/src/tests/egl_tests/angle_end2end_tests.EGLQueryContextTest.o $
+    obj/third_party/angle/src/tests/egl_tests/angle_end2end_tests.EGLSurfaceTest.o $
+    obj/third_party/angle/src/tests/test_utils/angle_end2end_tests.ANGLETest.o $
+    obj/third_party/angle/src/tests/test_utils/angle_end2end_tests.angle_test_configs.o $
+    obj/third_party/angle/src/tests/test_utils/angle_end2end_tests.angle_test_instantiate.o $
+    libbase.a libtest_support_base.a libANGLE.a libangle_util.a $
+    libbase_static.a liballocator_extension_thunks.a libmodp_b64.a $
+    libdynamic_annotations.a libevent.a libbase_i18n.a libicui18n.a $
+    libicuuc.a libgmock.a libgtest.a libxml2.a libchrome_zlib.a $
+    libzlib_x86_simd.a libtranslator_static.a libtranslator_lib.a $
+    libpreprocessor.a libangle_common.a | $
+    obj/third_party/angle/src/copy_scripts.actions_rules_copies.stamp $
+    gen/angle/id/commit.h libEGL.dylib.TOC icudtl.dat libGLESv2.dylib.TOC $
+    obj/third_party/angle/src/tests/angle_test_support.actions_depends.stamp
+  ld = $ldxx
+  postbuilds = $ && (export $
+      BUILT_FRAMEWORKS_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      BUILT_PRODUCTS_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      CONFIGURATION=Release; export EXECUTABLE_NAME=angle_end2end_tests; $
+      export EXECUTABLE_PATH=angle_end2end_tests; export $
+      FULL_PRODUCT_NAME=angle_end2end_tests; export $
+      PRODUCT_NAME=angle_end2end_tests; export $
+      PRODUCT_TYPE=com.apple.product-type.tool; export $
+      SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk; $
+      export SRCROOT=/Users/superadmin/tmp/src/out/Release/../../gpu; $
+      export SOURCE_ROOT="$${SRCROOT}"; export $
+      TARGET_BUILD_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      TEMP_DIR="$${TMPDIR}"; (cd ../../gpu && $
+      ../build/mac/change_mach_o_flags_from_xcode.sh); G=$$?; ((exit $$G) $
+      || rm -rf angle_end2end_tests) && exit $$G)
+  solibs = libGLESv2.dylib libEGL.dylib

@@ -1,0 +1,183 @@
+defines = -DV8_DEPRECATION_WARNINGS -DCLD_VERSION=2 $
+    -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORE=0 -DCHROMIUM_BUILD $
+    -DCR_CLANG_REVISION=254049-1 -DUSE_LIBJPEG_TURBO=1 $
+    -DENABLE_ONE_CLICK_SIGNIN -DENABLE_PRE_SYNC_BACKUP -DENABLE_WEBRTC=1 $
+    -DENABLE_MEDIA_ROUTER=1 -DENABLE_PEPPER_CDMS $
+    -DENABLE_CONFIGURATION_POLICY -DENABLE_NOTIFICATIONS -DENABLE_HIDPI=1 $
+    -DDONT_EMBED_BUILD_METADATA -DFIELDTRIAL_TESTING_ENABLED $
+    -DENABLE_TASK_MANAGER=1 -DENABLE_EXTENSIONS=1 -DENABLE_PDF=1 $
+    -DENABLE_PLUGIN_INSTALLATION=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_THEMES=1 -DENABLE_AUTOFILL_DIALOG=1 $
+    -DENABLE_BACKGROUND=1 -DENABLE_PRINTING=1 -DENABLE_BASIC_PRINTING=1 $
+    -DENABLE_PRINT_PREVIEW=1 -DENABLE_SPELLCHECK=1 $
+    -DUSE_BROWSER_SPELLCHECKER=1 -DENABLE_CAPTIVE_PORTAL_DETECTION=1 $
+    -DENABLE_APP_LIST=1 -DENABLE_SETTINGS_APP=1 -DENABLE_SUPERVISED_USERS=1 $
+    -DENABLE_SERVICE_DISCOVERY=1 -DV8_USE_EXTERNAL_STARTUP_DATA $
+    -DFULL_SAFE_BROWSING -DSAFE_BROWSING_CSD -DSAFE_BROWSING_DB_LOCAL $
+    -DDEQP_SUPPORT_GLES3=1 -DDEQP_SUPPORT_GLES2=1 -DDEQP_SUPPORT_EGL=1 $
+    '-DDEQP_TARGET_NAME="angle"' -DDEQP_GLES3_RUNTIME_LOAD=1 $
+    -DDEQP_GLES2_RUNTIME_LOAD=1 -DQP_SUPPORT_PNG=1 -D_HAS_EXCEPTIONS=1 $
+    -D_XOPEN_SOURCE=600 -DUSE_LIBPCI=1 -DUSE_OPENSSL=1 $
+    -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DWTF_USE_DYNAMIC_ANNOTATIONS=1
+includes = -Igen -I../../third_party/libpng -I../../third_party/zlib $
+    -I../../third_party/deqp/src/framework/delibs/debase $
+    -I../../third_party/deqp/src/framework/delibs/decpp $
+    -I../../third_party/deqp/src/framework/delibs/depool $
+    -I../../third_party/deqp/src/framework/delibs/dethread $
+    -I../../third_party/deqp/src/framework/delibs/deutil $
+    -I../../third_party/deqp/src/framework/delibs/destream $
+    -I../../third_party/deqp/src/framework/common $
+    -I../../third_party/deqp/src/framework/qphelper $
+    -I../../third_party/deqp/src/framework/platform/null $
+    -I../../third_party/deqp/src/framework/egl $
+    -I../../third_party/deqp/src/framework/egl/wrapper $
+    -I../../third_party/deqp/src/framework/opengl $
+    -I../../third_party/deqp/src/framework/opengl/wrapper $
+    -I../../third_party/deqp/src/framework/referencerenderer $
+    -I../../third_party/deqp/src/framework/opengl/simplereference $
+    -I../../third_party/deqp/src/framework/randomshaders $
+    -I../../third_party/deqp/src/modules/gles2 $
+    -I../../third_party/deqp/src/modules/gles2/functional $
+    -I../../third_party/deqp/src/modules/gles2/accuracy $
+    -I../../third_party/deqp/src/modules/gles2/performance $
+    -I../../third_party/deqp/src/modules/gles2/stress $
+    -I../../third_party/deqp/src/modules/gles2/usecases $
+    -I../../third_party/deqp/src/modules/gles3 $
+    -I../../third_party/deqp/src/modules/gles3/functional $
+    -I../../third_party/deqp/src/modules/gles3/accuracy $
+    -I../../third_party/deqp/src/modules/gles3/performance $
+    -I../../third_party/deqp/src/modules/gles3/stress $
+    -I../../third_party/deqp/src/modules/gles3/usecases $
+    -I../../third_party/deqp/src/modules/gles31 $
+    -I../../third_party/deqp/src/modules/gles31/functional $
+    -I../../third_party/deqp/src/modules/gles31/stress $
+    -I../../third_party/deqp/src/modules/glshared $
+    -I../../third_party/deqp/src/modules/glusecases $
+    -I../../third_party/deqp/src/executor $
+    -I../../third_party/deqp/src/execserver $
+    -I../../third_party/deqp/src/framework/platform/osx
+cflags = -isysroot $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk $
+    -O0 -fvisibility=hidden -Werror -Wnewline-eof -mmacosx-version-min=10.6 $
+    -arch x86_64 -Wendif-labels -Wno-unused-parameter $
+    -Wno-missing-field-initializers -Wno-selector-type-mismatch $
+    -Wpartial-availability -Wheader-hygiene -Wno-char-subscripts $
+    -Wno-unneeded-internal-declaration -Wno-covered-switch-default $
+    -Wstring-conversion -Wno-c++11-narrowing -Wno-deprecated-register $
+    -Wno-inconsistent-missing-override -Wno-shift-negative-value $
+    -Wno-bitfield-width -Wno-unused-variable
+cflags_c = -std=c99 -Xclang -load -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing -fstack-protector-all $
+    -Wno-undefined-bool-conversion -Wno-tautological-undefined-compare
+cflags_cc = -std=c++11 -stdlib=libc++ -fno-rtti -fno-exceptions $
+    -fvisibility-inlines-hidden -fno-threadsafe-statics -Xclang -load $
+    -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing -fstack-protector-all $
+    -Wno-undefined-bool-conversion -Wno-tautological-undefined-compare
+cflags_objc = $cflags_c -Wobjc-missing-property-synthesis
+cflags_objcc = $cflags_cc -Wobjc-missing-property-synthesis $
+    -fobjc-call-cxx-cdtors
+arflags = 
+
+build $
+    obj/third_party/deqp/src/framework/delibs/decpp/angle_deqp_decpp.deArrayBuffer.o: $
+    cxx ../../third_party/deqp/src/framework/delibs/decpp/deArrayBuffer.cpp
+build $
+    obj/third_party/deqp/src/framework/delibs/decpp/angle_deqp_decpp.deBlockBuffer.o: $
+    cxx ../../third_party/deqp/src/framework/delibs/decpp/deBlockBuffer.cpp
+build $
+    obj/third_party/deqp/src/framework/delibs/decpp/angle_deqp_decpp.deCommandLine.o: $
+    cxx ../../third_party/deqp/src/framework/delibs/decpp/deCommandLine.cpp
+build $
+    obj/third_party/deqp/src/framework/delibs/decpp/angle_deqp_decpp.deDefs.o: $
+    cxx ../../third_party/deqp/src/framework/delibs/decpp/deDefs.cpp
+build $
+    obj/third_party/deqp/src/framework/delibs/decpp/angle_deqp_decpp.deDirectoryIterator.o: $
+    cxx $
+    ../../third_party/deqp/src/framework/delibs/decpp/deDirectoryIterator.cpp
+build $
+    obj/third_party/deqp/src/framework/delibs/decpp/angle_deqp_decpp.deDynamicLibrary.o: $
+    cxx ../../third_party/deqp/src/framework/delibs/decpp/deDynamicLibrary.cpp
+build $
+    obj/third_party/deqp/src/framework/delibs/decpp/angle_deqp_decpp.deFilePath.o: $
+    cxx ../../third_party/deqp/src/framework/delibs/decpp/deFilePath.cpp
+build $
+    obj/third_party/deqp/src/framework/delibs/decpp/angle_deqp_decpp.deMemPool.o: $
+    cxx ../../third_party/deqp/src/framework/delibs/decpp/deMemPool.cpp
+build $
+    obj/third_party/deqp/src/framework/delibs/decpp/angle_deqp_decpp.deMutex.o: $
+    cxx ../../third_party/deqp/src/framework/delibs/decpp/deMutex.cpp
+build $
+    obj/third_party/deqp/src/framework/delibs/decpp/angle_deqp_decpp.dePoolArray.o: $
+    cxx ../../third_party/deqp/src/framework/delibs/decpp/dePoolArray.cpp
+build $
+    obj/third_party/deqp/src/framework/delibs/decpp/angle_deqp_decpp.dePoolString.o: $
+    cxx ../../third_party/deqp/src/framework/delibs/decpp/dePoolString.cpp
+build $
+    obj/third_party/deqp/src/framework/delibs/decpp/angle_deqp_decpp.deProcess.o: $
+    cxx ../../third_party/deqp/src/framework/delibs/decpp/deProcess.cpp
+build $
+    obj/third_party/deqp/src/framework/delibs/decpp/angle_deqp_decpp.deRandom.o: $
+    cxx ../../third_party/deqp/src/framework/delibs/decpp/deRandom.cpp
+build $
+    obj/third_party/deqp/src/framework/delibs/decpp/angle_deqp_decpp.deRingBuffer.o: $
+    cxx ../../third_party/deqp/src/framework/delibs/decpp/deRingBuffer.cpp
+build $
+    obj/third_party/deqp/src/framework/delibs/decpp/angle_deqp_decpp.deSemaphore.o: $
+    cxx ../../third_party/deqp/src/framework/delibs/decpp/deSemaphore.cpp
+build $
+    obj/third_party/deqp/src/framework/delibs/decpp/angle_deqp_decpp.deSharedPtr.o: $
+    cxx ../../third_party/deqp/src/framework/delibs/decpp/deSharedPtr.cpp
+build $
+    obj/third_party/deqp/src/framework/delibs/decpp/angle_deqp_decpp.deSocket.o: $
+    cxx ../../third_party/deqp/src/framework/delibs/decpp/deSocket.cpp
+build $
+    obj/third_party/deqp/src/framework/delibs/decpp/angle_deqp_decpp.deSTLUtil.o: $
+    cxx ../../third_party/deqp/src/framework/delibs/decpp/deSTLUtil.cpp
+build $
+    obj/third_party/deqp/src/framework/delibs/decpp/angle_deqp_decpp.deStringUtil.o: $
+    cxx ../../third_party/deqp/src/framework/delibs/decpp/deStringUtil.cpp
+build $
+    obj/third_party/deqp/src/framework/delibs/decpp/angle_deqp_decpp.deThread.o: $
+    cxx ../../third_party/deqp/src/framework/delibs/decpp/deThread.cpp
+build $
+    obj/third_party/deqp/src/framework/delibs/decpp/angle_deqp_decpp.deThreadLocal.o: $
+    cxx ../../third_party/deqp/src/framework/delibs/decpp/deThreadLocal.cpp
+build $
+    obj/third_party/deqp/src/framework/delibs/decpp/angle_deqp_decpp.deThreadSafeRingBuffer.o: $
+    cxx $
+    ../../third_party/deqp/src/framework/delibs/decpp/deThreadSafeRingBuffer.cpp
+build $
+    obj/third_party/deqp/src/framework/delibs/decpp/angle_deqp_decpp.deUniquePtr.o: $
+    cxx ../../third_party/deqp/src/framework/delibs/decpp/deUniquePtr.cpp
+
+build libangle_deqp_decpp.a: alink $
+    obj/third_party/deqp/src/framework/delibs/decpp/angle_deqp_decpp.deArrayBuffer.o $
+    obj/third_party/deqp/src/framework/delibs/decpp/angle_deqp_decpp.deBlockBuffer.o $
+    obj/third_party/deqp/src/framework/delibs/decpp/angle_deqp_decpp.deCommandLine.o $
+    obj/third_party/deqp/src/framework/delibs/decpp/angle_deqp_decpp.deDefs.o $
+    obj/third_party/deqp/src/framework/delibs/decpp/angle_deqp_decpp.deDirectoryIterator.o $
+    obj/third_party/deqp/src/framework/delibs/decpp/angle_deqp_decpp.deDynamicLibrary.o $
+    obj/third_party/deqp/src/framework/delibs/decpp/angle_deqp_decpp.deFilePath.o $
+    obj/third_party/deqp/src/framework/delibs/decpp/angle_deqp_decpp.deMemPool.o $
+    obj/third_party/deqp/src/framework/delibs/decpp/angle_deqp_decpp.deMutex.o $
+    obj/third_party/deqp/src/framework/delibs/decpp/angle_deqp_decpp.dePoolArray.o $
+    obj/third_party/deqp/src/framework/delibs/decpp/angle_deqp_decpp.dePoolString.o $
+    obj/third_party/deqp/src/framework/delibs/decpp/angle_deqp_decpp.deProcess.o $
+    obj/third_party/deqp/src/framework/delibs/decpp/angle_deqp_decpp.deRandom.o $
+    obj/third_party/deqp/src/framework/delibs/decpp/angle_deqp_decpp.deRingBuffer.o $
+    obj/third_party/deqp/src/framework/delibs/decpp/angle_deqp_decpp.deSemaphore.o $
+    obj/third_party/deqp/src/framework/delibs/decpp/angle_deqp_decpp.deSharedPtr.o $
+    obj/third_party/deqp/src/framework/delibs/decpp/angle_deqp_decpp.deSocket.o $
+    obj/third_party/deqp/src/framework/delibs/decpp/angle_deqp_decpp.deSTLUtil.o $
+    obj/third_party/deqp/src/framework/delibs/decpp/angle_deqp_decpp.deStringUtil.o $
+    obj/third_party/deqp/src/framework/delibs/decpp/angle_deqp_decpp.deThread.o $
+    obj/third_party/deqp/src/framework/delibs/decpp/angle_deqp_decpp.deThreadLocal.o $
+    obj/third_party/deqp/src/framework/delibs/decpp/angle_deqp_decpp.deThreadSafeRingBuffer.o $
+    obj/third_party/deqp/src/framework/delibs/decpp/angle_deqp_decpp.deUniquePtr.o

@@ -1,0 +1,189 @@
+build obj/chrome/chromedriver_tests.actions_depends.stamp: stamp $
+    libchromedriver_lib.a libbase.a librun_all_unittests.a libhttp_server.a $
+    libnet.a libnet_test_support.a libgtest.a liburl_lib.a $
+    libautomation_client_lib.a libbase_static.a $
+    liballocator_extension_thunks.a libmodp_b64.a libdynamic_annotations.a $
+    libevent.a libbase_i18n.a libicui18n.a libicuuc.a icudtl.dat icudtl.dat $
+    libprotobuf_lite.a libnet_quic_proto.a libbase_prefs.a libcrcrypto.a $
+    libboringssl.a libsdch.a libchrome_zlib.a libzlib_x86_simd.a $
+    obj/net/net_derived_sources.actions_rules_copies.stamp $
+    obj/net/net_resources.actions_rules_copies.stamp libminizip.a $
+    libax_gen.a libapi_gen_util.a libui_base.a $
+    obj/skia/skia.actions_depends.stamp libskia_library.a libskia_opts.a $
+    libskia_opts_ssse3.a libskia_opts_sse41.a libskia_opts_sse42.a $
+    libskia_opts_avx.a libskia_opts_avx2.a libsfntly.a libskia_chrome.a $
+    libevents.a libgfx.a libharfbuzz-ng.a libpng.a libgfx_geometry.a $
+    libjpeg_turbo.a libdom_keycode_converter.a libevents_base.a $
+    libgesture_detection.a libevents_platform.a $
+    obj/ui/resources/ui_resources.actions_rules_copies.stamp $
+    obj/ui/strings/ui_strings.actions_rules_copies.stamp libmozilla.a $
+    gen/chrome/common/chrome_version.h libzip.a libevents_ozone_layout.a $
+    libtest_support_base.a libgmock.a libxml2.a libtld_cleanup_util.a $
+    obj/third_party/protobuf/py_proto.actions_rules_copies.stamp $
+    libnet_with_v8.a libgin.a $
+    obj/v8/tools/gyp/v8_maybe_snapshot.actions_depends.stamp $
+    obj/v8/tools/gyp/v8_maybe_snapshot.actions_depends.stamp libv8_base.a $
+    libv8_libbase.a libv8_external_snapshot.a $
+    obj/v8/tools/gyp/js2c.actions_rules_copies.stamp natives_blob.bin
+
+build obj/chrome/chromedriver_tests.compile_depends.stamp: stamp $
+    obj/chrome/chromedriver_lib.actions_rules_copies.stamp $
+    obj/net/net.compile_depends.stamp $
+    obj/third_party/protobuf/py_proto.actions_rules_copies.stamp $
+    obj/chrome/automation_client_lib.actions_rules_copies.stamp icudtl.dat $
+    icudtl.dat icudtl.dat obj/net/net_quic_proto.actions_rules_copies.stamp $
+    obj/net/net_derived_sources.actions_rules_copies.stamp $
+    obj/net/net_resources.actions_rules_copies.stamp $
+    obj/ui/accessibility/ax_gen.actions_rules_copies.stamp $
+    obj/ui/base/ui_base.compile_depends.stamp $
+    obj/third_party/libjpeg_turbo/libjpeg.actions_rules_copies.stamp $
+    obj/ui/resources/ui_resources.actions_rules_copies.stamp $
+    obj/ui/strings/ui_strings.actions_rules_copies.stamp $
+    gen/chrome/common/chrome_version.h $
+    obj/third_party/protobuf/py_proto.actions_rules_copies.stamp $
+    snapshot_blob.bin snapshot_blob.bin snapshot_blob.bin snapshot_blob.bin $
+    snapshot_blob.bin obj/v8/tools/gyp/js2c.actions_rules_copies.stamp $
+    natives_blob.bin
+
+defines = -DV8_DEPRECATION_WARNINGS -DCLD_VERSION=2 $
+    -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORE=0 -DCHROMIUM_BUILD $
+    -DCR_CLANG_REVISION=254049-1 -DUSE_LIBJPEG_TURBO=1 $
+    -DENABLE_ONE_CLICK_SIGNIN -DENABLE_PRE_SYNC_BACKUP -DENABLE_WEBRTC=1 $
+    -DENABLE_MEDIA_ROUTER=1 -DENABLE_PEPPER_CDMS $
+    -DENABLE_CONFIGURATION_POLICY -DENABLE_NOTIFICATIONS -DENABLE_HIDPI=1 $
+    -DDONT_EMBED_BUILD_METADATA -DFIELDTRIAL_TESTING_ENABLED $
+    -DENABLE_TASK_MANAGER=1 -DENABLE_EXTENSIONS=1 -DENABLE_PDF=1 $
+    -DENABLE_PLUGIN_INSTALLATION=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_THEMES=1 -DENABLE_AUTOFILL_DIALOG=1 $
+    -DENABLE_BACKGROUND=1 -DENABLE_PRINTING=1 -DENABLE_BASIC_PRINTING=1 $
+    -DENABLE_PRINT_PREVIEW=1 -DENABLE_SPELLCHECK=1 $
+    -DUSE_BROWSER_SPELLCHECKER=1 -DENABLE_CAPTIVE_PORTAL_DETECTION=1 $
+    -DENABLE_APP_LIST=1 -DENABLE_SETTINGS_APP=1 -DENABLE_SUPERVISED_USERS=1 $
+    -DENABLE_SERVICE_DISCOVERY=1 -DV8_USE_EXTERNAL_STARTUP_DATA $
+    -DFULL_SAFE_BROWSING -DSAFE_BROWSING_CSD -DSAFE_BROWSING_DB_LOCAL $
+    -DGTEST_HAS_POSIX_RE=0 -DGTEST_LANG_CXX11=0 -DUNIT_TEST $
+    -DGTEST_HAS_RTTI=0 -DUSE_LIBPCI=1 -DUSE_OPENSSL=1 $
+    -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -DNDEBUG -DNVALGRIND $
+    -DDYNAMIC_ANNOTATIONS_ENABLED=0 -D_FORTIFY_SOURCE=2
+includes = -Igen '-I../../chrome/..,' -I../.. -I../../skia/config $
+    -I../../testing/gmock/include -I../../testing/gtest/include
+cflags = -isysroot $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk $
+    -O2 -fvisibility=hidden -Werror -Wnewline-eof -mmacosx-version-min=10.6 $
+    -arch x86_64 -Wall -Wendif-labels -Wextra -Wno-unused-parameter $
+    -Wno-missing-field-initializers -Wno-selector-type-mismatch $
+    -Wpartial-availability -Wheader-hygiene -Wno-char-subscripts $
+    -Wno-unneeded-internal-declaration -Wno-covered-switch-default $
+    -Wstring-conversion -Wno-c++11-narrowing -Wno-deprecated-register $
+    -Wno-inconsistent-missing-override -Wno-shift-negative-value $
+    -Wno-bitfield-width
+cflags_c = -std=c99 -Xclang -load -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing
+cflags_cc = -std=c++11 -stdlib=libc++ -fno-rtti -fno-exceptions $
+    -fvisibility-inlines-hidden -fno-threadsafe-statics -Xclang -load $
+    -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing
+cflags_objc = $cflags_c -Wobjc-missing-property-synthesis
+cflags_objcc = $cflags_cc -Wobjc-missing-property-synthesis $
+    -fobjc-call-cxx-cdtors
+arflags = 
+
+build $
+    obj/chrome/test/chromedriver/chromedriver_tests.key_converter_unittest.o: $
+    cxx ../../chrome/test/chromedriver/key_converter_unittest.cc || $
+    obj/chrome/chromedriver_tests.compile_depends.stamp
+build $
+    obj/chrome/test/chromedriver/chromedriver_tests.keycode_text_conversion_unittest.o: $
+    cxx ../../chrome/test/chromedriver/keycode_text_conversion_unittest.cc $
+    || obj/chrome/chromedriver_tests.compile_depends.stamp
+build $
+    obj/chrome/test/chromedriver/net/chromedriver_tests.net_util_unittest.o: $
+    cxx ../../chrome/test/chromedriver/net/net_util_unittest.cc || $
+    obj/chrome/chromedriver_tests.compile_depends.stamp
+build $
+    obj/chrome/test/chromedriver/net/chromedriver_tests.port_server_unittest.o: $
+    cxx ../../chrome/test/chromedriver/net/port_server_unittest.cc || $
+    obj/chrome/chromedriver_tests.compile_depends.stamp
+build $
+    obj/chrome/test/chromedriver/net/chromedriver_tests.sync_websocket_impl_unittest.o: $
+    cxx ../../chrome/test/chromedriver/net/sync_websocket_impl_unittest.cc $
+    || obj/chrome/chromedriver_tests.compile_depends.stamp
+build $
+    obj/chrome/test/chromedriver/net/chromedriver_tests.test_http_server.o: $
+    cxx ../../chrome/test/chromedriver/net/test_http_server.cc || $
+    obj/chrome/chromedriver_tests.compile_depends.stamp
+build $
+    obj/chrome/test/chromedriver/net/chromedriver_tests.websocket_unittest.o: $
+    cxx ../../chrome/test/chromedriver/net/websocket_unittest.cc || $
+    obj/chrome/chromedriver_tests.compile_depends.stamp
+build obj/chrome/test/chromedriver/chromedriver_tests.test_util.o: cxx $
+    ../../chrome/test/chromedriver/test_util.cc || $
+    obj/chrome/chromedriver_tests.compile_depends.stamp
+
+ldflags = -Wl,-search_paths_first -Wl,-pie -Wl,-dead_strip $
+    -mmacosx-version-min=10.6 -isysroot $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk $
+    -arch x86_64 -L. -stdlib=libc++
+libs = '-L../../third_party/libc++-static' -framework AppKit -framework $
+    ApplicationServices -framework Carbon -framework CoreFoundation $
+    -framework Foundation -framework IOKit -framework Security -framework $
+    SystemConfiguration $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/lib/libresolv.tbd $
+    -framework Accelerate -framework AudioUnit -framework CoreVideo $
+    -framework IOSurface
+build chromedriver_tests: link $
+    obj/chrome/test/chromedriver/chromedriver_tests.key_converter_unittest.o $
+    obj/chrome/test/chromedriver/chromedriver_tests.keycode_text_conversion_unittest.o $
+    obj/chrome/test/chromedriver/net/chromedriver_tests.net_util_unittest.o $
+    obj/chrome/test/chromedriver/net/chromedriver_tests.port_server_unittest.o $
+    obj/chrome/test/chromedriver/net/chromedriver_tests.sync_websocket_impl_unittest.o $
+    obj/chrome/test/chromedriver/net/chromedriver_tests.test_http_server.o $
+    obj/chrome/test/chromedriver/net/chromedriver_tests.websocket_unittest.o $
+    obj/chrome/test/chromedriver/chromedriver_tests.test_util.o $
+    libchromedriver_lib.a libbase.a librun_all_unittests.a libhttp_server.a $
+    libnet.a libnet_test_support.a libgtest.a liburl_lib.a $
+    libautomation_client_lib.a libbase_static.a $
+    liballocator_extension_thunks.a libmodp_b64.a libdynamic_annotations.a $
+    libevent.a libbase_i18n.a libicui18n.a libicuuc.a libprotobuf_lite.a $
+    libnet_quic_proto.a libbase_prefs.a libcrcrypto.a libboringssl.a $
+    libsdch.a libchrome_zlib.a libzlib_x86_simd.a libminizip.a libax_gen.a $
+    libapi_gen_util.a libui_base.a libskia_library.a libskia_opts.a $
+    libskia_opts_ssse3.a libskia_opts_sse41.a libskia_opts_sse42.a $
+    libskia_opts_avx.a libskia_opts_avx2.a libsfntly.a libskia_chrome.a $
+    libevents.a libgfx.a libharfbuzz-ng.a libpng.a libgfx_geometry.a $
+    libjpeg_turbo.a libdom_keycode_converter.a libevents_base.a $
+    libgesture_detection.a libevents_platform.a libmozilla.a libzip.a $
+    libevents_ozone_layout.a libtest_support_base.a libgmock.a libxml2.a $
+    libtld_cleanup_util.a libnet_with_v8.a libgin.a libv8_base.a $
+    libv8_libbase.a libv8_external_snapshot.a | $
+    obj/skia/skia.actions_depends.stamp $
+    obj/ui/resources/ui_resources.actions_rules_copies.stamp $
+    obj/net/net_derived_sources.actions_rules_copies.stamp $
+    obj/ui/strings/ui_strings.actions_rules_copies.stamp icudtl.dat $
+    obj/v8/tools/gyp/js2c.actions_rules_copies.stamp $
+    obj/net/net_resources.actions_rules_copies.stamp $
+    obj/v8/tools/gyp/v8_maybe_snapshot.actions_depends.stamp $
+    natives_blob.bin gen/chrome/common/chrome_version.h $
+    obj/third_party/protobuf/py_proto.actions_rules_copies.stamp
+  ld = $ldxx
+  postbuilds = $ && (export $
+      BUILT_FRAMEWORKS_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      BUILT_PRODUCTS_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      CONFIGURATION=Release; export EXECUTABLE_NAME=chromedriver_tests; $
+      export EXECUTABLE_PATH=chromedriver_tests; export $
+      FULL_PRODUCT_NAME=chromedriver_tests; export $
+      PRODUCT_NAME=chromedriver_tests; export $
+      PRODUCT_TYPE=com.apple.product-type.tool; export $
+      SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk; $
+      export SRCROOT=/Users/superadmin/tmp/src/out/Release/../../chrome; $
+      export SOURCE_ROOT="$${SRCROOT}"; export $
+      TARGET_BUILD_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      TEMP_DIR="$${TMPDIR}"; (cd ../../chrome && $
+      ../build/mac/change_mach_o_flags_from_xcode.sh); G=$$?; ((exit $$G) $
+      || rm -rf chromedriver_tests) && exit $$G)

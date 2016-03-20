@@ -1,0 +1,25 @@
+rule $
+    generate_inspector_protocol_version_target_generateInspectorProtocolVersion_da5128ffd7f877cf811536ed6a26c48a
+  command = cd ../../third_party/WebKit/Source/core; export $
+      BUILT_FRAMEWORKS_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      BUILT_PRODUCTS_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      CONFIGURATION=Release; export $
+      PRODUCT_NAME=generate_inspector_protocol_version; export $
+      SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk; $
+      export $
+      SRCROOT=/Users/superadmin/tmp/src/out/Release/../../third_party/WebKit/Source/core; $
+      export SOURCE_ROOT="$${SRCROOT}"; export $
+      TARGET_BUILD_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      TEMP_DIR="$${TMPDIR}";python $
+      inspector/generate-inspector-protocol-version -o $
+      ../../../../out/Release/gen/blink/core/InspectorProtocolVersion.h $
+      ../devtools/protocol.json
+  description = ACTION Validate inspector protocol for backwards $
+      compatibility and generate version file
+  restat = 1
+
+build gen/blink/core/InspectorProtocolVersion.h: $
+    generate_inspector_protocol_version_target_generateInspectorProtocolVersion_da5128ffd7f877cf811536ed6a26c48a $
+    ../../third_party/WebKit/Source/core/inspector/generate-inspector-protocol-version $
+    ../../third_party/WebKit/Source/devtools/protocol.json
+

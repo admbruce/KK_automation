@@ -1,0 +1,66 @@
+*** Settings ***
+Library           Collections
+Library           String
+Library           CustomAndroidCrosswalk.py
+Library           Screenshot    #--outputdir /Users/bruce1/Desktop/test/Screenshot
+
+*** Variables ***
+${DELAY}          2
+${SLEEP_1}        5s
+${SLEEP_2}        10s
+${SLEEP_3}        15s
+${ACCOUNT}        hollywego@yahoo.com.tw
+${PASSWORD}       puhaha0923
+${SEARCH}         清平調
+${SIDEBAR}        //android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.support.v4.widget.DrawerLayout[1]/android.view.View[1]/android.widget.RelativeLayout[1]/android.view.View[1]/android.widget.ImageButton[1]
+
+*** Test Cases ***
+Init
+    Open Hybrid Application    #set variables in CustomAndroidCrosswalk.py
+
+Welcome Page
+    #Switch to Webview
+    #Switch to Native
+    Wait Until Page Contains Element    id=button_login    timeout=90
+    Click Element    id=button_login    #Welcome Page
+    Wait Until Page Contains Element    id=button_login_with_email    timeout=90
+    Click Element    id=button_login_with_email    #Welcome Page
+
+Account - Sign in page
+    Input Text    id=text_uid    ${ACCOUNT}    #account
+    Input Text    id=text_password    ${PASSWORD}    #password
+    Click Element    id=button_login    #account login
+
+Sidebar
+    Wait Until Page Contains Element    xpath=${SIDEBAR}    timeout=15
+    Click Element    xpath=${SIDEBAR}
+    Wait Until Page Contains Element    id=button_radio    timeout=15
+    Sleep    ${SLEEP_1}
+    Click Element    xpath=//android.widget.TextView[1]
+    #Sleep    ${SLEEP_1}
+    #Capture Page Screenshot    ShowSideBar    #Check the four elements in side bar
+    Press Keycode    4    #back key
+
+Search
+    Wait Until Page Contains Element    id=menu_global_search    timeout=15
+    Click Element    id=menu_global_search
+    Input Text    id=search_src_text    清平調
+    Click Element    id=layout_header
+    Sleep    ${SLEEP_1}
+    #Capture Page Screenshot    SearchResult    #Check the Searching result
+    Press Keycode    4    #back key
+
+Radio
+    Wait Until Page Contains Element    xpath=${SIDEBAR}    timeout=5
+    Click Element    xpath=${SIDEBAR}    #Go to side bar
+    Click Element    id=button_radio    #Go to radio page
+    Click Element    id=view_icon    #Start to play the radio
+    Wait Until Page Contains Element    id=layout_nowplaying    timeout=5
+    #Sleep    ${SLEEP_1}
+    #Capture Page Screenshot    Radio    #Check the Radio is playing
+    Click Element    id=layout_nowplaying    #Go to nowplaying
+    Click Element    id=button_dislike    #Dislike button
+    Wait Until Page Contains Element    id=button_dislike    timeout=5
+    Click Element    id=button_dislike    #Dislike button
+    Sleep    ${SLEEP_1}
+    Click Element    id=button_dislike    #Dislike button

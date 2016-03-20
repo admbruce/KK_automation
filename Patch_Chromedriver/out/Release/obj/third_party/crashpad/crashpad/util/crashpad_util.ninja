@@ -1,0 +1,501 @@
+rule crashpad_util_target_mig_3fa5a112a7eed7c5a1605f2ac076d170
+  command = cd ../../third_party/crashpad/crashpad/util; export $
+      BUILT_FRAMEWORKS_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      BUILT_PRODUCTS_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      CONFIGURATION=Release; export EXECUTABLE_NAME=libcrashpad_util.a; $
+      export EXECUTABLE_PATH=libcrashpad_util.a; export $
+      FULL_PRODUCT_NAME=libcrashpad_util.a; export MACH_O_TYPE=staticlib; $
+      export PRODUCT_NAME=crashpad_util; export $
+      PRODUCT_TYPE=com.apple.product-type.library.static; export $
+      SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk; $
+      export $
+      SRCROOT=/Users/superadmin/tmp/src/out/Release/../../third_party/crashpad/crashpad/util; $
+      export SOURCE_ROOT="$${SRCROOT}"; export $
+      TARGET_BUILD_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      TEMP_DIR="$${TMPDIR}";python mach/mig.py "${source}" $
+      "../../../../out/Release/obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/${root}User.c" $
+      "../../../../out/Release/obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/${root}Server.c" $
+      "../../../../out/Release/obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/${root}.h" $
+      "../../../../out/Release/obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/${root}Server.h"
+  description = RULE crashpad_util: mig_3fa5a112a7eed7c5a1605f2ac076d170 $
+      ${source}
+  restat = 1
+
+build $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/child_portUser.c $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/child_portServer.c $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/child_port.h $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/child_portServer.h: $
+    crashpad_util_target_mig_3fa5a112a7eed7c5a1605f2ac076d170 $
+    ../../third_party/crashpad/crashpad/util/mach/child_port.defs | $
+    ../../third_party/crashpad/crashpad/util/mach/mig.py || libbase.a
+  source = mach/child_port.defs
+  root = child_port
+build $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/excUser.c $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/excServer.c $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/exc.h $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/excServer.h: $
+    crashpad_util_target_mig_3fa5a112a7eed7c5a1605f2ac076d170 $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/exc.defs $
+    | ../../third_party/crashpad/crashpad/util/mach/mig.py || libbase.a
+  source = $
+      ../../../../out/Release/obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/exc.defs
+  root = exc
+build $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/mach_excUser.c $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/mach_excServer.c $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/mach_exc.h $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/mach_excServer.h: $
+    crashpad_util_target_mig_3fa5a112a7eed7c5a1605f2ac076d170 $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/mach_exc.defs $
+    | ../../third_party/crashpad/crashpad/util/mach/mig.py || libbase.a
+  source = $
+      ../../../../out/Release/obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/mach_exc.defs
+  root = mach_exc
+build $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/notifyUser.c $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/notifyServer.c $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/notify.h $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/notifyServer.h: $
+    crashpad_util_target_mig_3fa5a112a7eed7c5a1605f2ac076d170 $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/notify.defs $
+    | ../../third_party/crashpad/crashpad/util/mach/mig.py || libbase.a
+  source = $
+      ../../../../out/Release/obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/notify.defs
+  root = notify
+build $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/exc.defs: $
+    copy $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/mach/exc.defs $
+    || libbase.a
+build $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/mach_exc.defs: $
+    copy $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/mach/mach_exc.defs $
+    || libbase.a
+build $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/notify.defs: $
+    copy $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/mach/notify.defs $
+    || libbase.a
+build $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.actions_rules_copies.stamp: $
+    stamp $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/child_portUser.c $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/child_portServer.c $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/child_port.h $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/child_portServer.h $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/excUser.c $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/excServer.c $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/exc.h $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/excServer.h $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/mach_excUser.c $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/mach_excServer.c $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/mach_exc.h $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/mach_excServer.h $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/notifyUser.c $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/notifyServer.c $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/notify.h $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/notifyServer.h $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/exc.defs $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/mach_exc.defs $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/notify.defs
+
+defines = -DV8_DEPRECATION_WARNINGS -DCLD_VERSION=2 $
+    -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORE=0 -DCHROMIUM_BUILD $
+    -DCR_CLANG_REVISION=254049-1 -DUSE_LIBJPEG_TURBO=1 $
+    -DENABLE_ONE_CLICK_SIGNIN -DENABLE_PRE_SYNC_BACKUP -DENABLE_WEBRTC=1 $
+    -DENABLE_MEDIA_ROUTER=1 -DENABLE_PEPPER_CDMS $
+    -DENABLE_CONFIGURATION_POLICY -DENABLE_NOTIFICATIONS -DENABLE_HIDPI=1 $
+    -DDONT_EMBED_BUILD_METADATA -DFIELDTRIAL_TESTING_ENABLED $
+    -DENABLE_TASK_MANAGER=1 -DENABLE_EXTENSIONS=1 -DENABLE_PDF=1 $
+    -DENABLE_PLUGIN_INSTALLATION=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_THEMES=1 -DENABLE_AUTOFILL_DIALOG=1 $
+    -DENABLE_BACKGROUND=1 -DENABLE_PRINTING=1 -DENABLE_BASIC_PRINTING=1 $
+    -DENABLE_PRINT_PREVIEW=1 -DENABLE_SPELLCHECK=1 $
+    -DUSE_BROWSER_SPELLCHECKER=1 -DENABLE_CAPTIVE_PORTAL_DETECTION=1 $
+    -DENABLE_APP_LIST=1 -DENABLE_SETTINGS_APP=1 -DENABLE_SUPERVISED_USERS=1 $
+    -DENABLE_SERVICE_DISCOVERY=1 -DV8_USE_EXTERNAL_STARTUP_DATA $
+    -DFULL_SAFE_BROWSING -DSAFE_BROWSING_CSD -DSAFE_BROWSING_DB_LOCAL $
+    -DUSE_LIBPCI=1 -DUSE_OPENSSL=1 -D__STDC_CONSTANT_MACROS $
+    -D__STDC_FORMAT_MACROS -DNDEBUG -DNVALGRIND $
+    -DDYNAMIC_ANNOTATIONS_ENABLED=0 -D_FORTIFY_SOURCE=2
+includes = -Igen -I../../third_party/crashpad/crashpad $
+    -Iobj/third_party/crashpad/crashpad/util/crashpad_util.gen $
+    -I../../third_party/crashpad/crashpad/compat/mac $
+    -I../../third_party/crashpad/crashpad/compat/non_win -I../..
+cflags = -isysroot $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk $
+    -O2 -fvisibility=hidden -Werror -Wnewline-eof -mmacosx-version-min=10.6 $
+    -arch x86_64 -Wall -Wendif-labels -Wextra -Wno-unused-parameter $
+    -Wno-missing-field-initializers -Wno-selector-type-mismatch $
+    -Wpartial-availability -Wheader-hygiene -Wno-char-subscripts $
+    -Wno-unneeded-internal-declaration -Wno-covered-switch-default $
+    -Wstring-conversion -Wno-c++11-narrowing -Wno-deprecated-register $
+    -Wno-inconsistent-missing-override -Wno-shift-negative-value $
+    -Wno-bitfield-width
+cflags_c = -std=c99 -Xclang -load -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing
+cflags_cc = -std=c++11 -stdlib=libc++ -fno-rtti -fno-exceptions $
+    -fvisibility-inlines-hidden -fno-threadsafe-statics -Xclang -load $
+    -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing
+cflags_objc = $cflags_c -Wobjc-missing-property-synthesis
+cflags_objcc = $cflags_cc -Wobjc-missing-property-synthesis $
+    -fobjc-call-cxx-cdtors
+arflags = 
+
+build $
+    obj/third_party/crashpad/crashpad/util/obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/crashpad_util.child_portUser.o: $
+    cc $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/child_portUser.c $
+    || $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.actions_rules_copies.stamp
+build $
+    obj/third_party/crashpad/crashpad/util/obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/crashpad_util.child_portServer.o: $
+    cc $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/child_portServer.c $
+    || $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.actions_rules_copies.stamp
+build $
+    obj/third_party/crashpad/crashpad/util/obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/crashpad_util.excUser.o: $
+    cc $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/excUser.c $
+    || $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.actions_rules_copies.stamp
+build $
+    obj/third_party/crashpad/crashpad/util/obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/crashpad_util.excServer.o: $
+    cc $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/excServer.c $
+    || $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.actions_rules_copies.stamp
+build $
+    obj/third_party/crashpad/crashpad/util/obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/crashpad_util.mach_excUser.o: $
+    cc $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/mach_excUser.c $
+    || $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.actions_rules_copies.stamp
+build $
+    obj/third_party/crashpad/crashpad/util/obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/crashpad_util.mach_excServer.o: $
+    cc $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/mach_excServer.c $
+    || $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.actions_rules_copies.stamp
+build $
+    obj/third_party/crashpad/crashpad/util/obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/crashpad_util.notifyUser.o: $
+    cc $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/notifyUser.c $
+    || $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.actions_rules_copies.stamp
+build $
+    obj/third_party/crashpad/crashpad/util/obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/crashpad_util.notifyServer.o: $
+    cc $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/notifyServer.c $
+    || $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.actions_rules_copies.stamp
+build obj/third_party/crashpad/crashpad/util/file/crashpad_util.file_io.o: $
+    cxx ../../third_party/crashpad/crashpad/util/file/file_io.cc || $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.actions_rules_copies.stamp
+build $
+    obj/third_party/crashpad/crashpad/util/file/crashpad_util.file_io_posix.o: $
+    cxx ../../third_party/crashpad/crashpad/util/file/file_io_posix.cc || $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.actions_rules_copies.stamp
+build $
+    obj/third_party/crashpad/crashpad/util/file/crashpad_util.file_reader.o: $
+    cxx ../../third_party/crashpad/crashpad/util/file/file_reader.cc || $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.actions_rules_copies.stamp
+build $
+    obj/third_party/crashpad/crashpad/util/file/crashpad_util.file_seeker.o: $
+    cxx ../../third_party/crashpad/crashpad/util/file/file_seeker.cc || $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.actions_rules_copies.stamp
+build $
+    obj/third_party/crashpad/crashpad/util/file/crashpad_util.file_writer.o: $
+    cxx ../../third_party/crashpad/crashpad/util/file/file_writer.cc || $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.actions_rules_copies.stamp
+build $
+    obj/third_party/crashpad/crashpad/util/file/crashpad_util.string_file.o: $
+    cxx ../../third_party/crashpad/crashpad/util/file/string_file.cc || $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.actions_rules_copies.stamp
+build obj/third_party/crashpad/crashpad/util/mac/crashpad_util.launchd.o: $
+    objcxx ../../third_party/crashpad/crashpad/util/mac/launchd.mm || $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.actions_rules_copies.stamp
+build obj/third_party/crashpad/crashpad/util/mac/crashpad_util.mac_util.o: $
+    cxx ../../third_party/crashpad/crashpad/util/mac/mac_util.cc || $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.actions_rules_copies.stamp
+build $
+    obj/third_party/crashpad/crashpad/util/mac/crashpad_util.service_management.o: $
+    cxx ../../third_party/crashpad/crashpad/util/mac/service_management.cc $
+    || $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.actions_rules_copies.stamp
+build obj/third_party/crashpad/crashpad/util/mac/crashpad_util.xattr.o: cxx $
+    ../../third_party/crashpad/crashpad/util/mac/xattr.cc || $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.actions_rules_copies.stamp
+build $
+    obj/third_party/crashpad/crashpad/util/mach/crashpad_util.child_port_handshake.o: $
+    cxx $
+    ../../third_party/crashpad/crashpad/util/mach/child_port_handshake.cc $
+    || $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.actions_rules_copies.stamp
+build $
+    obj/third_party/crashpad/crashpad/util/mach/crashpad_util.child_port_server.o: $
+    cxx ../../third_party/crashpad/crashpad/util/mach/child_port_server.cc $
+    || $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.actions_rules_copies.stamp
+build $
+    obj/third_party/crashpad/crashpad/util/mach/crashpad_util.composite_mach_message_server.o: $
+    cxx $
+    ../../third_party/crashpad/crashpad/util/mach/composite_mach_message_server.cc $
+    || $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.actions_rules_copies.stamp
+build $
+    obj/third_party/crashpad/crashpad/util/mach/crashpad_util.exc_client_variants.o: $
+    cxx $
+    ../../third_party/crashpad/crashpad/util/mach/exc_client_variants.cc || $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.actions_rules_copies.stamp
+build $
+    obj/third_party/crashpad/crashpad/util/mach/crashpad_util.exc_server_variants.o: $
+    cxx $
+    ../../third_party/crashpad/crashpad/util/mach/exc_server_variants.cc || $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.actions_rules_copies.stamp
+build $
+    obj/third_party/crashpad/crashpad/util/mach/crashpad_util.exception_behaviors.o: $
+    cxx $
+    ../../third_party/crashpad/crashpad/util/mach/exception_behaviors.cc || $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.actions_rules_copies.stamp
+build $
+    obj/third_party/crashpad/crashpad/util/mach/crashpad_util.exception_ports.o: $
+    cxx ../../third_party/crashpad/crashpad/util/mach/exception_ports.cc || $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.actions_rules_copies.stamp
+build $
+    obj/third_party/crashpad/crashpad/util/mach/crashpad_util.exception_types.o: $
+    cxx ../../third_party/crashpad/crashpad/util/mach/exception_types.cc || $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.actions_rules_copies.stamp
+build $
+    obj/third_party/crashpad/crashpad/util/mach/crashpad_util.mach_extensions.o: $
+    cxx ../../third_party/crashpad/crashpad/util/mach/mach_extensions.cc || $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.actions_rules_copies.stamp
+build $
+    obj/third_party/crashpad/crashpad/util/mach/crashpad_util.mach_message.o: $
+    cxx ../../third_party/crashpad/crashpad/util/mach/mach_message.cc || $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.actions_rules_copies.stamp
+build $
+    obj/third_party/crashpad/crashpad/util/mach/crashpad_util.mach_message_server.o: $
+    cxx $
+    ../../third_party/crashpad/crashpad/util/mach/mach_message_server.cc || $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.actions_rules_copies.stamp
+build $
+    obj/third_party/crashpad/crashpad/util/mach/crashpad_util.notify_server.o: $
+    cxx ../../third_party/crashpad/crashpad/util/mach/notify_server.cc || $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.actions_rules_copies.stamp
+build $
+    obj/third_party/crashpad/crashpad/util/mach/crashpad_util.scoped_task_suspend.o: $
+    cxx $
+    ../../third_party/crashpad/crashpad/util/mach/scoped_task_suspend.cc || $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.actions_rules_copies.stamp
+build $
+    obj/third_party/crashpad/crashpad/util/mach/crashpad_util.symbolic_constants_mach.o: $
+    cxx $
+    ../../third_party/crashpad/crashpad/util/mach/symbolic_constants_mach.cc $
+    || $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.actions_rules_copies.stamp
+build $
+    obj/third_party/crashpad/crashpad/util/mach/crashpad_util.task_for_pid.o: $
+    cxx ../../third_party/crashpad/crashpad/util/mach/task_for_pid.cc || $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.actions_rules_copies.stamp
+build $
+    obj/third_party/crashpad/crashpad/util/mach/crashpad_util.task_memory.o: $
+    cxx ../../third_party/crashpad/crashpad/util/mach/task_memory.cc || $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.actions_rules_copies.stamp
+build $
+    obj/third_party/crashpad/crashpad/util/misc/crashpad_util.clock_mac.o: $
+    cxx ../../third_party/crashpad/crashpad/util/misc/clock_mac.cc || $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.actions_rules_copies.stamp
+build $
+    obj/third_party/crashpad/crashpad/util/misc/crashpad_util.clock_posix.o: $
+    cxx ../../third_party/crashpad/crashpad/util/misc/clock_posix.cc || $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.actions_rules_copies.stamp
+build $
+    obj/third_party/crashpad/crashpad/util/misc/crashpad_util.initialization_state_dcheck.o: $
+    cxx $
+    ../../third_party/crashpad/crashpad/util/misc/initialization_state_dcheck.cc $
+    || $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.actions_rules_copies.stamp
+build $
+    obj/third_party/crashpad/crashpad/util/misc/crashpad_util.pdb_structures.o: $
+    cxx ../../third_party/crashpad/crashpad/util/misc/pdb_structures.cc || $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.actions_rules_copies.stamp
+build $
+    obj/third_party/crashpad/crashpad/util/misc/crashpad_util.scoped_forbid_return.o: $
+    cxx $
+    ../../third_party/crashpad/crashpad/util/misc/scoped_forbid_return.cc $
+    || $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.actions_rules_copies.stamp
+build obj/third_party/crashpad/crashpad/util/misc/crashpad_util.uuid.o: cxx $
+    ../../third_party/crashpad/crashpad/util/misc/uuid.cc || $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.actions_rules_copies.stamp
+build obj/third_party/crashpad/crashpad/util/net/crashpad_util.http_body.o: $
+    cxx ../../third_party/crashpad/crashpad/util/net/http_body.cc || $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.actions_rules_copies.stamp
+build $
+    obj/third_party/crashpad/crashpad/util/net/crashpad_util.http_headers.o: $
+    cxx ../../third_party/crashpad/crashpad/util/net/http_headers.cc || $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.actions_rules_copies.stamp
+build $
+    obj/third_party/crashpad/crashpad/util/net/crashpad_util.http_multipart_builder.o: $
+    cxx $
+    ../../third_party/crashpad/crashpad/util/net/http_multipart_builder.cc $
+    || $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.actions_rules_copies.stamp
+build $
+    obj/third_party/crashpad/crashpad/util/net/crashpad_util.http_transport.o: $
+    cxx ../../third_party/crashpad/crashpad/util/net/http_transport.cc || $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.actions_rules_copies.stamp
+build $
+    obj/third_party/crashpad/crashpad/util/net/crashpad_util.http_transport_mac.o: $
+    objcxx $
+    ../../third_party/crashpad/crashpad/util/net/http_transport_mac.mm || $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.actions_rules_copies.stamp
+build $
+    obj/third_party/crashpad/crashpad/util/numeric/crashpad_util.checked_address_range.o: $
+    cxx $
+    ../../third_party/crashpad/crashpad/util/numeric/checked_address_range.cc $
+    || $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.actions_rules_copies.stamp
+build $
+    obj/third_party/crashpad/crashpad/util/posix/crashpad_util.close_multiple.o: $
+    cxx ../../third_party/crashpad/crashpad/util/posix/close_multiple.cc || $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.actions_rules_copies.stamp
+build $
+    obj/third_party/crashpad/crashpad/util/posix/crashpad_util.close_stdio.o: $
+    cxx ../../third_party/crashpad/crashpad/util/posix/close_stdio.cc || $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.actions_rules_copies.stamp
+build $
+    obj/third_party/crashpad/crashpad/util/posix/crashpad_util.drop_privileges.o: $
+    cxx ../../third_party/crashpad/crashpad/util/posix/drop_privileges.cc $
+    || $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.actions_rules_copies.stamp
+build $
+    obj/third_party/crashpad/crashpad/util/posix/crashpad_util.process_info_mac.o: $
+    cxx ../../third_party/crashpad/crashpad/util/posix/process_info_mac.cc $
+    || $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.actions_rules_copies.stamp
+build $
+    obj/third_party/crashpad/crashpad/util/posix/crashpad_util.symbolic_constants_posix.o: $
+    cxx $
+    ../../third_party/crashpad/crashpad/util/posix/symbolic_constants_posix.cc $
+    || $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.actions_rules_copies.stamp
+build $
+    obj/third_party/crashpad/crashpad/util/stdlib/crashpad_util.string_number_conversion.o: $
+    cxx $
+    ../../third_party/crashpad/crashpad/util/stdlib/string_number_conversion.cc $
+    || $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.actions_rules_copies.stamp
+build $
+    obj/third_party/crashpad/crashpad/util/stdlib/crashpad_util.strlcpy.o: $
+    cxx ../../third_party/crashpad/crashpad/util/stdlib/strlcpy.cc || $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.actions_rules_copies.stamp
+build $
+    obj/third_party/crashpad/crashpad/util/stdlib/crashpad_util.strnlen.o: $
+    cxx ../../third_party/crashpad/crashpad/util/stdlib/strnlen.cc || $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.actions_rules_copies.stamp
+build $
+    obj/third_party/crashpad/crashpad/util/string/crashpad_util.split_string.o: $
+    cxx ../../third_party/crashpad/crashpad/util/string/split_string.cc || $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.actions_rules_copies.stamp
+build $
+    obj/third_party/crashpad/crashpad/util/synchronization/crashpad_util.semaphore_mac.o: $
+    cxx $
+    ../../third_party/crashpad/crashpad/util/synchronization/semaphore_mac.cc $
+    || $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.actions_rules_copies.stamp
+build $
+    obj/third_party/crashpad/crashpad/util/synchronization/crashpad_util.semaphore_posix.o: $
+    cxx $
+    ../../third_party/crashpad/crashpad/util/synchronization/semaphore_posix.cc $
+    || $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.actions_rules_copies.stamp
+build obj/third_party/crashpad/crashpad/util/thread/crashpad_util.thread.o: $
+    cxx ../../third_party/crashpad/crashpad/util/thread/thread.cc || $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.actions_rules_copies.stamp
+build $
+    obj/third_party/crashpad/crashpad/util/thread/crashpad_util.thread_log_messages.o: $
+    cxx $
+    ../../third_party/crashpad/crashpad/util/thread/thread_log_messages.cc $
+    || $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.actions_rules_copies.stamp
+build $
+    obj/third_party/crashpad/crashpad/util/thread/crashpad_util.thread_posix.o: $
+    cxx ../../third_party/crashpad/crashpad/util/thread/thread_posix.cc || $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.actions_rules_copies.stamp
+
+build libcrashpad_util.a: alink $
+    obj/third_party/crashpad/crashpad/util/obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/crashpad_util.child_portUser.o $
+    obj/third_party/crashpad/crashpad/util/obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/crashpad_util.child_portServer.o $
+    obj/third_party/crashpad/crashpad/util/obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/crashpad_util.excUser.o $
+    obj/third_party/crashpad/crashpad/util/obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/crashpad_util.excServer.o $
+    obj/third_party/crashpad/crashpad/util/obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/crashpad_util.mach_excUser.o $
+    obj/third_party/crashpad/crashpad/util/obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/crashpad_util.mach_excServer.o $
+    obj/third_party/crashpad/crashpad/util/obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/crashpad_util.notifyUser.o $
+    obj/third_party/crashpad/crashpad/util/obj/third_party/crashpad/crashpad/util/crashpad_util.gen/util/mach/crashpad_util.notifyServer.o $
+    obj/third_party/crashpad/crashpad/util/file/crashpad_util.file_io.o $
+    obj/third_party/crashpad/crashpad/util/file/crashpad_util.file_io_posix.o $
+    obj/third_party/crashpad/crashpad/util/file/crashpad_util.file_reader.o $
+    obj/third_party/crashpad/crashpad/util/file/crashpad_util.file_seeker.o $
+    obj/third_party/crashpad/crashpad/util/file/crashpad_util.file_writer.o $
+    obj/third_party/crashpad/crashpad/util/file/crashpad_util.string_file.o $
+    obj/third_party/crashpad/crashpad/util/mac/crashpad_util.launchd.o $
+    obj/third_party/crashpad/crashpad/util/mac/crashpad_util.mac_util.o $
+    obj/third_party/crashpad/crashpad/util/mac/crashpad_util.service_management.o $
+    obj/third_party/crashpad/crashpad/util/mac/crashpad_util.xattr.o $
+    obj/third_party/crashpad/crashpad/util/mach/crashpad_util.child_port_handshake.o $
+    obj/third_party/crashpad/crashpad/util/mach/crashpad_util.child_port_server.o $
+    obj/third_party/crashpad/crashpad/util/mach/crashpad_util.composite_mach_message_server.o $
+    obj/third_party/crashpad/crashpad/util/mach/crashpad_util.exc_client_variants.o $
+    obj/third_party/crashpad/crashpad/util/mach/crashpad_util.exc_server_variants.o $
+    obj/third_party/crashpad/crashpad/util/mach/crashpad_util.exception_behaviors.o $
+    obj/third_party/crashpad/crashpad/util/mach/crashpad_util.exception_ports.o $
+    obj/third_party/crashpad/crashpad/util/mach/crashpad_util.exception_types.o $
+    obj/third_party/crashpad/crashpad/util/mach/crashpad_util.mach_extensions.o $
+    obj/third_party/crashpad/crashpad/util/mach/crashpad_util.mach_message.o $
+    obj/third_party/crashpad/crashpad/util/mach/crashpad_util.mach_message_server.o $
+    obj/third_party/crashpad/crashpad/util/mach/crashpad_util.notify_server.o $
+    obj/third_party/crashpad/crashpad/util/mach/crashpad_util.scoped_task_suspend.o $
+    obj/third_party/crashpad/crashpad/util/mach/crashpad_util.symbolic_constants_mach.o $
+    obj/third_party/crashpad/crashpad/util/mach/crashpad_util.task_for_pid.o $
+    obj/third_party/crashpad/crashpad/util/mach/crashpad_util.task_memory.o $
+    obj/third_party/crashpad/crashpad/util/misc/crashpad_util.clock_mac.o $
+    obj/third_party/crashpad/crashpad/util/misc/crashpad_util.clock_posix.o $
+    obj/third_party/crashpad/crashpad/util/misc/crashpad_util.initialization_state_dcheck.o $
+    obj/third_party/crashpad/crashpad/util/misc/crashpad_util.pdb_structures.o $
+    obj/third_party/crashpad/crashpad/util/misc/crashpad_util.scoped_forbid_return.o $
+    obj/third_party/crashpad/crashpad/util/misc/crashpad_util.uuid.o $
+    obj/third_party/crashpad/crashpad/util/net/crashpad_util.http_body.o $
+    obj/third_party/crashpad/crashpad/util/net/crashpad_util.http_headers.o $
+    obj/third_party/crashpad/crashpad/util/net/crashpad_util.http_multipart_builder.o $
+    obj/third_party/crashpad/crashpad/util/net/crashpad_util.http_transport.o $
+    obj/third_party/crashpad/crashpad/util/net/crashpad_util.http_transport_mac.o $
+    obj/third_party/crashpad/crashpad/util/numeric/crashpad_util.checked_address_range.o $
+    obj/third_party/crashpad/crashpad/util/posix/crashpad_util.close_multiple.o $
+    obj/third_party/crashpad/crashpad/util/posix/crashpad_util.close_stdio.o $
+    obj/third_party/crashpad/crashpad/util/posix/crashpad_util.drop_privileges.o $
+    obj/third_party/crashpad/crashpad/util/posix/crashpad_util.process_info_mac.o $
+    obj/third_party/crashpad/crashpad/util/posix/crashpad_util.symbolic_constants_posix.o $
+    obj/third_party/crashpad/crashpad/util/stdlib/crashpad_util.string_number_conversion.o $
+    obj/third_party/crashpad/crashpad/util/stdlib/crashpad_util.strlcpy.o $
+    obj/third_party/crashpad/crashpad/util/stdlib/crashpad_util.strnlen.o $
+    obj/third_party/crashpad/crashpad/util/string/crashpad_util.split_string.o $
+    obj/third_party/crashpad/crashpad/util/synchronization/crashpad_util.semaphore_mac.o $
+    obj/third_party/crashpad/crashpad/util/synchronization/crashpad_util.semaphore_posix.o $
+    obj/third_party/crashpad/crashpad/util/thread/crashpad_util.thread.o $
+    obj/third_party/crashpad/crashpad/util/thread/crashpad_util.thread_log_messages.o $
+    obj/third_party/crashpad/crashpad/util/thread/crashpad_util.thread_posix.o $
+    || $
+    obj/third_party/crashpad/crashpad/util/crashpad_util.actions_rules_copies.stamp

@@ -1,0 +1,136 @@
+defines = -DV8_DEPRECATION_WARNINGS -DCLD_VERSION=2 $
+    -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORE=0 -DCHROMIUM_BUILD $
+    -DCR_CLANG_REVISION=254049-1 -DUSE_LIBJPEG_TURBO=1 $
+    -DENABLE_ONE_CLICK_SIGNIN -DENABLE_PRE_SYNC_BACKUP -DENABLE_WEBRTC=1 $
+    -DENABLE_MEDIA_ROUTER=1 -DENABLE_PEPPER_CDMS $
+    -DENABLE_CONFIGURATION_POLICY -DENABLE_NOTIFICATIONS -DENABLE_HIDPI=1 $
+    -DDONT_EMBED_BUILD_METADATA -DFIELDTRIAL_TESTING_ENABLED $
+    -DENABLE_TASK_MANAGER=1 -DENABLE_EXTENSIONS=1 -DENABLE_PDF=1 $
+    -DENABLE_PLUGIN_INSTALLATION=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_THEMES=1 -DENABLE_AUTOFILL_DIALOG=1 $
+    -DENABLE_BACKGROUND=1 -DENABLE_PRINTING=1 -DENABLE_BASIC_PRINTING=1 $
+    -DENABLE_PRINT_PREVIEW=1 -DENABLE_SPELLCHECK=1 $
+    -DUSE_BROWSER_SPELLCHECKER=1 -DENABLE_CAPTIVE_PORTAL_DETECTION=1 $
+    -DENABLE_APP_LIST=1 -DENABLE_SETTINGS_APP=1 -DENABLE_SUPERVISED_USERS=1 $
+    -DENABLE_SERVICE_DISCOVERY=1 -DV8_USE_EXTERNAL_STARTUP_DATA $
+    -DFULL_SAFE_BROWSING -DSAFE_BROWSING_CSD -DSAFE_BROWSING_DB_LOCAL $
+    -DHAVE_CONFIG_H -DHAVE_SMALL=1 -DHAVE_CHECK_CRC32=1 $
+    -DHAVE_DECODER_LZMA2=1 -DHAVE_DECODER_X86=1 -DHAVE_ENCODER_LZMA2=1 $
+    -DHAVE_ENCODER_X86=1 -DUSE_LIBPCI=1 -DUSE_OPENSSL=1 $
+    -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DWTF_USE_DYNAMIC_ANNOTATIONS=1
+includes = -Igen -I../../chrome/installer/mac/third_party/xz/config/mac $
+    -I../../chrome/installer/mac/third_party/xz/xz/src/common $
+    -I../../chrome/installer/mac/third_party/xz/xz/src/liblzma/api
+cflags = -isysroot $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk $
+    -O0 -fvisibility=hidden -Werror -Wnewline-eof -mmacosx-version-min=10.6 $
+    -arch x86_64 -Wendif-labels -Wno-unused-parameter $
+    -Wno-missing-field-initializers -Wno-selector-type-mismatch $
+    -Wpartial-availability -Wheader-hygiene -Wno-char-subscripts $
+    -Wno-unneeded-internal-declaration -Wno-covered-switch-default $
+    -Wstring-conversion -Wno-c++11-narrowing -Wno-deprecated-register $
+    -Wno-inconsistent-missing-override -Wno-shift-negative-value $
+    -Wno-bitfield-width -Wno-unused-variable
+cflags_c = -std=c99 -Xclang -load -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing -fstack-protector-all $
+    -Wno-undefined-bool-conversion -Wno-tautological-undefined-compare
+cflags_cc = -std=c++11 -stdlib=libc++ -fno-rtti -fno-exceptions $
+    -fvisibility-inlines-hidden -fno-threadsafe-statics -Xclang -load $
+    -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing -fstack-protector-all $
+    -Wno-undefined-bool-conversion -Wno-tautological-undefined-compare
+cflags_objc = $cflags_c -Wobjc-missing-property-synthesis
+cflags_objcc = $cflags_cc -Wobjc-missing-property-synthesis $
+    -fobjc-call-cxx-cdtors
+arflags = 
+
+build $
+    obj/chrome/installer/mac/third_party/xz/xz/src/common/xz.tuklib_cpucores.o: $
+    cc $
+    ../../chrome/installer/mac/third_party/xz/xz/src/common/tuklib_cpucores.c
+build $
+    obj/chrome/installer/mac/third_party/xz/xz/src/common/xz.tuklib_exit.o: $
+    cc ../../chrome/installer/mac/third_party/xz/xz/src/common/tuklib_exit.c
+build $
+    obj/chrome/installer/mac/third_party/xz/xz/src/common/xz.tuklib_mbstr_fw.o: $
+    cc $
+    ../../chrome/installer/mac/third_party/xz/xz/src/common/tuklib_mbstr_fw.c
+build $
+    obj/chrome/installer/mac/third_party/xz/xz/src/common/xz.tuklib_mbstr_width.o: $
+    cc $
+    ../../chrome/installer/mac/third_party/xz/xz/src/common/tuklib_mbstr_width.c
+build $
+    obj/chrome/installer/mac/third_party/xz/xz/src/common/xz.tuklib_open_stdxxx.o: $
+    cc $
+    ../../chrome/installer/mac/third_party/xz/xz/src/common/tuklib_open_stdxxx.c
+build $
+    obj/chrome/installer/mac/third_party/xz/xz/src/common/xz.tuklib_progname.o: $
+    cc $
+    ../../chrome/installer/mac/third_party/xz/xz/src/common/tuklib_progname.c
+build obj/chrome/installer/mac/third_party/xz/xz/src/xz/xz.args.o: cc $
+    ../../chrome/installer/mac/third_party/xz/xz/src/xz/args.c
+build obj/chrome/installer/mac/third_party/xz/xz/src/xz/xz.coder.o: cc $
+    ../../chrome/installer/mac/third_party/xz/xz/src/xz/coder.c
+build obj/chrome/installer/mac/third_party/xz/xz/src/xz/xz.file_io.o: cc $
+    ../../chrome/installer/mac/third_party/xz/xz/src/xz/file_io.c
+build obj/chrome/installer/mac/third_party/xz/xz/src/xz/xz.hardware.o: cc $
+    ../../chrome/installer/mac/third_party/xz/xz/src/xz/hardware.c
+build obj/chrome/installer/mac/third_party/xz/xz/src/xz/xz.list.o: cc $
+    ../../chrome/installer/mac/third_party/xz/xz/src/xz/list.c
+build obj/chrome/installer/mac/third_party/xz/xz/src/xz/xz.main.o: cc $
+    ../../chrome/installer/mac/third_party/xz/xz/src/xz/main.c
+build obj/chrome/installer/mac/third_party/xz/xz/src/xz/xz.message.o: cc $
+    ../../chrome/installer/mac/third_party/xz/xz/src/xz/message.c
+build obj/chrome/installer/mac/third_party/xz/xz/src/xz/xz.options.o: cc $
+    ../../chrome/installer/mac/third_party/xz/xz/src/xz/options.c
+build obj/chrome/installer/mac/third_party/xz/xz/src/xz/xz.signals.o: cc $
+    ../../chrome/installer/mac/third_party/xz/xz/src/xz/signals.c
+build obj/chrome/installer/mac/third_party/xz/xz/src/xz/xz.suffix.o: cc $
+    ../../chrome/installer/mac/third_party/xz/xz/src/xz/suffix.c
+build obj/chrome/installer/mac/third_party/xz/xz/src/xz/xz.util.o: cc $
+    ../../chrome/installer/mac/third_party/xz/xz/src/xz/util.c
+
+ldflags = -Wl,-search_paths_first -Wl,-pie -mmacosx-version-min=10.6 $
+    -isysroot $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk $
+    -arch x86_64 -L. -stdlib=libc++
+libs = '-L../../third_party/libc++-static'
+build xz: link $
+    obj/chrome/installer/mac/third_party/xz/xz/src/common/xz.tuklib_cpucores.o $
+    obj/chrome/installer/mac/third_party/xz/xz/src/common/xz.tuklib_exit.o $
+    obj/chrome/installer/mac/third_party/xz/xz/src/common/xz.tuklib_mbstr_fw.o $
+    obj/chrome/installer/mac/third_party/xz/xz/src/common/xz.tuklib_mbstr_width.o $
+    obj/chrome/installer/mac/third_party/xz/xz/src/common/xz.tuklib_open_stdxxx.o $
+    obj/chrome/installer/mac/third_party/xz/xz/src/common/xz.tuklib_progname.o $
+    obj/chrome/installer/mac/third_party/xz/xz/src/xz/xz.args.o $
+    obj/chrome/installer/mac/third_party/xz/xz/src/xz/xz.coder.o $
+    obj/chrome/installer/mac/third_party/xz/xz/src/xz/xz.file_io.o $
+    obj/chrome/installer/mac/third_party/xz/xz/src/xz/xz.hardware.o $
+    obj/chrome/installer/mac/third_party/xz/xz/src/xz/xz.list.o $
+    obj/chrome/installer/mac/third_party/xz/xz/src/xz/xz.main.o $
+    obj/chrome/installer/mac/third_party/xz/xz/src/xz/xz.message.o $
+    obj/chrome/installer/mac/third_party/xz/xz/src/xz/xz.options.o $
+    obj/chrome/installer/mac/third_party/xz/xz/src/xz/xz.signals.o $
+    obj/chrome/installer/mac/third_party/xz/xz/src/xz/xz.suffix.o $
+    obj/chrome/installer/mac/third_party/xz/xz/src/xz/xz.util.o liblzma.a
+  postbuilds = $ && (export $
+      BUILT_FRAMEWORKS_DIR=/Users/superadmin/tmp/src/out/Debug; export $
+      BUILT_PRODUCTS_DIR=/Users/superadmin/tmp/src/out/Debug; export $
+      CONFIGURATION=Debug; export EXECUTABLE_NAME=xz; export $
+      EXECUTABLE_PATH=xz; export FULL_PRODUCT_NAME=xz; export $
+      PRODUCT_NAME=xz; export PRODUCT_TYPE=com.apple.product-type.tool; $
+      export $
+      SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk; $
+      export $
+      SRCROOT=/Users/superadmin/tmp/src/out/Debug/../../chrome/installer/mac/third_party/xz; $
+      export SOURCE_ROOT="$${SRCROOT}"; export $
+      TARGET_BUILD_DIR=/Users/superadmin/tmp/src/out/Debug; export $
+      TEMP_DIR="$${TMPDIR}"; (cd ../../chrome/installer/mac/third_party/xz $
+      && ../../../../../build/mac/change_mach_o_flags_from_xcode.sh); $
+      G=$$?; ((exit $$G) || rm -rf xz) && exit $$G)

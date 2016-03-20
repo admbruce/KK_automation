@@ -1,0 +1,97 @@
+build obj/remoting/remoting_it2me_host_static.actions_depends.stamp: stamp $
+    libpolicy.a libremoting_base.a libchromotocol_proto_lib.a $
+    obj/remoting/remoting_infoplist_strings.actions_rules_copies.stamp $
+    obj/remoting/remoting_resources.actions_rules_copies.stamp
+
+build obj/remoting/remoting_it2me_host_static.compile_depends.stamp: stamp $
+    obj/components/policy.compile_depends.stamp $
+    obj/remoting/remoting_base.compile_depends.stamp $
+    obj/remoting/proto/chromotocol_proto_lib.actions_rules_copies.stamp $
+    obj/remoting/remoting_infoplist_strings.actions_rules_copies.stamp $
+    obj/remoting/remoting_resources.actions_rules_copies.stamp
+
+defines = -DBINARY_CORE=1 -DBINARY_DESKTOP=2 -DBINARY_HOST_ME2ME=3 $
+    -DBINARY_NATIVE_MESSAGING_HOST=4 -DBINARY_REMOTE_ASSISTANCE_HOST=5 $
+    -DV8_DEPRECATION_WARNINGS -DCLD_VERSION=2 $
+    -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORE=0 -DCHROMIUM_BUILD $
+    -DCR_CLANG_REVISION=254049-1 -DUSE_LIBJPEG_TURBO=1 $
+    -DENABLE_ONE_CLICK_SIGNIN -DENABLE_PRE_SYNC_BACKUP -DENABLE_WEBRTC=1 $
+    -DENABLE_MEDIA_ROUTER=1 -DENABLE_PEPPER_CDMS $
+    -DENABLE_CONFIGURATION_POLICY -DENABLE_NOTIFICATIONS -DENABLE_HIDPI=1 $
+    -DDONT_EMBED_BUILD_METADATA -DFIELDTRIAL_TESTING_ENABLED $
+    -DENABLE_TASK_MANAGER=1 -DENABLE_EXTENSIONS=1 -DENABLE_PDF=1 $
+    -DENABLE_PLUGIN_INSTALLATION=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_THEMES=1 -DENABLE_AUTOFILL_DIALOG=1 $
+    -DENABLE_BACKGROUND=1 -DENABLE_PRINTING=1 -DENABLE_BASIC_PRINTING=1 $
+    -DENABLE_PRINT_PREVIEW=1 -DENABLE_SPELLCHECK=1 $
+    -DUSE_BROWSER_SPELLCHECKER=1 -DENABLE_CAPTIVE_PORTAL_DETECTION=1 $
+    -DENABLE_APP_LIST=1 -DENABLE_SETTINGS_APP=1 -DENABLE_SUPERVISED_USERS=1 $
+    -DENABLE_SERVICE_DISCOVERY=1 -DV8_USE_EXTERNAL_STARTUP_DATA $
+    -DFULL_SAFE_BROWSING -DSAFE_BROWSING_CSD -DSAFE_BROWSING_DB_LOCAL $
+    -DVERSION=49.0.2577.0 -DU_USING_ICU_NAMESPACE=0 -DU_ENABLE_DYLOAD=0 $
+    -DU_STATIC_IMPLEMENTATION -DPROTOBUF_USE_DLLS -DGOOGLE_PROTOBUF_NO_RTTI $
+    -DGOOGLE_PROTOBUF_NO_STATIC_INITIALIZER -DFEATURE_ENABLE_SSL $
+    -DFEATURE_ENABLE_VOICEMAIL -DEXPAT_RELATIVE_PATH -DGTEST_RELATIVE_PATH $
+    -DNO_MAIN_THREAD_WRAPPING -DNO_SOUND_SYSTEM -DOSX -DWEBRTC_MAC $
+    -DWEBRTC_POSIX -DXML_STATIC -DUSE_LIBPCI=1 -DUSE_OPENSSL=1 $
+    -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS $
+    -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DWTF_USE_DYNAMIC_ANNOTATIONS=1
+includes = -I../.. -Igen -I../../third_party/khronos -I../../gpu $
+    -I../../skia/config -I../../third_party/icu/source/common $
+    -I../../third_party/icu/source/i18n -Igen/policy -Igen/protoc_out $
+    -I../../third_party/protobuf -I../../third_party/protobuf/src $
+    -I../../third_party/webrtc_overrides $
+    -I../../third_party/libjingle/overrides $
+    -I../../third_party/libjingle/source -I../../testing/gtest/include $
+    -I../../third_party -I../../third_party/expat/files/lib
+cflags = -isysroot $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk $
+    -O0 -fvisibility=hidden -Werror -Wnewline-eof -mmacosx-version-min=10.6 $
+    -arch x86_64 -Wall -Wendif-labels -Wextra -Wno-unused-parameter $
+    -Wno-missing-field-initializers -Wno-selector-type-mismatch $
+    -Wpartial-availability -Wheader-hygiene -Wno-char-subscripts $
+    -Wno-unneeded-internal-declaration -Wno-covered-switch-default $
+    -Wstring-conversion -Wno-c++11-narrowing -Wno-deprecated-register $
+    -Wno-inconsistent-missing-override -Wno-shift-negative-value $
+    -Wno-bitfield-width -Wexit-time-destructors
+cflags_c = -std=c99 -Xclang -load -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing -fstack-protector-all $
+    -Wno-undefined-bool-conversion -Wno-tautological-undefined-compare
+cflags_cc = -std=c++11 -stdlib=libc++ -fno-rtti -fno-exceptions $
+    -fvisibility-inlines-hidden -fno-threadsafe-statics -Xclang -load $
+    -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing -fstack-protector-all $
+    -Wno-undefined-bool-conversion -Wno-tautological-undefined-compare
+cflags_objc = $cflags_c -Wobjc-missing-property-synthesis
+cflags_objcc = $cflags_cc -Wobjc-missing-property-synthesis $
+    -fobjc-call-cxx-cdtors
+arflags = 
+
+build $
+    obj/remoting/host/it2me/remoting_it2me_host_static.it2me_confirmation_dialog.o: $
+    cxx ../../remoting/host/it2me/it2me_confirmation_dialog.cc || $
+    obj/remoting/remoting_it2me_host_static.compile_depends.stamp
+build $
+    obj/remoting/host/it2me/remoting_it2me_host_static.it2me_confirmation_dialog_proxy.o: $
+    cxx ../../remoting/host/it2me/it2me_confirmation_dialog_proxy.cc || $
+    obj/remoting/remoting_it2me_host_static.compile_depends.stamp
+build obj/remoting/host/it2me/remoting_it2me_host_static.it2me_host.o: cxx $
+    ../../remoting/host/it2me/it2me_host.cc || $
+    obj/remoting/remoting_it2me_host_static.compile_depends.stamp
+build $
+    obj/remoting/host/it2me/remoting_it2me_host_static.it2me_native_messaging_host.o: $
+    cxx ../../remoting/host/it2me/it2me_native_messaging_host.cc || $
+    obj/remoting/remoting_it2me_host_static.compile_depends.stamp
+
+build libremoting_it2me_host_static.a: alink $
+    obj/remoting/host/it2me/remoting_it2me_host_static.it2me_confirmation_dialog.o $
+    obj/remoting/host/it2me/remoting_it2me_host_static.it2me_confirmation_dialog_proxy.o $
+    obj/remoting/host/it2me/remoting_it2me_host_static.it2me_host.o $
+    obj/remoting/host/it2me/remoting_it2me_host_static.it2me_native_messaging_host.o $
+    || obj/remoting/remoting_it2me_host_static.actions_depends.stamp

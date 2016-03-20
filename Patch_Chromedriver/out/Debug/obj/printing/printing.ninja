@@ -1,0 +1,132 @@
+defines = -DV8_DEPRECATION_WARNINGS -DCLD_VERSION=2 $
+    -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORE=0 -DCHROMIUM_BUILD $
+    -DCR_CLANG_REVISION=254049-1 -DUSE_LIBJPEG_TURBO=1 $
+    -DENABLE_ONE_CLICK_SIGNIN -DENABLE_PRE_SYNC_BACKUP -DENABLE_WEBRTC=1 $
+    -DENABLE_MEDIA_ROUTER=1 -DENABLE_PEPPER_CDMS $
+    -DENABLE_CONFIGURATION_POLICY -DENABLE_NOTIFICATIONS -DENABLE_HIDPI=1 $
+    -DDONT_EMBED_BUILD_METADATA -DFIELDTRIAL_TESTING_ENABLED $
+    -DENABLE_TASK_MANAGER=1 -DENABLE_EXTENSIONS=1 -DENABLE_PDF=1 $
+    -DENABLE_PLUGIN_INSTALLATION=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_THEMES=1 -DENABLE_AUTOFILL_DIALOG=1 $
+    -DENABLE_BACKGROUND=1 -DENABLE_PRINTING=1 -DENABLE_BASIC_PRINTING=1 $
+    -DENABLE_PRINT_PREVIEW=1 -DENABLE_SPELLCHECK=1 $
+    -DUSE_BROWSER_SPELLCHECKER=1 -DENABLE_CAPTIVE_PORTAL_DETECTION=1 $
+    -DENABLE_APP_LIST=1 -DENABLE_SETTINGS_APP=1 -DENABLE_SUPERVISED_USERS=1 $
+    -DENABLE_SERVICE_DISCOVERY=1 -DV8_USE_EXTERNAL_STARTUP_DATA $
+    -DFULL_SAFE_BROWSING -DSAFE_BROWSING_CSD -DSAFE_BROWSING_DB_LOCAL $
+    -DPRINTING_IMPLEMENTATION -DPRINT_BACKEND_AVAILABLE -DSK_SUPPORT_GPU=1 $
+    -DSK_IGNORE_LINEONLY_AA_CONVEX_PATH_OPTS -DSK_IGNORE_GL_TEXTURE_TARGET $
+    -DU_USING_ICU_NAMESPACE=0 -DU_ENABLE_DYLOAD=0 -DU_STATIC_IMPLEMENTATION $
+    -DUSE_CUPS -DUSE_LIBPCI=1 -DUSE_OPENSSL=1 -D__STDC_CONSTANT_MACROS $
+    -D__STDC_FORMAT_MACROS -DDYNAMIC_ANNOTATIONS_ENABLED=1 $
+    -DWTF_USE_DYNAMIC_ANNOTATIONS=1
+includes = -Igen -I../.. -I../../skia/config $
+    -I../../third_party/skia/include/core $
+    -I../../third_party/skia/include/effects $
+    -I../../third_party/skia/include/pdf $
+    -I../../third_party/skia/include/gpu $
+    -I../../third_party/skia/include/lazy $
+    -I../../third_party/skia/include/pathops $
+    -I../../third_party/skia/include/pipe $
+    -I../../third_party/skia/include/ports $
+    -I../../third_party/skia/include/utils $
+    -I../../third_party/skia/include/utils/mac -I../../skia/ext $
+    -I../../third_party/icu/source/i18n -I../../third_party/icu/source/common
+cflags = -isysroot $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk $
+    -O0 -fvisibility=hidden -Werror -Wnewline-eof -mmacosx-version-min=10.6 $
+    -arch x86_64 -Wall -Wendif-labels -Wextra -Wno-unused-parameter $
+    -Wno-missing-field-initializers -Wno-selector-type-mismatch $
+    -Wpartial-availability -Wheader-hygiene -Wno-char-subscripts $
+    -Wno-unneeded-internal-declaration -Wno-covered-switch-default $
+    -Wstring-conversion -Wno-c++11-narrowing -Wno-deprecated-register $
+    -Wno-inconsistent-missing-override -Wno-shift-negative-value $
+    -Wno-bitfield-width
+cflags_c = -std=c99 -Xclang -load -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing -fstack-protector-all $
+    -Wno-undefined-bool-conversion -Wno-tautological-undefined-compare
+cflags_cc = -std=c++11 -stdlib=libc++ -fno-rtti -fno-exceptions $
+    -fvisibility-inlines-hidden -fno-threadsafe-statics -Xclang -load $
+    -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing -fstack-protector-all $
+    -Wno-undefined-bool-conversion -Wno-tautological-undefined-compare
+cflags_objc = $cflags_c -Wobjc-missing-property-synthesis
+cflags_objcc = $cflags_cc -Wobjc-missing-property-synthesis $
+    -fobjc-call-cxx-cdtors
+arflags = 
+
+build obj/printing/backend/printing.print_backend.o: cxx $
+    ../../printing/backend/print_backend.cc
+build obj/printing/backend/printing.print_backend_consts.o: cxx $
+    ../../printing/backend/print_backend_consts.cc
+build obj/printing/backend/printing.print_backend_dummy.o: cxx $
+    ../../printing/backend/print_backend_dummy.cc
+build obj/printing/printing.image.o: cxx ../../printing/image.cc
+build obj/printing/printing.image_mac.o: cxx ../../printing/image_mac.cc
+build obj/printing/printing.metafile.o: cxx ../../printing/metafile.cc
+build obj/printing/printing.metafile_skia_wrapper.o: cxx $
+    ../../printing/metafile_skia_wrapper.cc
+build obj/printing/printing.page_number.o: cxx ../../printing/page_number.cc
+build obj/printing/printing.page_range.o: cxx ../../printing/page_range.cc
+build obj/printing/printing.page_setup.o: cxx ../../printing/page_setup.cc
+build obj/printing/printing.pdf_metafile_cg_mac.o: cxx $
+    ../../printing/pdf_metafile_cg_mac.cc
+build obj/printing/printing.pdf_metafile_skia.o: cxx $
+    ../../printing/pdf_metafile_skia.cc
+build obj/printing/printing.print_job_constants.o: cxx $
+    ../../printing/print_job_constants.cc
+build obj/printing/printing.print_settings.o: cxx $
+    ../../printing/print_settings.cc
+build obj/printing/printing.print_settings_conversion.o: cxx $
+    ../../printing/print_settings_conversion.cc
+build obj/printing/printing.print_settings_initializer_mac.o: cxx $
+    ../../printing/print_settings_initializer_mac.cc
+build obj/printing/printing.printed_document.o: cxx $
+    ../../printing/printed_document.cc
+build obj/printing/printing.printed_document_mac.o: cxx $
+    ../../printing/printed_document_mac.cc
+build obj/printing/printing.printed_page.o: cxx ../../printing/printed_page.cc
+build obj/printing/printing.printing_context.o: cxx $
+    ../../printing/printing_context.cc
+build obj/printing/printing.printing_utils.o: cxx $
+    ../../printing/printing_utils.cc
+build obj/printing/printing.units.o: cxx ../../printing/units.cc
+build obj/printing/printing.printing_context_mac.o: objcxx $
+    ../../printing/printing_context_mac.mm
+build obj/printing/backend/printing.cups_helper.o: cxx $
+    ../../printing/backend/cups_helper.cc
+build obj/printing/backend/printing.print_backend_cups.o: cxx $
+    ../../printing/backend/print_backend_cups.cc
+build obj/printing/printing.pdf_transform.o: cxx $
+    ../../printing/pdf_transform.cc
+
+build libprinting.a: alink obj/printing/backend/printing.print_backend.o $
+    obj/printing/backend/printing.print_backend_consts.o $
+    obj/printing/backend/printing.print_backend_dummy.o $
+    obj/printing/printing.image.o obj/printing/printing.image_mac.o $
+    obj/printing/printing.metafile.o $
+    obj/printing/printing.metafile_skia_wrapper.o $
+    obj/printing/printing.page_number.o obj/printing/printing.page_range.o $
+    obj/printing/printing.page_setup.o $
+    obj/printing/printing.pdf_metafile_cg_mac.o $
+    obj/printing/printing.pdf_metafile_skia.o $
+    obj/printing/printing.print_job_constants.o $
+    obj/printing/printing.print_settings.o $
+    obj/printing/printing.print_settings_conversion.o $
+    obj/printing/printing.print_settings_initializer_mac.o $
+    obj/printing/printing.printed_document.o $
+    obj/printing/printing.printed_document_mac.o $
+    obj/printing/printing.printed_page.o $
+    obj/printing/printing.printing_context.o $
+    obj/printing/printing.printing_utils.o obj/printing/printing.units.o $
+    obj/printing/printing.printing_context_mac.o $
+    obj/printing/backend/printing.cups_helper.o $
+    obj/printing/backend/printing.print_backend_cups.o $
+    obj/printing/printing.pdf_transform.o || $
+    obj/skia/skia.actions_depends.stamp

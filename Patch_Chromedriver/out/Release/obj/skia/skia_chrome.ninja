@@ -1,0 +1,116 @@
+defines = -DV8_DEPRECATION_WARNINGS -DCLD_VERSION=2 $
+    -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORE=0 -DCHROMIUM_BUILD $
+    -DCR_CLANG_REVISION=254049-1 -DUSE_LIBJPEG_TURBO=1 $
+    -DENABLE_ONE_CLICK_SIGNIN -DENABLE_PRE_SYNC_BACKUP -DENABLE_WEBRTC=1 $
+    -DENABLE_MEDIA_ROUTER=1 -DENABLE_PEPPER_CDMS $
+    -DENABLE_CONFIGURATION_POLICY -DENABLE_NOTIFICATIONS -DENABLE_HIDPI=1 $
+    -DDONT_EMBED_BUILD_METADATA -DFIELDTRIAL_TESTING_ENABLED $
+    -DENABLE_TASK_MANAGER=1 -DENABLE_EXTENSIONS=1 -DENABLE_PDF=1 $
+    -DENABLE_PLUGIN_INSTALLATION=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_THEMES=1 -DENABLE_AUTOFILL_DIALOG=1 $
+    -DENABLE_BACKGROUND=1 -DENABLE_PRINTING=1 -DENABLE_BASIC_PRINTING=1 $
+    -DENABLE_PRINT_PREVIEW=1 -DENABLE_SPELLCHECK=1 $
+    -DUSE_BROWSER_SPELLCHECKER=1 -DENABLE_CAPTIVE_PORTAL_DETECTION=1 $
+    -DENABLE_APP_LIST=1 -DENABLE_SETTINGS_APP=1 -DENABLE_SUPERVISED_USERS=1 $
+    -DENABLE_SERVICE_DISCOVERY=1 -DV8_USE_EXTERNAL_STARTUP_DATA $
+    -DFULL_SAFE_BROWSING -DSAFE_BROWSING_CSD -DSAFE_BROWSING_DB_LOCAL $
+    -DSK_SUPPORT_GPU=1 -DSK_IGNORE_LINEONLY_AA_CONVEX_PATH_OPTS $
+    -DSK_IGNORE_GL_TEXTURE_TARGET $
+    '-DSK_DEFAULT_FONT_CACHE_LIMIT=(20*1024*1024)' -DSK_BUILD_FOR_MAC $
+    -DSK_GAMMA_SRGB -DSK_GAMMA_CONTRAST=0.0 -DUSE_LIBPCI=1 -DUSE_OPENSSL=1 $
+    -DNDEBUG -DNVALGRIND -DDYNAMIC_ANNOTATIONS_ENABLED=0
+includes = -Igen -I../.. -I../../skia/config $
+    -I../../third_party/skia/include/core $
+    -I../../third_party/skia/include/effects $
+    -I../../third_party/skia/include/pdf $
+    -I../../third_party/skia/include/gpu $
+    -I../../third_party/skia/include/lazy $
+    -I../../third_party/skia/include/pathops $
+    -I../../third_party/skia/include/pipe $
+    -I../../third_party/skia/include/ports $
+    -I../../third_party/skia/include/utils $
+    -I../../third_party/skia/include/utils/mac
+cflags = -isysroot $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk $
+    -O2 -fvisibility=hidden -Werror -Wnewline-eof -mmacosx-version-min=10.6 $
+    -arch x86_64 -Wendif-labels -Wno-unused-parameter $
+    -Wno-missing-field-initializers -Wno-selector-type-mismatch $
+    -Wpartial-availability -Wheader-hygiene -Wno-char-subscripts $
+    -Wno-unneeded-internal-declaration -Wno-covered-switch-default $
+    -Wno-c++11-narrowing -Wno-deprecated-register $
+    -Wno-inconsistent-missing-override -Wno-shift-negative-value $
+    -Wno-bitfield-width -Wno-unused-variable
+cflags_c = -std=c99 -Xclang -load -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing
+cflags_cc = -std=c++11 -stdlib=libc++ -fno-rtti -fno-exceptions $
+    -fvisibility-inlines-hidden -fno-threadsafe-statics -Xclang -load $
+    -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing
+cflags_objc = $cflags_c -Wobjc-missing-property-synthesis
+cflags_objcc = $cflags_cc -Wobjc-missing-property-synthesis $
+    -fobjc-call-cxx-cdtors
+arflags = 
+
+build obj/skia/ext/skia_chrome.analysis_canvas.o: cxx $
+    ../../skia/ext/analysis_canvas.cc
+build obj/skia/ext/skia_chrome.benchmarking_canvas.o: cxx $
+    ../../skia/ext/benchmarking_canvas.cc
+build obj/skia/ext/skia_chrome.bitmap_platform_device_mac.o: cxx $
+    ../../skia/ext/bitmap_platform_device_mac.cc
+build obj/skia/ext/skia_chrome.convolver.o: cxx ../../skia/ext/convolver.cc
+build obj/skia/ext/skia_chrome.event_tracer_impl.o: cxx $
+    ../../skia/ext/event_tracer_impl.cc
+build obj/skia/ext/skia_chrome.google_logging.o: cxx $
+    ../../skia/ext/google_logging.cc
+build obj/skia/ext/skia_chrome.image_operations.o: cxx $
+    ../../skia/ext/image_operations.cc
+build obj/skia/ext/skia_chrome.opacity_filter_canvas.o: cxx $
+    ../../skia/ext/opacity_filter_canvas.cc
+build obj/skia/ext/skia_chrome.platform_canvas.o: cxx $
+    ../../skia/ext/platform_canvas.cc
+build obj/skia/ext/skia_chrome.platform_device.o: cxx $
+    ../../skia/ext/platform_device.cc
+build obj/skia/ext/skia_chrome.platform_device_mac.o: cxx $
+    ../../skia/ext/platform_device_mac.cc
+build obj/skia/ext/skia_chrome.recursive_gaussian_convolution.o: cxx $
+    ../../skia/ext/recursive_gaussian_convolution.cc
+build obj/skia/ext/skia_chrome.SkDiscardableMemory_chrome.o: cxx $
+    ../../skia/ext/SkDiscardableMemory_chrome.cc
+build obj/skia/ext/skia_chrome.SkMemory_new_handler.o: cxx $
+    ../../skia/ext/SkMemory_new_handler.cpp
+build obj/skia/ext/skia_chrome.skia_memory_dump_provider.o: cxx $
+    ../../skia/ext/skia_memory_dump_provider.cc
+build obj/skia/ext/skia_chrome.skia_trace_memory_dump_impl.o: cxx $
+    ../../skia/ext/skia_trace_memory_dump_impl.cc
+build obj/skia/ext/skia_chrome.skia_utils_base.o: cxx $
+    ../../skia/ext/skia_utils_base.cc
+build obj/skia/ext/skia_chrome.skia_utils_mac.o: objcxx $
+    ../../skia/ext/skia_utils_mac.mm
+build obj/skia/ext/skia_chrome.convolver_SSE2.o: cxx $
+    ../../skia/ext/convolver_SSE2.cc
+
+build libskia_chrome.a: alink obj/skia/ext/skia_chrome.analysis_canvas.o $
+    obj/skia/ext/skia_chrome.benchmarking_canvas.o $
+    obj/skia/ext/skia_chrome.bitmap_platform_device_mac.o $
+    obj/skia/ext/skia_chrome.convolver.o $
+    obj/skia/ext/skia_chrome.event_tracer_impl.o $
+    obj/skia/ext/skia_chrome.google_logging.o $
+    obj/skia/ext/skia_chrome.image_operations.o $
+    obj/skia/ext/skia_chrome.opacity_filter_canvas.o $
+    obj/skia/ext/skia_chrome.platform_canvas.o $
+    obj/skia/ext/skia_chrome.platform_device.o $
+    obj/skia/ext/skia_chrome.platform_device_mac.o $
+    obj/skia/ext/skia_chrome.recursive_gaussian_convolution.o $
+    obj/skia/ext/skia_chrome.SkDiscardableMemory_chrome.o $
+    obj/skia/ext/skia_chrome.SkMemory_new_handler.o $
+    obj/skia/ext/skia_chrome.skia_memory_dump_provider.o $
+    obj/skia/ext/skia_chrome.skia_trace_memory_dump_impl.o $
+    obj/skia/ext/skia_chrome.skia_utils_base.o $
+    obj/skia/ext/skia_chrome.skia_utils_mac.o $
+    obj/skia/ext/skia_chrome.convolver_SSE2.o

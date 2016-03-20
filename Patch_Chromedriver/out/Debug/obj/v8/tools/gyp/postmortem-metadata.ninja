@@ -1,0 +1,23 @@
+rule $
+    postmortem_metadata_target_gen_postmortem_metadata_63a9cccac3dc3f3bff9ba5c3e4299717
+  command = cd ../../v8/tools/gyp; export $
+      BUILT_FRAMEWORKS_DIR=/Users/superadmin/tmp/src/out/Debug; export $
+      BUILT_PRODUCTS_DIR=/Users/superadmin/tmp/src/out/Debug; export $
+      CONFIGURATION=Debug; export PRODUCT_NAME=postmortem-metadata; export $
+      SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk; $
+      export $
+      SRCROOT=/Users/superadmin/tmp/src/out/Debug/../../v8/tools/gyp; $
+      export SOURCE_ROOT="$${SRCROOT}"; export $
+      TARGET_BUILD_DIR=/Users/superadmin/tmp/src/out/Debug; export $
+      TEMP_DIR="$${TMPDIR}";python ../../tools/gen-postmortem-metadata.py $
+      ../../../out/Debug/gen/debug-support.cc ../../src/objects.h $
+      ../../src/objects-inl.h
+  description = ACTION postmortem-metadata: $
+      gen-postmortem-metadata_63a9cccac3dc3f3bff9ba5c3e4299717
+  restat = 1
+
+build gen/debug-support.cc: $
+    postmortem_metadata_target_gen_postmortem_metadata_63a9cccac3dc3f3bff9ba5c3e4299717 $
+    ../../v8/tools/gen-postmortem-metadata.py ../../v8/src/objects.h $
+    ../../v8/src/objects-inl.h
+

@@ -1,0 +1,90 @@
+build obj/third_party/mesa/osmesa.actions_depends.stamp: stamp libmesa.a $
+    libmesa_libglslcommon.a
+
+defines = '-DMAPI_ABI_HEADER="glapi_mapi_tmp_shared.h"' $
+    '-DPACKAGE_NAME="Mesa"' '-DPACKAGE_TARNAME="mesa"' $
+    '-DPACKAGE_VERSION="9.0.3"' '-DPACKAGE_STRING="Mesa\ 9.0.3"' $
+    '-DPACKAGE_BUGREPORT="https://bugs.freedesktop.org/enter_bug.cgi\?product=Mesa"' $
+    '-DPACKAGE_URL=""' '-DPACKAGE="mesa"' '-DVERSION="9.0.3"' $
+    -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 $
+    -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 $
+    -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 $
+    -DHAVE_DLFCN_H=1 '-DLT_OBJDIR=".libs/"' -DYYTEXT_POINTER=1 $
+    -DHAVE_LIBEXPAT=1 -DHAVE_LIBXCB_DRI2=1 -DFEATURE_GL=1 -DMAPI_MODE_GLAPI $
+    -DIN_DRI_DRIVER -DUSE_XCB -DGLX_INDIRECT_RENDERING $
+    -DGLX_DIRECT_RENDERING -DUSE_EXTERNAL_DXTN_LIB=1 -DIN_DRI_DRIVER $
+    -DHAVE_ALIAS -DHAVE_MINCORE -DHAVE_LIBUDEV -D_GLAPI_NO_EXPORTS $
+    -DV8_DEPRECATION_WARNINGS -DCLD_VERSION=2 $
+    -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORE=0 -DHAVE_DLOPEN $
+    -DHAVE_PTHREAD=1 -DHAVE_UNISTD_H=1 -DHAVE_POSIX_MEMALIGN $
+    -DCHROMIUM_BUILD -DCR_CLANG_REVISION=254049-1 -DUSE_LIBJPEG_TURBO=1 $
+    -DENABLE_ONE_CLICK_SIGNIN -DENABLE_PRE_SYNC_BACKUP -DENABLE_WEBRTC=1 $
+    -DENABLE_MEDIA_ROUTER=1 -DENABLE_PEPPER_CDMS $
+    -DENABLE_CONFIGURATION_POLICY -DENABLE_NOTIFICATIONS -DENABLE_HIDPI=1 $
+    -DDONT_EMBED_BUILD_METADATA -DFIELDTRIAL_TESTING_ENABLED $
+    -DENABLE_TASK_MANAGER=1 -DENABLE_EXTENSIONS=1 -DENABLE_PDF=1 $
+    -DENABLE_PLUGIN_INSTALLATION=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_THEMES=1 -DENABLE_AUTOFILL_DIALOG=1 $
+    -DENABLE_BACKGROUND=1 -DENABLE_PRINTING=1 -DENABLE_BASIC_PRINTING=1 $
+    -DENABLE_PRINT_PREVIEW=1 -DENABLE_SPELLCHECK=1 $
+    -DUSE_BROWSER_SPELLCHECKER=1 -DENABLE_CAPTIVE_PORTAL_DETECTION=1 $
+    -DENABLE_APP_LIST=1 -DENABLE_SETTINGS_APP=1 -DENABLE_SUPERVISED_USERS=1 $
+    -DENABLE_SERVICE_DISCOVERY=1 -DV8_USE_EXTERNAL_STARTUP_DATA $
+    -DFULL_SAFE_BROWSING -DSAFE_BROWSING_CSD -DSAFE_BROWSING_DB_LOCAL $
+    -DMESA_EGL_NO_X11_HEADERS -DUSE_LIBPCI=1 -DUSE_OPENSSL=1 $
+    -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DWTF_USE_DYNAMIC_ANNOTATIONS=1
+includes = -Igen -I../../third_party/mesa/src/src/mapi $
+    -I../../third_party/mesa/src/src/mesa $
+    -I../../third_party/mesa/src/src/mesa/drivers $
+    -I../../third_party/mesa/src/chromium_gensrc/mesa $
+    -I../../third_party/mesa/src/include
+cflags = -isysroot $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk $
+    -O0 -fvisibility=hidden -Werror -Wnewline-eof -mmacosx-version-min=10.6 $
+    -arch x86_64 -Wendif-labels -Wno-unused-parameter $
+    -Wno-missing-field-initializers -Wno-selector-type-mismatch $
+    -Wpartial-availability -Wheader-hygiene -Wno-char-subscripts $
+    -Wno-unneeded-internal-declaration -Wno-covered-switch-default $
+    -Wno-c++11-narrowing -Wno-deprecated-register $
+    -Wno-inconsistent-missing-override -Wno-shift-negative-value $
+    -Wno-bitfield-width -Wno-unused-variable
+cflags_c = -std=c99 -Xclang -load -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing -fstack-protector-all $
+    -Wno-undefined-bool-conversion -Wno-tautological-undefined-compare
+cflags_cc = -std=c++11 -stdlib=libc++ -fno-rtti -fno-exceptions $
+    -fvisibility-inlines-hidden -fno-threadsafe-statics -Xclang -load $
+    -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing -fstack-protector-all $
+    -Wno-undefined-bool-conversion -Wno-tautological-undefined-compare
+cflags_objc = $cflags_c -Wobjc-missing-property-synthesis
+cflags_objcc = $cflags_cc -Wobjc-missing-property-synthesis $
+    -fobjc-call-cxx-cdtors
+arflags = 
+
+build $
+    obj/third_party/mesa/src/src/mesa/drivers/common/osmesa.driverfuncs.o: $
+    cc ../../third_party/mesa/src/src/mesa/drivers/common/driverfuncs.c
+build obj/third_party/mesa/src/src/mesa/drivers/common/osmesa.meta.o: cc $
+    ../../third_party/mesa/src/src/mesa/drivers/common/meta.c
+build obj/third_party/mesa/src/src/mesa/drivers/osmesa/osmesa.osmesa.o: cc $
+    ../../third_party/mesa/src/src/mesa/drivers/osmesa/osmesa.c
+
+ldflags = -lstdc++ -Wl,-search_paths_first -mmacosx-version-min=10.6 $
+    -isysroot $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk $
+    -arch x86_64 -L. -stdlib=libc++
+libs = '-L../../third_party/libc++-static'
+build osmesa.so osmesa.so.TOC: solink_module $
+    obj/third_party/mesa/src/src/mesa/drivers/common/osmesa.driverfuncs.o $
+    obj/third_party/mesa/src/src/mesa/drivers/common/osmesa.meta.o $
+    obj/third_party/mesa/src/src/mesa/drivers/osmesa/osmesa.osmesa.o $
+    libmesa.a libmesa_libglslcommon.a
+  soname = osmesa.so
+  lib = osmesa.so
+  link_file_list = osmesa.so.rsp

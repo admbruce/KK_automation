@@ -1,0 +1,2 @@
+build plugins/test_netscape_plugin.plugin: copy test_netscape_plugin.plugin $
+    || test_netscape_plugin.plugin

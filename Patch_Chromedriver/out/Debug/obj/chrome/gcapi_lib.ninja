@@ -1,0 +1,4 @@
+subninja obj/chrome/gcapi_lib.i386.ninja
+subninja obj/chrome/gcapi_lib.x86_64.ninja
+build libgcapi_lib.a: alink arch/libgcapi_lib.i386.a $
+    arch/libgcapi_lib.x86_64.a

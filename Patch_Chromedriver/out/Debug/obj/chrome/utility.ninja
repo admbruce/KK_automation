@@ -1,0 +1,248 @@
+build obj/chrome/utility.actions_depends.stamp: stamp $
+    obj/components/components_strings.actions_rules_copies.stamp $
+    libcomponent_metrics_proto.a libax_gen.a libmojo_application_bindings.a $
+    libnetwork_service_bindings_lib.a libcontent_common_mojo_bindings.a $
+    obj/skia/skia.actions_depends.stamp gen/chrome/common/features.h $
+    obj/chrome/chrome_resources.actions_rules_copies.stamp $
+    obj/chrome/chrome_strings.actions_rules_copies.stamp libcommon.a $
+    libcommon_mojo_bindings.a exif.so.TOC libchrome_api.a
+
+build obj/chrome/utility.compile_depends.stamp: stamp $
+    obj/components/components_strings.actions_rules_copies.stamp $
+    obj/components/component_metrics_proto.actions_rules_copies.stamp $
+    obj/ui/accessibility/ax_gen.actions_rules_copies.stamp $
+    obj/mojo/mojo_application_bindings.compile_depends.stamp $
+    obj/mojo/network_service_bindings_mojom.actions_rules_copies.stamp $
+    obj/content/content_common_mojo_bindings.compile_depends.stamp $
+    gen/chrome/common/features.h $
+    obj/chrome/chrome_resources.actions_rules_copies.stamp $
+    obj/chrome/chrome_strings.actions_rules_copies.stamp $
+    obj/chrome/common.compile_depends.stamp $
+    obj/chrome/common_mojo_bindings.actions_rules_copies.stamp $
+    obj/chrome/common/extensions/api/chrome_api.actions_rules_copies.stamp
+
+defines = -DV8_DEPRECATION_WARNINGS -DCLD_VERSION=2 $
+    -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORE=0 -DCHROMIUM_BUILD $
+    -DCR_CLANG_REVISION=254049-1 -DUSE_LIBJPEG_TURBO=1 $
+    -DENABLE_ONE_CLICK_SIGNIN -DENABLE_PRE_SYNC_BACKUP -DENABLE_WEBRTC=1 $
+    -DENABLE_MEDIA_ROUTER=1 -DENABLE_PEPPER_CDMS $
+    -DENABLE_CONFIGURATION_POLICY -DENABLE_NOTIFICATIONS -DENABLE_HIDPI=1 $
+    -DDONT_EMBED_BUILD_METADATA -DFIELDTRIAL_TESTING_ENABLED $
+    -DENABLE_TASK_MANAGER=1 -DENABLE_EXTENSIONS=1 -DENABLE_PDF=1 $
+    -DENABLE_PLUGIN_INSTALLATION=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_THEMES=1 -DENABLE_AUTOFILL_DIALOG=1 $
+    -DENABLE_BACKGROUND=1 -DENABLE_PRINTING=1 -DENABLE_BASIC_PRINTING=1 $
+    -DENABLE_PRINT_PREVIEW=1 -DENABLE_SPELLCHECK=1 $
+    -DUSE_BROWSER_SPELLCHECKER=1 -DENABLE_CAPTIVE_PORTAL_DETECTION=1 $
+    -DENABLE_APP_LIST=1 -DENABLE_SETTINGS_APP=1 -DENABLE_SUPERVISED_USERS=1 $
+    -DENABLE_SERVICE_DISCOVERY=1 -DV8_USE_EXTERNAL_STARTUP_DATA $
+    -DFULL_SAFE_BROWSING -DSAFE_BROWSING_CSD -DSAFE_BROWSING_DB_LOCAL $
+    -DMOJO_USE_SYSTEM_IMPL -DTOOLKIT_VIEWS=1 -DPROTOBUF_USE_DLLS $
+    -DGOOGLE_PROTOBUF_NO_RTTI -DGOOGLE_PROTOBUF_NO_STATIC_INITIALIZER $
+    -DSK_SUPPORT_GPU=1 -DSK_IGNORE_LINEONLY_AA_CONVEX_PATH_OPTS $
+    -DSK_IGNORE_GL_TEXTURE_TARGET -DLIBXML_STATIC -DU_USING_ICU_NAMESPACE=0 $
+    -DU_ENABLE_DYLOAD=0 -DU_STATIC_IMPLEMENTATION -DUSE_LIBPCI=1 $
+    -DUSE_OPENSSL=1 -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS $
+    -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DWTF_USE_DYNAMIC_ANNOTATIONS=1
+includes = -Igen -I../.. -Igen/chrome -I../../third_party/khronos $
+    -I../../gpu -I../../skia/config -Igen/angle $
+    -I../../third_party/WebKit/Source -Igen/components/strings $
+    -Igen/protoc_out -I../../third_party/protobuf $
+    -I../../third_party/protobuf/src -I../../third_party/WebKit $
+    -I../../third_party/opus/src/include $
+    -I../../third_party/skia/include/core $
+    -I../../third_party/skia/include/effects $
+    -I../../third_party/skia/include/pdf $
+    -I../../third_party/skia/include/gpu $
+    -I../../third_party/skia/include/lazy $
+    -I../../third_party/skia/include/pathops $
+    -I../../third_party/skia/include/pipe $
+    -I../../third_party/skia/include/ports $
+    -I../../third_party/skia/include/utils $
+    -I../../third_party/skia/include/utils/mac -I../../skia/ext $
+    -I../../third_party/libxml/mac/include $
+    -I../../third_party/libxml/src/include $
+    -I../../third_party/icu/source/common -I../../third_party/libexif/sources
+cflags = -isysroot $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk $
+    -O0 -fvisibility=hidden -Werror -Wnewline-eof -mmacosx-version-min=10.6 $
+    -arch x86_64 -Wall -Wendif-labels -Wextra -Wno-unused-parameter $
+    -Wno-missing-field-initializers -Wno-selector-type-mismatch $
+    -Wpartial-availability -Wheader-hygiene -Wno-char-subscripts $
+    -Wno-unneeded-internal-declaration -Wno-covered-switch-default $
+    -Wstring-conversion -Wno-c++11-narrowing -Wno-deprecated-register $
+    -Wno-inconsistent-missing-override -Wno-shift-negative-value $
+    -Wno-bitfield-width -Wexit-time-destructors
+cflags_c = -std=c99 -Xclang -load -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing -fstack-protector-all $
+    -Wno-undefined-bool-conversion -Wno-tautological-undefined-compare
+cflags_cc = -std=c++11 -stdlib=libc++ -fno-rtti -fno-exceptions $
+    -fvisibility-inlines-hidden -fno-threadsafe-statics -Xclang -load $
+    -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing -fstack-protector-all $
+    -Wno-undefined-bool-conversion -Wno-tautological-undefined-compare
+cflags_objc = $cflags_c -Wobjc-missing-property-synthesis
+cflags_objcc = $cflags_cc -Wobjc-missing-property-synthesis $
+    -fobjc-call-cxx-cdtors
+arflags = 
+
+build obj/chrome/utility/utility.chrome_content_utility_client.o: cxx $
+    ../../chrome/utility/chrome_content_utility_client.cc || $
+    obj/chrome/utility.compile_depends.stamp
+build obj/chrome/utility/utility.chrome_content_utility_ipc_whitelist.o: $
+    cxx ../../chrome/utility/chrome_content_utility_ipc_whitelist.cc || $
+    obj/chrome/utility.compile_depends.stamp
+build obj/chrome/utility/cloud_print/utility.bitmap_image.o: cxx $
+    ../../chrome/utility/cloud_print/bitmap_image.cc || $
+    obj/chrome/utility.compile_depends.stamp
+build obj/chrome/utility/cloud_print/utility.pwg_encoder.o: cxx $
+    ../../chrome/utility/cloud_print/pwg_encoder.cc || $
+    obj/chrome/utility.compile_depends.stamp
+build obj/chrome/utility/utility.printing_handler.o: cxx $
+    ../../chrome/utility/printing_handler.cc || $
+    obj/chrome/utility.compile_depends.stamp
+build obj/chrome/utility/utility.safe_json_parser_handler.o: cxx $
+    ../../chrome/utility/safe_json_parser_handler.cc || $
+    obj/chrome/utility.compile_depends.stamp
+build obj/chrome/utility/importer/utility.bookmark_html_reader.o: cxx $
+    ../../chrome/utility/importer/bookmark_html_reader.cc || $
+    obj/chrome/utility.compile_depends.stamp
+build obj/chrome/utility/importer/utility.bookmarks_file_importer.o: cxx $
+    ../../chrome/utility/importer/bookmarks_file_importer.cc || $
+    obj/chrome/utility.compile_depends.stamp
+build $
+    obj/chrome/utility/importer/utility.external_process_importer_bridge.o: $
+    cxx ../../chrome/utility/importer/external_process_importer_bridge.cc $
+    || obj/chrome/utility.compile_depends.stamp
+build obj/chrome/utility/importer/utility.favicon_reencode.o: cxx $
+    ../../chrome/utility/importer/favicon_reencode.cc || $
+    obj/chrome/utility.compile_depends.stamp
+build obj/chrome/utility/importer/utility.firefox_importer.o: cxx $
+    ../../chrome/utility/importer/firefox_importer.cc || $
+    obj/chrome/utility.compile_depends.stamp
+build obj/chrome/utility/importer/utility.importer.o: cxx $
+    ../../chrome/utility/importer/importer.cc || $
+    obj/chrome/utility.compile_depends.stamp
+build obj/chrome/utility/importer/utility.importer_creator.o: cxx $
+    ../../chrome/utility/importer/importer_creator.cc || $
+    obj/chrome/utility.compile_depends.stamp
+build obj/chrome/utility/importer/utility.nss_decryptor.o: cxx $
+    ../../chrome/utility/importer/nss_decryptor.cc || $
+    obj/chrome/utility.compile_depends.stamp
+build obj/chrome/utility/importer/utility.nss_decryptor_mac.o: objcxx $
+    ../../chrome/utility/importer/nss_decryptor_mac.mm || $
+    obj/chrome/utility.compile_depends.stamp
+build obj/chrome/utility/importer/utility.safari_importer.o: objcxx $
+    ../../chrome/utility/importer/safari_importer.mm || $
+    obj/chrome/utility.compile_depends.stamp
+build obj/chrome/utility/utility.profile_import_handler.o: cxx $
+    ../../chrome/utility/profile_import_handler.cc || $
+    obj/chrome/utility.compile_depends.stamp
+build obj/chrome/utility/extensions/utility.extensions_handler.o: cxx $
+    ../../chrome/utility/extensions/extensions_handler.cc || $
+    obj/chrome/utility.compile_depends.stamp
+build obj/chrome/utility/image_writer/utility.disk_unmounter_mac.o: cxx $
+    ../../chrome/utility/image_writer/disk_unmounter_mac.cc || $
+    obj/chrome/utility.compile_depends.stamp
+build obj/chrome/utility/image_writer/utility.error_messages.o: cxx $
+    ../../chrome/utility/image_writer/error_messages.cc || $
+    obj/chrome/utility.compile_depends.stamp
+build obj/chrome/utility/image_writer/utility.image_writer.o: cxx $
+    ../../chrome/utility/image_writer/image_writer.cc || $
+    obj/chrome/utility.compile_depends.stamp
+build obj/chrome/utility/image_writer/utility.image_writer_handler.o: cxx $
+    ../../chrome/utility/image_writer/image_writer_handler.cc || $
+    obj/chrome/utility.compile_depends.stamp
+build obj/chrome/utility/image_writer/utility.image_writer_mac.o: cxx $
+    ../../chrome/utility/image_writer/image_writer_mac.cc || $
+    obj/chrome/utility.compile_depends.stamp
+build $
+    obj/chrome/utility/media_galleries/utility.image_metadata_extractor.o: $
+    cxx ../../chrome/utility/media_galleries/image_metadata_extractor.cc || $
+    obj/chrome/utility.compile_depends.stamp
+build obj/chrome/utility/media_galleries/utility.ipc_data_source.o: cxx $
+    ../../chrome/utility/media_galleries/ipc_data_source.cc || $
+    obj/chrome/utility.compile_depends.stamp
+build obj/chrome/utility/media_galleries/utility.media_metadata_parser.o: $
+    cxx ../../chrome/utility/media_galleries/media_metadata_parser.cc || $
+    obj/chrome/utility.compile_depends.stamp
+build obj/chrome/utility/media_galleries/utility.iapps_xml_utils.o: cxx $
+    ../../chrome/utility/media_galleries/iapps_xml_utils.cc || $
+    obj/chrome/utility.compile_depends.stamp
+build obj/chrome/utility/media_galleries/utility.itunes_library_parser.o: $
+    cxx ../../chrome/utility/media_galleries/itunes_library_parser.cc || $
+    obj/chrome/utility.compile_depends.stamp
+build $
+    obj/chrome/utility/media_galleries/utility.picasa_album_table_reader.o: $
+    cxx ../../chrome/utility/media_galleries/picasa_album_table_reader.cc $
+    || obj/chrome/utility.compile_depends.stamp
+build obj/chrome/utility/media_galleries/utility.picasa_albums_indexer.o: $
+    cxx ../../chrome/utility/media_galleries/picasa_albums_indexer.cc || $
+    obj/chrome/utility.compile_depends.stamp
+build obj/chrome/utility/media_galleries/utility.pmp_column_reader.o: cxx $
+    ../../chrome/utility/media_galleries/pmp_column_reader.cc || $
+    obj/chrome/utility.compile_depends.stamp
+build obj/chrome/utility/media_galleries/utility.iphoto_library_parser.o: $
+    cxx ../../chrome/utility/media_galleries/iphoto_library_parser.cc || $
+    obj/chrome/utility.compile_depends.stamp
+build obj/chrome/utility/safe_browsing/mac/utility.dmg_analyzer.o: cxx $
+    ../../chrome/utility/safe_browsing/mac/dmg_analyzer.cc || $
+    obj/chrome/utility.compile_depends.stamp
+build obj/chrome/utility/safe_browsing/mac/utility.dmg_iterator.o: cxx $
+    ../../chrome/utility/safe_browsing/mac/dmg_iterator.cc || $
+    obj/chrome/utility.compile_depends.stamp
+build obj/chrome/utility/safe_browsing/mac/utility.hfs.o: cxx $
+    ../../chrome/utility/safe_browsing/mac/hfs.cc || $
+    obj/chrome/utility.compile_depends.stamp
+build obj/chrome/utility/safe_browsing/mac/utility.read_stream.o: cxx $
+    ../../chrome/utility/safe_browsing/mac/read_stream.cc || $
+    obj/chrome/utility.compile_depends.stamp
+build obj/chrome/utility/safe_browsing/mac/utility.udif.o: cxx $
+    ../../chrome/utility/safe_browsing/mac/udif.cc || $
+    obj/chrome/utility.compile_depends.stamp
+
+build libutility.a: alink $
+    obj/chrome/utility/utility.chrome_content_utility_client.o $
+    obj/chrome/utility/utility.chrome_content_utility_ipc_whitelist.o $
+    obj/chrome/utility/cloud_print/utility.bitmap_image.o $
+    obj/chrome/utility/cloud_print/utility.pwg_encoder.o $
+    obj/chrome/utility/utility.printing_handler.o $
+    obj/chrome/utility/utility.safe_json_parser_handler.o $
+    obj/chrome/utility/importer/utility.bookmark_html_reader.o $
+    obj/chrome/utility/importer/utility.bookmarks_file_importer.o $
+    obj/chrome/utility/importer/utility.external_process_importer_bridge.o $
+    obj/chrome/utility/importer/utility.favicon_reencode.o $
+    obj/chrome/utility/importer/utility.firefox_importer.o $
+    obj/chrome/utility/importer/utility.importer.o $
+    obj/chrome/utility/importer/utility.importer_creator.o $
+    obj/chrome/utility/importer/utility.nss_decryptor.o $
+    obj/chrome/utility/importer/utility.nss_decryptor_mac.o $
+    obj/chrome/utility/importer/utility.safari_importer.o $
+    obj/chrome/utility/utility.profile_import_handler.o $
+    obj/chrome/utility/extensions/utility.extensions_handler.o $
+    obj/chrome/utility/image_writer/utility.disk_unmounter_mac.o $
+    obj/chrome/utility/image_writer/utility.error_messages.o $
+    obj/chrome/utility/image_writer/utility.image_writer.o $
+    obj/chrome/utility/image_writer/utility.image_writer_handler.o $
+    obj/chrome/utility/image_writer/utility.image_writer_mac.o $
+    obj/chrome/utility/media_galleries/utility.image_metadata_extractor.o $
+    obj/chrome/utility/media_galleries/utility.ipc_data_source.o $
+    obj/chrome/utility/media_galleries/utility.media_metadata_parser.o $
+    obj/chrome/utility/media_galleries/utility.iapps_xml_utils.o $
+    obj/chrome/utility/media_galleries/utility.itunes_library_parser.o $
+    obj/chrome/utility/media_galleries/utility.picasa_album_table_reader.o $
+    obj/chrome/utility/media_galleries/utility.picasa_albums_indexer.o $
+    obj/chrome/utility/media_galleries/utility.pmp_column_reader.o $
+    obj/chrome/utility/media_galleries/utility.iphoto_library_parser.o $
+    obj/chrome/utility/safe_browsing/mac/utility.dmg_analyzer.o $
+    obj/chrome/utility/safe_browsing/mac/utility.dmg_iterator.o $
+    obj/chrome/utility/safe_browsing/mac/utility.hfs.o $
+    obj/chrome/utility/safe_browsing/mac/utility.read_stream.o $
+    obj/chrome/utility/safe_browsing/mac/utility.udif.o || $
+    obj/chrome/utility.actions_depends.stamp

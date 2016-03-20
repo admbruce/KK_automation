@@ -1,0 +1,575 @@
+build obj/remoting/remoting_host_uninstaller.actions_depends.stamp: stamp $
+    libbase.a $
+    obj/remoting/remoting_infoplist_strings.actions_rules_copies.stamp $
+    libbase_static.a liballocator_extension_thunks.a libmodp_b64.a $
+    libdynamic_annotations.a libevent.a $
+    obj/remoting/remoting_resources.actions_rules_copies.stamp $
+    obj/remoting/remoting_webapp_html.actions_rules_copies.stamp
+
+build obj/remoting/remoting_host_uninstaller.compile_depends.stamp: stamp $
+    obj/remoting/remoting_infoplist_strings.actions_rules_copies.stamp $
+    obj/remoting/remoting_resources.actions_rules_copies.stamp $
+    obj/remoting/remoting_webapp_html.actions_rules_copies.stamp
+
+build $
+    remoting_host_uninstaller.app/Contents/Resources/remoting_uninstaller.icns: $
+    mac_tool $
+    ../../remoting/host/installer/mac/uninstaller/remoting_uninstaller.icns
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_uninstaller.app/Contents/Resources/remoting_uninstaller.nib: $
+    mac_tool $
+    ../../remoting/host/installer/mac/uninstaller/remoting_uninstaller.xib
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_uninstaller.app/Contents/Resources/am.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/remoting_uninstaller-InfoPlist.strings/am.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_uninstaller.app/Contents/Resources/ar.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/remoting_uninstaller-InfoPlist.strings/ar.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_uninstaller.app/Contents/Resources/bg.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/remoting_uninstaller-InfoPlist.strings/bg.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_uninstaller.app/Contents/Resources/bn.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/remoting_uninstaller-InfoPlist.strings/bn.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_uninstaller.app/Contents/Resources/ca.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/remoting_uninstaller-InfoPlist.strings/ca.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_uninstaller.app/Contents/Resources/cs.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/remoting_uninstaller-InfoPlist.strings/cs.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_uninstaller.app/Contents/Resources/da.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/remoting_uninstaller-InfoPlist.strings/da.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_uninstaller.app/Contents/Resources/de.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/remoting_uninstaller-InfoPlist.strings/de.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_uninstaller.app/Contents/Resources/el.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/remoting_uninstaller-InfoPlist.strings/el.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_uninstaller.app/Contents/Resources/en.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/remoting_uninstaller-InfoPlist.strings/en.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_uninstaller.app/Contents/Resources/en_GB.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/remoting_uninstaller-InfoPlist.strings/en_GB.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_uninstaller.app/Contents/Resources/es.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/remoting_uninstaller-InfoPlist.strings/es.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_uninstaller.app/Contents/Resources/es_419.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/remoting_uninstaller-InfoPlist.strings/es_419.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_uninstaller.app/Contents/Resources/et.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/remoting_uninstaller-InfoPlist.strings/et.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_uninstaller.app/Contents/Resources/fa.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/remoting_uninstaller-InfoPlist.strings/fa.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_uninstaller.app/Contents/Resources/fake_bidi.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/remoting_uninstaller-InfoPlist.strings/fake_bidi.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_uninstaller.app/Contents/Resources/fi.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/remoting_uninstaller-InfoPlist.strings/fi.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_uninstaller.app/Contents/Resources/fil.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/remoting_uninstaller-InfoPlist.strings/fil.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_uninstaller.app/Contents/Resources/fr.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/remoting_uninstaller-InfoPlist.strings/fr.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_uninstaller.app/Contents/Resources/gu.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/remoting_uninstaller-InfoPlist.strings/gu.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_uninstaller.app/Contents/Resources/he.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/remoting_uninstaller-InfoPlist.strings/he.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_uninstaller.app/Contents/Resources/hi.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/remoting_uninstaller-InfoPlist.strings/hi.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_uninstaller.app/Contents/Resources/hr.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/remoting_uninstaller-InfoPlist.strings/hr.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_uninstaller.app/Contents/Resources/hu.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/remoting_uninstaller-InfoPlist.strings/hu.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_uninstaller.app/Contents/Resources/id.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/remoting_uninstaller-InfoPlist.strings/id.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_uninstaller.app/Contents/Resources/it.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/remoting_uninstaller-InfoPlist.strings/it.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_uninstaller.app/Contents/Resources/ja.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/remoting_uninstaller-InfoPlist.strings/ja.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_uninstaller.app/Contents/Resources/kn.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/remoting_uninstaller-InfoPlist.strings/kn.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_uninstaller.app/Contents/Resources/ko.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/remoting_uninstaller-InfoPlist.strings/ko.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_uninstaller.app/Contents/Resources/lt.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/remoting_uninstaller-InfoPlist.strings/lt.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_uninstaller.app/Contents/Resources/lv.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/remoting_uninstaller-InfoPlist.strings/lv.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_uninstaller.app/Contents/Resources/ml.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/remoting_uninstaller-InfoPlist.strings/ml.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_uninstaller.app/Contents/Resources/mr.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/remoting_uninstaller-InfoPlist.strings/mr.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_uninstaller.app/Contents/Resources/ms.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/remoting_uninstaller-InfoPlist.strings/ms.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_uninstaller.app/Contents/Resources/nb.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/remoting_uninstaller-InfoPlist.strings/nb.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_uninstaller.app/Contents/Resources/nl.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/remoting_uninstaller-InfoPlist.strings/nl.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_uninstaller.app/Contents/Resources/pl.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/remoting_uninstaller-InfoPlist.strings/pl.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_uninstaller.app/Contents/Resources/pt_BR.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/remoting_uninstaller-InfoPlist.strings/pt_BR.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_uninstaller.app/Contents/Resources/pt_PT.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/remoting_uninstaller-InfoPlist.strings/pt_PT.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_uninstaller.app/Contents/Resources/ro.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/remoting_uninstaller-InfoPlist.strings/ro.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_uninstaller.app/Contents/Resources/ru.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/remoting_uninstaller-InfoPlist.strings/ru.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_uninstaller.app/Contents/Resources/sk.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/remoting_uninstaller-InfoPlist.strings/sk.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_uninstaller.app/Contents/Resources/sl.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/remoting_uninstaller-InfoPlist.strings/sl.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_uninstaller.app/Contents/Resources/sr.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/remoting_uninstaller-InfoPlist.strings/sr.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_uninstaller.app/Contents/Resources/sv.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/remoting_uninstaller-InfoPlist.strings/sv.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_uninstaller.app/Contents/Resources/sw.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/remoting_uninstaller-InfoPlist.strings/sw.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_uninstaller.app/Contents/Resources/ta.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/remoting_uninstaller-InfoPlist.strings/ta.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_uninstaller.app/Contents/Resources/te.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/remoting_uninstaller-InfoPlist.strings/te.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_uninstaller.app/Contents/Resources/th.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/remoting_uninstaller-InfoPlist.strings/th.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_uninstaller.app/Contents/Resources/tr.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/remoting_uninstaller-InfoPlist.strings/tr.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_uninstaller.app/Contents/Resources/uk.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/remoting_uninstaller-InfoPlist.strings/uk.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_uninstaller.app/Contents/Resources/vi.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/remoting_uninstaller-InfoPlist.strings/vi.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_uninstaller.app/Contents/Resources/zh_CN.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/remoting_uninstaller-InfoPlist.strings/zh_CN.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_uninstaller.app/Contents/Resources/zh_TW.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/remoting_uninstaller-InfoPlist.strings/zh_TW.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    obj/remoting/remoting_host_uninstaller.remoting_uninstaller-Info.plist: $
+    preprocess_infoplist $
+    ../../remoting/host/installer/mac/uninstaller/remoting_uninstaller-Info.plist
+  defines = -DVERSION_FULL=49.0.2577.0 -DVERSION_SHORT=49.0.2577 $
+      -DBUNDLE_ID=org.chromium.chromoting.me2me-host-uninstaller
+build remoting_host_uninstaller.app/Contents/Info.plist: copy_infoplist $
+    obj/remoting/remoting_host_uninstaller.remoting_uninstaller-Info.plist
+  env = export ALWAYS_SEARCH_USER_PATHS=NO; export ARCHS=x86_64; export $
+      BUILT_FRAMEWORKS_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      BUILT_PRODUCTS_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      SRCROOT=/Users/superadmin/tmp/src/out/Release/../../remoting; export $
+      SOURCE_ROOT="$${SRCROOT}"; export $
+      CC="$${SOURCE_ROOT}/../third_party/llvm-build/Release+Asserts/bin/clang"; $
+      export CLANG_CXX_LANGUAGE_STANDARD=c++11; export $
+      CLANG_CXX_LIBRARY=libc++; export CLANG_LINK_OBJC_RUNTIME=NO; export $
+      CLANG_WARN_OBJC_MISSING_PROPERTY_SYNTHESIS=YES; export $
+      CONFIGURATION=Release; export $
+      CONTENTS_FOLDER_PATH=remoting_host_uninstaller.app/Contents; export $
+      COPY_PHASE_STRIP=NO; export $
+      EXECUTABLE_NAME=remoting_host_uninstaller; export $
+      EXECUTABLE_PATH=remoting_host_uninstaller.app/Contents/MacOS/remoting_host_uninstaller; $
+      export FULL_PRODUCT_NAME=remoting_host_uninstaller.app; export $
+      GCC_CW_ASM_SYNTAX=NO; export GCC_C_LANGUAGE_STANDARD=c99; export $
+      GCC_DYNAMIC_NO_PIC=NO; export GCC_ENABLE_CPP_EXCEPTIONS=NO; export $
+      GCC_ENABLE_CPP_RTTI=NO; export GCC_ENABLE_PASCAL_STRINGS=NO; export $
+      GCC_GENERATE_DEBUGGING_SYMBOLS=NO; export $
+      GCC_INLINES_ARE_PRIVATE_EXTERN=YES; export $
+      GCC_OBJC_CALL_CXX_CDTORS=YES; export $
+      GCC_PRECOMPILE_PREFIX_HEADER=YES; export $
+      GCC_SYMBOLS_PRIVATE_EXTERN=YES; export GCC_THREADSAFE_STATICS=NO; $
+      export GCC_TREAT_WARNINGS_AS_ERRORS=YES; export $
+      GCC_VERSION=com.apple.compilers.llvm.clang.1_0; export $
+      GCC_WARN_ABOUT_MISSING_NEWLINE=YES; export $
+      INFOPLIST_FILE=host/installer/mac/uninstaller/remoting_uninstaller-Info.plist; $
+      export $
+      INFOPLIST_PATH=remoting_host_uninstaller.app/Contents/Info.plist; $
+      export INFOPLIST_PREPROCESS=YES; export $
+      INFOPLIST_PREPROCESSOR_DEFINITIONS="VERSION_FULL=\"49.0.2577.0\" $
+      VERSION_SHORT=\"49.0.2577\" $
+      BUNDLE_ID=\"org.chromium.chromoting.me2me-host-uninstaller\""; export $
+      LDPLUSPLUS="$${SOURCE_ROOT}/../third_party/llvm-build/Release+Asserts/bin/clang++"; $
+      export MACH_O_TYPE=mh_execute; export MACOSX_DEPLOYMENT_TARGET=10.6; $
+      export OTHER_LDFLAGS="-Wl,-search_paths_first -Wl,-ObjC -Wl,-pie"; $
+      export PRODUCT_NAME=remoting_host_uninstaller; export $
+      PRODUCT_TYPE=com.apple.product-type.application; export $
+      SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk; $
+      export $
+      SHARED_PRECOMPS_DIR="$${CONFIGURATION_BUILD_DIR}/SharedPrecompiledHeaders"; $
+      export SYMROOT=../xcodebuild; export $
+      TARGET_BUILD_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      TEMP_DIR="$${TMPDIR}"; export $
+      UNLOCALIZED_RESOURCES_FOLDER_PATH=remoting_host_uninstaller.app/Contents/Resources; $
+      export USE_HEADERMAP=NO; export WARNING_CFLAGS="-Wall -Wendif-labels $
+      -Wextra -Wno-unused-parameter -Wno-missing-field-initializers $
+      -Wno-selector-type-mismatch -Wpartial-availability -Wheader-hygiene $
+      -Wno-char-subscripts -Wno-unneeded-internal-declaration $
+      -Wno-covered-switch-default -Wstring-conversion -Wno-c++11-narrowing $
+      -Wno-deprecated-register -Wno-inconsistent-missing-override $
+      -Wno-shift-negative-value -Wno-bitfield-width"; export $
+      WRAPPER_NAME=remoting_host_uninstaller.app;
+  keys = '{"DTXcode": "0701", "BuildMachineOSBuild": "14F27", "DTSDKName": $
+      "macosx10.10", "DTXcodeBuild": "7A1001", "DTSDKBuild": "14D125"}'
+  binary = False
+defines = -DBINARY_CORE=1 -DBINARY_DESKTOP=2 -DBINARY_HOST_ME2ME=3 $
+    -DBINARY_NATIVE_MESSAGING_HOST=4 -DBINARY_REMOTE_ASSISTANCE_HOST=5 $
+    -DV8_DEPRECATION_WARNINGS -DCLD_VERSION=2 $
+    -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORE=0 -DCHROMIUM_BUILD $
+    -DCR_CLANG_REVISION=254049-1 -DUSE_LIBJPEG_TURBO=1 $
+    -DENABLE_ONE_CLICK_SIGNIN -DENABLE_PRE_SYNC_BACKUP -DENABLE_WEBRTC=1 $
+    -DENABLE_MEDIA_ROUTER=1 -DENABLE_PEPPER_CDMS $
+    -DENABLE_CONFIGURATION_POLICY -DENABLE_NOTIFICATIONS -DENABLE_HIDPI=1 $
+    -DDONT_EMBED_BUILD_METADATA -DFIELDTRIAL_TESTING_ENABLED $
+    -DENABLE_TASK_MANAGER=1 -DENABLE_EXTENSIONS=1 -DENABLE_PDF=1 $
+    -DENABLE_PLUGIN_INSTALLATION=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_THEMES=1 -DENABLE_AUTOFILL_DIALOG=1 $
+    -DENABLE_BACKGROUND=1 -DENABLE_PRINTING=1 -DENABLE_BASIC_PRINTING=1 $
+    -DENABLE_PRINT_PREVIEW=1 -DENABLE_SPELLCHECK=1 $
+    -DUSE_BROWSER_SPELLCHECKER=1 -DENABLE_CAPTIVE_PORTAL_DETECTION=1 $
+    -DENABLE_APP_LIST=1 -DENABLE_SETTINGS_APP=1 -DENABLE_SUPERVISED_USERS=1 $
+    -DENABLE_SERVICE_DISCOVERY=1 -DV8_USE_EXTERNAL_STARTUP_DATA $
+    -DFULL_SAFE_BROWSING -DSAFE_BROWSING_CSD -DSAFE_BROWSING_DB_LOCAL $
+    '-DHOST_BUNDLE_NAME="ChromotingHost.bundle"' $
+    '-DPREFPANE_BUNDLE_NAME="Chromoting.prefPane"' -DUSE_LIBPCI=1 $
+    -DUSE_OPENSSL=1 -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS $
+    -DNDEBUG -DNVALGRIND -DDYNAMIC_ANNOTATIONS_ENABLED=0 -D_FORTIFY_SOURCE=2
+includes = -I../.. -Igen
+cflags = -isysroot $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk $
+    -O2 -fvisibility=hidden -Werror -Wnewline-eof -mmacosx-version-min=10.6 $
+    -arch x86_64 -Wall -Wendif-labels -Wextra -Wno-unused-parameter $
+    -Wno-missing-field-initializers -Wno-selector-type-mismatch $
+    -Wpartial-availability -Wheader-hygiene -Wno-char-subscripts $
+    -Wno-unneeded-internal-declaration -Wno-covered-switch-default $
+    -Wstring-conversion -Wno-c++11-narrowing -Wno-deprecated-register $
+    -Wno-inconsistent-missing-override -Wno-shift-negative-value $
+    -Wno-bitfield-width
+cflags_c = -std=c99 -Xclang -load -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing
+cflags_cc = -std=c++11 -stdlib=libc++ -fno-rtti -fno-exceptions $
+    -fvisibility-inlines-hidden -fno-threadsafe-statics -Xclang -load $
+    -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing
+cflags_objc = $cflags_c -Wobjc-missing-property-synthesis
+cflags_objcc = $cflags_cc -Wobjc-missing-property-synthesis $
+    -fobjc-call-cxx-cdtors
+arflags = 
+
+build obj/remoting/host/remoting_host_uninstaller.constants_mac.o: cxx $
+    ../../remoting/host/constants_mac.cc || $
+    obj/remoting/remoting_host_uninstaller.compile_depends.stamp
+build $
+    obj/remoting/host/installer/mac/uninstaller/remoting_host_uninstaller.remoting_uninstaller.o: $
+    objcxx $
+    ../../remoting/host/installer/mac/uninstaller/remoting_uninstaller.mm $
+    || obj/remoting/remoting_host_uninstaller.compile_depends.stamp
+build $
+    obj/remoting/host/installer/mac/uninstaller/remoting_host_uninstaller.remoting_uninstaller_app.o: $
+    objcxx $
+    ../../remoting/host/installer/mac/uninstaller/remoting_uninstaller_app.mm $
+    || obj/remoting/remoting_host_uninstaller.compile_depends.stamp
+
+ldflags = -Wl,-search_paths_first -Wl,-ObjC -Wl,-pie -Wl,-dead_strip $
+    -mmacosx-version-min=10.6 -isysroot $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk $
+    -arch x86_64 -L. -stdlib=libc++
+libs = '-L../../third_party/libc++-static' -framework AppKit -framework $
+    ApplicationServices -framework Carbon -framework CoreFoundation $
+    -framework Foundation -framework IOKit -framework Security
+build $
+    remoting_host_uninstaller.app/Contents/MacOS/remoting_host_uninstaller: $
+    link obj/remoting/host/remoting_host_uninstaller.constants_mac.o $
+    obj/remoting/host/installer/mac/uninstaller/remoting_host_uninstaller.remoting_uninstaller.o $
+    obj/remoting/host/installer/mac/uninstaller/remoting_host_uninstaller.remoting_uninstaller_app.o $
+    libbase.a libbase_static.a liballocator_extension_thunks.a $
+    libmodp_b64.a libdynamic_annotations.a libevent.a | $
+    obj/remoting/remoting_resources.actions_rules_copies.stamp $
+    obj/remoting/remoting_infoplist_strings.actions_rules_copies.stamp $
+    obj/remoting/remoting_webapp_html.actions_rules_copies.stamp
+  ld = $ldxx
+build remoting_host_uninstaller.app: stamp $
+    remoting_host_uninstaller.app/Contents/Resources/remoting_uninstaller.icns $
+    remoting_host_uninstaller.app/Contents/Resources/remoting_uninstaller.nib $
+    remoting_host_uninstaller.app/Contents/Resources/am.lproj/InfoPlist.strings $
+    remoting_host_uninstaller.app/Contents/Resources/ar.lproj/InfoPlist.strings $
+    remoting_host_uninstaller.app/Contents/Resources/bg.lproj/InfoPlist.strings $
+    remoting_host_uninstaller.app/Contents/Resources/bn.lproj/InfoPlist.strings $
+    remoting_host_uninstaller.app/Contents/Resources/ca.lproj/InfoPlist.strings $
+    remoting_host_uninstaller.app/Contents/Resources/cs.lproj/InfoPlist.strings $
+    remoting_host_uninstaller.app/Contents/Resources/da.lproj/InfoPlist.strings $
+    remoting_host_uninstaller.app/Contents/Resources/de.lproj/InfoPlist.strings $
+    remoting_host_uninstaller.app/Contents/Resources/el.lproj/InfoPlist.strings $
+    remoting_host_uninstaller.app/Contents/Resources/en.lproj/InfoPlist.strings $
+    remoting_host_uninstaller.app/Contents/Resources/en_GB.lproj/InfoPlist.strings $
+    remoting_host_uninstaller.app/Contents/Resources/es.lproj/InfoPlist.strings $
+    remoting_host_uninstaller.app/Contents/Resources/es_419.lproj/InfoPlist.strings $
+    remoting_host_uninstaller.app/Contents/Resources/et.lproj/InfoPlist.strings $
+    remoting_host_uninstaller.app/Contents/Resources/fa.lproj/InfoPlist.strings $
+    remoting_host_uninstaller.app/Contents/Resources/fake_bidi.lproj/InfoPlist.strings $
+    remoting_host_uninstaller.app/Contents/Resources/fi.lproj/InfoPlist.strings $
+    remoting_host_uninstaller.app/Contents/Resources/fil.lproj/InfoPlist.strings $
+    remoting_host_uninstaller.app/Contents/Resources/fr.lproj/InfoPlist.strings $
+    remoting_host_uninstaller.app/Contents/Resources/gu.lproj/InfoPlist.strings $
+    remoting_host_uninstaller.app/Contents/Resources/he.lproj/InfoPlist.strings $
+    remoting_host_uninstaller.app/Contents/Resources/hi.lproj/InfoPlist.strings $
+    remoting_host_uninstaller.app/Contents/Resources/hr.lproj/InfoPlist.strings $
+    remoting_host_uninstaller.app/Contents/Resources/hu.lproj/InfoPlist.strings $
+    remoting_host_uninstaller.app/Contents/Resources/id.lproj/InfoPlist.strings $
+    remoting_host_uninstaller.app/Contents/Resources/it.lproj/InfoPlist.strings $
+    remoting_host_uninstaller.app/Contents/Resources/ja.lproj/InfoPlist.strings $
+    remoting_host_uninstaller.app/Contents/Resources/kn.lproj/InfoPlist.strings $
+    remoting_host_uninstaller.app/Contents/Resources/ko.lproj/InfoPlist.strings $
+    remoting_host_uninstaller.app/Contents/Resources/lt.lproj/InfoPlist.strings $
+    remoting_host_uninstaller.app/Contents/Resources/lv.lproj/InfoPlist.strings $
+    remoting_host_uninstaller.app/Contents/Resources/ml.lproj/InfoPlist.strings $
+    remoting_host_uninstaller.app/Contents/Resources/mr.lproj/InfoPlist.strings $
+    remoting_host_uninstaller.app/Contents/Resources/ms.lproj/InfoPlist.strings $
+    remoting_host_uninstaller.app/Contents/Resources/nb.lproj/InfoPlist.strings $
+    remoting_host_uninstaller.app/Contents/Resources/nl.lproj/InfoPlist.strings $
+    remoting_host_uninstaller.app/Contents/Resources/pl.lproj/InfoPlist.strings $
+    remoting_host_uninstaller.app/Contents/Resources/pt_BR.lproj/InfoPlist.strings $
+    remoting_host_uninstaller.app/Contents/Resources/pt_PT.lproj/InfoPlist.strings $
+    remoting_host_uninstaller.app/Contents/Resources/ro.lproj/InfoPlist.strings $
+    remoting_host_uninstaller.app/Contents/Resources/ru.lproj/InfoPlist.strings $
+    remoting_host_uninstaller.app/Contents/Resources/sk.lproj/InfoPlist.strings $
+    remoting_host_uninstaller.app/Contents/Resources/sl.lproj/InfoPlist.strings $
+    remoting_host_uninstaller.app/Contents/Resources/sr.lproj/InfoPlist.strings $
+    remoting_host_uninstaller.app/Contents/Resources/sv.lproj/InfoPlist.strings $
+    remoting_host_uninstaller.app/Contents/Resources/sw.lproj/InfoPlist.strings $
+    remoting_host_uninstaller.app/Contents/Resources/ta.lproj/InfoPlist.strings $
+    remoting_host_uninstaller.app/Contents/Resources/te.lproj/InfoPlist.strings $
+    remoting_host_uninstaller.app/Contents/Resources/th.lproj/InfoPlist.strings $
+    remoting_host_uninstaller.app/Contents/Resources/tr.lproj/InfoPlist.strings $
+    remoting_host_uninstaller.app/Contents/Resources/uk.lproj/InfoPlist.strings $
+    remoting_host_uninstaller.app/Contents/Resources/vi.lproj/InfoPlist.strings $
+    remoting_host_uninstaller.app/Contents/Resources/zh_CN.lproj/InfoPlist.strings $
+    remoting_host_uninstaller.app/Contents/Resources/zh_TW.lproj/InfoPlist.strings $
+    remoting_host_uninstaller.app/Contents/Info.plist $
+    remoting_host_uninstaller.app/Contents/MacOS/remoting_host_uninstaller
+  postbuilds = (export $
+      BUILT_FRAMEWORKS_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      BUILT_PRODUCTS_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      CONFIGURATION=Release; export $
+      CONTENTS_FOLDER_PATH=remoting_host_uninstaller.app/Contents; export $
+      EXECUTABLE_NAME=remoting_host_uninstaller; export $
+      EXECUTABLE_PATH=remoting_host_uninstaller.app/Contents/MacOS/remoting_host_uninstaller; $
+      export FULL_PRODUCT_NAME=remoting_host_uninstaller.app; export $
+      INFOPLIST_PATH=remoting_host_uninstaller.app/Contents/Info.plist; $
+      export MACH_O_TYPE=mh_execute; export $
+      PRODUCT_NAME=remoting_host_uninstaller; export $
+      PRODUCT_TYPE=com.apple.product-type.application; export $
+      SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk; $
+      export SRCROOT=/Users/superadmin/tmp/src/out/Release/../../remoting; $
+      export SOURCE_ROOT="$${SRCROOT}"; export $
+      TARGET_BUILD_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      TEMP_DIR="$${TMPDIR}"; export $
+      UNLOCALIZED_RESOURCES_FOLDER_PATH=remoting_host_uninstaller.app/Contents/Resources; $
+      export WRAPPER_NAME=remoting_host_uninstaller.app; (cd ../../remoting $
+      && ../build/mac/change_mach_o_flags_from_xcode.sh); G=$$?; ((exit $
+      $$G) || rm -rf remoting_host_uninstaller.app) && exit $$G) && 

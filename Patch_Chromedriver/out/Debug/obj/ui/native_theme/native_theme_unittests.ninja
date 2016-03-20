@@ -1,0 +1,148 @@
+build obj/ui/native_theme/native_theme_unittests.actions_depends.stamp: $
+    stamp libbase.a libtest_support_base.a $
+    obj/skia/skia.actions_depends.stamp libgtest.a libnative_theme.a $
+    libbase_static.a liballocator_extension_thunks.a libmodp_b64.a $
+    libdynamic_annotations.a libevent.a libbase_i18n.a libicui18n.a $
+    libicuuc.a icudtl.dat icudtl.dat libgmock.a libxml2.a libchrome_zlib.a $
+    libzlib_x86_simd.a libskia_library.a libskia_opts.a $
+    libskia_opts_ssse3.a libskia_opts_sse41.a libskia_opts_sse42.a $
+    libskia_opts_avx.a libskia_opts_avx2.a libsfntly.a libskia_chrome.a $
+    libui_base.a libnet.a libprotobuf_lite.a liburl_lib.a $
+    libnet_quic_proto.a libbase_prefs.a libcrcrypto.a libboringssl.a $
+    libsdch.a obj/net/net_derived_sources.actions_rules_copies.stamp $
+    obj/net/net_resources.actions_rules_copies.stamp libevents.a libgfx.a $
+    libharfbuzz-ng.a libpng.a libgfx_geometry.a libjpeg_turbo.a $
+    libdom_keycode_converter.a libevents_base.a libgesture_detection.a $
+    libevents_platform.a $
+    obj/ui/resources/ui_resources.actions_rules_copies.stamp $
+    obj/ui/strings/ui_strings.actions_rules_copies.stamp libmozilla.a
+
+build obj/ui/native_theme/native_theme_unittests.compile_depends.stamp: $
+    stamp obj/ui/resources/ui_resources.actions_rules_copies.stamp $
+    icudtl.dat icudtl.dat icudtl.dat $
+    obj/ui/base/ui_base.compile_depends.stamp $
+    obj/net/net.compile_depends.stamp $
+    obj/net/net_quic_proto.actions_rules_copies.stamp $
+    obj/net/net_derived_sources.actions_rules_copies.stamp $
+    obj/net/net_resources.actions_rules_copies.stamp $
+    obj/third_party/libjpeg_turbo/libjpeg.actions_rules_copies.stamp $
+    obj/ui/resources/ui_resources.actions_rules_copies.stamp $
+    obj/ui/strings/ui_strings.actions_rules_copies.stamp
+
+defines = -DV8_DEPRECATION_WARNINGS -DCLD_VERSION=2 $
+    -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORE=0 -DCHROMIUM_BUILD $
+    -DCR_CLANG_REVISION=254049-1 -DUSE_LIBJPEG_TURBO=1 $
+    -DENABLE_ONE_CLICK_SIGNIN -DENABLE_PRE_SYNC_BACKUP -DENABLE_WEBRTC=1 $
+    -DENABLE_MEDIA_ROUTER=1 -DENABLE_PEPPER_CDMS $
+    -DENABLE_CONFIGURATION_POLICY -DENABLE_NOTIFICATIONS -DENABLE_HIDPI=1 $
+    -DDONT_EMBED_BUILD_METADATA -DFIELDTRIAL_TESTING_ENABLED $
+    -DENABLE_TASK_MANAGER=1 -DENABLE_EXTENSIONS=1 -DENABLE_PDF=1 $
+    -DENABLE_PLUGIN_INSTALLATION=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_THEMES=1 -DENABLE_AUTOFILL_DIALOG=1 $
+    -DENABLE_BACKGROUND=1 -DENABLE_PRINTING=1 -DENABLE_BASIC_PRINTING=1 $
+    -DENABLE_PRINT_PREVIEW=1 -DENABLE_SPELLCHECK=1 $
+    -DUSE_BROWSER_SPELLCHECKER=1 -DENABLE_CAPTIVE_PORTAL_DETECTION=1 $
+    -DENABLE_APP_LIST=1 -DENABLE_SETTINGS_APP=1 -DENABLE_SUPERVISED_USERS=1 $
+    -DENABLE_SERVICE_DISCOVERY=1 -DV8_USE_EXTERNAL_STARTUP_DATA $
+    -DFULL_SAFE_BROWSING -DSAFE_BROWSING_CSD -DSAFE_BROWSING_DB_LOCAL $
+    -DGTEST_HAS_POSIX_RE=0 -DGTEST_LANG_CXX11=0 -DSK_SUPPORT_GPU=1 $
+    -DSK_IGNORE_LINEONLY_AA_CONVEX_PATH_OPTS -DSK_IGNORE_GL_TEXTURE_TARGET $
+    -DUNIT_TEST -DGTEST_HAS_RTTI=0 -DUSE_LIBPCI=1 -DUSE_OPENSSL=1 $
+    -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS $
+    -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DWTF_USE_DYNAMIC_ANNOTATIONS=1
+includes = -Igen -I../.. -I../../skia/config $
+    -I../../third_party/skia/include/core $
+    -I../../third_party/skia/include/effects $
+    -I../../third_party/skia/include/pdf $
+    -I../../third_party/skia/include/gpu $
+    -I../../third_party/skia/include/lazy $
+    -I../../third_party/skia/include/pathops $
+    -I../../third_party/skia/include/pipe $
+    -I../../third_party/skia/include/ports $
+    -I../../third_party/skia/include/utils $
+    -I../../third_party/skia/include/utils/mac -I../../skia/ext $
+    -I../../testing/gtest/include
+cflags = -isysroot $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk $
+    -O0 -fvisibility=hidden -Werror -Wnewline-eof -mmacosx-version-min=10.6 $
+    -arch x86_64 -Wall -Wendif-labels -Wextra -Wno-unused-parameter $
+    -Wno-missing-field-initializers -Wno-selector-type-mismatch $
+    -Wpartial-availability -Wheader-hygiene -Wno-char-subscripts $
+    -Wno-unneeded-internal-declaration -Wno-covered-switch-default $
+    -Wstring-conversion -Wno-c++11-narrowing -Wno-deprecated-register $
+    -Wno-inconsistent-missing-override -Wno-shift-negative-value $
+    -Wno-bitfield-width
+cflags_c = -std=c99 -Xclang -load -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing -fstack-protector-all $
+    -Wno-undefined-bool-conversion -Wno-tautological-undefined-compare
+cflags_cc = -std=c++11 -stdlib=libc++ -fno-rtti -fno-exceptions $
+    -fvisibility-inlines-hidden -fno-threadsafe-statics -Xclang -load $
+    -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing -fstack-protector-all $
+    -Wno-undefined-bool-conversion -Wno-tautological-undefined-compare
+cflags_objc = $cflags_c -Wobjc-missing-property-synthesis
+cflags_objcc = $cflags_cc -Wobjc-missing-property-synthesis $
+    -fobjc-call-cxx-cdtors
+arflags = 
+
+build obj/base/test/native_theme_unittests.run_all_unittests.o: cxx $
+    ../../base/test/run_all_unittests.cc || $
+    obj/ui/native_theme/native_theme_unittests.compile_depends.stamp
+build $
+    obj/ui/native_theme/native_theme_unittests.native_theme_mac_unittest.o: $
+    cxx ../../ui/native_theme/native_theme_mac_unittest.cc || $
+    obj/ui/native_theme/native_theme_unittests.compile_depends.stamp
+
+ldflags = -Wl,-search_paths_first -Wl,-pie -mmacosx-version-min=10.6 $
+    -isysroot $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk $
+    -arch x86_64 -L. -stdlib=libc++
+libs = '-L../../third_party/libc++-static' -framework AppKit -framework $
+    ApplicationServices -framework Carbon -framework CoreFoundation $
+    -framework Foundation -framework IOKit -framework Security -framework $
+    Accelerate -framework AudioUnit -framework CoreVideo -framework $
+    SystemConfiguration $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/lib/libresolv.tbd $
+    -framework IOSurface
+build native_theme_unittests: link $
+    obj/base/test/native_theme_unittests.run_all_unittests.o $
+    obj/ui/native_theme/native_theme_unittests.native_theme_mac_unittest.o $
+    libbase.a libtest_support_base.a libgtest.a libnative_theme.a $
+    libbase_static.a liballocator_extension_thunks.a libmodp_b64.a $
+    libdynamic_annotations.a libevent.a libbase_i18n.a libicui18n.a $
+    libicuuc.a libgmock.a libxml2.a libchrome_zlib.a libzlib_x86_simd.a $
+    libskia_library.a libskia_opts.a libskia_opts_ssse3.a $
+    libskia_opts_sse41.a libskia_opts_sse42.a libskia_opts_avx.a $
+    libskia_opts_avx2.a libsfntly.a libskia_chrome.a libui_base.a libnet.a $
+    libprotobuf_lite.a liburl_lib.a libnet_quic_proto.a libbase_prefs.a $
+    libcrcrypto.a libboringssl.a libsdch.a libevents.a libgfx.a $
+    libharfbuzz-ng.a libpng.a libgfx_geometry.a libjpeg_turbo.a $
+    libdom_keycode_converter.a libevents_base.a libgesture_detection.a $
+    libevents_platform.a libmozilla.a | obj/skia/skia.actions_depends.stamp $
+    obj/ui/resources/ui_resources.actions_rules_copies.stamp $
+    obj/net/net_derived_sources.actions_rules_copies.stamp $
+    obj/ui/strings/ui_strings.actions_rules_copies.stamp icudtl.dat $
+    obj/net/net_resources.actions_rules_copies.stamp
+  ld = $ldxx
+  postbuilds = $ && (export $
+      BUILT_FRAMEWORKS_DIR=/Users/superadmin/tmp/src/out/Debug; export $
+      BUILT_PRODUCTS_DIR=/Users/superadmin/tmp/src/out/Debug; export $
+      CONFIGURATION=Debug; export EXECUTABLE_NAME=native_theme_unittests; $
+      export EXECUTABLE_PATH=native_theme_unittests; export $
+      FULL_PRODUCT_NAME=native_theme_unittests; export $
+      PRODUCT_NAME=native_theme_unittests; export $
+      PRODUCT_TYPE=com.apple.product-type.tool; export $
+      SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk; $
+      export $
+      SRCROOT=/Users/superadmin/tmp/src/out/Debug/../../ui/native_theme; $
+      export SOURCE_ROOT="$${SRCROOT}"; export $
+      TARGET_BUILD_DIR=/Users/superadmin/tmp/src/out/Debug; export $
+      TEMP_DIR="$${TMPDIR}"; (cd ../../ui/native_theme && $
+      ../../build/mac/change_mach_o_flags_from_xcode.sh); G=$$?; ((exit $
+      $$G) || rm -rf native_theme_unittests) && exit $$G)

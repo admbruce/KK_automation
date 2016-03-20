@@ -1,0 +1,4 @@
+build $
+    obj/third_party/angle/src/tests/angle_test_support.actions_depends.stamp: $
+    stamp libgmock.a libgtest.a
+

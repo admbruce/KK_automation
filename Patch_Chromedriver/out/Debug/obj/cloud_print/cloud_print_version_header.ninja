@@ -1,0 +1,26 @@
+rule $
+    cloud_print_version_header_target_version_header_652e7dc2d2583ce6341d1fee2594ea45
+  command = cd ../../cloud_print; export $
+      BUILT_FRAMEWORKS_DIR=/Users/superadmin/tmp/src/out/Debug; export $
+      BUILT_PRODUCTS_DIR=/Users/superadmin/tmp/src/out/Debug; export $
+      CONFIGURATION=Debug; export PRODUCT_NAME=cloud_print_version_header; $
+      export $
+      SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk; $
+      export SRCROOT=/Users/superadmin/tmp/src/out/Debug/../../cloud_print; $
+      export SOURCE_ROOT="$${SRCROOT}"; export $
+      TARGET_BUILD_DIR=/Users/superadmin/tmp/src/out/Debug; export $
+      TEMP_DIR="$${TMPDIR}";python ../build/util/version.py -f $
+      ../chrome/VERSION -f ../chrome/app/theme/chromium/BRANDING -f $
+      ../build/util/LASTCHANGE -f BRANDING $
+      ../chrome/common/chrome_version.h.in $
+      ../out/Debug/gen/cloud_print/version.h
+  description = ACTION Generating version header file: $
+      "gen/cloud_print/version.h"
+  restat = 1
+
+build gen/cloud_print/version.h: $
+    cloud_print_version_header_target_version_header_652e7dc2d2583ce6341d1fee2594ea45 $
+    ../../chrome/VERSION ../../chrome/app/theme/chromium/BRANDING $
+    ../../build/util/LASTCHANGE ../../chrome/common/chrome_version.h.in $
+    ../../cloud_print/BRANDING
+

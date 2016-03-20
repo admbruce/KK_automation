@@ -1,0 +1,441 @@
+build obj/ui/base/ui_base.actions_depends.stamp: stamp $
+    obj/skia/skia.actions_depends.stamp $
+    obj/ui/resources/ui_resources.actions_rules_copies.stamp $
+    obj/ui/strings/ui_strings.actions_rules_copies.stamp
+
+build obj/ui/base/ui_base.compile_depends.stamp: stamp $
+    obj/ui/resources/ui_resources.actions_rules_copies.stamp $
+    obj/ui/strings/ui_strings.actions_rules_copies.stamp
+
+defines = -DV8_DEPRECATION_WARNINGS -DCLD_VERSION=2 $
+    -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORE=0 -DCHROMIUM_BUILD $
+    -DCR_CLANG_REVISION=254049-1 -DUSE_LIBJPEG_TURBO=1 $
+    -DENABLE_ONE_CLICK_SIGNIN -DENABLE_PRE_SYNC_BACKUP -DENABLE_WEBRTC=1 $
+    -DENABLE_MEDIA_ROUTER=1 -DENABLE_PEPPER_CDMS $
+    -DENABLE_CONFIGURATION_POLICY -DENABLE_NOTIFICATIONS -DENABLE_HIDPI=1 $
+    -DDONT_EMBED_BUILD_METADATA -DFIELDTRIAL_TESTING_ENABLED $
+    -DENABLE_TASK_MANAGER=1 -DENABLE_EXTENSIONS=1 -DENABLE_PDF=1 $
+    -DENABLE_PLUGIN_INSTALLATION=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_THEMES=1 -DENABLE_AUTOFILL_DIALOG=1 $
+    -DENABLE_BACKGROUND=1 -DENABLE_PRINTING=1 -DENABLE_BASIC_PRINTING=1 $
+    -DENABLE_PRINT_PREVIEW=1 -DENABLE_SPELLCHECK=1 $
+    -DUSE_BROWSER_SPELLCHECKER=1 -DENABLE_CAPTIVE_PORTAL_DETECTION=1 $
+    -DENABLE_APP_LIST=1 -DENABLE_SETTINGS_APP=1 -DENABLE_SUPERVISED_USERS=1 $
+    -DENABLE_SERVICE_DISCOVERY=1 -DV8_USE_EXTERNAL_STARTUP_DATA $
+    -DFULL_SAFE_BROWSING -DSAFE_BROWSING_CSD -DSAFE_BROWSING_DB_LOCAL $
+    -DUI_BASE_IMPLEMENTATION -DSK_SUPPORT_GPU=1 $
+    -DSK_IGNORE_LINEONLY_AA_CONVEX_PATH_OPTS -DSK_IGNORE_GL_TEXTURE_TARGET $
+    -DU_USING_ICU_NAMESPACE=0 -DU_ENABLE_DYLOAD=0 -DU_STATIC_IMPLEMENTATION $
+    -DUSE_LIBPCI=1 -DUSE_OPENSSL=1 -D__STDC_CONSTANT_MACROS $
+    -D__STDC_FORMAT_MACROS -DDYNAMIC_ANNOTATIONS_ENABLED=1 $
+    -DWTF_USE_DYNAMIC_ANNOTATIONS=1
+includes = -Igen -I../.. -I../../skia/config $
+    -I../../third_party/skia/include/core $
+    -I../../third_party/skia/include/effects $
+    -I../../third_party/skia/include/pdf $
+    -I../../third_party/skia/include/gpu $
+    -I../../third_party/skia/include/lazy $
+    -I../../third_party/skia/include/pathops $
+    -I../../third_party/skia/include/pipe $
+    -I../../third_party/skia/include/ports $
+    -I../../third_party/skia/include/utils $
+    -I../../third_party/skia/include/utils/mac -I../../skia/ext $
+    -I../../third_party/icu/source/i18n $
+    -I../../third_party/icu/source/common -Igen/ui/resources
+cflags = -isysroot $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk $
+    -O0 -fvisibility=hidden -Werror -Wnewline-eof -mmacosx-version-min=10.6 $
+    -arch x86_64 -Wall -Wendif-labels -Wextra -Wno-unused-parameter $
+    -Wno-missing-field-initializers -Wno-selector-type-mismatch $
+    -Wpartial-availability -Wheader-hygiene -Wno-char-subscripts $
+    -Wno-unneeded-internal-declaration -Wno-covered-switch-default $
+    -Wstring-conversion -Wno-c++11-narrowing -Wno-deprecated-register $
+    -Wno-inconsistent-missing-override -Wno-shift-negative-value $
+    -Wno-bitfield-width
+cflags_c = -std=c99 -Xclang -load -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing -fstack-protector-all $
+    -Wno-undefined-bool-conversion -Wno-tautological-undefined-compare
+cflags_cc = -std=c++11 -stdlib=libc++ -fno-rtti -fno-exceptions $
+    -fvisibility-inlines-hidden -fno-threadsafe-statics -Xclang -load $
+    -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing -fstack-protector-all $
+    -Wno-undefined-bool-conversion -Wno-tautological-undefined-compare
+cflags_objc = $cflags_c -Wobjc-missing-property-synthesis
+cflags_objcc = $cflags_cc -Wobjc-missing-property-synthesis $
+    -fobjc-call-cxx-cdtors
+arflags = 
+
+build obj/ui/base/accelerators/ui_base.accelerator.o: cxx $
+    ../../ui/base/accelerators/accelerator.cc || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/accelerators/ui_base.accelerator_history.o: cxx $
+    ../../ui/base/accelerators/accelerator_history.cc || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/accelerators/ui_base.accelerator_manager.o: cxx $
+    ../../ui/base/accelerators/accelerator_manager.cc || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/accelerators/ui_base.platform_accelerator_cocoa.o: objcxx $
+    ../../ui/base/accelerators/platform_accelerator_cocoa.mm || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/ui_base.base_window.o: cxx ../../ui/base/base_window.cc $
+    || obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/clipboard/ui_base.clipboard.o: cxx $
+    ../../ui/base/clipboard/clipboard.cc || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/clipboard/ui_base.clipboard_constants.o: cxx $
+    ../../ui/base/clipboard/clipboard_constants.cc || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/clipboard/ui_base.clipboard_mac.o: objcxx $
+    ../../ui/base/clipboard/clipboard_mac.mm || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/clipboard/ui_base.custom_data_helper.o: cxx $
+    ../../ui/base/clipboard/custom_data_helper.cc || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/clipboard/ui_base.custom_data_helper_mac.o: objcxx $
+    ../../ui/base/clipboard/custom_data_helper_mac.mm || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/clipboard/ui_base.scoped_clipboard_writer.o: cxx $
+    ../../ui/base/clipboard/scoped_clipboard_writer.cc || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/cocoa/ui_base.appkit_utils.o: objcxx $
+    ../../ui/base/cocoa/appkit_utils.mm || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/cocoa/ui_base.base_view.o: objcxx $
+    ../../ui/base/cocoa/base_view.mm || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/cocoa/ui_base.cocoa_base_utils.o: objcxx $
+    ../../ui/base/cocoa/cocoa_base_utils.mm || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/cocoa/ui_base.command_dispatcher.o: objcxx $
+    ../../ui/base/cocoa/command_dispatcher.mm || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build $
+    obj/ui/base/cocoa/constrained_window/ui_base.constrained_window_animation.o: $
+    objcxx $
+    ../../ui/base/cocoa/constrained_window/constrained_window_animation.mm $
+    || obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/cocoa/controls/ui_base.blue_label_button.o: objcxx $
+    ../../ui/base/cocoa/controls/blue_label_button.mm || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/cocoa/controls/ui_base.hover_image_menu_button.o: objcxx $
+    ../../ui/base/cocoa/controls/hover_image_menu_button.mm || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/cocoa/controls/ui_base.hover_image_menu_button_cell.o: $
+    objcxx ../../ui/base/cocoa/controls/hover_image_menu_button_cell.mm || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/cocoa/controls/ui_base.hyperlink_button_cell.o: objcxx $
+    ../../ui/base/cocoa/controls/hyperlink_button_cell.mm || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/cocoa/controls/ui_base.hyperlink_text_view.o: objcxx $
+    ../../ui/base/cocoa/controls/hyperlink_text_view.mm || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/cocoa/ui_base.find_pasteboard.o: objcxx $
+    ../../ui/base/cocoa/find_pasteboard.mm || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/cocoa/ui_base.flipped_view.o: objcxx $
+    ../../ui/base/cocoa/flipped_view.mm || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/cocoa/ui_base.focus_tracker.o: objcxx $
+    ../../ui/base/cocoa/focus_tracker.mm || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/cocoa/ui_base.focus_window_set.o: objcxx $
+    ../../ui/base/cocoa/focus_window_set.mm || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/cocoa/ui_base.fullscreen_window_manager.o: objcxx $
+    ../../ui/base/cocoa/fullscreen_window_manager.mm || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/cocoa/ui_base.hover_button.o: objcxx $
+    ../../ui/base/cocoa/hover_button.mm || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/cocoa/ui_base.hover_image_button.o: objcxx $
+    ../../ui/base/cocoa/hover_image_button.mm || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/cocoa/ui_base.menu_controller.o: objcxx $
+    ../../ui/base/cocoa/menu_controller.mm || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/cocoa/ui_base.nib_loading.o: objcxx $
+    ../../ui/base/cocoa/nib_loading.mm || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/cocoa/ui_base.nscolor_additions.o: objcxx $
+    ../../ui/base/cocoa/nscolor_additions.mm || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/cocoa/ui_base.nsgraphics_context_additions.o: objcxx $
+    ../../ui/base/cocoa/nsgraphics_context_additions.mm || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/cocoa/ui_base.nsview_additions.o: objcxx $
+    ../../ui/base/cocoa/nsview_additions.mm || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/cocoa/ui_base.remote_layer_api.o: objcxx $
+    ../../ui/base/cocoa/remote_layer_api.mm || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/cocoa/ui_base.scoped_cg_context_smooth_fonts.o: objcxx $
+    ../../ui/base/cocoa/scoped_cg_context_smooth_fonts.mm || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/cocoa/ui_base.three_part_image.o: objcxx $
+    ../../ui/base/cocoa/three_part_image.mm || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/cocoa/ui_base.tool_tip_base_view.o: objcxx $
+    ../../ui/base/cocoa/tool_tip_base_view.mm || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/cocoa/ui_base.tracking_area.o: objcxx $
+    ../../ui/base/cocoa/tracking_area.mm || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/cocoa/ui_base.underlay_opengl_hosting_window.o: objcxx $
+    ../../ui/base/cocoa/underlay_opengl_hosting_window.mm || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/cocoa/ui_base.view_description.o: objcxx $
+    ../../ui/base/cocoa/view_description.mm || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/cocoa/ui_base.window_size_constants.o: objcxx $
+    ../../ui/base/cocoa/window_size_constants.mm || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/cursor/ui_base.cursor_util.o: cxx $
+    ../../ui/base/cursor/cursor_util.cc || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/ui_base.default_theme_provider.o: cxx $
+    ../../ui/base/default_theme_provider.cc || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/ui_base.default_theme_provider_mac.o: objcxx $
+    ../../ui/base/default_theme_provider_mac.mm || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/ui_base.device_form_factor_desktop.o: cxx $
+    ../../ui/base/device_form_factor_desktop.cc || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/dragdrop/ui_base.cocoa_dnd_util.o: objcxx $
+    ../../ui/base/dragdrop/cocoa_dnd_util.mm || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/dragdrop/ui_base.drag_utils_mac.o: objcxx $
+    ../../ui/base/dragdrop/drag_utils_mac.mm || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/dragdrop/ui_base.drop_target_event.o: cxx $
+    ../../ui/base/dragdrop/drop_target_event.cc || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/dragdrop/ui_base.file_info.o: cxx $
+    ../../ui/base/dragdrop/file_info.cc || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/dragdrop/ui_base.os_exchange_data.o: cxx $
+    ../../ui/base/dragdrop/os_exchange_data.cc || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/dragdrop/ui_base.os_exchange_data_provider_mac.o: objcxx $
+    ../../ui/base/dragdrop/os_exchange_data_provider_mac.mm || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/idle/ui_base.idle.o: cxx ../../ui/base/idle/idle.cc || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/idle/ui_base.idle_mac.o: objcxx $
+    ../../ui/base/idle/idle_mac.mm || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/l10n/ui_base.formatter.o: cxx $
+    ../../ui/base/l10n/formatter.cc || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/l10n/ui_base.l10n_font_util.o: cxx $
+    ../../ui/base/l10n/l10n_font_util.cc || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/l10n/ui_base.l10n_util.o: cxx $
+    ../../ui/base/l10n/l10n_util.cc || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/l10n/ui_base.l10n_util_mac.o: objcxx $
+    ../../ui/base/l10n/l10n_util_mac.mm || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/l10n/ui_base.l10n_util_posix.o: cxx $
+    ../../ui/base/l10n/l10n_util_posix.cc || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/l10n/ui_base.time_format.o: cxx $
+    ../../ui/base/l10n/time_format.cc || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/ui_base.layout.o: cxx ../../ui/base/layout.cc || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/ui_base.layout_mac.o: objcxx ../../ui/base/layout_mac.mm $
+    || obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/models/ui_base.button_menu_item_model.o: cxx $
+    ../../ui/base/models/button_menu_item_model.cc || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/models/ui_base.combobox_model.o: cxx $
+    ../../ui/base/models/combobox_model.cc || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/models/ui_base.dialog_model.o: cxx $
+    ../../ui/base/models/dialog_model.cc || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/models/ui_base.list_selection_model.o: cxx $
+    ../../ui/base/models/list_selection_model.cc || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/models/ui_base.menu_model.o: cxx $
+    ../../ui/base/models/menu_model.cc || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/models/ui_base.simple_combobox_model.o: cxx $
+    ../../ui/base/models/simple_combobox_model.cc || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/models/ui_base.simple_menu_model.o: cxx $
+    ../../ui/base/models/simple_menu_model.cc || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/models/ui_base.table_model.o: cxx $
+    ../../ui/base/models/table_model.cc || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/models/ui_base.tree_model.o: cxx $
+    ../../ui/base/models/tree_model.cc || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/ui_base.nine_image_painter_factory.o: cxx $
+    ../../ui/base/nine_image_painter_factory.cc || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/ui_base.page_transition_types.o: cxx $
+    ../../ui/base/page_transition_types.cc || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/resource/ui_base.data_pack.o: cxx $
+    ../../ui/base/resource/data_pack.cc || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build $
+    obj/ui/base/resource/material_design/ui_base.material_design_controller.o: $
+    cxx $
+    ../../ui/base/resource/material_design/material_design_controller.cc || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/resource/ui_base.resource_bundle.o: cxx $
+    ../../ui/base/resource/resource_bundle.cc || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/resource/ui_base.resource_bundle_mac.o: objcxx $
+    ../../ui/base/resource/resource_bundle_mac.mm || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/ui_base.template_expressions.o: cxx $
+    ../../ui/base/template_expressions.cc || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/text/ui_base.bytes_formatting.o: cxx $
+    ../../ui/base/text/bytes_formatting.cc || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/ui_base.theme_provider.o: cxx $
+    ../../ui/base/theme_provider.cc || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/touch/ui_base.selection_bound.o: cxx $
+    ../../ui/base/touch/selection_bound.cc || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/touch/ui_base.touch_device.o: cxx $
+    ../../ui/base/touch/touch_device.cc || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/touch/ui_base.touch_editing_controller.o: cxx $
+    ../../ui/base/touch/touch_editing_controller.cc || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/touch/ui_base.touch_enabled.o: cxx $
+    ../../ui/base/touch/touch_enabled.cc || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/ui_base.ui_base_exports.o: cxx $
+    ../../ui/base/ui_base_exports.cc || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/ui_base.ui_base_paths.o: cxx $
+    ../../ui/base/ui_base_paths.cc || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/ui_base.ui_base_switches.o: cxx $
+    ../../ui/base/ui_base_switches.cc || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/ui_base.ui_base_switches_util.o: cxx $
+    ../../ui/base/ui_base_switches_util.cc || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/ui_base.ui_base_types.o: cxx $
+    ../../ui/base/ui_base_types.cc || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/user_activity/ui_base.user_activity_detector.o: cxx $
+    ../../ui/base/user_activity/user_activity_detector.cc || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/webui/ui_base.jstemplate_builder.o: cxx $
+    ../../ui/base/webui/jstemplate_builder.cc || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/webui/ui_base.web_ui_util.o: cxx $
+    ../../ui/base/webui/web_ui_util.cc || $
+    obj/ui/base/ui_base.compile_depends.stamp
+build obj/ui/base/ui_base.window_open_disposition.o: cxx $
+    ../../ui/base/window_open_disposition.cc || $
+    obj/ui/base/ui_base.compile_depends.stamp
+
+build libui_base.a: alink obj/ui/base/accelerators/ui_base.accelerator.o $
+    obj/ui/base/accelerators/ui_base.accelerator_history.o $
+    obj/ui/base/accelerators/ui_base.accelerator_manager.o $
+    obj/ui/base/accelerators/ui_base.platform_accelerator_cocoa.o $
+    obj/ui/base/ui_base.base_window.o $
+    obj/ui/base/clipboard/ui_base.clipboard.o $
+    obj/ui/base/clipboard/ui_base.clipboard_constants.o $
+    obj/ui/base/clipboard/ui_base.clipboard_mac.o $
+    obj/ui/base/clipboard/ui_base.custom_data_helper.o $
+    obj/ui/base/clipboard/ui_base.custom_data_helper_mac.o $
+    obj/ui/base/clipboard/ui_base.scoped_clipboard_writer.o $
+    obj/ui/base/cocoa/ui_base.appkit_utils.o $
+    obj/ui/base/cocoa/ui_base.base_view.o $
+    obj/ui/base/cocoa/ui_base.cocoa_base_utils.o $
+    obj/ui/base/cocoa/ui_base.command_dispatcher.o $
+    obj/ui/base/cocoa/constrained_window/ui_base.constrained_window_animation.o $
+    obj/ui/base/cocoa/controls/ui_base.blue_label_button.o $
+    obj/ui/base/cocoa/controls/ui_base.hover_image_menu_button.o $
+    obj/ui/base/cocoa/controls/ui_base.hover_image_menu_button_cell.o $
+    obj/ui/base/cocoa/controls/ui_base.hyperlink_button_cell.o $
+    obj/ui/base/cocoa/controls/ui_base.hyperlink_text_view.o $
+    obj/ui/base/cocoa/ui_base.find_pasteboard.o $
+    obj/ui/base/cocoa/ui_base.flipped_view.o $
+    obj/ui/base/cocoa/ui_base.focus_tracker.o $
+    obj/ui/base/cocoa/ui_base.focus_window_set.o $
+    obj/ui/base/cocoa/ui_base.fullscreen_window_manager.o $
+    obj/ui/base/cocoa/ui_base.hover_button.o $
+    obj/ui/base/cocoa/ui_base.hover_image_button.o $
+    obj/ui/base/cocoa/ui_base.menu_controller.o $
+    obj/ui/base/cocoa/ui_base.nib_loading.o $
+    obj/ui/base/cocoa/ui_base.nscolor_additions.o $
+    obj/ui/base/cocoa/ui_base.nsgraphics_context_additions.o $
+    obj/ui/base/cocoa/ui_base.nsview_additions.o $
+    obj/ui/base/cocoa/ui_base.remote_layer_api.o $
+    obj/ui/base/cocoa/ui_base.scoped_cg_context_smooth_fonts.o $
+    obj/ui/base/cocoa/ui_base.three_part_image.o $
+    obj/ui/base/cocoa/ui_base.tool_tip_base_view.o $
+    obj/ui/base/cocoa/ui_base.tracking_area.o $
+    obj/ui/base/cocoa/ui_base.underlay_opengl_hosting_window.o $
+    obj/ui/base/cocoa/ui_base.view_description.o $
+    obj/ui/base/cocoa/ui_base.window_size_constants.o $
+    obj/ui/base/cursor/ui_base.cursor_util.o $
+    obj/ui/base/ui_base.default_theme_provider.o $
+    obj/ui/base/ui_base.default_theme_provider_mac.o $
+    obj/ui/base/ui_base.device_form_factor_desktop.o $
+    obj/ui/base/dragdrop/ui_base.cocoa_dnd_util.o $
+    obj/ui/base/dragdrop/ui_base.drag_utils_mac.o $
+    obj/ui/base/dragdrop/ui_base.drop_target_event.o $
+    obj/ui/base/dragdrop/ui_base.file_info.o $
+    obj/ui/base/dragdrop/ui_base.os_exchange_data.o $
+    obj/ui/base/dragdrop/ui_base.os_exchange_data_provider_mac.o $
+    obj/ui/base/idle/ui_base.idle.o obj/ui/base/idle/ui_base.idle_mac.o $
+    obj/ui/base/l10n/ui_base.formatter.o $
+    obj/ui/base/l10n/ui_base.l10n_font_util.o $
+    obj/ui/base/l10n/ui_base.l10n_util.o $
+    obj/ui/base/l10n/ui_base.l10n_util_mac.o $
+    obj/ui/base/l10n/ui_base.l10n_util_posix.o $
+    obj/ui/base/l10n/ui_base.time_format.o obj/ui/base/ui_base.layout.o $
+    obj/ui/base/ui_base.layout_mac.o $
+    obj/ui/base/models/ui_base.button_menu_item_model.o $
+    obj/ui/base/models/ui_base.combobox_model.o $
+    obj/ui/base/models/ui_base.dialog_model.o $
+    obj/ui/base/models/ui_base.list_selection_model.o $
+    obj/ui/base/models/ui_base.menu_model.o $
+    obj/ui/base/models/ui_base.simple_combobox_model.o $
+    obj/ui/base/models/ui_base.simple_menu_model.o $
+    obj/ui/base/models/ui_base.table_model.o $
+    obj/ui/base/models/ui_base.tree_model.o $
+    obj/ui/base/ui_base.nine_image_painter_factory.o $
+    obj/ui/base/ui_base.page_transition_types.o $
+    obj/ui/base/resource/ui_base.data_pack.o $
+    obj/ui/base/resource/material_design/ui_base.material_design_controller.o $
+    obj/ui/base/resource/ui_base.resource_bundle.o $
+    obj/ui/base/resource/ui_base.resource_bundle_mac.o $
+    obj/ui/base/ui_base.template_expressions.o $
+    obj/ui/base/text/ui_base.bytes_formatting.o $
+    obj/ui/base/ui_base.theme_provider.o $
+    obj/ui/base/touch/ui_base.selection_bound.o $
+    obj/ui/base/touch/ui_base.touch_device.o $
+    obj/ui/base/touch/ui_base.touch_editing_controller.o $
+    obj/ui/base/touch/ui_base.touch_enabled.o $
+    obj/ui/base/ui_base.ui_base_exports.o $
+    obj/ui/base/ui_base.ui_base_paths.o $
+    obj/ui/base/ui_base.ui_base_switches.o $
+    obj/ui/base/ui_base.ui_base_switches_util.o $
+    obj/ui/base/ui_base.ui_base_types.o $
+    obj/ui/base/user_activity/ui_base.user_activity_detector.o $
+    obj/ui/base/webui/ui_base.jstemplate_builder.o $
+    obj/ui/base/webui/ui_base.web_ui_util.o $
+    obj/ui/base/ui_base.window_open_disposition.o || $
+    obj/ui/base/ui_base.actions_depends.stamp

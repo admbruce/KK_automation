@@ -1,0 +1,223 @@
+build obj/content/test_netscape_plugin.actions_depends.stamp: stamp $
+    libbase.a libbase_static.a liballocator_extension_thunks.a $
+    libmodp_b64.a libdynamic_annotations.a libevent.a
+
+build test_netscape_plugin.plugin/Contents/Info.plist: copy_infoplist $
+    ../../content/shell/tools/plugin/mac/Info.plist
+  env = export ALWAYS_SEARCH_USER_PATHS=NO; export ARCHS=x86_64; export $
+      BUILT_FRAMEWORKS_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      BUILT_PRODUCTS_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      SRCROOT=/Users/superadmin/tmp/src/out/Release/../../content; export $
+      SOURCE_ROOT="$${SRCROOT}"; export $
+      CC="$${SOURCE_ROOT}/../third_party/llvm-build/Release+Asserts/bin/clang"; $
+      export CLANG_CXX_LANGUAGE_STANDARD=c++11; export $
+      CLANG_CXX_LIBRARY=libc++; export CLANG_LINK_OBJC_RUNTIME=NO; export $
+      CLANG_WARN_OBJC_MISSING_PROPERTY_SYNTHESIS=YES; export $
+      CONFIGURATION=Release; export $
+      CONTENTS_FOLDER_PATH=test_netscape_plugin.plugin/Contents; export $
+      COPY_PHASE_STRIP=NO; export EXECUTABLE_NAME=test_netscape_plugin; $
+      export $
+      EXECUTABLE_PATH=test_netscape_plugin.plugin/Contents/MacOS/test_netscape_plugin; $
+      export FULL_PRODUCT_NAME=test_netscape_plugin.plugin; export $
+      GCC_CW_ASM_SYNTAX=NO; export GCC_C_LANGUAGE_STANDARD=c99; export $
+      GCC_DYNAMIC_NO_PIC=NO; export GCC_ENABLE_CPP_EXCEPTIONS=NO; export $
+      GCC_ENABLE_CPP_RTTI=NO; export GCC_ENABLE_PASCAL_STRINGS=NO; export $
+      GCC_GENERATE_DEBUGGING_SYMBOLS=NO; export $
+      GCC_INLINES_ARE_PRIVATE_EXTERN=YES; export $
+      GCC_OBJC_CALL_CXX_CDTORS=YES; export $
+      GCC_PRECOMPILE_PREFIX_HEADER=YES; export $
+      GCC_SYMBOLS_PRIVATE_EXTERN=NO; export GCC_THREADSAFE_STATICS=NO; $
+      export GCC_TREAT_WARNINGS_AS_ERRORS=YES; export $
+      GCC_VERSION=com.apple.compilers.llvm.clang.1_0; export $
+      GCC_WARN_ABOUT_MISSING_NEWLINE=YES; export $
+      INFOPLIST_FILE=shell/tools/plugin/mac/Info.plist; export $
+      INFOPLIST_PATH=test_netscape_plugin.plugin/Contents/Info.plist; $
+      export $
+      LDPLUSPLUS="$${SOURCE_ROOT}/../third_party/llvm-build/Release+Asserts/bin/clang++"; $
+      export MACH_O_TYPE=mh_bundle; export MACOSX_DEPLOYMENT_TARGET=10.6; $
+      export OTHER_LDFLAGS="-Wl,-search_paths_first -Wl,-ObjC"; export $
+      PRODUCT_NAME=test_netscape_plugin; export $
+      PRODUCT_TYPE=com.apple.product-type.bundle; export $
+      SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk; $
+      export $
+      SHARED_PRECOMPS_DIR="$${CONFIGURATION_BUILD_DIR}/SharedPrecompiledHeaders"; $
+      export SYMROOT=../xcodebuild; export $
+      TARGET_BUILD_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      TEMP_DIR="$${TMPDIR}"; export $
+      UNLOCALIZED_RESOURCES_FOLDER_PATH=test_netscape_plugin.plugin/Contents/Resources; $
+      export USE_HEADERMAP=NO; export WARNING_CFLAGS="-Wall -Wendif-labels $
+      -Wextra -Wno-unused-parameter -Wno-missing-field-initializers $
+      -Wno-selector-type-mismatch -Wpartial-availability -Wheader-hygiene $
+      -Wno-char-subscripts -Wno-unneeded-internal-declaration $
+      -Wno-covered-switch-default -Wstring-conversion -Wno-c++11-narrowing $
+      -Wno-deprecated-register -Wno-inconsistent-missing-override $
+      -Wno-shift-negative-value -Wno-bitfield-width"; export $
+      WRAPPER_NAME=test_netscape_plugin.plugin;
+  keys = '{"DTXcode": "0701", "BuildMachineOSBuild": "14F27", "DTSDKName": $
+      "macosx10.10", "DTXcodeBuild": "7A1001", "DTSDKBuild": "14D125"}'
+  binary = False
+defines = -DV8_DEPRECATION_WARNINGS -DCLD_VERSION=2 $
+    -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORE=0 -DCHROMIUM_BUILD $
+    -DCR_CLANG_REVISION=254049-1 -DUSE_LIBJPEG_TURBO=1 $
+    -DENABLE_ONE_CLICK_SIGNIN -DENABLE_PRE_SYNC_BACKUP -DENABLE_WEBRTC=1 $
+    -DENABLE_MEDIA_ROUTER=1 -DENABLE_PEPPER_CDMS $
+    -DENABLE_CONFIGURATION_POLICY -DENABLE_NOTIFICATIONS -DENABLE_HIDPI=1 $
+    -DDONT_EMBED_BUILD_METADATA -DFIELDTRIAL_TESTING_ENABLED $
+    -DENABLE_TASK_MANAGER=1 -DENABLE_EXTENSIONS=1 -DENABLE_PDF=1 $
+    -DENABLE_PLUGIN_INSTALLATION=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_THEMES=1 -DENABLE_AUTOFILL_DIALOG=1 $
+    -DENABLE_BACKGROUND=1 -DENABLE_PRINTING=1 -DENABLE_BASIC_PRINTING=1 $
+    -DENABLE_PRINT_PREVIEW=1 -DENABLE_SPELLCHECK=1 $
+    -DUSE_BROWSER_SPELLCHECKER=1 -DENABLE_CAPTIVE_PORTAL_DETECTION=1 $
+    -DENABLE_APP_LIST=1 -DENABLE_SETTINGS_APP=1 -DENABLE_SUPERVISED_USERS=1 $
+    -DENABLE_SERVICE_DISCOVERY=1 -DV8_USE_EXTERNAL_STARTUP_DATA $
+    -DFULL_SAFE_BROWSING -DSAFE_BROWSING_CSD -DSAFE_BROWSING_DB_LOCAL $
+    -DUSE_LIBPCI=1 -DUSE_OPENSSL=1 -D__STDC_CONSTANT_MACROS $
+    -D__STDC_FORMAT_MACROS -DNDEBUG -DNVALGRIND $
+    -DDYNAMIC_ANNOTATIONS_ENABLED=0 -D_FORTIFY_SOURCE=2
+includes = -Igen -I../.. -I../../content/shell/tools/plugin $
+    -I../../third_party/npapi -I../../third_party/npapi/bindings
+cflags = -isysroot $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk $
+    -O2 -Werror -Wnewline-eof -mmacosx-version-min=10.6 -arch x86_64 -Wall $
+    -Wendif-labels -Wextra -Wno-unused-parameter $
+    -Wno-missing-field-initializers -Wno-selector-type-mismatch $
+    -Wpartial-availability -Wheader-hygiene -Wno-char-subscripts $
+    -Wno-unneeded-internal-declaration -Wno-covered-switch-default $
+    -Wstring-conversion -Wno-c++11-narrowing -Wno-deprecated-register $
+    -Wno-inconsistent-missing-override -Wno-shift-negative-value $
+    -Wno-bitfield-width
+cflags_c = -std=c99 -Xclang -load -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing
+cflags_cc = -std=c++11 -stdlib=libc++ -fno-rtti -fno-exceptions $
+    -fvisibility-inlines-hidden -fno-threadsafe-statics -Xclang -load $
+    -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing
+cflags_objc = $cflags_c -Wobjc-missing-property-synthesis
+cflags_objcc = $cflags_cc -Wobjc-missing-property-synthesis $
+    -fobjc-call-cxx-cdtors
+arflags = 
+
+build obj/content/shell/tools/plugin/test_netscape_plugin.PluginObject.o: $
+    cxx ../../content/shell/tools/plugin/PluginObject.cpp
+build $
+    obj/content/shell/tools/plugin/test_netscape_plugin.PluginObjectMac.o: $
+    objcxx ../../content/shell/tools/plugin/PluginObjectMac.mm
+build obj/content/shell/tools/plugin/test_netscape_plugin.PluginTest.o: cxx $
+    ../../content/shell/tools/plugin/PluginTest.cpp
+build obj/content/shell/tools/plugin/test_netscape_plugin.TestObject.o: cxx $
+    ../../content/shell/tools/plugin/TestObject.cpp
+build $
+    obj/content/shell/tools/plugin/Tests/test_netscape_plugin.DocumentOpenInDestroyStream.o: $
+    cxx ../../content/shell/tools/plugin/Tests/DocumentOpenInDestroyStream.cpp
+build $
+    obj/content/shell/tools/plugin/Tests/test_netscape_plugin.EvaluateJSAfterRemovingPluginElement.o: $
+    cxx $
+    ../../content/shell/tools/plugin/Tests/EvaluateJSAfterRemovingPluginElement.cpp
+build $
+    obj/content/shell/tools/plugin/Tests/test_netscape_plugin.FormValue.o: $
+    cxx ../../content/shell/tools/plugin/Tests/FormValue.cpp
+build $
+    obj/content/shell/tools/plugin/Tests/test_netscape_plugin.GetURLNotifyWithURLThatFailsToLoad.o: $
+    cxx $
+    ../../content/shell/tools/plugin/Tests/GetURLNotifyWithURLThatFailsToLoad.cpp
+build $
+    obj/content/shell/tools/plugin/Tests/test_netscape_plugin.GetURLWithJavaScriptURL.o: $
+    cxx ../../content/shell/tools/plugin/Tests/GetURLWithJavaScriptURL.cpp
+build $
+    obj/content/shell/tools/plugin/Tests/test_netscape_plugin.GetURLWithJavaScriptURLDestroyingPlugin.o: $
+    cxx $
+    ../../content/shell/tools/plugin/Tests/GetURLWithJavaScriptURLDestroyingPlugin.cpp
+build $
+    obj/content/shell/tools/plugin/Tests/test_netscape_plugin.GetUserAgentWithNullNPPFromNPPNew.o: $
+    cxx $
+    ../../content/shell/tools/plugin/Tests/GetUserAgentWithNullNPPFromNPPNew.cpp
+build $
+    obj/content/shell/tools/plugin/Tests/test_netscape_plugin.LeakWindowScriptableObject.o: $
+    cxx ../../content/shell/tools/plugin/Tests/LeakWindowScriptableObject.cpp
+build $
+    obj/content/shell/tools/plugin/Tests/test_netscape_plugin.LogNPPSetWindow.o: $
+    cxx ../../content/shell/tools/plugin/Tests/LogNPPSetWindow.cpp
+build $
+    obj/content/shell/tools/plugin/Tests/test_netscape_plugin.NPDeallocateCalledBeforeNPShutdown.o: $
+    cxx $
+    ../../content/shell/tools/plugin/Tests/NPDeallocateCalledBeforeNPShutdown.cpp
+build $
+    obj/content/shell/tools/plugin/Tests/test_netscape_plugin.NPPNewFails.o: $
+    cxx ../../content/shell/tools/plugin/Tests/NPPNewFails.cpp
+build $
+    obj/content/shell/tools/plugin/Tests/test_netscape_plugin.NPRuntimeCallsWithNullNPP.o: $
+    cxx ../../content/shell/tools/plugin/Tests/NPRuntimeCallsWithNullNPP.cpp
+build $
+    obj/content/shell/tools/plugin/Tests/test_netscape_plugin.NPRuntimeObjectFromDestroyedPlugin.o: $
+    cxx $
+    ../../content/shell/tools/plugin/Tests/NPRuntimeObjectFromDestroyedPlugin.cpp
+build $
+    obj/content/shell/tools/plugin/Tests/test_netscape_plugin.NPRuntimeRemoveProperty.o: $
+    cxx ../../content/shell/tools/plugin/Tests/NPRuntimeRemoveProperty.cpp
+build $
+    obj/content/shell/tools/plugin/Tests/test_netscape_plugin.NullNPPGetValuePointer.o: $
+    cxx ../../content/shell/tools/plugin/Tests/NullNPPGetValuePointer.cpp
+build $
+    obj/content/shell/tools/plugin/Tests/test_netscape_plugin.PassDifferentNPPStruct.o: $
+    cxx ../../content/shell/tools/plugin/Tests/PassDifferentNPPStruct.cpp
+build $
+    obj/content/shell/tools/plugin/Tests/test_netscape_plugin.PluginScriptableNPObjectInvokeDefault.o: $
+    cxx $
+    ../../content/shell/tools/plugin/Tests/PluginScriptableNPObjectInvokeDefault.cpp
+build $
+    obj/content/shell/tools/plugin/Tests/test_netscape_plugin.PluginScriptableObjectOverridesAllProperties.o: $
+    cxx $
+    ../../content/shell/tools/plugin/Tests/PluginScriptableObjectOverridesAllProperties.cpp
+build obj/content/shell/tools/plugin/test_netscape_plugin.main.o: cxx $
+    ../../content/shell/tools/plugin/main.cpp
+
+ldflags = -Wl,-search_paths_first -Wl,-ObjC -Wl,-dead_strip $
+    -mmacosx-version-min=10.6 -isysroot $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk $
+    -arch x86_64 -L. -stdlib=libc++
+libs = '-L../../third_party/libc++-static' -framework Carbon -framework $
+    Cocoa -framework QuartzCore -framework AppKit -framework $
+    ApplicationServices -framework CoreFoundation -framework Foundation $
+    -framework IOKit -framework Security
+build test_netscape_plugin.plugin/Contents/MacOS/test_netscape_plugin: $
+    solink_module_notoc $
+    obj/content/shell/tools/plugin/test_netscape_plugin.PluginObject.o $
+    obj/content/shell/tools/plugin/test_netscape_plugin.PluginObjectMac.o $
+    obj/content/shell/tools/plugin/test_netscape_plugin.PluginTest.o $
+    obj/content/shell/tools/plugin/test_netscape_plugin.TestObject.o $
+    obj/content/shell/tools/plugin/Tests/test_netscape_plugin.DocumentOpenInDestroyStream.o $
+    obj/content/shell/tools/plugin/Tests/test_netscape_plugin.EvaluateJSAfterRemovingPluginElement.o $
+    obj/content/shell/tools/plugin/Tests/test_netscape_plugin.FormValue.o $
+    obj/content/shell/tools/plugin/Tests/test_netscape_plugin.GetURLNotifyWithURLThatFailsToLoad.o $
+    obj/content/shell/tools/plugin/Tests/test_netscape_plugin.GetURLWithJavaScriptURL.o $
+    obj/content/shell/tools/plugin/Tests/test_netscape_plugin.GetURLWithJavaScriptURLDestroyingPlugin.o $
+    obj/content/shell/tools/plugin/Tests/test_netscape_plugin.GetUserAgentWithNullNPPFromNPPNew.o $
+    obj/content/shell/tools/plugin/Tests/test_netscape_plugin.LeakWindowScriptableObject.o $
+    obj/content/shell/tools/plugin/Tests/test_netscape_plugin.LogNPPSetWindow.o $
+    obj/content/shell/tools/plugin/Tests/test_netscape_plugin.NPDeallocateCalledBeforeNPShutdown.o $
+    obj/content/shell/tools/plugin/Tests/test_netscape_plugin.NPPNewFails.o $
+    obj/content/shell/tools/plugin/Tests/test_netscape_plugin.NPRuntimeCallsWithNullNPP.o $
+    obj/content/shell/tools/plugin/Tests/test_netscape_plugin.NPRuntimeObjectFromDestroyedPlugin.o $
+    obj/content/shell/tools/plugin/Tests/test_netscape_plugin.NPRuntimeRemoveProperty.o $
+    obj/content/shell/tools/plugin/Tests/test_netscape_plugin.NullNPPGetValuePointer.o $
+    obj/content/shell/tools/plugin/Tests/test_netscape_plugin.PassDifferentNPPStruct.o $
+    obj/content/shell/tools/plugin/Tests/test_netscape_plugin.PluginScriptableNPObjectInvokeDefault.o $
+    obj/content/shell/tools/plugin/Tests/test_netscape_plugin.PluginScriptableObjectOverridesAllProperties.o $
+    obj/content/shell/tools/plugin/test_netscape_plugin.main.o libbase.a $
+    libbase_static.a liballocator_extension_thunks.a libmodp_b64.a $
+    libdynamic_annotations.a libevent.a
+  ld = $ldxx
+  soname = test_netscape_plugin
+  lib = test_netscape_plugin.plugin/Contents/MacOS/test_netscape_plugin
+  link_file_list = test_netscape_plugin.plugin.rsp
+build test_netscape_plugin.plugin: package_framework $
+    test_netscape_plugin.plugin/Contents/Info.plist $
+    test_netscape_plugin.plugin/Contents/MacOS/test_netscape_plugin
+  version = A

@@ -1,0 +1,24 @@
+rule $
+    remoting_host_credits_target_Build_remoting_host_credits_0a98905ff3b862f15e39d6558ac0db7e
+  command = cd ../../remoting; export $
+      BUILT_FRAMEWORKS_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      BUILT_PRODUCTS_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      CONFIGURATION=Release; export PRODUCT_NAME=remoting_host_credits; $
+      export $
+      SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk; $
+      export SRCROOT=/Users/superadmin/tmp/src/out/Release/../../remoting; $
+      export SOURCE_ROOT="$${SRCROOT}"; export $
+      TARGET_BUILD_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      TEMP_DIR="$${TMPDIR}";python ../tools/licenses.py credits $
+      ../out/Release/gen/remoting/CREDITS.txt --file-template $
+      host/installer/credits.tmpl --entry-template $
+      host/installer/credits_entry.tmpl
+  description = ACTION remoting_host_credits: Build remoting host $
+      credits_0a98905ff3b862f15e39d6558ac0db7e
+  restat = 1
+
+build gen/remoting/CREDITS.txt: $
+    remoting_host_credits_target_Build_remoting_host_credits_0a98905ff3b862f15e39d6558ac0db7e $
+    ../../tools/licenses.py ../../remoting/host/installer/credits.tmpl $
+    ../../remoting/host/installer/credits_entry.tmpl
+

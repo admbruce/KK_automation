@@ -1,0 +1,23 @@
+rule $
+    chrome_common_features_target_buildflag_header_a30cc8b416dda2446ce74c8263cde891
+  command = cd ../../chrome; export $
+      BUILT_FRAMEWORKS_DIR=/Users/superadmin/tmp/src/out/Debug; export $
+      BUILT_PRODUCTS_DIR=/Users/superadmin/tmp/src/out/Debug; export $
+      CONFIGURATION=Debug; export PRODUCT_NAME=chrome_common_features; $
+      export $
+      SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk; $
+      export SRCROOT=/Users/superadmin/tmp/src/out/Debug/../../chrome; $
+      export SOURCE_ROOT="$${SRCROOT}"; export $
+      TARGET_BUILD_DIR=/Users/superadmin/tmp/src/out/Debug; export $
+      TEMP_DIR="$${TMPDIR}";python ../build/write_buildflag_header.py $
+      --output chrome/common/features.h --rulename chrome_common_features $
+      --gen-dir ../out/Debug/gen --definitions $
+      ../out/gypfiles/chrome/chrome_common_features_buildflag_header.rsp
+  description = ACTION Generating build header.
+  restat = 1
+
+build gen/chrome/common/features.h: $
+    chrome_common_features_target_buildflag_header_a30cc8b416dda2446ce74c8263cde891 $
+    ../../build/write_buildflag_header.py $
+    ../../out/gypfiles/chrome/chrome_common_features_buildflag_header.rsp
+

@@ -1,0 +1,264 @@
+rule $
+    shared_memory_support_nacl_target_build_irt_x86_64_nlib_26503c0e3d369334c2e877d5e66be3c5
+  command = cd ../../media; export $
+      BUILT_FRAMEWORKS_DIR=/Users/superadmin/tmp/src/out/Debug; export $
+      BUILT_PRODUCTS_DIR=/Users/superadmin/tmp/src/out/Debug; export $
+      CONFIGURATION=Debug; export PRODUCT_NAME=shared_memory_support_nacl; $
+      export $
+      SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk; $
+      export SRCROOT=/Users/superadmin/tmp/src/out/Debug/../../media; $
+      export SOURCE_ROOT="$${SRCROOT}"; export $
+      TARGET_BUILD_DIR=/Users/superadmin/tmp/src/out/Debug; export $
+      TEMP_DIR="$${TMPDIR}";python ../native_client/build/build_nexe.py $
+      --root .. --product-dir ../out/Debug/xyz --config-name Debug -t $
+      ../native_client/toolchain/ --arch x86-64 --build newlib_nlib_clang $
+      --name ../out/Debug/gen/tc_irt/lib64/libshared_memory_support_nacl.a $
+      --objdir $
+      ../out/Debug/obj/media/shared_memory_support_nacl.gen/irt-x86-64/shared_memory_support_nacl $
+      "--include-dirs=../out/Debug/gen/tc_newlib/include .. $
+      \"../out/Debug/gen\" .." "--compile_flags=-O2 -g -Wall $
+      -fdiagnostics-show-option -Werror  -Wno-unused-function $
+      -Wno-char-subscripts -Wno-c++11-extensions $
+      -Wno-unnamed-type-template-args -Wno-extra-semi $
+      -Wno-unused-private-field -Wno-char-subscripts -Wno-unused-function $
+      \"-std=gnu++11\"  -Os -fno-exceptions -ffunction-sections $
+      -fdata-sections -fasynchronous-unwind-tables -fomit-frame-pointer $
+      -integrated-as" --gomadir "" "--defines=\"__STDC_LIMIT_MACROS=1\" $
+      \"__STDC_FORMAT_MACROS=1\" \"_GNU_SOURCE=1\" $
+      \"_POSIX_C_SOURCE=199506\" \"_XOPEN_SOURCE=600\" $
+      \"DYNAMIC_ANNOTATIONS_ENABLED=1\" $
+      \"DYNAMIC_ANNOTATIONS_PREFIX=NACL_\" \"NACL_BUILD_ARCH=x86\" $
+      V8_DEPRECATION_WARNINGS \"CLD_VERSION=2\" $
+      \"__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORE=0\" $
+      CHROMIUM_BUILD \"CR_CLANG_REVISION=254049-1\" \"USE_LIBJPEG_TURBO=1\" $
+      ENABLE_ONE_CLICK_SIGNIN ENABLE_PRE_SYNC_BACKUP \"ENABLE_WEBRTC=1\" $
+      \"ENABLE_MEDIA_ROUTER=1\" ENABLE_PEPPER_CDMS $
+      ENABLE_CONFIGURATION_POLICY ENABLE_NOTIFICATIONS \"ENABLE_HIDPI=1\" $
+      DONT_EMBED_BUILD_METADATA FIELDTRIAL_TESTING_ENABLED $
+      \"ENABLE_TASK_MANAGER=1\" \"ENABLE_EXTENSIONS=1\" \"ENABLE_PDF=1\" $
+      \"ENABLE_PLUGIN_INSTALLATION=1\" \"ENABLE_PLUGINS=1\" $
+      \"ENABLE_SESSION_SERVICE=1\" \"ENABLE_THEMES=1\" $
+      \"ENABLE_AUTOFILL_DIALOG=1\" \"ENABLE_BACKGROUND=1\" $
+      \"ENABLE_PRINTING=1\" \"ENABLE_BASIC_PRINTING=1\" $
+      \"ENABLE_PRINT_PREVIEW=1\" \"ENABLE_SPELLCHECK=1\" $
+      \"USE_BROWSER_SPELLCHECKER=1\" \"ENABLE_CAPTIVE_PORTAL_DETECTION=1\" $
+      \"ENABLE_APP_LIST=1\" \"ENABLE_SETTINGS_APP=1\" $
+      \"ENABLE_SUPERVISED_USERS=1\" \"ENABLE_SERVICE_DISCOVERY=1\" $
+      V8_USE_EXTERNAL_STARTUP_DATA FULL_SAFE_BROWSING SAFE_BROWSING_CSD $
+      SAFE_BROWSING_DB_LOCAL MEDIA_IMPLEMENTATION \"USE_LIBPCI=1\" $
+      \"USE_OPENSSL=1\" \"USE_OPENSSL_CERTS=1\" __STDC_CONSTANT_MACROS $
+      __STDC_FORMAT_MACROS" "--link_flags=-B../out/Debug/gen/tc_irt/lib64   $
+      -Wl,--gc-sections -nodefaultlibs -lc++ -lm -lirt_browser $
+      -Wl,--start-group -lc -lnacl -lgcc -lgcc_eh -Wl,--end-group" $
+      "--source-list=../out/gypfiles/media/irt-x86-64.shared_memory_support_nacl.source_list.gypcmd"
+  description = ACTION shared_memory_support_nacl: build irt x86-64 $
+      nlib_26503c0e3d369334c2e877d5e66be3c5
+  restat = 1
+
+build gen/tc_irt/lib64/libshared_memory_support_nacl.a: $
+    shared_memory_support_nacl_target_build_irt_x86_64_nlib_26503c0e3d369334c2e877d5e66be3c5 $
+    ../../native_client/build/build_nexe.py $
+    ../../native_client/build/build_nexe_tools.py $
+    ../../base/atomic_ref_count.h ../../base/atomicops.h $
+    ../../base/atomicops_internals_atomicword_compat.h $
+    ../../base/atomicops_internals_mac.h $
+    ../../base/atomicops_internals_portable.h $
+    ../../base/atomicops_internals_x86_msvc.h ../../base/base_export.h $
+    ../../base/basictypes.h ../../base/compiler_specific.h $
+    ../../base/containers/hash_tables.h ../../base/debug/debugger.h $
+    ../../base/gtest_prod_util.h ../../base/logging.h ../../base/macros.h $
+    ../../base/memory/aligned_memory.h ../../base/memory/ref_counted.h $
+    ../../base/memory/scoped_ptr.h ../../base/move.h $
+    ../../base/numerics/safe_conversions.h $
+    ../../base/numerics/safe_conversions_impl.h $
+    ../../base/numerics/safe_math.h ../../base/numerics/safe_math_impl.h $
+    ../../base/strings/string16.h $
+    ../../base/strings/string_number_conversions.h $
+    ../../base/strings/string_piece.h ../../base/strings/string_split.h $
+    ../../base/strings/string_util.h ../../base/strings/string_util_posix.h $
+    ../../base/strings/string_util_win.h ../../base/strings/stringprintf.h $
+    ../../base/template_util.h $
+    ../../base/threading/thread_collision_warner.h ../../base/time/time.h $
+    ../../build/build_config.h $
+    ../../testing/gtest/include/gtest/gtest_prod.h $
+    ../../ui/gfx/geometry/point.h ../../ui/gfx/geometry/point3_f.h $
+    ../../ui/gfx/geometry/point_f.h ../../ui/gfx/geometry/vector2d.h $
+    ../../ui/gfx/geometry/vector2d_f.h ../../ui/gfx/geometry/vector3d_f.h $
+    ../../ui/gfx/gfx_export.h ../../media/audio/audio_parameters.cc $
+    ../../media/audio/audio_parameters.h ../../media/audio/point.cc $
+    ../../media/audio/point.h ../../media/base/audio_bus.cc $
+    ../../media/base/audio_bus.h ../../media/base/channel_layout.cc $
+    ../../media/base/channel_layout.h ../../media/base/limits.h $
+    ../../media/base/media_export.h ../../media/base/vector_math.cc $
+    ../../media/base/vector_math.h ../../media/base/vector_math_testing.h $
+    ../../out/gypfiles/media/irt-x86-64.shared_memory_support_nacl.source_list.gypcmd $
+    ../../native_client/toolchain/mac_x86/pnacl_newlib/pnacl_newlib.json || $
+    obj/base/base_nacl.actions_rules_copies.stamp
+
+rule $
+    shared_memory_support_nacl_target_build_IRT_x86_32_nlib_26503c0e3d369334c2e877d5e66be3c5
+  command = cd ../../media; export $
+      BUILT_FRAMEWORKS_DIR=/Users/superadmin/tmp/src/out/Debug; export $
+      BUILT_PRODUCTS_DIR=/Users/superadmin/tmp/src/out/Debug; export $
+      CONFIGURATION=Debug; export PRODUCT_NAME=shared_memory_support_nacl; $
+      export $
+      SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk; $
+      export SRCROOT=/Users/superadmin/tmp/src/out/Debug/../../media; $
+      export SOURCE_ROOT="$${SRCROOT}"; export $
+      TARGET_BUILD_DIR=/Users/superadmin/tmp/src/out/Debug; export $
+      TEMP_DIR="$${TMPDIR}";python ../native_client/build/build_nexe.py $
+      --root .. --product-dir ../out/Debug/xyz --config-name Debug -t $
+      ../native_client/toolchain/ --arch x86-32 --build newlib_nlib_clang $
+      --name ../out/Debug/gen/tc_irt/lib32/libshared_memory_support_nacl.a $
+      --objdir $
+      ../out/Debug/obj/media/shared_memory_support_nacl.gen/irt-x86-32/shared_memory_support_nacl $
+      "--include-dirs=../out/Debug/gen/tc_newlib/include .. $
+      \"../out/Debug/gen\" .." "--compile_flags=-m32 -mstackrealign $
+      -mno-sse -O2 -g -Wall -fdiagnostics-show-option -Werror  $
+      -Wno-unused-function -Wno-char-subscripts -Wno-c++11-extensions $
+      -Wno-unnamed-type-template-args -Wno-extra-semi $
+      -Wno-unused-private-field -Wno-char-subscripts -Wno-unused-function $
+      \"-std=gnu++11\"  -Os -fno-exceptions -ffunction-sections $
+      -fdata-sections -fasynchronous-unwind-tables -fomit-frame-pointer $
+      -integrated-as" --gomadir "" "--defines=\"__STDC_LIMIT_MACROS=1\" $
+      \"__STDC_FORMAT_MACROS=1\" \"_GNU_SOURCE=1\" $
+      \"_POSIX_C_SOURCE=199506\" \"_XOPEN_SOURCE=600\" $
+      \"DYNAMIC_ANNOTATIONS_ENABLED=1\" $
+      \"DYNAMIC_ANNOTATIONS_PREFIX=NACL_\" \"NACL_BUILD_ARCH=x86\" $
+      V8_DEPRECATION_WARNINGS \"CLD_VERSION=2\" $
+      \"__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORE=0\" $
+      CHROMIUM_BUILD \"CR_CLANG_REVISION=254049-1\" \"USE_LIBJPEG_TURBO=1\" $
+      ENABLE_ONE_CLICK_SIGNIN ENABLE_PRE_SYNC_BACKUP \"ENABLE_WEBRTC=1\" $
+      \"ENABLE_MEDIA_ROUTER=1\" ENABLE_PEPPER_CDMS $
+      ENABLE_CONFIGURATION_POLICY ENABLE_NOTIFICATIONS \"ENABLE_HIDPI=1\" $
+      DONT_EMBED_BUILD_METADATA FIELDTRIAL_TESTING_ENABLED $
+      \"ENABLE_TASK_MANAGER=1\" \"ENABLE_EXTENSIONS=1\" \"ENABLE_PDF=1\" $
+      \"ENABLE_PLUGIN_INSTALLATION=1\" \"ENABLE_PLUGINS=1\" $
+      \"ENABLE_SESSION_SERVICE=1\" \"ENABLE_THEMES=1\" $
+      \"ENABLE_AUTOFILL_DIALOG=1\" \"ENABLE_BACKGROUND=1\" $
+      \"ENABLE_PRINTING=1\" \"ENABLE_BASIC_PRINTING=1\" $
+      \"ENABLE_PRINT_PREVIEW=1\" \"ENABLE_SPELLCHECK=1\" $
+      \"USE_BROWSER_SPELLCHECKER=1\" \"ENABLE_CAPTIVE_PORTAL_DETECTION=1\" $
+      \"ENABLE_APP_LIST=1\" \"ENABLE_SETTINGS_APP=1\" $
+      \"ENABLE_SUPERVISED_USERS=1\" \"ENABLE_SERVICE_DISCOVERY=1\" $
+      V8_USE_EXTERNAL_STARTUP_DATA FULL_SAFE_BROWSING SAFE_BROWSING_CSD $
+      SAFE_BROWSING_DB_LOCAL MEDIA_IMPLEMENTATION \"USE_LIBPCI=1\" $
+      \"USE_OPENSSL=1\" \"USE_OPENSSL_CERTS=1\" __STDC_CONSTANT_MACROS $
+      __STDC_FORMAT_MACROS" "--link_flags=-m32 $
+      -B../out/Debug/gen/tc_irt/lib32   -Wl,--gc-sections -nodefaultlibs $
+      -lc++ -lm -lirt_browser -Wl,--start-group -lc -lnacl -lgcc -lgcc_eh $
+      -Wl,--end-group" $
+      "--source-list=../out/gypfiles/media/irt-x86-32.shared_memory_support_nacl.source_list.gypcmd"
+  description = ACTION shared_memory_support_nacl: build IRT x86-32 $
+      nlib_26503c0e3d369334c2e877d5e66be3c5
+  restat = 1
+
+build gen/tc_irt/lib32/libshared_memory_support_nacl.a: $
+    shared_memory_support_nacl_target_build_IRT_x86_32_nlib_26503c0e3d369334c2e877d5e66be3c5 $
+    ../../native_client/build/build_nexe.py $
+    ../../native_client/build/build_nexe_tools.py $
+    ../../base/atomic_ref_count.h ../../base/atomicops.h $
+    ../../base/atomicops_internals_atomicword_compat.h $
+    ../../base/atomicops_internals_mac.h $
+    ../../base/atomicops_internals_portable.h $
+    ../../base/atomicops_internals_x86_msvc.h ../../base/base_export.h $
+    ../../base/basictypes.h ../../base/compiler_specific.h $
+    ../../base/containers/hash_tables.h ../../base/debug/debugger.h $
+    ../../base/gtest_prod_util.h ../../base/logging.h ../../base/macros.h $
+    ../../base/memory/aligned_memory.h ../../base/memory/ref_counted.h $
+    ../../base/memory/scoped_ptr.h ../../base/move.h $
+    ../../base/numerics/safe_conversions.h $
+    ../../base/numerics/safe_conversions_impl.h $
+    ../../base/numerics/safe_math.h ../../base/numerics/safe_math_impl.h $
+    ../../base/strings/string16.h $
+    ../../base/strings/string_number_conversions.h $
+    ../../base/strings/string_piece.h ../../base/strings/string_split.h $
+    ../../base/strings/string_util.h ../../base/strings/string_util_posix.h $
+    ../../base/strings/string_util_win.h ../../base/strings/stringprintf.h $
+    ../../base/template_util.h $
+    ../../base/threading/thread_collision_warner.h ../../base/time/time.h $
+    ../../build/build_config.h $
+    ../../testing/gtest/include/gtest/gtest_prod.h $
+    ../../ui/gfx/geometry/point.h ../../ui/gfx/geometry/point3_f.h $
+    ../../ui/gfx/geometry/point_f.h ../../ui/gfx/geometry/vector2d.h $
+    ../../ui/gfx/geometry/vector2d_f.h ../../ui/gfx/geometry/vector3d_f.h $
+    ../../ui/gfx/gfx_export.h ../../media/audio/audio_parameters.cc $
+    ../../media/audio/audio_parameters.h ../../media/audio/point.cc $
+    ../../media/audio/point.h ../../media/base/audio_bus.cc $
+    ../../media/base/audio_bus.h ../../media/base/channel_layout.cc $
+    ../../media/base/channel_layout.h ../../media/base/limits.h $
+    ../../media/base/media_export.h ../../media/base/vector_math.cc $
+    ../../media/base/vector_math.h ../../media/base/vector_math_testing.h $
+    ../../out/gypfiles/media/irt-x86-32.shared_memory_support_nacl.source_list.gypcmd $
+    ../../native_client/toolchain/mac_x86/pnacl_newlib/pnacl_newlib.json || $
+    obj/base/base_nacl.actions_rules_copies.stamp
+
+build obj/media/shared_memory_support_nacl.actions_rules_copies.stamp: $
+    stamp gen/tc_irt/lib64/libshared_memory_support_nacl.a $
+    gen/tc_irt/lib32/libshared_memory_support_nacl.a
+
+defines = -DV8_DEPRECATION_WARNINGS -DCLD_VERSION=2 $
+    -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORE=0 -DCHROMIUM_BUILD $
+    -DCR_CLANG_REVISION=254049-1 -DUSE_LIBJPEG_TURBO=1 $
+    -DENABLE_ONE_CLICK_SIGNIN -DENABLE_PRE_SYNC_BACKUP -DENABLE_WEBRTC=1 $
+    -DENABLE_MEDIA_ROUTER=1 -DENABLE_PEPPER_CDMS $
+    -DENABLE_CONFIGURATION_POLICY -DENABLE_NOTIFICATIONS -DENABLE_HIDPI=1 $
+    -DDONT_EMBED_BUILD_METADATA -DFIELDTRIAL_TESTING_ENABLED $
+    -DENABLE_TASK_MANAGER=1 -DENABLE_EXTENSIONS=1 -DENABLE_PDF=1 $
+    -DENABLE_PLUGIN_INSTALLATION=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_THEMES=1 -DENABLE_AUTOFILL_DIALOG=1 $
+    -DENABLE_BACKGROUND=1 -DENABLE_PRINTING=1 -DENABLE_BASIC_PRINTING=1 $
+    -DENABLE_PRINT_PREVIEW=1 -DENABLE_SPELLCHECK=1 $
+    -DUSE_BROWSER_SPELLCHECKER=1 -DENABLE_CAPTIVE_PORTAL_DETECTION=1 $
+    -DENABLE_APP_LIST=1 -DENABLE_SETTINGS_APP=1 -DENABLE_SUPERVISED_USERS=1 $
+    -DENABLE_SERVICE_DISCOVERY=1 -DV8_USE_EXTERNAL_STARTUP_DATA $
+    -DFULL_SAFE_BROWSING -DSAFE_BROWSING_CSD -DSAFE_BROWSING_DB_LOCAL $
+    -DMEDIA_IMPLEMENTATION -DUSE_LIBPCI=1 -DUSE_OPENSSL=1 $
+    -DUSE_OPENSSL_CERTS=1 -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS $
+    -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DWTF_USE_DYNAMIC_ANNOTATIONS=1
+includes = -Igen -I../..
+cflags = -isysroot $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk $
+    -O0 -fvisibility=hidden -Werror -Wnewline-eof -mmacosx-version-min=10.6 $
+    -arch x86_64 -Wall -Wendif-labels -Wextra -Wno-unused-parameter $
+    -Wno-missing-field-initializers -Wno-selector-type-mismatch $
+    -Wpartial-availability -Wheader-hygiene -Wno-char-subscripts $
+    -Wno-unneeded-internal-declaration -Wno-covered-switch-default $
+    -Wstring-conversion -Wno-c++11-narrowing -Wno-deprecated-register $
+    -Wno-inconsistent-missing-override -Wno-shift-negative-value $
+    -Wno-bitfield-width
+cflags_c = -std=c99 -Xclang -load -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing -fstack-protector-all $
+    -Wno-undefined-bool-conversion -Wno-tautological-undefined-compare
+cflags_cc = -std=c++11 -stdlib=libc++ -fno-rtti -fno-exceptions $
+    -fvisibility-inlines-hidden -fno-threadsafe-statics -Xclang -load $
+    -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing -fstack-protector-all $
+    -Wno-undefined-bool-conversion -Wno-tautological-undefined-compare
+cflags_objc = $cflags_c -Wobjc-missing-property-synthesis
+cflags_objcc = $cflags_cc -Wobjc-missing-property-synthesis $
+    -fobjc-call-cxx-cdtors
+arflags = 
+
+build obj/media/audio/shared_memory_support_nacl.audio_parameters.o: cxx $
+    ../../media/audio/audio_parameters.cc || $
+    obj/media/shared_memory_support_nacl.actions_rules_copies.stamp
+build obj/media/audio/shared_memory_support_nacl.point.o: cxx $
+    ../../media/audio/point.cc || $
+    obj/media/shared_memory_support_nacl.actions_rules_copies.stamp
+build obj/media/base/shared_memory_support_nacl.audio_bus.o: cxx $
+    ../../media/base/audio_bus.cc || $
+    obj/media/shared_memory_support_nacl.actions_rules_copies.stamp
+build obj/media/base/shared_memory_support_nacl.channel_layout.o: cxx $
+    ../../media/base/channel_layout.cc || $
+    obj/media/shared_memory_support_nacl.actions_rules_copies.stamp
+build obj/media/base/shared_memory_support_nacl.vector_math.o: cxx $
+    ../../media/base/vector_math.cc || $
+    obj/media/shared_memory_support_nacl.actions_rules_copies.stamp
+

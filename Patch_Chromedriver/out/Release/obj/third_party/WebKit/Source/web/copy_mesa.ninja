@@ -1,0 +1,2 @@
+build DumpRenderTree.app/Contents/MacOS/osmesa.so: copy osmesa.so || $
+    osmesa.so.TOC

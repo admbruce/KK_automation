@@ -1,0 +1,164 @@
+build obj/courgette/courgette_unittests.actions_depends.stamp: stamp $
+    libcourgette_lib.a libbase.a libbase_i18n.a librun_all_unittests.a $
+    libtest_support_base.a libgtest.a libbase_static.a $
+    liballocator_extension_thunks.a libmodp_b64.a libdynamic_annotations.a $
+    libevent.a liblzma_sdk.a libicui18n.a libicuuc.a icudtl.dat icudtl.dat $
+    libgmock.a libxml2.a libchrome_zlib.a libzlib_x86_simd.a
+
+build obj/courgette/courgette_unittests.compile_depends.stamp: stamp $
+    icudtl.dat icudtl.dat icudtl.dat
+
+defines = -DV8_DEPRECATION_WARNINGS -DCLD_VERSION=2 $
+    -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORE=0 -DCHROMIUM_BUILD $
+    -DCR_CLANG_REVISION=254049-1 -DUSE_LIBJPEG_TURBO=1 $
+    -DENABLE_ONE_CLICK_SIGNIN -DENABLE_PRE_SYNC_BACKUP -DENABLE_WEBRTC=1 $
+    -DENABLE_MEDIA_ROUTER=1 -DENABLE_PEPPER_CDMS $
+    -DENABLE_CONFIGURATION_POLICY -DENABLE_NOTIFICATIONS -DENABLE_HIDPI=1 $
+    -DDONT_EMBED_BUILD_METADATA -DFIELDTRIAL_TESTING_ENABLED $
+    -DENABLE_TASK_MANAGER=1 -DENABLE_EXTENSIONS=1 -DENABLE_PDF=1 $
+    -DENABLE_PLUGIN_INSTALLATION=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_THEMES=1 -DENABLE_AUTOFILL_DIALOG=1 $
+    -DENABLE_BACKGROUND=1 -DENABLE_PRINTING=1 -DENABLE_BASIC_PRINTING=1 $
+    -DENABLE_PRINT_PREVIEW=1 -DENABLE_SPELLCHECK=1 $
+    -DUSE_BROWSER_SPELLCHECKER=1 -DENABLE_CAPTIVE_PORTAL_DETECTION=1 $
+    -DENABLE_APP_LIST=1 -DENABLE_SETTINGS_APP=1 -DENABLE_SUPERVISED_USERS=1 $
+    -DENABLE_SERVICE_DISCOVERY=1 -DV8_USE_EXTERNAL_STARTUP_DATA $
+    -DFULL_SAFE_BROWSING -DSAFE_BROWSING_CSD -DSAFE_BROWSING_DB_LOCAL $
+    -DGTEST_HAS_POSIX_RE=0 -DGTEST_LANG_CXX11=0 -DU_USING_ICU_NAMESPACE=0 $
+    -DU_ENABLE_DYLOAD=0 -DU_STATIC_IMPLEMENTATION -DUNIT_TEST $
+    -DGTEST_HAS_RTTI=0 -DUSE_LIBPCI=1 -DUSE_OPENSSL=1 $
+    -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS $
+    -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DWTF_USE_DYNAMIC_ANNOTATIONS=1
+includes = -Igen -I../.. -I../../third_party/icu/source/common $
+    -I../../third_party/icu/source/i18n -I../../testing/gtest/include
+cflags = -isysroot $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk $
+    -O0 -fvisibility=hidden -Werror -Wnewline-eof -mmacosx-version-min=10.6 $
+    -arch x86_64 -Wall -Wendif-labels -Wextra -Wno-unused-parameter $
+    -Wno-missing-field-initializers -Wno-selector-type-mismatch $
+    -Wpartial-availability -Wheader-hygiene -Wno-char-subscripts $
+    -Wno-unneeded-internal-declaration -Wno-covered-switch-default $
+    -Wstring-conversion -Wno-c++11-narrowing -Wno-deprecated-register $
+    -Wno-inconsistent-missing-override -Wno-shift-negative-value $
+    -Wno-bitfield-width
+cflags_c = -std=c99 -Xclang -load -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing -fstack-protector-all $
+    -Wno-undefined-bool-conversion -Wno-tautological-undefined-compare
+cflags_cc = -std=c++11 -stdlib=libc++ -fno-rtti -fno-exceptions $
+    -fvisibility-inlines-hidden -fno-threadsafe-statics -Xclang -load $
+    -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing -fstack-protector-all $
+    -Wno-undefined-bool-conversion -Wno-tautological-undefined-compare
+cflags_objc = $cflags_c -Wobjc-missing-property-synthesis
+cflags_objcc = $cflags_cc -Wobjc-missing-property-synthesis $
+    -fobjc-call-cxx-cdtors
+arflags = 
+
+build obj/courgette/courgette_unittests.adjustment_method_unittest.o: cxx $
+    ../../courgette/adjustment_method_unittest.cc || $
+    obj/courgette/courgette_unittests.compile_depends.stamp
+build obj/courgette/courgette_unittests.bsdiff_memory_unittest.o: cxx $
+    ../../courgette/bsdiff_memory_unittest.cc || $
+    obj/courgette/courgette_unittests.compile_depends.stamp
+build obj/courgette/courgette_unittests.base_test_unittest.o: cxx $
+    ../../courgette/base_test_unittest.cc || $
+    obj/courgette/courgette_unittests.compile_depends.stamp
+build obj/courgette/courgette_unittests.difference_estimator_unittest.o: $
+    cxx ../../courgette/difference_estimator_unittest.cc || $
+    obj/courgette/courgette_unittests.compile_depends.stamp
+build obj/courgette/courgette_unittests.disassembler_elf_32_x86_unittest.o: $
+    cxx ../../courgette/disassembler_elf_32_x86_unittest.cc || $
+    obj/courgette/courgette_unittests.compile_depends.stamp
+build obj/courgette/courgette_unittests.disassembler_win32_x86_unittest.o: $
+    cxx ../../courgette/disassembler_win32_x86_unittest.cc || $
+    obj/courgette/courgette_unittests.compile_depends.stamp
+build obj/courgette/courgette_unittests.disassembler_win32_x64_unittest.o: $
+    cxx ../../courgette/disassembler_win32_x64_unittest.cc || $
+    obj/courgette/courgette_unittests.compile_depends.stamp
+build obj/courgette/courgette_unittests.encoded_program_unittest.o: cxx $
+    ../../courgette/encoded_program_unittest.cc || $
+    obj/courgette/courgette_unittests.compile_depends.stamp
+build obj/courgette/courgette_unittests.encode_decode_unittest.o: cxx $
+    ../../courgette/encode_decode_unittest.cc || $
+    obj/courgette/courgette_unittests.compile_depends.stamp
+build obj/courgette/courgette_unittests.ensemble_unittest.o: cxx $
+    ../../courgette/ensemble_unittest.cc || $
+    obj/courgette/courgette_unittests.compile_depends.stamp
+build obj/courgette/courgette_unittests.image_utils_unittest.o: cxx $
+    ../../courgette/image_utils_unittest.cc || $
+    obj/courgette/courgette_unittests.compile_depends.stamp
+build obj/courgette/courgette_unittests.memory_allocator_unittest.o: cxx $
+    ../../courgette/memory_allocator_unittest.cc || $
+    obj/courgette/courgette_unittests.compile_depends.stamp
+build obj/courgette/courgette_unittests.rel32_finder_win32_x86_unittest.o: $
+    cxx ../../courgette/rel32_finder_win32_x86_unittest.cc || $
+    obj/courgette/courgette_unittests.compile_depends.stamp
+build obj/courgette/courgette_unittests.streams_unittest.o: cxx $
+    ../../courgette/streams_unittest.cc || $
+    obj/courgette/courgette_unittests.compile_depends.stamp
+build obj/courgette/courgette_unittests.typedrva_unittest.o: cxx $
+    ../../courgette/typedrva_unittest.cc || $
+    obj/courgette/courgette_unittests.compile_depends.stamp
+build obj/courgette/courgette_unittests.versioning_unittest.o: cxx $
+    ../../courgette/versioning_unittest.cc || $
+    obj/courgette/courgette_unittests.compile_depends.stamp
+build obj/courgette/third_party/courgette_unittests.paged_array_unittest.o: $
+    cxx ../../courgette/third_party/paged_array_unittest.cc || $
+    obj/courgette/courgette_unittests.compile_depends.stamp
+build obj/courgette/third_party/courgette_unittests.qsufsort_unittest.o: $
+    cxx ../../courgette/third_party/qsufsort_unittest.cc || $
+    obj/courgette/courgette_unittests.compile_depends.stamp
+
+ldflags = -Wl,-search_paths_first -Wl,-pie -mmacosx-version-min=10.6 $
+    -isysroot $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk $
+    -arch x86_64 -L. -stdlib=libc++
+libs = '-L../../third_party/libc++-static' -framework AppKit -framework $
+    ApplicationServices -framework Carbon -framework CoreFoundation $
+    -framework Foundation -framework IOKit -framework Security
+build courgette_unittests: link $
+    obj/courgette/courgette_unittests.adjustment_method_unittest.o $
+    obj/courgette/courgette_unittests.bsdiff_memory_unittest.o $
+    obj/courgette/courgette_unittests.base_test_unittest.o $
+    obj/courgette/courgette_unittests.difference_estimator_unittest.o $
+    obj/courgette/courgette_unittests.disassembler_elf_32_x86_unittest.o $
+    obj/courgette/courgette_unittests.disassembler_win32_x86_unittest.o $
+    obj/courgette/courgette_unittests.disassembler_win32_x64_unittest.o $
+    obj/courgette/courgette_unittests.encoded_program_unittest.o $
+    obj/courgette/courgette_unittests.encode_decode_unittest.o $
+    obj/courgette/courgette_unittests.ensemble_unittest.o $
+    obj/courgette/courgette_unittests.image_utils_unittest.o $
+    obj/courgette/courgette_unittests.memory_allocator_unittest.o $
+    obj/courgette/courgette_unittests.rel32_finder_win32_x86_unittest.o $
+    obj/courgette/courgette_unittests.streams_unittest.o $
+    obj/courgette/courgette_unittests.typedrva_unittest.o $
+    obj/courgette/courgette_unittests.versioning_unittest.o $
+    obj/courgette/third_party/courgette_unittests.paged_array_unittest.o $
+    obj/courgette/third_party/courgette_unittests.qsufsort_unittest.o $
+    libcourgette_lib.a libbase.a libbase_i18n.a librun_all_unittests.a $
+    libtest_support_base.a libgtest.a libbase_static.a $
+    liballocator_extension_thunks.a libmodp_b64.a libdynamic_annotations.a $
+    libevent.a liblzma_sdk.a libicui18n.a libicuuc.a libgmock.a libxml2.a $
+    libchrome_zlib.a libzlib_x86_simd.a | icudtl.dat
+  ld = $ldxx
+  postbuilds = $ && (export $
+      BUILT_FRAMEWORKS_DIR=/Users/superadmin/tmp/src/out/Debug; export $
+      BUILT_PRODUCTS_DIR=/Users/superadmin/tmp/src/out/Debug; export $
+      CONFIGURATION=Debug; export EXECUTABLE_NAME=courgette_unittests; $
+      export EXECUTABLE_PATH=courgette_unittests; export $
+      FULL_PRODUCT_NAME=courgette_unittests; export $
+      PRODUCT_NAME=courgette_unittests; export $
+      PRODUCT_TYPE=com.apple.product-type.tool; export $
+      SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk; $
+      export SRCROOT=/Users/superadmin/tmp/src/out/Debug/../../courgette; $
+      export SOURCE_ROOT="$${SRCROOT}"; export $
+      TARGET_BUILD_DIR=/Users/superadmin/tmp/src/out/Debug; export $
+      TEMP_DIR="$${TMPDIR}"; (cd ../../courgette && $
+      ../build/mac/change_mach_o_flags_from_xcode.sh); G=$$?; ((exit $$G) $
+      || rm -rf courgette_unittests) && exit $$G)

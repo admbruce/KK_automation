@@ -1,0 +1,309 @@
+build obj/media/cast/cast_unittests.actions_depends.stamp: stamp $
+    libcast_common.a libcast_sender.a libcast_test_utility.a $
+    librun_all_unittests.a libnet.a libgmock.a libgtest.a $
+    libcast_logging_proto.a libprotobuf_lite.a libbase.a libbase_static.a $
+    liballocator_extension_thunks.a libmodp_b64.a libdynamic_annotations.a $
+    libevent.a libcrcrypto.a libboringssl.a libbase_i18n.a libicui18n.a $
+    libicuuc.a icudtl.dat icudtl.dat liburl_lib.a libnet_quic_proto.a $
+    libbase_prefs.a libsdch.a libchrome_zlib.a libzlib_x86_simd.a $
+    obj/net/net_derived_sources.actions_rules_copies.stamp $
+    obj/net/net_resources.actions_rules_copies.stamp libcast_net.a $
+    libmedia.a libcommand_buffer_common.a libgles2_utils.a $
+    obj/skia/skia.actions_depends.stamp libskia_library.a libskia_opts.a $
+    libskia_opts_ssse3.a libskia_opts_sse41.a libskia_opts_sse42.a $
+    libskia_opts_avx.a libskia_opts_avx2.a libsfntly.a libskia_chrome.a $
+    libyuv.a libjpeg_turbo.a libopus.a libevents_base.a libgfx.a $
+    libharfbuzz-ng.a libpng.a libgfx_geometry.a libdom_keycode_converter.a $
+    libshared_memory_support.a libffmpeg.a libffmpeg_yasm.a libvpx_new.a $
+    libvpx_intrinsics_mmx.a libvpx_intrinsics_sse2.a $
+    libvpx_intrinsics_ssse3.a libvpx_intrinsics_sse4_1.a $
+    libvpx_intrinsics_avx.a libvpx_intrinsics_avx2.a libwebm.a $
+    libdecklink.a libmedia_asm.a libcast_receiver.a libtest_support_base.a $
+    libxml2.a libmedia_test_support.a libmt19937ar.a libgfx_test_support.a
+
+build obj/media/cast/cast_unittests.compile_depends.stamp: stamp $
+    obj/media/cast/cast_logging_proto.actions_rules_copies.stamp $
+    obj/media/cast/cast_logging_proto.actions_rules_copies.stamp $
+    obj/net/net.compile_depends.stamp $
+    obj/media/cast/cast_logging_proto.actions_rules_copies.stamp icudtl.dat $
+    icudtl.dat icudtl.dat obj/net/net_quic_proto.actions_rules_copies.stamp $
+    obj/net/net_derived_sources.actions_rules_copies.stamp $
+    obj/net/net_resources.actions_rules_copies.stamp $
+    obj/media/cast/cast_logging_proto.actions_rules_copies.stamp $
+    obj/third_party/libjpeg_turbo/libjpeg.actions_rules_copies.stamp $
+    obj/third_party/ffmpeg/ffmpeg_yasm.actions_rules_copies.stamp $
+    obj/third_party/libvpx_new/libvpx_new.actions_rules_copies.stamp $
+    obj/media/media_asm.actions_rules_copies.stamp $
+    obj/media/cast/cast_logging_proto.actions_rules_copies.stamp
+
+defines = -DV8_DEPRECATION_WARNINGS -DCLD_VERSION=2 $
+    -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORE=0 -DCHROMIUM_BUILD $
+    -DCR_CLANG_REVISION=254049-1 -DUSE_LIBJPEG_TURBO=1 $
+    -DENABLE_ONE_CLICK_SIGNIN -DENABLE_PRE_SYNC_BACKUP -DENABLE_WEBRTC=1 $
+    -DENABLE_MEDIA_ROUTER=1 -DENABLE_PEPPER_CDMS $
+    -DENABLE_CONFIGURATION_POLICY -DENABLE_NOTIFICATIONS -DENABLE_HIDPI=1 $
+    -DDONT_EMBED_BUILD_METADATA -DFIELDTRIAL_TESTING_ENABLED $
+    -DENABLE_TASK_MANAGER=1 -DENABLE_EXTENSIONS=1 -DENABLE_PDF=1 $
+    -DENABLE_PLUGIN_INSTALLATION=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_THEMES=1 -DENABLE_AUTOFILL_DIALOG=1 $
+    -DENABLE_BACKGROUND=1 -DENABLE_PRINTING=1 -DENABLE_BASIC_PRINTING=1 $
+    -DENABLE_PRINT_PREVIEW=1 -DENABLE_SPELLCHECK=1 $
+    -DUSE_BROWSER_SPELLCHECKER=1 -DENABLE_CAPTIVE_PORTAL_DETECTION=1 $
+    -DENABLE_APP_LIST=1 -DENABLE_SETTINGS_APP=1 -DENABLE_SUPERVISED_USERS=1 $
+    -DENABLE_SERVICE_DISCOVERY=1 -DV8_USE_EXTERNAL_STARTUP_DATA $
+    -DFULL_SAFE_BROWSING -DSAFE_BROWSING_CSD -DSAFE_BROWSING_DB_LOCAL $
+    -DGTEST_HAS_POSIX_RE=0 -DGTEST_LANG_CXX11=0 -DPROTOBUF_USE_DLLS $
+    -DGOOGLE_PROTOBUF_NO_RTTI -DGOOGLE_PROTOBUF_NO_STATIC_INITIALIZER $
+    -DUNIT_TEST -DGTEST_HAS_RTTI=0 -DUSE_LIBPCI=1 -DUSE_OPENSSL=1 $
+    -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -DNDEBUG -DNVALGRIND $
+    -DDYNAMIC_ANNOTATIONS_ENABLED=0 -D_FORTIFY_SOURCE=2
+includes = -Igen -I../.. -I../../third_party/khronos -I../../gpu -I../.. $
+    -I../../skia/config -Igen/protoc_out -I../../third_party/protobuf $
+    -I../../third_party/protobuf/src -I../../testing/gmock/include $
+    -I../../testing/gtest/include
+cflags = -isysroot $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk $
+    -O2 -fvisibility=hidden -Werror -Wnewline-eof -mmacosx-version-min=10.6 $
+    -arch x86_64 -Wall -Wendif-labels -Wextra -Wno-unused-parameter $
+    -Wno-missing-field-initializers -Wno-selector-type-mismatch $
+    -Wpartial-availability -Wheader-hygiene -Wno-char-subscripts $
+    -Wno-unneeded-internal-declaration -Wno-covered-switch-default $
+    -Wstring-conversion -Wno-c++11-narrowing -Wno-deprecated-register $
+    -Wno-inconsistent-missing-override -Wno-shift-negative-value $
+    -Wno-bitfield-width
+cflags_c = -std=c99 -Xclang -load -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing
+cflags_cc = -std=c++11 -stdlib=libc++ -fno-rtti -fno-exceptions $
+    -fvisibility-inlines-hidden -fno-threadsafe-statics -Xclang -load $
+    -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing
+cflags_objc = $cflags_c -Wobjc-missing-property-synthesis
+cflags_objcc = $cflags_cc -Wobjc-missing-property-synthesis $
+    -fobjc-call-cxx-cdtors
+arflags = 
+
+build $
+    obj/media/cast/logging/cast_unittests.encoding_event_subscriber_unittest.o: $
+    cxx ../../media/cast/logging/encoding_event_subscriber_unittest.cc || $
+    obj/media/cast/cast_unittests.compile_depends.stamp
+build $
+    obj/media/cast/logging/cast_unittests.receiver_time_offset_estimator_impl_unittest.o: $
+    cxx $
+    ../../media/cast/logging/receiver_time_offset_estimator_impl_unittest.cc $
+    || obj/media/cast/cast_unittests.compile_depends.stamp
+build obj/media/cast/logging/cast_unittests.serialize_deserialize_test.o: $
+    cxx ../../media/cast/logging/serialize_deserialize_test.cc || $
+    obj/media/cast/cast_unittests.compile_depends.stamp
+build $
+    obj/media/cast/logging/cast_unittests.simple_event_subscriber_unittest.o: $
+    cxx ../../media/cast/logging/simple_event_subscriber_unittest.cc || $
+    obj/media/cast/cast_unittests.compile_depends.stamp
+build $
+    obj/media/cast/logging/cast_unittests.stats_event_subscriber_unittest.o: $
+    cxx ../../media/cast/logging/stats_event_subscriber_unittest.cc || $
+    obj/media/cast/cast_unittests.compile_depends.stamp
+build $
+    obj/media/cast/net/cast_unittests.cast_transport_sender_impl_unittest.o: $
+    cxx ../../media/cast/net/cast_transport_sender_impl_unittest.cc || $
+    obj/media/cast/cast_unittests.compile_depends.stamp
+build obj/media/cast/net/cast_unittests.frame_id_wrap_helper_test.o: cxx $
+    ../../media/cast/net/frame_id_wrap_helper_test.cc || $
+    obj/media/cast/cast_unittests.compile_depends.stamp
+build obj/media/cast/net/cast_unittests.mock_cast_transport_sender.o: cxx $
+    ../../media/cast/net/mock_cast_transport_sender.cc || $
+    obj/media/cast/cast_unittests.compile_depends.stamp
+build obj/media/cast/net/pacing/cast_unittests.mock_paced_packet_sender.o: $
+    cxx ../../media/cast/net/pacing/mock_paced_packet_sender.cc || $
+    obj/media/cast/cast_unittests.compile_depends.stamp
+build obj/media/cast/net/pacing/cast_unittests.paced_sender_unittest.o: cxx $
+    ../../media/cast/net/pacing/paced_sender_unittest.cc || $
+    obj/media/cast/cast_unittests.compile_depends.stamp
+build $
+    obj/media/cast/net/rtcp/cast_unittests.receiver_rtcp_event_subscriber_unittest.o: $
+    cxx $
+    ../../media/cast/net/rtcp/receiver_rtcp_event_subscriber_unittest.cc || $
+    obj/media/cast/cast_unittests.compile_depends.stamp
+build obj/media/cast/net/rtcp/cast_unittests.rtcp_builder_unittest.o: cxx $
+    ../../media/cast/net/rtcp/rtcp_builder_unittest.cc || $
+    obj/media/cast/cast_unittests.compile_depends.stamp
+build obj/media/cast/net/rtcp/cast_unittests.rtcp_unittest.o: cxx $
+    ../../media/cast/net/rtcp/rtcp_unittest.cc || $
+    obj/media/cast/cast_unittests.compile_depends.stamp
+build obj/media/cast/net/rtcp/cast_unittests.rtcp_utility_unittest.o: cxx $
+    ../../media/cast/net/rtcp/rtcp_utility_unittest.cc || $
+    obj/media/cast/cast_unittests.compile_depends.stamp
+build obj/media/cast/net/rtcp/cast_unittests.test_rtcp_packet_builder.o: $
+    cxx ../../media/cast/net/rtcp/test_rtcp_packet_builder.cc || $
+    obj/media/cast/cast_unittests.compile_depends.stamp
+build $
+    obj/media/cast/net/rtp/cast_unittests.cast_message_builder_unittest.o: $
+    cxx ../../media/cast/net/rtp/cast_message_builder_unittest.cc || $
+    obj/media/cast/cast_unittests.compile_depends.stamp
+build obj/media/cast/net/rtp/cast_unittests.frame_buffer_unittest.o: cxx $
+    ../../media/cast/net/rtp/frame_buffer_unittest.cc || $
+    obj/media/cast/cast_unittests.compile_depends.stamp
+build obj/media/cast/net/rtp/cast_unittests.framer_unittest.o: cxx $
+    ../../media/cast/net/rtp/framer_unittest.cc || $
+    obj/media/cast/cast_unittests.compile_depends.stamp
+build obj/media/cast/net/rtp/cast_unittests.mock_rtp_payload_feedback.o: $
+    cxx ../../media/cast/net/rtp/mock_rtp_payload_feedback.cc || $
+    obj/media/cast/cast_unittests.compile_depends.stamp
+build obj/media/cast/net/rtp/cast_unittests.packet_storage_unittest.o: cxx $
+    ../../media/cast/net/rtp/packet_storage_unittest.cc || $
+    obj/media/cast/cast_unittests.compile_depends.stamp
+build obj/media/cast/net/rtp/cast_unittests.receiver_stats_unittest.o: cxx $
+    ../../media/cast/net/rtp/receiver_stats_unittest.cc || $
+    obj/media/cast/cast_unittests.compile_depends.stamp
+build obj/media/cast/net/rtp/cast_unittests.rtp_packet_builder.o: cxx $
+    ../../media/cast/net/rtp/rtp_packet_builder.cc || $
+    obj/media/cast/cast_unittests.compile_depends.stamp
+build obj/media/cast/net/rtp/cast_unittests.rtp_packetizer_unittest.o: cxx $
+    ../../media/cast/net/rtp/rtp_packetizer_unittest.cc || $
+    obj/media/cast/cast_unittests.compile_depends.stamp
+build obj/media/cast/net/rtp/cast_unittests.rtp_parser_unittest.o: cxx $
+    ../../media/cast/net/rtp/rtp_parser_unittest.cc || $
+    obj/media/cast/cast_unittests.compile_depends.stamp
+build obj/media/cast/net/cast_unittests.udp_transport_unittest.o: cxx $
+    ../../media/cast/net/udp_transport_unittest.cc || $
+    obj/media/cast/cast_unittests.compile_depends.stamp
+build obj/media/cast/receiver/cast_unittests.audio_decoder_unittest.o: cxx $
+    ../../media/cast/receiver/audio_decoder_unittest.cc || $
+    obj/media/cast/cast_unittests.compile_depends.stamp
+build obj/media/cast/receiver/cast_unittests.frame_receiver_unittest.o: cxx $
+    ../../media/cast/receiver/frame_receiver_unittest.cc || $
+    obj/media/cast/cast_unittests.compile_depends.stamp
+build obj/media/cast/receiver/cast_unittests.video_decoder_unittest.o: cxx $
+    ../../media/cast/receiver/video_decoder_unittest.cc || $
+    obj/media/cast/cast_unittests.compile_depends.stamp
+build obj/media/cast/sender/cast_unittests.audio_encoder_unittest.o: cxx $
+    ../../media/cast/sender/audio_encoder_unittest.cc || $
+    obj/media/cast/cast_unittests.compile_depends.stamp
+build obj/media/cast/sender/cast_unittests.audio_sender_unittest.o: cxx $
+    ../../media/cast/sender/audio_sender_unittest.cc || $
+    obj/media/cast/cast_unittests.compile_depends.stamp
+build obj/media/cast/sender/cast_unittests.congestion_control_unittest.o: $
+    cxx ../../media/cast/sender/congestion_control_unittest.cc || $
+    obj/media/cast/cast_unittests.compile_depends.stamp
+build $
+    obj/media/cast/sender/cast_unittests.external_video_encoder_unittest.o: $
+    cxx ../../media/cast/sender/external_video_encoder_unittest.cc || $
+    obj/media/cast/cast_unittests.compile_depends.stamp
+build $
+    obj/media/cast/sender/cast_unittests.fake_video_encode_accelerator_factory.o: $
+    cxx ../../media/cast/sender/fake_video_encode_accelerator_factory.cc || $
+    obj/media/cast/cast_unittests.compile_depends.stamp
+build obj/media/cast/sender/cast_unittests.video_encoder_unittest.o: cxx $
+    ../../media/cast/sender/video_encoder_unittest.cc || $
+    obj/media/cast/cast_unittests.compile_depends.stamp
+build obj/media/cast/sender/cast_unittests.video_sender_unittest.o: cxx $
+    ../../media/cast/sender/video_sender_unittest.cc || $
+    obj/media/cast/cast_unittests.compile_depends.stamp
+build obj/media/cast/sender/cast_unittests.vp8_quantizer_parser_unittest.o: $
+    cxx ../../media/cast/sender/vp8_quantizer_parser_unittest.cc || $
+    obj/media/cast/cast_unittests.compile_depends.stamp
+build obj/media/cast/test/cast_unittests.end2end_unittest.o: cxx $
+    ../../media/cast/test/end2end_unittest.cc || $
+    obj/media/cast/cast_unittests.compile_depends.stamp
+build obj/media/cast/test/utility/cast_unittests.audio_utility_unittest.o: $
+    cxx ../../media/cast/test/utility/audio_utility_unittest.cc || $
+    obj/media/cast/cast_unittests.compile_depends.stamp
+build obj/media/cast/test/utility/cast_unittests.barcode_unittest.o: cxx $
+    ../../media/cast/test/utility/barcode_unittest.cc || $
+    obj/media/cast/cast_unittests.compile_depends.stamp
+
+ldflags = -Wl,-search_paths_first -Wl,-pie -Wl,-dead_strip $
+    -mmacosx-version-min=10.6 -isysroot $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk $
+    -arch x86_64 -L. -stdlib=libc++
+libs = '-L../../third_party/libc++-static' -framework AppKit -framework $
+    ApplicationServices -framework Carbon -framework CoreFoundation $
+    -framework Foundation -framework IOKit -framework Security -framework $
+    SystemConfiguration $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/lib/libresolv.tbd $
+    -framework AudioToolbox -framework CoreVideo -framework AudioUnit $
+    -framework CoreAudio -framework OpenGL -framework QTKit -lm -framework $
+    IOSurface
+build cast_unittests: link $
+    obj/media/cast/logging/cast_unittests.encoding_event_subscriber_unittest.o $
+    obj/media/cast/logging/cast_unittests.receiver_time_offset_estimator_impl_unittest.o $
+    obj/media/cast/logging/cast_unittests.serialize_deserialize_test.o $
+    obj/media/cast/logging/cast_unittests.simple_event_subscriber_unittest.o $
+    obj/media/cast/logging/cast_unittests.stats_event_subscriber_unittest.o $
+    obj/media/cast/net/cast_unittests.cast_transport_sender_impl_unittest.o $
+    obj/media/cast/net/cast_unittests.frame_id_wrap_helper_test.o $
+    obj/media/cast/net/cast_unittests.mock_cast_transport_sender.o $
+    obj/media/cast/net/pacing/cast_unittests.mock_paced_packet_sender.o $
+    obj/media/cast/net/pacing/cast_unittests.paced_sender_unittest.o $
+    obj/media/cast/net/rtcp/cast_unittests.receiver_rtcp_event_subscriber_unittest.o $
+    obj/media/cast/net/rtcp/cast_unittests.rtcp_builder_unittest.o $
+    obj/media/cast/net/rtcp/cast_unittests.rtcp_unittest.o $
+    obj/media/cast/net/rtcp/cast_unittests.rtcp_utility_unittest.o $
+    obj/media/cast/net/rtcp/cast_unittests.test_rtcp_packet_builder.o $
+    obj/media/cast/net/rtp/cast_unittests.cast_message_builder_unittest.o $
+    obj/media/cast/net/rtp/cast_unittests.frame_buffer_unittest.o $
+    obj/media/cast/net/rtp/cast_unittests.framer_unittest.o $
+    obj/media/cast/net/rtp/cast_unittests.mock_rtp_payload_feedback.o $
+    obj/media/cast/net/rtp/cast_unittests.packet_storage_unittest.o $
+    obj/media/cast/net/rtp/cast_unittests.receiver_stats_unittest.o $
+    obj/media/cast/net/rtp/cast_unittests.rtp_packet_builder.o $
+    obj/media/cast/net/rtp/cast_unittests.rtp_packetizer_unittest.o $
+    obj/media/cast/net/rtp/cast_unittests.rtp_parser_unittest.o $
+    obj/media/cast/net/cast_unittests.udp_transport_unittest.o $
+    obj/media/cast/receiver/cast_unittests.audio_decoder_unittest.o $
+    obj/media/cast/receiver/cast_unittests.frame_receiver_unittest.o $
+    obj/media/cast/receiver/cast_unittests.video_decoder_unittest.o $
+    obj/media/cast/sender/cast_unittests.audio_encoder_unittest.o $
+    obj/media/cast/sender/cast_unittests.audio_sender_unittest.o $
+    obj/media/cast/sender/cast_unittests.congestion_control_unittest.o $
+    obj/media/cast/sender/cast_unittests.external_video_encoder_unittest.o $
+    obj/media/cast/sender/cast_unittests.fake_video_encode_accelerator_factory.o $
+    obj/media/cast/sender/cast_unittests.video_encoder_unittest.o $
+    obj/media/cast/sender/cast_unittests.video_sender_unittest.o $
+    obj/media/cast/sender/cast_unittests.vp8_quantizer_parser_unittest.o $
+    obj/media/cast/test/cast_unittests.end2end_unittest.o $
+    obj/media/cast/test/utility/cast_unittests.audio_utility_unittest.o $
+    obj/media/cast/test/utility/cast_unittests.barcode_unittest.o $
+    libcast_common.a libcast_sender.a libcast_test_utility.a $
+    librun_all_unittests.a libnet.a libgmock.a libgtest.a $
+    libcast_logging_proto.a libprotobuf_lite.a libbase.a libbase_static.a $
+    liballocator_extension_thunks.a libmodp_b64.a libdynamic_annotations.a $
+    libevent.a libcrcrypto.a libboringssl.a libbase_i18n.a libicui18n.a $
+    libicuuc.a liburl_lib.a libnet_quic_proto.a libbase_prefs.a libsdch.a $
+    libchrome_zlib.a libzlib_x86_simd.a libcast_net.a libmedia.a $
+    libcommand_buffer_common.a libgles2_utils.a libskia_library.a $
+    libskia_opts.a libskia_opts_ssse3.a libskia_opts_sse41.a $
+    libskia_opts_sse42.a libskia_opts_avx.a libskia_opts_avx2.a libsfntly.a $
+    libskia_chrome.a libyuv.a libjpeg_turbo.a libopus.a libevents_base.a $
+    libgfx.a libharfbuzz-ng.a libpng.a libgfx_geometry.a $
+    libdom_keycode_converter.a libshared_memory_support.a libffmpeg.a $
+    libffmpeg_yasm.a libvpx_new.a libvpx_intrinsics_mmx.a $
+    libvpx_intrinsics_sse2.a libvpx_intrinsics_ssse3.a $
+    libvpx_intrinsics_sse4_1.a libvpx_intrinsics_avx.a $
+    libvpx_intrinsics_avx2.a libwebm.a libdecklink.a libmedia_asm.a $
+    libcast_receiver.a libtest_support_base.a libxml2.a $
+    libmedia_test_support.a libmt19937ar.a libgfx_test_support.a | $
+    icudtl.dat obj/skia/skia.actions_depends.stamp $
+    obj/net/net_resources.actions_rules_copies.stamp $
+    obj/net/net_derived_sources.actions_rules_copies.stamp
+  ld = $ldxx
+  postbuilds = $ && (export $
+      BUILT_FRAMEWORKS_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      BUILT_PRODUCTS_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      CONFIGURATION=Release; export EXECUTABLE_NAME=cast_unittests; export $
+      EXECUTABLE_PATH=cast_unittests; export $
+      FULL_PRODUCT_NAME=cast_unittests; export PRODUCT_NAME=cast_unittests; $
+      export PRODUCT_TYPE=com.apple.product-type.tool; export $
+      SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk; $
+      export $
+      SRCROOT=/Users/superadmin/tmp/src/out/Release/../../media/cast; $
+      export SOURCE_ROOT="$${SRCROOT}"; export $
+      TARGET_BUILD_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      TEMP_DIR="$${TMPDIR}"; (cd ../../media/cast && $
+      ../../build/mac/change_mach_o_flags_from_xcode.sh); G=$$?; ((exit $
+      $$G) || rm -rf cast_unittests) && exit $$G)

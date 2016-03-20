@@ -1,0 +1,484 @@
+build obj/remoting/remoting_host_prefpane.actions_depends.stamp: stamp $
+    obj/remoting/remoting_infoplist_strings.actions_rules_copies.stamp $
+    obj/remoting/remoting_resources.actions_rules_copies.stamp $
+    obj/remoting/remoting_webapp_html.actions_rules_copies.stamp
+
+build obj/remoting/remoting_host_prefpane.compile_depends.stamp: stamp $
+    obj/remoting/remoting_infoplist_strings.actions_rules_copies.stamp $
+    obj/remoting/remoting_resources.actions_rules_copies.stamp $
+    obj/remoting/remoting_webapp_html.actions_rules_copies.stamp
+
+build $
+    remoting_host_prefpane.prefPane/Contents/Resources/me2me_preference_pane.nib: $
+    mac_tool ../../remoting/host/mac/me2me_preference_pane.xib
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_prefpane.prefPane/Contents/Resources/me2me_preference_pane_confirm_pin.nib: $
+    mac_tool ../../remoting/host/mac/me2me_preference_pane_confirm_pin.xib
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_prefpane.prefPane/Contents/Resources/me2me_preference_pane_disable.nib: $
+    mac_tool ../../remoting/host/mac/me2me_preference_pane_disable.xib
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build remoting_host_prefpane.prefPane/Contents/Resources/chromoting128.png: $
+    mac_tool ../../remoting/resources/chromoting128.png
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_prefpane.prefPane/Contents/Resources/am.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/me2me_preference_pane-InfoPlist.strings/am.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_prefpane.prefPane/Contents/Resources/ar.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/me2me_preference_pane-InfoPlist.strings/ar.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_prefpane.prefPane/Contents/Resources/bg.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/me2me_preference_pane-InfoPlist.strings/bg.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_prefpane.prefPane/Contents/Resources/bn.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/me2me_preference_pane-InfoPlist.strings/bn.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_prefpane.prefPane/Contents/Resources/ca.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/me2me_preference_pane-InfoPlist.strings/ca.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_prefpane.prefPane/Contents/Resources/cs.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/me2me_preference_pane-InfoPlist.strings/cs.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_prefpane.prefPane/Contents/Resources/da.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/me2me_preference_pane-InfoPlist.strings/da.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_prefpane.prefPane/Contents/Resources/de.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/me2me_preference_pane-InfoPlist.strings/de.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_prefpane.prefPane/Contents/Resources/el.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/me2me_preference_pane-InfoPlist.strings/el.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_prefpane.prefPane/Contents/Resources/en.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/me2me_preference_pane-InfoPlist.strings/en.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_prefpane.prefPane/Contents/Resources/en_GB.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/me2me_preference_pane-InfoPlist.strings/en_GB.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_prefpane.prefPane/Contents/Resources/es.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/me2me_preference_pane-InfoPlist.strings/es.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_prefpane.prefPane/Contents/Resources/es_419.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/me2me_preference_pane-InfoPlist.strings/es_419.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_prefpane.prefPane/Contents/Resources/et.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/me2me_preference_pane-InfoPlist.strings/et.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_prefpane.prefPane/Contents/Resources/fa.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/me2me_preference_pane-InfoPlist.strings/fa.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_prefpane.prefPane/Contents/Resources/fake_bidi.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/me2me_preference_pane-InfoPlist.strings/fake_bidi.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_prefpane.prefPane/Contents/Resources/fi.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/me2me_preference_pane-InfoPlist.strings/fi.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_prefpane.prefPane/Contents/Resources/fil.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/me2me_preference_pane-InfoPlist.strings/fil.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_prefpane.prefPane/Contents/Resources/fr.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/me2me_preference_pane-InfoPlist.strings/fr.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_prefpane.prefPane/Contents/Resources/gu.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/me2me_preference_pane-InfoPlist.strings/gu.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_prefpane.prefPane/Contents/Resources/he.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/me2me_preference_pane-InfoPlist.strings/he.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_prefpane.prefPane/Contents/Resources/hi.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/me2me_preference_pane-InfoPlist.strings/hi.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_prefpane.prefPane/Contents/Resources/hr.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/me2me_preference_pane-InfoPlist.strings/hr.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_prefpane.prefPane/Contents/Resources/hu.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/me2me_preference_pane-InfoPlist.strings/hu.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_prefpane.prefPane/Contents/Resources/id.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/me2me_preference_pane-InfoPlist.strings/id.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_prefpane.prefPane/Contents/Resources/it.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/me2me_preference_pane-InfoPlist.strings/it.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_prefpane.prefPane/Contents/Resources/ja.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/me2me_preference_pane-InfoPlist.strings/ja.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_prefpane.prefPane/Contents/Resources/kn.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/me2me_preference_pane-InfoPlist.strings/kn.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_prefpane.prefPane/Contents/Resources/ko.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/me2me_preference_pane-InfoPlist.strings/ko.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_prefpane.prefPane/Contents/Resources/lt.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/me2me_preference_pane-InfoPlist.strings/lt.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_prefpane.prefPane/Contents/Resources/lv.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/me2me_preference_pane-InfoPlist.strings/lv.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_prefpane.prefPane/Contents/Resources/ml.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/me2me_preference_pane-InfoPlist.strings/ml.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_prefpane.prefPane/Contents/Resources/mr.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/me2me_preference_pane-InfoPlist.strings/mr.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_prefpane.prefPane/Contents/Resources/ms.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/me2me_preference_pane-InfoPlist.strings/ms.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_prefpane.prefPane/Contents/Resources/nb.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/me2me_preference_pane-InfoPlist.strings/nb.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_prefpane.prefPane/Contents/Resources/nl.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/me2me_preference_pane-InfoPlist.strings/nl.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_prefpane.prefPane/Contents/Resources/pl.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/me2me_preference_pane-InfoPlist.strings/pl.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_prefpane.prefPane/Contents/Resources/pt_BR.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/me2me_preference_pane-InfoPlist.strings/pt_BR.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_prefpane.prefPane/Contents/Resources/pt_PT.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/me2me_preference_pane-InfoPlist.strings/pt_PT.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_prefpane.prefPane/Contents/Resources/ro.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/me2me_preference_pane-InfoPlist.strings/ro.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_prefpane.prefPane/Contents/Resources/ru.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/me2me_preference_pane-InfoPlist.strings/ru.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_prefpane.prefPane/Contents/Resources/sk.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/me2me_preference_pane-InfoPlist.strings/sk.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_prefpane.prefPane/Contents/Resources/sl.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/me2me_preference_pane-InfoPlist.strings/sl.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_prefpane.prefPane/Contents/Resources/sr.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/me2me_preference_pane-InfoPlist.strings/sr.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_prefpane.prefPane/Contents/Resources/sv.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/me2me_preference_pane-InfoPlist.strings/sv.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_prefpane.prefPane/Contents/Resources/sw.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/me2me_preference_pane-InfoPlist.strings/sw.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_prefpane.prefPane/Contents/Resources/ta.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/me2me_preference_pane-InfoPlist.strings/ta.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_prefpane.prefPane/Contents/Resources/te.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/me2me_preference_pane-InfoPlist.strings/te.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_prefpane.prefPane/Contents/Resources/th.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/me2me_preference_pane-InfoPlist.strings/th.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_prefpane.prefPane/Contents/Resources/tr.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/me2me_preference_pane-InfoPlist.strings/tr.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_prefpane.prefPane/Contents/Resources/uk.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/me2me_preference_pane-InfoPlist.strings/uk.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_prefpane.prefPane/Contents/Resources/vi.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/me2me_preference_pane-InfoPlist.strings/vi.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_prefpane.prefPane/Contents/Resources/zh_CN.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/me2me_preference_pane-InfoPlist.strings/zh_CN.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    remoting_host_prefpane.prefPane/Contents/Resources/zh_TW.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/me2me_preference_pane-InfoPlist.strings/zh_TW.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build obj/remoting/remoting_host_prefpane.me2me_preference_pane-Info.plist: $
+    preprocess_infoplist $
+    ../../remoting/host/mac/me2me_preference_pane-Info.plist
+  defines = -DVERSION_FULL=49.0.2577.0 -DVERSION_SHORT=49.0.2577 $
+      -DBUNDLE_ID=org.chromium.remoting.preferences
+build remoting_host_prefpane.prefPane/Contents/Info.plist: copy_infoplist $
+    obj/remoting/remoting_host_prefpane.me2me_preference_pane-Info.plist
+  env = export ALWAYS_SEARCH_USER_PATHS=NO; export ARCHS="i386 x86_64"; $
+      export BUILT_FRAMEWORKS_DIR=/Users/superadmin/tmp/src/out/Debug; $
+      export BUILT_PRODUCTS_DIR=/Users/superadmin/tmp/src/out/Debug; export $
+      SRCROOT=/Users/superadmin/tmp/src/out/Debug/../../remoting; export $
+      SOURCE_ROOT="$${SRCROOT}"; export $
+      CC="$${SOURCE_ROOT}/../third_party/llvm-build/Release+Asserts/bin/clang"; $
+      export CLANG_CXX_LANGUAGE_STANDARD=c++11; export $
+      CLANG_CXX_LIBRARY=libc++; export CLANG_LINK_OBJC_RUNTIME=NO; export $
+      CLANG_WARN_OBJC_MISSING_PROPERTY_SYNTHESIS=YES; export $
+      CONFIGURATION=Debug; export $
+      CONTENTS_FOLDER_PATH=remoting_host_prefpane.prefPane/Contents; export $
+      COPY_PHASE_STRIP=NO; export EXECUTABLE_NAME=remoting_host_prefpane; $
+      export $
+      EXECUTABLE_PATH=remoting_host_prefpane.prefPane/Contents/MacOS/remoting_host_prefpane; $
+      export FULL_PRODUCT_NAME=remoting_host_prefpane.prefPane; export $
+      GCC_CW_ASM_SYNTAX=NO; export GCC_C_LANGUAGE_STANDARD=c99; export $
+      GCC_DYNAMIC_NO_PIC=NO; export GCC_ENABLE_CPP_EXCEPTIONS=NO; export $
+      GCC_ENABLE_CPP_RTTI=NO; export GCC_ENABLE_OBJC_GC=supported; export $
+      GCC_ENABLE_PASCAL_STRINGS=NO; export $
+      GCC_GENERATE_DEBUGGING_SYMBOLS=NO; export $
+      GCC_INLINES_ARE_PRIVATE_EXTERN=YES; export $
+      GCC_OBJC_CALL_CXX_CDTORS=YES; export $
+      GCC_PRECOMPILE_PREFIX_HEADER=YES; export $
+      GCC_SYMBOLS_PRIVATE_EXTERN=YES; export GCC_THREADSAFE_STATICS=NO; $
+      export GCC_TREAT_WARNINGS_AS_ERRORS=YES; export $
+      GCC_VERSION=com.apple.compilers.llvm.clang.1_0; export $
+      GCC_WARN_ABOUT_MISSING_NEWLINE=YES; export $
+      INFOPLIST_FILE=host/mac/me2me_preference_pane-Info.plist; export $
+      INFOPLIST_PATH=remoting_host_prefpane.prefPane/Contents/Info.plist; $
+      export INFOPLIST_PREPROCESS=YES; export $
+      INFOPLIST_PREPROCESSOR_DEFINITIONS="VERSION_FULL=\"49.0.2577.0\" $
+      VERSION_SHORT=\"49.0.2577\" $
+      BUNDLE_ID=\"org.chromium.remoting.preferences\""; export $
+      LDPLUSPLUS="$${SOURCE_ROOT}/../third_party/llvm-build/Release+Asserts/bin/clang++"; $
+      export MACH_O_TYPE=mh_bundle; export MACOSX_DEPLOYMENT_TARGET=10.6; $
+      export OTHER_LDFLAGS="-Wl,-search_paths_first -Wl,-ObjC"; export $
+      PRODUCT_NAME=remoting_host_prefpane; export $
+      PRODUCT_TYPE=com.apple.product-type.bundle; export $
+      SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk; $
+      export $
+      SHARED_PRECOMPS_DIR="$${CONFIGURATION_BUILD_DIR}/SharedPrecompiledHeaders"; $
+      export SYMROOT=../xcodebuild; export $
+      TARGET_BUILD_DIR=/Users/superadmin/tmp/src/out/Debug; export $
+      TEMP_DIR="$${TMPDIR}"; export $
+      UNLOCALIZED_RESOURCES_FOLDER_PATH=remoting_host_prefpane.prefPane/Contents/Resources; $
+      export USE_HEADERMAP=NO; export WARNING_CFLAGS="-Wall -Wendif-labels $
+      -Wextra -Wno-unused-parameter -Wno-missing-field-initializers $
+      -Wno-selector-type-mismatch -Wpartial-availability -Wheader-hygiene $
+      -Wno-char-subscripts -Wno-unneeded-internal-declaration $
+      -Wno-covered-switch-default -Wstring-conversion -Wno-c++11-narrowing $
+      -Wno-deprecated-register -Wno-inconsistent-missing-override $
+      -Wno-shift-negative-value -Wno-bitfield-width"; export $
+      WRAPPER_NAME=remoting_host_prefpane.prefPane;
+  keys = '{"DTXcode": "0701", "BuildMachineOSBuild": "14F27", "DTSDKName": $
+      "macosx10.10", "DTXcodeBuild": "7A1001", "DTSDKBuild": "14D125"}'
+  binary = False
+subninja obj/remoting/remoting_host_prefpane.i386.ninja
+subninja obj/remoting/remoting_host_prefpane.x86_64.ninja
+build $
+    remoting_host_prefpane.prefPane/Contents/MacOS/remoting_host_prefpane: $
+    lipo arch/libremoting_host_prefpane.i386.prefPane $
+    arch/libremoting_host_prefpane.x86_64.prefPane
+build remoting_host_prefpane.prefPane: package_framework $
+    remoting_host_prefpane.prefPane/Contents/Resources/me2me_preference_pane.nib $
+    remoting_host_prefpane.prefPane/Contents/Resources/me2me_preference_pane_confirm_pin.nib $
+    remoting_host_prefpane.prefPane/Contents/Resources/me2me_preference_pane_disable.nib $
+    remoting_host_prefpane.prefPane/Contents/Resources/chromoting128.png $
+    remoting_host_prefpane.prefPane/Contents/Resources/am.lproj/InfoPlist.strings $
+    remoting_host_prefpane.prefPane/Contents/Resources/ar.lproj/InfoPlist.strings $
+    remoting_host_prefpane.prefPane/Contents/Resources/bg.lproj/InfoPlist.strings $
+    remoting_host_prefpane.prefPane/Contents/Resources/bn.lproj/InfoPlist.strings $
+    remoting_host_prefpane.prefPane/Contents/Resources/ca.lproj/InfoPlist.strings $
+    remoting_host_prefpane.prefPane/Contents/Resources/cs.lproj/InfoPlist.strings $
+    remoting_host_prefpane.prefPane/Contents/Resources/da.lproj/InfoPlist.strings $
+    remoting_host_prefpane.prefPane/Contents/Resources/de.lproj/InfoPlist.strings $
+    remoting_host_prefpane.prefPane/Contents/Resources/el.lproj/InfoPlist.strings $
+    remoting_host_prefpane.prefPane/Contents/Resources/en.lproj/InfoPlist.strings $
+    remoting_host_prefpane.prefPane/Contents/Resources/en_GB.lproj/InfoPlist.strings $
+    remoting_host_prefpane.prefPane/Contents/Resources/es.lproj/InfoPlist.strings $
+    remoting_host_prefpane.prefPane/Contents/Resources/es_419.lproj/InfoPlist.strings $
+    remoting_host_prefpane.prefPane/Contents/Resources/et.lproj/InfoPlist.strings $
+    remoting_host_prefpane.prefPane/Contents/Resources/fa.lproj/InfoPlist.strings $
+    remoting_host_prefpane.prefPane/Contents/Resources/fake_bidi.lproj/InfoPlist.strings $
+    remoting_host_prefpane.prefPane/Contents/Resources/fi.lproj/InfoPlist.strings $
+    remoting_host_prefpane.prefPane/Contents/Resources/fil.lproj/InfoPlist.strings $
+    remoting_host_prefpane.prefPane/Contents/Resources/fr.lproj/InfoPlist.strings $
+    remoting_host_prefpane.prefPane/Contents/Resources/gu.lproj/InfoPlist.strings $
+    remoting_host_prefpane.prefPane/Contents/Resources/he.lproj/InfoPlist.strings $
+    remoting_host_prefpane.prefPane/Contents/Resources/hi.lproj/InfoPlist.strings $
+    remoting_host_prefpane.prefPane/Contents/Resources/hr.lproj/InfoPlist.strings $
+    remoting_host_prefpane.prefPane/Contents/Resources/hu.lproj/InfoPlist.strings $
+    remoting_host_prefpane.prefPane/Contents/Resources/id.lproj/InfoPlist.strings $
+    remoting_host_prefpane.prefPane/Contents/Resources/it.lproj/InfoPlist.strings $
+    remoting_host_prefpane.prefPane/Contents/Resources/ja.lproj/InfoPlist.strings $
+    remoting_host_prefpane.prefPane/Contents/Resources/kn.lproj/InfoPlist.strings $
+    remoting_host_prefpane.prefPane/Contents/Resources/ko.lproj/InfoPlist.strings $
+    remoting_host_prefpane.prefPane/Contents/Resources/lt.lproj/InfoPlist.strings $
+    remoting_host_prefpane.prefPane/Contents/Resources/lv.lproj/InfoPlist.strings $
+    remoting_host_prefpane.prefPane/Contents/Resources/ml.lproj/InfoPlist.strings $
+    remoting_host_prefpane.prefPane/Contents/Resources/mr.lproj/InfoPlist.strings $
+    remoting_host_prefpane.prefPane/Contents/Resources/ms.lproj/InfoPlist.strings $
+    remoting_host_prefpane.prefPane/Contents/Resources/nb.lproj/InfoPlist.strings $
+    remoting_host_prefpane.prefPane/Contents/Resources/nl.lproj/InfoPlist.strings $
+    remoting_host_prefpane.prefPane/Contents/Resources/pl.lproj/InfoPlist.strings $
+    remoting_host_prefpane.prefPane/Contents/Resources/pt_BR.lproj/InfoPlist.strings $
+    remoting_host_prefpane.prefPane/Contents/Resources/pt_PT.lproj/InfoPlist.strings $
+    remoting_host_prefpane.prefPane/Contents/Resources/ro.lproj/InfoPlist.strings $
+    remoting_host_prefpane.prefPane/Contents/Resources/ru.lproj/InfoPlist.strings $
+    remoting_host_prefpane.prefPane/Contents/Resources/sk.lproj/InfoPlist.strings $
+    remoting_host_prefpane.prefPane/Contents/Resources/sl.lproj/InfoPlist.strings $
+    remoting_host_prefpane.prefPane/Contents/Resources/sr.lproj/InfoPlist.strings $
+    remoting_host_prefpane.prefPane/Contents/Resources/sv.lproj/InfoPlist.strings $
+    remoting_host_prefpane.prefPane/Contents/Resources/sw.lproj/InfoPlist.strings $
+    remoting_host_prefpane.prefPane/Contents/Resources/ta.lproj/InfoPlist.strings $
+    remoting_host_prefpane.prefPane/Contents/Resources/te.lproj/InfoPlist.strings $
+    remoting_host_prefpane.prefPane/Contents/Resources/th.lproj/InfoPlist.strings $
+    remoting_host_prefpane.prefPane/Contents/Resources/tr.lproj/InfoPlist.strings $
+    remoting_host_prefpane.prefPane/Contents/Resources/uk.lproj/InfoPlist.strings $
+    remoting_host_prefpane.prefPane/Contents/Resources/vi.lproj/InfoPlist.strings $
+    remoting_host_prefpane.prefPane/Contents/Resources/zh_CN.lproj/InfoPlist.strings $
+    remoting_host_prefpane.prefPane/Contents/Resources/zh_TW.lproj/InfoPlist.strings $
+    remoting_host_prefpane.prefPane/Contents/Info.plist $
+    remoting_host_prefpane.prefPane/Contents/MacOS/remoting_host_prefpane
+  version = A

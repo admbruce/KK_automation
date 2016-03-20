@@ -1,0 +1,85 @@
+build obj/components/nacl.actions_depends.stamp: stamp libsel.a $
+    nacl_irt_x86_64.nexe $
+    obj/ppapi/native_client/src/untrusted/pnacl_support_extension/pnacl_support_extension.actions_rules_copies.stamp
+
+build obj/components/nacl.compile_depends.stamp: stamp $
+    obj/native_client/src/trusted/service_runtime/sel.actions_rules_copies.stamp $
+    nacl_irt_x86_64.nexe $
+    obj/ppapi/native_client/src/untrusted/pnacl_support_extension/pnacl_support_extension.actions_rules_copies.stamp
+
+defines = -DV8_DEPRECATION_WARNINGS -DCLD_VERSION=2 $
+    -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORE=0 -DCHROMIUM_BUILD $
+    -DCR_CLANG_REVISION=254049-1 -DUSE_LIBJPEG_TURBO=1 $
+    -DENABLE_ONE_CLICK_SIGNIN -DENABLE_PRE_SYNC_BACKUP -DENABLE_WEBRTC=1 $
+    -DENABLE_MEDIA_ROUTER=1 -DENABLE_PEPPER_CDMS $
+    -DENABLE_CONFIGURATION_POLICY -DENABLE_NOTIFICATIONS -DENABLE_HIDPI=1 $
+    -DDONT_EMBED_BUILD_METADATA -DFIELDTRIAL_TESTING_ENABLED $
+    -DENABLE_TASK_MANAGER=1 -DENABLE_EXTENSIONS=1 -DENABLE_PDF=1 $
+    -DENABLE_PLUGIN_INSTALLATION=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_THEMES=1 -DENABLE_AUTOFILL_DIALOG=1 $
+    -DENABLE_BACKGROUND=1 -DENABLE_PRINTING=1 -DENABLE_BASIC_PRINTING=1 $
+    -DENABLE_PRINT_PREVIEW=1 -DENABLE_SPELLCHECK=1 $
+    -DUSE_BROWSER_SPELLCHECKER=1 -DENABLE_CAPTIVE_PORTAL_DETECTION=1 $
+    -DENABLE_APP_LIST=1 -DENABLE_SETTINGS_APP=1 -DENABLE_SUPERVISED_USERS=1 $
+    -DENABLE_SERVICE_DISCOVERY=1 -DV8_USE_EXTERNAL_STARTUP_DATA $
+    -DFULL_SAFE_BROWSING -DSAFE_BROWSING_CSD -DSAFE_BROWSING_DB_LOCAL $
+    -DUSE_LIBPCI=1 -DUSE_OPENSSL=1 -D__STDC_CONSTANT_MACROS $
+    -D__STDC_FORMAT_MACROS -DDYNAMIC_ANNOTATIONS_ENABLED=1 $
+    -DWTF_USE_DYNAMIC_ANNOTATIONS=1
+includes = -Igen -I../../third_party/khronos -I../../gpu -I../.. $
+    -I../../skia/config -Iobj/components/nacl.gen
+cflags = -isysroot $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk $
+    -O0 -fvisibility=hidden -Werror -Wnewline-eof -mmacosx-version-min=10.6 $
+    -arch x86_64 -Wall -Wendif-labels -Wextra -Wno-unused-parameter $
+    -Wno-missing-field-initializers -Wno-selector-type-mismatch $
+    -Wpartial-availability -Wheader-hygiene -Wno-char-subscripts $
+    -Wno-unneeded-internal-declaration -Wno-covered-switch-default $
+    -Wstring-conversion -Wno-c++11-narrowing -Wno-deprecated-register $
+    -Wno-inconsistent-missing-override -Wno-shift-negative-value $
+    -Wno-bitfield-width
+cflags_c = -std=c99 -Xclang -load -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing -fstack-protector-all $
+    -Wno-undefined-bool-conversion -Wno-tautological-undefined-compare
+cflags_cc = -std=c++11 -stdlib=libc++ -fno-rtti -fno-exceptions $
+    -fvisibility-inlines-hidden -fno-threadsafe-statics -Xclang -load $
+    -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing -fstack-protector-all $
+    -Wno-undefined-bool-conversion -Wno-tautological-undefined-compare
+cflags_objc = $cflags_c -Wobjc-missing-property-synthesis
+cflags_objcc = $cflags_cc -Wobjc-missing-property-synthesis $
+    -fobjc-call-cxx-cdtors
+arflags = 
+
+build obj/components/nacl/loader/nacl.nacl_ipc_adapter.o: cxx $
+    ../../components/nacl/loader/nacl_ipc_adapter.cc || $
+    obj/components/nacl.compile_depends.stamp
+build obj/components/nacl/loader/nacl.nacl_listener.o: cxx $
+    ../../components/nacl/loader/nacl_listener.cc || $
+    obj/components/nacl.compile_depends.stamp
+build obj/components/nacl/loader/nacl.nacl_main.o: cxx $
+    ../../components/nacl/loader/nacl_main.cc || $
+    obj/components/nacl.compile_depends.stamp
+build obj/components/nacl/loader/nacl.nacl_main_platform_delegate_mac.o: $
+    objcxx ../../components/nacl/loader/nacl_main_platform_delegate_mac.mm $
+    || obj/components/nacl.compile_depends.stamp
+build obj/components/nacl/loader/nacl.nacl_trusted_listener.o: cxx $
+    ../../components/nacl/loader/nacl_trusted_listener.cc || $
+    obj/components/nacl.compile_depends.stamp
+build obj/components/nacl/loader/nacl.nacl_validation_query.o: cxx $
+    ../../components/nacl/loader/nacl_validation_query.cc || $
+    obj/components/nacl.compile_depends.stamp
+
+build libnacl.a: alink obj/components/nacl/loader/nacl.nacl_ipc_adapter.o $
+    obj/components/nacl/loader/nacl.nacl_listener.o $
+    obj/components/nacl/loader/nacl.nacl_main.o $
+    obj/components/nacl/loader/nacl.nacl_main_platform_delegate_mac.o $
+    obj/components/nacl/loader/nacl.nacl_trusted_listener.o $
+    obj/components/nacl/loader/nacl.nacl_validation_query.o || $
+    obj/components/nacl.actions_depends.stamp

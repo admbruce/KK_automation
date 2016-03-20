@@ -1,0 +1,168 @@
+build obj/chrome/helper_app.actions_depends.stamp: stamp $
+    chrome_dll_dependency_shim infoplist_strings_tool $
+    gen/chrome/common/chrome_version.h
+
+build obj/chrome/helper_app.compile_depends.stamp: stamp $
+    obj/chrome/chrome_dll_dependency_shim.gen/dummy_main.c $
+    obj/chrome/infoplist_strings_tool.compile_depends.stamp $
+    gen/chrome/common/chrome_version.h
+
+build Chromium$ Helper.app/Contents/Info.plist: copy_infoplist $
+    ../../chrome/app/helper-Info.plist
+  env = export ALWAYS_SEARCH_USER_PATHS=NO; export ARCHS=x86_64; export $
+      BUILT_FRAMEWORKS_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      BUILT_PRODUCTS_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      SRCROOT=/Users/superadmin/tmp/src/out/Release/../../chrome; export $
+      SOURCE_ROOT="$${SRCROOT}"; export $
+      CC="$${SOURCE_ROOT}/../third_party/llvm-build/Release+Asserts/bin/clang"; $
+      export CHROMIUM_BUNDLE_ID=org.chromium.Chromium; export $
+      CHROMIUM_SHORT_NAME=Chromium; export $
+      CHROMIUM_STRIP_SAVE_FILE=app/app.saves; export $
+      CLANG_CXX_LANGUAGE_STANDARD=c++11; export CLANG_CXX_LIBRARY=libc++; $
+      export CLANG_LINK_OBJC_RUNTIME=NO; export $
+      CLANG_WARN_OBJC_MISSING_PROPERTY_SYNTHESIS=YES; export $
+      CONFIGURATION=Release; export CONTENTS_FOLDER_PATH="Chromium $
+      Helper.app/Contents"; export COPY_PHASE_STRIP=NO; export $
+      EXECUTABLE_NAME="Chromium Helper"; export EXECUTABLE_PATH="Chromium $
+      Helper.app/Contents/MacOS/Chromium Helper"; export $
+      FULL_PRODUCT_NAME="Chromium Helper.app"; export GCC_CW_ASM_SYNTAX=NO; $
+      export GCC_C_LANGUAGE_STANDARD=c99; export GCC_DYNAMIC_NO_PIC=NO; $
+      export GCC_ENABLE_CPP_EXCEPTIONS=NO; export GCC_ENABLE_CPP_RTTI=NO; $
+      export GCC_ENABLE_PASCAL_STRINGS=NO; export $
+      GCC_GENERATE_DEBUGGING_SYMBOLS=NO; export $
+      GCC_INLINES_ARE_PRIVATE_EXTERN=YES; export $
+      GCC_OBJC_CALL_CXX_CDTORS=YES; export $
+      GCC_PRECOMPILE_PREFIX_HEADER=YES; export $
+      GCC_SYMBOLS_PRIVATE_EXTERN=YES; export GCC_THREADSAFE_STATICS=NO; $
+      export GCC_TREAT_WARNINGS_AS_ERRORS=YES; export $
+      GCC_VERSION=com.apple.compilers.llvm.clang.1_0; export $
+      GCC_WARN_ABOUT_MISSING_NEWLINE=YES; export $
+      INFOPLIST_FILE=app/helper-Info.plist; export INFOPLIST_PATH="Chromium $
+      Helper.app/Contents/Info.plist"; export $
+      LDPLUSPLUS="$${SOURCE_ROOT}/../third_party/llvm-build/Release+Asserts/bin/clang++"; $
+      export MACH_O_TYPE=mh_execute; export MACOSX_DEPLOYMENT_TARGET=10.6; $
+      export OTHER_LDFLAGS="-framework Cocoa -framework Foundation $
+      -framework IOKit -framework Security -framework SystemConfiguration $
+      -Wl,-search_paths_first -Wl,-ObjC -Wl,-pie"; export $
+      PRODUCT_NAME="Chromium Helper"; export $
+      PRODUCT_TYPE=com.apple.product-type.application; export $
+      SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk; $
+      export $
+      SHARED_PRECOMPS_DIR="$${CONFIGURATION_BUILD_DIR}/SharedPrecompiledHeaders"; $
+      export SYMROOT=../xcodebuild; export $
+      TARGET_BUILD_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      TEMP_DIR="$${TMPDIR}"; export $
+      UNLOCALIZED_RESOURCES_FOLDER_PATH="Chromium $
+      Helper.app/Contents/Resources"; export USE_HEADERMAP=NO; export $
+      WARNING_CFLAGS="-Wall -Wendif-labels -Wextra -Wno-unused-parameter $
+      -Wno-missing-field-initializers -Wno-selector-type-mismatch $
+      -Wpartial-availability -Wheader-hygiene -Wno-char-subscripts $
+      -Wno-unneeded-internal-declaration -Wno-covered-switch-default $
+      -Wstring-conversion -Wno-c++11-narrowing -Wno-deprecated-register $
+      -Wno-inconsistent-missing-override -Wno-shift-negative-value $
+      -Wno-bitfield-width -Wexit-time-destructors"; export $
+      WRAPPER_NAME="Chromium Helper.app";
+  keys = '{"DTXcode": "0701", "BuildMachineOSBuild": "14F27", "DTSDKName": $
+      "macosx10.10", "DTXcodeBuild": "7A1001", "DTSDKBuild": "14D125"}'
+  binary = False
+defines = -DV8_DEPRECATION_WARNINGS -DCLD_VERSION=2 $
+    -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORE=0 -DCHROMIUM_BUILD $
+    -DCR_CLANG_REVISION=254049-1 -DUSE_LIBJPEG_TURBO=1 $
+    -DENABLE_ONE_CLICK_SIGNIN -DENABLE_PRE_SYNC_BACKUP -DENABLE_WEBRTC=1 $
+    -DENABLE_MEDIA_ROUTER=1 -DENABLE_PEPPER_CDMS $
+    -DENABLE_CONFIGURATION_POLICY -DENABLE_NOTIFICATIONS -DENABLE_HIDPI=1 $
+    -DDONT_EMBED_BUILD_METADATA -DFIELDTRIAL_TESTING_ENABLED $
+    -DENABLE_TASK_MANAGER=1 -DENABLE_EXTENSIONS=1 -DENABLE_PDF=1 $
+    -DENABLE_PLUGIN_INSTALLATION=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_THEMES=1 -DENABLE_AUTOFILL_DIALOG=1 $
+    -DENABLE_BACKGROUND=1 -DENABLE_PRINTING=1 -DENABLE_BASIC_PRINTING=1 $
+    -DENABLE_PRINT_PREVIEW=1 -DENABLE_SPELLCHECK=1 $
+    -DUSE_BROWSER_SPELLCHECKER=1 -DENABLE_CAPTIVE_PORTAL_DETECTION=1 $
+    -DENABLE_APP_LIST=1 -DENABLE_SETTINGS_APP=1 -DENABLE_SUPERVISED_USERS=1 $
+    -DENABLE_SERVICE_DISCOVERY=1 -DV8_USE_EXTERNAL_STARTUP_DATA $
+    -DFULL_SAFE_BROWSING -DSAFE_BROWSING_CSD -DSAFE_BROWSING_DB_LOCAL $
+    -DHELPER_EXECUTABLE -DMOJO_USE_SYSTEM_IMPL -DTOOLKIT_VIEWS=1 $
+    -DUSE_LIBPCI=1 -DUSE_OPENSSL=1 -D__STDC_CONSTANT_MACROS $
+    -D__STDC_FORMAT_MACROS -DNDEBUG -DNVALGRIND $
+    -DDYNAMIC_ANNOTATIONS_ENABLED=0 -D_FORTIFY_SOURCE=2
+includes = -Igen -I../.. -I../../skia/config -I../../third_party/khronos $
+    -I../../gpu -Igen/angle -I../../third_party/WebKit/Source
+cflags = -isysroot $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk $
+    -O2 -fvisibility=hidden -Werror -Wnewline-eof -mmacosx-version-min=10.6 $
+    -arch x86_64 -Wall -Wendif-labels -Wextra -Wno-unused-parameter $
+    -Wno-missing-field-initializers -Wno-selector-type-mismatch $
+    -Wpartial-availability -Wheader-hygiene -Wno-char-subscripts $
+    -Wno-unneeded-internal-declaration -Wno-covered-switch-default $
+    -Wstring-conversion -Wno-c++11-narrowing -Wno-deprecated-register $
+    -Wno-inconsistent-missing-override -Wno-shift-negative-value $
+    -Wno-bitfield-width -Wexit-time-destructors
+cflags_c = -std=c99 -Xclang -load -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing
+cflags_cc = -std=c++11 -stdlib=libc++ -fno-rtti -fno-exceptions $
+    -fvisibility-inlines-hidden -fno-threadsafe-statics -Xclang -load $
+    -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing
+cflags_objc = $cflags_c -Wobjc-missing-property-synthesis
+cflags_objcc = $cflags_cc -Wobjc-missing-property-synthesis $
+    -fobjc-call-cxx-cdtors
+arflags = 
+
+build obj/chrome/app/helper_app.chrome_exe_main_mac.o: cc $
+    ../../chrome/app/chrome_exe_main_mac.c || $
+    obj/chrome/helper_app.compile_depends.stamp
+
+ldflags = -framework Cocoa -framework Foundation -framework IOKit $
+    -framework Security -framework SystemConfiguration $
+    -Wl,-search_paths_first -Wl,-ObjC -Wl,-pie -Wl,-dead_strip $
+    -mmacosx-version-min=10.6 -isysroot $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk $
+    -arch x86_64 -L. -stdlib=libc++
+libs = '-L../../third_party/libc++-static' -framework AppKit -framework $
+    CoreFoundation
+build Chromium$ Helper.app/Contents/MacOS/Chromium$ Helper: link $
+    obj/chrome/app/helper_app.chrome_exe_main_mac.o | $
+    chrome_dll_dependency_shim gen/chrome/common/chrome_version.h $
+    infoplist_strings_tool
+build Chromium$ Helper.app: stamp Chromium$ Helper.app/Contents/Info.plist $
+    Chromium$ Helper.app/Contents/MacOS/Chromium$ Helper
+  postbuilds = (export $
+      BUILT_FRAMEWORKS_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      BUILT_PRODUCTS_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      CHROMIUM_STRIP_SAVE_FILE=app/app.saves; export CONFIGURATION=Release; $
+      export CONTENTS_FOLDER_PATH="Chromium Helper.app/Contents"; export $
+      EXECUTABLE_NAME="Chromium Helper"; export EXECUTABLE_PATH="Chromium $
+      Helper.app/Contents/MacOS/Chromium Helper"; export $
+      FULL_PRODUCT_NAME="Chromium Helper.app"; export $
+      INFOPLIST_PATH="Chromium Helper.app/Contents/Info.plist"; export $
+      MACH_O_TYPE=mh_execute; export PRODUCT_NAME="Chromium Helper"; export $
+      PRODUCT_TYPE=com.apple.product-type.application; export $
+      SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk; $
+      export SRCROOT=/Users/superadmin/tmp/src/out/Release/../../chrome; $
+      export SOURCE_ROOT="$${SRCROOT}"; export $
+      TARGET_BUILD_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      TEMP_DIR="$${TMPDIR}"; export $
+      UNLOCALIZED_RESOURCES_FOLDER_PATH="Chromium $
+      Helper.app/Contents/Resources"; export WRAPPER_NAME="Chromium $
+      Helper.app"; (cd ../../chrome && tools/build/mac/make_locale_dirs.sh $
+      am.lproj ar.lproj bg.lproj bn.lproj ca.lproj cs.lproj da.lproj $
+      de.lproj el.lproj en_GB.lproj en.lproj es_419.lproj es.lproj et.lproj $
+      fa.lproj fi.lproj fil.lproj fr.lproj gu.lproj he.lproj hi.lproj $
+      hr.lproj hu.lproj id.lproj it.lproj ja.lproj kn.lproj ko.lproj $
+      lt.lproj lv.lproj ml.lproj mr.lproj ms.lproj nb.lproj nl.lproj $
+      pl.lproj pt_BR.lproj pt_PT.lproj ro.lproj ru.lproj sk.lproj sl.lproj $
+      sr.lproj sv.lproj sw.lproj ta.lproj te.lproj th.lproj tr.lproj $
+      uk.lproj vi.lproj zh_CN.lproj zh_TW.lproj && install_name_tool $
+      -change "@executable_path/../Versions/49.0.2577.0/Chromium $
+      Framework.framework/Chromium Framework" $
+      "@executable_path/../../../Chromium Framework.framework/Chromium $
+      Framework" "$${BUILT_PRODUCTS_DIR}/$${EXECUTABLE_PATH}" && $
+      ../build/mac/tweak_info_plist.py "--breakpad=0" "--keystone=0" $
+      "--scm=0" && ../build/mac/change_mach_o_flags_from_xcode.sh); G=$$?; $
+      ((exit $$G) || rm -rf 'Chromium Helper.app') && exit $$G) && 

@@ -1,0 +1,36 @@
+build obj/chrome/installer_packaging.actions_depends.stamp: stamp $
+    libgoobsdiff_sha1_adapter.a goobsdiff goobspatch liblzma.a $
+    liblzma_decompress.dylib.TOC xz xzdec
+
+build Chromium$ Packaging/goobsdiff: copy goobsdiff || $
+    obj/chrome/installer_packaging.actions_depends.stamp
+build Chromium$ Packaging/goobspatch: copy goobspatch || $
+    obj/chrome/installer_packaging.actions_depends.stamp
+build Chromium$ Packaging/liblzma_decompress.dylib: copy $
+    liblzma_decompress.dylib || $
+    obj/chrome/installer_packaging.actions_depends.stamp
+build Chromium$ Packaging/xz: copy xz || $
+    obj/chrome/installer_packaging.actions_depends.stamp
+build Chromium$ Packaging/xzdec: copy xzdec || $
+    obj/chrome/installer_packaging.actions_depends.stamp
+build Chromium$ Packaging/dirdiffer.sh: copy $
+    ../../chrome/installer/mac/dirdiffer.sh || $
+    obj/chrome/installer_packaging.actions_depends.stamp
+build Chromium$ Packaging/dirpatcher.sh: copy $
+    ../../chrome/installer/mac/dirpatcher.sh || $
+    obj/chrome/installer_packaging.actions_depends.stamp
+build Chromium$ Packaging/dmgdiffer.sh: copy $
+    ../../chrome/installer/mac/dmgdiffer.sh || $
+    obj/chrome/installer_packaging.actions_depends.stamp
+build Chromium$ Packaging/pkg-dmg: copy ../../chrome/installer/mac/pkg-dmg $
+    || obj/chrome/installer_packaging.actions_depends.stamp
+build Chromium$ Packaging/sign_installer_tools.sh: copy $
+    ../../chrome/installer/mac/sign_installer_tools.sh || $
+    obj/chrome/installer_packaging.actions_depends.stamp
+build obj/chrome/installer_packaging.actions_rules_copies.stamp: stamp $
+    Chromium$ Packaging/goobsdiff Chromium$ Packaging/goobspatch $
+    Chromium$ Packaging/liblzma_decompress.dylib Chromium$ Packaging/xz $
+    Chromium$ Packaging/xzdec Chromium$ Packaging/dirdiffer.sh $
+    Chromium$ Packaging/dirpatcher.sh Chromium$ Packaging/dmgdiffer.sh $
+    Chromium$ Packaging/pkg-dmg Chromium$ Packaging/sign_installer_tools.sh
+

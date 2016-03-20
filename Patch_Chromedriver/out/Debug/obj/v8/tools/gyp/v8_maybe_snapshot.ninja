@@ -1,0 +1,3 @@
+build obj/v8/tools/gyp/v8_maybe_snapshot.actions_depends.stamp: stamp $
+    libv8_base.a libv8_external_snapshot.a
+

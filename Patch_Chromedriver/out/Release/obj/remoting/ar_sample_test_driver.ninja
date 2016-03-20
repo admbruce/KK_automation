@@ -1,0 +1,324 @@
+build obj/remoting/ar_sample_test_driver.actions_depends.stamp: stamp $
+    libar_test_driver_common.a libgtest.a libchromotocol_proto_lib.a $
+    libprotobuf_lite.a libdesktop_capture.a libsystem_wrappers.a $
+    libwebrtc_common.a librtc_base_approved.a libbase.a libbase_static.a $
+    liballocator_extension_thunks.a libmodp_b64.a libdynamic_annotations.a $
+    libevent.a librtc_base.a libboringssl.a $
+    libdesktop_capture_differ_sse2.a libremoting_test_support.a $
+    libnet_test_support.a libtest_support_base.a libbase_i18n.a $
+    libicui18n.a libicuuc.a icudtl.dat icudtl.dat libgmock.a libxml2.a $
+    libchrome_zlib.a libzlib_x86_simd.a libcrcrypto.a libtld_cleanup_util.a $
+    liburl_lib.a libnet.a libnet_quic_proto.a libbase_prefs.a libsdch.a $
+    obj/net/net_derived_sources.actions_rules_copies.stamp $
+    obj/net/net_resources.actions_rules_copies.stamp $
+    obj/third_party/protobuf/py_proto.actions_rules_copies.stamp $
+    libnet_with_v8.a libgin.a $
+    obj/v8/tools/gyp/v8_maybe_snapshot.actions_depends.stamp $
+    obj/v8/tools/gyp/v8_maybe_snapshot.actions_depends.stamp libv8_base.a $
+    libv8_libbase.a libv8_external_snapshot.a $
+    obj/v8/tools/gyp/js2c.actions_rules_copies.stamp natives_blob.bin $
+    libremoting_base.a libmedia.a libcommand_buffer_common.a $
+    libgles2_utils.a obj/skia/skia.actions_depends.stamp libskia_library.a $
+    libskia_opts.a libskia_opts_ssse3.a libskia_opts_sse41.a $
+    libskia_opts_sse42.a libskia_opts_avx.a libskia_opts_avx2.a libsfntly.a $
+    libskia_chrome.a libyuv.a libjpeg_turbo.a libopus.a libevents_base.a $
+    libgfx.a libharfbuzz-ng.a libpng.a libgfx_geometry.a $
+    libdom_keycode_converter.a libshared_memory_support.a libffmpeg.a $
+    libffmpeg_yasm.a libvpx_new.a libvpx_intrinsics_mmx.a $
+    libvpx_intrinsics_sse2.a libvpx_intrinsics_ssse3.a $
+    libvpx_intrinsics_sse4_1.a libvpx_intrinsics_avx.a $
+    libvpx_intrinsics_avx2.a libwebm.a libdecklink.a libmedia_asm.a $
+    libui_base.a libevents.a libgesture_detection.a libevents_platform.a $
+    obj/ui/resources/ui_resources.actions_rules_copies.stamp $
+    obj/ui/strings/ui_strings.actions_rules_copies.stamp libmozilla.a $
+    obj/remoting/remoting_resources.actions_rules_copies.stamp $
+    obj/remoting/remoting_webapp_html.actions_rules_copies.stamp $
+    libremoting_client.a libremoting_protocol.a libjingle_glue.a $
+    libjingle.a libexpat.a librtc_xmllite.a libjingle_p2p_constants.a $
+    libjingle_webrtc.a libaudio_processing.a libcommon_audio.a $
+    libopenmax_dl.a libcommon_audio_sse2.a libisac.a $
+    libaudio_decoder_interface.a libaudio_encoder_interface.a $
+    libisac_common.a libaudioproc_debug_proto.a libaudio_processing_sse2.a $
+    libjingle_webrtc_common.a libsrtp.a libmedia_file.a libvideo_capture.a $
+    libvideo_capture_module.a libwebrtc_utility.a libaudio_coding_module.a $
+    libcng.a libg711.a libpcm16b.a libwebrtc_opus.a libg722.a $
+    librtc_event_log.a librtc_event_log_proto.a libneteq.a $
+    librent_a_codec.a libcommon_video.a libvideo_render.a $
+    libvideo_render_module.a libusrsctplib.a libpeerconnection.a $
+    libvoice_engine.a libaudio_conference_mixer.a libaudio_device.a $
+    libbitrate_controller.a librtp_rtcp.a libremote_bitrate_estimator.a $
+    libwebrtc.a libpaced_sender.a libvideo_processing.a $
+    libvideo_processing_sse2.a libwebrtc_video_coding.a libwebrtc_h264.a $
+    libwebrtc_i420.a libvideo_coding_utility.a libwebrtc_vp8.a $
+    libwebrtc_vp9.a libremoting_host.a gen/remoting/CREDITS.txt libpolicy.a $
+    obj/components/cloud_policy_code_generate.actions_rules_copies.stamp $
+    libcloud_policy_proto_generated_compile.a libpolicy_component_common.a $
+    libgoogle_apis.a libre2.a libcloud_policy_proto.a $
+    libdata_use_measurement_core.a libjson_schema.a libipc.a $
+    libgoogle_toolbox_for_mac.a libpolicy_component_test_support.a $
+    obj/components/policy_component.actions_depends.stamp $
+    libpolicy_component_browser.a libbookmarks_browser.a $
+    libbookmarks_common.a $
+    obj/components/components_strings.actions_rules_copies.stamp $
+    libfavicon_base.a libkeyed_service_core.a libuser_prefs.a $
+    libpref_registry.a libquery_parser.a liburl_formatter.a libviews.a $
+    libaccessibility.a libax_gen.a libapi_gen_util.a libui_base_ime.a $
+    libcompositor.a libcc.a libcc_proto.a obj/gpu/gpu.actions_depends.stamp $
+    libcommand_buffer_client.a libcommand_buffer_service.a $
+    libdisk_cache_proto.a libgpu_config.a libgl_wrapper.a libcityhash.a $
+    gen/angle/id/commit.h $
+    obj/third_party/angle/src/copy_scripts.actions_rules_copies.stamp $
+    libtranslator.a libtranslator_lib.a libpreprocessor.a libangle_common.a $
+    libgles2_cmd_helper.a libgpu_ipc.a libcc_surfaces.a $
+    libgfx_vector_icons.a libnative_theme.a $
+    obj/ui/views/resources/views_resources.actions_rules_copies.stamp $
+    libaccelerated_widget_mac.a libbookmarks_managed.a liburl_matcher.a $
+    libautofill_core_common.a libproxy_config.a $
+    obj/components/policy_test_support.actions_depends.stamp $
+    libchrome_settings_proto_generated_compile.a
+
+build obj/remoting/ar_sample_test_driver.compile_depends.stamp: stamp $
+    obj/remoting/proto/chromotocol_proto_lib.actions_rules_copies.stamp $
+    obj/remoting/proto/chromotocol_proto_lib.actions_rules_copies.stamp $
+    obj/remoting/remoting_test_support.compile_depends.stamp $
+    obj/third_party/protobuf/py_proto.actions_rules_copies.stamp icudtl.dat $
+    icudtl.dat icudtl.dat obj/net/net.compile_depends.stamp $
+    obj/net/net_quic_proto.actions_rules_copies.stamp $
+    obj/net/net_derived_sources.actions_rules_copies.stamp $
+    obj/net/net_resources.actions_rules_copies.stamp $
+    obj/third_party/protobuf/py_proto.actions_rules_copies.stamp $
+    snapshot_blob.bin snapshot_blob.bin snapshot_blob.bin snapshot_blob.bin $
+    snapshot_blob.bin obj/v8/tools/gyp/js2c.actions_rules_copies.stamp $
+    natives_blob.bin obj/remoting/remoting_base.compile_depends.stamp $
+    obj/third_party/libjpeg_turbo/libjpeg.actions_rules_copies.stamp $
+    obj/third_party/ffmpeg/ffmpeg_yasm.actions_rules_copies.stamp $
+    obj/third_party/libvpx_new/libvpx_new.actions_rules_copies.stamp $
+    obj/media/media_asm.actions_rules_copies.stamp $
+    obj/ui/base/ui_base.compile_depends.stamp $
+    obj/ui/resources/ui_resources.actions_rules_copies.stamp $
+    obj/ui/strings/ui_strings.actions_rules_copies.stamp $
+    obj/remoting/remoting_resources.actions_rules_copies.stamp $
+    obj/remoting/remoting_webapp_html.actions_rules_copies.stamp $
+    obj/remoting/remoting_client.compile_depends.stamp $
+    obj/remoting/remoting_protocol.compile_depends.stamp $
+    obj/third_party/webrtc/modules/audioproc_debug_proto.actions_rules_copies.stamp $
+    obj/third_party/webrtc/modules/audioproc_debug_proto.actions_rules_copies.stamp $
+    obj/third_party/webrtc/rtc_event_log_proto.actions_rules_copies.stamp $
+    obj/third_party/webrtc/rtc_event_log_proto.actions_rules_copies.stamp $
+    obj/remoting/remoting_host.compile_depends.stamp $
+    gen/remoting/CREDITS.txt obj/components/policy.compile_depends.stamp $
+    obj/components/cloud_policy_code_generate.actions_rules_copies.stamp $
+    obj/components/cloud_policy_proto_generated_compile.actions_rules_copies.stamp $
+    obj/components/policy_component_common.compile_depends.stamp $
+    obj/components/cloud_policy_proto.actions_rules_copies.stamp $
+    obj/components/policy_component_test_support.compile_depends.stamp $
+    obj/components/policy_component.compile_depends.stamp $
+    obj/components/policy_component_browser.compile_depends.stamp $
+    obj/components/bookmarks_browser.compile_depends.stamp $
+    obj/components/components_strings.actions_rules_copies.stamp $
+    obj/ui/views/views.compile_depends.stamp $
+    obj/ui/accessibility/ax_gen.actions_rules_copies.stamp $
+    obj/ui/accessibility/ax_gen.actions_rules_copies.stamp $
+    obj/cc/cc.compile_depends.stamp $
+    obj/cc/cc_proto.actions_rules_copies.stamp $
+    obj/gpu/command_buffer_service.compile_depends.stamp $
+    obj/gpu/command_buffer_service.compile_depends.stamp $
+    obj/gpu/disk_cache_proto.actions_rules_copies.stamp $
+    gen/angle/id/commit.h $
+    obj/third_party/angle/src/copy_scripts.actions_rules_copies.stamp $
+    obj/gpu/command_buffer_service.compile_depends.stamp $
+    obj/ui/gfx/gfx_vector_icons.actions_rules_copies.stamp $
+    obj/ui/resources/ui_resources.actions_rules_copies.stamp $
+    obj/ui/views/resources/views_resources.actions_rules_copies.stamp $
+    obj/components/components_strings.actions_rules_copies.stamp $
+    obj/components/policy_test_support.compile_depends.stamp $
+    obj/components/chrome_settings_proto_generated_compile.actions_rules_copies.stamp
+
+defines = -DBINARY_CORE=1 -DBINARY_DESKTOP=2 -DBINARY_HOST_ME2ME=3 $
+    -DBINARY_NATIVE_MESSAGING_HOST=4 -DBINARY_REMOTE_ASSISTANCE_HOST=5 $
+    -DV8_DEPRECATION_WARNINGS -DCLD_VERSION=2 $
+    -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORE=0 -DCHROMIUM_BUILD $
+    -DCR_CLANG_REVISION=254049-1 -DUSE_LIBJPEG_TURBO=1 $
+    -DENABLE_ONE_CLICK_SIGNIN -DENABLE_PRE_SYNC_BACKUP -DENABLE_WEBRTC=1 $
+    -DENABLE_MEDIA_ROUTER=1 -DENABLE_PEPPER_CDMS $
+    -DENABLE_CONFIGURATION_POLICY -DENABLE_NOTIFICATIONS -DENABLE_HIDPI=1 $
+    -DDONT_EMBED_BUILD_METADATA -DFIELDTRIAL_TESTING_ENABLED $
+    -DENABLE_TASK_MANAGER=1 -DENABLE_EXTENSIONS=1 -DENABLE_PDF=1 $
+    -DENABLE_PLUGIN_INSTALLATION=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_THEMES=1 -DENABLE_AUTOFILL_DIALOG=1 $
+    -DENABLE_BACKGROUND=1 -DENABLE_PRINTING=1 -DENABLE_BASIC_PRINTING=1 $
+    -DENABLE_PRINT_PREVIEW=1 -DENABLE_SPELLCHECK=1 $
+    -DUSE_BROWSER_SPELLCHECKER=1 -DENABLE_CAPTIVE_PORTAL_DETECTION=1 $
+    -DENABLE_APP_LIST=1 -DENABLE_SETTINGS_APP=1 -DENABLE_SUPERVISED_USERS=1 $
+    -DENABLE_SERVICE_DISCOVERY=1 -DV8_USE_EXTERNAL_STARTUP_DATA $
+    -DFULL_SAFE_BROWSING -DSAFE_BROWSING_CSD -DSAFE_BROWSING_DB_LOCAL $
+    -DGTEST_HAS_POSIX_RE=0 -DGTEST_LANG_CXX11=0 -DTOOLKIT_VIEWS=1 $
+    -DUNIT_TEST -DGTEST_HAS_RTTI=0 -DUSE_LIBPCI=1 -DUSE_OPENSSL=1 $
+    -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -DNDEBUG -DNVALGRIND $
+    -DDYNAMIC_ANNOTATIONS_ENABLED=0 -D_FORTIFY_SOURCE=2
+includes = -I../.. -Igen -I../../third_party/khronos -I../../gpu $
+    -I../../skia/config -Igen/angle -I../../testing/gtest/include
+cflags = -isysroot $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk $
+    -O2 -fvisibility=hidden -Werror -Wnewline-eof -mmacosx-version-min=10.6 $
+    -arch x86_64 -Wall -Wendif-labels -Wextra -Wno-unused-parameter $
+    -Wno-missing-field-initializers -Wno-selector-type-mismatch $
+    -Wpartial-availability -Wheader-hygiene -Wno-char-subscripts $
+    -Wno-unneeded-internal-declaration -Wno-covered-switch-default $
+    -Wstring-conversion -Wno-c++11-narrowing -Wno-deprecated-register $
+    -Wno-inconsistent-missing-override -Wno-shift-negative-value $
+    -Wno-bitfield-width
+cflags_c = -std=c99 -Xclang -load -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing
+cflags_cc = -std=c++11 -stdlib=libc++ -fno-rtti -fno-exceptions $
+    -fvisibility-inlines-hidden -fno-threadsafe-statics -Xclang -load $
+    -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing
+cflags_objc = $cflags_c -Wobjc-missing-property-synthesis
+cflags_objcc = $cflags_cc -Wobjc-missing-property-synthesis $
+    -fobjc-call-cxx-cdtors
+arflags = 
+
+build obj/remoting/test/ar_sample_test_driver.app_remoting_test_driver.o: $
+    cxx ../../remoting/test/app_remoting_test_driver.cc || $
+    obj/remoting/ar_sample_test_driver.compile_depends.stamp
+build $
+    obj/remoting/test/ar_sample_test_driver.app_remoting_sample_test_driver_environment.o: $
+    cxx ../../remoting/test/app_remoting_sample_test_driver_environment.cc $
+    || obj/remoting/ar_sample_test_driver.compile_depends.stamp
+
+ldflags = -framework Cocoa -framework Foundation -framework IOKit $
+    -framework Security -framework SystemConfiguration -framework Cocoa $
+    -framework Foundation -framework IOKit -framework Security -framework $
+    SystemConfiguration -framework Cocoa -framework Foundation -framework $
+    IOKit -framework Security -framework SystemConfiguration -framework $
+    Cocoa -framework Foundation -framework IOKit -framework Security $
+    -framework SystemConfiguration -framework Cocoa -framework Foundation $
+    -framework IOKit -framework Security -framework SystemConfiguration $
+    -framework Cocoa -framework Foundation -framework IOKit -framework $
+    Security -framework SystemConfiguration -framework Cocoa -framework $
+    Foundation -framework IOKit -framework Security -framework $
+    SystemConfiguration -framework Cocoa -framework Foundation -framework $
+    IOKit -framework Security -framework SystemConfiguration -framework $
+    Cocoa -framework Foundation -framework IOKit -framework Security $
+    -framework SystemConfiguration -framework Cocoa -framework Foundation $
+    -framework IOKit -framework Security -framework SystemConfiguration $
+    -framework Cocoa -framework Foundation -framework IOKit -framework $
+    Security -framework SystemConfiguration -framework Cocoa -framework $
+    Foundation -framework IOKit -framework Security -framework $
+    SystemConfiguration -framework Cocoa -framework Foundation -framework $
+    IOKit -framework Security -framework SystemConfiguration -framework $
+    Cocoa -framework Foundation -framework IOKit -framework Security $
+    -framework SystemConfiguration -Wl,-search_paths_first -Wl,-pie $
+    -Wl,-dead_strip -mmacosx-version-min=10.6 -isysroot $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk $
+    -arch x86_64 -L. -stdlib=libc++
+libs = '-L../../third_party/libc++-static' -framework Foundation -framework $
+    AppKit -framework IOKit -framework OpenGL -framework $
+    ApplicationServices -framework Carbon -framework CoreFoundation $
+    -framework Security -framework SystemConfiguration $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/lib/libresolv.tbd $
+    -framework AudioToolbox -framework AudioUnit -framework CoreAudio $
+    -framework CoreVideo -framework QTKit -lm -framework IOSurface $
+    -framework Accelerate -framework AddressBook -framework Cocoa $
+    -framework QuartzCore -framework Quartz
+build ar_sample_test_driver: link $
+    obj/remoting/test/ar_sample_test_driver.app_remoting_test_driver.o $
+    obj/remoting/test/ar_sample_test_driver.app_remoting_sample_test_driver_environment.o $
+    libar_test_driver_common.a libgtest.a libchromotocol_proto_lib.a $
+    libprotobuf_lite.a libdesktop_capture.a libsystem_wrappers.a $
+    libwebrtc_common.a librtc_base_approved.a libbase.a libbase_static.a $
+    liballocator_extension_thunks.a libmodp_b64.a libdynamic_annotations.a $
+    libevent.a librtc_base.a libboringssl.a $
+    libdesktop_capture_differ_sse2.a libremoting_test_support.a $
+    libnet_test_support.a libtest_support_base.a libbase_i18n.a $
+    libicui18n.a libicuuc.a libgmock.a libxml2.a libchrome_zlib.a $
+    libzlib_x86_simd.a libcrcrypto.a libtld_cleanup_util.a liburl_lib.a $
+    libnet.a libnet_quic_proto.a libbase_prefs.a libsdch.a libnet_with_v8.a $
+    libgin.a libv8_base.a libv8_libbase.a libv8_external_snapshot.a $
+    libremoting_base.a libmedia.a libcommand_buffer_common.a $
+    libgles2_utils.a libskia_library.a libskia_opts.a libskia_opts_ssse3.a $
+    libskia_opts_sse41.a libskia_opts_sse42.a libskia_opts_avx.a $
+    libskia_opts_avx2.a libsfntly.a libskia_chrome.a libyuv.a $
+    libjpeg_turbo.a libopus.a libevents_base.a libgfx.a libharfbuzz-ng.a $
+    libpng.a libgfx_geometry.a libdom_keycode_converter.a $
+    libshared_memory_support.a libffmpeg.a libffmpeg_yasm.a libvpx_new.a $
+    libvpx_intrinsics_mmx.a libvpx_intrinsics_sse2.a $
+    libvpx_intrinsics_ssse3.a libvpx_intrinsics_sse4_1.a $
+    libvpx_intrinsics_avx.a libvpx_intrinsics_avx2.a libwebm.a $
+    libdecklink.a libmedia_asm.a libui_base.a libevents.a $
+    libgesture_detection.a libevents_platform.a libmozilla.a $
+    libremoting_client.a libremoting_protocol.a libjingle_glue.a $
+    libjingle.a libexpat.a librtc_xmllite.a libjingle_p2p_constants.a $
+    libjingle_webrtc.a libaudio_processing.a libcommon_audio.a $
+    libopenmax_dl.a libcommon_audio_sse2.a libisac.a $
+    libaudio_decoder_interface.a libaudio_encoder_interface.a $
+    libisac_common.a libaudioproc_debug_proto.a libaudio_processing_sse2.a $
+    libjingle_webrtc_common.a libsrtp.a libmedia_file.a libvideo_capture.a $
+    libvideo_capture_module.a libwebrtc_utility.a libaudio_coding_module.a $
+    libcng.a libg711.a libpcm16b.a libwebrtc_opus.a libg722.a $
+    librtc_event_log.a librtc_event_log_proto.a libneteq.a $
+    librent_a_codec.a libcommon_video.a libvideo_render.a $
+    libvideo_render_module.a libusrsctplib.a libpeerconnection.a $
+    libvoice_engine.a libaudio_conference_mixer.a libaudio_device.a $
+    libbitrate_controller.a librtp_rtcp.a libremote_bitrate_estimator.a $
+    libwebrtc.a libpaced_sender.a libvideo_processing.a $
+    libvideo_processing_sse2.a libwebrtc_video_coding.a libwebrtc_h264.a $
+    libwebrtc_i420.a libvideo_coding_utility.a libwebrtc_vp8.a $
+    libwebrtc_vp9.a libremoting_host.a libpolicy.a $
+    libcloud_policy_proto_generated_compile.a libpolicy_component_common.a $
+    libgoogle_apis.a libre2.a libcloud_policy_proto.a $
+    libdata_use_measurement_core.a libjson_schema.a libipc.a $
+    libgoogle_toolbox_for_mac.a libpolicy_component_test_support.a $
+    libpolicy_component_browser.a libbookmarks_browser.a $
+    libbookmarks_common.a libfavicon_base.a libkeyed_service_core.a $
+    libuser_prefs.a libpref_registry.a libquery_parser.a liburl_formatter.a $
+    libviews.a libaccessibility.a libax_gen.a libapi_gen_util.a $
+    libui_base_ime.a libcompositor.a libcc.a libcc_proto.a $
+    libcommand_buffer_client.a libcommand_buffer_service.a $
+    libdisk_cache_proto.a libgpu_config.a libgl_wrapper.a libcityhash.a $
+    libtranslator.a libtranslator_lib.a libpreprocessor.a libangle_common.a $
+    libgles2_cmd_helper.a libgpu_ipc.a libcc_surfaces.a $
+    libgfx_vector_icons.a libnative_theme.a libaccelerated_widget_mac.a $
+    libbookmarks_managed.a liburl_matcher.a libautofill_core_common.a $
+    libproxy_config.a libchrome_settings_proto_generated_compile.a | $
+    obj/components/cloud_policy_code_generate.actions_rules_copies.stamp $
+    obj/gpu/gpu.actions_depends.stamp $
+    obj/third_party/angle/src/copy_scripts.actions_rules_copies.stamp $
+    obj/remoting/remoting_webapp_html.actions_rules_copies.stamp $
+    gen/angle/id/commit.h obj/skia/skia.actions_depends.stamp $
+    obj/remoting/remoting_resources.actions_rules_copies.stamp $
+    obj/ui/resources/ui_resources.actions_rules_copies.stamp $
+    obj/net/net_derived_sources.actions_rules_copies.stamp $
+    obj/ui/strings/ui_strings.actions_rules_copies.stamp icudtl.dat $
+    obj/components/components_strings.actions_rules_copies.stamp $
+    obj/v8/tools/gyp/js2c.actions_rules_copies.stamp $
+    obj/ui/views/resources/views_resources.actions_rules_copies.stamp $
+    obj/net/net_resources.actions_rules_copies.stamp $
+    obj/v8/tools/gyp/v8_maybe_snapshot.actions_depends.stamp $
+    natives_blob.bin obj/components/policy_component.actions_depends.stamp $
+    gen/remoting/CREDITS.txt $
+    obj/components/policy_test_support.actions_depends.stamp $
+    obj/third_party/protobuf/py_proto.actions_rules_copies.stamp
+  ld = $ldxx
+  postbuilds = $ && (export $
+      BUILT_FRAMEWORKS_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      BUILT_PRODUCTS_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      CONFIGURATION=Release; export EXECUTABLE_NAME=ar_sample_test_driver; $
+      export EXECUTABLE_PATH=ar_sample_test_driver; export $
+      FULL_PRODUCT_NAME=ar_sample_test_driver; export $
+      PRODUCT_NAME=ar_sample_test_driver; export $
+      PRODUCT_TYPE=com.apple.product-type.tool; export $
+      SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk; $
+      export SRCROOT=/Users/superadmin/tmp/src/out/Release/../../remoting; $
+      export SOURCE_ROOT="$${SRCROOT}"; export $
+      TARGET_BUILD_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      TEMP_DIR="$${TMPDIR}"; (cd ../../remoting && $
+      ../build/mac/change_mach_o_flags_from_xcode.sh); G=$$?; ((exit $$G) $
+      || rm -rf ar_sample_test_driver) && exit $$G)

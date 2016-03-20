@@ -1,0 +1,38 @@
+build $
+    obj/third_party/angle/src/tests/angle_deqp_gtest_support.actions_depends.stamp: $
+    stamp $
+    obj/third_party/angle/src/tests/angle_test_support.actions_depends.stamp $
+    libangle_util.a libchrome_zlib.a
+
+build deqp_support/dEQP-EGL-cases.txt.gz: copy $
+    ../../third_party/angle/src/tests/deqp_support/dEQP-EGL-cases.txt.gz || $
+    obj/third_party/angle/src/tests/angle_deqp_gtest_support.actions_depends.stamp
+build deqp_support/dEQP-GLES2-cases.txt.gz: copy $
+    ../../third_party/angle/src/tests/deqp_support/dEQP-GLES2-cases.txt.gz $
+    || $
+    obj/third_party/angle/src/tests/angle_deqp_gtest_support.actions_depends.stamp
+build deqp_support/dEQP-GLES3-cases.txt.gz: copy $
+    ../../third_party/angle/src/tests/deqp_support/dEQP-GLES3-cases.txt.gz $
+    || $
+    obj/third_party/angle/src/tests/angle_deqp_gtest_support.actions_depends.stamp
+build deqp_support/deqp_egl_test_expectations.txt: copy $
+    ../../third_party/angle/src/tests/deqp_support/deqp_egl_test_expectations.txt $
+    || $
+    obj/third_party/angle/src/tests/angle_deqp_gtest_support.actions_depends.stamp
+build deqp_support/deqp_gles2_test_expectations.txt: copy $
+    ../../third_party/angle/src/tests/deqp_support/deqp_gles2_test_expectations.txt $
+    || $
+    obj/third_party/angle/src/tests/angle_deqp_gtest_support.actions_depends.stamp
+build deqp_support/deqp_gles3_test_expectations.txt: copy $
+    ../../third_party/angle/src/tests/deqp_support/deqp_gles3_test_expectations.txt $
+    || $
+    obj/third_party/angle/src/tests/angle_deqp_gtest_support.actions_depends.stamp
+build $
+    obj/third_party/angle/src/tests/angle_deqp_gtest_support.actions_rules_copies.stamp: $
+    stamp deqp_support/dEQP-EGL-cases.txt.gz $
+    deqp_support/dEQP-GLES2-cases.txt.gz $
+    deqp_support/dEQP-GLES3-cases.txt.gz $
+    deqp_support/deqp_egl_test_expectations.txt $
+    deqp_support/deqp_gles2_test_expectations.txt $
+    deqp_support/deqp_gles3_test_expectations.txt
+

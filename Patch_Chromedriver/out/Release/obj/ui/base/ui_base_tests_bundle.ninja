@@ -1,0 +1,119 @@
+build obj/ui/base/ui_base_tests_bundle.actions_depends.stamp: stamp $
+    obj/ui/resources/ui_test_pak.actions_rules_copies.stamp $
+    obj/ui/strings/ui_strings.actions_rules_copies.stamp $
+    obj/ui/resources/ui_resources.actions_rules_copies.stamp $
+    obj/ui/views/resources/views_resources.actions_rules_copies.stamp
+
+build obj/ui/base/ui_base_tests_bundle.compile_depends.stamp: stamp $
+    obj/ui/resources/ui_test_pak.actions_rules_copies.stamp $
+    obj/ui/strings/ui_strings.actions_rules_copies.stamp $
+    obj/ui/resources/ui_resources.actions_rules_copies.stamp $
+    obj/ui/views/resources/views_resources.actions_rules_copies.stamp
+
+build ui_unittests$ Framework.framework/Versions/A/Resources/ui_test.pak: $
+    mac_tool ui_test.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    ui_unittests$ Framework.framework/Versions/A/Resources/en.lproj/locale.pak: $
+    mac_tool ui/en.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build ui_unittests$ Framework.framework/Versions/A/Resources/Info.plist: $
+    copy_infoplist ../../ui/base/test/framework-Info.plist
+  env = export ALWAYS_SEARCH_USER_PATHS=NO; export ARCHS=x86_64; export $
+      BUILT_FRAMEWORKS_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      BUILT_PRODUCTS_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      SRCROOT=/Users/superadmin/tmp/src/out/Release/../../ui/base; export $
+      SOURCE_ROOT="$${SRCROOT}"; export $
+      CC="$${SOURCE_ROOT}/../../third_party/llvm-build/Release+Asserts/bin/clang"; $
+      export CHROMIUM_BUNDLE_ID=com.google.ChromiumUITests; export $
+      CLANG_CXX_LANGUAGE_STANDARD=c++11; export CLANG_CXX_LIBRARY=libc++; $
+      export CLANG_LINK_OBJC_RUNTIME=NO; export $
+      CLANG_WARN_OBJC_MISSING_PROPERTY_SYNTHESIS=YES; export $
+      CONFIGURATION=Release; export CONTENTS_FOLDER_PATH="ui_unittests $
+      Framework.framework/Versions/A"; export COPY_PHASE_STRIP=NO; export $
+      DYLIB_COMPATIBILITY_VERSION=1.0.0; export $
+      DYLIB_CURRENT_VERSION=1.0.0; export $
+      DYLIB_INSTALL_NAME_BASE=@executable_path/../Versions/1.0.0.0; export $
+      EXECUTABLE_NAME="ui_unittests Framework"; export $
+      EXECUTABLE_PATH="ui_unittests $
+      Framework.framework/Versions/A/ui_unittests Framework"; export $
+      FULL_PRODUCT_NAME="ui_unittests Framework.framework"; export $
+      GCC_CW_ASM_SYNTAX=NO; export GCC_C_LANGUAGE_STANDARD=c99; export $
+      GCC_DYNAMIC_NO_PIC=NO; export GCC_ENABLE_CPP_EXCEPTIONS=NO; export $
+      GCC_ENABLE_CPP_RTTI=NO; export GCC_ENABLE_PASCAL_STRINGS=NO; export $
+      GCC_GENERATE_DEBUGGING_SYMBOLS=NO; export $
+      GCC_INLINES_ARE_PRIVATE_EXTERN=YES; export $
+      GCC_OBJC_CALL_CXX_CDTORS=YES; export $
+      GCC_PRECOMPILE_PREFIX_HEADER=YES; export $
+      GCC_SYMBOLS_PRIVATE_EXTERN=YES; export GCC_THREADSAFE_STATICS=NO; $
+      export GCC_TREAT_WARNINGS_AS_ERRORS=YES; export $
+      GCC_VERSION=com.apple.compilers.llvm.clang.1_0; export $
+      GCC_WARN_ABOUT_MISSING_NEWLINE=YES; export $
+      INFOPLIST_FILE=test/framework-Info.plist; export $
+      INFOPLIST_PATH="ui_unittests $
+      Framework.framework/Versions/A/Resources/Info.plist"; export $
+      LDPLUSPLUS="$${SOURCE_ROOT}/../../third_party/llvm-build/Release+Asserts/bin/clang++"; $
+      export $
+      LD_DYLIB_INSTALL_NAME="@executable_path/../Versions/1.0.0.0/ui_unittests $
+      Framework.framework/ui_unittests Framework"; export $
+      MACH_O_TYPE=mh_dylib; export MACOSX_DEPLOYMENT_TARGET=10.6; export $
+      OTHER_LDFLAGS="-Wl,-search_paths_first -Wl,-ObjC"; export $
+      PRODUCT_NAME="ui_unittests Framework"; export $
+      PRODUCT_TYPE=com.apple.product-type.framework; export $
+      SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk; $
+      export $
+      SHARED_PRECOMPS_DIR="$${CONFIGURATION_BUILD_DIR}/SharedPrecompiledHeaders"; $
+      export SYMROOT=../../xcodebuild; export $
+      TARGET_BUILD_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      TEMP_DIR="$${TMPDIR}"; export $
+      UNLOCALIZED_RESOURCES_FOLDER_PATH="ui_unittests $
+      Framework.framework/Versions/A/Resources"; export USE_HEADERMAP=NO; $
+      export WARNING_CFLAGS="-Wall -Wendif-labels -Wextra $
+      -Wno-unused-parameter -Wno-missing-field-initializers $
+      -Wno-selector-type-mismatch -Wpartial-availability -Wheader-hygiene $
+      -Wno-char-subscripts -Wno-unneeded-internal-declaration $
+      -Wno-covered-switch-default -Wstring-conversion -Wno-c++11-narrowing $
+      -Wno-deprecated-register -Wno-inconsistent-missing-override $
+      -Wno-shift-negative-value -Wno-bitfield-width"; export $
+      WRAPPER_NAME="ui_unittests Framework.framework";
+  keys = '{"DTXcode": "0701", "BuildMachineOSBuild": "14F27", "DTSDKName": $
+      "macosx10.10", "DTXcodeBuild": "7A1001", "DTSDKBuild": "14D125"}'
+  binary = False
+build ui_unittests$ Framework.framework: package_framework $
+    ui_unittests$ Framework.framework/Versions/A/Resources/ui_test.pak $
+    ui_unittests$ Framework.framework/Versions/A/Resources/en.lproj/locale.pak $
+    ui_unittests$ Framework.framework/Versions/A/Resources/Info.plist $
+    obj/ui/base/ui_base_tests_bundle.actions_depends.stamp
+  postbuilds = $ && (export $
+      BUILT_FRAMEWORKS_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      BUILT_PRODUCTS_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      CONFIGURATION=Release; export CONTENTS_FOLDER_PATH="ui_unittests $
+      Framework.framework/Versions/A"; export $
+      DYLIB_INSTALL_NAME_BASE=@executable_path/../Versions/1.0.0.0; export $
+      EXECUTABLE_NAME="ui_unittests Framework"; export $
+      EXECUTABLE_PATH="ui_unittests $
+      Framework.framework/Versions/A/ui_unittests Framework"; export $
+      FULL_PRODUCT_NAME="ui_unittests Framework.framework"; export $
+      INFOPLIST_PATH="ui_unittests $
+      Framework.framework/Versions/A/Resources/Info.plist"; export $
+      LD_DYLIB_INSTALL_NAME="@executable_path/../Versions/1.0.0.0/ui_unittests $
+      Framework.framework/ui_unittests Framework"; export $
+      MACH_O_TYPE=mh_dylib; export PRODUCT_NAME="ui_unittests Framework"; $
+      export PRODUCT_TYPE=com.apple.product-type.framework; export $
+      SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk; $
+      export SRCROOT=/Users/superadmin/tmp/src/out/Release/../../ui/base; $
+      export SOURCE_ROOT="$${SRCROOT}"; export $
+      TARGET_BUILD_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      TEMP_DIR="$${TMPDIR}"; export $
+      UNLOCALIZED_RESOURCES_FOLDER_PATH="ui_unittests $
+      Framework.framework/Versions/A/Resources"; export $
+      WRAPPER_NAME="ui_unittests Framework.framework"; (cd ../../ui/base && $
+      ln -fns Versions/A/Resources $
+      "$${BUILT_PRODUCTS_DIR}/$${WRAPPER_NAME}/Resources" && ln -fns $
+      ui_test.pak $
+      "$${BUILT_PRODUCTS_DIR}/$${WRAPPER_NAME}/Versions/A/Resources/chrome_100_percent.pak"); $
+      G=$$?; ((exit $$G) || rm -rf 'ui_unittests Framework.framework') && $
+      exit $$G)
+  version = A

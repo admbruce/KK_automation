@@ -1,0 +1,25 @@
+rule $
+    app_shell_version_header_target_version_header_d765d2ea7fc57a374a814d4ae5d995a7
+  command = cd ../../extensions/shell; export $
+      BUILT_FRAMEWORKS_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      BUILT_PRODUCTS_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      CONFIGURATION=Release; export PRODUCT_NAME=app_shell_version_header; $
+      export $
+      SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk; $
+      export $
+      SRCROOT=/Users/superadmin/tmp/src/out/Release/../../extensions/shell; $
+      export SOURCE_ROOT="$${SRCROOT}"; export $
+      TARGET_BUILD_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      TEMP_DIR="$${TMPDIR}";python ../../build/util/version.py -f $
+      ../../build/util/LASTCHANGE -f ../../chrome/VERSION $
+      common/version.h.in $
+      ../../out/Release/gen/extensions/shell/common/version.h
+  description = ACTION Generating version header file: $
+      "gen/extensions/shell/common/version.h"
+  restat = 1
+
+build gen/extensions/shell/common/version.h: $
+    app_shell_version_header_target_version_header_d765d2ea7fc57a374a814d4ae5d995a7 $
+    ../../chrome/VERSION ../../build/util/LASTCHANGE $
+    ../../extensions/shell/common/version.h.in
+

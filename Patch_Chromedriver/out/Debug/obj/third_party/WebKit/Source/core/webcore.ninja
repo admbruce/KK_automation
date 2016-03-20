@@ -1,0 +1,18 @@
+build obj/third_party/WebKit/Source/core/webcore.actions_depends.stamp: $
+    stamp libwebcore_dom.a libwebcore_html.a libwebcore_remaining.a $
+    libwebcore_rendering.a libwebcore_svg.a libwebcore_generated.a $
+    libblink_platform.a libwtf.a obj/skia/skia.actions_depends.stamp $
+    libqcms.a liburl_lib.a $
+    obj/v8/tools/gyp/v8_maybe_snapshot.actions_depends.stamp
+
+build obj/third_party/WebKit/Source/core/webcore.compile_depends.stamp: $
+    stamp $
+    obj/third_party/WebKit/Source/core/webcore_prerequisites.compile_depends.stamp $
+    obj/third_party/WebKit/Source/core/webcore_prerequisites.compile_depends.stamp $
+    obj/third_party/WebKit/Source/core/webcore_prerequisites.compile_depends.stamp $
+    obj/third_party/WebKit/Source/core/webcore_prerequisites.compile_depends.stamp $
+    obj/third_party/WebKit/Source/core/webcore_prerequisites.compile_depends.stamp $
+    obj/third_party/WebKit/Source/core/webcore_generated.compile_depends.stamp $
+    obj/third_party/WebKit/Source/platform/blink_platform.compile_depends.stamp $
+    snapshot_blob.bin
+

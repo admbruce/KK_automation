@@ -1,0 +1,312 @@
+build obj/cc/cc_test_support.actions_depends.stamp: stamp $
+    obj/gpu/gpu.actions_depends.stamp obj/skia/skia.actions_depends.stamp $
+    osmesa.so.TOC
+
+defines = -DV8_DEPRECATION_WARNINGS -DCLD_VERSION=2 $
+    -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORE=0 -DCHROMIUM_BUILD $
+    -DCR_CLANG_REVISION=254049-1 -DUSE_LIBJPEG_TURBO=1 $
+    -DENABLE_ONE_CLICK_SIGNIN -DENABLE_PRE_SYNC_BACKUP -DENABLE_WEBRTC=1 $
+    -DENABLE_MEDIA_ROUTER=1 -DENABLE_PEPPER_CDMS $
+    -DENABLE_CONFIGURATION_POLICY -DENABLE_NOTIFICATIONS -DENABLE_HIDPI=1 $
+    -DDONT_EMBED_BUILD_METADATA -DFIELDTRIAL_TESTING_ENABLED $
+    -DENABLE_TASK_MANAGER=1 -DENABLE_EXTENSIONS=1 -DENABLE_PDF=1 $
+    -DENABLE_PLUGIN_INSTALLATION=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_THEMES=1 -DENABLE_AUTOFILL_DIALOG=1 $
+    -DENABLE_BACKGROUND=1 -DENABLE_PRINTING=1 -DENABLE_BASIC_PRINTING=1 $
+    -DENABLE_PRINT_PREVIEW=1 -DENABLE_SPELLCHECK=1 $
+    -DUSE_BROWSER_SPELLCHECKER=1 -DENABLE_CAPTIVE_PORTAL_DETECTION=1 $
+    -DENABLE_APP_LIST=1 -DENABLE_SETTINGS_APP=1 -DENABLE_SUPERVISED_USERS=1 $
+    -DENABLE_SERVICE_DISCOVERY=1 -DV8_USE_EXTERNAL_STARTUP_DATA $
+    -DFULL_SAFE_BROWSING -DSAFE_BROWSING_CSD -DSAFE_BROWSING_DB_LOCAL $
+    -DGTEST_HAS_POSIX_RE=0 -DGTEST_LANG_CXX11=0 -DSK_SUPPORT_GPU=1 $
+    -DSK_IGNORE_LINEONLY_AA_CONVEX_PATH_OPTS -DSK_IGNORE_GL_TEXTURE_TARGET $
+    -DUNIT_TEST -DGTEST_HAS_RTTI=0 -DU_USING_ICU_NAMESPACE=0 $
+    -DU_ENABLE_DYLOAD=0 -DU_STATIC_IMPLEMENTATION -DMESA_EGL_NO_X11_HEADERS $
+    -DUSE_LIBPCI=1 -DUSE_OPENSSL=1 -D__STDC_CONSTANT_MACROS $
+    -D__STDC_FORMAT_MACROS -DDYNAMIC_ANNOTATIONS_ENABLED=1 $
+    -DWTF_USE_DYNAMIC_ANNOTATIONS=1
+includes = -Igen -I../../third_party/khronos -I../../gpu -I../.. $
+    -I../../skia/config -Igen/angle -I../../third_party/skia/include/core $
+    -I../../third_party/skia/include/effects $
+    -I../../third_party/skia/include/pdf $
+    -I../../third_party/skia/include/gpu $
+    -I../../third_party/skia/include/lazy $
+    -I../../third_party/skia/include/pathops $
+    -I../../third_party/skia/include/pipe $
+    -I../../third_party/skia/include/ports $
+    -I../../third_party/skia/include/utils $
+    -I../../third_party/skia/include/utils/mac -I../../skia/ext $
+    -I../../testing/gmock/include -I../../testing/gtest/include $
+    -I../../third_party/icu/source/i18n $
+    -I../../third_party/icu/source/common -I../../third_party/mesa/src/include
+cflags = -isysroot $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk $
+    -O0 -fvisibility=hidden -Werror -Wnewline-eof -mmacosx-version-min=10.6 $
+    -arch x86_64 -Wall -Wendif-labels -Wextra -Wno-unused-parameter $
+    -Wno-missing-field-initializers -Wno-selector-type-mismatch $
+    -Wpartial-availability -Wheader-hygiene -Wno-char-subscripts $
+    -Wno-unneeded-internal-declaration -Wno-covered-switch-default $
+    -Wstring-conversion -Wno-c++11-narrowing -Wno-deprecated-register $
+    -Wno-inconsistent-missing-override -Wno-shift-negative-value $
+    -Wno-bitfield-width
+cflags_c = -std=c99 -Xclang -load -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing -fstack-protector-all $
+    -Wno-undefined-bool-conversion -Wno-tautological-undefined-compare
+cflags_cc = -std=c++11 -stdlib=libc++ -fno-rtti -fno-exceptions $
+    -fvisibility-inlines-hidden -fno-threadsafe-statics -Xclang -load $
+    -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing -fstack-protector-all $
+    -Wno-undefined-bool-conversion -Wno-tautological-undefined-compare
+cflags_objc = $cflags_c -Wobjc-missing-property-synthesis
+cflags_objcc = $cflags_cc -Wobjc-missing-property-synthesis $
+    -fobjc-call-cxx-cdtors
+arflags = 
+
+build obj/cc/test/cc_test_support.animation_test_common.o: cxx $
+    ../../cc/test/animation_test_common.cc || $
+    obj/gpu/command_buffer_service.compile_depends.stamp
+build obj/cc/test/cc_test_support.animation_timelines_test_common.o: cxx $
+    ../../cc/test/animation_timelines_test_common.cc || $
+    obj/gpu/command_buffer_service.compile_depends.stamp
+build obj/cc/test/cc_test_support.begin_frame_args_test.o: cxx $
+    ../../cc/test/begin_frame_args_test.cc || $
+    obj/gpu/command_buffer_service.compile_depends.stamp
+build obj/cc/test/cc_test_support.failure_output_surface.o: cxx $
+    ../../cc/test/failure_output_surface.cc || $
+    obj/gpu/command_buffer_service.compile_depends.stamp
+build obj/cc/test/cc_test_support.fake_content_layer_client.o: cxx $
+    ../../cc/test/fake_content_layer_client.cc || $
+    obj/gpu/command_buffer_service.compile_depends.stamp
+build obj/cc/test/cc_test_support.fake_delegated_renderer_layer.o: cxx $
+    ../../cc/test/fake_delegated_renderer_layer.cc || $
+    obj/gpu/command_buffer_service.compile_depends.stamp
+build obj/cc/test/cc_test_support.fake_delegated_renderer_layer_impl.o: cxx $
+    ../../cc/test/fake_delegated_renderer_layer_impl.cc || $
+    obj/gpu/command_buffer_service.compile_depends.stamp
+build obj/cc/test/cc_test_support.fake_display_list_raster_source.o: cxx $
+    ../../cc/test/fake_display_list_raster_source.cc || $
+    obj/gpu/command_buffer_service.compile_depends.stamp
+build obj/cc/test/cc_test_support.fake_display_list_recording_source.o: cxx $
+    ../../cc/test/fake_display_list_recording_source.cc || $
+    obj/gpu/command_buffer_service.compile_depends.stamp
+build obj/cc/test/cc_test_support.fake_external_begin_frame_source.o: cxx $
+    ../../cc/test/fake_external_begin_frame_source.cc || $
+    obj/gpu/command_buffer_service.compile_depends.stamp
+build obj/cc/test/cc_test_support.fake_layer_tree_host.o: cxx $
+    ../../cc/test/fake_layer_tree_host.cc || $
+    obj/gpu/command_buffer_service.compile_depends.stamp
+build obj/cc/test/cc_test_support.fake_layer_tree_host_client.o: cxx $
+    ../../cc/test/fake_layer_tree_host_client.cc || $
+    obj/gpu/command_buffer_service.compile_depends.stamp
+build obj/cc/test/cc_test_support.fake_layer_tree_host_impl.o: cxx $
+    ../../cc/test/fake_layer_tree_host_impl.cc || $
+    obj/gpu/command_buffer_service.compile_depends.stamp
+build obj/cc/test/cc_test_support.fake_layer_tree_host_impl_client.o: cxx $
+    ../../cc/test/fake_layer_tree_host_impl_client.cc || $
+    obj/gpu/command_buffer_service.compile_depends.stamp
+build obj/cc/test/cc_test_support.fake_output_surface.o: cxx $
+    ../../cc/test/fake_output_surface.cc || $
+    obj/gpu/command_buffer_service.compile_depends.stamp
+build obj/cc/test/cc_test_support.fake_output_surface_client.o: cxx $
+    ../../cc/test/fake_output_surface_client.cc || $
+    obj/gpu/command_buffer_service.compile_depends.stamp
+build obj/cc/test/cc_test_support.fake_painted_scrollbar_layer.o: cxx $
+    ../../cc/test/fake_painted_scrollbar_layer.cc || $
+    obj/gpu/command_buffer_service.compile_depends.stamp
+build obj/cc/test/cc_test_support.fake_picture_layer.o: cxx $
+    ../../cc/test/fake_picture_layer.cc || $
+    obj/gpu/command_buffer_service.compile_depends.stamp
+build obj/cc/test/cc_test_support.fake_picture_layer_impl.o: cxx $
+    ../../cc/test/fake_picture_layer_impl.cc || $
+    obj/gpu/command_buffer_service.compile_depends.stamp
+build obj/cc/test/cc_test_support.fake_picture_layer_tiling_client.o: cxx $
+    ../../cc/test/fake_picture_layer_tiling_client.cc || $
+    obj/gpu/command_buffer_service.compile_depends.stamp
+build obj/cc/test/cc_test_support.fake_proxy.o: cxx $
+    ../../cc/test/fake_proxy.cc || $
+    obj/gpu/command_buffer_service.compile_depends.stamp
+build obj/cc/test/cc_test_support.fake_renderer_client.o: cxx $
+    ../../cc/test/fake_renderer_client.cc || $
+    obj/gpu/command_buffer_service.compile_depends.stamp
+build obj/cc/test/cc_test_support.fake_scoped_ui_resource.o: cxx $
+    ../../cc/test/fake_scoped_ui_resource.cc || $
+    obj/gpu/command_buffer_service.compile_depends.stamp
+build obj/cc/test/cc_test_support.fake_scrollbar.o: cxx $
+    ../../cc/test/fake_scrollbar.cc || $
+    obj/gpu/command_buffer_service.compile_depends.stamp
+build obj/cc/test/cc_test_support.fake_tile_manager.o: cxx $
+    ../../cc/test/fake_tile_manager.cc || $
+    obj/gpu/command_buffer_service.compile_depends.stamp
+build obj/cc/test/cc_test_support.fake_tile_manager_client.o: cxx $
+    ../../cc/test/fake_tile_manager_client.cc || $
+    obj/gpu/command_buffer_service.compile_depends.stamp
+build obj/cc/test/cc_test_support.fake_ui_resource_layer_tree_host_impl.o: $
+    cxx ../../cc/test/fake_ui_resource_layer_tree_host_impl.cc || $
+    obj/gpu/command_buffer_service.compile_depends.stamp
+build obj/cc/test/cc_test_support.fake_video_frame_provider.o: cxx $
+    ../../cc/test/fake_video_frame_provider.cc || $
+    obj/gpu/command_buffer_service.compile_depends.stamp
+build obj/cc/test/cc_test_support.geometry_test_utils.o: cxx $
+    ../../cc/test/geometry_test_utils.cc || $
+    obj/gpu/command_buffer_service.compile_depends.stamp
+build obj/cc/test/cc_test_support.layer_test_common.o: cxx $
+    ../../cc/test/layer_test_common.cc || $
+    obj/gpu/command_buffer_service.compile_depends.stamp
+build obj/cc/test/cc_test_support.layer_tree_host_common_test.o: cxx $
+    ../../cc/test/layer_tree_host_common_test.cc || $
+    obj/gpu/command_buffer_service.compile_depends.stamp
+build obj/cc/test/cc_test_support.layer_tree_json_parser.o: cxx $
+    ../../cc/test/layer_tree_json_parser.cc || $
+    obj/gpu/command_buffer_service.compile_depends.stamp
+build obj/cc/test/cc_test_support.layer_tree_pixel_resource_test.o: cxx $
+    ../../cc/test/layer_tree_pixel_resource_test.cc || $
+    obj/gpu/command_buffer_service.compile_depends.stamp
+build obj/cc/test/cc_test_support.layer_tree_pixel_test.o: cxx $
+    ../../cc/test/layer_tree_pixel_test.cc || $
+    obj/gpu/command_buffer_service.compile_depends.stamp
+build obj/cc/test/cc_test_support.layer_tree_test.o: cxx $
+    ../../cc/test/layer_tree_test.cc || $
+    obj/gpu/command_buffer_service.compile_depends.stamp
+build obj/cc/test/cc_test_support.ordered_simple_task_runner.o: cxx $
+    ../../cc/test/ordered_simple_task_runner.cc || $
+    obj/gpu/command_buffer_service.compile_depends.stamp
+build obj/cc/test/cc_test_support.ordered_texture_map.o: cxx $
+    ../../cc/test/ordered_texture_map.cc || $
+    obj/gpu/command_buffer_service.compile_depends.stamp
+build obj/cc/test/cc_test_support.paths.o: cxx ../../cc/test/paths.cc || $
+    obj/gpu/command_buffer_service.compile_depends.stamp
+build obj/cc/test/cc_test_support.pixel_comparator.o: cxx $
+    ../../cc/test/pixel_comparator.cc || $
+    obj/gpu/command_buffer_service.compile_depends.stamp
+build obj/cc/test/cc_test_support.pixel_test.o: cxx $
+    ../../cc/test/pixel_test.cc || $
+    obj/gpu/command_buffer_service.compile_depends.stamp
+build obj/cc/test/cc_test_support.pixel_test_output_surface.o: cxx $
+    ../../cc/test/pixel_test_output_surface.cc || $
+    obj/gpu/command_buffer_service.compile_depends.stamp
+build obj/cc/test/cc_test_support.pixel_test_software_output_device.o: cxx $
+    ../../cc/test/pixel_test_software_output_device.cc || $
+    obj/gpu/command_buffer_service.compile_depends.stamp
+build obj/cc/test/cc_test_support.pixel_test_utils.o: cxx $
+    ../../cc/test/pixel_test_utils.cc || $
+    obj/gpu/command_buffer_service.compile_depends.stamp
+build obj/cc/test/cc_test_support.render_pass_test_utils.o: cxx $
+    ../../cc/test/render_pass_test_utils.cc || $
+    obj/gpu/command_buffer_service.compile_depends.stamp
+build obj/cc/test/cc_test_support.scheduler_test_common.o: cxx $
+    ../../cc/test/scheduler_test_common.cc || $
+    obj/gpu/command_buffer_service.compile_depends.stamp
+build obj/cc/test/cc_test_support.skia_common.o: cxx $
+    ../../cc/test/skia_common.cc || $
+    obj/gpu/command_buffer_service.compile_depends.stamp
+build obj/cc/test/cc_test_support.solid_color_content_layer_client.o: cxx $
+    ../../cc/test/solid_color_content_layer_client.cc || $
+    obj/gpu/command_buffer_service.compile_depends.stamp
+build obj/cc/test/cc_test_support.surface_aggregator_test_helpers.o: cxx $
+    ../../cc/test/surface_aggregator_test_helpers.cc || $
+    obj/gpu/command_buffer_service.compile_depends.stamp
+build obj/cc/test/cc_test_support.surface_hittest_test_helpers.o: cxx $
+    ../../cc/test/surface_hittest_test_helpers.cc || $
+    obj/gpu/command_buffer_service.compile_depends.stamp
+build obj/cc/test/cc_test_support.test_context_provider.o: cxx $
+    ../../cc/test/test_context_provider.cc || $
+    obj/gpu/command_buffer_service.compile_depends.stamp
+build obj/cc/test/cc_test_support.test_context_support.o: cxx $
+    ../../cc/test/test_context_support.cc || $
+    obj/gpu/command_buffer_service.compile_depends.stamp
+build obj/cc/test/cc_test_support.test_gles2_interface.o: cxx $
+    ../../cc/test/test_gles2_interface.cc || $
+    obj/gpu/command_buffer_service.compile_depends.stamp
+build obj/cc/test/cc_test_support.test_gpu_memory_buffer_manager.o: cxx $
+    ../../cc/test/test_gpu_memory_buffer_manager.cc || $
+    obj/gpu/command_buffer_service.compile_depends.stamp
+build obj/cc/test/cc_test_support.test_image_factory.o: cxx $
+    ../../cc/test/test_image_factory.cc || $
+    obj/gpu/command_buffer_service.compile_depends.stamp
+build obj/cc/test/cc_test_support.test_in_process_context_provider.o: cxx $
+    ../../cc/test/test_in_process_context_provider.cc || $
+    obj/gpu/command_buffer_service.compile_depends.stamp
+build obj/cc/test/cc_test_support.test_shared_bitmap_manager.o: cxx $
+    ../../cc/test/test_shared_bitmap_manager.cc || $
+    obj/gpu/command_buffer_service.compile_depends.stamp
+build obj/cc/test/cc_test_support.test_task_graph_runner.o: cxx $
+    ../../cc/test/test_task_graph_runner.cc || $
+    obj/gpu/command_buffer_service.compile_depends.stamp
+build obj/cc/test/cc_test_support.test_texture.o: cxx $
+    ../../cc/test/test_texture.cc || $
+    obj/gpu/command_buffer_service.compile_depends.stamp
+build obj/cc/test/cc_test_support.test_tile_priorities.o: cxx $
+    ../../cc/test/test_tile_priorities.cc || $
+    obj/gpu/command_buffer_service.compile_depends.stamp
+build obj/cc/test/cc_test_support.test_web_graphics_context_3d.o: cxx $
+    ../../cc/test/test_web_graphics_context_3d.cc || $
+    obj/gpu/command_buffer_service.compile_depends.stamp
+
+build libcc_test_support.a: alink $
+    obj/cc/test/cc_test_support.animation_test_common.o $
+    obj/cc/test/cc_test_support.animation_timelines_test_common.o $
+    obj/cc/test/cc_test_support.begin_frame_args_test.o $
+    obj/cc/test/cc_test_support.failure_output_surface.o $
+    obj/cc/test/cc_test_support.fake_content_layer_client.o $
+    obj/cc/test/cc_test_support.fake_delegated_renderer_layer.o $
+    obj/cc/test/cc_test_support.fake_delegated_renderer_layer_impl.o $
+    obj/cc/test/cc_test_support.fake_display_list_raster_source.o $
+    obj/cc/test/cc_test_support.fake_display_list_recording_source.o $
+    obj/cc/test/cc_test_support.fake_external_begin_frame_source.o $
+    obj/cc/test/cc_test_support.fake_layer_tree_host.o $
+    obj/cc/test/cc_test_support.fake_layer_tree_host_client.o $
+    obj/cc/test/cc_test_support.fake_layer_tree_host_impl.o $
+    obj/cc/test/cc_test_support.fake_layer_tree_host_impl_client.o $
+    obj/cc/test/cc_test_support.fake_output_surface.o $
+    obj/cc/test/cc_test_support.fake_output_surface_client.o $
+    obj/cc/test/cc_test_support.fake_painted_scrollbar_layer.o $
+    obj/cc/test/cc_test_support.fake_picture_layer.o $
+    obj/cc/test/cc_test_support.fake_picture_layer_impl.o $
+    obj/cc/test/cc_test_support.fake_picture_layer_tiling_client.o $
+    obj/cc/test/cc_test_support.fake_proxy.o $
+    obj/cc/test/cc_test_support.fake_renderer_client.o $
+    obj/cc/test/cc_test_support.fake_scoped_ui_resource.o $
+    obj/cc/test/cc_test_support.fake_scrollbar.o $
+    obj/cc/test/cc_test_support.fake_tile_manager.o $
+    obj/cc/test/cc_test_support.fake_tile_manager_client.o $
+    obj/cc/test/cc_test_support.fake_ui_resource_layer_tree_host_impl.o $
+    obj/cc/test/cc_test_support.fake_video_frame_provider.o $
+    obj/cc/test/cc_test_support.geometry_test_utils.o $
+    obj/cc/test/cc_test_support.layer_test_common.o $
+    obj/cc/test/cc_test_support.layer_tree_host_common_test.o $
+    obj/cc/test/cc_test_support.layer_tree_json_parser.o $
+    obj/cc/test/cc_test_support.layer_tree_pixel_resource_test.o $
+    obj/cc/test/cc_test_support.layer_tree_pixel_test.o $
+    obj/cc/test/cc_test_support.layer_tree_test.o $
+    obj/cc/test/cc_test_support.ordered_simple_task_runner.o $
+    obj/cc/test/cc_test_support.ordered_texture_map.o $
+    obj/cc/test/cc_test_support.paths.o $
+    obj/cc/test/cc_test_support.pixel_comparator.o $
+    obj/cc/test/cc_test_support.pixel_test.o $
+    obj/cc/test/cc_test_support.pixel_test_output_surface.o $
+    obj/cc/test/cc_test_support.pixel_test_software_output_device.o $
+    obj/cc/test/cc_test_support.pixel_test_utils.o $
+    obj/cc/test/cc_test_support.render_pass_test_utils.o $
+    obj/cc/test/cc_test_support.scheduler_test_common.o $
+    obj/cc/test/cc_test_support.skia_common.o $
+    obj/cc/test/cc_test_support.solid_color_content_layer_client.o $
+    obj/cc/test/cc_test_support.surface_aggregator_test_helpers.o $
+    obj/cc/test/cc_test_support.surface_hittest_test_helpers.o $
+    obj/cc/test/cc_test_support.test_context_provider.o $
+    obj/cc/test/cc_test_support.test_context_support.o $
+    obj/cc/test/cc_test_support.test_gles2_interface.o $
+    obj/cc/test/cc_test_support.test_gpu_memory_buffer_manager.o $
+    obj/cc/test/cc_test_support.test_image_factory.o $
+    obj/cc/test/cc_test_support.test_in_process_context_provider.o $
+    obj/cc/test/cc_test_support.test_shared_bitmap_manager.o $
+    obj/cc/test/cc_test_support.test_task_graph_runner.o $
+    obj/cc/test/cc_test_support.test_texture.o $
+    obj/cc/test/cc_test_support.test_tile_priorities.o $
+    obj/cc/test/cc_test_support.test_web_graphics_context_3d.o || $
+    obj/cc/cc_test_support.actions_depends.stamp

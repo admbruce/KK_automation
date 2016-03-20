@@ -1,0 +1,990 @@
+build $
+    obj/remoting/remoting_me2me_native_messaging_host.actions_depends.stamp: $
+    stamp libbase.a libremoting_breakpad.a libremoting_host.a $
+    libremoting_host_setup_base.a $
+    obj/remoting/remoting_infoplist_strings.actions_rules_copies.stamp $
+    libremoting_native_messaging_base.a libbase_static.a $
+    liballocator_extension_thunks.a libmodp_b64.a libdynamic_annotations.a $
+    libevent.a libbreakpad.a libbreakpad_utilities.a libremoting_base.a $
+    libmedia.a libbase_i18n.a libicui18n.a libicuuc.a icudtl.dat icudtl.dat $
+    libcrcrypto.a libboringssl.a libcommand_buffer_common.a $
+    libgles2_utils.a obj/skia/skia.actions_depends.stamp libskia_library.a $
+    libskia_opts.a libskia_opts_ssse3.a libskia_opts_sse41.a $
+    libskia_opts_sse42.a libskia_opts_avx.a libskia_opts_avx2.a $
+    libchrome_zlib.a libzlib_x86_simd.a libsfntly.a libskia_chrome.a $
+    libyuv.a libjpeg_turbo.a libopus.a libevents_base.a libgfx.a $
+    libharfbuzz-ng.a libpng.a libgfx_geometry.a libdom_keycode_converter.a $
+    liburl_lib.a libshared_memory_support.a libffmpeg.a libffmpeg_yasm.a $
+    libvpx_new.a libvpx_intrinsics_mmx.a libvpx_intrinsics_sse2.a $
+    libvpx_intrinsics_ssse3.a libvpx_intrinsics_sse4_1.a $
+    libvpx_intrinsics_avx.a libvpx_intrinsics_avx2.a libwebm.a $
+    libdecklink.a libmedia_asm.a libnet.a libprotobuf_lite.a $
+    libnet_quic_proto.a libbase_prefs.a libsdch.a $
+    obj/net/net_derived_sources.actions_rules_copies.stamp $
+    obj/net/net_resources.actions_rules_copies.stamp libdesktop_capture.a $
+    libsystem_wrappers.a libwebrtc_common.a librtc_base_approved.a $
+    librtc_base.a libdesktop_capture_differ_sse2.a libui_base.a libevents.a $
+    libgesture_detection.a libevents_platform.a $
+    obj/ui/resources/ui_resources.actions_rules_copies.stamp $
+    obj/ui/strings/ui_strings.actions_rules_copies.stamp libmozilla.a $
+    libchromotocol_proto_lib.a $
+    obj/remoting/remoting_resources.actions_rules_copies.stamp $
+    obj/remoting/remoting_webapp_html.actions_rules_copies.stamp $
+    gen/remoting/CREDITS.txt libremoting_protocol.a libjingle_glue.a $
+    libjingle.a libexpat.a librtc_xmllite.a libjingle_p2p_constants.a $
+    libjingle_webrtc.a libaudio_processing.a libcommon_audio.a $
+    libopenmax_dl.a libcommon_audio_sse2.a libisac.a $
+    libaudio_decoder_interface.a libaudio_encoder_interface.a $
+    libisac_common.a libaudioproc_debug_proto.a libaudio_processing_sse2.a $
+    libjingle_webrtc_common.a libsrtp.a libmedia_file.a libvideo_capture.a $
+    libvideo_capture_module.a libwebrtc_utility.a libaudio_coding_module.a $
+    libcng.a libg711.a libpcm16b.a libwebrtc_opus.a libg722.a $
+    librtc_event_log.a librtc_event_log_proto.a libneteq.a $
+    librent_a_codec.a libcommon_video.a libvideo_render.a $
+    libvideo_render_module.a libusrsctplib.a libpeerconnection.a $
+    libvoice_engine.a libaudio_conference_mixer.a libaudio_device.a $
+    libbitrate_controller.a librtp_rtcp.a libremote_bitrate_estimator.a $
+    libwebrtc.a libpaced_sender.a libvideo_processing.a $
+    libvideo_processing_sse2.a libwebrtc_video_coding.a libwebrtc_h264.a $
+    libwebrtc_i420.a libvideo_coding_utility.a libwebrtc_vp8.a $
+    libwebrtc_vp9.a libpolicy.a $
+    obj/components/cloud_policy_code_generate.actions_rules_copies.stamp $
+    libcloud_policy_proto_generated_compile.a libpolicy_component_common.a $
+    libgoogle_apis.a libxml2.a libre2.a libcloud_policy_proto.a $
+    libdata_use_measurement_core.a libjson_schema.a libipc.a $
+    libgoogle_toolbox_for_mac.a
+
+build $
+    obj/remoting/remoting_me2me_native_messaging_host.compile_depends.stamp: $
+    stamp obj/remoting/remoting_host.compile_depends.stamp $
+    obj/remoting/remoting_infoplist_strings.actions_rules_copies.stamp $
+    obj/remoting/remoting_base.compile_depends.stamp icudtl.dat icudtl.dat $
+    icudtl.dat $
+    obj/third_party/libjpeg_turbo/libjpeg.actions_rules_copies.stamp $
+    obj/third_party/ffmpeg/ffmpeg_yasm.actions_rules_copies.stamp $
+    obj/third_party/libvpx_new/libvpx_new.actions_rules_copies.stamp $
+    obj/media/media_asm.actions_rules_copies.stamp $
+    obj/net/net.compile_depends.stamp $
+    obj/net/net_quic_proto.actions_rules_copies.stamp $
+    obj/net/net_derived_sources.actions_rules_copies.stamp $
+    obj/net/net_resources.actions_rules_copies.stamp $
+    obj/ui/base/ui_base.compile_depends.stamp $
+    obj/ui/resources/ui_resources.actions_rules_copies.stamp $
+    obj/ui/strings/ui_strings.actions_rules_copies.stamp $
+    obj/remoting/proto/chromotocol_proto_lib.actions_rules_copies.stamp $
+    obj/remoting/remoting_resources.actions_rules_copies.stamp $
+    obj/remoting/remoting_webapp_html.actions_rules_copies.stamp $
+    gen/remoting/CREDITS.txt $
+    obj/remoting/remoting_protocol.compile_depends.stamp $
+    obj/third_party/webrtc/modules/audioproc_debug_proto.actions_rules_copies.stamp $
+    obj/third_party/webrtc/modules/audioproc_debug_proto.actions_rules_copies.stamp $
+    obj/third_party/webrtc/rtc_event_log_proto.actions_rules_copies.stamp $
+    obj/third_party/webrtc/rtc_event_log_proto.actions_rules_copies.stamp $
+    obj/components/policy.compile_depends.stamp $
+    obj/components/cloud_policy_code_generate.actions_rules_copies.stamp $
+    obj/components/cloud_policy_proto_generated_compile.actions_rules_copies.stamp $
+    obj/components/policy_component_common.compile_depends.stamp $
+    obj/components/cloud_policy_proto.actions_rules_copies.stamp
+
+build native_messaging_host.app/Contents/Resources/am.lproj/locale.pak: $
+    mac_tool remoting/resources/am.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build native_messaging_host.app/Contents/Resources/ar.lproj/locale.pak: $
+    mac_tool remoting/resources/ar.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build native_messaging_host.app/Contents/Resources/bg.lproj/locale.pak: $
+    mac_tool remoting/resources/bg.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build native_messaging_host.app/Contents/Resources/bn.lproj/locale.pak: $
+    mac_tool remoting/resources/bn.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build native_messaging_host.app/Contents/Resources/ca.lproj/locale.pak: $
+    mac_tool remoting/resources/ca.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build native_messaging_host.app/Contents/Resources/cs.lproj/locale.pak: $
+    mac_tool remoting/resources/cs.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build native_messaging_host.app/Contents/Resources/da.lproj/locale.pak: $
+    mac_tool remoting/resources/da.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build native_messaging_host.app/Contents/Resources/de.lproj/locale.pak: $
+    mac_tool remoting/resources/de.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build native_messaging_host.app/Contents/Resources/el.lproj/locale.pak: $
+    mac_tool remoting/resources/el.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build native_messaging_host.app/Contents/Resources/en.lproj/locale.pak: $
+    mac_tool remoting/resources/en.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build native_messaging_host.app/Contents/Resources/en_GB.lproj/locale.pak: $
+    mac_tool remoting/resources/en_GB.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build native_messaging_host.app/Contents/Resources/es.lproj/locale.pak: $
+    mac_tool remoting/resources/es.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build native_messaging_host.app/Contents/Resources/es_419.lproj/locale.pak: $
+    mac_tool remoting/resources/es_419.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build native_messaging_host.app/Contents/Resources/et.lproj/locale.pak: $
+    mac_tool remoting/resources/et.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build native_messaging_host.app/Contents/Resources/fa.lproj/locale.pak: $
+    mac_tool remoting/resources/fa.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    native_messaging_host.app/Contents/Resources/fake_bidi.lproj/locale.pak: $
+    mac_tool remoting/resources/fake_bidi.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build native_messaging_host.app/Contents/Resources/fi.lproj/locale.pak: $
+    mac_tool remoting/resources/fi.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build native_messaging_host.app/Contents/Resources/fil.lproj/locale.pak: $
+    mac_tool remoting/resources/fil.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build native_messaging_host.app/Contents/Resources/fr.lproj/locale.pak: $
+    mac_tool remoting/resources/fr.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build native_messaging_host.app/Contents/Resources/gu.lproj/locale.pak: $
+    mac_tool remoting/resources/gu.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build native_messaging_host.app/Contents/Resources/he.lproj/locale.pak: $
+    mac_tool remoting/resources/he.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build native_messaging_host.app/Contents/Resources/hi.lproj/locale.pak: $
+    mac_tool remoting/resources/hi.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build native_messaging_host.app/Contents/Resources/hr.lproj/locale.pak: $
+    mac_tool remoting/resources/hr.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build native_messaging_host.app/Contents/Resources/hu.lproj/locale.pak: $
+    mac_tool remoting/resources/hu.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build native_messaging_host.app/Contents/Resources/id.lproj/locale.pak: $
+    mac_tool remoting/resources/id.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build native_messaging_host.app/Contents/Resources/it.lproj/locale.pak: $
+    mac_tool remoting/resources/it.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build native_messaging_host.app/Contents/Resources/ja.lproj/locale.pak: $
+    mac_tool remoting/resources/ja.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build native_messaging_host.app/Contents/Resources/kn.lproj/locale.pak: $
+    mac_tool remoting/resources/kn.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build native_messaging_host.app/Contents/Resources/ko.lproj/locale.pak: $
+    mac_tool remoting/resources/ko.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build native_messaging_host.app/Contents/Resources/lt.lproj/locale.pak: $
+    mac_tool remoting/resources/lt.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build native_messaging_host.app/Contents/Resources/lv.lproj/locale.pak: $
+    mac_tool remoting/resources/lv.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build native_messaging_host.app/Contents/Resources/ml.lproj/locale.pak: $
+    mac_tool remoting/resources/ml.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build native_messaging_host.app/Contents/Resources/mr.lproj/locale.pak: $
+    mac_tool remoting/resources/mr.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build native_messaging_host.app/Contents/Resources/ms.lproj/locale.pak: $
+    mac_tool remoting/resources/ms.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build native_messaging_host.app/Contents/Resources/nb.lproj/locale.pak: $
+    mac_tool remoting/resources/nb.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build native_messaging_host.app/Contents/Resources/nl.lproj/locale.pak: $
+    mac_tool remoting/resources/nl.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build native_messaging_host.app/Contents/Resources/pl.lproj/locale.pak: $
+    mac_tool remoting/resources/pl.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build native_messaging_host.app/Contents/Resources/pt_BR.lproj/locale.pak: $
+    mac_tool remoting/resources/pt_BR.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build native_messaging_host.app/Contents/Resources/pt_PT.lproj/locale.pak: $
+    mac_tool remoting/resources/pt_PT.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build native_messaging_host.app/Contents/Resources/ro.lproj/locale.pak: $
+    mac_tool remoting/resources/ro.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build native_messaging_host.app/Contents/Resources/ru.lproj/locale.pak: $
+    mac_tool remoting/resources/ru.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build native_messaging_host.app/Contents/Resources/sk.lproj/locale.pak: $
+    mac_tool remoting/resources/sk.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build native_messaging_host.app/Contents/Resources/sl.lproj/locale.pak: $
+    mac_tool remoting/resources/sl.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build native_messaging_host.app/Contents/Resources/sr.lproj/locale.pak: $
+    mac_tool remoting/resources/sr.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build native_messaging_host.app/Contents/Resources/sv.lproj/locale.pak: $
+    mac_tool remoting/resources/sv.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build native_messaging_host.app/Contents/Resources/sw.lproj/locale.pak: $
+    mac_tool remoting/resources/sw.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build native_messaging_host.app/Contents/Resources/ta.lproj/locale.pak: $
+    mac_tool remoting/resources/ta.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build native_messaging_host.app/Contents/Resources/te.lproj/locale.pak: $
+    mac_tool remoting/resources/te.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build native_messaging_host.app/Contents/Resources/th.lproj/locale.pak: $
+    mac_tool remoting/resources/th.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build native_messaging_host.app/Contents/Resources/tr.lproj/locale.pak: $
+    mac_tool remoting/resources/tr.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build native_messaging_host.app/Contents/Resources/uk.lproj/locale.pak: $
+    mac_tool remoting/resources/uk.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build native_messaging_host.app/Contents/Resources/vi.lproj/locale.pak: $
+    mac_tool remoting/resources/vi.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build native_messaging_host.app/Contents/Resources/zh_CN.lproj/locale.pak: $
+    mac_tool remoting/resources/zh_CN.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build native_messaging_host.app/Contents/Resources/zh_TW.lproj/locale.pak: $
+    mac_tool remoting/resources/zh_TW.lproj/locale.pak
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    native_messaging_host.app/Contents/Resources/am.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/native_messaging_host-InfoPlist.strings/am.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    native_messaging_host.app/Contents/Resources/ar.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/native_messaging_host-InfoPlist.strings/ar.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    native_messaging_host.app/Contents/Resources/bg.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/native_messaging_host-InfoPlist.strings/bg.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    native_messaging_host.app/Contents/Resources/bn.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/native_messaging_host-InfoPlist.strings/bn.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    native_messaging_host.app/Contents/Resources/ca.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/native_messaging_host-InfoPlist.strings/ca.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    native_messaging_host.app/Contents/Resources/cs.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/native_messaging_host-InfoPlist.strings/cs.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    native_messaging_host.app/Contents/Resources/da.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/native_messaging_host-InfoPlist.strings/da.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    native_messaging_host.app/Contents/Resources/de.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/native_messaging_host-InfoPlist.strings/de.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    native_messaging_host.app/Contents/Resources/el.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/native_messaging_host-InfoPlist.strings/el.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    native_messaging_host.app/Contents/Resources/en.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/native_messaging_host-InfoPlist.strings/en.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    native_messaging_host.app/Contents/Resources/en_GB.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/native_messaging_host-InfoPlist.strings/en_GB.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    native_messaging_host.app/Contents/Resources/es.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/native_messaging_host-InfoPlist.strings/es.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    native_messaging_host.app/Contents/Resources/es_419.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/native_messaging_host-InfoPlist.strings/es_419.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    native_messaging_host.app/Contents/Resources/et.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/native_messaging_host-InfoPlist.strings/et.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    native_messaging_host.app/Contents/Resources/fa.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/native_messaging_host-InfoPlist.strings/fa.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    native_messaging_host.app/Contents/Resources/fake_bidi.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/native_messaging_host-InfoPlist.strings/fake_bidi.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    native_messaging_host.app/Contents/Resources/fi.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/native_messaging_host-InfoPlist.strings/fi.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    native_messaging_host.app/Contents/Resources/fil.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/native_messaging_host-InfoPlist.strings/fil.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    native_messaging_host.app/Contents/Resources/fr.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/native_messaging_host-InfoPlist.strings/fr.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    native_messaging_host.app/Contents/Resources/gu.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/native_messaging_host-InfoPlist.strings/gu.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    native_messaging_host.app/Contents/Resources/he.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/native_messaging_host-InfoPlist.strings/he.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    native_messaging_host.app/Contents/Resources/hi.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/native_messaging_host-InfoPlist.strings/hi.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    native_messaging_host.app/Contents/Resources/hr.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/native_messaging_host-InfoPlist.strings/hr.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    native_messaging_host.app/Contents/Resources/hu.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/native_messaging_host-InfoPlist.strings/hu.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    native_messaging_host.app/Contents/Resources/id.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/native_messaging_host-InfoPlist.strings/id.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    native_messaging_host.app/Contents/Resources/it.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/native_messaging_host-InfoPlist.strings/it.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    native_messaging_host.app/Contents/Resources/ja.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/native_messaging_host-InfoPlist.strings/ja.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    native_messaging_host.app/Contents/Resources/kn.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/native_messaging_host-InfoPlist.strings/kn.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    native_messaging_host.app/Contents/Resources/ko.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/native_messaging_host-InfoPlist.strings/ko.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    native_messaging_host.app/Contents/Resources/lt.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/native_messaging_host-InfoPlist.strings/lt.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    native_messaging_host.app/Contents/Resources/lv.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/native_messaging_host-InfoPlist.strings/lv.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    native_messaging_host.app/Contents/Resources/ml.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/native_messaging_host-InfoPlist.strings/ml.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    native_messaging_host.app/Contents/Resources/mr.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/native_messaging_host-InfoPlist.strings/mr.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    native_messaging_host.app/Contents/Resources/ms.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/native_messaging_host-InfoPlist.strings/ms.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    native_messaging_host.app/Contents/Resources/nb.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/native_messaging_host-InfoPlist.strings/nb.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    native_messaging_host.app/Contents/Resources/nl.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/native_messaging_host-InfoPlist.strings/nl.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    native_messaging_host.app/Contents/Resources/pl.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/native_messaging_host-InfoPlist.strings/pl.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    native_messaging_host.app/Contents/Resources/pt_BR.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/native_messaging_host-InfoPlist.strings/pt_BR.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    native_messaging_host.app/Contents/Resources/pt_PT.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/native_messaging_host-InfoPlist.strings/pt_PT.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    native_messaging_host.app/Contents/Resources/ro.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/native_messaging_host-InfoPlist.strings/ro.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    native_messaging_host.app/Contents/Resources/ru.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/native_messaging_host-InfoPlist.strings/ru.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    native_messaging_host.app/Contents/Resources/sk.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/native_messaging_host-InfoPlist.strings/sk.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    native_messaging_host.app/Contents/Resources/sl.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/native_messaging_host-InfoPlist.strings/sl.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    native_messaging_host.app/Contents/Resources/sr.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/native_messaging_host-InfoPlist.strings/sr.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    native_messaging_host.app/Contents/Resources/sv.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/native_messaging_host-InfoPlist.strings/sv.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    native_messaging_host.app/Contents/Resources/sw.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/native_messaging_host-InfoPlist.strings/sw.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    native_messaging_host.app/Contents/Resources/ta.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/native_messaging_host-InfoPlist.strings/ta.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    native_messaging_host.app/Contents/Resources/te.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/native_messaging_host-InfoPlist.strings/te.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    native_messaging_host.app/Contents/Resources/th.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/native_messaging_host-InfoPlist.strings/th.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    native_messaging_host.app/Contents/Resources/tr.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/native_messaging_host-InfoPlist.strings/tr.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    native_messaging_host.app/Contents/Resources/uk.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/native_messaging_host-InfoPlist.strings/uk.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    native_messaging_host.app/Contents/Resources/vi.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/native_messaging_host-InfoPlist.strings/vi.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    native_messaging_host.app/Contents/Resources/zh_CN.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/native_messaging_host-InfoPlist.strings/zh_CN.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    native_messaging_host.app/Contents/Resources/zh_TW.lproj/InfoPlist.strings: $
+    mac_tool $
+    gen/remoting/native_messaging_host-InfoPlist.strings/zh_TW.lproj/InfoPlist.strings
+  mactool_cmd = copy-bundle-resource
+  binary = False
+build $
+    obj/remoting/remoting_me2me_native_messaging_host.native_messaging_host-Info.plist: $
+    preprocess_infoplist $
+    ../../remoting/host/setup/native_messaging_host-Info.plist
+  defines = -DVERSION_FULL=49.0.2577.0 -DVERSION_SHORT=49.0.2577 $
+      -DBUNDLE_ID=org.chromium.chromoting.native-messaging-host
+build native_messaging_host.app/Contents/Info.plist: copy_infoplist $
+    obj/remoting/remoting_me2me_native_messaging_host.native_messaging_host-Info.plist
+  env = export ALWAYS_SEARCH_USER_PATHS=NO; export ARCHS=x86_64; export $
+      BUILT_FRAMEWORKS_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      BUILT_PRODUCTS_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      SRCROOT=/Users/superadmin/tmp/src/out/Release/../../remoting; export $
+      SOURCE_ROOT="$${SRCROOT}"; export $
+      CC="$${SOURCE_ROOT}/../third_party/llvm-build/Release+Asserts/bin/clang"; $
+      export CLANG_CXX_LANGUAGE_STANDARD=c++11; export $
+      CLANG_CXX_LIBRARY=libc++; export CLANG_LINK_OBJC_RUNTIME=NO; export $
+      CLANG_WARN_OBJC_MISSING_PROPERTY_SYNTHESIS=YES; export $
+      CONFIGURATION=Release; export $
+      CONTENTS_FOLDER_PATH=native_messaging_host.app/Contents; export $
+      COPY_PHASE_STRIP=NO; export EXECUTABLE_NAME=native_messaging_host; $
+      export $
+      EXECUTABLE_PATH=native_messaging_host.app/Contents/MacOS/native_messaging_host; $
+      export FULL_PRODUCT_NAME=native_messaging_host.app; export $
+      GCC_CW_ASM_SYNTAX=NO; export GCC_C_LANGUAGE_STANDARD=c99; export $
+      GCC_DYNAMIC_NO_PIC=NO; export GCC_ENABLE_CPP_EXCEPTIONS=NO; export $
+      GCC_ENABLE_CPP_RTTI=NO; export GCC_ENABLE_PASCAL_STRINGS=NO; export $
+      GCC_GENERATE_DEBUGGING_SYMBOLS=NO; export $
+      GCC_INLINES_ARE_PRIVATE_EXTERN=YES; export $
+      GCC_OBJC_CALL_CXX_CDTORS=YES; export $
+      GCC_PRECOMPILE_PREFIX_HEADER=YES; export $
+      GCC_SYMBOLS_PRIVATE_EXTERN=YES; export GCC_THREADSAFE_STATICS=NO; $
+      export GCC_TREAT_WARNINGS_AS_ERRORS=YES; export $
+      GCC_VERSION=com.apple.compilers.llvm.clang.1_0; export $
+      GCC_WARN_ABOUT_MISSING_NEWLINE=YES; export $
+      INFOPLIST_FILE=host/setup/native_messaging_host-Info.plist; export $
+      INFOPLIST_PATH=native_messaging_host.app/Contents/Info.plist; export $
+      INFOPLIST_PREPROCESS=YES; export $
+      INFOPLIST_PREPROCESSOR_DEFINITIONS="VERSION_FULL=\"49.0.2577.0\" $
+      VERSION_SHORT=\"49.0.2577\" $
+      BUNDLE_ID=\"org.chromium.chromoting.native-messaging-host\""; export $
+      LDPLUSPLUS="$${SOURCE_ROOT}/../third_party/llvm-build/Release+Asserts/bin/clang++"; $
+      export MACH_O_TYPE=mh_execute; export MACOSX_DEPLOYMENT_TARGET=10.6; $
+      export OTHER_LDFLAGS="-framework Cocoa -framework Foundation $
+      -framework IOKit -framework Security -framework SystemConfiguration $
+      -framework Cocoa -framework Foundation -framework IOKit -framework $
+      Security -framework SystemConfiguration -framework Cocoa -framework $
+      Foundation -framework IOKit -framework Security -framework $
+      SystemConfiguration -framework Cocoa -framework Foundation -framework $
+      IOKit -framework Security -framework SystemConfiguration -framework $
+      Cocoa -framework Foundation -framework IOKit -framework Security $
+      -framework SystemConfiguration -framework Cocoa -framework Foundation $
+      -framework IOKit -framework Security -framework SystemConfiguration $
+      -framework Cocoa -framework Foundation -framework IOKit -framework $
+      Security -framework SystemConfiguration -framework Cocoa -framework $
+      Foundation -framework IOKit -framework Security -framework $
+      SystemConfiguration -framework Cocoa -framework Foundation -framework $
+      IOKit -framework Security -framework SystemConfiguration -framework $
+      Cocoa -framework Foundation -framework IOKit -framework Security $
+      -framework SystemConfiguration -framework Cocoa -framework Foundation $
+      -framework IOKit -framework Security -framework SystemConfiguration $
+      -framework Cocoa -framework Foundation -framework IOKit -framework $
+      Security -framework SystemConfiguration -Wl,-search_paths_first $
+      -Wl,-ObjC -Wl,-pie"; export PRODUCT_NAME=native_messaging_host; $
+      export PRODUCT_TYPE=com.apple.product-type.application; export $
+      SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk; $
+      export $
+      SHARED_PRECOMPS_DIR="$${CONFIGURATION_BUILD_DIR}/SharedPrecompiledHeaders"; $
+      export SYMROOT=../xcodebuild; export $
+      TARGET_BUILD_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      TEMP_DIR="$${TMPDIR}"; export $
+      UNLOCALIZED_RESOURCES_FOLDER_PATH=native_messaging_host.app/Contents/Resources; $
+      export USE_HEADERMAP=NO; export WARNING_CFLAGS="-Wall -Wendif-labels $
+      -Wextra -Wno-unused-parameter -Wno-missing-field-initializers $
+      -Wno-selector-type-mismatch -Wpartial-availability -Wheader-hygiene $
+      -Wno-char-subscripts -Wno-unneeded-internal-declaration $
+      -Wno-covered-switch-default -Wstring-conversion -Wno-c++11-narrowing $
+      -Wno-deprecated-register -Wno-inconsistent-missing-override $
+      -Wno-shift-negative-value -Wno-bitfield-width $
+      -Wexit-time-destructors"; export WRAPPER_NAME=native_messaging_host.app;
+  keys = '{"DTXcode": "0701", "BuildMachineOSBuild": "14F27", "DTSDKName": $
+      "macosx10.10", "DTXcodeBuild": "7A1001", "DTSDKBuild": "14D125"}'
+  binary = False
+defines = -DBINARY_CORE=1 -DBINARY_DESKTOP=2 -DBINARY_HOST_ME2ME=3 $
+    -DBINARY_NATIVE_MESSAGING_HOST=4 -DBINARY_REMOTE_ASSISTANCE_HOST=5 $
+    -DV8_DEPRECATION_WARNINGS -DCLD_VERSION=2 $
+    -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORE=0 -DCHROMIUM_BUILD $
+    -DCR_CLANG_REVISION=254049-1 -DUSE_LIBJPEG_TURBO=1 $
+    -DENABLE_ONE_CLICK_SIGNIN -DENABLE_PRE_SYNC_BACKUP -DENABLE_WEBRTC=1 $
+    -DENABLE_MEDIA_ROUTER=1 -DENABLE_PEPPER_CDMS $
+    -DENABLE_CONFIGURATION_POLICY -DENABLE_NOTIFICATIONS -DENABLE_HIDPI=1 $
+    -DDONT_EMBED_BUILD_METADATA -DFIELDTRIAL_TESTING_ENABLED $
+    -DENABLE_TASK_MANAGER=1 -DENABLE_EXTENSIONS=1 -DENABLE_PDF=1 $
+    -DENABLE_PLUGIN_INSTALLATION=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_THEMES=1 -DENABLE_AUTOFILL_DIALOG=1 $
+    -DENABLE_BACKGROUND=1 -DENABLE_PRINTING=1 -DENABLE_BASIC_PRINTING=1 $
+    -DENABLE_PRINT_PREVIEW=1 -DENABLE_SPELLCHECK=1 $
+    -DUSE_BROWSER_SPELLCHECKER=1 -DENABLE_CAPTIVE_PORTAL_DETECTION=1 $
+    -DENABLE_APP_LIST=1 -DENABLE_SETTINGS_APP=1 -DENABLE_SUPERVISED_USERS=1 $
+    -DENABLE_SERVICE_DISCOVERY=1 -DV8_USE_EXTERNAL_STARTUP_DATA $
+    -DFULL_SAFE_BROWSING -DSAFE_BROWSING_CSD -DSAFE_BROWSING_DB_LOCAL $
+    -DVERSION=49.0.2577.0 -DUSE_LIBPCI=1 -DUSE_OPENSSL=1 $
+    -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -DNDEBUG -DNVALGRIND $
+    -DDYNAMIC_ANNOTATIONS_ENABLED=0 -D_FORTIFY_SOURCE=2
+includes = -I../.. -Igen -I../../third_party/khronos -I../../gpu $
+    -I../../skia/config
+cflags = -isysroot $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk $
+    -O2 -fvisibility=hidden -Werror -Wnewline-eof -mmacosx-version-min=10.6 $
+    -arch x86_64 -Wall -Wendif-labels -Wextra -Wno-unused-parameter $
+    -Wno-missing-field-initializers -Wno-selector-type-mismatch $
+    -Wpartial-availability -Wheader-hygiene -Wno-char-subscripts $
+    -Wno-unneeded-internal-declaration -Wno-covered-switch-default $
+    -Wstring-conversion -Wno-c++11-narrowing -Wno-deprecated-register $
+    -Wno-inconsistent-missing-override -Wno-shift-negative-value $
+    -Wno-bitfield-width -Wexit-time-destructors
+cflags_c = -std=c99 -Xclang -load -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing
+cflags_cc = -std=c++11 -stdlib=libc++ -fno-rtti -fno-exceptions $
+    -fvisibility-inlines-hidden -fno-threadsafe-statics -Xclang -load $
+    -Xclang $
+    /Users/superadmin/tmp/src/third_party/llvm-build/Release+Asserts/lib/libFindBadConstructs.dylib $
+    -Xclang -add-plugin -Xclang find-bad-constructs -Xclang $
+    -plugin-arg-find-bad-constructs -Xclang check-templates $
+    -fcolor-diagnostics -fno-strict-aliasing
+cflags_objc = $cflags_c -Wobjc-missing-property-synthesis
+cflags_objcc = $cflags_cc -Wobjc-missing-property-synthesis $
+    -fobjc-call-cxx-cdtors
+arflags = 
+
+build $
+    obj/remoting/host/setup/remoting_me2me_native_messaging_host.me2me_native_messaging_host_entry_point.o: $
+    cxx $
+    ../../remoting/host/setup/me2me_native_messaging_host_entry_point.cc || $
+    obj/remoting/remoting_me2me_native_messaging_host.compile_depends.stamp
+build $
+    obj/remoting/host/setup/remoting_me2me_native_messaging_host.me2me_native_messaging_host_main.o: $
+    cxx ../../remoting/host/setup/me2me_native_messaging_host_main.cc || $
+    obj/remoting/remoting_me2me_native_messaging_host.compile_depends.stamp
+
+ldflags = -framework Cocoa -framework Foundation -framework IOKit $
+    -framework Security -framework SystemConfiguration -framework Cocoa $
+    -framework Foundation -framework IOKit -framework Security -framework $
+    SystemConfiguration -framework Cocoa -framework Foundation -framework $
+    IOKit -framework Security -framework SystemConfiguration -framework $
+    Cocoa -framework Foundation -framework IOKit -framework Security $
+    -framework SystemConfiguration -framework Cocoa -framework Foundation $
+    -framework IOKit -framework Security -framework SystemConfiguration $
+    -framework Cocoa -framework Foundation -framework IOKit -framework $
+    Security -framework SystemConfiguration -framework Cocoa -framework $
+    Foundation -framework IOKit -framework Security -framework $
+    SystemConfiguration -framework Cocoa -framework Foundation -framework $
+    IOKit -framework Security -framework SystemConfiguration -framework $
+    Cocoa -framework Foundation -framework IOKit -framework Security $
+    -framework SystemConfiguration -framework Cocoa -framework Foundation $
+    -framework IOKit -framework Security -framework SystemConfiguration $
+    -framework Cocoa -framework Foundation -framework IOKit -framework $
+    Security -framework SystemConfiguration -framework Cocoa -framework $
+    Foundation -framework IOKit -framework Security -framework $
+    SystemConfiguration -Wl,-search_paths_first -Wl,-ObjC -Wl,-pie $
+    -Wl,-dead_strip -mmacosx-version-min=10.6 -isysroot $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk $
+    -arch x86_64 -L. -stdlib=libc++
+libs = '-L../../third_party/libc++-static' -framework AppKit -framework $
+    ApplicationServices -framework Carbon -framework CoreFoundation $
+    -framework Foundation -framework IOKit -framework Security -framework $
+    OpenGL -framework AudioToolbox -framework AudioUnit -framework $
+    CoreAudio -framework CoreVideo -framework QTKit -lm -framework $
+    IOSurface -framework SystemConfiguration $
+    /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/lib/libresolv.tbd $
+    -framework Accelerate -framework AddressBook -framework Cocoa $
+    -framework QuartzCore
+build native_messaging_host.app/Contents/MacOS/native_messaging_host: link $
+    obj/remoting/host/setup/remoting_me2me_native_messaging_host.me2me_native_messaging_host_entry_point.o $
+    obj/remoting/host/setup/remoting_me2me_native_messaging_host.me2me_native_messaging_host_main.o $
+    libbase.a libremoting_breakpad.a libremoting_host.a $
+    libremoting_host_setup_base.a libremoting_native_messaging_base.a $
+    libbase_static.a liballocator_extension_thunks.a libmodp_b64.a $
+    libdynamic_annotations.a libevent.a libbreakpad.a $
+    libbreakpad_utilities.a libremoting_base.a libmedia.a libbase_i18n.a $
+    libicui18n.a libicuuc.a libcrcrypto.a libboringssl.a $
+    libcommand_buffer_common.a libgles2_utils.a libskia_library.a $
+    libskia_opts.a libskia_opts_ssse3.a libskia_opts_sse41.a $
+    libskia_opts_sse42.a libskia_opts_avx.a libskia_opts_avx2.a $
+    libchrome_zlib.a libzlib_x86_simd.a libsfntly.a libskia_chrome.a $
+    libyuv.a libjpeg_turbo.a libopus.a libevents_base.a libgfx.a $
+    libharfbuzz-ng.a libpng.a libgfx_geometry.a libdom_keycode_converter.a $
+    liburl_lib.a libshared_memory_support.a libffmpeg.a libffmpeg_yasm.a $
+    libvpx_new.a libvpx_intrinsics_mmx.a libvpx_intrinsics_sse2.a $
+    libvpx_intrinsics_ssse3.a libvpx_intrinsics_sse4_1.a $
+    libvpx_intrinsics_avx.a libvpx_intrinsics_avx2.a libwebm.a $
+    libdecklink.a libmedia_asm.a libnet.a libprotobuf_lite.a $
+    libnet_quic_proto.a libbase_prefs.a libsdch.a libdesktop_capture.a $
+    libsystem_wrappers.a libwebrtc_common.a librtc_base_approved.a $
+    librtc_base.a libdesktop_capture_differ_sse2.a libui_base.a libevents.a $
+    libgesture_detection.a libevents_platform.a libmozilla.a $
+    libchromotocol_proto_lib.a libremoting_protocol.a libjingle_glue.a $
+    libjingle.a libexpat.a librtc_xmllite.a libjingle_p2p_constants.a $
+    libjingle_webrtc.a libaudio_processing.a libcommon_audio.a $
+    libopenmax_dl.a libcommon_audio_sse2.a libisac.a $
+    libaudio_decoder_interface.a libaudio_encoder_interface.a $
+    libisac_common.a libaudioproc_debug_proto.a libaudio_processing_sse2.a $
+    libjingle_webrtc_common.a libsrtp.a libmedia_file.a libvideo_capture.a $
+    libvideo_capture_module.a libwebrtc_utility.a libaudio_coding_module.a $
+    libcng.a libg711.a libpcm16b.a libwebrtc_opus.a libg722.a $
+    librtc_event_log.a librtc_event_log_proto.a libneteq.a $
+    librent_a_codec.a libcommon_video.a libvideo_render.a $
+    libvideo_render_module.a libusrsctplib.a libpeerconnection.a $
+    libvoice_engine.a libaudio_conference_mixer.a libaudio_device.a $
+    libbitrate_controller.a librtp_rtcp.a libremote_bitrate_estimator.a $
+    libwebrtc.a libpaced_sender.a libvideo_processing.a $
+    libvideo_processing_sse2.a libwebrtc_video_coding.a libwebrtc_h264.a $
+    libwebrtc_i420.a libvideo_coding_utility.a libwebrtc_vp8.a $
+    libwebrtc_vp9.a libpolicy.a libcloud_policy_proto_generated_compile.a $
+    libpolicy_component_common.a libgoogle_apis.a libxml2.a libre2.a $
+    libcloud_policy_proto.a libdata_use_measurement_core.a libjson_schema.a $
+    libipc.a libgoogle_toolbox_for_mac.a | $
+    obj/components/cloud_policy_code_generate.actions_rules_copies.stamp $
+    obj/skia/skia.actions_depends.stamp $
+    obj/remoting/remoting_resources.actions_rules_copies.stamp $
+    obj/ui/resources/ui_resources.actions_rules_copies.stamp $
+    obj/net/net_derived_sources.actions_rules_copies.stamp $
+    obj/ui/strings/ui_strings.actions_rules_copies.stamp icudtl.dat $
+    obj/remoting/remoting_infoplist_strings.actions_rules_copies.stamp $
+    obj/net/net_resources.actions_rules_copies.stamp $
+    obj/remoting/remoting_webapp_html.actions_rules_copies.stamp $
+    gen/remoting/CREDITS.txt
+  ld = $ldxx
+build native_messaging_host.app: stamp $
+    native_messaging_host.app/Contents/Resources/am.lproj/locale.pak $
+    native_messaging_host.app/Contents/Resources/ar.lproj/locale.pak $
+    native_messaging_host.app/Contents/Resources/bg.lproj/locale.pak $
+    native_messaging_host.app/Contents/Resources/bn.lproj/locale.pak $
+    native_messaging_host.app/Contents/Resources/ca.lproj/locale.pak $
+    native_messaging_host.app/Contents/Resources/cs.lproj/locale.pak $
+    native_messaging_host.app/Contents/Resources/da.lproj/locale.pak $
+    native_messaging_host.app/Contents/Resources/de.lproj/locale.pak $
+    native_messaging_host.app/Contents/Resources/el.lproj/locale.pak $
+    native_messaging_host.app/Contents/Resources/en.lproj/locale.pak $
+    native_messaging_host.app/Contents/Resources/en_GB.lproj/locale.pak $
+    native_messaging_host.app/Contents/Resources/es.lproj/locale.pak $
+    native_messaging_host.app/Contents/Resources/es_419.lproj/locale.pak $
+    native_messaging_host.app/Contents/Resources/et.lproj/locale.pak $
+    native_messaging_host.app/Contents/Resources/fa.lproj/locale.pak $
+    native_messaging_host.app/Contents/Resources/fake_bidi.lproj/locale.pak $
+    native_messaging_host.app/Contents/Resources/fi.lproj/locale.pak $
+    native_messaging_host.app/Contents/Resources/fil.lproj/locale.pak $
+    native_messaging_host.app/Contents/Resources/fr.lproj/locale.pak $
+    native_messaging_host.app/Contents/Resources/gu.lproj/locale.pak $
+    native_messaging_host.app/Contents/Resources/he.lproj/locale.pak $
+    native_messaging_host.app/Contents/Resources/hi.lproj/locale.pak $
+    native_messaging_host.app/Contents/Resources/hr.lproj/locale.pak $
+    native_messaging_host.app/Contents/Resources/hu.lproj/locale.pak $
+    native_messaging_host.app/Contents/Resources/id.lproj/locale.pak $
+    native_messaging_host.app/Contents/Resources/it.lproj/locale.pak $
+    native_messaging_host.app/Contents/Resources/ja.lproj/locale.pak $
+    native_messaging_host.app/Contents/Resources/kn.lproj/locale.pak $
+    native_messaging_host.app/Contents/Resources/ko.lproj/locale.pak $
+    native_messaging_host.app/Contents/Resources/lt.lproj/locale.pak $
+    native_messaging_host.app/Contents/Resources/lv.lproj/locale.pak $
+    native_messaging_host.app/Contents/Resources/ml.lproj/locale.pak $
+    native_messaging_host.app/Contents/Resources/mr.lproj/locale.pak $
+    native_messaging_host.app/Contents/Resources/ms.lproj/locale.pak $
+    native_messaging_host.app/Contents/Resources/nb.lproj/locale.pak $
+    native_messaging_host.app/Contents/Resources/nl.lproj/locale.pak $
+    native_messaging_host.app/Contents/Resources/pl.lproj/locale.pak $
+    native_messaging_host.app/Contents/Resources/pt_BR.lproj/locale.pak $
+    native_messaging_host.app/Contents/Resources/pt_PT.lproj/locale.pak $
+    native_messaging_host.app/Contents/Resources/ro.lproj/locale.pak $
+    native_messaging_host.app/Contents/Resources/ru.lproj/locale.pak $
+    native_messaging_host.app/Contents/Resources/sk.lproj/locale.pak $
+    native_messaging_host.app/Contents/Resources/sl.lproj/locale.pak $
+    native_messaging_host.app/Contents/Resources/sr.lproj/locale.pak $
+    native_messaging_host.app/Contents/Resources/sv.lproj/locale.pak $
+    native_messaging_host.app/Contents/Resources/sw.lproj/locale.pak $
+    native_messaging_host.app/Contents/Resources/ta.lproj/locale.pak $
+    native_messaging_host.app/Contents/Resources/te.lproj/locale.pak $
+    native_messaging_host.app/Contents/Resources/th.lproj/locale.pak $
+    native_messaging_host.app/Contents/Resources/tr.lproj/locale.pak $
+    native_messaging_host.app/Contents/Resources/uk.lproj/locale.pak $
+    native_messaging_host.app/Contents/Resources/vi.lproj/locale.pak $
+    native_messaging_host.app/Contents/Resources/zh_CN.lproj/locale.pak $
+    native_messaging_host.app/Contents/Resources/zh_TW.lproj/locale.pak $
+    native_messaging_host.app/Contents/Resources/am.lproj/InfoPlist.strings $
+    native_messaging_host.app/Contents/Resources/ar.lproj/InfoPlist.strings $
+    native_messaging_host.app/Contents/Resources/bg.lproj/InfoPlist.strings $
+    native_messaging_host.app/Contents/Resources/bn.lproj/InfoPlist.strings $
+    native_messaging_host.app/Contents/Resources/ca.lproj/InfoPlist.strings $
+    native_messaging_host.app/Contents/Resources/cs.lproj/InfoPlist.strings $
+    native_messaging_host.app/Contents/Resources/da.lproj/InfoPlist.strings $
+    native_messaging_host.app/Contents/Resources/de.lproj/InfoPlist.strings $
+    native_messaging_host.app/Contents/Resources/el.lproj/InfoPlist.strings $
+    native_messaging_host.app/Contents/Resources/en.lproj/InfoPlist.strings $
+    native_messaging_host.app/Contents/Resources/en_GB.lproj/InfoPlist.strings $
+    native_messaging_host.app/Contents/Resources/es.lproj/InfoPlist.strings $
+    native_messaging_host.app/Contents/Resources/es_419.lproj/InfoPlist.strings $
+    native_messaging_host.app/Contents/Resources/et.lproj/InfoPlist.strings $
+    native_messaging_host.app/Contents/Resources/fa.lproj/InfoPlist.strings $
+    native_messaging_host.app/Contents/Resources/fake_bidi.lproj/InfoPlist.strings $
+    native_messaging_host.app/Contents/Resources/fi.lproj/InfoPlist.strings $
+    native_messaging_host.app/Contents/Resources/fil.lproj/InfoPlist.strings $
+    native_messaging_host.app/Contents/Resources/fr.lproj/InfoPlist.strings $
+    native_messaging_host.app/Contents/Resources/gu.lproj/InfoPlist.strings $
+    native_messaging_host.app/Contents/Resources/he.lproj/InfoPlist.strings $
+    native_messaging_host.app/Contents/Resources/hi.lproj/InfoPlist.strings $
+    native_messaging_host.app/Contents/Resources/hr.lproj/InfoPlist.strings $
+    native_messaging_host.app/Contents/Resources/hu.lproj/InfoPlist.strings $
+    native_messaging_host.app/Contents/Resources/id.lproj/InfoPlist.strings $
+    native_messaging_host.app/Contents/Resources/it.lproj/InfoPlist.strings $
+    native_messaging_host.app/Contents/Resources/ja.lproj/InfoPlist.strings $
+    native_messaging_host.app/Contents/Resources/kn.lproj/InfoPlist.strings $
+    native_messaging_host.app/Contents/Resources/ko.lproj/InfoPlist.strings $
+    native_messaging_host.app/Contents/Resources/lt.lproj/InfoPlist.strings $
+    native_messaging_host.app/Contents/Resources/lv.lproj/InfoPlist.strings $
+    native_messaging_host.app/Contents/Resources/ml.lproj/InfoPlist.strings $
+    native_messaging_host.app/Contents/Resources/mr.lproj/InfoPlist.strings $
+    native_messaging_host.app/Contents/Resources/ms.lproj/InfoPlist.strings $
+    native_messaging_host.app/Contents/Resources/nb.lproj/InfoPlist.strings $
+    native_messaging_host.app/Contents/Resources/nl.lproj/InfoPlist.strings $
+    native_messaging_host.app/Contents/Resources/pl.lproj/InfoPlist.strings $
+    native_messaging_host.app/Contents/Resources/pt_BR.lproj/InfoPlist.strings $
+    native_messaging_host.app/Contents/Resources/pt_PT.lproj/InfoPlist.strings $
+    native_messaging_host.app/Contents/Resources/ro.lproj/InfoPlist.strings $
+    native_messaging_host.app/Contents/Resources/ru.lproj/InfoPlist.strings $
+    native_messaging_host.app/Contents/Resources/sk.lproj/InfoPlist.strings $
+    native_messaging_host.app/Contents/Resources/sl.lproj/InfoPlist.strings $
+    native_messaging_host.app/Contents/Resources/sr.lproj/InfoPlist.strings $
+    native_messaging_host.app/Contents/Resources/sv.lproj/InfoPlist.strings $
+    native_messaging_host.app/Contents/Resources/sw.lproj/InfoPlist.strings $
+    native_messaging_host.app/Contents/Resources/ta.lproj/InfoPlist.strings $
+    native_messaging_host.app/Contents/Resources/te.lproj/InfoPlist.strings $
+    native_messaging_host.app/Contents/Resources/th.lproj/InfoPlist.strings $
+    native_messaging_host.app/Contents/Resources/tr.lproj/InfoPlist.strings $
+    native_messaging_host.app/Contents/Resources/uk.lproj/InfoPlist.strings $
+    native_messaging_host.app/Contents/Resources/vi.lproj/InfoPlist.strings $
+    native_messaging_host.app/Contents/Resources/zh_CN.lproj/InfoPlist.strings $
+    native_messaging_host.app/Contents/Resources/zh_TW.lproj/InfoPlist.strings $
+    native_messaging_host.app/Contents/Info.plist $
+    native_messaging_host.app/Contents/MacOS/native_messaging_host
+  postbuilds = (export $
+      BUILT_FRAMEWORKS_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      BUILT_PRODUCTS_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      CONFIGURATION=Release; export $
+      CONTENTS_FOLDER_PATH=native_messaging_host.app/Contents; export $
+      EXECUTABLE_NAME=native_messaging_host; export $
+      EXECUTABLE_PATH=native_messaging_host.app/Contents/MacOS/native_messaging_host; $
+      export FULL_PRODUCT_NAME=native_messaging_host.app; export $
+      INFOPLIST_PATH=native_messaging_host.app/Contents/Info.plist; export $
+      MACH_O_TYPE=mh_execute; export PRODUCT_NAME=native_messaging_host; $
+      export PRODUCT_TYPE=com.apple.product-type.application; export $
+      SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk; $
+      export SRCROOT=/Users/superadmin/tmp/src/out/Release/../../remoting; $
+      export SOURCE_ROOT="$${SRCROOT}"; export $
+      TARGET_BUILD_DIR=/Users/superadmin/tmp/src/out/Release; export $
+      TEMP_DIR="$${TMPDIR}"; export $
+      UNLOCALIZED_RESOURCES_FOLDER_PATH=native_messaging_host.app/Contents/Resources; $
+      export WRAPPER_NAME=native_messaging_host.app; (cd ../../remoting && $
+      ../build/mac/change_mach_o_flags_from_xcode.sh); G=$$?; ((exit $$G) $
+      || rm -rf native_messaging_host.app) && exit $$G) && 
